@@ -1,0 +1,415 @@
+<!-- Chosen Palette: Fintech Blue & Green -->
+<!-- Application Structure Plan: The application is designed as an interactive simulation tool, not a static report. The structure prioritizes hands-on learning. It's built around a central control panel where users can adjust key grid trading parameters (capital, leverage, price range, grid count). This directly feeds into a dynamic "results" dashboard and two interactive charts. This simulator-first approach was chosen because it allows users to actively explore the cause-and-effect relationships between parameters, which is far more effective for understanding risk and optimization than passively reading text. The user flow is: 1. Adjust inputs in the control panel. 2. Observe real-time changes in key metrics like liquidation price and potential profit. 3. See these changes visualized in the charts. 4. Consult the static strategic guide below for context. This design transforms a complex topic into an engaging educational experience. -->
+<!-- Visualization & Content Choices: 
+- Report Info: Core parameters of grid trading (capital, leverage, etc.). Goal: Allow user exploration and input. Viz/Presentation: Interactive sliders and number inputs (HTML/JS). Interaction: User can drag sliders or type numbers to change values. Justification: Provides a tactile and intuitive way to manipulate variables. Library/Method: Vanilla JS for event handling.
+- Report Info: Calculated outcomes (liquidation price, profit per grid, total position). Goal: Inform user of the consequences of their inputs. Viz/Presentation: Dynamic text fields and a color-coded risk gauge (HTML/JS/CSS). Interaction: Content updates instantly based on slider inputs. Justification: Provides immediate, easy-to-read feedback on risk and reward. Library/Method: Vanilla JS DOM manipulation.
+- Report Info: Relationship between leverage, capital, and position size. Goal: Compare risk vs. reward. Viz/Presentation: Dynamic Bar Chart (Chart.js/Canvas). Interaction: Chart bars resize as the leverage slider is moved. Justification: Visually demonstrates how leverage magnifies both position size and risk. Library/Method: Chart.js.
+- Report Info: The structure of the grid itself within the price range. Goal: Visualize the strategy. Viz/Presentation: Dynamic Line Chart showing price range with horizontal grid lines (Chart.js/Canvas). Interaction: Grid lines and range update as user changes price and grid count inputs. Justification: Makes the abstract concept of a 'grid' concrete and easy to understand. Library/Method: Chart.js.
+- Report Info: Strategic advice and common mistakes. Goal: Organize and provide context. Viz/Presentation: Styled content cards (HTML/Tailwind CSS). Interaction: None, focuses on clear readability. Justification: Breaks down qualitative information into digestible sections. Library/Method: HTML/Tailwind CSS.
+-->
+<!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Công Cụ Mô Phỏng Binance Futures Grid</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F0F4F8;
+            color: #1F2937;
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.07);
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            max-height: 350px;
+        }
+        input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 8px;
+            background: #D1D5DB;
+            border-radius: 5px;
+            outline: none;
+            opacity: 0.7;
+            transition: opacity .2s;
+        }
+        input[type="range"]:hover {
+            opacity: 1;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: #2563EB;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        input[type="range"]::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            background: #2563EB;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="container mx-auto p-4 md:p-6 lg:p-8 max-w-7xl">
+
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-[#2563EB] mb-3">Công Cụ Mô Phỏng Futures Grid</h1>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">Tương tác với các thông số để hiểu rõ mối quan hệ giữa Vốn, Đòn Bẩy và Lưới. Xây dựng chiến lược của bạn một cách an toàn.</p>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
+            
+            <aside class="lg:col-span-2 card h-fit">
+                <h2 class="text-2xl font-bold mb-6 text-gray-800">Bảng Điều Khiển</h2>
+
+                <div class="space-y-6">
+                    <div>
+                        <label for="capital" class="block text-sm font-medium text-gray-700">Vốn Đầu Tư (Margin)</label>
+                        <div class="flex items-center space-x-4 mt-1">
+                            <input type="range" id="capital" name="capital" min="100" max="10000" value="1000" step="100">
+                            <input type="number" id="capital_val" value="1000" class="w-28 text-center border-gray-300 rounded-md shadow-sm">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="leverage" class="block text-sm font-medium text-gray-700">Đòn Bẩy</label>
+                        <div class="flex items-center space-x-4 mt-1">
+                            <input type="range" id="leverage" name="leverage" min="1" max="50" value="10" step="1">
+                            <input type="number" id="leverage_val" value="10" class="w-28 text-center border-gray-300 rounded-md shadow-sm">
+                        </div>
+                    </div>
+
+                    <div>
+                         <label class="block text-sm font-medium text-gray-700">Biên Độ Giá (USDT)</label>
+                         <div class="flex items-center space-x-2 mt-1">
+                            <input type="number" id="lower_price" value="60000" class="w-full border-gray-300 rounded-md shadow-sm" placeholder="Giá Thấp">
+                            <span class="text-gray-500">-</span>
+                            <input type="number" id="upper_price" value="70000" class="w-full border-gray-300 rounded-md shadow-sm" placeholder="Giá Cao">
+                         </div>
+                    </div>
+                     <div>
+                        <label for="current_price" class="block text-sm font-medium text-gray-700">Giá Hiện Tại (Giá Vào Lệnh)</label>
+                        <input type="number" id="current_price" value="65000" class="w-full mt-1 border-gray-300 rounded-md shadow-sm">
+                    </div>
+
+                    <div>
+                        <label for="grid_count" class="block text-sm font-medium text-gray-700">Số Lượng Lưới</label>
+                        <div class="flex items-center space-x-4 mt-1">
+                            <input type="range" id="grid_count" name="grid_count" min="5" max="150" value="50" step="1">
+                            <input type="number" id="grid_count_val" value="50" class="w-28 text-center border-gray-300 rounded-md shadow-sm">
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            
+            <main class="lg:col-span-3">
+                <div class="card mb-6">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-800">Kết Quả Mô Phỏng</h2>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
+                        <div class="bg-blue-50 p-3 rounded-lg">
+                            <h4 class="text-sm text-blue-800 font-medium">Tổng Vị Thế</h4>
+                            <p id="total_position" class="text-xl font-bold text-blue-900">$10,000</p>
+                        </div>
+                        <div class="bg-green-50 p-3 rounded-lg">
+                            <h4 class="text-sm text-green-800 font-medium">Lợi Nhuận/Lưới</h4>
+                            <p id="profit_per_grid" class="text-xl font-bold text-green-900">~0.27%</p>
+                        </div>
+                         <div class="bg-gray-100 p-3 rounded-lg">
+                            <h4 class="text-sm text-gray-800 font-medium">Khoảng Cách Lưới</h4>
+                            <p id="grid_step" class="text-xl font-bold text-gray-900">$200</p>
+                        </div>
+                        <div class="col-span-2 md:col-span-3 bg-red-50 p-4 rounded-lg">
+                             <h4 class="text-sm text-red-800 font-medium">Giá Thanh Lý (Ước Tính - Long)</h4>
+                             <p id="liquidation_price" class="text-2xl font-bold text-red-700">$58,500</p>
+                        </div>
+                    </div>
+                     <div class="mt-4">
+                        <h4 class="text-sm font-medium text-gray-700 mb-1">Mức Độ Rủi Ro</h4>
+                        <div class="w-full bg-gray-200 rounded-full h-4">
+                            <div id="risk_gauge" class="h-4 rounded-full transition-all duration-300" style="width: 50%; background-color: #FBBF24;"></div>
+                        </div>
+                        <p id="risk_text" class="text-xs text-center mt-1 font-medium text-yellow-600">Rủi ro Trung bình</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="card md:col-span-2">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Phân Tích Đòn Bẩy</h3>
+                        <div class="chart-container">
+                             <canvas id="leverageChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="card md:col-span-2">
+                         <h3 class="text-xl font-bold text-gray-800 mb-4">Cấu Trúc Lưới Giao Dịch</h3>
+                         <div class="chart-container">
+                            <canvas id="gridStructureChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <section class="mt-10">
+            <h2 class="text-3xl font-bold text-center mb-6">Hướng Dẫn Chiến Lược</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="card">
+                    <h3 class="font-bold text-xl mb-2 text-[#2563EB]">1. Khi Nào Nên Dùng Grid?</h3>
+                    <p class="text-gray-600">Grid Trading phát huy hiệu quả nhất trong thị trường <strong class="text-gray-800">đi ngang (sideways)</strong> hoặc có biến động nhẹ. Nó giúp kiếm lợi nhuận từ những dao động nhỏ mà không cần dự đoán chính xác hướng đi của thị trường.</p>
+                </div>
+                <div class="card">
+                    <h3 class="font-bold text-xl mb-2 text-[#10B981]">2. Các Cấu Hình Phổ Biến</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-600">
+                        <li><strong>Bảo thủ:</strong> Đòn bẩy thấp (1-5x), lưới thưa. Ưu tiên an toàn vốn.</li>
+                        <li><strong>Cân bằng:</strong> Đòn bẩy vừa phải (5-20x), số lưới hợp lý. Cân bằng giữa rủi ro và lợi nhuận.</li>
+                        <li><strong>Mạo hiểm:</strong> Đòn bẩy cao (>20x), lưới dày. Lợi nhuận tiềm năng cao nhưng cực kỳ rủi ro.</li>
+                    </ul>
+                </div>
+                 <div class="card">
+                    <h3 class="font-bold text-xl mb-2 text-[#EF4444]">3. Những Sai Lầm Cần Tránh</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-600">
+                        <li>Sử dụng đòn bẩy tối đa một cách mù quáng.</li>
+                        <li>Đặt biên độ giá quá hẹp, dễ bị phá vỡ.</li>
+                        <li>Không đặt lệnh dừng lỗ (Stop-loss).</li>
+                        <li>"Bỏ mặc" bot khi thị trường có tin tức lớn hoặc xu hướng mạnh.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        const capitalInput = document.getElementById('capital');
+        const capitalVal = document.getElementById('capital_val');
+        const leverageInput = document.getElementById('leverage');
+        const leverageVal = document.getElementById('leverage_val');
+        const lowerPriceInput = document.getElementById('lower_price');
+        const upperPriceInput = document.getElementById('upper_price');
+        const currentPriceInput = document.getElementById('current_price');
+        const gridCountInput = document.getElementById('grid_count');
+        const gridCountVal = document.getElementById('grid_count_val');
+
+        const totalPositionEl = document.getElementById('total_position');
+        const profitPerGridEl = document.getElementById('profit_per_grid');
+        const gridStepEl = document.getElementById('grid_step');
+        const liquidationPriceEl = document.getElementById('liquidation_price');
+        const riskGaugeEl = document.getElementById('risk_gauge');
+        const riskTextEl = document.getElementById('risk_text');
+
+        const feeRate = 0.0006;
+
+        let leverageChart, gridStructureChart;
+
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+              return label.join(' ');
+            }
+            return label;
+        };
+
+        function setupCharts() {
+            const leverageCtx = document.getElementById('leverageChart').getContext('2d');
+            leverageChart = new Chart(leverageCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Vốn', 'Phần Khuếch Đại'],
+                    datasets: [{
+                        label: 'Giá trị vị thế',
+                        data: [1000, 9000],
+                        backgroundColor: ['#2563EB', '#93C5FD'],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: { callbacks: { title: tooltipTitleCallback } }
+                    },
+                    scales: {
+                        x: { stacked: true, title: { display: true, text: 'Giá Trị (USDT)' } },
+                        y: { stacked: true }
+                    }
+                }
+            });
+
+            const gridCtx = document.getElementById('gridStructureChart').getContext('2d');
+            gridStructureChart = new Chart(gridCtx, {
+                type: 'line',
+                data: {
+                    labels: [],
+                    datasets: []
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: { callbacks: { title: tooltipTitleCallback } }
+                    },
+                    scales: {
+                        y: { title: { display: true, text: 'Giá (USDT)' } },
+                        x: { display: false }
+                    }
+                }
+            });
+        }
+        
+        function calculateAndRender() {
+            const capital = parseFloat(capitalVal.value);
+            const leverage = parseFloat(leverageVal.value);
+            const lowerPrice = parseFloat(lowerPriceInput.value);
+            const upperPrice = parseFloat(upperPriceInput.value);
+            const currentPrice = parseFloat(currentPriceInput.value);
+            const gridCount = parseInt(gridCountVal.value);
+
+            if (isNaN(capital) || isNaN(leverage) || isNaN(lowerPrice) || isNaN(upperPrice) || isNaN(gridCount) || isNaN(currentPrice) || gridCount <= 1) {
+                return;
+            }
+
+            const totalPosition = capital * leverage;
+            const priceRange = upperPrice - lowerPrice;
+            const gridStep = priceRange / (gridCount -1);
+            const profitPerGrid = (gridStep / currentPrice - feeRate) * 100;
+            
+            const liquidationPrice = currentPrice * (1 - (1 / leverage) * 0.95);
+
+            totalPositionEl.textContent = `$${totalPosition.toLocaleString()}`;
+            profitPerGridEl.textContent = `~${profitPerGrid.toFixed(2)}%`;
+            gridStepEl.textContent = `$${gridStep.toLocaleString(undefined, {maximumFractionDigits: 2})}`;
+            liquidationPriceEl.textContent = `$${liquidationPrice.toLocaleString(undefined, {maximumFractionDigits: 2})}`;
+            
+            updateRiskGauge(liquidationPrice, lowerPrice, currentPrice);
+            updateLeverageChart(capital, totalPosition - capital);
+            updateGridStructureChart(lowerPrice, upperPrice, gridStep, gridCount);
+        }
+
+        function updateRiskGauge(liquidationPrice, lowerPrice, currentPrice) {
+            const rangeToLiquidation = currentPrice - liquidationPrice;
+            const rangeToLowerBound = currentPrice - lowerPrice;
+            
+            let riskPercent = 0;
+            if (rangeToLowerBound > 0) {
+                 riskPercent = Math.max(0, Math.min(100, (1 - (rangeToLowerBound / rangeToLiquidation)) * 100));
+            } else {
+                 riskPercent = 100;
+            }
+            
+            riskGaugeEl.style.width = `${riskPercent}%`;
+
+            if (riskPercent < 33) {
+                riskGaugeEl.style.backgroundColor = '#10B981';
+                riskTextEl.textContent = 'Rủi ro Thấp';
+                riskTextEl.className = 'text-xs text-center mt-1 font-medium text-green-600';
+            } else if (riskPercent < 66) {
+                riskGaugeEl.style.backgroundColor = '#FBBF24';
+                riskTextEl.textContent = 'Rủi ro Trung bình';
+                riskTextEl.className = 'text-xs text-center mt-1 font-medium text-yellow-600';
+            } else {
+                riskGaugeEl.style.backgroundColor = '#EF4444';
+                riskTextEl.textContent = 'Rủi ro Cao';
+                riskTextEl.className = 'text-xs text-center mt-1 font-medium text-red-600';
+            }
+        }
+
+        function updateLeverageChart(capital, leveragedPart) {
+            leverageChart.data.datasets[0].data = [capital, leveragedPart];
+            leverageChart.update();
+        }
+
+        function updateGridStructureChart(lowerPrice, upperPrice, gridStep, gridCount) {
+             const dataPoints = 20;
+             const labels = Array.from({length: dataPoints}, (_, i) => i);
+             const gridLines = [];
+             for(let i=0; i < gridCount; i++){
+                gridLines.push(lowerPrice + i * gridStep);
+             }
+
+             gridStructureChart.data.labels = labels;
+             gridStructureChart.data.datasets = [
+                {
+                    label: 'Giá Cao',
+                    data: Array(dataPoints).fill(upperPrice),
+                    borderColor: '#EF4444',
+                    borderWidth: 2,
+                    pointRadius: 0,
+                    borderDash: [5, 5]
+                },
+                {
+                    label: 'Giá Thấp',
+                    data: Array(dataPoints).fill(lowerPrice),
+                    borderColor: '#10B981',
+                    borderWidth: 2,
+                    pointRadius: 0,
+                    borderDash: [5, 5]
+                }
+             ];
+
+             gridLines.forEach(price => {
+                gridStructureChart.data.datasets.push({
+                    data: Array(dataPoints).fill(price),
+                    borderColor: '#D1D5DB',
+                    borderWidth: 1,
+                    pointRadius: 0,
+                })
+             });
+
+             gridStructureChart.update();
+        }
+
+
+        function syncInputs(source, target) {
+            target.value = source.value;
+            calculateAndRender();
+        }
+
+        capitalInput.addEventListener('input', () => syncInputs(capitalInput, capitalVal));
+        capitalVal.addEventListener('input', () => syncInputs(capitalVal, capitalInput));
+        leverageInput.addEventListener('input', () => syncInputs(leverageInput, leverageVal));
+        leverageVal.addEventListener('input', () => syncInputs(leverageVal, leverageInput));
+        gridCountInput.addEventListener('input', () => syncInputs(gridCountInput, gridCountVal));
+        gridCountVal.addEventListener('input', () => syncInputs(gridCountVal, gridCountInput));
+
+        [lowerPriceInput, upperPriceInput, currentPriceInput].forEach(input => {
+            input.addEventListener('input', calculateAndRender);
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setupCharts();
+            calculateAndRender();
+        });
+
+    </script>
+    <div style="text-align: center; padding: 3rem 0;">
+        <a href="index.html" style="display: inline-block; background-color: #3498db; color: white; padding: 0.8rem 1.8rem; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: 2px solid transparent; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            Quay lại Trang Blog
+        </a>
+    </div>
+</body>
+</html>
+```

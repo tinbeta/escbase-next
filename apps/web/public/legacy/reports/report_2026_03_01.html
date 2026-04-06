@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Report 01/03/2026 - Escbase</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-sidebar: #080808;
+            --bg-card: #111111;
+            --bg-hover: #1a1a1a;
+            --text-primary: #ffffff;
+            --text-secondary: #888888;
+            --text-muted: #555555;
+            --accent: #f7931a;
+            --border: #1a1a1a;
+            --success: #22c55e;
+            --danger: #ef4444;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background-color: var(--bg-primary); color: var(--text-primary); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+        .layout { display: flex; min-height: 100vh; }
+        .sidebar { width: 240px; background: var(--bg-sidebar); border-right: 1px solid var(--border); position: fixed; top: 0; left: 0; bottom: 0; overflow-y: auto; z-index: 100; padding: 2rem 0; }
+        .sidebar-logo { padding: 0 1.5rem 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+        .sidebar-logo a { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: inherit; }
+        .sidebar-logo img { width: 40px; height: 40px; border-radius: 10px; }
+        .sidebar-logo span { font-size: 1.25rem; font-weight: 700; }
+        .nav-section { margin-bottom: 2rem; padding: 0 1rem; }
+        .nav-section-title { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-muted); margin-bottom: 0.75rem; padding: 0 0.5rem; }
+        .nav-item { display: block; padding: 0.5rem 0.75rem; color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; border-radius: 6px; transition: all 0.15s ease; margin-bottom: 0.25rem; }
+        .nav-item:hover, .nav-item.active { background: rgba(247, 147, 26, 0.15); color: var(--accent); }
+        .main { flex: 1; margin-left: 240px; padding: 2rem 3rem; max-width: 800px; }
+        .report-header { margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+        .report-date { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--accent); color: #000; padding: 0.4rem 0.875rem; border-radius: 6px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; }
+        .report-title { font-size: 2rem; font-weight: 700; line-height: 1.3; margin-bottom: 1rem; }
+        .report-meta { display: flex; gap: 1.5rem; color: var(--text-muted); font-size: 0.9rem; }
+        .report-meta span { display: flex; align-items: center; gap: 0.4rem; }
+        .content h2 { font-size: 1.35rem; font-weight: 600; margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--accent); display: inline-block; }
+        .content h3 { font-size: 1.1rem; font-weight: 600; margin: 2rem 0 0.75rem; color: var(--accent); }
+        .content p { margin-bottom: 1rem; color: var(--text-secondary); }
+        .content strong { color: var(--text-primary); font-weight: 600; }
+        .market-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
+        .market-table th { background: var(--bg-hover); padding: 0.875rem 1rem; text-align: left; font-weight: 600; color: var(--text-muted); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em; }
+        .market-table td { padding: 0.875rem 1rem; border-bottom: 1px solid var(--border); }
+        .market-table tr:hover td { background: var(--bg-hover); }
+        .price-up { color: var(--success); }
+        .price-down { color: var(--danger); }
+        .news-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; }
+        .news-card-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+        .news-icon { width: 40px; height: 40px; border-radius: 10px; background: rgba(247, 147, 26, 0.1); display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 1.1rem; }
+        .news-title { font-size: 1.1rem; font-weight: 600; }
+        .news-source { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600; margin-bottom: 0.5rem; }
+        .news-content { color: var(--text-secondary); }
+        .news-impact { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+        .impact-label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; color: var(--accent); margin-bottom: 0.25rem; }
+        .tag { display: inline-flex; align-items: center; gap: 0.3rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 0.35rem 0.7rem; border-radius: 6px; font-size: 0.8rem; color: var(--text-secondary); margin-right: 0.5rem; margin-bottom: 0.5rem; }
+        .summary-box { background: linear-gradient(135deg, rgba(247, 147, 26, 0.08) 0%, var(--bg-card) 100%); border: 1px solid rgba(247, 147, 26, 0.2); border-radius: 12px; padding: 1.5rem; margin: 2rem 0; }
+        .summary-box h3 { color: var(--accent); margin-top: 0; }
+        blockquote { border-left: 3px solid var(--accent); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
+        .divider { height: 1px; background: var(--border); margin: 2.5rem 0; }
+        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: var(--accent); color: #000; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 0.9rem; transition: all 0.2s; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(247, 147, 26, 0.3); }
+        @media (max-width: 768px) { .sidebar { transform: translateX(-100%); transition: transform 0.3s ease; } .sidebar.open { transform: translateX(0); } .main { margin-left: 0; padding: 5rem 1.5rem 2rem; } .report-title { font-size: 1.5rem; } }
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <a href="../index.html"><img src="../esclogo.png" alt="Escbase"><span>Escbase</span></a>
+            </div>
+            <div class="nav-section">
+                <div class="nav-section-title">Menu</div>
+                <a href="../index.html" class="nav-item">Home</a>
+                <a href="../posts.html" class="nav-item">Posts</a>
+                <a href="../videos.html" class="nav-item">Videos</a>
+                <a href="../index.html#reports" class="nav-item active">Reports</a>
+            </div>
+            <div class="nav-section">
+                <div class="nav-section-title">Reports</div>
+                <a href="report_2026_03_02.html" class="nav-item">02/03/2026</a>
+                <a href="report_2026_03_01.html" class="nav-item active">01/03/2026</a>
+                <a href="report_2026_02_28.html" class="nav-item">28/02/2026</a>
+                <a href="report_2026_02_27.html" class="nav-item">27/02/2026</a>
+                <a href="report_2026_02_26.html" class="nav-item">26/02/2026</a>
+                <a href="report_2026_02_25.html" class="nav-item">25/02/2026</a>
+            </div>
+        </aside>
+        <main class="main">
+            <article class="report-header">
+                <span class="report-date"><i class="far fa-calendar"></i> 01/03/2026</span>
+                <h1 class="report-title">Bitcoin Phục Hồi Trước Tuần Mới</h1>
+                <div class="report-meta">
+                    <span><i class="far fa-clock"></i> 7:00 AM GMT+7</span>
+                    <span><i class="fas fa-globe"></i> Asia/Saigon</span>
+                    <span><i class="far fa-user"></i> Escbase Research</span>
+                </div>
+            </article>
+            <div class="content">
+                <h2>📊 Tổng Quan Thị Trường</h2>
+                <table class="market-table">
+                    <thead><tr><th>Coin</th><th>Giá (USD)</th><th>24h</th><th>7 ngày</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>Bitcoin (BTC)</strong></td><td>$65,200</td><td class="price-up">+1.2% 📈</td><td class="price-up">+3.5%</td></tr>
+                        <tr><td><strong>Ethereum (ETH)</strong></td><td>$1,920</td><td class="price-up">+0.8% 📈</td><td class="price-up">+2.1%</td></tr>
+                        <tr><td><strong>Solana (SOL)</strong></td><td>$138.50</td><td class="price-up">+3.2% 📈</td><td class="price-up">+12.5%</td></tr>
+                        <tr><td><strong>XRP</strong></td><td>$2.38</td><td class="price-up">+1.5% 📈</td><td class="price-up">+4.2%</td></tr>
+                    </tbody>
+                </table>
+                <div class="summary-box">
+                    <h3>💡 Nhận Định</h3>
+                    <p>BTC tăng nhẹ sau đợt điều chỉnh cuối tuần. Thị trường chờ đợi dữ liệu kinh tế vĩ mô mới. Altcoin phân hóa mạnh với SOL và AVAX dẫn đầu đà phục hồi.</p>
+                </div>
+                <div class="divider"></div>
+                <h2>🔥 Tin Chính</h2>
+                <div class="news-card">
+                    <div class="news-card-header">
+                        <div class="news-icon" style="background: rgba(34, 197, 94, 0.1); color: var(--success);"><i class="fas fa-chart-line"></i></div>
+                        <div><div class="news-source">📍 Thị Trường</div><div class="news-title">Phục Hồi Cuối Tuần</div></div>
+                    </div>
+                    <div class="news-content"><p>Bitcoin phục hồi từ vùng $63,500 lên $65,200 sau đợt bán tháo cuối tuần. Volume giao dịch tăng 15% so với trung bình.</p></div>
+                </div>
+                <div class="divider"></div>
+                <h2>📌 Tóm Tắt</h2>
+                <div class="summary-box">
+                    <p><strong>Thị trường:</strong> Tích cực, phục hồi nhẹ trước tuần mới</p>
+                    <p style="margin-top: 0.5rem;"><strong>Xu hướng:</strong> Chờ đợi dữ liệu kinh tế Mỹ tuần tới</p>
+                </div>
+                <div style="margin-top: 2rem; text-align: center;">
+                    <a href="../crypto-reports/crypto_report_2026-03-01.pdf" target="_blank" class="btn"><i class="far fa-file-pdf"></i> Download PDF</a>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

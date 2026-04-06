@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Cash (BCH): Phân Tích Chuyên Sâu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <!-- 
+    Palette Selection: Energetic & Playful (#00F0B5, #00E0D2, #00C2E8, #00A0F0, #0078F0)
+    Kế hoạch tường thuật:
+    1. Giới thiệu: BCH là gì? Tầm nhìn về tiền điện tử ngang hàng.
+    2. Chỉ số cốt lõi: So sánh trực tiếp với BTC về tốc độ, chi phí và dung lượng.
+    3. Nền tảng kỹ thuật: Cách tiếp cận mở rộng và các khác biệt công nghệ chính.
+    4. Hệ sinh thái & Lộ trình: Bối cảnh dApp đang phát triển và các nâng cấp trong tương lai như CashTokens.
+    5. Phân tích tiềm năng dài hạn: Phân tích SWOT và kết luận về vai trò của nó so với BTC.
+    Chiến lược trực quan hóa:
+    - So sánh phí giao dịch -> Mục tiêu: So sánh -> Biểu đồ cột (Chart.js) -> Lý do: So sánh trực tiếp, rõ ràng một chỉ số quan trọng. Không dùng SVG.
+    - Dung lượng mạng (TPS) -> Mục tiêu: So sánh -> Biểu đồ cột (Chart.js) -> Lý do: Thể hiện hiệu quả sự khác biệt về hiệu suất. Không dùng SVG.
+    - Tokenomics (Nguồn cung) -> Mục tiêu: Thông tin -> Biểu đồ Donut (Chart.js) -> Lý do: Tỷ lệ đơn giản, làm nổi bật nguồn cung cố định. Không dùng SVG.
+    - Lộ trình phát triển -> Mục tiêu: Sắp xếp/Thay đổi -> Dòng thời gian (HTML/CSS) -> Lý do: Hiển thị tiến trình tuần tự một cách rõ ràng. Không dùng SVG/Mermaid.
+    - Phân tích SWOT -> Mục tiêu: Sắp xếp -> Lưới (HTML/CSS) -> Lý do: Định dạng phân tích chiến lược cổ điển. Không dùng SVG.
+    Xác nhận: KHÔNG sử dụng SVG. KHÔNG sử dụng Mermaid JS. Tất cả các biểu đồ được kết xuất trên Canvas bởi Chart.js. Tất cả các sơ đồ được xây dựng bằng HTML có cấu trúc và Tailwind CSS.
+    -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 300px;
+            }
+        }
+        .brand-text-heavy { color: #0078F0; }
+        .brand-text-medium { color: #00A0F0; }
+        .brand-text-light { color: #00C2E8; }
+        .brand-bg-heavy { background-color: #0078F0; }
+        .brand-bg-medium { background-color: #00A0F0; }
+        .brand-bg-light { background-color: #00C2E8; }
+        .brand-accent { background-color: #00F0B5; }
+        .stat-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 1.5rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+<div style="max-width:800px;margin:0 auto;padding:1rem 1.5rem;"><a href="../blog.html" style="display:inline-flex;align-items:center;gap:0.5rem;color:#71717a;text-decoration:none;font-size:0.9rem;font-family:sans-serif;">← Quay lại Blog</a></div>
+
+    <header class="text-center py-12 px-4 bg-white shadow-md">
+        <h1 class="text-4xl md:text-5xl font-extrabold brand-text-heavy mb-2">Bitcoin Cash (BCH)</h1>
+        <p class="text-xl md:text-2xl text-gray-600">Phân Tích Sâu về Tiền Điện Tử Ngang Hàng</p>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <section id="introduction" class="mb-12">
+            <div class="text-center max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold brand-text-medium mb-4">Tầm Nhìn Nguyên Bản của Bitcoin</h2>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Bitcoin Cash là một loại tiền điện tử phi tập trung tiếp nối sứ mệnh ban đầu của Bitcoin: trở thành một hệ thống tiền điện tử ngang hàng. Nó đã fork từ Bitcoin vào năm 2017 để giải quyết các lo ngại về khả năng mở rộng, ưu tiên phí thấp và thời gian giao dịch nhanh để cho phép sử dụng thực tế hàng ngày cho thương mại, từ việc mua một tách cà phê đến xử lý các khoản thanh toán vi mô.
+                </p>
+            </div>
+        </section>
+
+        <section id="core-metrics" class="mb-12">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold brand-text-medium">So Sánh Hiệu Suất: BCH vs. BTC</h2>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto mt-2">Xem xét các chỉ số quan trọng xác định tiện ích của chúng như một phương tiện trao đổi. Bitcoin Cash được thiết kế cho khối lượng giao dịch lớn và chi phí thấp.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold text-center mb-4 brand-text-heavy">Phí Giao Dịch Trung Bình</h3>
+                    <p class="text-center text-gray-600 mb-4">Phí thấp hơn là yếu tố quan trọng để các khoản thanh toán vi mô và mua sắm hàng ngày trở nên khả thi.</p>
+                    <div class="chart-container">
+                        <canvas id="feeChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold text-center mb-4 brand-text-heavy">Thông Lượng Mạng Tối Đa</h3>
+                    <p class="text-center text-gray-600 mb-4">Thông lượng cao hơn cho phép mạng xử lý khối lượng giao dịch quy mô toàn cầu mà không bị tắc nghẽn.</p>
+                    <div class="chart-container">
+                        <canvas id="tpsChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="technology" class="mb-12">
+             <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold brand-text-medium">Nền Tảng Kỹ Thuật & Tokenomics</h2>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto mt-2">Sự khác biệt cốt lõi của BCH nằm ở phương pháp mở rộng quy mô on-chain, kết hợp với nguồn cung giới hạn tương tự như Bitcoin.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                 <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold text-center mb-4 brand-text-heavy">Triết Lý Mở Rộng Quy Mô</h3>
+                     <div class="flex flex-col space-y-4">
+                        <div class="p-4 border-l-4 border-blue-500 bg-blue-50 rounded-r-lg">
+                            <h4 class="font-bold text-lg">Mở Rộng On-Chain</h4>
+                            <p class="text-gray-700">BCH tăng giới hạn kích thước khối (hiện tại là 32MB) để cho phép nhiều giao dịch hơn trong mỗi khối. Điều này giữ cho blockchain chính nhanh và phí thấp cho tất cả mọi người.</p>
+                        </div>
+                        <div class="p-4 border-l-4 border-gray-400 bg-gray-50 rounded-r-lg">
+                            <h4 class="font-bold text-lg">Cách Tiếp Cận của Bitcoin</h4>
+                            <p class="text-gray-700">Bitcoin ưu tiên kích thước khối nhỏ (1MB) và dựa vào các giải pháp Lớp 2 như Lightning Network để mở rộng, điều này có thể làm tăng thêm sự phức tạp cho người dùng.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold text-center mb-4 brand-text-heavy">Nguồn Cung Cố Định: Tiền Tệ Kỹ Thuật Số Bền Vững</h3>
+                    <p class="text-center text-gray-600 mb-4">Giống như Bitcoin, BCH có nguồn cung cố định là 21 triệu coin, đảm bảo tính khan hiếm và tiềm năng lưu trữ giá trị của nó.</p>
+                    <div class="chart-container h-80 md:h-96">
+                        <canvas id="supplyChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="roadmap" class="mb-12">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold brand-text-medium">Tăng Trưởng Hệ Sinh Thái & Lộ Trình Tương Lai</h2>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto mt-2">Bitcoin Cash không chỉ dùng để thanh toán. Một hệ sinh thái ứng dụng phong phú đang phát triển, được thúc đẩy bởi sự phát triển giao thức liên tục.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <div class="relative border-l-4 border-blue-300 ml-4 md:ml-0">
+                    <div class="mb-8 pl-8 relative">
+                        <div class="absolute -left-5 top-1 w-8 h-8 brand-bg-medium rounded-full border-4 border-white flex items-center justify-center font-bold text-white">1</div>
+                        <h4 class="font-bold text-xl brand-text-heavy">SmartBCH (Sidechain tương thích EVM)</h4>
+                        <p class="text-gray-600">Cho phép các hợp đồng thông minh tương thích với Ethereum, mang DeFi và dApps đến hệ sinh thái BCH.</p>
+                    </div>
+                    <div class="mb-8 pl-8 relative">
+                        <div class="absolute -left-5 top-1 w-8 h-8 brand-bg-medium rounded-full border-4 border-white flex items-center justify-center font-bold text-white">2</div>
+                        <h4 class="font-bold text-xl brand-text-heavy">CashTokens (CHIP-2022-02)</h4>
+                        <p class="text-gray-600">Một bản nâng cấp lớn cho phép tạo các token có thể thay thế và NFT trực tiếp trên mainnet của Bitcoin Cash, mang lại hiệu quả cao và chi phí thấp.</p>
+                    </div>
+                    <div class="pl-8 relative">
+                        <div class="absolute -left-5 top-1 w-8 h-8 brand-bg-medium rounded-full border-4 border-white flex items-center justify-center font-bold text-white">3</div>
+                        <h4 class="font-bold text-xl brand-text-heavy">Tương Lai: Kích Thước Khối Thích Ứng & Hơn Nữa</h4>
+                        <p class="text-gray-600">Nghiên cứu đang diễn ra tập trung vào các giải pháp mở rộng hơn nữa, bao gồm cả việc điều chỉnh động giới hạn kích thước khối dựa trên nhu cầu mạng để đảm bảo tăng trưởng trong tương lai.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="potential" class="mb-12">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold brand-text-medium">Tiềm Năng Dài Hạn: Phân Tích SWOT</h2>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto mt-2">Liệu Bitcoin Cash có thể đạt được mục tiêu của mình và cùng tồn tại hoặc cạnh tranh với Bitcoin như một tài sản kỹ thuật số lớn?</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
+                    <h3 class="font-bold text-2xl text-green-800 mb-2">Điểm Mạnh</h3>
+                    <ul class="list-disc list-inside text-green-700 space-y-1">
+                        <li>Phí giao dịch cực thấp</li>
+                        <li>Thời gian xác nhận nhanh và đáng tin cậy</li>
+                        <li>Mô hình mở rộng on-chain đã được chứng minh</li>
+                        <li>Nguồn cung cố định 21 triệu coin</li>
+                    </ul>
+                </div>
+                <div class="bg-red-50 p-6 rounded-lg border-l-4 border-red-500">
+                    <h3 class="font-bold text-2xl text-red-800 mb-2">Điểm Yếu</h3>
+                    <ul class="list-disc list-inside text-red-700 space-y-1">
+                        <li>Nhận diện thương hiệu thấp hơn Bitcoin</li>
+                        <li>Hiệu ứng mạng và cơ sở người dùng nhỏ hơn</li>
+                        <li>Bị xem là một "bản fork" thay vì một bản nâng cấp</li>
+                    </ul>
+                </div>
+                <div class="bg-yellow-50 p-6 rounded-lg border-l-4 border-yellow-500">
+                    <h3 class="font-bold text-2xl text-yellow-800 mb-2">Cơ Hội</h3>
+                    <ul class="list-disc list-inside text-yellow-700 space-y-1">
+                        <li>Tăng trưởng ở các quốc gia đang phát triển cho kiều hối</li>
+                        <li>Được chấp nhận cho các khoản thanh toán vi mô và ứng dụng Web3</li>
+                        <li>Tắc nghẽn mạng và phí cao của Bitcoin</li>
+                        <li>CashTokens cho phép một hệ sinh thái token gốc</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg border-l-4 border-gray-500">
+                    <h3 class="font-bold text-2xl text-gray-800 mb-2">Thách Thức</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Cạnh tranh từ các Layer 1 có khả năng mở rộng khác</li>
+                        <li>Sự không chắc chắn về quy định trong không gian tiền điện tử</li>
+                        <li>Sự thành công của các giải pháp Lớp 2 của Bitcoin</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="conclusion" class="bg-white rounded-lg shadow-lg p-8">
+            <h2 class="text-3xl font-bold brand-text-heavy text-center mb-4">Kết Luận: Câu Chuyện về Hai Đồng Bitcoin</h2>
+            <div class="text-gray-700 leading-relaxed space-y-4 text-lg max-w-4xl mx-auto">
+                <p>Bitcoin Cash đưa ra một luận điểm thuyết phục về tăng trưởng dài hạn bằng cách tuân thủ tầm nhìn ban đầu về một loại tiền kỹ thuật số có khả năng mở rộng, chi phí thấp. Con đường kỹ thuật của nó khác biệt đáng kể so với Bitcoin, ưu tiên tiện ích tức thì, on-chain thay vì triết lý lớp thanh toán.</p>
+                <p>Mặc dù khó có thể thay thế câu chuyện đã được thiết lập của Bitcoin là "vàng kỹ thuật số" và một kho lưu trữ giá trị chính, tiềm năng của nó để trở thành một phương tiện trao đổi được chấp nhận trên toàn cầu là rất đáng kể. Thành công của nó sẽ phụ thuộc vào việc thúc đẩy sự chấp nhận, mở rộng hệ sinh thái thông qua các tính năng như CashTokens và truyền đạt hiệu quả đề xuất giá trị của mình trong một thị trường đông đúc. Nó tạo ra một phân khúc riêng như một tài sản kỹ thuật số có chức năng cao, biến nó thành một dự án có tiềm năng dài hạn đáng kể theo cách riêng của mình.</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="text-center py-6 mt-8 bg-gray-100">
+        <p class="text-gray-500">Infographic được tạo cho mục đích phân tích. Dữ liệu mang tính đại diện tính đến Quý 3 năm 2025.</p>
+    </footer>
+
+    <script>
+        const wrapLabel = (label) => {
+            const maxLength = 16;
+            if (label.length <= maxLength) {
+                return label;
+            }
+            const words = label.split(' ');
+            let lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + ' ' + word).trim().length > maxLength) {
+                    lines.push(currentLine);
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            }
+            if (currentLine) {
+                lines.push(currentLine);
+            }
+            return lines;
+        };
+        
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+              return label.join(' ');
+            } else {
+              return label;
+            }
+        };
+
+        const chartOptions = {
+            maintainAspectRatio: false,
+            responsive: true,
+            plugins: {
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        color: '#6b7280',
+                    },
+                    grid: {
+                        color: '#e5e7eb'
+                    }
+                },
+                x: {
+                    ticks: {
+                        color: '#6b7280',
+                    },
+                    grid: {
+                        display: false
+                    }
+                }
+            }
+        };
+
+        const feeData = {
+            labels: ['Bitcoin Cash (BCH)', 'Bitcoin (BTC)'],
+            datasets: [{
+                label: 'USD',
+                data: [0.001, 2.50],
+                backgroundColor: ['#00F0B5', '#00A0F0'],
+                borderColor: ['#00E0D2', '#0078F0'],
+                borderWidth: 1
+            }]
+        };
+        new Chart(document.getElementById('feeChart'), {
+            type: 'bar',
+            data: feeData,
+            options: { ...chartOptions, scales: { ...chartOptions.scales, y: { ...chartOptions.scales.y, title: { display: true, text: 'Phí bằng USD (Logarithmic)', }, type: 'logarithmic' } } }
+        });
+
+        const tpsData = {
+            labels: ['Bitcoin Cash (BCH)', 'Bitcoin (BTC)'],
+            datasets: [{
+                label: 'Giao dịch mỗi giây',
+                data: [200, 7],
+                backgroundColor: ['#00F0B5', '#00A0F0'],
+                borderColor: ['#00E0D2', '#0078F0'],
+                borderWidth: 1
+            }]
+        };
+        new Chart(document.getElementById('tpsChart'), {
+            type: 'bar',
+            data: tpsData,
+            options: { ...chartOptions, scales: { ...chartOptions.scales, y: { ...chartOptions.scales.y, title: { display: true, text: 'Giao dịch mỗi giây' } } } }
+        });
+
+        const supplyData = {
+            labels: ['Nguồn cung đang lưu hành', 'Còn lại để khai thác'],
+            datasets: [{
+                data: [19.8, 1.2],
+                backgroundColor: ['#0078F0', '#00C2E8'],
+                hoverBackgroundColor: ['#00A0F0', '#00E0D2'],
+                borderColor: '#ffffff',
+                borderWidth: 2,
+            }]
+        };
+
+        new Chart(document.getElementById('supplyChart'), {
+            type: 'doughnut',
+            data: supplyData,
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: {
+                            color: '#4b5563'
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+
+    </script>
+    <div style="text-align: center; padding: 3rem 0;">
+        <a href="index.html" style="display: inline-block; background-color: #3498db; color: white; padding: 0.8rem 1.8rem; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: 2px solid transparent; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            Quay lại Trang Blog
+        </a>
+    </div>
+</body>
+</html>

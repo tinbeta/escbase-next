@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: Chinh Phục Mất Ngủ Mãn Tính với CBT-I</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .flowchart-step {
+            border: 2px solid;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .flowchart-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .arrow {
+            font-size: 2.5rem;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-[#003f5c] text-white text-center py-12 px-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-2">Chinh Phục Mất Ngủ Mãn Tính</h1>
+        <p class="text-lg md:text-xl max-w-3xl mx-auto">Lộ trình dựa trên khoa học với Liệu pháp Nhận thức Hành vi (CBT-I) để giành lại giấc ngủ tự nhiên.</p>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <section id="problem" class="mb-16">
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-[#003f5c] mb-4 text-center">Hiểu Rõ Vòng Luẩn Quẩn Của Mất Ngủ</h2>
+                <p class="text-center max-w-3xl mx-auto mb-8">Mất ngủ mãn tính không chỉ là "một đêm khó ngủ". Nó được duy trì bởi một vòng lặp giữa suy nghĩ và hành vi. Mô hình 3-P dưới đây giải thích tại sao tình trạng này lại kéo dài.</p>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-0">
+                    <div class="flowchart-step text-center p-4 rounded-lg border-[#ffa600] bg-yellow-50 w-full md:w-1/4">
+                        <h3 class="font-bold text-lg text-[#ffa600]">1. Yếu tố Bẩm sinh</h3>
+                        <p class="text-sm">Đặc điểm di truyền hoặc tính cách khiến bạn dễ bị mất ngủ hơn (vd: hay lo âu).</p>
+                    </div>
+                    <div class="arrow text-[#7a5195] transform md:rotate-0 rotate-90">→</div>
+                    <div class="flowchart-step text-center p-4 rounded-lg border-[#ff764a] bg-red-50 w-full md:w-1/4">
+                        <h3 class="font-bold text-lg text-[#ff764a]">2. Yếu tố Khởi phát</h3>
+                        <p class="text-sm">Sự kiện căng thẳng trong cuộc sống gây ra mất ngủ cấp tính (vd: áp lực công việc).</p>
+                    </div>
+                    <div class="arrow text-[#7a5195] transform md:rotate-0 rotate-90">→</div>
+                    <div class="flowchart-step text-center p-4 rounded-lg border-[#ef5675] bg-pink-50 w-full md:w-1/4">
+                        <h3 class="font-bold text-lg text-[#ef5675]">3. Yếu tố Duy trì</h3>
+                        <p class="text-sm">Các thói quen và suy nghĩ sai lầm để đối phó, nhưng lại khiến mất ngủ trở thành mãn tính.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="solution" class="mb-16">
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-[#003f5c] mb-4 text-center">CBT-I: Con Đường Hiệu Quả & Bền Vững</h2>
+                 <p class="text-center max-w-3xl mx-auto mb-8">CBT-I là liệu pháp hàng đầu được các tổ chức y tế khuyên dùng vì nó nhắm thẳng vào các "Yếu tố Duy trì" - nguyên nhân gốc rễ của vấn đề, thay vì chỉ che giấu triệu chứng như thuốc.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-center mb-4">So Sánh Hiệu Quả Dài Hạn</h3>
+                        <div class="chart-container">
+                            <canvas id="comparisonChart"></canvas>
+                        </div>
+                        <p class="text-sm text-center mt-4 text-gray-600">Biểu đồ cho thấy CBT-I vượt trội hơn thuốc ngủ về hiệu quả lâu dài, ít tác dụng phụ và giảm đáng kể nguy cơ tái phát.</p>
+                    </div>
+                    <div class="flex flex-col justify-center items-center gap-8">
+                        <div class="text-center">
+                            <p class="text-6xl font-bold text-[#ef5675]">70-80%</p>
+                            <p class="text-lg">bệnh nhân cải thiện giấc ngủ đáng kể sau khi hoàn thành liệu trình CBT-I.</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-6xl font-bold text-[#ffa600]">90%</p>
+                            <p class="text-lg">bệnh nhân giảm hoặc ngưng hoàn toàn thuốc ngủ sau khi áp dụng CBT-I.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tools" class="mb-16">
+            <h2 class="text-3xl font-bold text-[#003f5c] mb-8 text-center">Bộ Công Cụ Cốt Lõi Của CBT-I</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-xl transition-shadow">
+                    <div class="text-5xl mb-4">🛌</div>
+                    <h3 class="text-xl font-bold text-[#7a5195] mb-2">Kiểm Soát Kích Thích (SCT)</h3>
+                    <p>Tái liên kết giường ngủ với giấc ngủ. Quy tắc vàng: Chỉ sử dụng giường để ngủ. Nếu không ngủ được sau 15-20 phút, hãy ra khỏi giường.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-xl transition-shadow">
+                    <div class="text-5xl mb-4">⏰</div>
+                    <h3 class="text-xl font-bold text-[#bc5090] mb-2">Giới Hạn Giấc Ngủ (SRT)</h3>
+                    <p>Tạm thời giới hạn thời gian trên giường để củng cố giấc ngủ, làm giấc ngủ sâu và liền mạch hơn, sau đó từ từ mở rộng lại.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-xl transition-shadow">
+                    <div class="text-5xl mb-4">🧠</div>
+                    <h3 class="text-xl font-bold text-[#ff764a] mb-2">Tái Cấu Trúc Nhận Thức</h3>
+                    <p>Thách thức và thay đổi những suy nghĩ tiêu cực, thảm họa hóa về giấc ngủ, giảm bớt lo âu và sự căng thẳng vào ban đêm.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="roadmap" class="mb-16">
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-[#003f5c] mb-4 text-center">Lộ Trình 8 Tuần Giành Lại Giấc Ngủ</h2>
+                <p class="text-center max-w-3xl mx-auto mb-8">Đây là một lộ trình tích hợp, kết hợp việc áp dụng các kỹ năng CBT-I với việc giảm liều thuốc một cách an toàn dưới sự giám sát y tế. Mục tiêu là xây dựng sự tự tin vào khả năng ngủ tự nhiên của bạn.</p>
+                <div class="chart-container h-96 md:h-[500px]">
+                    <canvas id="roadmapChart"></canvas>
+                </div>
+                 <p class="text-sm text-center mt-4 text-gray-600">Biểu đồ minh họa quá trình giảm dần liều thuốc ngủ theo từng giai đoạn, song song với việc xây dựng và củng cố các kỹ năng CBT-I, giúp cơ thể và tâm trí dần thích nghi và tự điều chỉnh.</p>
+            </div>
+        </section>
+
+        <section id="goal">
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8 text-center">
+                 <h2 class="text-3xl font-bold text-[#003f5c] mb-4">Đích Đến: Giấc Ngủ Tự Nhiên & Hiệu Quả</h2>
+                 <p class="max-w-3xl mx-auto mb-8">Mục tiêu cuối cùng của CBT-I không phải là ngủ đủ 8 tiếng mỗi đêm, mà là đạt được một giấc ngủ chất lượng và hiệu quả, giúp bạn cảm thấy sảng khoái và tràn đầy năng lượng vào ngày hôm sau.</p>
+                 <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+                    <div class="chart-container w-full max-w-xs h-64 md:h-80">
+                         <canvas id="efficiencyChart"></canvas>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-2">Cải Thiện Hiệu Quả Giấc Ngủ</h3>
+                        <p class="max-w-md">Hiệu quả giấc ngủ (tỷ lệ thời gian ngủ so với tổng thời gian trên giường) là một chỉ số quan trọng. CBT-I giúp tăng chỉ số này từ mức thấp (vd: dưới 85%) lên mức lý tưởng (trên 90%), nghĩa là bạn dành ít thời gian trằn trọc hơn và có một giấc ngủ liền mạch hơn.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center py-6 bg-gray-200 text-gray-600 mt-12">
+        <p>Thông tin trên trang này chỉ mang tính chất tham khảo và không thay thế cho chẩn đoán y tế chuyên nghiệp. Luôn tham khảo ý kiến bác sĩ hoặc chuyên gia sức khỏe tâm thần để có lộ trình điều trị phù hợp.</p>
+    </footer>
+    
+    <script>
+        const brilliantBlues = ['#003f5c', '#7a5195', '#ef5675', '#ffa600', '#374c80', '#ff764a'];
+        
+        const tooltipTitleCallback = function(tooltipItems) {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            } else {
+                return label;
+            }
+        };
+
+        const wrapLabel = (label) => {
+            const maxLength = 16;
+            if (label.length <= maxLength) return label;
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + word).length > maxLength) {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += word + ' ';
+            });
+            lines.push(currentLine.trim());
+            return lines;
+        };
+
+        const comparisonChartCtx = document.getElementById('comparisonChart').getContext('2d');
+        new Chart(comparisonChartCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Hiệu quả dài hạn', 'Tác dụng phụ', 'Tỷ lệ tái phát'],
+                datasets: [{
+                    label: 'CBT-I',
+                    data: [9, 2, 1.5],
+                    backgroundColor: brilliantBlues[1],
+                    borderColor: brilliantBlues[1],
+                    borderWidth: 1
+                }, {
+                    label: 'Thuốc Ngủ',
+                    data: [4, 8, 8.5],
+                    backgroundColor: brilliantBlues[2],
+                    borderColor: brilliantBlues[2],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                           callback: function(value) {
+                               if (value === 10) return 'Rất cao';
+                               if (value === 5) return 'Trung bình';
+                               if (value === 0) return 'Rất thấp';
+                               return null;
+                           }
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+
+        const roadmapChartCtx = document.getElementById('roadmapChart').getContext('2d');
+        new Chart(roadmapChartCtx, {
+            type: 'line',
+            data: {
+                labels: ['Tuần 1-3', 'Tuần 4', 'Tuần 5', 'Tuần 6', 'Tuần 7', 'Tuần 8', 'Tuần 9+'],
+                datasets: [{
+                    label: 'Liều lượng thuốc ngủ (%)',
+                    data: [100, 75, 75, 50, 50, 25, 0],
+                    borderColor: brilliantBlues[2],
+                    backgroundColor: 'rgba(239, 86, 117, 0.2)',
+                    fill: true,
+                    tension: 0.1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 110,
+                        ticks: {
+                            callback: function(value) { return value + '%' }
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    title: {
+                        display: true,
+                        text: 'Lịch Trình Giảm Liều Thuốc Đề Xuất',
+                        font: {
+                            size: 16
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+
+        const efficiencyChartCtx = document.getElementById('efficiencyChart').getContext('2d');
+        new Chart(efficiencyChartCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Thời gian thực ngủ', 'Thời gian thức trên giường'],
+                datasets: [{
+                    label: 'Hiệu quả giấc ngủ',
+                    data: [92, 8],
+                    backgroundColor: [brilliantBlues[0], brilliantBlues[3]],
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Mục Tiêu: Hiệu Quả > 90%',
+                        font: {
+                            size: 16
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

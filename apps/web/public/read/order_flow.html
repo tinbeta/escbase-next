@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: 5 Mẫu Hình Order Flow Quan Trọng</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: 120px;
+            margin-top: 1rem;
+        }
+        .card-gradient {
+            background: linear-gradient(145deg, #ffffff, #f9fafb);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="container mx-auto px-4 py-8 md:py-12">
+
+        <header class="text-center mb-10 md:mb-16">
+            <h1 class="text-3xl md:text-5xl font-bold text-[#004AAD] mb-3">5 Mẫu Hình Order Flow Quan Trọng</h1>
+            <p class="text-md md:text-lg text-gray-500 max-w-3xl mx-auto">Một hướng dẫn trực quan để nhận diện các tín hiệu then chốt từ dòng lệnh trên thị trường.</p>
+        </header>
+
+        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div class="card-gradient rounded-xl shadow-lg p-6 border border-gray-200/80 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 ease-in-out flex flex-col">
+                <h2 class="text-xl font-bold text-[#0079FF] mb-4">1. Hấp thụ (Absorption)</h2>
+                <div class="chart-container">
+                    <canvas id="absorptionChart"></canvas>
+                </div>
+                <div class="space-y-3 text-sm mt-4 flex-grow">
+                    <div>
+                        <h3 class="font-semibold text-[#004AAD] flex items-center mb-1"><span class="text-xl mr-2">👁️</span> Đặc điểm Trực quan</h3>
+                        <p class="text-gray-600 pl-7">Khối lượng lớn ở đỉnh/đáy nhưng giá thay đổi rất ít. Delta lớn nhưng không thể đẩy giá đi.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-[#004AAD] flex items-center mb-1"><span class="text-xl mr-2">⚙️</span> Động lực Thị trường</h3>
+                        <p class="text-gray-600 pl-7">Phe chủ động bị "hấp thụ" hoàn toàn bởi các lệnh giới hạn.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-[#004AAD] flex items-center mb-1"><span class="text-xl mr-2">💡</span> Ý nghĩa Giao dịch</h3>
+                        <p class="text-gray-600 pl-7">Tín hiệu phe tấn công suy yếu, xu hướng có thể sắp kết thúc.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-gradient rounded-xl shadow-lg p-6 border border-gray-200/80 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 ease-in-out flex flex-col">
+                <h2 class="text-xl font-bold text-[#0079FF] mb-4">2. Phân kỳ Delta (Delta Divergence)</h2>
+                <div class="chart-container">
+                    <canvas id="deltaDivergenceChart"></canvas>
+                </div>
+                <div class="space-y-3 text-sm mt-4 flex-grow">
+                    <div>
+                        <h3 class="font-semibold text-[#004AAD] flex items-center mb-1"><span class="text-xl mr-2">👁️</span> Đặc điểm Trực quan</h3>
+                        <p class="text-gray-600 pl-7">Giá tạo đỉnh/đáy mới, nhưng Delta yếu đi hoặc đi ngược chiều.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-[#004AAD] flex items-center mb-1"><span class="text-xl mr-2">⚙️</span> Động lực Thị trường</h3>
+                        <p class="text-gray-600 pl-7">Động lượng của phe chủ động đang cạn kiệt.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-[#004AAD] flex items-center mb-1"><span class="text-xl mr-2">💡</span> Ý nghĩa Giao dịch</h3>
+                        <p class="text-gray-600 pl-7">Cảnh báo sớm về sự suy yếu của xu hướng, khả năng đảo chiều.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-gradient rounded-xl shadow-lg p-6 border border-gray-200/80 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 ease-in-out flex flex-col">
+                <h2 class="text-xl font-bold text-[#0079FF] mb-4">3. Mất cân bằng Chồng chất</h2>
+                <div class="chart-container flex items-center justify-center">
+                    <div class="w-3/4 space-y-1">
+                        <div class="bg-[#0079FF]/30 text-[#004AAD] font-bold text-xs p-1 rounded text-center">▲ 250 vs 20</div>
+                        <div class="bg-[#0079FF]/30 text-[#004AAD] font-bold text-xs p-1 rounded text-center">▲ 180 vs 15</div>
+                        <div class="bg-[#0079FF]/30 text-[#004AAD] font-bold text-xs p-1 rounded text-center">▲ 310 vs 30</div>
+                    </div>
+                </div>
+                <div class="space-y-3 text-sm mt-4 flex-grow">
+                    <div>
+                        <h3 class="font-semibold text-[#004AAD] flex items-center mb-1"><span class="text-xl mr-2">👁️</span> Đặc điểm Trực quan</h3>
+                        <p class="text-gray-600 pl-7">Ba hoặc nhiều hơn các mức mất cân bằng liền kề, cùng hướng.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-[#004AAD] flex items-center mb-1"><span class="text-xl mr-2">⚙️</span> Động lực Thị trường</h3>
+                        <p class="text-gray-600 pl-7">Áp lực định hướng cực kỳ mạnh mẽ và bền vững.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-[#004AAD] flex items-center mb-1"><span class="text-xl mr-2">💡</span> Ý nghĩa Giao dịch</h3>
+                        <p class="text-gray-600 pl-7">Tín hiệu rất mạnh mẽ cho thấy sự tiếp diễn của xu hướng.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-gradient rounded-xl shadow-lg p-6 border border-gray-200/80 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 ease-in-out flex flex-col">
+                <h2 class="text-xl font-bold text-[#0079FF] mb-4">4. Đấu giá Chưa hoàn thành</h2>
+                <div class="chart-container">
+                     <canvas id="unfinishedAuctionChart"></canvas>
+                </div>
+                <div class="space-y-3 text-sm mt-4 flex-grow">
+                    <div>
+                        <h3 class="font-semibold text-[#004AAD] flex items-center mb-1"><span class="text-xl mr-2">👁️</span> Đặc điểm Trực quan</h3>
+                        <p class="text-gray-600 pl-7">Khối lượng ở mức giá cao nhất/thấp nhất cực kỳ thấp.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-[#004AAD] flex items-center mb-1"><span class="text-xl mr-2">⚙️</span> Động lực Thị trường</h3>
+                        <p class="text-gray-600 pl-7">Cuộc "đấu giá" kết thúc đột ngột vì thiếu người tham gia.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-[#004AAD] flex items-center mb-1"><span class="text-xl mr-2">💡</span> Ý nghĩa Giao dịch</h3>
+                        <p class="text-gray-600 pl-7">Tín hiệu tiếp diễn tiềm năng, giá có khả năng quay lại kiểm tra mức này.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-gradient rounded-xl shadow-lg p-6 border border-gray-200/80 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 ease-in-out flex flex-col">
+                <h2 class="text-xl font-bold text-[#0079FF] mb-4">5. Nhà giao dịch bị Mắc kẹt</h2>
+                 <div class="chart-container">
+                    <canvas id="trappedTradersChart"></canvas>
+                </div>
+                <div class="space-y-3 text-sm mt-4 flex-grow">
+                    <div>
+                        <h3 class="font-semibold text-[#004AAD] flex items-center mb-1"><span class="text-xl mr-2">👁️</span> Đặc điểm Trực quan</h3>
+                        <p class="text-gray-600 pl-7">Delta dương lớn ở đỉnh hoặc Delta âm lớn ở đáy.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-[#004AAD] flex items-center mb-1"><span class="text-xl mr-2">⚙️</span> Động lực Thị trường</h3>
+                        <p class="text-gray-600 pl-7">Người mua đuổi ở đỉnh/bán tháo ở đáy bị "mắc kẹt" khi giá đảo chiều.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-[#004AAD] flex items-center mb-1"><span class="text-xl mr-2">💡</span> Ý nghĩa Giao dịch</h3>
+                        <p class="text-gray-600 pl-7">Cơ hội vào lệnh ngược lại với những nhà giao dịch đang bị mắc kẹt.</p>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="text-center mt-10 md:mt-16 text-xs text-gray-400">
+            <p>Infographic được tạo dựa trên tài liệu phân tích Order Flow. Chỉ dành cho mục đích thông tin.</p>
+        </footer>
+    </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const defaultOptions = {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                display: false
+            },
+            tooltip: {
+                enabled: false
+            }
+        },
+        scales: {
+            x: {
+                display: false,
+                grid: { display: false }
+            },
+            y: {
+                display: false,
+                grid: { display: false }
+            }
+        },
+        animation: {
+            duration: 0
+        }
+    };
+
+    const tooltipCallback = {
+        plugins: {
+            tooltip: {
+                callbacks: {
+                    title: function(tooltipItems) {
+                        const item = tooltipItems[0];
+                        let label = item.chart.data.labels[item.dataIndex];
+                        if (Array.isArray(label)) {
+                          return label.join(' ');
+                        } else {
+                          return label;
+                        }
+                    }
+                }
+            }
+        }
+    };
+    
+    const mergeOptions = (options) => {
+        const newOptions = JSON.parse(JSON.stringify(defaultOptions));
+        newOptions.plugins.tooltip = { ...newOptions.plugins.tooltip, ...tooltipCallback.plugins.tooltip, enabled: true };
+        return { ...newOptions, ...options };
+    }
+
+    // 1. Absorption Chart
+    const ctxAbsorption = document.getElementById('absorptionChart');
+    if (ctxAbsorption) {
+        new Chart(ctxAbsorption, {
+            type: 'bar',
+            data: {
+                labels: ['','','','','Hấp thụ','','',''],
+                datasets: [{
+                    label: 'Giá',
+                    type: 'line',
+                    data: [10, 10.1, 10, 9.9, 10, 10.1, 10, 9.9],
+                    borderColor: '#0079FF',
+                    borderWidth: 2,
+                    pointRadius: 0,
+                    tension: 0.1,
+                    yAxisID: 'y'
+                }, {
+                    label: 'Khối lượng',
+                    data: [20, 30, 25, 80, 250, 90, 40, 30],
+                    backgroundColor: '#0079FF33',
+                    borderColor: '#0079FF',
+                    borderWidth: 1,
+                    yAxisID: 'y1'
+                }]
+            },
+            options: mergeOptions({
+                scales: { 
+                    y: { position: 'left', display: false }, 
+                    y1: { position: 'right', display: false, grid: { drawOnChartArea: false } },
+                    x: { display: false }
+                }
+            })
+        });
+    }
+
+    // 2. Delta Divergence Chart
+    const ctxDeltaDivergence = document.getElementById('deltaDivergenceChart');
+    if (ctxDeltaDivergence) {
+        new Chart(ctxDeltaDivergence, {
+            type: 'line',
+            data: {
+                labels: ['T1', 'T2', 'T3', 'T4', 'T5'],
+                datasets: [{
+                    label: 'Giá (Đỉnh cao hơn)',
+                    data: [10, 12, 11, 13, 12.5],
+                    borderColor: '#0079FF',
+                    borderWidth: 2,
+                    tension: 0.4,
+                    pointRadius: 0
+                }, {
+                    label: 'Delta (Đỉnh thấp hơn)',
+                    data: [4, 6, 3, 5, 2],
+                    borderColor: '#FFC107',
+                    borderDash: [5, 5],
+                    borderWidth: 2,
+                    tension: 0.4,
+                    pointRadius: 0
+                }]
+            },
+            options: mergeOptions()
+        });
+    }
+    
+    // 4. Unfinished Auction Chart
+    const ctxUnfinishedAuction = document.getElementById('unfinishedAuctionChart');
+    if (ctxUnfinishedAuction) {
+        new Chart(ctxUnfinishedAuction, {
+            type: 'bar',
+            data: {
+                labels: ['101.5', '101.0', '100.5', '100.0', '99.5'],
+                datasets: [{
+                    label: 'Khối lượng',
+                    data: [5, 150, 250, 180, 90],
+                    backgroundColor: ['#FFC107', '#0079FF33', '#0079FF33', '#0079FF33', '#0079FF33'],
+                }]
+            },
+            options: mergeOptions({ indexAxis: 'y' })
+        });
+    }
+
+    // 5. Trapped Traders Chart
+    const ctxTrappedTraders = document.getElementById('trappedTradersChart');
+    if(ctxTrappedTraders) {
+        new Chart(ctxTrappedTraders, {
+            type: 'bar',
+            data: {
+                labels: ['','','','Bị kẹt','',''],
+                datasets: [{
+                    label: 'Giá',
+                    data: [
+                        {x: 1, y: [10, 12]}, 
+                        {x: 2, y: [12, 14]}, 
+                        {x: 3, y: [14, 16]}, 
+                        {x: 4, y: [16, 13]}, 
+                        {x: 5, y: [13, 11]},
+                        {x: 6, y: [11, 10]}
+                    ],
+                    backgroundColor: (context) => {
+                        const y = context.raw.y;
+                        return y[0] > y[1] ? '#FF4136' : '#2ECC40';
+                    },
+                    yAxisID: 'y'
+                }, {
+                    label: 'Delta',
+                    data: [20, 40, 60, 250, -150, -100],
+                    backgroundColor: (context) => {
+                        return context.raw >= 0 ? '#2ECC4099' : '#FF413699';
+                    },
+                    yAxisID: 'y1'
+                }]
+            },
+            options: mergeOptions({
+                scales: { 
+                    y: { position: 'left', display: false }, 
+                    y1: { position: 'right', display: false, grid: { drawOnChartArea: false } },
+                    x: { display: false }
+                }
+            })
+        });
+    }
+});
+</script>
+    <div style="text-align: center; padding: 3rem 0;">
+        <a href="index.html" style="display: inline-block; background-color: #3498db; color: white; padding: 0.8rem 1.8rem; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: 2px solid transparent; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            Quay lại Trang Blog
+        </a>
+    </div>
+</body>
+</html>

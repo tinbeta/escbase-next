@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chính sách Quyền riêng tư - Escbase</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #f7931a;
+            --secondary-color: #e67e22;
+            --background-color: #0a0a0a;
+            --card-background: #141414;
+            --text-color: #e0e0e0;
+            --muted-text: #888;
+            --border-color: #2a2a2a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Be Vietnam Pro', sans-serif;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.8;
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.4rem;
+        }
+
+        .nav-logo img {
+            height: 36px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--muted-text);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Content */
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 8rem 1.5rem 4rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--primary-color) 0%, #ffd700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            color: var(--muted-text);
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            margin: 2rem 0 1rem;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        ul {
+            margin: 1rem 0 1rem 1.5rem;
+            color: var(--text-color);
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: #050505;
+            border-top: 1px solid var(--border-color);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            color: var(--muted-text);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            h1 {
+                font-size: 1.6rem;
+            }
+
+            .content {
+                padding-top: 6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="esclogo.png" alt="Escbase">
+                Escbase
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="crypto-reports/index.html">Crypto Reports</a></li>
+                <li><a href="blog/index.html">Blog</a></li>
+                <li><a href="read/index.html">Reading</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="content">
+        <h1><i class="fas fa-shield-alt"></i> Chính sách Quyền riêng tư</h1>
+        <p class="subtitle">Cập nhật lần cuối: 01/03/2026</p>
+
+        <p>Escbase cam kết bảo vệ quyền riêng tư của bạn. Chính sách này giải thích cách chúng tôi thu thập, sử dụng và bảo vệ thông tin cá nhân của bạn khi sử dụng website.</p>
+
+        <h2><i class="fas fa-database"></i> Thông tin chúng tôi thu thập</h2>
+        <p>Khi bạn truy cập website Escbase, chúng tôi có thể thu thập các thông tin sau:</p>
+        <ul>
+            <li>Địa chỉ IP và thông tin trình duyệt</li>
+            <li>Các trang bạn đã truy cập và thờii gian truy cập</li>
+            <li>Thông tin thiết bị (loại thiết bị, hệ điều hành)</li>
+            <li>Dữ liệu tương tác với nội dung</li>
+        </ul>
+
+        <h2><i class="fas fa-bullseye"></i> Mục đích sử dụng</h2>
+        <p>Thông tin thu thập được sử dụng để:</p>
+        <ul>
+            <li>Cải thiện trải nghiệm ngườì dùng</li>
+            <li>Phân tích lưu lượng truy cập</li>
+            <li>Cá nhân hóa nội dung hiển thị</li>
+            <li>Bảo mật và phát hiện gian lận</li>
+        </ul>
+
+        <h2><i class="fas fa-cookie-bite"></i> Cookie và Tracking</h2>
+        <p>Chúng tôi sử dụng cookie và công nghệ tương tự để:</p>
+        <ul>
+            <li>Ghi nhớ tùy chọn của bạn</li>
+            <li>Phân tích cách sử dụng website</li>
+            <li>Cung cấp nội dung phù hợp</li>
+        </ul>
+        <p>Bạn có thể tắt cookie trong cài đặt trình duyệt, tuy nhiên điều này có thể ảnh hưởng đến trải nghiệm của bạn.</p>
+
+        <h2><i class="fas fa-share-alt"></i> Chia sẻ thông tin</h2>
+        <p>Chúng tôi không bán, trao đổi hoặc chuyển giao thông tin cá nhân của bạn cho bên thứ ba, ngoại trừ:</p>
+        <ul>
+            <li>Các nhà cung cấp dịch vụ tin cậy (hosting, analytics)</li>
+            <li>Khi có yêu cầu pháp lý từ cơ quan chức năng</li>
+            <li>Để bảo vệ quyền lợi và tài sản của chúng tôi</li>
+        </ul>
+
+        <h2><i class="fas fa-lock"></i> Bảo mật</h2>
+        <p>Chúng tôi thực hiện các biện pháp bảo mật phù hợp để bảo vệ thông tin của bạn khỏi truy cập trái phép, thay đổi, tiết lộ hoặc phá hủy.</p>
+
+        <h2><i class="fas fa-envelope"></i> Liên hệ</h2>
+        <p>Nếu bạn có bất kỳ câu hỏi nào về chính sách quyền riêng tư, vui lòng liên hệ qua:</p>
+        <ul>
+            <li>Email: <a href="mailto:privacy@escbase.xyz">privacy@escbase.xyz</a></li>
+            <li>Discord: <a href="https://discord.gg/SMhy8RjDCf" target="_blank">Escbase Community</a></li>
+        </ul>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Escbase. <a href="tos.html">Điều khoản sử dụng</a> | <a href="index.html">Trang chủ</a></p>
+    </footer>
+</body>
+</html>

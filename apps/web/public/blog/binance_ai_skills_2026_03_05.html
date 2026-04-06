@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binance AI Agent Skills — 7 Kỹ Năng Cho AI Agents | ESC Base</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #000000;
+            --bg-elevated: #0a0a0a;
+            --bg-card: #111111;
+            --border: #1a1a1a;
+            --text: #ffffff;
+            --text-secondary: #888888;
+            --text-muted: #555555;
+            --accent: #f7931a;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 800;
+            font-size: 1.25rem;
+        }
+
+        .logo img { width: 36px; height: 36px; border-radius: 8px; }
+
+        .back-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover { color: var(--accent); }
+
+        article {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .article-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .lead {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            line-height: 1.7;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin: 3rem 0 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 2rem 0 1rem;
+            color: var(--accent);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        strong { color: var(--text); font-weight: 600; }
+
+        ul, ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+            color: var(--text-secondary);
+        }
+
+        li { margin-bottom: 0.75rem; }
+
+        .highlight-box {
+            background: var(--bg-card);
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .info-box {
+            background: rgba(33, 150, 243, 0.08);
+            border-left: 4px solid #2196F3;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .skill-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.25rem;
+        }
+
+        .skill-card h4 {
+            color: var(--accent);
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 3rem 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            article { padding: 6rem 1.5rem 3rem; }
+            .skills-grid { grid-template-columns: 1fr; }
+            h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../" class="logo">
+                <img src="../esclogo.png" alt="ESC Base">
+                <span>ESC Base</span>
+            </a>
+            <a href="../blog.html" class="back-link"><i class="fas fa-arrow-left"></i> Quay lại Blog</a>
+        </nav>
+    </header>
+
+    <article>
+        <div class="article-meta">
+            <span><i class="far fa-calendar"></i> 05/03/2026</span>
+            <span><i class="far fa-clock"></i> 8 min read</span>
+            <span><i class="fas fa-microchip"></i> AI & Tools</span>
+        </div>
+
+        <h1>Binance AI Agent Skills — 7 Kỹ Năng Cho AI Agents</h1>
+
+        <p class="lead">Binance & Binance Wallet vừa ra mắt 7 AI Agent Skills, cho phép OpenClaw, Claude và các AI Agents khác truy cập thị trường crypto grade Binance với kỹ năng thực thi giao dịch, phân tích ví và detect risks tự động.</p>
+
+        <!-- Tổng quan -->
+        <h2>📢 Announcement (03/03/2026)</h2>
+
+        <p>Binance công bố 7 AI Agent Skills cho phép AI Agents access dữ liệu thị trường + thực hiện giao dịch trực tiếp thông qua Binance infrastructure. Đây là sự cộng tác giữa Binance, Binance Wallet và cộng đồng AI agent builders toàn cầu.</p>
+
+        <div class="info-box">
+            <p><strong>Ý tưởng chính:</strong> Thay vì scraping dữ liệu từ nhiều nguồn, AI Agents có thể "plug-and-play" các kỹ năng Binance-grade để truy cập dữ liệu tập trung + thực hiện giao dịch an toàn.</p>
+        </div>
+
+        <!-- 7 Skills -->
+        <h2>🛠️ 7 AI Agent Skills</h2>
+
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h4>1. Binance Spot Skill</h4>
+                <p>Dữ liệu real-time (giá, độ sâu, nến) + thực hiện giao dịch (order, cancellation, OCO/OPO). Support API Key/Secret auth.</p>
+            </div>
+
+            <div class="skill-card">
+                <h4>2. Query Address Info</h4>
+                <p>Phân tích bất kỳ ví nào: holdings breakdown, valuation, 24h changes, concentration. Smart money tracking.</p>
+            </div>
+
+            <div class="skill-card">
+                <h4>3. Query Token Info</h4>
+                <p>Metadata token: symbol, chain, giá, liquidity, holders, trading activities. One-click token research.</p>
+            </div>
+
+            <div class="skill-card">
+                <h4>4. Crypto Market Rank</h4>
+                <p>Xếp hạng trends, hot searches, smart money inflows, meme narratives, trader PnL. "What to watch" today.</p>
+            </div>
+
+            <div class="skill-card">
+                <h4>5. Meme Rush</h4>
+                <p>Track meme tokens theo lifecycle (newly launched, migrating, migrated). Narrative theme mapping.</p>
+            </div>
+
+            <div class="skill-card">
+                <h4>6. Trading Signal</h4>
+                <p>Smart money buy/sell signals: trigger price, current price, maxGain, exitRate, signal status. Real-time alerts.</p>
+            </div>
+
+            <div class="skill-card">
+                <h4>7. Query Token Audit</h4>
+                <p>Detect contract risks tự động: mintability, freeze functions, ownership privileges. Safety-first research.</p>
+            </div>
+        </div>
+
+        <!-- Điểm mạnh -->
+        <h2>💪 Core Strengths</h2>
+
+        <ul>
+            <li><strong>Unified Intelligence Core:</strong> Một bộ não Binance-grade cho cả wallet analytics + exchange trading</li>
+            <li><strong>Seamless Experience:</strong> Workflow hoàn chỉnh không cần tool switching</li>
+            <li><strong>Smart Money + Security Dual Engine:</strong> Kết hợp signals + audits = speed + risk control</li>
+            <li><strong>Builder-Friendly:</strong> Modular, open. Integrate trong vài dòng config</li>
+            <li><strong>Multi-Agent Support:</strong> OpenClaw, Claude, CrewAI, LangChain, tất cả</li>
+        </ul>
+
+        <!-- Cảnh báo -->
+        <h2>⚠️ Important Notes</h2>
+
+        <ul>
+            <li>Signals là tham khảo, <strong>KHÔNG phải investment advice</strong></li>
+            <li>AI-generated outputs có thể chứa delays, errors, biases</li>
+            <li>Binance Spot Skill cần API Key/Secret — <strong>quản lý keys an toàn</strong></li>
+            <li>Luôn DYOR + comply với Terms of Use + Risk Warnings</li>
+            <li>Binance không endorse bất kỳ AI Agent nào — user tự đánh giá</li>
+        </ul>
+
+        <p style="text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-top: 3rem;">
+            Dữ liệu tính đến 05/03/2026 | Nguồn: Binance Announcement<br>
+            Chỉ mang tính tham khảo, không phải lời khuyên đầu tư.
+        </p>
+    </article>
+
+    <footer>
+        <p>&copy; 2026 ESC Base. Built with ❤️ for the crypto community.</p>
+    </footer>
+</body>
+</html>

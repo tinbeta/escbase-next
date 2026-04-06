@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic An Toàn Xe Điện: Sự Thật Đằng Sau Những Lo Ngại</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0A1828;
+            color: #E0E0E0;
+        }
+        .text-accent-teal { color: #178582; }
+        .text-accent-gold { color: #BFA181; }
+        .bg-card { background-color: rgba(23, 133, 130, 0.1); }
+        .border-accent-teal { border-color: #178582; }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .stat-card h3 {
+            font-size: 3rem;
+            font-weight: 900;
+            line-height: 1;
+        }
+        .flow-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #BFA181;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="container mx-auto p-4 md:p-8">
+        
+        <header class="text-center my-8 md:my-16">
+            <h1 class="text-4xl md:text-6xl font-black text-white mb-4">An Toàn Xe Điện</h1>
+            <p class="text-lg md:text-2xl text-accent-teal">Sự Thật Đằng Sau Những Lo Ngại Về Cháy Nổ & Lỗi Phần Mềm</p>
+        </header>
+
+        <section id="fire-risk" class="my-12 md:my-20">
+            <div class="text-center max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Thực Tế Về Nguy Cơ Cháy: Xe Điện An Toàn Hơn Bạn Nghĩ</h2>
+                <p class="text-md md:text-lg mb-8">Trái với nhận định của nhiều người, dữ liệu thống kê cho thấy xe điện (EV) có tỷ lệ cháy thấp hơn đáng kể so với xe động cơ đốt trong (ICE) và xe hybrid. Các vụ cháy xe điện thường được truyền thông chú ý nhiều hơn, tạo ra một nhận thức sai lệch về rủi ro.</p>
+            </div>
+            <div class="bg-card rounded-xl shadow-2xl p-4 md:p-8">
+                <h3 class="text-xl md:text-2xl font-bold text-center text-white mb-6">So Sánh Tỷ Lệ Cháy Nổ (Số vụ trên 100.000 xe bán ra)</h3>
+                <div class="chart-container">
+                    <canvas id="fireRateChart"></canvas>
+                </div>
+                <p class="text-center mt-4 text-accent-gold font-semibold">Dữ liệu từ Ban An toàn Giao thông Vận tải Quốc gia Hoa Kỳ (NTSB)</p>
+            </div>
+        </section>
+
+        <section id="fire-characteristics" class="my-12 md:my-20">
+             <div class="text-center max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Khi Cháy Xảy Ra: Tại Sao Đám Cháy Xe Điện Lại Khác Biệt?</h2>
+                <p class="text-md md:text-lg mb-8">Mặc dù ít xảy ra hơn, đám cháy xe điện có những đặc tính riêng biệt, gây ra thách thức lớn cho lực lượng cứu hỏa. Nguyên nhân gốc rễ và cách đám cháy lan truyền hoàn toàn khác so với xe xăng.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                <div class="bg-card rounded-xl shadow-2xl p-6 h-full">
+                    <h3 class="text-2xl font-bold text-accent-teal mb-4 text-center">🔥 XE ĐIỆN (EV)</h3>
+                    <div class="space-y-4 text-center">
+                        <p class="font-semibold text-lg">Nguyên nhân chính:</p>
+                        <div class="font-bold text-2xl text-white p-3 bg-red-800/50 rounded-lg">Thoát Nhiệt Pin</div>
+                        <div class="flow-arrow">↓</div>
+                        <p class="text-sm">Một cell pin quá nhiệt gây phản ứng dây chuyền, lan sang các cell khác.</p>
+                        <div class="flow-arrow">↓</div>
+                        <p class="font-semibold text-lg">Hậu quả:</p>
+                        <div class="font-bold text-2xl text-white p-3 bg-red-800/50 rounded-lg">Cháy Âm Ỉ, Nhiệt Độ Cực Cao</div>
+                    </div>
+                </div>
+                <div class="bg-card rounded-xl shadow-2xl p-6 h-full">
+                    <h3 class="text-2xl font-bold text-accent-gold mb-4 text-center">⛽ XE XĂNG (ICE)</h3>
+                     <div class="space-y-4 text-center">
+                        <p class="font-semibold text-lg">Nguyên nhân chính:</p>
+                        <div class="font-bold text-2xl text-white p-3 bg-orange-700/50 rounded-lg">Rò Rỉ Nhiên Liệu</div>
+                        <div class="flow-arrow">↓</div>
+                        <p class="text-sm">Xăng/dầu tiếp xúc với các bộ phận nóng (động cơ, ống xả) hoặc tia lửa điện.</p>
+                        <div class="flow-arrow">↓</div>
+                        <p class="font-semibold text-lg">Hậu quả:</p>
+                        <div class="font-bold text-2xl text-white p-3 bg-orange-700/50 rounded-lg">Bùng Cháy Nhanh</div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+                <div class="stat-card bg-card rounded-xl p-6 text-center">
+                    <h3 class="text-accent-teal">>650°C</h3>
+                    <p class="font-semibold mt-2">Nhiệt Độ Cao</p>
+                    <p class="text-sm text-gray-400">Khó tiếp cận và kiểm soát.</p>
+                </div>
+                <div class="stat-card bg-card rounded-xl p-6 text-center">
+                    <h3 class="text-accent-teal">24+ giờ</h3>
+                    <p class="font-semibold mt-2">Cháy Kéo Dài</p>
+                    <p class="text-sm text-gray-400">Nguy cơ bùng phát lại cao.</p>
+                </div>
+                <div class="stat-card bg-card rounded-xl p-6 text-center">
+                    <h3 class="text-accent-teal">☠️</h3>
+                    <p class="font-semibold mt-2">Khí Thải Độc Hại</p>
+                    <p class="text-sm text-gray-400">Giải phóng Hydrogen Fluoride.</p>
+                </div>
+                <div class="stat-card bg-card rounded-xl p-6 text-center">
+                    <h3 class="text-accent-teal">💧❌</h3>
+                    <p class="font-semibold mt-2">Khó Dập Tắt</p>
+                    <p class="text-sm text-gray-400">Nước kém hiệu quả, cần kỹ thuật đặc biệt.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="software-risks" class="my-12 md:my-20">
+            <div class="text-center max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Rủi Ro Vô Hình: Khi Phần Mềm Gặp Lỗi</h2>
+                <p class="text-md md:text-lg mb-8">Xe điện hiện đại là những "máy tính có bánh xe". Sự phụ thuộc vào phần mềm mang lại nhiều tính năng thông minh nhưng cũng tiềm ẩn các rủi ro mới, từ việc mất kiểm soát xe đến tình huống bị nhốt bên trong.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-card rounded-xl shadow-2xl p-6">
+                    <h3 class="text-2xl font-bold text-accent-gold mb-4 flex items-center"><span class="text-4xl mr-4">⚠️</span>Mất Lái & Mất Phanh</h3>
+                    <p class="mb-4">Lỗi trong các mô-đun điều khiển có thể vô hiệu hóa các chức năng an toàn cốt lõi. Các vụ triệu hồi đã xảy ra với nhiều hãng xe lớn do lỗi phần mềm ảnh hưởng đến hệ thống phanh hoặc trợ lực lái.</p>
+                    <p class="text-sm text-gray-400 font-semibold">Ví dụ: Lỗi phần mềm khiến xe mất phanh khi đang xuống dốc ở chế độ lái một bàn đạp.</p>
+                </div>
+                <div class="bg-card rounded-xl shadow-2xl p-6">
+                     <h3 class="text-2xl font-bold text-accent-gold mb-4 flex items-center"><span class="text-4xl mr-4">🔒</span>Bị Nhốt Trong Xe</h3>
+                    <p class="mb-4">Hầu hết các xe điện dùng pin 12V phụ để cấp nguồn cho hệ thống khóa cửa và cửa sổ. Nếu pin này hết, người dùng có thể bị kẹt bên trong, ngay cả khi pin chính còn đầy.</p>
+                    <p class="text-sm text-gray-400 font-semibold">Giải pháp: Hầu hết xe đều có lẫy mở cửa cơ khẩn cấp, nhưng nhiều người dùng không biết về sự tồn tại của nó.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="safety-measures" class="my-12 md:my-20">
+            <div class="text-center max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Xây Dựng "Pháo Đài" An Toàn</h2>
+                <p class="text-md md:text-lg mb-8">Ngành công nghiệp ô tô không đứng yên. Các nhà sản xuất đang áp dụng nhiều công nghệ và tiêu chuẩn an toàn nghiêm ngặt để bảo vệ người dùng khỏi cả nguy cơ cháy nổ và lỗi phần mềm.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-card rounded-xl p-6 text-center">
+                    <div class="text-6xl mb-4">🔋</div>
+                    <h3 class="text-xl font-bold text-white mb-2">An Toàn Pin</h3>
+                    <p class="text-sm">Hệ thống Quản lý Pin (BMS) và Quản lý Nhiệt (TMS) liên tục giám sát, làm mát và bảo vệ pin khỏi các điều kiện nguy hiểm như quá nhiệt, quá sạc.</p>
+                </div>
+                <div class="bg-card rounded-xl p-6 text-center">
+                    <div class="text-6xl mb-4">🛡️</div>
+                    <h3 class="text-xl font-bold text-white mb-2">An Toàn Chức Năng</h3>
+                    <p class="text-sm">Tuân thủ tiêu chuẩn quốc tế <span class="font-bold text-accent-gold">ISO 26262</span>, áp dụng quy trình phát triển và kiểm thử phần mềm nghiêm ngặt để ngăn ngừa các lỗi hệ thống nghiêm trọng.</p>
+                </div>
+                <div class="bg-card rounded-xl p-6 text-center">
+                    <div class="text-6xl mb-4">🌐</div>
+                    <h3 class="text-xl font-bold text-white mb-2">An Ninh Mạng</h3>
+                    <p class="text-sm">Các tiêu chuẩn như <span class="font-bold text-accent-gold">UNECE R155</span> và <span class="font-bold text-accent-gold">ISO/SAE 21434</span> được áp dụng để bảo vệ xe khỏi các cuộc tấn công mạng, đảm bảo an toàn cho dữ liệu và các bản cập nhật từ xa (OTA).</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="recommendations" class="my-12 md:my-20">
+            <div class="text-center max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">An Toàn Là Trách Nhiệm Chung</h2>
+                <p class="text-md md:text-lg mb-8">Để xây dựng một tương lai giao thông điện an toàn, cần có sự chung tay của tất cả các bên liên quan.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="border-2 border-accent-teal rounded-xl p-6">
+                    <h3 class="text-xl font-bold text-accent-teal mb-3">👤 Người Dùng</h3>
+                    <ul class="list-disc list-inside space-y-2 text-sm">
+                        <li>Sử dụng pin và bộ sạc chính hãng.</li>
+                        <li>Tuân thủ hướng dẫn sạc của nhà sản xuất.</li>
+                        <li>Đỗ xe nơi thoáng mát, tránh vật liệu dễ cháy.</li>
+                        <li>Tìm hiểu vị trí và cách dùng lẫy mở cửa khẩn cấp.</li>
+                        <li>Luôn cập nhật phần mềm mới nhất cho xe.</li>
+                    </ul>
+                </div>
+                 <div class="border-2 border-accent-teal rounded-xl p-6">
+                    <h3 class="text-xl font-bold text-accent-teal mb-3">🏭 Nhà Sản Xuất</h3>
+                    <ul class="list-disc list-inside space-y-2 text-sm">
+                        <li>Đầu tư vào R&D để nâng cao an toàn pin.</li>
+                        <li>Thiết kế pin dễ tiếp cận cho lực lượng cứu hỏa.</li>
+                        <li>Tăng cường kiểm thử phần mềm và an ninh mạng.</li>
+                        <li>Làm cho cơ chế thoát hiểm khẩn cấp dễ tìm và dễ sử dụng hơn.</li>
+                    </ul>
+                </div>
+                 <div class="border-2 border-accent-teal rounded-xl p-6">
+                    <h3 class="text-xl font-bold text-accent-teal mb-3">👨‍🚒 Cơ Quan Quản Lý & Cứu Hộ</h3>
+                    <ul class="list-disc list-inside space-y-2 text-sm">
+                        <li>Ban hành và thực thi các tiêu chuẩn an toàn nghiêm ngặt.</li>
+                        <li>Đầu tư đào tạo và trang bị chuyên dụng cho lính cứu hỏa.</li>
+                        <li>Nâng cao nhận thức cộng đồng bằng thông tin chính xác.</li>
+                        <li>Khuyến khích chia sẻ dữ liệu về các sự cố an toàn.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center mt-16 mb-8">
+            <p class="text-sm text-gray-500">Thông tin trong infographic này được tổng hợp từ báo cáo "An Toàn Xe Điện: Phân Tích Nguy Cơ Cháy Nổ và Lỗi Phần Mềm So Với Xe Động Cơ Đốt Trong".</p>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const fireRateCtx = document.getElementById('fireRateChart').getContext('2d');
+            
+            const fireRateData = {
+                labels: ['Xe Điện (EV)', 'Xe Xăng (ICE)', 'Xe Hybrid'],
+                datasets: [{
+                    label: 'Số vụ cháy trên 100.000 xe',
+                    data: [25, 1530, 3475],
+                    backgroundColor: [
+                        '#178582', 
+                        '#BFA181',
+                        '#984B43'
+                    ],
+                    borderColor: [
+                        '#178582',
+                        '#BFA181',
+                        '#984B43'
+                    ],
+                    borderWidth: 1
+                }]
+            };
+
+            const fireRateConfig = {
+                type: 'bar',
+                data: fireRateData,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            grid: {
+                                color: 'rgba(224, 224, 224, 0.2)'
+                            },
+                            ticks: {
+                                color: '#E0E0E0'
+                            }
+                        },
+                        y: {
+                             grid: {
+                                color: 'rgba(224, 224, 224, 0.1)'
+                            },
+                            ticks: {
+                                color: '#E0E0E0',
+                                font: {
+                                    size: 14,
+                                    weight: 'bold'
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                title: function(tooltipItems) {
+                                    const item = tooltipItems[0];
+                                    let label = item.chart.data.labels[item.dataIndex];
+                                    if (Array.isArray(label)) {
+                                      return label.join(' ');
+                                    } else {
+                                      return label;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            };
+
+            new Chart(fireRateCtx, fireRateConfig);
+        });
+    </script>
+    <div style="text-align: center; padding: 3rem 0;">
+        <a href="index.html" style="display: inline-block; background-color: #3498db; color: white; padding: 0.8rem 1.8rem; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: 2px solid transparent; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            Quay lại Trang Blog
+        </a>
+    </div>
+</body>
+</html>

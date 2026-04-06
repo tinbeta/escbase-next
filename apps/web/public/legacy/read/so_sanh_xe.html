@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: Cuộc Đua Công Nghệ Ô Tô Tại Việt Nam - Hybrid vs. EV vs. Xăng</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #f0f4f8;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .kpi-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .kpi-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.1);
+        }
+        .kpi-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+        .kpi-label {
+            font-size: 1rem;
+            color: #4A5568;
+            margin-top: 0.5rem;
+        }
+        .flowchart-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .flowchart-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        .flowchart-arrow {
+            font-size: 2rem;
+            color: #4299E1;
+            margin: 0 1rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+        
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-[#003B73] mb-2">CUỘC ĐUA CÔNG NGHỆ Ô TÔ TẠI VIỆT NAM</h1>
+            <p class="text-lg text-[#0074D9]">Phân tích toàn cảnh: Xe Hybrid, Xe Điện (EV) và Xe Xăng/Dầu (ICE)</p>
+        </header>
+
+        <section id="kpi" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8 text-[#003B73]">Những Con Số "Biết Nói"</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="kpi-card">
+                    <div class="kpi-value text-[#0074D9]">30-50%</div>
+                    <div class="kpi-label">Là mức tiết kiệm nhiên liệu của xe Hybrid (HEV) so với xe xăng truyền thống.</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-value text-[#00AEEF]">0%</div>
+                    <div class="kpi-label">Là lệ phí trước bạ cho xe điện (EV) đến hết tháng 2/2025, một lợi thế cạnh tranh lớn.</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-value text-[#7FDBFF]">~514tr</div>
+                    <div class="kpi-label">Là tổng chi phí sở hữu (TCO) thấp nhất sau 5 năm, thuộc về xe Hybrid trong mô phỏng.</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="technology-comparison" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8 text-[#003B73]">So Sánh Các Công Nghệ Hybrid Phổ Biến</h2>
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <p class="text-center text-gray-600 mb-6">Mỗi công nghệ Hybrid mang một triết lý vận hành riêng, từ hỗ trợ nhẹ đến trải nghiệm hoàn toàn như xe điện. Việc hiểu rõ sự khác biệt này giúp người dùng lựa chọn đúng sản phẩm phù hợp nhất với nhu cầu.</p>
+                <div class="chart-container mx-auto h-[450px] md:h-[500px]">
+                    <canvas id="hybridTechChart"></canvas>
+                </div>
+                <p class="text-center text-gray-600 mt-4">Biểu đồ trên so sánh các ưu điểm và nhược điểm chính của 4 loại công nghệ Hybrid phổ biến tại Việt Nam. Dễ thấy rằng Full Hybrid (HEV) và Hybrid Nối tiếp (e-POWER) mang lại nhiều lợi ích vượt trội về tiết kiệm nhiên liệu và trải nghiệm lái, trong khi Plug-in Hybrid (PHEV) đòi hỏi hạ tầng sạc.</p>
+            </div>
+        </section>
+        
+        <section id="tco-analysis" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8 text-[#003B73]">Bài Toán Kinh Tế: Tổng Chi Phí Sở Hữu (TCO) Sau 5 Năm</h2>
+            <div class="bg-white rounded-lg shadow-md p-6">
+                 <p class="text-center text-gray-600 mb-6">Tổng chi phí sở hữu (TCO) là thước đo tài chính toàn diện nhất, bao gồm giá lăn bánh, chi phí vận hành và khấu hao. Phân tích TCO cho thấy một kết quả bất ngờ: xe Hybrid, dù có giá mua cao hơn, lại là lựa chọn kinh tế nhất trong dài hạn.</p>
+                <div class="chart-container mx-auto">
+                    <canvas id="tcoChart"></canvas>
+                </div>
+                <p class="text-center text-gray-600 mt-4">Dữ liệu mô phỏng cho thấy sau 5 năm, tổng chi phí thực tế của xe Hybrid (Corolla Cross HEV) là thấp nhất, chủ yếu nhờ tiết kiệm nhiên liệu và khả năng giữ giá tốt, vượt qua lợi thế về thuế của xe Điện (VF e34) và giá rẻ ban đầu của xe Xăng (Corolla Cross 1.8V).</p>
+            </div>
+        </section>
+
+        <section id="operating-costs" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8 text-[#003B73]">Phân Rã Chi Phí Vận Hành (5 năm / 100.000 km)</h2>
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <p class="text-center text-gray-600 mb-6">Chi phí vận hành là yếu tố khác biệt lớn nhất giữa các loại xe. Xe điện có chi phí năng lượng và bảo dưỡng thấp nhất, nhưng lại phát sinh chi phí thuê pin. Xe Hybrid cân bằng tốt giữa chi phí nhiên liệu và không có các chi phí phụ trội.</p>
+                <div class="chart-container mx-auto">
+                    <canvas id="operatingCostChart"></canvas>
+                </div>
+                 <p class="text-center text-gray-600 mt-4">Biểu đồ cột chồng cho thấy tổng chi phí vận hành của xe Hybrid là thấp nhất. Xe điện dù có chi phí năng lượng và bảo dưỡng rẻ, nhưng tổng chi phí bị đội lên đáng kể bởi khoản thuê pin hàng tháng. Xe xăng có chi phí nhiên liệu cao vượt trội.</p>
+            </div>
+        </section>
+
+        <section id="user-profile" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8 text-[#003B73]">Lựa Chọn Nào Dành Cho Bạn? (Giai đoạn 2025-2027)</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6 border-t-4 border-[#0074D9]">
+                    <h3 class="font-bold text-xl mb-2 text-[#003B73]">Người Dùng Đô Thị</h3>
+                    <p class="text-gray-600 mb-3">Di chuyển chủ yếu trong thành phố, có chỗ sạc tại nhà.</p>
+                    <p class="font-bold text-2xl text-[#0074D9]">XE ĐIỆN (EV)</p>
+                    <p class="text-gray-700 mt-2">Tận hưởng chi phí vận hành siêu rẻ, vận hành êm ái, yên tĩnh.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 border-t-4 border-[#00AEEF]">
+                    <h3 class="font-bold text-xl mb-2 text-[#003B73]">Người Dùng Hỗn Hợp</h3>
+                    <p class="text-gray-600 mb-3">Đi lại trong phố và thường xuyên đi tỉnh, du lịch.</p>
+                    <p class="font-bold text-2xl text-[#00AEEF]">FULL HYBRID (HEV)</p>
+                    <p class="text-gray-700 mt-2">"Lựa chọn vàng" cân bằng hoàn hảo giữa tiết kiệm và sự linh hoạt.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 border-t-4 border-[#7FDBFF]">
+                    <h3 class="font-bold text-xl mb-2 text-[#003B73]">Người Đi Đường Dài</h3>
+                    <p class="text-gray-600 mb-3">Thường xuyên di chuyển liên tỉnh, chạy cao tốc.</p>
+                    <p class="font-bold text-2xl text-[#7FDBFF]">XE XĂNG/DẦU (ICE)</p>
+                    <p class="text-gray-700 mt-2">Vẫn là lựa chọn hiệu quả và tiện lợi nhất cho nhu cầu này.</p>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-6 border-t-4 border-[#001f3f]">
+                    <h3 class="font-bold text-xl mb-2 text-[#003B73]">Người Tiên Phong</h3>
+                    <p class="text-gray-600 mb-3">Yêu công nghệ, có điều kiện tài chính và sẵn sàng trải nghiệm.</p>
+                    <p class="font-bold text-2xl text-[#001f3f]">EV / PLUG-IN HYBRID</p>
+                    <p class="text-gray-700 mt-2">Trải nghiệm tương lai của ngành ô tô ngay hôm nay.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="future-outlook" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8 text-[#003B73]">Tầm Nhìn Tương Lai: Bức Tranh Sau 2027</h2>
+             <div class="bg-white rounded-lg shadow-md p-8">
+                 <p class="text-center text-gray-600 mb-8">Thị trường sẽ không đứng yên. Các yếu tố về hạ tầng, công nghệ pin và chính sách sẽ định hình lại cuộc chơi, và xe Hybrid vẫn sẽ đóng một vai trò quan trọng không thể thiếu.</p>
+                <div class="flex flex-col md:flex-row items-center justify-center">
+                    <div class="flowchart-step">
+                        <div class="flowchart-icon bg-[#0074D9] text-white">⛽</div>
+                        <div class="text-center md:text-left">
+                            <h4 class="font-bold">Hiện tại (ICE)</h4>
+                            <p class="text-sm text-gray-600">Phổ biến, tiện lợi</p>
+                        </div>
+                    </div>
+                    <div class="flowchart-arrow hidden md:block">→</div>
+                     <div class="text-2xl md:hidden my-2">↓</div>
+                    <div class="flowchart-step">
+                        <div class="flowchart-icon bg-[#00AEEF] text-white">🔋+⛽</div>
+                         <div class="text-center md:text-left">
+                            <h4 class="font-bold">Giai đoạn quá độ (HYBRID)</h4>
+                            <p class="text-sm text-gray-600">Cầu nối vững chắc, cân bằng, thực tế</p>
+                        </div>
+                    </div>
+                    <div class="flowchart-arrow hidden md:block">→</div>
+                    <div class="text-2xl md:hidden my-2">↓</div>
+                    <div class="flowchart-step">
+                        <div class="flowchart-icon bg-[#001f3f] text-white">⚡</div>
+                         <div class="text-center md:text-left">
+                            <h4 class="font-bold">Tương lai (EV)</h4>
+                            <p class="text-sm text-gray-600">Lựa chọn chủ đạo</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-center text-gray-700 mt-8">Xe Hybrid không phải công nghệ lỗi thời, mà là **cây cầu cần thiết nhất** để đưa người tiêu dùng Việt Nam từ hiện tại của động cơ đốt trong đến tương lai điện hóa hoàn toàn một cách mượt mà và không rủi ro.</p>
+            </div>
+        </section>
+
+        <footer class="text-center mt-12 pt-8 border-t border-gray-300">
+            <p class="text-gray-500">Nguồn dữ liệu: Báo cáo Phân tích Chuyên sâu về Xe Hybrid, Xe Điện và Xe Động cơ đốt trong tại Việt Nam.</p>
+            <p class="text-gray-500 text-sm mt-1">Infographic được thực hiện bởi AI. Dữ liệu và mô phỏng mang tính tham khảo tại thời điểm Q3/2024.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const brilliantBluesPalette = {
+            background: 'rgba(0, 116, 217, 0.2)',
+            border: '#0074D9',
+            secondaryBg: 'rgba(127, 219, 255, 0.2)',
+            secondaryBorder: '#7FDBFF',
+            tertiaryBg: 'rgba(0, 174, 239, 0.2)',
+            tertiaryBorder: '#00AEEF',
+            dark: '#001f3f',
+            light: '#f0f4f8'
+        };
+
+        function wrapText(str, maxWidth) {
+            if (str.length <= maxWidth) {
+                return str;
+            }
+            const words = str.split(' ');
+            let lines = [];
+            let currentLine = words[0];
+
+            for (let i = 1; i < words.length; i++) {
+                if (currentLine.length + words[i].length + 1 < maxWidth) {
+                    currentLine += ' ' + words[i];
+                } else {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+        
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+        
+        const commonChartOptions = {
+            maintainAspectRatio: false,
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        font: {
+                            family: "'Be Vietnam Pro', sans-serif",
+                            size: 12
+                        }
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    },
+                    bodyFont: {
+                        family: "'Be Vietnam Pro', sans-serif",
+                    },
+                    titleFont: {
+                        family: "'Be Vietnam Pro', sans-serif",
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    ticks: {
+                        font: {
+                            family: "'Be Vietnam Pro', sans-serif",
+                            size: 11
+                        }
+                    }
+                },
+                y: {
+                     ticks: {
+                        font: {
+                            family: "'Be Vietnam Pro', sans-serif",
+                        }
+                    }
+                }
+            }
+        };
+
+        const hybridTechCtx = document.getElementById('hybridTechChart').getContext('2d');
+        new Chart(hybridTechCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Mild Hybrid (MHEV)', 'Full Hybrid (HEV)', 'Plug-in Hybrid (PHEV)', wrapText('Hybrid Nối tiếp (e-POWER)', 16)],
+                datasets: [{
+                    label: 'Ưu điểm chính (Điểm đánh giá)',
+                    data: [2, 4, 3, 4.5],
+                    backgroundColor: brilliantBluesPalette.tertiaryBg,
+                    borderColor: brilliantBluesPalette.tertiaryBorder,
+                    borderWidth: 2
+                }, {
+                    label: 'Nhược điểm (Điểm đánh giá)',
+                    data: [-3, -2, -4, -2.5],
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                ...commonChartOptions,
+                plugins: {
+                    ...commonChartOptions.plugins,
+                    title: {
+                        display: true,
+                        text: 'Đánh giá Ưu/Nhược điểm các công nghệ Hybrid',
+                        font: { size: 16, weight: 'bold' }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Điểm đánh giá (tương đối)'
+                        }
+                    }
+                }
+            }
+        });
+
+        const tcoCtx = document.getElementById('tcoChart').getContext('2d');
+        new Chart(tcoCtx, {
+            type: 'bar',
+            data: {
+                labels: [wrapText('Xe Xăng (Corolla Cross 1.8V)', 16), wrapText('Xe Hybrid (Corolla Cross 1.8HEV)', 16), wrapText('Xe Điện (VinFast VF e34)', 16)],
+                datasets: [{
+                    label: 'Tổng chi phí sở hữu sau 5 năm (Triệu VNĐ)',
+                    data: [541.4, 513.5, 580.8],
+                    backgroundColor: [
+                        brilliantBluesPalette.secondaryBg,
+                        brilliantBluesPalette.background,
+                        'rgba(0, 31, 63, 0.2)'
+                    ],
+                    borderColor: [
+                        brilliantBluesPalette.secondaryBorder,
+                        brilliantBluesPalette.border,
+                        brilliantBluesPalette.dark
+                    ],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                ...commonChartOptions,
+                indexAxis: 'y',
+                plugins: {
+                     ...commonChartOptions.plugins,
+                    legend: { display: false },
+                    title: {
+                        display: true,
+                        text: 'So sánh TCO thực tế sau 5 năm (100.000 km)',
+                        font: { size: 16, weight: 'bold' }
+                    }
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Chi phí (Triệu VNĐ)'
+                        }
+                    }
+                }
+            }
+        });
+        
+        const operatingCostCtx = document.getElementById('operatingCostChart').getContext('2d');
+        new Chart(operatingCostCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Xe Xăng', 'Xe Hybrid', 'Xe Điện'],
+                datasets: [
+                    {
+                        label: 'Nhiên liệu / Năng lượng',
+                        data: [182.4, 108.0, 44.8],
+                        backgroundColor: brilliantBluesPalette.border,
+                    },
+                    {
+                        label: 'Bảo dưỡng',
+                        data: [35, 28, 12],
+                        backgroundColor: brilliantBluesPalette.tertiaryBorder,
+                    },
+                    {
+                        label: 'Thuê Pin',
+                        data: [0, 0, 126],
+                        backgroundColor: brilliantBluesPalette.dark,
+                    }
+                ]
+            },
+            options: {
+                ...commonChartOptions,
+                plugins: {
+                    ...commonChartOptions.plugins,
+                    title: {
+                        display: true,
+                        text: 'So sánh các thành phần chi phí vận hành (Triệu VNĐ)',
+                        font: { size: 16, weight: 'bold' }
+                    },
+                },
+                scales: {
+                    x: {
+                        stacked: true,
+                    },
+                    y: {
+                        stacked: true,
+                        title: {
+                            display: true,
+                            text: 'Chi phí (Triệu VNĐ)'
+                        }
+                    }
+                }
+            }
+        });
+
+    </script>
+    <div style="text-align: center; padding: 3rem 0;">
+        <a href="index.html" style="display: inline-block; background-color: #3498db; color: white; padding: 0.8rem 1.8rem; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: 2px solid transparent; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            Quay lại Trang Blog
+        </a>
+    </div>
+</body>
+</html>

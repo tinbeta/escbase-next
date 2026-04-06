@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phân Tích Hiệu Quả Các Phương Pháp Chữa Lành Tự Nhiên</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-[#F2F2F2]">
+
+    <div class="container mx-auto p-4 md:p-8">
+        
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-[#005082] mb-2">Phân Tích Hiệu Quả</h1>
+            <p class="text-lg md:text-xl text-[#0077C0]">Các Phương Pháp Chữa Lành Tự Nhiên Phổ Biến</p>
+        </header>
+
+        <main class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            <div class="md:col-span-2 bg-white rounded-lg shadow-lg p-6 flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 text-center md:text-left md:pr-8">
+                    <h2 class="text-3xl font-bold text-[#005082] mb-4">Uống Nước Chanh Muối Ấm</h2>
+                    <p class="text-[#333333] mb-4">
+                        Phương pháp này được nhiều người tin rằng giúp thải độc và giảm cân. Về mặt khoa học, lợi ích lớn nhất đến từ việc cung cấp đủ nước cho cơ thể vào buổi sáng. Chanh bổ sung Vitamin C và một lượng nhỏ muối cung cấp chất điện giải cần thiết để bắt đầu ngày mới.
+                    </p>
+                    <div class="text-center">
+                         <p class="text-5xl font-bold text-[#00A1E4]">~30%</p>
+                         <p class="text-[#0077C0]">Nhu cầu Vitamin C hàng ngày từ 1 quả chanh</p>
+                    </div>
+                </div>
+                <div class="md:w-1/2 w-full mt-6 md:mt-0">
+                    <div class="chart-container">
+                        <canvas id="lemonadeChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-3xl font-bold text-[#005082] mb-4 text-center">Đi Chân Đất (Grounding)</h2>
+                <p class="text-[#333333] mb-6">
+                    Lý thuyết đằng sau việc đi chân đất, hay "tiếp đất", là việc kết nối trực tiếp với năng lượng điện của Trái Đất có thể mang lại lợi ích sức khỏe. Mặc dù các nghiên cứu quy mô lớn còn hạn chế, nhiều người thực hành cho biết họ cảm thấy giảm căng thẳng và ngủ ngon hơn.
+                </p>
+                <div class="chart-container">
+                    <canvas id="groundingChart"></canvas>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                 <h2 class="text-3xl font-bold text-[#005082] mb-4 text-center">Tắm Nắng Hợp Lý</h2>
+                <p class="text-[#333333] mb-6">
+                   Tắm nắng là cách tự nhiên và hiệu quả nhất để cơ thể tổng hợp Vitamin D, một dưỡng chất quan trọng cho xương và hệ miễn dịch. Tuy nhiên, việc cân bằng thời gian phơi nắng để tối đa hóa lợi ích và giảm thiểu nguy cơ tổn thương da là cực kỳ quan trọng.
+                </p>
+                <div class="chart-container">
+                    <canvas id="sunbathingChart"></canvas>
+                </div>
+            </div>
+
+            <div class="md:col-span-2 bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-3xl font-bold text-[#005082] mb-4 text-center">Bảng Tổng Kết & So Sánh</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr>
+                                <th class="py-4 px-6 bg-[#0077C0] text-white font-bold uppercase text-sm border-b border-gray-200">Phương pháp</th>
+                                <th class="py-4 px-6 bg-[#0077C0] text-white font-bold uppercase text-sm border-b border-gray-200">Mức Độ Bằng Chứng Khoa Học</th>
+                                <th class="py-4 px-6 bg-[#0077C0] text-white font-bold uppercase text-sm border-b border-gray-200">Lợi Ích Chính</th>
+                                <th class="py-4 px-6 bg-[#0077C0] text-white font-bold uppercase text-sm border-b border-gray-200">Rủi Ro Tiềm Ẩn</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="hover:bg-gray-50">
+                                <td class="py-4 px-6 border-b border-gray-200">Nước chanh muối</td>
+                                <td class="py-4 px-6 border-b border-gray-200 text-xl text-[#00A1E4]">★★☆</td>
+                                <td class="py-4 px-6 border-b border-gray-200">Bù nước, bổ sung Vitamin C</td>
+                                <td class="py-4 px-6 border-b border-gray-200">Hại men răng, thừa natri</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="py-4 px-6 border-b border-gray-200">Đi chân đất</td>
+                                <td class="py-4 px-6 border-b border-gray-200 text-xl text-[#00A1E4]">★☆☆</td>
+                                <td class="py-4 px-6 border-b border-gray-200">Cải thiện tâm trạng (chủ quan)</td>
+                                <td class="py-4 px-6 border-b border-gray-200">Nguy cơ chấn thương, nhiễm trùng</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="py-4 px-6 border-b border-gray-200">Tắm nắng</td>
+                                <td class="py-4 px-6 border-b border-gray-200 text-xl text-[#00A1E4]">★★★</td>
+                                <td class="py-4 px-6 border-b border-gray-200">Tổng hợp Vitamin D, cải thiện tâm trạng</td>
+                                <td class="py-4 px-6 border-b border-gray-200">Tổn thương da, ung thư da</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                 <p class="text-center text-gray-500 mt-6 text-sm">
+                    Thông tin trên chỉ mang tính chất tham khảo. Luôn tham vấn ý kiến chuyên gia y tế trước khi áp dụng bất kỳ phương pháp chăm sóc sức khỏe nào.
+                </p>
+            </div>
+        </main>
+
+        <footer class="text-center mt-10 py-4 border-t border-gray-300">
+            <p class="text-[#005082]">Đồ họa thông tin được tạo bởi Canvas Infographics | 2025</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const chartTooltipCallback = {
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                  return label.join(' ');
+                                } else {
+                                  return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            };
+            
+            const lemonadeCtx = document.getElementById('lemonadeChart').getContext('2d');
+            new Chart(lemonadeCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Bù Nước', 'Cung Cấp Vitamin C', 'Bổ Sung Điện Giải', 'Tác Dụng Chưa Được Chứng Minh'],
+                    datasets: [{
+                        label: 'Phân tích lợi ích',
+                        data: [65, 20, 5, 10],
+                        backgroundColor: ['#00A1E4', '#0077C0', '#6ebde6', '#005082'],
+                        borderColor: '#FFFFFF',
+                        borderWidth: 3
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        ...chartTooltipCallback.plugins,
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: '#333333'
+                            }
+                        }
+                    }
+                }
+            });
+
+            const groundingCtx = document.getElementById('groundingChart').getContext('2d');
+            new Chart(groundingCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Cải Thiện Giấc Ngủ', 'Giảm Căng Thẳng', 'Giảm Đau Nhức'],
+                    datasets: [{
+                        label: 'Tỷ lệ người dùng báo cáo hiệu quả (%)',
+                        data: [75, 62, 45],
+                        backgroundColor: ['#00A1E4', '#0077C0', '#005082'],
+                        borderRadius: 5
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: { color: '#333333' }
+                        },
+                        y: {
+                            ticks: { color: '#333333' }
+                        }
+                    },
+                    plugins: {
+                         ...chartTooltipCallback.plugins,
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+
+            const sunbathingCtx = document.getElementById('sunbathingChart').getContext('2d');
+            new Chart(sunbathingCtx, {
+                type: 'line',
+                data: {
+                    labels: ['0', '5', '10', '15', '20', '25', '30+'],
+                    datasets: [{
+                        label: 'Sản xuất Vitamin D',
+                        data: [0, 40, 80, 95, 100, 100, 100],
+                        borderColor: '#00A1E4',
+                        backgroundColor: 'rgba(0, 161, 228, 0.1)',
+                        fill: true,
+                        tension: 0.4
+                    }, {
+                        label: 'Nguy cơ tổn thương da',
+                        data: [0, 5, 10, 20, 40, 65, 90],
+                        borderColor: '#FF6384',
+                        backgroundColor: 'rgba(255, 99, 132, 0.1)',
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 110,
+                            ticks: {
+                                callback: function(value) {
+                                    return value + '%'
+                                },
+                                color: '#333333'
+                            }
+                        },
+                        x: {
+                             title: {
+                                display: true,
+                                text: 'Thời gian phơi nắng (phút)',
+                                color: '#333333'
+                            },
+                             ticks: { color: '#333333' }
+                        }
+                    },
+                     plugins: {
+                         ...chartTooltipCallback.plugins,
+                        legend: {
+                            position: 'bottom',
+                             labels: {
+                                color: '#333333'
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

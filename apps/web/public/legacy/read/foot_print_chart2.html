@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: Giải mã Biểu đồ Footprint</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #D6E6F7;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .flowchart-step {
+            border: 2px solid #6B95C3;
+            background-color: #ffffff;
+            color: #003F5C;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: transform 0.2s;
+        }
+        .flowchart-step:hover {
+            transform: translateY(-5px);
+        }
+        .flowchart-arrow {
+            font-size: 2.5rem;
+            color: #366999;
+            margin: 0 1rem;
+            align-self: center;
+        }
+        .stat-card {
+            background-color: #ffffff;
+            border-left: 5px solid #366999;
+        }
+    </style>
+</head>
+<body class="text-[#003F5C]">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-[#003F5C] mb-4">Giải mã Biểu đồ Footprint</h1>
+            <p class="text-lg md:text-xl text-[#366999] max-w-3xl mx-auto">Một cái nhìn sâu vào bên trong hoạt động thị trường, trực quan hóa cuộc chiến thời gian thực giữa phe Mua và phe Bán.</p>
+        </header>
+
+        <main>
+            <section id="anatomy" class="mb-16">
+                <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                    <h2 class="text-3xl font-bold text-center mb-2 text-[#003F5C]">Giải phẫu một Nến Footprint</h2>
+                    <p class="text-center text-[#366999] mb-8 max-w-2xl mx-auto">Mỗi cây nến không chỉ hiển thị giá Mở-Cao-Thấp-Đóng, mà còn tiết lộ khối lượng giao dịch chính xác tại từng mức giá, phân tách giữa lực mua và lực bán chủ động.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                        <div class="text-center md:text-right">
+                            <h3 class="font-bold text-xl text-[#366999]">Khối lượng Bán (Bid)</h3>
+                            <p class="text-sm">Hiển thị khối lượng của các nhà giao dịch <span class="font-bold text-red-600">bán chủ động</span> bằng lệnh Thị trường (Market Sell). Họ là những người "đánh vào giá Bid".</p>
+                        </div>
+                        <div class="flex justify-center">
+                            <div class="bg-[#D6E6F7] p-4 rounded-lg shadow-inner w-48">
+                                <div class="text-center font-mono text-lg font-bold mb-2">Giá</div>
+                                <div class="flex justify-between items-center bg-white p-2 rounded mb-1">
+                                    <span class="text-red-600">15</span>
+                                    <span class="text-gray-400">x</span>
+                                    <span class="text-green-600 font-extrabold text-xl">150</span>
+                                </div>
+                                <div class="flex justify-between items-center bg-white p-2 rounded mb-1 ring-2 ring-[#366999]">
+                                    <span class="text-red-600">75</span>
+                                    <span class="text-gray-400">x</span>
+                                    <span class="text-green-600">80</span>
+                                </div>
+                                <div class="flex justify-between items-center bg-white p-2 rounded">
+                                    <span class="text-red-600 font-extrabold text-xl">200</span>
+                                    <span class="text-gray-400">x</span>
+                                    <span class="text-green-600">25</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center md:text-left">
+                            <h3 class="font-bold text-xl text-[#366999]">Khối lượng Mua (Ask)</h3>
+                            <p class="text-sm">Hiển thị khối lượng của các nhà giao dịch <span class="font-bold text-green-600">mua chủ động</span> bằng lệnh Thị trường (Market Buy). Họ là những người "nhấc giá Ask".</p>
+                        </div>
+                    </div>
+                     <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                        <div class="stat-card p-4 rounded-lg shadow-md">
+                            <h4 class="font-bold text-lg">Delta (${\Delta}$)</h4>
+                            <p class="text-sm">Là chênh lệch ròng giữa khối lượng Mua và Bán chủ động. <span class="font-bold text-green-600">Delta dương</span> cho thấy phe mua mạnh hơn, <span class="font-bold text-red-600">Delta âm</span> cho thấy phe bán mạnh hơn.</p>
+                        </div>
+                        <div class="stat-card p-4 rounded-lg shadow-md">
+                            <h4 class="font-bold text-lg">Điểm Kiểm Soát (POC)</h4>
+                            <p class="text-sm">Mức giá có khối lượng giao dịch cao nhất trong nến. Nó hoạt động như một "nam châm" hoặc điểm xoay vi mô.</p>
+                        </div>
+                         <div class="stat-card p-4 rounded-lg shadow-md">
+                            <h4 class="font-bold text-lg">Vùng Giá trị (VA)</h4>
+                            <p class="text-sm">Vùng giá chứa 70% khối lượng giao dịch. Đại diện cho khu vực "chấp nhận giá" của thị trường.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="patterns" class="mb-16">
+                <h2 class="text-3xl font-bold text-center mb-2 text-[#003F5C]">Các Mẫu hình Cốt lõi</h2>
+                <p class="text-center text-[#366999] mb-8 max-w-2xl mx-auto">Học cách nhận diện những dấu chân mà các tay chơi lớn để lại trên thị trường. Đây là những tín hiệu mạnh mẽ về ý định thực sự đằng sau các chuyển động giá.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="text-2xl font-bold text-[#003F5C] mb-3">Mất cân bằng Xếp chồng</h3>
+                        <p class="text-sm mb-4">Khi 3 hoặc nhiều mức mất cân bằng (lực mua/bán chênh lệch hơn 300%) xuất hiện liên tiếp, nó cho thấy sự chủ động cực mạnh, thường là từ các tổ chức. Vùng này trở thành mức hỗ trợ/kháng cự rất mạnh trong tương lai.</p>
+                        <div class="chart-container">
+                            <canvas id="imbalanceChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="text-2xl font-bold text-[#003F5C] mb-3">Hấp thụ</h3>
+                        <p class="text-sm mb-4">Xảy ra khi một lực tấn công chủ động lớn (ví dụ: bán tháo) bị chặn đứng bởi một bức tường lệnh giới hạn bị động. Dấu hiệu: khối lượng giao dịch rất cao nhưng giá không thể di chuyển. Đây là tín hiệu đảo chiều tiềm năng.</p>
+                        <div class="chart-container">
+                            <canvas id="absorptionChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="text-2xl font-bold text-[#003F5C] mb-3">Cạn kiệt</h3>
+                        <p class="text-sm mb-4">Đối lập với hấp thụ, cạn kiệt xảy ra khi một xu hướng mất đà do thiếu khối lượng. Dấu hiệu: giá tạo đỉnh/đáy mới nhưng khối lượng tại điểm cực trị gần như bằng không. Tín hiệu cho thấy xu hướng sắp kết thúc.</p>
+                        <div class="chart-container">
+                            <canvas id="exhaustionChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="text-2xl font-bold text-[#003F5C] mb-3">Nhà giao dịch bị Mắc kẹt</h3>
+                        <p class="text-sm mb-4">Tín hiệu mạnh nhất: giá tạo đỉnh mới nhưng Delta lại âm (hoặc ngược lại). Điều này cho thấy những người mua đuổi theo cú phá vỡ đã bị "sập bẫy". Lệnh dừng lỗ của họ trở thành nhiên liệu cho một cú đảo chiều mạnh.</p>
+                        <div class="chart-container">
+                            <canvas id="trappedTradersChart"></canvas>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            
+            <section id="strategies" class="mb-16">
+                <h2 class="text-3xl font-bold text-center mb-2 text-[#003F5C]">Chiến lược Giao dịch Thực chiến</h2>
+                <p class="text-center text-[#366999] mb-8 max-w-2xl mx-auto">Biến các mẫu hình thành kế hoạch hành động. Dưới đây là cách áp dụng các tín hiệu Footprint vào các chiến lược giao dịch cụ thể.</p>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 md:p-8 mb-8">
+                    <h3 class="text-2xl font-bold text-[#003F5C] mb-4">Chiến lược 1: Giao dịch theo Xu hướng với Mất cân bằng</h3>
+                    <div class="flex flex-col md:flex-row items-center justify-center">
+                        <div class="flowchart-step">1. Xác định xu hướng mạnh tạo ra vùng Mất cân bằng Xếp chồng.</div>
+                        <div class="flowchart-arrow transform md:rotate-0 rotate-90">→</div>
+                        <div class="flowchart-step">2. Chờ giá điều chỉnh quay trở lại vùng Mất cân bằng này.</div>
+                         <div class="flowchart-arrow transform md:rotate-0 rotate-90">→</div>
+                        <div class="flowchart-step">3. Vào lệnh khi Footprint cho thấy tín hiệu tiếp diễn xu hướng (hấp thụ/delta mạnh).</div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                    <h3 class="text-2xl font-bold text-[#003F5C] mb-4">Chiến lược 2: Giao dịch Đảo chiều với Hấp thụ / Nhà giao dịch mắc kẹt</h3>
+                     <div class="flex flex-col md:flex-row items-center justify-center">
+                        <div class="flowchart-step">1. Giá tiếp cận một mức Hỗ trợ/Kháng cự quan trọng.</div>
+                        <div class="flowchart-arrow transform md:rotate-0 rotate-90">→</div>
+                        <div class="flowchart-step">2. Tìm tín hiệu Hấp thụ hoặc Phân kỳ Delta (người mắc kẹt) trên Footprint.</div>
+                         <div class="flowchart-arrow transform md:rotate-0 rotate-90">→</div>
+                        <div class="flowchart-step">3. Vào lệnh ngược xu hướng khi có nến xác nhận, đặt dừng lỗ ngay sau điểm cực trị.</div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="platforms" class="mb-16">
+                <h2 class="text-3xl font-bold text-center mb-2 text-[#003F5C]">Lựa chọn Công cụ Phù hợp</h2>
+                <p class="text-center text-[#366999] mb-8 max-w-2xl mx-auto">Phân tích Footprint đòi hỏi phần mềm và nguồn cấp dữ liệu chuyên dụng. Lựa chọn đúng nền tảng là bước quan trọng đầu tiên.</p>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold text-[#003F5C] mb-4">So sánh các Nền tảng Phổ biến</h3>
+                    <div class="chart-container h-96 md:h-[500px]">
+                        <canvas id="platformChart"></canvas>
+                    </div>
+                    <p class="text-xs text-center mt-4 text-gray-500">Đánh giá dựa trên các tiêu chí tương đối: Dễ sử dụng, Khả năng tùy chỉnh, và Chi phí tổng thể (phần mềm + dữ liệu).</p>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 pt-8 border-t border-[#A1C3E2]">
+            <p class="text-[#366999]">Infographic được tạo ra dựa trên báo cáo chuyên sâu về Phân tích Biểu đồ Footprint.</p>
+            <p class="text-xs text-[#6B95C3] mt-2">Lưu ý: Giao dịch tài chính có rủi ro. Thông tin này chỉ dành cho mục đích giáo dục.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const brilliantBlues = {
+            dark: '#003F5C',
+            mediumDark: '#366999',
+            medium: '#6B95C3',
+            light: '#A1C3E2',
+            extraLight: '#D6E6F7',
+            red: '#e53e3e',
+            green: '#38a169'
+        };
+
+        const defaultChartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    labels: {
+                        color: brilliantBlues.dark,
+                        font: {
+                            family: "'Inter', sans-serif"
+                        }
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                              return label.join(' ');
+                            } else {
+                              return label;
+                            }
+                        }
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: { color: brilliantBlues.mediumDark },
+                    grid: { color: brilliantBlues.light }
+                },
+                x: {
+                    ticks: { color: brilliantBlues.mediumDark },
+                    grid: { color: brilliantBlues.light }
+                }
+            }
+        };
+
+        function wrapLabel(str, maxWidth) {
+            if (str.length <= maxWidth) {
+                return str;
+            }
+            const words = str.split(' ');
+            let lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + word).length > maxWidth && currentLine.length > 0) {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += word + ' ';
+            }
+            lines.push(currentLine.trim());
+            return lines;
+        }
+
+        new Chart(document.getElementById('imbalanceChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Giá 101', 'Giá 102', 'Giá 103', 'Giá 104'],
+                datasets: [{
+                    label: 'Khối lượng Bán',
+                    data: [20, 15, 10, 30],
+                    backgroundColor: brilliantBlues.red,
+                }, {
+                    label: 'Khối lượng Mua (Mất cân bằng)',
+                    data: [80, 75, 90, 40],
+                    backgroundColor: brilliantBlues.green,
+                }]
+            },
+            options: { ...defaultChartOptions,
+                plugins: { ...defaultChartOptions.plugins,
+                    title: { display: true, text: 'Ví dụ Mất cân bằng Mua Xếp chồng', color: brilliantBlues.dark }
+                },
+                scales: { ...defaultChartOptions.scales,
+                    x: { stacked: true },
+                    y: { stacked: true }
+                }
+            }
+        });
+
+        new Chart(document.getElementById('absorptionChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Nến 1', 'Nến 2 (Hấp thụ)', 'Nến 3'],
+                datasets: [{
+                    label: 'Khối lượng Bán Chủ động',
+                    data: [150, 800, 200],
+                    backgroundColor: brilliantBlues.red,
+                    yAxisID: 'y'
+                }, {
+                    type: 'line',
+                    label: 'Chuyển động giá',
+                    data: [100, 99, 105],
+                    borderColor: brilliantBlues.mediumDark,
+                    backgroundColor: brilliantBlues.mediumDark,
+                    yAxisID: 'y1'
+                }]
+            },
+            options: { ...defaultChartOptions,
+                plugins: { ...defaultChartOptions.plugins,
+                    title: { display: true, text: 'Nỗ lực (Khối lượng) vs Kết quả (Giá)', color: brilliantBlues.dark }
+                },
+                scales: {
+                    y: { type: 'linear', display: true, position: 'left', title: { display: true, text: 'Khối lượng' } },
+                    y1: { type: 'linear', display: true, position: 'right', grid: { drawOnChartArea: false }, title: { display: true, text: 'Giá' } }
+                }
+            }
+        });
+
+        new Chart(document.getElementById('exhaustionChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Đáy -2', 'Đáy -1', 'Đáy mới (Cạn kiệt)'],
+                datasets: [{
+                    label: 'Khối lượng Bán tại Đáy',
+                    data: [250, 120, 5],
+                    backgroundColor: [brilliantBlues.red, brilliantBlues.light, brilliantBlues.extraLight],
+                    borderColor: [brilliantBlues.red, brilliantBlues.light, brilliantBlues.medium],
+                    borderWidth: 1
+                }]
+            },
+            options: { ...defaultChartOptions,
+                plugins: { ...defaultChartOptions.plugins,
+                    title: { display: true, text: 'Khối lượng Bán Cạn kiệt tại Đáy mới', color: brilliantBlues.dark },
+                    legend: { display: false }
+                }
+            }
+        });
+        
+        new Chart(document.getElementById('trappedTradersChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Nến 1', 'Nến 2', 'Nến 3 (Phá vỡ giả)'],
+                datasets: [{
+                    label: 'Delta của Nến',
+                    data: [150, 250, -100],
+                    backgroundColor: [brilliantBlues.green, brilliantBlues.green, brilliantBlues.red],
+                    yAxisID: 'y'
+                }, {
+                    type: 'line',
+                    label: 'Giá Đóng cửa',
+                    data: [100, 102, 103],
+                    borderColor: brilliantBlues.mediumDark,
+                    backgroundColor: brilliantBlues.mediumDark,
+                    yAxisID: 'y1'
+                }]
+            },
+            options: { ...defaultChartOptions,
+                plugins: { ...defaultChartOptions.plugins,
+                    title: { display: true, text: 'Phân kỳ Delta: Giá tạo đỉnh mới, Delta âm', color: brilliantBlues.dark }
+                },
+                scales: {
+                    y: { type: 'linear', display: true, position: 'left', title: { display: true, text: 'Delta' } },
+                    y1: { type: 'linear', display: true, position: 'right', grid: { drawOnChartArea: false }, title: { display: true, text: 'Giá' } }
+                }
+            }
+        });
+
+        const platformLabels = ['TradingView', 'NinjaTrader', 'ATAS', 'Sierra Chart'].map(label => wrapLabel(label, 16));
+        new Chart(document.getElementById('platformChart'), {
+            type: 'bar',
+            data: {
+                labels: platformLabels,
+                datasets: [
+                    {
+                        label: 'Dễ sử dụng',
+                        data: [9, 6, 7, 3],
+                        backgroundColor: brilliantBlues.medium,
+                    },
+                    {
+                        label: 'Tùy chỉnh',
+                        data: [4, 8, 9, 10],
+                        backgroundColor: brilliantBlues.mediumDark,
+                    },
+                    {
+                        label: 'Chi phí',
+                        data: [7, 6, 5, 5],
+                        backgroundColor: brilliantBlues.light,
+                    }
+                ]
+            },
+            options: {
+                ...defaultChartOptions,
+                indexAxis: 'y',
+                plugins: { ...defaultChartOptions.plugins,
+                    title: { display: true, text: 'So sánh Nền tảng (Thang điểm 1-10)', color: brilliantBlues.dark }
+                },
+                 scales: {
+                    x: {
+                        beginAtZero: true,
+                        max: 10,
+                        ticks: { color: brilliantBlues.mediumDark },
+                        grid: { color: brilliantBlues.light }
+                    },
+                    y: {
+                        ticks: { color: brilliantBlues.mediumDark },
+                        grid: { color: brilliantBlues.light }
+                    }
+                }
+            }
+        });
+
+    </script>
+    <div style="text-align: center; padding: 3rem 0;">
+        <a href="index.html" style="display: inline-block; background-color: #3498db; color: white; padding: 0.8rem 1.8rem; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: 2px solid transparent; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            Quay lại Trang Blog
+        </a>
+    </div>
+</body>
+</html>

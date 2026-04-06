@@ -1,10 +1,2 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
 import './styles.css'
-import App from './App'
-
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-)
+console.log('ESCBase Next is serving the legacy ESC Base site from /public')

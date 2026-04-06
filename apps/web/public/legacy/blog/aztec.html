@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phân tích Chuyên sâu Aztec Network</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+        }
+        .card {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .text-gradient {
+            background: linear-gradient(90deg, #7a5195, #ef5675, #ffa600);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .flow-arrow::after {
+            content: '→';
+            font-size: 2rem;
+            color: #7a5195;
+            margin: 0 1rem;
+        }
+        .timeline-item {
+            position: relative;
+            padding-bottom: 2rem;
+            padding-left: 2.5rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background-color: #30363d;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: -10px;
+            top: 4px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: #161b22;
+            border: 4px solid #7a5195;
+        }
+    </style>
+</head>
+<body class="antialiased">
+<div style="max-width:800px;margin:0 auto;padding:1rem 1.5rem;"><a href="../blog.html" style="display:inline-flex;align-items:center;gap:0.5rem;color:#71717a;text-decoration:none;font-size:0.9rem;font-family:sans-serif;">← Quay lại Blog</a></div>
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-16">
+            <h1 class="text-4xl md:text-6xl font-black text-gradient mb-4">Aztec Network</h1>
+            <p class="text-xl md:text-2xl font-light text-gray-300">Tiên phong về Quyền riêng tư Có thể Lập trình trên Ethereum</p>
+        </header>
+
+        <section id="intro" class="mb-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="card p-8 rounded-xl shadow-lg">
+                    <h2 class="text-2xl font-bold text-gradient mb-4">Giải quyết "Cái bẫy Riêng tư"</h2>
+                    <p class="text-gray-400">Các blockchain công khai phơi bày mọi giao dịch, tạo ra rủi ro cho người dùng và doanh nghiệp. Aztec xây dựng một lớp bảo mật được mã hóa, cho phép các ứng dụng phức tạp với quyền kiểm soát dữ liệu chi tiết, biến quyền riêng tư thành một tính năng gốc, có thể lập trình.</p>
+                </div>
+                <div class="card p-8 rounded-xl shadow-lg text-center">
+                    <p class="text-lg text-gray-400 mb-2">Tổng vốn huy động</p>
+                    <p class="text-7xl font-extrabold text-gradient">$115M+</p>
+                    <p class="text-gray-400">Từ các nhà đầu tư hàng đầu như a16z & Paradigm</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tech" class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gradient">Kiến trúc Công nghệ Cốt lõi</h2>
+            <div class="card p-8 rounded-xl shadow-lg">
+                <h3 class="text-xl font-bold text-center mb-8">Luồng Giao dịch zk-zk Rollup</h3>
+                <div class="flex flex-col md:flex-row items-center justify-center text-center flex-wrap">
+                    <div class="flex flex-col items-center p-4">
+                        <div class="text-5xl mb-2">💻</div>
+                        <h4 class="font-semibold">Người dùng</h4>
+                        <p class="text-sm text-gray-400">Tạo giao dịch & bằng chứng riêng tư</p>
+                    </div>
+                    <div class="flow-arrow hidden md:block"></div>
+                    <div class="flex flex-col items-center p-4">
+                        <div class="text-5xl mb-2">🛡️</div>
+                        <h4 class="font-semibold">Sequencer</h4>
+                        <p class="text-sm text-gray-400">Gom các bằng chứng (không thấy dữ liệu)</p>
+                    </div>
+                    <div class="flow-arrow hidden md:block"></div>
+                    <div class="flex flex-col items-center p-4">
+                        <div class="text-5xl mb-2">📦</div>
+                        <h4 class="font-semibold">Bằng chứng Rollup</h4>
+                        <p class="text-sm text-gray-400">Tạo một bằng chứng duy nhất cho cả lô</p>
+                    </div>
+                    <div class="flow-arrow hidden md:block"></div>
+                    <div class="flex flex-col items-center p-4">
+                         <div class="text-5xl mb-2">🌍</div>
+                        <h4 class="font-semibold">Ethereum L1</h4>
+                        <p class="text-sm text-gray-400">Xác minh bằng chứng rollup, đảm bảo an toàn</p>
+                    </div>
+                </div>
+                <p class="text-center mt-6 text-gray-400">Kiến trúc độc đáo này cung cấp **quyền riêng tư ngay cả với nhà điều hành mạng**, một bước tiến quan trọng hướng tới sự phi tập trung và chống kiểm duyệt thực sự.</p>
+            </div>
+        </section>
+
+        <section id="competition" class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gradient">Bối cảnh Cạnh tranh Layer 2</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card p-8 rounded-xl shadow-lg">
+                     <h3 class="text-xl font-bold mb-4">So sánh các giải pháp ZK-Rollup</h3>
+                    <p class="text-gray-400 mb-6">Trong khi các đối thủ cạnh tranh trong một "đại dương đỏ" của các zkEVM, tập trung vào khả năng tương thích, Aztec đang tạo ra một "đại dương xanh" bằng cách ưu tiên quyền riêng tư có thể lập trình. Đây là một sự khác biệt chiến lược, nhắm đến một loại ứng dụng hoàn toàn mới.</p>
+                    <div class="chart-container">
+                        <canvas id="competitionRadarChart"></canvas>
+                    </div>
+                </div>
+                <div class="card p-8 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold mb-4">Tổng giá trị bị khóa (TVS)</h3>
+                     <p class="text-gray-400 mb-6">Biểu đồ này cho thấy TVS của các L2 hàng đầu. Aztec Connect (đã ngừng hoạt động) có TVS khiêm tốn, phản ánh sự thay đổi chiến lược của dự án từ một sản phẩm sang một nền tảng. Mạng lưới mới của Aztec sẽ cần thời gian để xây dựng TVS từ đầu.</p>
+                    <div class="chart-container">
+                        <canvas id="tvsBarChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ecosystem" class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gradient">Hệ sinh thái Noir & Tăng trưởng</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="md:col-span-2 card p-8 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold mb-4">Ngôn ngữ Noir: Cửa ngõ vào ZK</h3>
+                    <p class="text-gray-400 mb-6">Noir là một ngôn ngữ lập trình mã nguồn mở, giống Rust, được thiết kế để đơn giản hóa việc phát triển Zero-Knowledge. Bằng cách trừu tượng hóa sự phức tạp của mật mã, Noir đang hạ thấp rào cản gia nhập và đặt mục tiêu trở thành tiêu chuẩn ngành, tạo ra một lợi thế cạnh tranh bền vững cho hệ sinh thái Aztec.</p>
+                    <div class="flex justify-around text-center">
+                        <div>
+                            <p class="text-4xl font-bold text-gradient">Rust-like</p>
+                            <p class="text-gray-400">Cú pháp quen thuộc</p>
+                        </div>
+                        <div>
+                            <p class="text-4xl font-bold text-gradient">Mở</p>
+                            <p class="text-gray-400">Tài sản công cộng</p>
+                        </div>
+                         <div>
+                            <p class="text-4xl font-bold text-gradient">Linh hoạt</p>
+                            <p class="text-gray-400">Không phụ thuộc backend</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card p-8 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold mb-4">Phân bổ Tài trợ</h3>
+                    <p class="text-gray-400 mb-6">Chương trình tài trợ hồi tố của Aztec tập trung vào việc xây dựng nền tảng vững chắc cho hệ sinh thái.</p>
+                    <div class="chart-container h-64 max-h-64">
+                        <canvas id="grantsDonutChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="roadmap" class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gradient">Lộ trình đến Mainnet</h2>
+            <div class="card p-8 rounded-xl shadow-lg">
+                <div class="relative">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <h4 class="font-bold text-lg">Tháng 3, 2023: Ngừng hoạt động Aztec Connect</h4>
+                        <p class="text-gray-400">Một sự xoay trục chiến lược táo bạo, hy sinh sản phẩm hiện tại để tập trung 100% nguồn lực vào việc xây dựng một mạng lưới phi tập trung và có thể lập trình hoàn toàn.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <h4 class="font-bold text-lg">Tháng 5, 2025: Ra mắt Public Testnet</h4>
+                        <p class="text-gray-400">Mở cửa cho các nhà phát triển xây dựng và triển khai ứng dụng, tập trung vào việc thử nghiệm chức năng và sửa lỗi.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <h4 class="font-bold text-lg">Tháng 7, 2025: Ra mắt Adversarial Testnet</h4>
+                        <p class="text-gray-400">"Thử lửa" các cơ chế an ninh kinh tế xã hội như slashing và quản trị phi tập trung để đảm bảo mạng lưới mạnh mẽ.</p>
+                    </div>
+                     <div class="timeline-item pb-0">
+                        <div class="timeline-dot" style="border-color: #ffa600;"></div>
+                        <h4 class="font-bold text-lg">Cuối 2025 (Dự kiến): Ra mắt Mainnet</h4>
+                        <p class="text-gray-400">Ra mắt một mạng lưới phi tập trung hoàn toàn, hiện thực hóa tầm nhìn về quyền riêng tư có thể lập trình trên Ethereum.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="risks" class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gradient">Rủi ro & Thách thức</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card p-6 rounded-xl">
+                    <h3 class="font-bold text-lg mb-2">⚙️ Rủi ro Kỹ thuật</h3>
+                    <p class="text-sm text-gray-400">Sự phức tạp của mật mã ZK và việc xây dựng một ngăn xếp công nghệ hoàn toàn mới làm tăng nguy cơ lỗi và các lỗ hổng "thầm lặng".</p>
+                </div>
+                <div class="card p-6 rounded-xl">
+                    <h3 class="font-bold text-lg mb-2">📈 Rủi ro Thị trường</h3>
+                    <p class="text-sm text-gray-400">Việc không tương thích với EVM là một rào cản lớn. Aztec phải chứng minh rằng lợi ích của quyền riêng tư lớn hơn chi phí học một hệ sinh thái mới.</p>
+                </div>
+                <div class="card p-6 rounded-xl">
+                    <h3 class="font-bold text-lg mb-2">⚖️ Rủi ro Pháp lý</h3>
+                    <p class="text-sm text-gray-400">Áp lực từ các cơ quan quản lý đối với công nghệ tăng cường quyền riêng tư là một mối đe dọa hiện hữu, đòi hỏi một chiến lược "quyền riêng tư tuân thủ" tinh vi.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center pt-8 border-t border-gray-700">
+            <p class="text-gray-500">Infographic được tạo dựa trên báo cáo phân tích chuyên sâu về Aztec Network. Đây không phải là lời khuyên tài chính.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const wrapLabel = (label, maxLength) => {
+            if (typeof label !== 'string' || label.length <= maxLength) {
+                return label;
+            }
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + ' ' + word).trim().length > maxLength) {
+                    lines.push(currentLine.trim());
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            }
+            if (currentLine) {
+                lines.push(currentLine.trim());
+            }
+            return lines;
+        };
+        
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+
+        const defaultChartOptions = {
+            maintainAspectRatio: false,
+            responsive: true,
+            plugins: {
+                legend: {
+                    labels: {
+                        color: '#c9d1d9',
+                        font: {
+                            family: "'Inter', sans-serif"
+                        }
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    }
+                }
+            },
+            scales: {
+                r: {
+                    angleLines: { color: '#30363d' },
+                    grid: { color: '#30363d' },
+                    pointLabels: { 
+                        color: '#c9d1d9',
+                        font: {
+                            size: 12,
+                            family: "'Inter', sans-serif"
+                        }
+                    },
+                    ticks: {
+                        color: '#c9d1d9',
+                        backdropColor: '#161b22',
+                        font: {
+                           family: "'Inter', sans-serif"
+                        }
+                    }
+                },
+                x: {
+                   grid: { color: '#30363d' },
+                   ticks: { 
+                       color: '#c9d1d9',
+                       font: {
+                           family: "'Inter', sans-serif"
+                       }
+                   }
+                },
+                y: {
+                   grid: { color: '#30363d' },
+                   ticks: { 
+                       color: '#c9d1d9',
+                       font: {
+                           family: "'Inter', sans-serif"
+                       }
+                   }
+                }
+            }
+        };
+
+        const { scales, ...defaultOptionsWithoutScales } = defaultChartOptions;
+
+        const brilliantBlues = {
+            primary: '#7a5195',
+            accent1: '#ef5675',
+            accent2: '#ffa600',
+            dark: '#003f5c',
+            mid: '#374c80',
+        };
+
+        new Chart(document.getElementById('competitionRadarChart'), {
+            type: 'radar',
+            data: {
+                labels: ['Quyền riêng tư', 'Tương thích EVM', 'Khả năng mở rộng', 'Phi tập trung hóa (Launch)', 'Rào cản Dev'],
+                datasets: [{
+                    label: 'Aztec',
+                    data: [5, 1, 4, 5, 4],
+                    fill: true,
+                    backgroundColor: 'rgba(122, 81, 149, 0.2)',
+                    borderColor: brilliantBlues.primary,
+                    pointBackgroundColor: brilliantBlues.primary,
+                }, {
+                    label: 'zkEVM (Trung bình)',
+                    data: [2, 5, 4, 2, 1],
+                    fill: true,
+                    backgroundColor: 'rgba(239, 86, 117, 0.2)',
+                    borderColor: brilliantBlues.accent1,
+                    pointBackgroundColor: brilliantBlues.accent1,
+                }]
+            },
+            options: defaultChartOptions
+        });
+
+        new Chart(document.getElementById('tvsBarChart'), {
+            type: 'bar',
+            data: {
+                labels: ['zkSync Era', 'StarkNet', 'Polygon zkEVM', 'Aztec Connect (EOL)'],
+                datasets: [{
+                    label: 'TVS (Triệu USD)',
+                    data: [1140, 148, 120, 4.32],
+                    backgroundColor: [brilliantBlues.mid, brilliantBlues.primary, brilliantBlues.accent1, brilliantBlues.accent2],
+                    borderColor: '#30363d',
+                    borderWidth: 1
+                }]
+            },
+            options: { ...defaultChartOptions,
+                plugins: { ...defaultChartOptions.plugins,
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+
+        new Chart(document.getElementById('grantsDonutChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Ứng dụng (Apps)', 'Thư viện (Libraries)', 'Công cụ (Tooling)'],
+                datasets: [{
+                    label: 'Phân bổ tài trợ',
+                    data: [45, 35, 20],
+                    backgroundColor: [brilliantBlues.primary, brilliantBlues.accent1, brilliantBlues.accent2],
+                    borderColor: '#161b22',
+                    borderWidth: 4
+                }]
+            },
+            options: defaultOptionsWithoutScales
+        });
+
+    </script>
+    <div style="text-align: center; padding: 3rem 0;">
+        <a href="index.html" style="display: inline-block; background-color: #3498db; color: white; padding: 0.8rem 1.8rem; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: 2px solid transparent; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            Quay lại Trang Blog
+        </a>
+    </div>
+</body>
+</html>

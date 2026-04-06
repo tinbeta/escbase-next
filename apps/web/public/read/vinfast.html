@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: Toàn Cảnh Xe Điện VinFast</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            padding: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.1);
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .kpi-value {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+        .swot-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+        @media (min-width: 768px) {
+            .swot-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        .flowchart-step {
+            position: relative;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            text-align: center;
+        }
+        .flowchart-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #58508d;
+            margin: 0.5rem 0;
+        }
+        @media (min-width: 1024px) {
+           .flowchart-arrow {
+                margin: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-2xl md:text-3xl font-bold" style="color: #003f5c;">Toàn Cảnh Xe Điện VinFast</h1>
+            <span class="text-sm font-semibold text-gray-500">Báo cáo Phân tích 2025</span>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 sm:p-6 lg:p-8">
+
+        <section id="hero" class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-4" style="color: #003f5c;">Hành Trình Táo Bạo: Từ Vua Nội Địa Đến Kẻ Thách Thức Toàn Cầu</h2>
+            <p class="max-w-3xl mx-auto text-gray-600 mb-8">
+                VinFast đang viết nên một câu chuyện đầy nghịch lý: thống trị tuyệt đối tại Việt Nam nhưng lại đối mặt với vô vàn thử thách trên trường quốc tế. Infographic này sẽ bóc tách các lớp dữ liệu để làm rõ bức tranh toàn cảnh về tham vọng điện hóa của VinFast.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="card items-center justify-center flex flex-col">
+                    <span class="kpi-value" style="color: #ff6361;">42.5%</span>
+                    <p class="font-bold mt-2 text-center">Thị phần ô tô tại Việt Nam</p>
+                    <p class="text-sm text-gray-500">(5 tháng đầu năm 2025)</p>
+                </div>
+                <div class="card items-center justify-center flex flex-col">
+                    <span class="kpi-value" style="color: #ffa600;">1.8 tỷ $</span>
+                    <p class="font-bold mt-2 text-center">Doanh thu năm 2024</p>
+                    <p class="text-sm text-gray-500">(Tăng 57.9% so với 2023)</p>
+                </div>
+                <div class="card items-center justify-center flex flex-col">
+                    <span class="kpi-value" style="color: #003f5c;">950.000</span>
+                    <p class="font-bold mt-2 text-center">Mục tiêu công suất toàn cầu</p>
+                    <p class="text-sm text-gray-500">(Đến năm 2026)</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="domestic-market" class="mb-16">
+            <h3 class="text-2xl md:text-3xl font-bold text-center mb-2" style="color: #003f5c;">Pháo Đài Nội Địa: Sự Thống Trị Tuyệt Đối</h3>
+            <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Tại Việt Nam, VinFast không chỉ là một thương hiệu, mà là một thế lực đã định hình lại toàn bộ thị trường ô tô chỉ trong thời gian ngắn.</p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="card">
+                    <h4 class="font-bold text-xl mb-4 text-center">Thị phần Ô tô Việt Nam (5 tháng đầu 2025)</h4>
+                    <p class="text-sm text-gray-600 text-center mb-4">Với 42.5% thị phần, VinFast đã bán được nhiều xe hơn cả Toyota và Hyundai cộng lại, khẳng định vị thế độc tôn.</p>
+                    <div class="chart-container mx-auto">
+                        <canvas id="marketShareChart"></canvas>
+                    </div>
+                </div>
+                <div class="card">
+                    <h4 class="font-bold text-xl mb-4 text-center">Doanh Số Bùng Nổ Theo Tháng</h4>
+                    <p class="text-sm text-gray-600 text-center mb-4">Các mẫu xe giá cả phải chăng như VF 5 và VF 3 liên tục tạo ra những cơn sốt doanh số, đẩy sản lượng hàng tháng lên mức kỷ lục.</p>
+                    <div class="chart-container mx-auto">
+                        <canvas id="monthlySalesChart"></canvas>
+                    </div>
+                </div>
+                 <div class="card lg:col-span-2">
+                    <h4 class="font-bold text-xl mb-4 text-center">"Hiệu Ứng GSM" - Bệ Phóng Chiến Lược</h4>
+                    <p class="text-sm text-gray-600 text-center mb-4">Vai trò của taxi Xanh SM là không thể phủ nhận. Ban đầu chiếm tới 72% doanh số, GSM giúp VinFast nhanh chóng phủ sóng thương hiệu và đảm bảo dòng tiền. Hiện tại, tỷ trọng này đã giảm, cho thấy sức mua từ khách hàng lẻ đang tăng trưởng mạnh mẽ.</p>
+                    <div class="chart-container mx-auto" style="height: 450px; max-height: 500px;">
+                        <canvas id="gsmEffectChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="global-market" class="mb-16">
+            <h3 class="text-2xl md:text-3xl font-bold text-center mb-2" style="color: #003f5c;">Chiến Trường Toàn Cầu: Thử Thách & Thích Ứng</h3>
+            <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Trái ngược với thành công ở quê nhà, hành trình quốc tế của VinFast đầy chông gai, buộc hãng phải có những điều chỉnh chiến lược quan trọng.</p>
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+                <div class="card lg:col-span-3">
+                    <h4 class="font-bold text-xl mb-4 text-center">Dấu Ấn Mờ Nhạt tại Thị Trường Phương Tây</h4>
+                    <p class="text-sm text-gray-600 text-center mb-4">Doanh số tại các thị trường phát triển như Mỹ và Châu Âu vẫn còn rất khiêm tốn, phản ánh những khó khăn trong việc chinh phục người tiêu dùng khó tính và cạnh tranh với các thương hiệu đã có tên tuổi.</p>
+                    <div class="chart-container mx-auto">
+                         <canvas id="usMarketShareChart"></canvas>
+                    </div>
+                </div>
+                <div class="card lg:col-span-2 flex flex-col justify-center">
+                    <h4 class="font-bold text-xl mb-4 text-center">Dấu Chân Sản Xuất Toàn Cầu</h4>
+                    <p class="text-sm text-gray-600 text-center mb-6">VinFast đang xoay trục sản xuất, ưu tiên các thị trường mới nổi thay vì dồn toàn lực vào Mỹ.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <span class="text-2xl mr-4">🇻🇳</span>
+                            <div>
+                                <h5 class="font-bold">Hải Phòng, Việt Nam</h5>
+                                <p class="text-sm text-gray-600">Đang hoạt động - Trung tâm đầu não.</p>
+                            </div>
+                        </div>
+                         <div class="flex items-start">
+                            <span class="text-2xl mr-4">🇮🇳</span>
+                            <div>
+                                <h5 class="font-bold">Ấn Độ</h5>
+                                <p class="text-sm text-gray-600">Đang xây dựng thần tốc - Cửa ngõ Nam Á.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-2xl mr-4">🇮🇩</span>
+                            <div>
+                                <h5 class="font-bold">Indonesia</h5>
+                                <p class="text-sm text-gray-600">Đang xây dựng - Trung tâm ASEAN.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start opacity-60">
+                            <span class="text-2xl mr-4">🇺🇸</span>
+                            <div>
+                                <h5 class="font-bold">Bắc Carolina, Mỹ</h5>
+                                <p class="text-sm text-gray-600">Bị trì hoãn - Kế hoạch gặp trở ngại.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="financial" class="mb-16">
+            <h3 class="text-2xl md:text-3xl font-bold text-center mb-2" style="color: #003f5c;">Phòng Máy Tài Chính: Nghịch Lý Tăng Trưởng</h3>
+            <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Sức khỏe tài chính của VinFast là một bức tranh phức tạp, nơi doanh thu tăng vọt song hành cùng những khoản lỗ khổng lồ và sự phụ thuộc sống còn vào tập đoàn mẹ.</p>
+             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                 <div class="card">
+                     <h4 class="font-bold text-xl mb-4 text-center">Doanh Thu Tăng Vọt vs. Lỗ Liên Tục</h4>
+                    <p class="text-sm text-gray-600 text-center mb-4">Chiến lược "tăng trưởng bằng mọi giá" được thể hiện rõ qua biểu đồ: doanh thu (cột) tăng trưởng ấn tượng, nhưng khoản lỗ ròng (đường) vẫn chưa có dấu hiệu dừng lại.</p>
+                     <div class="chart-container mx-auto">
+                        <canvas id="financialParadoxChart"></canvas>
+                    </div>
+                 </div>
+                 <div class="card flex flex-col items-center justify-center text-center">
+                    <span class="text-6xl mb-4"> lifeline </span>
+                    <h4 class="font-bold text-xl mb-2">"Phao Cứu Sinh" Vingroup</h4>
+                    <p class="text-gray-600 mb-4">Sự sống còn của VinFast gắn liền với sự hỗ trợ tài chính từ Vingroup và Chủ tịch Phạm Nhật Vượng.</p>
+                    <div class="text-4xl font-extrabold" style="color: #bc5090;">~800 triệu $</div>
+                    <p class="font-semibold mt-2">Được tài trợ cá nhân chỉ trong 6 tháng</p>
+                    <p class="text-sm text-gray-500">(T11/2024 - T5/2025)</p>
+                 </div>
+             </div>
+        </section>
+
+        <section id="product-review" class="mb-16">
+            <h3 class="text-2xl md:text-3xl font-bold text-center mb-2" style="color: #003f5c;">"Mổ Xẻ" Sản Phẩm: Phần Cứng Đi Trước, Phần Mềm Theo Sau</h3>
+            <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Phản hồi từ người dùng và chuyên gia cho thấy một sự thật nhất quán: VinFast rất mạnh về phần cứng và thiết kế, nhưng cần cải thiện nhiều về phần mềm và độ hoàn thiện.</p>
+            <div class="card">
+                <div class="swot-grid">
+                    <div class="p-4 rounded-lg" style="background-color: #e6f5e6;">
+                        <h4 class="font-bold text-xl mb-2 text-green-800">Điểm Mạnh (Strengths) 👍</h4>
+                        <ul class="list-disc list-inside text-green-700 space-y-1">
+                            <li>Năng lực sản xuất hiện đại</li>
+                            <li>Thống trị thị trường nội địa</li>
+                            <li>Hậu thuẫn tài chính mạnh</li>
+                            <li>Danh mục sản phẩm đa dạng</li>
+                            <li>Chính sách bảo hành hàng đầu</li>
+                        </ul>
+                    </div>
+                    <div class="p-4 rounded-lg" style="background-color: #fce8e6;">
+                        <h4 class="font-bold text-xl mb-2 text-red-800">Điểm Yếu (Weaknesses) 👎</h4>
+                        <ul class="list-disc list-inside text-red-700 space-y-1">
+                            <li>Thua lỗ tài chính lớn, liên tục</li>
+                            <li>Phần mềm & độ hoàn thiện chưa tốt</li>
+                            <li>Thương hiệu quốc tế còn yếu</li>
+                            <li>Phụ thuộc vào thị trường nội địa/GSM</li>
+                        </ul>
+                    </div>
+                    <div class="p-4 rounded-lg" style="background-color: #e9e7fd;">
+                        <h4 class="font-bold text-xl mb-2" style="color: #58508d;">Cơ Hội (Opportunities) 🚀</h4>
+                        <ul class="list-disc list-inside space-y-1" style="color: #4a447a;">
+                            <li>Các thị trường mới nổi (ASEAN, Ấn Độ)</li>
+                            <li>Phân khúc xe thương mại (B2B)</li>
+                            <li>Tận dụng thương hiệu "Made in Vietnam"</li>
+                            <li>Xu hướng giao thông xanh toàn cầu</li>
+                        </ul>
+                    </div>
+                    <div class="p-4 rounded-lg" style="background-color: #fff8e1;">
+                        <h4 class="font-bold text-xl mb-2 text-yellow-800">Thách Thức (Threats) ⚠️</h4>
+                        <ul class="list-disc list-inside text-yellow-700 space-y-1">
+                            <li>Cạnh tranh khốc liệt (Tesla, BYD)</li>
+                            <li>Rủi ro phụ thuộc vào Vingroup</li>
+                            <li>Rủi ro về danh tiếng quốc tế</li>
+                            <li>Kinh tế vĩ mô toàn cầu chậm lại</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="future-strategy" class="mb-8">
+            <h3 class="text-2xl md:text-3xl font-bold text-center mb-2" style="color: #003f5c;">Lộ Trình Tương Lai: Cuộc Xoay Trục Chiến Lược</h3>
+            <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Để thành công, VinFast phải thực hiện ba mệnh lệnh chiến lược: hoàn thiện sản phẩm, tìm đường đến lợi nhuận và chinh phục thành công thị trường châu Á.</p>
+            <div class="card">
+                <div class="flex flex-col lg:flex-row items-center justify-center gap-4">
+                    <div class="flowchart-step border-2 border-red-300 bg-red-50 w-full lg:w-1/4">
+                        <h5 class="font-bold text-red-700">Giai Đoạn 1: Thâm Nhập Phương Tây</h5>
+                        <p class="text-sm text-red-600">Mô hình bán hàng trực tiếp (DTC) tốn kém, hiệu quả thấp.</p>
+                    </div>
+                    <div class="flowchart-arrow transform lg:rotate-0 rotate-90">➔</div>
+                     <div class="flowchart-step border-2 border-yellow-400 bg-yellow-50 w-full lg:w-1/4">
+                        <h5 class="font-bold text-yellow-800">Giai Đoạn 2: Tái Định Vị</h5>
+                        <p class="text-sm text-yellow-700">Chuyển sang mô hình đại lý ở Mỹ/EU, giảm chi phí, xây dựng thương hiệu một cách kiên nhẫn.</p>
+                    </div>
+                     <div class="flowchart-arrow transform lg:rotate-0 rotate-90">✚</div>
+                    <div class="flowchart-step border-2 border-green-400 bg-green-50 w-full lg:w-1/4">
+                        <h5 class="font-bold text-green-800">Giai Đoạn 3: Dồn Lực Về Châu Á</h5>
+                        <p class="text-sm text-green-700">Tái tạo "công thức thành công" (nhà máy, GSM, trạm sạc) tại Ấn Độ & Indonesia.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="text-center p-6 bg-gray-800 text-white mt-8">
+        <p>Infographic được tạo dựa trên báo cáo phân tích tổng hợp. Dữ liệu tính đến Quý I/2025.</p>
+        <p class="text-xs text-gray-400 mt-2">CONFIRMATION: NEITHER Mermaid JS NOR SVG were used in this output.</p>
+    </footer>
+
+    <script>
+        const vibrantPalette = {
+            blue: '#003f5c',
+            purple: '#58508d',
+            pink: '#bc5090',
+            red: '#ff6361',
+            orange: '#ffa600',
+            lightGray: '#f0f4f8'
+        };
+
+        function wrapLabel(str, maxWidth) {
+            if (str.length <= maxWidth) return str;
+            const words = str.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + ' ' + word).trim().length > maxWidth && currentLine.length > 0) {
+                    lines.push(currentLine);
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            }
+            if (currentLine.length > 0) {
+                lines.push(currentLine);
+            }
+            return lines;
+        }
+        
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+
+        const defaultChartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        padding: 20,
+                        font: {
+                           size: 14
+                        }
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    },
+                    backgroundColor: '#000',
+                    titleFont: { size: 16 },
+                    bodyFont: { size: 14 },
+                    padding: 10,
+                    cornerRadius: 4
+                }
+            },
+        };
+
+        new Chart(document.getElementById('marketShareChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['VinFast', 'Toyota', 'Hyundai', 'Các hãng khác'],
+                datasets: [{
+                    label: 'Thị phần',
+                    data: [42.5, 17.4, 15.1, 25],
+                    backgroundColor: [vibrantPalette.red, vibrantPalette.blue, vibrantPalette.purple, vibrantPalette.orange],
+                    borderColor: '#fff',
+                    borderWidth: 4,
+                    hoverOffset: 10
+                }]
+            },
+            options: { ...defaultChartOptions }
+        });
+
+        new Chart(document.getElementById('monthlySalesChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Tháng 3/2025', 'Tháng 4/2025', 'Tháng 5/2025'],
+                datasets: [{
+                    label: 'VF 5',
+                    data: [4400, 3731, 4232],
+                    backgroundColor: vibrantPalette.orange,
+                    borderRadius: 4
+                }, {
+                    label: 'VF 3',
+                    data: [0, 2378, 3950],
+                    backgroundColor: vibrantPalette.red,
+                    borderRadius: 4
+                },
+                {
+                    label: 'Các mẫu khác',
+                    data: [12100-4400, 9500-2378-3731, 11496-3950-4232],
+                    backgroundColor: vibrantPalette.blue,
+                    borderRadius: 4
+                }]
+            },
+            options: { ...defaultChartOptions,
+                scales: {
+                    x: { stacked: true },
+                    y: { stacked: true, beginAtZero: true, title: { display: true, text: 'Số lượng xe bán ra' } }
+                }
+            }
+        });
+        
+        new Chart(document.getElementById('gsmEffectChart'), {
+            type: 'bar',
+            data: {
+                labels: [wrapLabel('Q3 2023 (Giai đoạn đầu)', 16), wrapLabel('Q1 2025 (Hiện tại)', 16)],
+                datasets: [{
+                    label: 'Doanh số cho GSM',
+                    data: [72, 21],
+                    backgroundColor: vibrantPalette.purple,
+                }, {
+                    label: 'Doanh số bán lẻ',
+                    data: [28, 79],
+                    backgroundColor: vibrantPalette.red,
+                }]
+            },
+            options: {
+                ...defaultChartOptions,
+                indexAxis: 'y',
+                scales: {
+                    x: {
+                        stacked: true,
+                        max: 100,
+                        title: { display: true, text: 'Tỷ trọng doanh số (%)' }
+                    },
+                    y: { stacked: true }
+                },
+                plugins: { ...defaultChartOptions.plugins,
+                    tooltip: {
+                         ...defaultChartOptions.plugins.tooltip,
+                         callbacks: {
+                            ...defaultChartOptions.plugins.tooltip.callbacks,
+                            label: function(context) {
+                                return `${context.dataset.label}: ${context.raw}%`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+        
+        new Chart(document.getElementById('usMarketShareChart'), {
+            type: 'bar',
+            data: {
+                labels: [
+                    'Tesla', 
+                    'Ford',
+                    'Hyundai',
+                    'Rivian',
+                    'Chevrolet',
+                    'VinFast'
+                ],
+                datasets: [{
+                    label: 'Thị phần xe điện tại Mỹ (Q1 2024, %)',
+                    data: [51.4, 7.7, 5.7, 5.1, 4.9, 0.3],
+                    backgroundColor: [
+                        vibrantPalette.blue,
+                        vibrantPalette.blue,
+                        vibrantPalette.blue,
+                        vibrantPalette.blue,
+                        vibrantPalette.blue,
+                        vibrantPalette.red 
+                    ],
+                    borderColor: vibrantPalette.blue,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                ...defaultChartOptions,
+                indexAxis: 'y',
+                plugins: {
+                     legend: { display: false },
+                     tooltip: {
+                        ...defaultChartOptions.plugins.tooltip,
+                         callbacks: {
+                             ...defaultChartOptions.plugins.tooltip.callbacks,
+                             label: function(context) {
+                                return `Thị phần: ${context.raw}%`;
+                            }
+                         }
+                     }
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        title: { display: true, text: 'Thị phần (%)' }
+                    }
+                }
+            }
+        });
+        
+        new Chart(document.getElementById('financialParadoxChart'), {
+            type: 'bar',
+            data: {
+                labels: ['2023', '2024', 'Q1 2025'],
+                datasets: [
+                    {
+                        type: 'bar',
+                        label: 'Doanh thu (tỷ USD)',
+                        data: [1.14, 1.81, 0.65],
+                        backgroundColor: vibrantPalette.orange,
+                        yAxisID: 'y'
+                    },
+                    {
+                        type: 'line',
+                        label: 'Lỗ ròng (triệu USD)',
+                        data: [-2100, -2400, -695],
+                        backgroundColor: vibrantPalette.red,
+                        borderColor: vibrantPalette.red,
+                        fill: false,
+                        yAxisID: 'y1',
+                        tension: 0.1
+                    }
+                ]
+            },
+            options: { ...defaultChartOptions,
+                scales: {
+                    y: {
+                        type: 'linear',
+                        display: true,
+                        position: 'left',
+                        beginAtZero: true,
+                        title: { display: true, text: 'Doanh thu (tỷ USD)' }
+                    },
+                    y1: {
+                        type: 'linear',
+                        display: true,
+                        position: 'right',
+                        title: { display: true, text: 'Lỗ ròng (triệu USD)'},
+                        grid: { drawOnChartArea: false }
+                    }
+                }
+            }
+        });
+
+    </script>
+    <div style="text-align: center; padding: 3rem 0;">
+        <a href="index.html" style="display: inline-block; background-color: #3498db; color: white; padding: 0.8rem 1.8rem; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: 2px solid transparent; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            Quay lại Trang Blog
+        </a>
+    </div>
+</body>
+</html>

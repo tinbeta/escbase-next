@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chiến lược Tạ đòn: Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FBFBFF;
+            color: #242424;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 450px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .barbell-bar {
+            height: 8px;
+            background-color: #757575;
+            width: 100%;
+        }
+        .barbell-weight {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #FBFBFF;
+        }
+        .antifragile-path::after {
+            content: '→';
+            font-size: 2rem;
+            color: #0B4F6C;
+            margin: 0 1rem;
+            align-self: center;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+
+        <header class="text-center my-8 md:my-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-[#0B4F6C] tracking-tight">Chiến lược Tạ đòn</h1>
+            <p class="mt-4 text-lg md:text-xl text-[#757575]">Cẩm nang cho nhà đầu tư để phát triển trong một thế giới bất định, theo Nassim Taleb.</p>
+        </header>
+
+        <main>
+            <section id="intro" class="mb-12 bg-white rounded-lg shadow-md p-8">
+                <h2 class="text-3xl font-bold text-center mb-6">Hãy quên "Rủi ro Trung bình". Nắm bắt sự cực đoan.</h2>
+                <p class="text-center text-lg max-w-3xl mx-auto mb-8">Chiến lược Tạ đòn từ chối sự cân bằng danh mục truyền thống. Thay vì đa dạng hóa trên nhiều mức độ rủi ro, nó tập trung đầu tư vào hai thái cực đối lập, cố tình tránh vùng "an toàn" ở giữa.</p>
+                <div class="flex items-center justify-center">
+                    <div class="text-center">
+                        <div class="barbell-weight bg-[#0B4F6C] mx-auto">🛡️</div>
+                        <p class="mt-2 text-4xl font-bold text-[#0B4F6C]">90%</p>
+                        <p class="font-semibold">Siêu An toàn</p>
+                    </div>
+                    <div class="barbell-bar mx-4"></div>
+                    <div class="text-center">
+                        <div class="barbell-weight bg-[#01BAEF] mx-auto">🚀</div>
+                        <p class="mt-2 text-4xl font-bold text-[#01BAEF]">10%</p>
+                        <p class="font-semibold">Siêu Mạo hiểm</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="philosophy" class="mb-12">
+                 <h2 class="text-3xl font-bold text-center mb-2">Mục tiêu: Trở nên Phản Mong Manh</h2>
+                 <p class="text-center text-lg max-w-3xl mx-auto mb-8">Chiến lược này được thiết kế để sống sót qua các sự kiện "Thiên nga Đen" tiêu cực và hưởng lợi từ các sự kiện tích cực. Mục đích không chỉ là chịu đựng các cú sốc (Vững chắc), mà còn hưởng lợi và mạnh mẽ hơn từ chúng (Phản Mong Manh).</p>
+                 <div class="flex flex-col md:flex-row justify-center items-stretch text-center">
+                    <div class="flex-1 p-6 bg-white rounded-lg shadow-md m-2 flex flex-col items-center justify-center antifragile-path">
+                        <span class="text-5xl mb-2">🍷</span>
+                        <h3 class="text-xl font-bold">Mong manh</h3>
+                        <p>Vỡ vụn dưới áp lực.</p>
+                    </div>
+                     <div class="flex-1 p-6 bg-white rounded-lg shadow-md m-2 flex flex-col items-center justify-center antifragile-path">
+                        <span class="text-5xl mb-2">🗿</span>
+                        <h3 class="text-xl font-bold">Vững chắc</h3>
+                        <p>Chống lại áp lực.</p>
+                    </div>
+                     <div class="flex-1 p-6 bg-white rounded-lg shadow-md m-2 flex flex-col items-center justify-center">
+                        <span class="text-5xl mb-2">🌱</span>
+                        <h3 class="text-xl font-bold text-[#01BAEF]">Phản Mong Manh</h3>
+                        <p>Phát triển từ áp lực.</p>
+                    </div>
+                 </div>
+            </section>
+
+            <section id="composition" class="mb-12">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h2 class="text-2xl font-bold text-center mb-4">Cấu trúc của một Danh mục Tạ đòn</h2>
+                        <p class="text-center text-gray-600 mb-6">90% phân bổ được thiết kế để bảo toàn vốn, đảm bảo sự tồn tại. 10% còn lại để nắm bắt các cơ hội tăng trưởng đột phá, nơi lợi nhuận tiềm năng vượt xa khoản đầu tư ban đầu có giới hạn.</p>
+                        <div class="chart-container h-80 md:h-96">
+                            <canvas id="barbellDonutChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="bg-white rounded-lg shadow-md p-6">
+                            <h3 class="font-bold text-xl text-[#0B4F6C]">90% An toàn: Pháo đài</h3>
+                            <p class="text-gray-600 mt-2">Mục tiêu: Loại bỏ nguy cơ phá sản. Bảo vệ khỏi Thiên nga Đen tiêu cực.</p>
+                            <ul class="mt-3 list-disc list-inside text-gray-700">
+                                <li>Tiền mặt & các khoản tương đương</li>
+                                <li>Trái phiếu chính phủ ngắn hạn</li>
+                                <li>Vàng & Trái phiếu chống lạm phát</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-6">
+                            <h3 class="font-bold text-xl text-[#01BAEF]">10% Rủi ro: Cú nhảy vọt</h3>
+                            <p class="text-gray-600 mt-2">Mục tiêu: Nắm bắt lợi nhuận không giới hạn. Hưởng lợi từ Thiên nga Đen tích cực.</p>
+                            <ul class="mt-3 list-disc list-inside text-gray-700">
+                                <li>Vốn mạo hiểm / Công ty khởi nghiệp</li>
+                                <li>Cổ phiếu công nghệ & công nghệ sinh học đầu cơ</li>
+                                <li>Tiền điện tử</li>
+                                <li>Quyền chọn xa giá thực hiện</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="comparison" class="mb-12 bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-3xl font-bold text-center mb-4">Tạ đòn so với 60/40 Truyền thống</h2>
+                <p class="text-center text-gray-600 max-w-3xl mx-auto mb-6">Trong khi danh mục 60/40 truyền thống tìm kiếm sự cân bằng để tăng trưởng ổn định, chiến lược Tạ đòn tối ưu hóa cho sự sống còn và lợi nhuận bùng nổ trong môi trường biến động. Đặc điểm của chúng về cơ bản là khác nhau.</p>
+                <div class="chart-container">
+                    <canvas id="strategyRadarChart"></canvas>
+                </div>
+            </section>
+            
+            <section id="pros-cons" class="mb-12">
+                <h2 class="text-3xl font-bold text-center mb-8">Đánh đổi: Liệu có phù hợp với bạn?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-2xl font-bold text-green-600 mb-4">✔️ Ưu điểm</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start"><span class="text-green-600 mr-2">▶</span> <strong>Bảo vệ khỏi sụp đổ:</strong> Rủi ro thua lỗ được giới hạn giúp bảo vệ vốn trong các cuộc khủng hoảng lớn.</li>
+                            <li class="flex items-start"><span class="text-green-600 mr-2">▶</span> <strong>Lợi nhuận không giới hạn:</strong> Có cơ hội đạt được lợi nhuận khổng lồ, thay đổi cuộc đời từ một phần vốn nhỏ.</li>
+                            <li class="flex items-start"><span class="text-green-600 mr-2">▶</span> <strong>Miễn nhiễm với mô hình:</strong> Không phụ thuộc vào các mô hình tài chính thiếu sót thường thất bại trong khủng hoảng.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-2xl font-bold text-red-600 mb-4">❌ Nhược điểm</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start"><span class="text-red-600 mr-2">▶</span> <strong>Chi phí cơ hội:</strong> Có thể kém hiệu quả đáng kể trong các thị trường tăng trưởng dài và ổn định.</li>
+                            <li class="flex items-start"><span class="text-red-600 mr-2">▶</span> <strong>Khó khăn về tâm lý:</strong> Khó tuân thủ do tâm lý FOMO và các khoản lỗ nhỏ thường xuyên ở phía rủi ro.</li>
+                            <li class="flex items-start"><span class="text-red-600 mr-2">▶</span> <strong>Yêu cầu quản lý chặt chẽ:</strong> Đòi hỏi sự quản lý chủ động, nghiên cứu và kỷ luật.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="text-center mt-12 py-6 border-t border-gray-200">
+                <p class="text-sm text-gray-500">Nội dung được tổng hợp từ phân tích về Chiến lược Tạ đòn của Nassim Taleb.</p>
+                <p class="text-sm text-gray-500">Infographic này được tạo bằng Chart.js để kết xuất trên canvas. Không sử dụng SVG hoặc Mermaid JS.</p>
+            </footer>
+
+        </main>
+    </div>
+
+    <script>
+        const chartColors = {
+            darkBlue: '#0B4F6C',
+            brightBlue: '#01BAEF',
+            lightGray: '#FBFBFF',
+            mediumGray: '#757575',
+            darkGray: '#242424'
+        };
+
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+
+        const barbellDonutCtx = document.getElementById('barbellDonutChart').getContext('2d');
+        new Chart(barbellDonutCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Siêu An toàn', 'Siêu Mạo hiểm'],
+                datasets: [{
+                    data: [90, 10],
+                    backgroundColor: [chartColors.darkBlue, chartColors.brightBlue],
+                    borderColor: chartColors.lightGray,
+                    borderWidth: 4,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '70%',
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            color: chartColors.darkGray,
+                            font: { size: 14, weight: 'bold' }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: { title: tooltipTitleCallback }
+                    }
+                }
+            }
+        });
+
+        const strategyRadarCtx = document.getElementById('strategyRadarChart').getContext('2d');
+        new Chart(strategyRadarCtx, {
+            type: 'radar',
+            data: {
+                labels: ['Chống chịu khủng hoảng', 'Tiềm năng tăng giá', 'Độ đơn giản', 'Tăng trưởng ổn định', 'Tâm lý thoải mái'],
+                datasets: [{
+                    label: 'Chiến lược Tạ đòn',
+                    data: [10, 9, 4, 3, 2],
+                    backgroundColor: 'rgba(11, 79, 108, 0.2)',
+                    borderColor: chartColors.darkBlue,
+                    pointBackgroundColor: chartColors.darkBlue,
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: chartColors.darkBlue
+                }, {
+                    label: 'Truyền thống 60/40',
+                    data: [5, 6, 8, 9, 8],
+                    backgroundColor: 'rgba(1, 186, 239, 0.2)',
+                    borderColor: chartColors.brightBlue,
+                    pointBackgroundColor: chartColors.brightBlue,
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: chartColors.brightBlue
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                         labels: {
+                            color: chartColors.darkGray,
+                            font: { size: 14 }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: { title: tooltipTitleCallback }
+                    }
+                },
+                scales: {
+                    r: {
+                        angleLines: { color: 'rgba(0, 0, 0, 0.1)' },
+                        grid: { color: 'rgba(0, 0, 0, 0.1)' },
+                        pointLabels: { font: { size: 12 } },
+                        ticks: {
+                            backdropColor: 'transparent',
+                            stepSize: 2,
+                            color: chartColors.mediumGray
+                        },
+                        min: 0,
+                        max: 10
+                    }
+                }
+            }
+        });
+    </script>
+    <div style="text-align: center; padding: 3rem 0;">
+        <a href="index.html" style="display: inline-block; background-color: #3498db; color: white; padding: 0.8rem 1.8rem; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: 2px solid transparent; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            Quay lại Trang Blog
+        </a>
+    </div>
+</body>
+</html>

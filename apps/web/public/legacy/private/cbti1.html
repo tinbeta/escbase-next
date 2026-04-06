@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: Vượt Qua Mất Ngủ Mãn Tính Không Dùng Thuốc</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+        }
+        .chart-container {
+            position: relative;
+            margin: auto;
+            height: 320px;
+            width: 100%;
+            max-width: 450px;
+        }
+        .kpi-card {
+            background-color: #ffffff;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+        .kpi-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1;
+            color: #00429d;
+        }
+        .flowchart-step {
+            background-color: white;
+            border: 2px solid #a6d3d8;
+            color: #00429d;
+            padding: 1rem;
+            border-radius: 0.75rem;
+            text-align: center;
+            font-weight: 600;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+        }
+        .flowchart-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #4771b2;
+            margin: 0.5rem 0;
+        }
+        .timeline-item {
+            position: relative;
+            padding-bottom: 2rem;
+            padding-left: 2.5rem;
+            border-left: 3px solid #73a2c6;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: -0.7rem;
+            top: 0;
+            height: 1.25rem;
+            width: 1.25rem;
+            background-color: #00429d;
+            border-radius: 9999px;
+            border: 3px solid #e1ffff;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <!-- Palette: Brilliant Blues -->
+    <div class="container mx-auto p-4 md:p-8 max-w-7xl">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-[#00429d] mb-4">Vượt Qua Mất Ngủ Mãn Tính</h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">Lộ trình khoa học giúp bạn giành lại giấc ngủ tự nhiên sau 5-10 năm phụ thuộc thuốc.</p>
+        </header>
+
+        <main class="space-y-16">
+            
+            <section id="challenge-solution" class="text-center">
+                <h2 class="text-3xl font-bold text-[#00429d] mb-6">Thách Thức & Giải Pháp Vàng</h2>
+                <p class="max-w-3xl mx-auto text-gray-700 mb-8">
+                    Sử dụng thuốc ngủ lâu dài tạo ra một vòng luẩn quẩn phụ thuộc và tiềm ẩn nhiều rủi ro. Tuy nhiên, y học dựa trên bằng chứng đã tìm ra một giải pháp an toàn và bền vững hơn: Liệu pháp Nhận thức Hành vi cho chứng Mất ngủ (CBT-I).
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="kpi-card">
+                        <p class="text-lg font-semibold text-gray-700 mb-2">Tỷ lệ thành công của CBT-I</p>
+                        <p class="kpi-number">70-80%</p>
+                        <p class="text-gray-600 mt-2">bệnh nhân cho thấy sự cải thiện đáng kể về giấc ngủ, mang lại hiệu quả bền vững mà không cần dùng thuốc.</p>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <h3 class="text-xl font-bold text-[#4771b2] mb-4">Hiệu Quả Vượt Trội của CBT-I</h3>
+                        <div class="chart-container">
+                            <canvas id="effectivenessChart"></canvas>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-4 text-center">CBT-I giúp giảm đáng kể thời gian vào giấc và thời gian thức giấc trong đêm, hiệu quả tương đương thuốc trong ngắn hạn và vượt trội hơn hẳn về lâu dài.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="what-is-cbti">
+                <h2 class="text-3xl font-bold text-center text-[#00429d] mb-8">CBT-I Hoạt Động Như Thế Nào?</h2>
+                <p class="max-w-3xl mx-auto text-gray-700 mb-10 text-center">
+                    CBT-I không phải là "mẹo" ngủ, mà là một liệu pháp có cấu trúc, nhắm vào các yếu tố duy trì chứng mất ngủ theo Mô hình 3-P.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-start max-w-4xl mx-auto">
+                    <div class="flowchart-step">
+                        <span class="text-2xl">①</span>
+                        <p>Yếu tố Bẩm tạng</p>
+                        <p class="text-sm font-normal text-gray-600">(Khuynh hướng lo âu)</p>
+                    </div>
+                    <div class="flowchart-arrow hidden md:flex">→</div>
+                    <div class="flowchart-arrow flex md:hidden justify-center transform rotate-90">→</div>
+                    <div class="flowchart-step">
+                        <span class="text-2xl">②</span>
+                        <p>Yếu tố Khởi phát</p>
+                        <p class="text-sm font-normal text-gray-600">(Stress, biến cố)</p>
+                    </div>
+                    <div class="flowchart-arrow hidden md:flex">→</div>
+                    <div class="flowchart-arrow flex md:hidden justify-center transform rotate-90">→</div>
+                    <div class="flowchart-step !border-[#00429d] !border-4">
+                        <span class="text-2xl">③</span>
+                        <p>Yếu tố Duy trì</p>
+                        <p class="text-sm font-normal text-gray-600">(Hành vi & suy nghĩ sai lệch)</p>
+                    </div>
+                </div>
+                <p class="text-center mt-6 text-lg font-semibold text-[#4771b2]">CBT-I tập trung phá vỡ các Yếu tố Duy trì, giúp bạn thoát khỏi vòng lặp mất ngủ.</p>
+            </section>
+
+            <section id="core-components">
+                <h2 class="text-3xl font-bold text-center text-[#00429d] mb-8">5 Kỹ Năng Cốt Lõi của CBT-I</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <h3 class="text-xl font-bold text-[#4771b2] mb-3">1. Kiểm Soát Kích Thích</h3>
+                        <p class="text-gray-700">Tái lập liên kết "giường là để ngủ". Chỉ lên giường khi buồn ngủ, và ra khỏi giường nếu không ngủ được sau 15-20 phút.</p>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <h3 class="text-xl font-bold text-[#4771b2] mb-3">2. Hạn Chế Giấc Ngủ</h3>
+                        <p class="text-gray-700">Tạm thời giới hạn thời gian trên giường để củng cố và làm giấc ngủ sâu hơn, tăng hiệu suất giấc ngủ.</p>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <h3 class="text-xl font-bold text-[#4771b2] mb-3">3. Tái Cấu Trúc Nhận Thức</h3>
+                        <p class="text-gray-700">Nhận diện và thay đổi những suy nghĩ, lo lắng phi thực tế về giấc ngủ (ví dụ: "Tôi sẽ không làm được gì nếu không ngủ đủ 8 tiếng").</p>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <h3 class="text-xl font-bold text-[#4771b2] mb-3">4. Kỹ Thuật Thư Giãn</h3>
+                        <p class="text-gray-700">Học cách làm dịu hệ thần kinh thông qua các bài tập như thở bụng, thư giãn cơ bắp, để giảm căng thẳng thể chất và tinh thần.</p>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <h3 class="text-xl font-bold text-[#4771b2] mb-3">5. Vệ Sinh Giấc Ngủ</h3>
+                        <p class="text-gray-700">Tạo một môi trường và thói quen thuận lợi cho giấc ngủ: phòng ngủ tối, yên tĩnh, mát mẻ; tránh caffeine vào buổi chiều.</p>
+                    </div>
+                     <div class="bg-white rounded-xl shadow-lg p-6 flex items-center justify-center">
+                        <p class="text-center text-lg font-semibold text-[#00429d]">Năm kỹ năng này hoạt động cùng nhau để tạo ra một hệ thống điều trị toàn diện.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="tapering">
+                <h2 class="text-3xl font-bold text-center text-[#00429d] mb-8">Lộ Trình Cai Thuốc An Toàn</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <h3 class="text-xl font-bold text-[#4771b2] mb-4">Kết Hợp CBT-I & Giảm Liều</h3>
+                        <div class="chart-container">
+                            <canvas id="taperingSuccessChart"></canvas>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-4 text-center">Kết hợp CBT-I với việc giảm liều thuốc có giám sát làm tăng đáng kể khả năng ngừng thuốc thành công.</p>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <h3 class="text-xl font-bold text-[#4771b2] mb-4">Lộ Trình Mẫu 12 Tuần</h3>
+                        <ol class="relative border-l border-gray-300 ml-3">
+                            <li class="mb-6 ml-6">
+                                <span class="absolute flex items-center justify-center w-6 h-6 bg-[#a6d3d8] rounded-full -left-3 ring-8 ring-white"></span>
+                                <h4 class="font-semibold text-gray-800">Tuần 1-4</h4>
+                                <p class="text-sm text-gray-600">Xây dựng nền tảng CBT-I, bắt đầu giảm 25% liều thuốc.</p>
+                            </li>
+                            <li class="mb-6 ml-6">
+                                <span class="absolute flex items-center justify-center w-6 h-6 bg-[#73a2c6] rounded-full -left-3 ring-8 ring-white"></span>
+                                <h4 class="font-semibold text-gray-800">Tuần 5-8</h4>
+                                <p class="text-sm text-gray-600">Học kỹ năng thư giãn, giảm thêm 25% liều (còn 50%).</p>
+                            </li>
+                             <li class="ml-6">
+                                <span class="absolute flex items-center justify-center w-6 h-6 bg-[#00429d] rounded-full -left-3 ring-8 ring-white"></span>
+                                <h4 class="font-semibold text-gray-800">Tuần 9-12</h4>
+                                <p class="text-sm text-gray-600">Tinh chỉnh kỹ năng, giảm liều cuối cùng và ngừng thuốc.</p>
+                            </li>
+                        </ol>
+                        <p class="text-xs text-center mt-4 text-gray-500">Lưu ý: Lộ trình này cần được cá nhân hóa và thực hiện dưới sự giám sát của bác sĩ.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="recovery">
+                <h2 class="text-3xl font-bold text-center text-[#00429d] mb-8">Hành Trình Phục Hồi Của Não Bộ</h2>
+                <p class="max-w-3xl mx-auto text-gray-700 mb-10 text-center">
+                    Não bộ có khả năng tự chữa lành (tính mềm dẻo thần kinh). Việc ngừng thuốc và thực hành CBT-I giúp não bộ tái thiết lập lại sự cân bằng tự nhiên.
+                </p>
+                <div class="max-w-2xl mx-auto">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <h3 class="text-lg font-semibold text-[#4771b2]">Tháng 1-6: Tái Cân Bằng</h3>
+                        <p class="text-gray-600">Các kiểu ngủ bắt đầu ổn định. Chức năng của thụ thể GABA phục hồi đáng kể, cảm giác lo âu giảm bớt.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <h3 class="text-lg font-semibold text-[#4771b2]">Tháng 6-12: Tăng Cường Nhận Thức</h3>
+                        <p class="text-gray-600">Tình trạng "sương mù não" tan biến. Các chức năng lập kế hoạch và tổ chức được cải thiện rõ rệt.</p>
+                    </div>
+                    <div class="timeline-item border-transparent">
+                        <div class="timeline-dot"></div>
+                        <h3 class="text-lg font-semibold text-[#4771b2]">Năm 1-3: Chữa Lành Bền Vững</h3>
+                        <p class="text-gray-600">Các con đường thần kinh mới được củng cố. Khả năng nhận thức có thể phục hồi hoàn toàn về mức ban đầu.</p>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="text-center pt-8 border-t border-gray-300">
+                <p class="text-lg font-semibold text-[#00429d]">Bạn có thể giành lại giấc ngủ tự nhiên.</p>
+                <p class="text-gray-600 mt-2">Hành trình này đòi hỏi sự kiên nhẫn và cam kết, nhưng kết quả là sự tự do, sức khỏe và một tương lai với giấc ngủ bền vững. Hãy bắt đầu bằng việc tìm kiếm sự hỗ trợ chuyên môn ngay hôm nay.</p>
+            </footer>
+
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                    return label.join(' ');
+                }
+                return label;
+            };
+
+            const processLabels = (labels) => {
+                const MAX_LENGTH = 16;
+                return labels.map(label => {
+                    if (label.length <= MAX_LENGTH) {
+                        return label;
+                    }
+                    const words = label.split(' ');
+                    const newLabel = [];
+                    let line = '';
+                    for (const word of words) {
+                        if ((line + ' ' + word).length > MAX_LENGTH) {
+                            newLabel.push(line);
+                            line = word;
+                        } else {
+                            line = (line === '' ? word : line + ' ' + word);
+                        }
+                    }
+                    newLabel.push(line);
+                    return newLabel;
+                });
+            };
+
+            const colors = {
+                blueDark: '#00429d',
+                blueMid: '#4771b2',
+                blueLight: '#73a2c6',
+                bluePale: '#a6d3d8',
+                blueWhite: '#e1ffff',
+                gray: '#6b7280'
+            };
+
+            var effectivenessCtx = document.getElementById('effectivenessChart').getContext('2d');
+            new Chart(effectivenessCtx, {
+                type: 'bar',
+                data: {
+                    labels: processLabels(['Giảm thời gian vào giấc (phút)', 'Giảm thời gian thức giấc (phút)']),
+                    datasets: [{
+                        label: 'Hiệu quả của CBT-I',
+                        data: [19, 26],
+                        backgroundColor: [colors.blueMid, colors.blueLight],
+                        borderColor: [colors.blueDark, colors.blueMid],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Số phút giảm'
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                title: tooltipTitleCallback
+                            }
+                        }
+                    }
+                }
+            });
+
+            var taperingSuccessCtx = document.getElementById('taperingSuccessChart').getContext('2d');
+            new Chart(taperingSuccessCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Ngừng thuốc thành công (CBT-I + Giảm liều)', 'Chỉ Giảm liều'],
+                    datasets: [{
+                        data: [85, 15],
+                        backgroundColor: [colors.blueDark, colors.bluePale],
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                        },
+                        tooltip: {
+                            callbacks: {
+                                title: tooltipTitleCallback,
+                                label: function(context) {
+                                    let label = context.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed !== null) {
+                                        label += context.parsed + '%';
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

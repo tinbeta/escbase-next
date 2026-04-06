@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tủ Thuốc Gia Đình Thông Minh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+            padding: 0 1.5rem;
+        }
+        .accordion-item.open .accordion-content {
+            max-height: 2000px; /* Adjust as needed */
+            padding: 1.5rem;
+        }
+        .accordion-item.open .accordion-icon {
+            transform: rotate(45deg);
+        }
+        .icon-bg {
+            background-color: #e0e7ff;
+        }
+        .prose ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+        .prose li {
+            margin-bottom: 0.5rem;
+        }
+        .prose strong {
+            color: #1e3a8a;
+        }
+    </style>
+</head>
+<body class="antialiased text-slate-800">
+<div style="max-width:800px;margin:0 auto;padding:1rem 1.5rem;"><a href="../blog.html" style="display:inline-flex;align-items:center;gap:0.5rem;color:#71717a;text-decoration:none;font-size:0.9rem;font-family:sans-serif;">← Quay lại Blog</a></div>
+
+    <div class="container mx-auto p-4 md:p-8 max-w-4xl">
+        <!-- Header -->
+        <header class="text-center mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-blue-900 mb-2">Tủ Thuốc Gia Đình Thông Minh</h1>
+            <p class="text-slate-600">Cẩm nang 10 loại thuốc không kê đơn cần thiết cho mọi nhà.</p>
+        </header>
+
+        <!-- General Principles -->
+        <div class="bg-white rounded-xl shadow-md p-6 mb-8 border-l-4 border-yellow-500">
+            <h2 class="text-2xl font-bold text-slate-800 mb-4 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                Nguyên tắc chung khi sử dụng thuốc
+            </h2>
+            <ul class="list-disc list-inside space-y-2 text-slate-700">
+                <li><strong class="font-semibold">Chỉ giảm triệu chứng:</strong> Thuốc không kê đơn chủ yếu giúp làm dịu các triệu chứng tạm thời.</li>
+                <li><strong class="font-semibold">Tham khảo ý kiến bác sĩ:</strong> Nếu triệu chứng không cải thiện sau vài ngày, hãy đi gặp bác sĩ để tìm nguyên nhân.</li>
+                <li><strong class="font-semibold">Ghi lại thông tin quan trọng:</strong> Luôn ghi chú số điện thoại bác sĩ, tiền sử dị ứng và các tác dụng phụ đã gặp.</li>
+                <li><strong class="font-semibold">Cẩn trọng với tác dụng phụ:</strong> Dù không cần đơn, thuốc vẫn có thể nguy hiểm nếu dùng quá liều hoặc liên tục.</li>
+            </ul>
+        </div>
+        
+        <!-- Accordion for Medicines -->
+        <div id="medicine-accordion" class="space-y-4">
+            <!-- Medicine Data will be injected here by JavaScript -->
+        </div>
+
+        <!-- Conclusion -->
+        <div class="bg-blue-100 rounded-xl p-6 mt-8 border-l-4 border-blue-500 text-center">
+            <h2 class="text-2xl font-bold text-blue-900 mb-3">Lời kết</h2>
+            <p class="text-blue-800">Hy vọng cẩm nang này sẽ giúp bạn sử dụng thuốc tại nhà một cách an toàn và hiệu quả. Hãy nhớ luôn dùng đúng liều, đúng chỉ định và gặp bác sĩ khi các triệu chứng vẫn còn để đảm bảo sức khỏe tốt nhất cho bạn và gia đình.</p>
+        </div>
+
+    </div>
+
+    <script>
+        const medicineData = [
+            {
+                title: "1. Acetaminophen (Paracetamol)",
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>`,
+                content: `
+                    <div class="prose max-w-none">
+                        <p><strong>Công dụng:</strong> Giảm đau (đau đầu, đau nhức cơ thể), hạ sốt. Rất hữu ích cho các triệu chứng COVID-19 nhẹ.</p>
+                        <p><strong>Liều dùng (người lớn):</strong> Mỗi lần uống hai viên 500 mg, tối đa ba lần/ngày.</p>
+                        <p><strong>Lưu ý quan trọng:</strong></p>
+                        <ul>
+                            <li>Nguy cơ gây hại gan nếu quá liều. Cần cẩn trọng khi dùng chung với các loại thuốc cảm khác (Dequil, Naquil) vì chúng cũng có thể chứa Acetaminophen.</li>
+                            <li>Người có bệnh gan mãn tính, xơ gan cần hết sức cẩn thận.</li>
+                        </ul>
+                        <p><strong>Khi cần gặp bác sĩ:</strong> Nhức đầu kèm các triệu chứng nguy hiểm khác như sốt cao, co giật, yếu cơ thể.</p>
+                    </div>
+                `
+            },
+            {
+                title: "2. Thuốc giảm đau NSAID (Ibuprofen, Naproxen)",
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>`,
+                content: `
+                    <div class="prose max-w-none">
+                        <p><strong>Công dụng:</strong> Giảm đau nhức, hạ sốt, và kháng viêm. Đặc biệt hiệu quả cho đau xương khớp, cơ bắp, đau bụng kinh.</p>
+                        <p><strong>Tác dụng phụ nguy hiểm:</strong> Ảnh hưởng tới bao tử và thận, tăng nguy cơ viêm loét dạ dày.</p>
+                        <p><strong>Lưu ý khi dùng:</strong></p>
+                        <ul>
+                            <li>Người bị đau dạ dày nên hạn chế, hoặc uống lúc bụng no.</li>
+                            <li>Ngưng thuốc ngay nếu bị đau bao tử, buồn nôn.</li>
+                        </ul>
+                        <p><strong>Chống chỉ định/Thận trọng:</strong> Người bệnh thận mãn tính cần hạn chế tối đa.</p>
+                    </div>
+                `
+            },
+            {
+                title: "3. Thuốc chống dị ứng (Antihistamine)",
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 002 2h3a2 2 0 002-2v-3a2 2 0 00-2-2H5zM5 14a2 2 0 00-2 2v3a2 2 0 002 2h3a2 2 0 002-2v-3a2 2 0 00-2-2H5z" /></svg>`,
+                content: `
+                    <div class="prose max-w-none">
+                        <p><strong>Công dụng:</strong> Chữa các triệu chứng dị ứng trên da (nổi mề đay, ngứa, nổi mẩn).</p>
+                        <p><strong>Phân loại:</strong></p>
+                        <ul>
+                            <li><strong>Gây buồn ngủ:</strong> Ví dụ Benadryl (có thể giúp ngủ).</li>
+                            <li><strong>Không gây buồn ngủ:</strong> Ví dụ Claritin, Zyrtec.</li>
+                        </ul>
+                        <p><strong>Lưu ý quan trọng:</strong> Tránh dùng loại gây buồn ngủ khi lái xe hoặc làm việc ban ngày. Tham khảo ý kiến dược sĩ để chọn loại phù hợp.</p>
+                        <p><strong>Khi cần gặp bác sĩ:</strong> Nếu dị ứng không giảm sau khi uống thuốc 2-3 ngày liên tục.</p>
+                    </div>
+                `
+            },
+            {
+                title: "4. Thuốc giảm đau dạ dày",
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>`,
+                content: `
+                    <div class="prose max-w-none">
+                        <p><strong>Công dụng:</strong> Giảm triệu chứng đau dạ dày do tăng tiết axit.</p>
+                        <p><strong>Các loại chính:</strong></p>
+                        <ul>
+                            <li><strong>Thuốc giảm tốc độ tạo axit (PPI - Omeprazole):</strong> Tác dụng mạnh, kéo dài nhưng cần vài giờ để phát huy.</li>
+                            <li><strong>Thuốc kháng thụ thể H2 (Famotidine/Pepcid):</strong> Tác dụng nhanh hơn PPI (1-2 giờ). An toàn hơn cho phụ nữ mang thai.</li>
+                            <li><strong>Thuốc trung hòa axit (Antacids - Tums):</strong> Tác dụng nhanh nhất (15 phút) nhưng ngắn.</li>
+                        </ul>
+                        <p><strong>Lời khuyên:</strong> Chỉ nên dùng trong vài ngày. Nếu triệu chứng không hết, hãy gặp bác sĩ để tìm nguyên nhân, có thể do vi khuẩn H.pylori.</p>
+                    </div>
+                `
+            },
+             {
+                title: "5. Thuốc tiêu chảy (Loperamide, Bismuth)",
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>`,
+                content: `
+                    <div class="prose max-w-none">
+                        <p><strong>Công dụng:</strong> Giúp giảm tiêu chảy bằng cách làm chậm quá trình chuyển hóa hoặc cân bằng chất lỏng.</p>
+                        <p><strong>Lưu ý quan trọng:</strong></p>
+                        <ul>
+                            <li>Chỉ nên uống MỘT trong hai loại (Loperamide hoặc Bismuth), không uống cả hai cùng lúc.</li>
+                            <li>Ngưng thuốc ngay khi đã bớt tiêu chảy để tránh bị táo bón.</li>
+                        </ul>
+                        <p><strong>Khi cần gặp bác sĩ:</strong> Nếu bị tiêu chảy thường xuyên, vì có thể liên quan đến hội chứng ruột kích thích.</p>
+                    </div>
+                `
+            },
+            {
+                title: "6. Thuốc táo bón",
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" /></svg>`,
+                content: `
+                    <div class="prose max-w-none">
+                        <p><strong>Công dụng:</strong> Giúp làm mềm phân và dễ đi ngoài.</p>
+                        <p><strong>Biện pháp không dùng thuốc:</strong> Uống đủ nước và ăn nhiều rau cải là cách hiệu quả nhất.</p>
+                        <p><strong>Các loại thuốc nhẹ nên có:</strong></p>
+                        <ul>
+                            <li><strong>Thuốc làm mềm phân:</strong> Docusate.</li>
+                            <li><strong>Thuốc tăng chất xơ:</strong> Psyllium.</li>
+                            <li><strong>Thuốc bột pha nước:</strong> Miralax.</li>
+                        </ul>
+                        <p><strong>Lưu ý quan trọng:</strong> Tránh dùng các loại thuốc táo bón mạnh tại nhà vì có thể gây mất nước, mất cân bằng điện giải.</p>
+                        <p><strong>Khi cần gặp bác sĩ:</strong> Bệnh táo bón mãn tính cần được bác sĩ chẩn đoán.</p>
+                    </div>
+                `
+            },
+            {
+                title: "7. Thuốc ngủ",
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>`,
+                content: `
+                    <div class="prose max-w-none">
+                        <p><strong>Tầm quan trọng của giấc ngủ:</strong> Giấc ngủ là nền tảng của hệ miễn dịch tốt. Mất ngủ kéo dài gây nhiều hệ lụy sức khỏe.</p>
+                        <p><strong>Các loại thuốc ngủ ngắn hạn/ít tác dụng phụ:</strong></p>
+                        <ul>
+                            <li><strong>Melatonin:</strong> Hormone tự nhiên, liều hiệu quả từ 5-10 mg.</li>
+                            <li><strong>Benadryl (Diphenhydramine):</strong> Thuốc kháng histamine gây buồn ngủ.</li>
+                            <li><strong>Valerian (Nữ lang):</strong> Chiết xuất thảo dược giúp dễ ngủ.</li>
+                        </ul>
+                        <p><strong>Lưu ý:</strong> Chỉ nên dùng ngắn hạn. Dùng lâu dài có thể gây tác dụng phụ như ác mộng, đau đầu.</p>
+                        <p><strong>Khi cần gặp bác sĩ:</strong> Nếu bạn bị mất ngủ kéo dài và các loại thuốc này không hiệu quả.</p>
+                    </div>
+                `
+            },
+            {
+                title: "8. Kem bôi ngoài da",
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10H3v4h11v5l7-7-7-7v5z" /></svg>`,
+                content: `
+                    <div class="prose max-w-none">
+                        <p><strong>Kem chống ngứa và giảm đau:</strong></p>
+                        <ul>
+                            <li><strong>Hydrocortisone (1%):</strong> Kem steroid giảm ngứa. Tránh dùng trên da mỏng (mặt, cổ) và không dùng lâu dài.</li>
+                            <li><strong>Lidocaine, Calamine:</strong> Giảm ngứa và đau rát nhẹ.</li>
+                        </ul>
+                        <p><strong>Kem dưỡng da (Lotion/Moisturizer):</strong> Rất quan trọng khi da khô và ngứa. Chọn loại kem đặc như Cetaphil.</p>
+                        <p><strong>Kem trụ sinh (Triple Antibiotic):</strong> Dùng cho vết cắt, trầy xước, bỏng nhẹ để ngăn ngừa nhiễm trùng.</p>
+                    </div>
+                `
+            },
+            {
+                title: "9. Thuốc giảm ho, đàm, nghẹt mũi",
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11" /></svg>`,
+                content: `
+                    <div class="prose max-w-none">
+                        <p><strong>Nguyên tắc chung:</strong> Các loại thuốc này chỉ dùng để chữa triệu chứng tạm thời.</p>
+                        <p><strong>Thuốc ho:</strong></p>
+                        <ul>
+                            <li><strong>Guaifenesin:</strong> Giảm đàm, làm loãng đàm.</li>
+                            <li><strong>Dextromethorphan:</strong> Ức chế phản xạ ho.</li>
+                        </ul>
+                        <p><strong>Thuốc xịt mũi chống nghẹt mũi:</strong> Ví dụ Fluticasone. Không nên dùng liên tục trong thời gian dài vì có thể gây "lờn thuốc" và làm tình trạng nghẹt mũi tệ hơn.</p>
+                        <p><strong>Khi cần gặp bác sĩ:</strong> Ho kéo dài, đặc biệt nếu nghi ngờ viêm phổi hoặc COVID-19.</p>
+                    </div>
+                `
+            },
+            {
+                title: "10. Thuốc nhỏ mắt và nhỏ tai",
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>`,
+                content: `
+                    <div class="prose max-w-none">
+                        <p><strong>Thuốc nhỏ mắt:</strong></p>
+                        <ul>
+                            <li><strong>Nước mắt nhân tạo:</strong> An toàn nhất, giúp giảm khô mắt, có thể dùng nhiều lần trong ngày.</li>
+                            <li><strong>Thuốc nhỏ mắt chống dị ứng:</strong> Chữa đỏ mắt, ngứa mắt do dị ứng.</li>
+                            <li><strong>Lưu ý:</strong> Cực kỳ cẩn thận với thuốc nhỏ mắt chứa steroid, cần có chỉ định của bác sĩ.</li>
+                        </ul>
+                        <p><strong>Thuốc nhỏ tai:</strong></p>
+                        <ul>
+                            <li><strong>Công dụng:</strong> Làm mềm ráy tai bị đóng cục, giúp dễ lấy ra ngoài.</li>
+                            <li><strong>Thành phần:</strong> Thường là dung dịch hydrogen peroxide pha loãng hoặc dầu khoáng.</li>
+                        </ul>
+                        <p><strong>Khi cần gặp bác sĩ:</strong> Nếu các triệu chứng về mắt hoặc tai không cải thiện sau khi sử dụng.</p>
+                    </div>
+                `
+            }
+        ];
+
+        const accordionContainer = document.getElementById('medicine-accordion');
+
+        medicineData.forEach((item, index) => {
+            const accordionItem = document.createElement('div');
+            accordionItem.className = 'accordion-item bg-white rounded-xl shadow-md overflow-hidden';
+            accordionItem.innerHTML = `
+                <button class="accordion-header w-full flex justify-between items-center text-left p-6 hover:bg-slate-50 focus:outline-none transition duration-300">
+                    <span class="flex items-center">
+                        <span class="icon-bg rounded-full p-2 mr-4">${item.icon}</span>
+                        <span class="text-lg font-semibold text-slate-800">${item.title}</span>
+                    </span>
+                    <span class="accordion-icon text-indigo-600 transform transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" /></svg>
+                    </span>
+                </button>
+                <div class="accordion-content">
+                    ${item.content}
+                </div>
+            `;
+            accordionContainer.appendChild(accordionItem);
+        });
+
+        const accordionItems = document.querySelectorAll('.accordion-item');
+
+        accordionItems.forEach(item => {
+            const header = item.querySelector('.accordion-header');
+            header.addEventListener('click', () => {
+                const isOpen = item.classList.contains('open');
+
+                // Close all other items
+                accordionItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('open');
+                    }
+                });
+
+                // Toggle the clicked item
+                if (isOpen) {
+                    item.classList.remove('open');
+                } else {
+                    item.classList.add('open');
+                }
+            });
+        });
+    </script>
+    <div style="text-align: center; padding: 3rem 0;">
+        <a href="index.html" style="display: inline-block; background-color: #3498db; color: white; padding: 0.8rem 1.8rem; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: 2px solid transparent; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            Quay lại Trang Blog
+        </a>
+    </div>
+</body>
+</html>

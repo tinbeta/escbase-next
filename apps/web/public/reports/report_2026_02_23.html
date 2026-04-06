@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Report 23/02/2026 - Escbase</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-sidebar: #080808;
+            --bg-card: #111111;
+            --bg-hover: #1a1a1a;
+            --text-primary: #ffffff;
+            --text-secondary: #888888;
+            --text-muted: #555555;
+            --accent: #f7931a;
+            --border: #1a1a1a;
+            --success: #22c55e;
+            --danger: #ef4444;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .layout { display: flex; min-height: 100vh; }
+
+        /* Sidebar */
+        .sidebar {
+            width: 240px;
+            background: var(--bg-sidebar);
+            border-right: 1px solid var(--border);
+            position: fixed;
+            top: 0; left: 0; bottom: 0;
+            overflow-y: auto;
+            z-index: 100;
+            padding: 2rem 0;
+        }
+
+        .sidebar-logo {
+            padding: 0 1.5rem 1.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .sidebar-logo a {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .sidebar-logo img {
+            width: 40px; height: 40px;
+            border-radius: 10px;
+        }
+
+        .sidebar-logo span {
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .nav-section {
+            margin-bottom: 2rem;
+            padding: 0 1rem;
+        }
+
+        .nav-section-title {
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+            padding: 0 0.5rem;
+        }
+
+        .nav-item {
+            display: block;
+            padding: 0.5rem 0.75rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            border-radius: 6px;
+            transition: all 0.15s ease;
+            margin-bottom: 0.25rem;
+        }
+
+        .nav-item:hover {
+            background: var(--bg-hover);
+            color: var(--text-primary);
+        }
+
+        .nav-item.active {
+            background: rgba(247, 147, 26, 0.15);
+            color: var(--accent);
+        }
+
+        /* Main Content */
+        .main {
+            flex: 1;
+            margin-left: 240px;
+            padding: 2rem 3rem;
+            max-width: 800px;
+        }
+
+        /* Report Header */
+        .report-header {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .report-date {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--accent);
+            color: #000;
+            padding: 0.4rem 0.875rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .report-title {
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+
+        .report-meta {
+            display: flex;
+            gap: 1.5rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .report-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        /* Content Styling */
+        .content h2 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent);
+            display: inline-block;
+        }
+
+        .content h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 2rem 0 0.75rem;
+            color: var(--accent);
+        }
+
+        .content h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.5rem;
+        }
+
+        .content p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .content strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* Market Table */
+        .market-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        .market-table th {
+            background: var(--bg-hover);
+            padding: 0.875rem 1rem;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+        }
+
+        .market-table td {
+            padding: 0.875rem 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .market-table tr:hover td {
+            background: var(--bg-hover);
+        }
+
+        .price-up { color: var(--success); }
+        .price-down { color: var(--danger); }
+
+        /* News Card */
+        .news-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .news-card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .news-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: rgba(247, 147, 26, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent);
+            font-size: 1.1rem;
+        }
+
+        .news-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .news-source {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .news-content {
+            color: var(--text-secondary);
+        }
+
+        .news-impact {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .impact-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 0.25rem;
+        }
+
+        /* Tags */
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 0.35rem 0.7rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Summary Box */
+        .summary-box {
+            background: linear-gradient(135deg, rgba(247, 147, 26, 0.08) 0%, var(--bg-card) 100%);
+            border: 1px solid rgba(247, 147, 26, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .summary-box h3 {
+            color: var(--accent);
+            margin-top: 0;
+        }
+
+        /* Quote */
+        blockquote {
+            border-left: 3px solid var(--accent);
+            padding-left: 1.25rem;
+            margin: 1.5rem 0;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        /* Divider */
+        .divider {
+            height: 1px;
+            background: var(--border);
+            margin: 2.5rem 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+            .sidebar.open { transform: translateX(0); }
+            .main { margin-left: 0; padding: 5rem 1.5rem 2rem; }
+            .report-title { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <a href="../index.html">
+                    <img src="../esclogo.png" alt="Escbase">
+                    <span>Escbase</span>
+                </a>
+            </div>
+
+            <div class="nav-section">
+                <div class="nav-section-title">Menu</div>
+                <a href="../index.html" class="nav-item">Home</a>
+                <a href="../index.html#videos" class="nav-item">Videos</a>
+                <a href="../index.html#reports" class="nav-item active">Reports</a>
+                <a href="../index.html#blog" class="nav-item">Blog</a>
+                <a href="../index.html#reading" class="nav-item">Reading</a>
+            </div>
+
+            <div class="nav-section">
+                <div class="nav-section-title">Reports</div>
+                <a href="report_2026_03_02.html" class="nav-item">02/03/2026</a>
+                <a href="report_2026_02_28.html" class="nav-item">28/02/2026</a>
+                <a href="report_2026_02_27.html" class="nav-item">27/02/2026</a>
+                <a href="report_2026_02_26.html" class="nav-item">26/02/2026</a>
+                <a href="report_2026_02_23.html" class="nav-item active">23/02/2026</a>
+                <a href="report_2026_02_22.html" class="nav-item">22/02/2026</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main">
+            <article class="report-header">
+                <span class="report-date"><i class="far fa-calendar"></i> 23/02/2026</span>
+                <h1 class="report-title">📰 Tổng Hợp Tin Crypto - SEC Nới Lỏng Stablecoin, Bitdeer Bán Hết Bitcoin</h1>
+                <div class="report-meta">
+                    <span><i class="far fa-clock"></i> 7:00 AM GMT+7</span>
+                    <span><i class="fas fa-globe"></i> Asia/Saigon</span>
+                    <span><i class="far fa-user"></i> Escbase Research</span>
+                </div>
+            </article>
+
+            <div class="content">
+                <!-- Market Overview -->
+                <h2>📊 Tổng Quan Thị Trường</h2>
+                
+                <table class="market-table">
+                    <thead>
+                        <tr>
+                            <th>Coin</th>
+                            <th>Giá (USD)</th>
+                            <th>24h</th>
+                            <th>7 ngày</th>
+                            <th>Vốn Hóa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Bitcoin (BTC)</strong></td>
+                            <td>$67,611.93</td>
+                            <td class="price-up">+0.55% 📈</td>
+                            <td class="price-up">+1.65%</td>
+                            <td>$1.35T</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ethereum (ETH)</strong></td>
+                            <td>$1,955.03</td>
+                            <td class="price-up">+0.95% 📈</td>
+                            <td class="price-up">+0.50%</td>
+                            <td>$235.51B</td>
+                        </tr>
+                        <tr>
+                            <td><strong>XRP</strong></td>
+                            <td>$1.39</td>
+                            <td class="price-down">-2.96% 📉</td>
+                            <td class="price-up">+5.65%</td>
+                            <td>$84.84B</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Solana (SOL)</strong></td>
+                            <td>$82.57</td>
+                            <td class="price-down">-3.13% 📉</td>
+                            <td class="price-up">+3.95%</td>
+                            <td>$46.94B</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="summary-box">
+                    <h3>💡 Nhận Định Thị Trường</h3>
+                    <p><strong>Bitcoin</strong> đang dao động quanh vùng $67,000-$68,000, thể hiện sự ổn định tương đối so với altcoin. <strong>Altcoin</strong> chịu áp lực giảm giá mạnh hơn BTC, đặc biệt là DOGE (-3.37%) và SOL (-3.13%). Dòng tiền đang có xu hướng <strong>chuyển từ token sang cổ phiếu</strong> crypto truyền thống.</p>
+                </div>
+
+                <div class="divider"></div>
+
+                <!-- Hot News -->
+                <h2>🔥 Tin Nóng Trong Ngày</h2>
+
+                <div class="news-card">
+                    <div class="news-card-header">
+                        <div class="news-icon"><i class="fas fa-gavel"></i></div>
+                        <div>
+                            <div class="news-source">📍 Tin tức</div>
+                            <div class="news-title">Trump Tăng Thuế Quan Toàn Cầu Lên 15%</div>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <p>Tổng thống Donald Trump đã tăng thuế quan toàn cầu từ 10% lên 15%, bất chấp phán quyết trước đó của Tòa án Tối cao.</p>
+                    </div>
+                    <div class="news-impact">
+                        <div class="impact-label">💡 Tác động</div>
+                        <p>Thị trường crypto ban đầu có phản ứng tiêu cực nhưng nhanh chóng ổn định. Bitcoin chỉ giảm nhẹ và đã phục hồi, cho thấy crypto đang dần tách khỏi rủi ro vĩ mô truyền thống.</p>
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <div class="news-card-header">
+                        <div class="news-icon" style="background: rgba(34, 197, 94, 0.1); color: var(--success);"><i class="fas fa-university"></i></div>
+                        <div>
+                            <div class="news-source">📍 Tin tức</div>
+                            <div class="news-title">SEC Nới Lỏng Quy Định Về Stablecoin</div>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <p>SEC cho phép các broker-dealers cắt giảm 2% ("haircut") trên giá trị stablecoin khi tính toán vốn lưu động. <strong>BitGo</strong> được chỉ định làm nhà phát hành stablecoin FYUSD tuân thủ GENIUS Act.</p>
+                    </div>
+                    <div class="news-impact">
+                        <div class="impact-label">💡 Ý nghĩa</div>
+                        <p>Đây là tín hiệu tích cực cho thấy SEC đang nới lỏng quan điểm với stablecoin. Giúp các tổ chức tài chính dễ dàng hơn trong việc nắm giữ stablecoin.</p>
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <div class="news-card-header">
+                        <div class="news-icon" style="background: rgba(239, 68, 68, 0.1); color: var(--danger);"><i class="fas fa-exclamation-triangle"></i></div>
+                        <div>
+                            <div class="news-source">📍 Tin tức</div>
+                            <div class="news-title">Bitdeer Bán Toàn Bộ Bitcoin Holdings</div>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <p>Công ty khai thác Bitcoin <strong>Bitdeer</strong> đã thanh lý toàn bộ 943 BTC từ dự trữ, giảm xuống còn 0 BTC.</p>
+                    </div>
+                    <div class="news-impact">
+                        <div class="impact-label">💡 Phân tích</div>
+                        <p>Động thái này cho thấy áp lực tài chính lên các công ty khai thác. Có thể là dấu hiệu các miner đang gặp khó khăn với chi phí hoạt động. Ngược lại với chiến lược HODL truyền thống.</p>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <!-- Regulation -->
+                <h2>🏛️ Cập Nhật Quy Định & Pháp Lý</h2>
+
+                <h3>🇺🇸 Hoa Kỳ</h3>
+                <table class="market-table">
+                    <thead>
+                        <tr>
+                            <th>Sự Kiện</th>
+                            <th>Mức Độ</th>
+                            <th>Tác Động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>SEC nới lỏng quy định stablecoin</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                            <td class="price-up">Tích cực</td>
+                        </tr>
+                        <tr>
+                            <td>Trump tăng thuế quan 15%</td>
+                            <td>⭐⭐⭐⭐</td>
+                            <td>Trung tính/Tiêu cực</td>
+                        </tr>
+                        <tr>
+                            <td>Thị trường xóa lợi nhuận bầu cử</td>
+                            <td>⭐⭐⭐⭐</td>
+                            <td class="price-down">Tiêu cực</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>🇯🇵 Nhật Bản</h3>
+                <p><strong>SBI Holdings</strong> phát hành trái phiếu on-chain trị giá 10 tỷ yen với phần thưởng XRP cho nhà đầu tư bán lẻ:</p>
+                <ul style="color: var(--text-secondary); margin: 1rem 0; padding-left: 1.5rem;">
+                    <li>Lãi suất cố định + phần thưởng XRP</li>
+                    <li>Thanh toán trên blockchain</li>
+                    <li>Mở ra mô hình mới cho DeFi truyền thống</li>
+                </ul>
+
+                <div class="divider"></div>
+
+                <!-- Prediction -->
+                <h2>🔮 Dự Báo & Phân Tích</h2>
+
+                <h3>Bitcoin Có Thể Tăng Lên $85,000?</h3>
+                <p><strong>Phân tích CME:</strong> Các nhà giao dịch tổ chức ("smart money") đã cắt giảm đáng kể vị thế bán khống (short) trong tháng qua.</p>
+
+                <blockquote>
+                    "Động thái tương tự trước đây đã dẫn đến tăng trưởng 70% (2025) và 190% (2023). Có khả năng Bitcoin sẽ tăng lên $85,000 trong thời gian tới."
+                </blockquote>
+
+                <h3>Tín Hiệu "Bitcoin to Zero" Tăng Cao</h3>
+                <p>Google Trends cho thấy lượt tìm kiếm <strong>"Bitcoin to zero"</strong> tại Mỹ đạt mức cao kỷ lục.</p>
+                
+                <div class="summary-box">
+                    <h3>💡 Giải thích</h3>
+                    <p>Đây thường là tín hiệu <strong>đáy thị trường</strong> - khi tuyệt vọng cao nhất, giá thường sắp hồi phục. Đây là tín hiệu tâm lý đám đông đạt cực độ bi quan.</p>
+                </div>
+
+                <div class="divider"></div>
+
+                <!-- Technology -->
+                <h2>🚀 Công Nghệ & Đổi Mới</h2>
+
+                <h3>Vitalik Buterin Đề Xuất AI Cho DAO</h3>
+                <p>Ethereum founder đề xuất sử dụng <strong>AI "stewards"</strong> để cải thiện quản trị DAO:</p>
+                <div style="margin: 1rem 0;">
+                    <span class="tag"><i class="fas fa-shield-alt"></i> Zero-Knowledge Proofs</span>
+                    <span class="tag"><i class="fas fa-user-secret"></i> Bảo vệ danh tính</span>
+                    <span class="tag"><i class="fas fa-ban"></i> Chống ép buộc</span>
+                </div>
+
+                <h3>Máy Tính Lượng Tử Đe Dọa Bitcoin?</h3>
+                <div class="news-card" style="border-color: rgba(239, 68, 68, 0.3);">
+                    <div class="news-content">
+                        <p>⚠️ Cảnh báo: Gần <strong>7 triệu Bitcoin</strong> (bao gồm 1 triệu BTC của Satoshi Nakamoto) có thể bị đe dọa bởi máy tính lượng tử trong tương lai.</p>
+                        <p style="margin-top: 0.5rem;"><strong>Giá trị bị đe dọa:</strong> ~$440 tỷ</p>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <!-- Summary -->
+                <h2>📌 Tóm Tắt Ngày</h2>
+
+                <table class="market-table">
+                    <thead>
+                        <tr>
+                            <th>Chỉ Số</th>
+                            <th>Đánh Giá</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Tâm lý thị trường</strong></td>
+                            <td>Trung tính đến Giảm giá 📉</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Dòng tiền</strong></td>
+                            <td>Chuyển từ altcoin sang BTC và cổ phiếu</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Quy định</strong></td>
+                            <td class="price-up">Tích cực (SEC nới lỏng stablecoin)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Triển vọng ngắn hạn</strong></td>
+                            <td>Có thể tăng nhẹ nếu BTC vượt $70K</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="summary-box" style="margin-top: 2rem;">
+                    <h3>💡 Điểm Chính Cho Ngườii Mới</h3>
+                    <p><strong>1. Bitcoin</strong> vẫn là "vua" trong downtrend - giảm ít hơn altcoin</p>
+                    <p><strong>2. Stablecoin</strong> đang được cơ quan quản lý chấp nhận rộng rãi hơn</p>
+                    <p><strong>3. Đừng panic sell</strong> khi thấy tin xấu - các tín hiệu cho thấy thị trường có thể đang ở gần đáy</p>
+                </div>
+
+                <blockquote style="margin-top: 2rem;">
+                    <strong>Lưu ý:</strong> Báo cáo này chỉ mang tính chất tham khảo, không phải lờì khuyên đầu tư. Hãy tự nghiên cứu (DYOR) trước khi đưa ra quyết định tài chính.
+                </blockquote>
+
+                <p style="text-align: center; color: var(--text-muted); margin-top: 2rem; font-size: 0.85rem;">
+                    <i>Được tổng hợp từ: CoinDesk, Cointelegraph, CoinMarketCap</i>
+                </p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

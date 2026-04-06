@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xHunt & Frontrun Extension: "Open Source" Nhưng Theo Dõi Mọi Thứ Bạn Làm — Phân Tích Code Thực Tế - ESC Base</title>
+    <meta name="description" content="Phân tích bảo mật chuyên sâu 2 extension phổ biến trong cộng đồng crypto: xHunt gửi IP, fingerprint, mọi URL bạn truy cập về server. Frontrun hook 12 X API endpoints.">
+    <meta property="og:title" content="xHunt & Frontrun Extension: Open Source Nhưng Theo Dõi Mọi Thứ">
+    <meta property="og:description" content="xHunt gửi IP, fingerprint, mọi URL về server. Wallet injection function sẵn sàng kích hoạt. Frontrun hook 12 X API endpoints.">
+    <meta property="og:image" content="https://escbase.xyz/page.jpg">
+    <meta property="og:url" content="https://escbase.xyz/blog/xhunt_frontrun_security_2026_03_23.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root{--bg:#09090b;--card-bg:#18181b;--border:#27272a;--text:#fafafa;--text-secondary:#a1a1aa;--text-muted:#71717a;--accent:#f7931a;--accent-green:#22c55e;--accent-red:#ef4444;--accent-blue:#3b82f6;--radius-md:16px;--radius-lg:24px}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased}.container{max-width:800px;margin:0 auto;padding:2rem 1.5rem}.back-link{display:inline-flex;align-items:center;gap:.5rem;color:var(--text-muted);text-decoration:none;font-size:.9rem;margin-bottom:2rem;transition:color .2s}.back-link:hover{color:var(--accent)}.article-header{margin-bottom:2.5rem}.category-badge{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1rem;background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.2);border-radius:100px;font-size:.85rem;font-weight:600;color:var(--accent-red);margin-bottom:1.25rem}h1{font-size:2.25rem;font-weight:800;line-height:1.2;margin-bottom:1.25rem;letter-spacing:-.02em}.meta{display:flex;flex-wrap:wrap;gap:1.5rem;color:var(--text-muted);font-size:.9rem}.meta span{display:flex;align-items:center;gap:.5rem}.article-content{font-size:1.1rem;color:var(--text-secondary)}.article-content h2{font-size:1.5rem;font-weight:700;color:var(--text);margin-top:2.5rem;margin-bottom:1rem}.article-content h3{font-size:1.25rem;font-weight:600;color:var(--text);margin-top:2rem;margin-bottom:.75rem}.article-content p{margin-bottom:1.25rem}.article-content ul,.article-content ol{margin-bottom:1.25rem;padding-left:1.5rem}.article-content li{margin-bottom:.5rem}.highlight-box{background:linear-gradient(135deg,rgba(247,147,26,.1) 0%,rgba(247,147,26,.05) 100%);border:1px solid rgba(247,147,26,.2);border-radius:var(--radius-md);padding:1.5rem;margin:2rem 0}.highlight-box h4{color:var(--accent);font-size:1.1rem;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}.highlight-box-red{background:linear-gradient(135deg,rgba(239,68,68,.1) 0%,rgba(239,68,68,.05) 100%);border:1px solid rgba(239,68,68,.2);border-radius:var(--radius-md);padding:1.5rem;margin:2rem 0}.highlight-box-red h4{color:var(--accent-red);font-size:1.1rem;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}.comparison-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:2rem 0}.compare-card{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius-md);padding:1.5rem}.compare-card h4{font-size:1.1rem;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}.compare-card.danger h4{color:var(--accent-red)}.compare-card.warning h4{color:var(--accent)}.compare-card ul{list-style:none;padding:0}.compare-card li{padding:.4rem 0;font-size:.95rem;color:var(--text-secondary)}.compare-card li::before{margin-right:.5rem}.compare-card.danger li::before{content:'✗';color:var(--accent-red)}.compare-card.warning li::before{content:'⚠';color:var(--accent)}.code-block{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius-md);padding:1.25rem;margin:1.5rem 0;font-family:'Courier New',monospace;font-size:.9rem;color:var(--accent-green);overflow-x:auto}.quote-block{border-left:4px solid var(--accent-red);padding:1.25rem 1.5rem;margin:2rem 0;background:rgba(239,68,68,.05);border-radius:0 var(--radius-md) var(--radius-md) 0;font-style:italic;color:var(--text)}.tags{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}.tag{padding:.5rem 1rem;background:var(--card-bg);border:1px solid var(--border);border-radius:100px;font-size:.85rem;color:var(--text-secondary)}@media(max-width:768px){h1{font-size:1.75rem}.container{padding:1.5rem 1rem}.comparison-grid{grid-template-columns:1fr}}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../posts.html" class="back-link"><i class="fas fa-arrow-left"></i> Quay lại Blog</a>
+        <article>
+            <header class="article-header">
+                <span class="category-badge"><i class="fas fa-shield-alt"></i> Security</span>
+                <h1>xHunt & Frontrun Extension: "Open Source" Nhưng Theo Dõi Mọi Thứ Bạn Làm — Phân Tích Code Thực Tế</h1>
+                <div class="meta">
+                    <span><i class="far fa-calendar"></i> 23/03/2026</span>
+                    <span><i class="far fa-clock"></i> 12 phút đọc</span>
+                    <span><i class="far fa-folder"></i> Security</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+
+                <div class="highlight-box-red">
+                    <h4>🚨 Cảnh báo bảo mật</h4>
+                    <p style="margin-bottom:0">Hai Chrome extension phổ biến trong cộng đồng crypto — xHunt và Frontrun Pro — vừa bị phân tích code chi tiết. Kết quả: xHunt gửi IP, vị trí, ISP, fingerprint thiết bị, và mọi URL bạn truy cập trên Twitter về server riêng. Có sẵn wallet injection function chờ kích hoạt. "Open source" không có nghĩa là an toàn.</p>
+                </div>
+
+                <h2>Bối cảnh: Hai extension "ai cũng dùng"</h2>
+
+                <p>Nếu bạn hoạt động trong cộng đồng Crypto Twitter (CT), rất có thể bạn đang dùng — hoặc đã từng dùng — một trong hai extension này:</p>
+
+                <ul>
+                    <li><strong>xHunt:</strong> Extension theo dõi ví, phân tích on-chain activity ngay trên Twitter. Cực kỳ phổ biến trong cộng đồng Trung Quốc.</li>
+                    <li><strong>Frontrun Pro:</strong> Extension overlay data crypto trực tiếp trên các platform. Hook vào Twitter và 8+ sàn giao dịch.</li>
+                </ul>
+
+                <p>Cả hai đều claim "open source" trên GitHub. Và đó chính xác là lý do hàng trăm nghìn người tin tưởng cài đặt. Vấn đề là: <strong>open source ≠ đã được audit</strong>. Và khi một security researcher thực sự đọc code, những gì tìm được khiến người ta rùng mình.</p>
+
+                <h2>xHunt: "Chỉ lưu local" — Một lời nói dối trắng trợn</h2>
+
+                <p>README chính thức của xHunt tuyên bố: <em>"local-only data storage, no sensitive information uploads"</em>. Đây là <strong>lời nói dối 100%</strong>.</p>
+
+                <p>Khi phân tích actual code, researcher phát hiện:</p>
+
+                <h3>1. Gửi toàn bộ thông tin cá nhân về server</h3>
+                <p>Mỗi API call của xHunt đều gửi về server <code>kb.xhunt.ai</code>:</p>
+                <ul>
+                    <li><strong>IP thật</strong> của bạn (gọi 4 dịch vụ khác nhau: ipapi.co, ip-api.com, ipinfo.io, ipify.org)</li>
+                    <li><strong>Thành phố</strong> bạn đang ở</li>
+                    <li><strong>ISP</strong> (nhà mạng internet)</li>
+                    <li><strong>Device fingerprint</strong> (FingerprintJS — định danh thiết bị duy nhất)</li>
+                    <li><strong>Mọi URL</strong> bạn truy cập trên Twitter</li>
+                </ul>
+
+                <p>Nói cách khác: xHunt biết <strong>bạn là ai, ở đâu, dùng mạng gì, và đang xem gì trên Twitter</strong>. Mọi lúc.</p>
+
+                <h3>2. Code obfuscation có chủ đích</h3>
+                <p>xHunt dùng <strong>RC4 encryption</strong> và <strong>String.fromCharCode arrays</strong> để giấu tên các HTTP headers quan trọng như <code>authorization</code>, <code>x-user-id</code>, <code>x-window-location-href</code>.</p>
+
+                <div class="quote-block">
+                    <p>"Legitimate developers don't do that." — Nếu code của bạn sạch, tại sao phải giấu nó?</p>
+                </div>
+
+                <p>Đây không phải minification (nén code cho performance). Đây là <strong>cố tình che giấu behavior</strong> — một red flag cực lớn trong bất kỳ phần mềm nào, đặc biệt là extension có quyền truy cập browser.</p>
+
+                <h3>3. HTTP proxy không giới hạn</h3>
+                <p>Trong background script, xHunt có một <code>EXECUTE_REQUEST</code> handler hoạt động như một <strong>HTTP proxy hoàn toàn không giới hạn</strong>. Zero URL validation.</p>
+
+                <p>Điều này có nghĩa: bất kỳ code nào (kể cả code được push từ server) có thể <strong>ra lệnh cho browser của bạn fetch bất kỳ thứ gì</strong> — local network, cloud metadata, internal APIs. Browser của bạn trở thành proxy cho attacker.</p>
+
+                <h3>4. Wallet injection — "Quả bom hẹn giờ"</h3>
+
+                <div class="highlight-box-red">
+                    <h4>💀 Phát hiện nghiêm trọng nhất</h4>
+                    <p style="margin-bottom:0">Trong code có một <strong>empty wallet injection function</strong>, đã được wired up với quyền <code>world:MAIN</code>. Function này hiện tại <strong>trống</strong> — nhưng infrastructure đã sẵn sàng. Chỉ cần một lần push config từ server (qua Alibaba Nacos), function này có thể <strong>inject code vào bất kỳ trang web nào bạn truy cập</strong>, bao gồm các sàn giao dịch crypto.</p>
+                </div>
+
+                <h3>5. Remote config — Thay đổi mà bạn không biết</h3>
+                <p>xHunt dùng <strong>Alibaba Nacos</strong> cho remote configuration. Nghĩa là developer có thể thay đổi behavior của extension <strong>bất cứ lúc nào, trong vài phút, mà không cần qua Chrome Web Store review</strong>.</p>
+
+                <p>Hôm nay extension an toàn. Ngày mai? Không ai biết.</p>
+
+                <h2>Frontrun Pro: Ít nguy hiểm hơn — nhưng vẫn đáng lo</h2>
+
+                <div class="comparison-grid">
+                    <div class="compare-card danger">
+                        <h4>🔴 xHunt</h4>
+                        <ul>
+                            <li>Gửi IP, city, ISP, fingerprint về server</li>
+                            <li>Track mọi URL trên Twitter</li>
+                            <li>Code obfuscation (RC4 + fromCharCode)</li>
+                            <li>Unrestricted HTTP proxy</li>
+                            <li>Wallet injection function sẵn sàng</li>
+                            <li>Remote config (Alibaba Nacos)</li>
+                        </ul>
+                    </div>
+                    <div class="compare-card warning">
+                        <h4>🟡 Frontrun Pro</h4>
+                        <ul>
+                            <li>Hook 12 X GraphQL endpoints</li>
+                            <li>Monkey-patch fetch/XHR/WebSocket trên 8+ platform</li>
+                            <li>Gửi platform name tới Amplitude</li>
+                            <li>Login → gửi email + name tới Amplitude</li>
+                            <li>Error logs gửi device ID + user agent</li>
+                            <li>Remote feature flags (GrowthBook)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p>Frontrun hook vào <strong>12 Twitter GraphQL endpoints</strong>: feed, followers, following, searches, community posts — tất cả. Nó cũng monkey-patch <code>fetch</code>, <code>XHR</code>, và <code>WebSocket</code> trên hơn 8 crypto platforms.</p>
+
+                <p>Điểm khác biệt chính: data intercepted từ Twitter và crypto platforms <strong>chủ yếu ở lại local browser</strong> (cho overlay UI). Frontrun không gửi hết về server như xHunt.</p>
+
+                <p>Tuy nhiên, Frontrun vẫn:</p>
+                <ul>
+                    <li>Gửi <strong>tên platform</strong> bạn truy cập tới Amplitude (analytics)</li>
+                    <li>Khi bạn <strong>login</strong>: gửi email và tên bạn tới Amplitude</li>
+                    <li>Khi có <strong>error</strong>: upload logs kèm device ID và user agent</li>
+                    <li>Dùng <strong>GrowthBook</strong> cho remote feature flags — có thể thay đổi behavior server-side</li>
+                </ul>
+
+                <h2>Tại sao "Open Source" không đủ?</h2>
+
+                <p>Cộng đồng crypto có một niềm tin nguy hiểm: <strong>"open source = safe"</strong>. Thực tế:</p>
+
+                <ol>
+                    <li><strong>Ai thực sự đọc code?</strong> 99.9% users chỉ thấy "open source" trên README rồi tin. Không ai clone repo xuống audit cả.</li>
+                    <li><strong>Code trên GitHub ≠ code trong extension:</strong> Published extension có thể khác với repo. Chrome Web Store không verify sự khớp này.</li>
+                    <li><strong>Remote config bypass everything:</strong> Dù code trên GitHub sạch, remote config có thể push thay đổi bất kỳ lúc nào mà không cần update extension.</li>
+                    <li><strong>Permissions quá rộng:</strong> Chrome extensions có quyền cực lớn — đọc mọi tab, inject script, modify requests. Đó là design của Chrome, không phải bug.</li>
+                </ol>
+
+                <h2>Rủi ro thực tế cho crypto users</h2>
+
+                <p>Nếu bạn đang dùng xHunt, hãy hiểu rõ rủi ro:</p>
+
+                <ul>
+                    <li><strong>Deanonymization:</strong> IP + city + ISP + device fingerprint = bạn bị identify hoàn toàn. Kết hợp với Twitter activity = biết bạn quan tâm token nào, follow ai, xem gì.</li>
+                    <li><strong>Targeted attacks:</strong> Biết bạn dùng sàn nào + hold token gì = phishing email cực kỳ targeted.</li>
+                    <li><strong>Wallet drain (tiềm ẩn):</strong> Wallet injection function đã sẵn sàng. Một ngày đẹp trời, developer push config → extension inject malicious code vào trang sàn giao dịch → approve transaction → mất tiền.</li>
+                    <li><strong>Browser as proxy:</strong> Unrestricted HTTP proxy nghĩa là browser của bạn có thể bị dùng để tấn công local network hoặc scan infrastructure.</li>
+                </ul>
+
+                <h2>Cần làm gì ngay?</h2>
+
+                <div class="highlight-box">
+                    <h4>🛡️ Hành động khuyến nghị</h4>
+                    <ol style="margin-bottom:0">
+                        <li><strong>Gỡ xHunt NGAY</strong> — risk/reward không đáng. Functionality của nó có thể thay thế bằng các tool on-chain khác (Arkham, Nansen, DeBank).</li>
+                        <li><strong>Đánh giá lại Frontrun</strong> — ít nguy hiểm hơn nhưng vẫn track nhiều. Nếu không thực sự cần, gỡ bỏ.</li>
+                        <li><strong>Audit extensions định kỳ:</strong> Vào <code>chrome://extensions</code>, xem lại quyền của mỗi extension. Hỏi: "Extension này có cần quyền này không?"</li>
+                        <li><strong>Tách browser:</strong> Dùng browser riêng cho crypto (sàn, wallet) và browser khác cho browsing thường. Không cài extension không cần thiết trên crypto browser.</li>
+                        <li><strong>Hardware wallet:</strong> Dù browser bị compromise, hardware wallet vẫn yêu cầu physical confirmation. Đây là lớp bảo vệ cuối cùng.</li>
+                    </ol>
+                </div>
+
+                <h2>Kết luận: Trust nhưng verify — hay tốt hơn: đừng trust</h2>
+
+                <p>Bài học lớn nhất: <strong>convenience luôn có giá</strong>. xHunt cho bạn data on-chain tiện lợi trên Twitter. Đổi lại, nó biết mọi thứ về bạn và có khả năng drain wallet bất cứ lúc nào.</p>
+
+                <p>Trong crypto, mỗi extension bạn cài là một <strong>attack surface mới</strong>. Mỗi permission bạn grant là một <strong>cánh cửa mở</strong>. Và khi tiền của bạn nằm trong browser wallet, mỗi cánh cửa mở là một rủi ro.</p>
+
+                <p>Minimalism không chỉ là phong cách sống. Trong crypto security, nó là <strong>chiến lược sinh tồn</strong>.</p>
+
+                <div class="tags">
+                    <span class="tag">#Security</span>
+                    <span class="tag">#xHunt</span>
+                    <span class="tag">#Frontrun</span>
+                    <span class="tag">#ChromeExtension</span>
+                    <span class="tag">#CryptoSecurity</span>
+                    <span class="tag">#Privacy</span>
+                </div>
+
+            </div>
+        </article>
+    </div>
+</body>
+</html>

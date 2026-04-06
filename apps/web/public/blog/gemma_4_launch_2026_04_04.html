@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemma 4 Chính Thức Ra Mắt: 256K Context, Multimodal, Apache 2.0 | ESC Base</title>
+    <meta name="description" content="Google phát hành Gemma 4 với context window 256K, native function calling, multimodal text/image/video. 2 phiên bản 26B và 31B, license Apache 2.0.">
+    
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="ESC Base">
+    <meta property="og:title" content="Gemma 4 Chính Thức Ra Mắt: 256K Context, Multimodal, Apache 2.0">
+    <meta property="og:description" content="Google phát hành Gemma 4 với context window 256K, native function calling, multimodal text/image/video. 2 phiên bản 26B và 31B.">
+    <meta property="og:url" content="https://escbase.xyz/blog/gemma_4_launch_2026_04_04.html">
+    <meta property="og:image" content="https://escbase.xyz/page.jpg">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gemma 4 Chính Thức Ra Mắt: 256K Context, Multimodal, Apache 2.0">
+    <meta name="twitter:description" content="Google phát hành Gemma 4 với context window 256K, native function calling, multimodal.">
+    
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg: #000000;
+            --bg-elevated: #0a0a0a;
+            --bg-card: #111111;
+            --border: #1a1a1a;
+            --text: #ffffff;
+            --text-secondary: #888888;
+            --text-muted: #555555;
+            --accent: #f7931a;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+        header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 800;
+            font-size: 1.25rem;
+        }
+        .logo img { width: 36px; height: 36px; border-radius: 8px; }
+        .back-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .back-link:hover { color: var(--accent); }
+        
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem;
+        }
+        
+        .article-header {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .tag {
+            display: inline-block;
+            background: rgba(247, 147, 26, 0.1);
+            color: var(--accent);
+            padding: 0.4rem 1rem;
+            border-radius: 99px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(247, 147, 26, 0.2);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .meta {
+            display: flex;
+            gap: 1.5rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .content h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 2.5rem 0 1rem;
+            color: var(--text);
+        }
+        
+        .content h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 2rem 0 0.75rem;
+            color: var(--text);
+        }
+        
+        .content p {
+            margin-bottom: 1.25rem;
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+        }
+        
+        .content ul, .content ol {
+            margin: 1rem 0 1.5rem 1.5rem;
+            color: var(--text-secondary);
+        }
+        
+        .content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .content code {
+            background: var(--bg-card);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'Monaco', 'Consolas', monospace;
+            font-size: 0.9em;
+            color: var(--accent);
+        }
+        
+        .content pre {
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border: 1px solid var(--border);
+        }
+        
+        .content pre code {
+            background: none;
+            padding: 0;
+            color: var(--text);
+        }
+        
+        .content a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        
+        .content a:hover { text-decoration: underline; }
+        
+        .highlight-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .highlight-box h3 {
+            margin-top: 0;
+            color: var(--accent);
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 1.75rem; }
+            main { padding: 7rem 1.5rem 3rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html" class="logo">
+                <img src="../esclogo.png" alt="ESC Base">
+                <span>ESC Base</span>
+            </a>
+            <a href="../blog.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Quay lại Blog
+            </a>
+        </nav>
+    </header>
+    
+    <main>
+        <article class="article-header">
+            <span class="tag">AI & Công Nghệ</span>
+            <h1>Gemma 4 Chính Thức Ra Mắt: 256K Context, Multimodal, Apache 2.0</h1>
+            <div class="meta">
+                <span><i class="far fa-calendar"></i> Apr 04, 2026</span>
+                <span><i class="far fa-clock"></i> 8 min read</span>
+                <span><i class="fas fa-robot"></i> Google AI Studio</span>
+            </div>
+        </article>
+        
+        <div class="content">
+            <p>Google vừa chính thức phát hành <strong>Gemma 4</strong> — dòng model mã nguồn mở mới nhất, được xây dựng từ cùng nền tảng nghiên cứu với Gemini 3. Điểm đặc biệt: Gemma 4 mang đến khả năng reasoning nâng cao, function calling native, hiểu đa phương thức (multimodal), và context window lên đến 256K — tất cả trong một gói license Apache 2.0 cho phép sử dụng thương mại hoàn toàn.</p>
+            
+            <h2>2 Phiên Bản Gemma 4</h2>
+            <p>Hiện tại có 2 model có sẵn qua Gemini API:</p>
+            <ul>
+                <li><code>gemma-4-26b-a4b-it</code> — 26B parameters (MoE)</li>
+                <li><code>gemma-4-31b-it</code> — 31B parameters (Dense)</li>
+            </ul>
+            
+            <div class="highlight-box">
+                <h3><i class="fas fa-trophy"></i> Thứ Hạng Trên Bảng Xếp Hạng</h3>
+                <p>Model 31B dense hiện đứng <strong>#3</strong> trên bảng xếp hạng Arena AI (text), còn 26B MoE đứng <strong>#6</strong> — cạnh tranh với các model gấp 20 lần kích thước.</p>
+            </div>
+            
+            <h2>Tính Năng Nổi Bật</h2>
+            
+            <h3>1. Context Window 256K</h3>
+            <p>Cả hai model đều hỗ trợ context window lên đến 256K tokens, cho phép xử lý tài liệu dài, phân tích codebase lớn, hoặc giữ nguyên ngữ cảnh trong những cuộc trò chuyện dài.</p>
+            
+            <h3>2. Native Function Calling & Structured Output</h3>
+            <p>Không cần prompt engineering phức tạp — Gemma 4 hỗ trợ function calling và output dạng JSON có cấu trúc ngay từ model level. Điều này giúp xây dựng AI agents đáng tin cậy hơn nhiều.</p>
+            
+            <h3>3. Multimodal: Text, Image, Video</h3>
+            <p>Model có khả năng hiểu và xử lý đồng thợi text, hình ảnh, và video — mở ra khả năng ứng dụng đa dạng từ phân tích visual đến content generation.</p>
+            
+            <h3>4. Đa Ngôn Ngữ</h3>
+            <p>Được train với 140+ ngôn ngữ, trong đó có tiếng Việt — performance trên các ngôn ngữ không phải tiếng Anh được cải thiện đáng kể so với các thế hệ trước.</p>
+            
+            <h3>5. License Apache 2.0</h3>
+            <p>Toàn quyền sử dụng thương mại, không giới hạn. Có thể deploy trên cloud, on-premise, hoặc edge devices mà không lo vấn đề license.</p>
+            
+            <h2>Bắt Đầu Với Google AI Studio</h2>
+            <p>Cách nhanh nhất để thử Gemma 4 là qua <a href="https://aistudio.google.com/prompts/new_chat?model=gemma-4-31b-it" target="_blank">Google AI Studio</a>:</p>
+            <ol>
+                <li>Truy cập AI Studio</li>
+                <li>Chọn model từ dropdown (gemma-4-26b-a4b-it hoặc gemma-4-31b-it)</li>
+                <li>Nhập prompt và bắt đầu chat</li>
+            </ol>
+            <p>Không cần API key, không cần code — tất cả đều chạy trên browser. Bạn có thể test system instructions, điều chỉnh temperature, và thử multimodal inputs ngay lập tức.</p>
+            
+            <h2>Sử Dụng Với Gemini API</h2>
+            <p>Để integrate vào ứng dụng, cài đặt Python SDK:</p>
+            <pre><code>pip install google-genai</code></pre>
+            <p>Export API key và bắt đầu generate:</p>
+            <pre><code>export GEMINI_API_KEY="your-api-key"
+
+from google import genai
+
+client = genai.Client()
+response = client.models.generate_content(
+    model="gemma-4-26b-a4b-it",
+    contents="Giải thích DeFi bằng tiếng Việt đơn giản"
+)
+print(response.text)</code></pre>
+            
+            <h2>Tích Hợp Nâng Cao</h2>
+            
+            <h3>Function Calling</h3>
+            <p>Định nghĩa tools dưới dạng function declarations, model tự quyết định khi nào gọi:</p>
+            <pre><code>get_weather = {
+    "name": "get_weather",
+    "description": "Lấy thởi tiết hiện tại",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "location": {"type": "string"}
+        },
+        "required": ["location"]
+    }
+}</code></pre>
+            
+            <h3>Google Search Grounding</h3>
+            <p>Kết hợp với Google Search để responses dựa trên dữ liệu web real-time:</p>
+            <pre><code>response = client.models.generate_content(
+    model="gemma-4-26b-a4b-it",
+    contents="Giá Bitcoin hôm nay?",
+    config=types.GenerateContentConfig(
+        tools=[{"google_search":{}}]
+    )
+)</code></pre>
+            
+            <h2>Tài Nguyên & Tài Liệu</h2>
+            <ul>
+                <li><a href="https://aistudio.google.com/" target="_blank">Google AI Studio</a> — Thử nghiệm trực tiếp</li>
+                <li><a href="https://ai.google.dev/gemini-api/docs" target="_blank">Gemini API Docs</a> — Tài liệu API</li>
+                <li><a href="https://ai.google.dev/gemma/docs" target="_blank">Gemma Documentation</a> — Hướng dẫn chi tiết</li>
+                <li><a href="https://github.com/google-gemma/cookbook" target="_blank">Gemma Cookbooks</a> — Code examples</li>
+            </ul>
+            
+            <p>Gemma 4 đánh dấu bước tiến quan trọng cho cộng đồng open-source AI — khi mà performance competitive với các model closed-source lớn nhưng hoàn toàn free và open. Đây là cơ hội tốt cho developers Việt Nam xây dựng ứng dụng AI mà không lo chi phí license.</p>
+        </div>
+    </main>
+</body>
+</html>

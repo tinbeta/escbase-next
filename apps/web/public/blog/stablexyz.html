@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic Phân tích Chuyên sâu: Dự án Stable.xyz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .swot-card {
+            border-left-width: 4px;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -31px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #F95D6A; 
+            border: 4px solid #003F5C;
+        }
+    </style>
+</head>
+<body class="bg-[#003F5C] text-gray-200">
+<div style="max-width:800px;margin:0 auto;padding:1rem 1.5rem;"><a href="../blog.html" style="display:inline-flex;align-items:center;gap:0.5rem;color:#71717a;text-decoration:none;font-size:0.9rem;font-family:sans-serif;">← Quay lại Blog</a></div>
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center py-12">
+            <h1 class="text-4xl md:text-6xl font-black text-white leading-tight">Stable.xyz</h1>
+            <p class="text-xl md:text-2xl font-light text-[#FFA600] mt-2">Đường Ray Tài Chính Cho Kỷ Nguyên Stablecoin</p>
+            <p class="max-w-3xl mx-auto mt-4 text-gray-300">
+                Một blockchain Lớp 1 chuyên biệt, được xây dựng để tối ưu hóa mọi giao dịch USDT trong bối cảnh pháp lý mới.
+            </p>
+        </header>
+
+        <main class="space-y-16">
+            
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center text-center md:text-left">
+                <div class="bg-[#2F4B7C]/50 p-8 rounded-2xl shadow-2xl">
+                    <h2 class="text-3xl font-bold text-white mb-4">Vấn Đề & Giải Pháp</h2>
+                    <p class="text-lg font-semibold text-[#FFA600]">VẤN ĐỀ HIỆN TẠI</p>
+                    <p class="text-gray-300 mb-6">Phí gas biến động, giao dịch chậm, và trải nghiệm người dùng phức tạp đang là rào cản lớn cho việc áp dụng stablecoin rộng rãi.</p>
+                    <p class="text-lg font-semibold text-[#FFA600]">GIẢI PHÁP CỦA STABLE.XYZ</p>
+                    <p class="text-gray-300">Một blockchain Lớp 1 hiệu suất cao, biến việc chuyển tiền kỹ thuật số trở nên tức thời và đơn giản như gửi một tin nhắn văn bản.</p>
+                </div>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="bg-[#2F4B7C]/50 p-6 rounded-2xl shadow-xl text-center">
+                        <p class="text-5xl font-extrabold text-[#FFA600]">$28M</p>
+                        <p class="mt-2 text-gray-300">Vốn Vòng Hạt Giống</p>
+                    </div>
+                     <div class="bg-[#2F4B7C]/50 p-6 rounded-2xl shadow-xl text-center">
+                        <p class="text-5xl font-extrabold text-[#FFA600]">7/2025</p>
+                        <p class="mt-2 text-gray-300">Ra Mắt Sau Đạo Luật GENIUS</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2 class="text-3xl font-bold text-center mb-10 text-white">Các Tính Năng Công Nghệ Nổi Bật</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-[#2F4B7C]/50 p-6 rounded-2xl shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-5xl mb-4">💸</div>
+                        <h3 class="text-xl font-semibold text-[#FFA600]">USDT làm Phí Gas</h3>
+                        <p class="text-gray-300 mt-2">Không cần mua token riêng để trả phí. Giao dịch trực tiếp bằng USDT.</p>
+                    </div>
+                    <div class="bg-[#2F4B7C]/50 p-6 rounded-2xl shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-5xl mb-4">↔️</div>
+                        <h3 class="text-xl font-semibold text-[#FFA600]">Giao dịch P2P Miễn phí</h3>
+                        <p class="text-gray-300 mt-2">Chuyển USDT cho người khác mà không tốn một xu phí nào.</p>
+                    </div>
+                    <div class="bg-[#2F4B7C]/50 p-6 rounded-2xl shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-5xl mb-4">🌉</div>
+                        <h3 class="text-xl font-semibold text-[#FFA600]">Kiến trúc Không Cầu Nối</h3>
+                        <p class="text-gray-300 mt-2">Giảm thiểu rủi ro bảo mật và sự phức tạp khi tương tác chuỗi chéo.</p>
+                    </div>
+                    <div class="bg-[#2F4B7C]/50 p-6 rounded-2xl shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-5xl mb-4">🏢</div>
+                        <h3 class="text-xl font-semibold text-[#FFA600]">Ưu tiên Doanh nghiệp</h3>
+                        <p class="text-gray-300 mt-2">Cung cấp "Không gian khối được đảm bảo" cho các đối tác lớn.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="bg-[#2F4B7C]/50 p-8 rounded-2xl shadow-2xl">
+                <h2 class="text-3xl font-bold text-center mb-10 text-white">Liên Minh Chiến Lược: Những Tên Tuổi Lớn Chống Lưng</h2>
+                <div class="flex flex-wrap justify-center items-center gap-8 text-center">
+                     <div class="p-4">
+                        <p class="text-2xl font-bold text-[#FFA600]">Bitfinex & Tether</p>
+                        <p class="text-gray-300">Ươm tạo & Hậu thuẫn sâu sắc</p>
+                    </div>
+                     <div class="p-4">
+                        <p class="text-2xl font-bold text-[#FF7C43]">PayPal Ventures</p>
+                        <p class="text-gray-300">Đầu tư & Tích hợp chiến lược</p>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-2xl font-bold text-[#F95D6A]">Franklin Templeton</p>
+                        <p class="text-gray-300">"Con dấu" chấp thuận từ định chế</p>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-2xl font-bold text-[#D45087]">Hack VC</p>
+                        <p class="text-gray-300">Đồng dẫn dắt Vòng Hạt giống</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-4 text-white">Mô Hình Kinh Tế Độc Đáo</h2>
+                    <p class="text-gray-300 mb-6">Stable.xyz phá vỡ quy tắc truyền thống bằng cách không phát hành token gốc. Toàn bộ hệ sinh thái vận hành dựa trên chính USDT, tạo ra một trải nghiệm liền mạch và loại bỏ rào cản cho người dùng cuối.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start"><span class="text-2xl text-[#FFA600] mr-3">✓</span> <span class="text-gray-300"><strong>Không có Token Gốc:</strong> Không có $STBL, không lạm phát, không đầu cơ token nền tảng.</span></li>
+                        <li class="flex items-start"><span class="text-2xl text-[#FFA600] mr-3">✓</span> <span class="text-gray-300"><strong>Nguồn Doanh Thu:</strong> Phí từ hợp đồng thông minh (bằng USDT) và các dịch vụ cao cấp cho doanh nghiệp.</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-center mb-4 text-white">Rủi Ro Lớn Nhất: Sự Phụ Thuộc Vào Tether</h3>
+                    <p class="text-center text-gray-400 mb-4">Mô hình này tập trung gần như toàn bộ rủi ro hệ thống vào sự ổn định và vị thế thống trị của USDT.</p>
+                    <div class="chart-container h-64 md:h-80">
+                        <canvas id="riskDonutChart"></canvas>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                 <h2 class="text-3xl font-bold text-center mb-12 text-white">Lộ Trình Phát Triển 2025</h2>
+                 <div class="relative max-w-2xl mx-auto pl-8">
+                     <div class="absolute left-0 h-full w-0.5 bg-[#2F4B7C]"></div>
+                     <div class="space-y-12">
+                         <div class="relative timeline-item">
+                             <h3 class="text-2xl font-bold text-[#FFA600]">Giai Đoạn 1: Nền Tảng Cốt Lõi</h3>
+                             <p class="text-sm text-gray-400 mb-2">(Hiện tại)</p>
+                             <p class="text-gray-300">Triển khai USDT làm token gas và tối ưu hóa cơ chế đồng thuận để đạt được thời gian khối dưới một giây.</p>
+                         </div>
+                         <div class="relative timeline-item">
+                             <h3 class="text-2xl font-bold text-[#FF7C43]">Giai Đoạn 2: Tập Trung Doanh Nghiệp</h3>
+                             <p class="text-sm text-gray-400 mb-2">(Sắp tới)</p>
+                             <p class="text-gray-300">Giới thiệu công cụ tổng hợp giao dịch và triển khai "không gian khối được đảm bảo" cho hiệu suất ưu tiên.</p>
+                         </div>
+                         <div class="relative timeline-item">
+                              <h3 class="text-2xl font-bold text-[#F95D6A]">Giai Đoạn 3: Mở Rộng Cho Nhà Phát Triển</h3>
+                              <p class="text-sm text-gray-400 mb-2">(Cuối năm 2025)</p>
+                              <p class="text-gray-300">Nâng cấp tốc độ toàn mạng lưới, phát hành SDK và bộ công cụ hoàn chỉnh để xây dựng dApps và luồng thanh toán nhúng.</p>
+                         </div>
+                     </div>
+                 </div>
+            </section>
+
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                 <div>
+                     <h2 class="text-3xl font-bold mb-4 text-white">Bối Cảnh Cạnh Tranh</h2>
+                     <p class="text-gray-300">Stable.xyz không đơn độc. Thị trường L1 cực kỳ cạnh tranh, nhưng luận điểm "chuyên môn hóa" của Stable tạo ra một lợi thế độc đáo so với các nền tảng đa năng. Biểu đồ radar này so sánh Stable với các đối thủ chính trên các tiêu chí quan trọng.</p>
+                 </div>
+                 <div class="chart-container">
+                     <canvas id="competitorRadarChart"></canvas>
+                 </div>
+            </section>
+
+            <section>
+                <h2 class="text-3xl font-bold text-center mb-10 text-white">Phân Tích SWOT</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-[#2F4B7C]/50 p-6 rounded-lg swot-card border-[#FFA600]">
+                        <h3 class="text-2xl font-bold mb-3 text-[#FFA600]">Điểm Mạnh (Strengths)</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300">
+                            <li>Hậu thuẫn chiến lược cực mạnh (Tether, PayPal).</li>
+                            <li>Mô hình không token giúp loại bỏ rào cản người dùng.</li>
+                            <li>Kiến trúc công nghệ chuyên biệt cho hiệu suất thanh toán.</li>
+                            <li>Định vị tốt để tận dụng khung pháp lý mới tại Hoa Kỳ.</li>
+                        </ul>
+                    </div>
+                     <div class="bg-[#2F4B7C]/50 p-6 rounded-lg swot-card border-[#F95D6A]">
+                        <h3 class="text-2xl font-bold mb-3 text-[#F95D6A]">Điểm Yếu (Weaknesses)</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300">
+                            <li>Phụ thuộc gần như hoàn toàn vào một tài sản duy nhất (USDT).</li>
+                            <li>Hệ sinh thái và cộng đồng còn rất non trẻ.</li>
+                            <li>Mô hình kinh tế chưa được chứng minh về tính bền vững.</li>
+                            <li>Kiến trúc dPoS có xu hướng tập trung hơn.</li>
+                        </ul>
+                    </div>
+                     <div class="bg-[#2F4B7C]/50 p-6 rounded-lg swot-card border-[#FF7C43]">
+                        <h3 class="text-2xl font-bold mb-3 text-[#FF7C43]">Cơ Hội (Opportunities)</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300">
+                             <li>Thị trường thanh toán và chuyển tiền toàn cầu nghìn tỷ đô la.</li>
+                             <li>Nhu cầu ngày càng tăng từ các tổ chức tài chính.</li>
+                             <li>Trở thành lớp thanh toán mặc định cho hệ sinh thái Tether.</li>
+                             <li>Mở rộng hỗ trợ các stablecoin khác như PYUSD.</li>
+                        </ul>
+                    </div>
+                     <div class="bg-[#2F4B7C]/50 p-6 rounded-lg swot-card border-[#D45087]">
+                        <h3 class="text-2xl font-bold mb-3 text-[#D45087]">Thách Thức (Threats)</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300">
+                             <li>Rủi ro pháp lý hoặc hệ thống đối với Tether.</li>
+                             <li>Cạnh tranh gay gắt từ các L1, L2 khác.</li>
+                             <li>Sự trỗi dậy của tiền kỹ thuật số của ngân hàng trung ương (CBDC).</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="text-center bg-[#2F4B7C]/50 p-10 rounded-2xl shadow-2xl">
+                <h2 class="text-3xl font-bold mb-4 text-white">Kết Luận Cuối Cùng: Tiềm Năng & Rủi Ro</h2>
+                <p class="max-w-3xl mx-auto text-gray-300 mb-6">
+                    Stable.xyz không phải là một dự án công nghệ cách mạng, mà là một "ván cược" chiến lược vào hệ sinh thái và kinh doanh. Thành công của nó phụ thuộc vào sự thống trị của USDT và mối quan hệ cộng sinh với các đối tác lớn.
+                </p>
+                 <div class="bg-[#003F5C] inline-block p-4 rounded-lg">
+                     <p class="text-xl font-bold text-[#FFA600]">
+                         Một dự án có tỷ lệ Rủi ro / Lợi nhuận không đối xứng.
+                     </p>
+                 </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script>
+        const processChartLabels = (labels) => {
+            const maxLen = 16;
+            return labels.map(label => {
+                if (label.length <= maxLen) {
+                    return label;
+                }
+                const words = label.split(' ');
+                let currentLine = '';
+                const lines = [];
+                words.forEach(word => {
+                    if ((currentLine + ' ' + word).trim().length > maxLen) {
+                        lines.push(currentLine.trim());
+                        currentLine = word;
+                    } else {
+                        currentLine = (currentLine + ' ' + word).trim();
+                    }
+                });
+                if (currentLine) {
+                    lines.push(currentLine.trim());
+                }
+                return lines;
+            });
+        };
+        
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+              return label.join(' ');
+            } else {
+              return label;
+            }
+        };
+        
+        const brilliantBluesPalette = {
+            blueDark: '#003F5C',
+            blueMid: '#2F4B7C',
+            purpleDark: '#665191',
+            purpleMid: '#A05195',
+            pinkDark: '#D45087',
+            pinkBright: '#F95D6A',
+            orangeMid: '#FF7C43',
+            orangeBright: '#FFA600'
+        };
+
+        const riskDonutCtx = document.getElementById('riskDonutChart');
+        if (riskDonutCtx) {
+            new Chart(riskDonutCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Sự phụ thuộc vào Tether (USDT)', 'Các rủi ro khác'],
+                    datasets: [{
+                        label: 'Phân bổ Rủi ro',
+                        data: [85, 15],
+                        backgroundColor: [
+                            brilliantBluesPalette.pinkBright,
+                            brilliantBluesPalette.blueMid
+                        ],
+                        borderColor: brilliantBluesPalette.blueDark,
+                        borderWidth: 2,
+                        hoverOffset: 8
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: '#E5E7EB',
+                                font: {
+                                    size: 14
+                                }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                title: tooltipTitleCallback
+                            }
+                        }
+                    },
+                    cutout: '60%'
+                }
+            });
+        }
+        
+        const competitorRadarCtx = document.getElementById('competitorRadarChart');
+        if (competitorRadarCtx) {
+            const labels = ['Tương thích EVM', 'Phi tập trung', 'Trải nghiệm (Phí Gas)', 'Tốc độ Giao dịch', 'Tập trung Doanh nghiệp'];
+            new Chart(competitorRadarCtx, {
+                type: 'radar',
+                data: {
+                    labels: processChartLabels(labels),
+                    datasets: [
+                        {
+                            label: 'Stable.xyz',
+                            data: [5, 2, 5, 5, 5],
+                            backgroundColor: 'rgba(255, 166, 0, 0.2)',
+                            borderColor: brilliantBluesPalette.orangeBright,
+                            pointBackgroundColor: brilliantBluesPalette.orangeBright,
+                            pointBorderColor: '#fff',
+                            pointHoverBackgroundColor: '#fff',
+                            pointHoverBorderColor: brilliantBluesPalette.orangeBright
+                        },
+                        {
+                            label: 'Solana',
+                            data: [3, 4, 3, 5, 3],
+                            backgroundColor: 'rgba(212, 80, 135, 0.2)',
+                            borderColor: brilliantBluesPalette.pinkDark,
+                            pointBackgroundColor: brilliantBluesPalette.pinkDark,
+                            pointBorderColor: '#fff',
+                            pointHoverBackgroundColor: '#fff',
+                            pointHoverBorderColor: brilliantBluesPalette.pinkDark
+                        },
+                        {
+                            label: 'Plasma',
+                            data: [5, 2, 3, 5, 4],
+                            backgroundColor: 'rgba(102, 81, 145, 0.2)',
+                            borderColor: brilliantBluesPalette.purpleDark,
+                            pointBackgroundColor: brilliantBluesPalette.purpleDark,
+                            pointBorderColor: '#fff',
+                            pointHoverBackgroundColor: '#fff',
+                            pointHoverBorderColor: brilliantBluesPalette.purpleDark
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                             labels: {
+                                color: '#E5E7EB',
+                                font: {
+                                    size: 14
+                                }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                title: tooltipTitleCallback
+                            }
+                        }
+                    },
+                    scales: {
+                        r: {
+                            angleLines: { color: 'rgba(255, 255, 255, 0.2)' },
+                            grid: { color: 'rgba(255, 255, 255, 0.2)' },
+                            pointLabels: { 
+                                color: '#E5E7EB',
+                                font: {
+                                    size: 12
+                                }
+                            },
+                            ticks: {
+                                color: '#E5E7EB',
+                                backdropColor: 'transparent',
+                                stepSize: 1
+                            },
+                            suggestedMin: 0,
+                            suggestedMax: 5
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+    <div style="text-align: center; padding: 3rem 0;">
+        <a href="index.html" style="display: inline-block; background-color: #3498db; color: white; padding: 0.8rem 1.8rem; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: 2px solid transparent; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            Quay lại Trang Blog
+        </a>
+    </div>
+</body>
+</html>
+

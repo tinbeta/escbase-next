@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lộ Trình Kiếm Tiền Cho Freelancer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Calm Harmony (Stone, Teal, Dark Gray) -->
+    <!-- Application Structure Plan: The application is structured as a single-page, vertical scrolling journey through the 6-step freelancing process. This linear flow is the most intuitive way to present a step-by-step guide. A sticky navigation bar at the top visually represents the 6 steps, acting as both a progress indicator and a quick navigation tool. This design was chosen over a simple text document to make the process feel more like an interactive roadmap, encouraging users to engage with each step. Key interactions, like a search query generator and a dynamic email template, are embedded directly within their relevant steps to provide immediate, practical value and reinforce learning. -->
+    <!-- Visualization & Content Choices: Since the source report is procedural and not data-driven, traditional charts are not applicable. Instead, the focus is on interactive UI elements to enhance understanding and usability. The 6-step process is visualized as an interactive timeline/navigation bar (HTML/CSS/JS) to organize the content. For Step 4, a dynamic search query generator (HTML/JS) makes the advice actionable. For Step 5, an interactive email template (HTML/JS) turns a static example into a usable tool with a copy-to-clipboard feature. These choices directly support the goal of creating a practical, hands-on guide. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+        }
+        .step-indicator.active {
+            background-color: #0d9488;
+            color: white;
+            border-color: #0d9488;
+        }
+        .step-indicator.active .step-circle {
+            background-color: white;
+            color: #0d9488;
+        }
+        .step-connector {
+            flex-grow: 1;
+            height: 2px;
+            background-color: #cbd5e1;
+        }
+        .step-indicator.active ~ .step-connector,
+        .step-indicator.active ~ .step-indicator .step-circle {
+             /* This is a bit tricky, will handle state with JS */
+        }
+        .step-indicator {
+            transition: all 0.3s ease-in-out;
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800">
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-teal-700 mb-2">Lộ Trình Kiếm Tiền Cho Freelancer</h1>
+            <p class="text-lg text-stone-600 max-w-3xl mx-auto">Biến kỹ năng "Copy & Paste" thành một portfolio ấn tượng và những hợp đồng giá trị.</p>
+        </header>
+
+        <nav id="step-nav" class="sticky top-0 z-10 bg-stone-50/80 backdrop-blur-sm py-4 mb-12">
+            <div class="max-w-5xl mx-auto flex items-center justify-between">
+                <div class="flex items-center w-full">
+                    <div id="nav-step-1" class="step-indicator flex-shrink-0 cursor-pointer" onclick="scrollToStep(1)">
+                        <div class="step-circle w-8 h-8 rounded-full border-2 border-slate-300 flex items-center justify-center font-bold transition">1</div>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div id="nav-step-2" class="step-indicator flex-shrink-0 cursor-pointer" onclick="scrollToStep(2)">
+                        <div class="step-circle w-8 h-8 rounded-full border-2 border-slate-300 flex items-center justify-center font-bold transition">2</div>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div id="nav-step-3" class="step-indicator flex-shrink-0 cursor-pointer" onclick="scrollToStep(3)">
+                        <div class="step-circle w-8 h-8 rounded-full border-2 border-slate-300 flex items-center justify-center font-bold transition">3</div>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div id="nav-step-4" class="step-indicator flex-shrink-0 cursor-pointer" onclick="scrollToStep(4)">
+                        <div class="step-circle w-8 h-8 rounded-full border-2 border-slate-300 flex items-center justify-center font-bold transition">4</div>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div id="nav-step-5" class="step-indicator flex-shrink-0 cursor-pointer" onclick="scrollToStep(5)">
+                        <div class="step-circle w-8 h-8 rounded-full border-2 border-slate-300 flex items-center justify-center font-bold transition">5</div>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div id="nav-step-6" class="step-indicator flex-shrink-0 cursor-pointer" onclick="scrollToStep(6)">
+                        <div class="step-circle w-8 h-8 rounded-full border-2 border-slate-300 flex items-center justify-center font-bold transition">6</div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <main class="space-y-20">
+            
+            <section id="step-1" class="min-h-[60vh] flex items-center fade-in">
+                <div class="w-full">
+                    <h2 class="text-3xl font-bold text-teal-600 mb-6"><span class="bg-teal-100 text-teal-700 rounded-full w-12 h-12 inline-flex items-center justify-center mr-4">1</span>Chọn Thị Trường Ngách (Niche)</h2>
+                    <p class="text-lg text-stone-600 mb-8 max-w-3xl">Bước đầu tiên là chọn một lĩnh vực bạn yêu thích hoặc có kiến thức. Điều này sẽ giúp công việc trở nên thú vị và bạn sẽ có động lực để tạo ra nội dung chất lượng hơn.</p>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                        <div class="bg-white p-4 rounded-lg shadow-sm border border-stone-200 text-center cursor-pointer hover:shadow-md hover:border-teal-500 transition">
+                            <span class="text-3xl">🏃</span>
+                            <p class="font-semibold mt-2">Sức khỏe & Thể thao</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm border border-stone-200 text-center cursor-pointer hover:shadow-md hover:border-teal-500 transition">
+                             <span class="text-3xl">💻</span>
+                            <p class="font-semibold mt-2">Công nghệ</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm border border-stone-200 text-center cursor-pointer hover:shadow-md hover:border-teal-500 transition">
+                             <span class="text-3xl">💰</span>
+                            <p class="font-semibold mt-2">Tài chính Cá nhân</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm border border-stone-200 text-center cursor-pointer hover:shadow-md hover:border-teal-500 transition">
+                             <span class="text-3xl">📈</span>
+                            <p class="font-semibold mt-2">Marketing</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm border border-stone-200 text-center cursor-pointer hover:shadow-md hover:border-teal-500 transition">
+                             <span class="text-3xl">🌱</span>
+                            <p class="font-semibold mt-2">Phát triển Bản thân</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="step-2" class="min-h-[60vh] flex items-center fade-in">
+                <div class="w-full">
+                    <h2 class="text-3xl font-bold text-teal-600 mb-6"><span class="bg-teal-100 text-teal-700 rounded-full w-12 h-12 inline-flex items-center justify-center mr-4">2</span>Tìm Nội Dung "Ăn Khách"</h2>
+                    <p class="text-lg text-stone-600 mb-8 max-w-3xl">Không cần phải sáng tạo từ đầu. Hãy tìm những bài viết đã thành công và được nhiều người quan tâm trong lĩnh vực của bạn để học hỏi cấu trúc và ý tưởng.</p>
+                    <div class="space-y-4">
+                        <a href="https://medium.com/" target="_blank" class="block bg-white p-6 rounded-lg shadow-sm border border-stone-200 hover:shadow-md hover:border-teal-500 transition">
+                            <h3 class="font-bold text-xl mb-1">Medium</h3>
+                            <p class="text-stone-600">Tìm các bài viết có nhiều "vỗ tay" (claps) để biết chủ đề nào đang được cộng đồng quan tâm.</p>
+                        </a>
+                        <a href="https://news.google.com/" target="_blank" class="block bg-white p-6 rounded-lg shadow-sm border border-stone-200 hover:shadow-md hover:border-teal-500 transition">
+                            <h3 class="font-bold text-xl mb-1">Google Tin tức</h3>
+                            <p class="text-stone-600">Xem các chủ đề đang thịnh hành và được nhiều người đọc nhất trong ngày.</p>
+                        </a>
+                        <a href="https://buzzsumo.com/" target="_blank" class="block bg-white p-6 rounded-lg shadow-sm border border-stone-200 hover:shadow-md hover:border-teal-500 transition">
+                            <h3 class="font-bold text-xl mb-1">BuzzSumo</h3>
+                            <p class="text-stone-600">Công cụ chuyên nghiệp để phân tích nội dung nào được chia sẻ nhiều nhất trên mạng xã hội.</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="step-3" class="min-h-[60vh] flex items-center fade-in">
+                <div class="w-full">
+                    <h2 class="text-3xl font-bold text-teal-600 mb-6"><span class="bg-teal-100 text-teal-700 rounded-full w-12 h-12 inline-flex items-center justify-center mr-4">3</span>Sao Chép và Viết Lại</h2>
+                    <p class="text-lg text-stone-600 mb-8 max-w-3xl">Đây là bước cốt lõi. Mục tiêu là biến một bài viết có sẵn thành tác phẩm của riêng bạn, độc đáo và không bị coi là đạo văn.</p>
+                    <div class="bg-white p-6 rounded-lg shadow-md border border-stone-200">
+                        <div class="grid md:grid-cols-3 gap-6 text-center">
+                            <div>
+                                <div class="text-5xl mb-2">①</div>
+                                <h3 class="font-bold text-lg mb-2">Sao chép (Copy)</h3>
+                                <p class="text-sm text-stone-600">Lấy nội dung gốc làm nền tảng.</p>
+                            </div>
+                            <div class="flex items-center justify-center text-3xl text-stone-300 font-light">→</div>
+                            <div>
+                                <div class="text-5xl mb-2">②</div>
+                                <h3 class="font-bold text-lg mb-2">Viết lại (Rewrite)</h3>
+                                <p class="text-sm text-stone-600">Sử dụng công cụ như Quillbot để diễn giải lại câu chữ.</p>
+                            </div>
+                             <div class="hidden md:flex items-center justify-center text-3xl text-stone-300 font-light">→</div>
+                             <div class="md:hidden col-span-3 my-4 h-px bg-stone-200"></div>
+                            <div class="md:col-start-3">
+                                <div class="text-5xl mb-2">③</div>
+                                <h3 class="font-bold text-lg mb-2 text-teal-600">Biên tập lại</h3>
+                                <p class="text-sm text-stone-600">Đây là bước quan trọng nhất! Tự mình chỉnh sửa để bài viết mạch lạc, mang văn phong riêng và đảm bảo chất lượng.</p>
+                            </div>
+                        </div>
+                        <div class="mt-6 pt-6 border-t border-stone-200">
+                             <p class="text-center font-semibold text-stone-700">⚠️ <span class="font-bold">Lưu ý quan trọng:</span> Luôn luôn biên tập kỹ càng. Việc sao chép nguyên bản là đạo văn và sẽ hủy hoại uy tín của bạn.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="step-4" class="min-h-[60vh] flex items-center fade-in">
+                <div class="w-full">
+                    <h2 class="text-3xl font-bold text-teal-600 mb-6"><span class="bg-teal-100 text-teal-700 rounded-full w-12 h-12 inline-flex items-center justify-center mr-4">4</span>Tìm "Nhà" Cho Bài Viết</h2>
+                    <p class="text-lg text-stone-600 mb-8 max-w-3xl">Bài viết của bạn cần được xuất bản để xây dựng portfolio. Hãy tìm các trang web hoặc blog trong lĩnh vực của bạn chấp nhận bài viết từ khách (guest post).</p>
+                    <div class="bg-white p-6 rounded-lg shadow-md border border-stone-200">
+                        <h3 class="font-bold text-xl mb-4">Tạo Cụm Từ Tìm Kiếm Hiệu Quả</h3>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <input id="niche-input" type="text" placeholder="Nhập thị trường ngách của bạn..." class="w-full px-4 py-2 border border-stone-300 rounded-md focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition">
+                            <button onclick="generateSearchQueries()" class="bg-teal-600 text-white font-bold px-6 py-2 rounded-md hover:bg-teal-700 transition whitespace-nowrap">Tạo Link Tìm Kiếm</button>
+                        </div>
+                        <div id="search-results" class="mt-6 space-y-3 hidden"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="step-5" class="min-h-[60vh] flex items-center fade-in">
+                <div class="w-full">
+                    <h2 class="text-3xl font-bold text-teal-600 mb-6"><span class="bg-teal-100 text-teal-700 rounded-full w-12 h-12 inline-flex items-center justify-center mr-4">5</span>Gửi Bài và Chào Hàng</h2>
+                    <p class="text-lg text-stone-600 mb-8 max-w-3xl">Hãy liên hệ với biên tập viên một cách chuyên nghiệp. Mục tiêu ban đầu là được đăng bài miễn phí để đổi lấy uy tín và một liên kết trong portfolio.</p>
+                    <div class="bg-white rounded-lg shadow-md border border-stone-200 overflow-hidden">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-4">Soạn Email Chào Hàng</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label for="your-name" class="block text-sm font-medium text-stone-700">Tên của bạn</label>
+                                    <input type="text" id="your-name" class="mt-1 w-full px-3 py-2 border border-stone-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500" oninput="updateEmailTemplate()">
+                                </div>
+                                <div>
+                                    <label for="article-title" class="block text-sm font-medium text-stone-700">Tiêu đề bài viết</label>
+                                    <input type="text" id="article-title" class="mt-1 w-full px-3 py-2 border border-stone-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500" oninput="updateEmailTemplate()">
+                                </div>
+                                 <div>
+                                    <label for="editor-name" class="block text-sm font-medium text-stone-700">Tên biên tập viên</label>
+                                    <input type="text" id="editor-name" class="mt-1 w-full px-3 py-2 border border-stone-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500" oninput="updateEmailTemplate()">
+                                </div>
+                                 <div>
+                                    <label for="your-niche" class="block text-sm font-medium text-stone-700">Thị trường ngách</label>
+                                    <input type="text" id="your-niche" class="mt-1 w-full px-3 py-2 border border-stone-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500" oninput="updateEmailTemplate()">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-stone-100 p-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <h4 class="font-semibold text-stone-800">Bản nháp Email</h4>
+                                <button id="copy-btn" onclick="copyEmail()" class="bg-stone-200 text-stone-700 font-semibold px-4 py-1.5 rounded-md hover:bg-stone-300 transition text-sm">Sao chép</button>
+                            </div>
+                            <div id="email-template" class="text-sm text-stone-700 bg-white p-4 rounded-md border border-stone-200">
+                                <p class="mb-4"><strong>Tiêu đề:</strong> Gửi bài viết đóng góp: <span id="email-title" class="font-bold text-teal-700">[Tiêu đề bài viết của bạn]</span></p>
+                                <p>Chào <span id="email-editor-name" class="font-bold">[Tên biên tập viên]</span>,</p><br>
+                                <p>Tôi là <span id="email-your-name" class="font-bold">[Tên của bạn]</span>, một người viết bài chuyên về lĩnh vực <span id="email-your-niche" class="font-bold">[thị trường ngách của bạn]</span>.</p><br>
+                                <p>Tôi rất thích các nội dung trên trang của bạn. Tôi vừa hoàn thành một bài viết có tiêu đề "<span id="email-title-2" class="font-bold text-teal-700">[Tiêu đề bài viết của bạn]</span>" và tôi nghĩ rằng nó sẽ rất phù hợp với độc giả của trang.</p><br>
+                                <p>Tôi rất sẵn lòng đăng bài viết này miễn phí trên trang của bạn. Đổi lại, tôi chỉ xin phép được ghi tên tác giả và một liên kết trỏ về hồ sơ của tôi.</p><br>
+                                <p>Cảm ơn bạn đã dành thời gian.</p><br>
+                                <p>Trân trọng,<br><span id="email-your-name-2" class="font-bold">[Tên của bạn]</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="step-6" class="min-h-[60vh] flex items-center fade-in">
+                <div class="w-full">
+                    <h2 class="text-3xl font-bold text-teal-600 mb-6"><span class="bg-teal-100 text-teal-700 rounded-full w-12 h-12 inline-flex items-center justify-center mr-4">6</span>Từ Miễn Phí Đến Trả Phí</h2>
+                    <p class="text-lg text-stone-600 mb-8 max-w-3xl">Khi đã có 3-5 bài viết được đăng, bạn đã có một portfolio chất lượng. Đây là lúc sử dụng nó làm đòn bẩy để tìm kiếm những khách hàng trả phí thực sự.</p>
+                    <div class="bg-white p-6 rounded-lg shadow-md border border-stone-200">
+                        <h3 class="font-bold text-xl mb-4">Nơi tìm kiếm khách hàng</h3>
+                        <p class="text-stone-600 mb-6">Gửi portfolio của bạn (link các bài viết đã đăng) khi ứng tuyển trên các nền tảng này để chứng minh năng lực.</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <a href="https://www.upwork.com/" target="_blank" class="block p-4 bg-teal-50 border border-teal-200 rounded-lg text-center font-bold text-teal-800 hover:bg-teal-100 transition">Upwork</a>
+                            <a href="https://www.fiverr.com/" target="_blank" class="block p-4 bg-teal-50 border border-teal-200 rounded-lg text-center font-bold text-teal-800 hover:bg-teal-100 transition">Fiverr</a>
+                            <a href="https://www.facebook.com/groups/" target="_blank" class="block p-4 bg-teal-50 border border-teal-200 rounded-lg text-center font-bold text-teal-800 hover:bg-teal-100 transition">Nhóm Facebook</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-20 pt-8 border-t border-stone-200">
+            <p class="text-stone-500">Được thiết kế để biến ý tưởng thành hành động.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        function scrollToStep(step) {
+            document.getElementById(`step-${step}`).scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        }
+
+        function updateNavOnScroll() {
+            const sections = document.querySelectorAll('main section');
+            const navSteps = document.querySelectorAll('#step-nav .step-indicator');
+            const navConnectors = document.querySelectorAll('#step-nav .step-connector');
+
+            let currentStep = 0;
+
+            sections.forEach((section, index) => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - window.innerHeight / 2) {
+                    currentStep = index + 1;
+                }
+            });
+
+            navSteps.forEach((navStep, index) => {
+                const circle = navStep.querySelector('.step-circle');
+                if (index < currentStep) {
+                    navStep.classList.add('active');
+                    circle.classList.add('bg-teal-600', 'text-white', 'border-teal-600');
+                    circle.classList.remove('border-slate-300');
+                    if (navConnectors[index]) {
+                        navConnectors[index].classList.add('bg-teal-600');
+                        navConnectors[index].classList.remove('bg-slate-300');
+                    }
+                } else {
+                    navStep.classList.remove('active');
+                    circle.classList.remove('bg-teal-600', 'text-white', 'border-teal-600');
+                    circle.classList.add('border-slate-300');
+                    if (navConnectors[index]) {
+                        navConnectors[index].classList.remove('bg-teal-600');
+                        navConnectors[index].classList.add('bg-slate-300');
+                    }
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateNavOnScroll);
+        document.addEventListener('DOMContentLoaded', updateNavOnScroll);
+
+        function generateSearchQueries() {
+            const niche = document.getElementById('niche-input').value.trim();
+            const resultsDiv = document.getElementById('search-results');
+            if (!niche) {
+                resultsDiv.innerHTML = '<p class="text-red-500">Vui lòng nhập thị trường ngách của bạn.</p>';
+                resultsDiv.classList.remove('hidden');
+                return;
+            }
+
+            const queries = [
+                `"${niche}" + "write for us"`,
+                `"${niche}" + "guest post"`,
+                `"${niche}" + "đóng góp bài viết"`
+            ];
+
+            let html = '<h4 class="font-semibold text-stone-700 mb-2">Nhấn để tìm kiếm trên Google:</h4>';
+            queries.forEach(query => {
+                const url = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+                html += `<a href="${url}" target="_blank" class="block bg-stone-50 p-3 rounded-md hover:bg-stone-100 transition border border-stone-200 text-teal-700 font-medium">
+                    ${query} <span class="text-stone-400 ml-2">→</span>
+                </a>`;
+            });
+
+            resultsDiv.innerHTML = html;
+            resultsDiv.classList.remove('hidden');
+        }
+
+        function updateEmailTemplate() {
+            const yourName = document.getElementById('your-name').value || '[Tên của bạn]';
+            const articleTitle = document.getElementById('article-title').value || '[Tiêu đề bài viết của bạn]';
+            const editorName = document.getElementById('editor-name').value || '[Tên biên tập viên]';
+            const yourNiche = document.getElementById('your-niche').value || '[thị trường ngách của bạn]';
+
+            document.getElementById('email-title').innerText = articleTitle;
+            document.getElementById('email-title-2').innerText = articleTitle;
+            document.getElementById('email-editor-name').innerText = editorName;
+            document.getElementById('email-your-name').innerText = yourName;
+            document.getElementById('email-your-name-2').innerText = yourName;
+            document.getElementById('email-your-niche').innerText = yourNiche;
+        }
+        
+        function copyEmail() {
+            const emailContent = document.getElementById('email-template').innerText;
+            const copyBtn = document.getElementById('copy-btn');
+            
+            // Using a temporary textarea element for robust copying
+            const textarea = document.createElement('textarea');
+            textarea.value = emailContent;
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                copyBtn.innerText = 'Đã sao chép!';
+                setTimeout(() => {
+                    copyBtn.innerText = 'Sao chép';
+                }, 2000);
+            } catch (err) {
+                copyBtn.innerText = 'Lỗi!';
+                console.error('Failed to copy text: ', err);
+            }
+            document.body.removeChild(textarea);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            updateEmailTemplate();
+            const sections = document.querySelectorAll('main section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+
+    </script>
+    <div style="text-align: center; padding: 3rem 0;">
+        <a href="index.html" style="display: inline-block; background-color: #3498db; color: white; padding: 0.8rem 1.8rem; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: 2px solid transparent; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            Quay lại Trang Blog
+        </a>
+    </div>
+</body>
+</html>

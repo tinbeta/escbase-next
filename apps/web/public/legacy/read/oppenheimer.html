@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đồ họa thông tin: Khoa học trong phim Oppenheimer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <!--
+    Narrative Plan:
+    1.  The Quantum Spark: Introduce the new physics.
+    2.  The Fission Breakthrough: The core discovery.
+    3.  Two Paths to Destruction: Compare Gun vs. Implosion designs.
+    4.  The Symphony of Implosion: Detail the implosion technical challenges.
+    5.  The Trinity Test: Visualize the test and its immediate effects.
+    6.  An Unstoppable Reaction: The legacy of the project.
+
+    Visualization Choices (NO SVG, NO MERMAID JS):
+    -   Section 1: Structured HTML/CSS Timeline. Goal: Organize. Justification: Effective for temporal progression without SVG.
+    -   Section 2: Structured HTML/CSS Flowchart. Goal: Inform. Justification: Clearly illustrates the fission process using basic web elements.
+    -   Section 3: Chart.js Radar Chart. Goal: Compare. Justification: Excellent for multi-attribute comparison on a Canvas element.
+    -   Section 4: Structured HTML/CSS Flowchart. Goal: Organize. Justification: Required method for complex process diagrams, using Tailwind for styling.
+    -   Section 5: Chart.js Donut Chart & Bar Chart. Goal: Inform/Compare. Justification: Donut charts show proportions well; Bar charts are ideal for direct value comparison. Both use Canvas.
+    -   Section 6: Chart.js Line Chart. Goal: Change. Justification: Standard for showing trends over time, rendered on Canvas.
+    
+    Color Palette Selection: Vibrant & Fiery (#FF5733, #FFC300, #C70039, #900C3F, #581845).
+    -->
+    <style>
+        body {
+            font-family: 'Roboto Condensed', sans-serif;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .card {
+            background-color: #2c2c2c;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+            border: 1px solid #444;
+        }
+        .number-stat {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1;
+            color: #FF5733;
+        }
+        .flow-arrow {
+            width: 100%;
+            text-align: center;
+            font-size: 2rem;
+            color: #FFC300;
+            margin: 0.5rem 0;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -1.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1.25rem;
+            height: 1.25rem;
+            border-radius: 50%;
+            background-color: #FFC300;
+            border: 3px solid #1a1a1a;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-2">GIẢI MÃ KHOA HỌC TRONG "OPPENHEIMER"</h1>
+            <p class="text-lg text-gray-400">Từ Lý Thuyết Lượng Tử đến Vụ Thử Trinity</p>
+        </header>
+
+        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <section class="md:col-span-2 lg:col-span-3 card">
+                <h2 class="text-2xl font-bold mb-4 text-center text-[#FFC300]">Phần I: Tia Lửa Lượng Tử</h2>
+                <p class="text-center text-gray-300 mb-8">Trước khi có quả bom, đã có một cuộc cách mạng trong tư duy. Đầu thế kỷ 20, các nhà vật lý đã lật đổ các quy luật cổ điển, mở ra một thế giới lượng tử kỳ lạ nhưng đầy tiềm năng. Oppenheimer là một trong những người tiên phong mang "nền vật lý mới" này từ châu Âu đến Hoa Kỳ, gieo mầm cho thời đại nguyên tử.</p>
+                <div class="relative pl-8 border-l-4 border-gray-600">
+                    <div class="timeline-item relative mb-8 card p-4">
+                        <h3 class="font-bold text-[#FF5733]">Lưỡng tính Sóng-Hạt (Thập niên 1920)</h3>
+                        <p>Các hạt như electron có thể hành xử vừa như một hạt vật chất, vừa như một sóng năng lượng. Oppenheimer mô tả nó là "nghịch lý, nhưng nó hoạt động." Nền tảng của thế giới lượng tử. <span class="font-mono text-xl text-[#FFC300]">Ψ</span></p>
+                    </div>
+                    <div class="timeline-item relative mb-8 card p-4">
+                        <h3 class="font-bold text-[#FF5733]">Phép gần đúng Born-Oppenheimer (1927)</h3>
+                        <p>Một đóng góp quan trọng của Oppenheimer, cho phép đơn giản hóa các phương trình phân tử phức tạp bằng cách coi các hạt nhân nặng đứng yên so với các electron nhẹ, tạo nền tảng cho hóa học lượng tử hiện đại.</p>
+                    </div>
+                    <div class="timeline-item relative card p-4">
+                        <h3 class="font-bold text-[#FF5733]">Khám phá Phân hạch (1938)</h3>
+                        <p>Otto Hahn và Fritz Strassmann phát hiện ra rằng việc bắn neutron vào hạt nhân uranium sẽ làm nó vỡ ra, giải phóng một lượng năng lượng khổng lồ. Bước ngoặt đưa thế giới vào con đường chế tạo bom.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="md:col-span-1 lg:col-span-1 card text-center">
+                <h2 class="text-2xl font-bold mb-4 text-[#FFC300]">E = mc²</h2>
+                <p class="mb-4">Phương trình của Einstein không phải là công thức chế tạo bom, mà là nguyên lý giải thích tại sao nó lại mạnh mẽ đến vậy. Nó cho thấy một lượng nhỏ khối lượng (m) bị mất trong quá trình phân hạch có thể chuyển đổi thành một lượng năng lượng (E) khổng lồ.</p>
+                <div class="number-stat">200</div>
+                <p class="text-gray-400 mt-2">Triệu Electron-Volt (MeV) năng lượng được giải phóng từ MỘT hạt nhân Uranium-235 bị phân hạch.</p>
+            </section>
+            
+            <section class="md:col-span-1 lg:col-span-2 card">
+                <h2 class="text-2xl font-bold mb-4 text-center text-[#FFC300]">Phản ứng Dây chuyền</h2>
+                <p class="text-center text-gray-300 mb-6">Chìa khóa để giải phóng năng lượng không chỉ là phân hạch một nguyên tử, mà là tạo ra một phản ứng tự duy trì. Đây là trái tim của cả lò phản ứng và vũ khí hạt nhân.</p>
+                <div class="flex flex-col items-center">
+                    <div class="card w-full text-center p-4">
+                        <p><span class="text-2xl text-[#FF5733]"> neutron</span> + U-235</p>
+                    </div>
+                    <div class="flow-arrow">⬇️</div>
+                    <div class="card w-full text-center p-4 bg-[#444]">
+                        <p>Phân hạch tạo ra Sản phẩm + Năng lượng + <span class="text-2xl text-[#FF5733]">2-3 neutrons mới</span></p>
+                    </div>
+                     <div class="flow-arrow">⬇️</div>
+                    <div class="card w-full text-center p-4">
+                        <p>Các neutrons mới gây ra các vụ phân hạch tiếp theo, tăng theo cấp số nhân.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="md:col-span-2 lg:col-span-3 card">
+                <h2 class="text-2xl font-bold mb-4 text-center text-[#FFC300]">Phần II: Hai Con Đường Đến Ngày Tận Thế</h2>
+                <p class="text-center text-gray-300 mb-8">Dự án Manhattan theo đuổi hai thiết kế bom song song do những bất ổn khoa học và áp lực thời gian. Sự lựa chọn vật liệu phân hạch—Uranium-235 hay Plutonium-239—đã dẫn đến hai cơ chế hoàn toàn khác nhau.</p>
+                <div class="chart-container">
+                    <canvas id="designComparisonChart"></canvas>
+                </div>
+                <p class="text-center text-gray-400 mt-4">Biểu đồ radar này so sánh hai thiết kế dựa trên các thuộc tính chính. Thiết kế "Súng" (Little Boy) đơn giản và đáng tin cậy hơn nhưng kém hiệu quả. Thiết kế "Nổ vào trong" (Fat Man) cực kỳ phức tạp về mặt kỹ thuật nhưng là con đường duy nhất cho plutonium và mạnh hơn.</p>
+            </section>
+
+            <section class="md:col-span-2 lg:col-span-3 card">
+                 <h2 class="text-2xl font-bold mb-4 text-center text-[#FFC300]">Bản Giao hưởng của Sự Nổ Vào Trong</h2>
+                 <p class="text-center text-gray-300 mb-8">Vấn đề nhiễm Plutonium-240 khiến thiết kế súng trở nên bất khả thi, buộc Los Alamos phải tập trung vào thách thức nổ vào trong. Điều này đòi hỏi một mức độ chính xác kỹ thuật chưa từng có.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
+                    <div class="card flex flex-col items-center">
+                        <div class="number-stat text-sm mb-2 text-[#FFC300]">1</div>
+                        <h3 class="font-bold mb-2">32 Kíp Nổ</h3>
+                        <p class="text-xs">Phải được kích nổ đồng bộ trong vòng vài phần triệu giây.</p>
+                    </div>
+                    <div class="hidden lg:flex items-center justify-center text-2xl text-[#FFC300]">→</div>
+                     <div class="sm:hidden flow-arrow">⬇️</div>
+                    <div class="card flex flex-col items-center">
+                        <div class="number-stat text-sm mb-2 text-[#FFC300]">2</div>
+                        <h3 class="font-bold mb-2">Thấu Kính Nổ</h3>
+                        <p class="text-xs">Các khối thuốc nổ được định hình chính xác để tạo ra sóng xung kích hình cầu hoàn hảo.</p>
+                    </div>
+                    <div class="hidden lg:flex items-center justify-center text-2xl text-[#FFC300]">→</div>
+                    <div class="sm:hidden flow-arrow">⬇️</div>
+                    <div class="card flex flex-col items-center">
+                         <div class="number-stat text-sm mb-2 text-[#FFC300]">3</div>
+                        <h3 class="font-bold mb-2">Nén Lõi Plutonium</h3>
+                        <p class="text-xs">Sóng xung kích nén lõi plutonium dưới tới hạn đến mật độ siêu tới hạn.</p>
+                    </div>
+                     <div class="hidden lg:flex items-center justify-center text-2xl text-[#FFC300]">→</div>
+                      <div class="sm:hidden flow-arrow">⬇️</div>
+                    <div class="card flex flex-col items-center">
+                         <div class="number-stat text-sm mb-2 text-[#FFC300]">4</div>
+                        <h3 class="font-bold mb-2">Bộ Khởi tạo "Urchin"</h3>
+                        <p class="text-xs">Giải phóng một luồng neutron đúng lúc để bắt đầu phản ứng dây chuyền.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="md:col-span-1 card">
+                <h2 class="text-2xl font-bold mb-4 text-center text-[#FFC300]">Phần III: Vụ Thử Trinity</h2>
+                <p class="text-center text-gray-300 mb-6">Vào lúc 5:29 sáng ngày 16 tháng 7 năm 1945, "The Gadget" đã được kích nổ, mở ra thời đại hạt nhân. Bộ phim kịch tính hóa mối lo ngại rằng vụ nổ có thể đốt cháy bầu khí quyển.</p>
+                 <div class="chart-container" style="height:250px; max-height:300px;">
+                    <canvas id="riskChart"></canvas>
+                </div>
+                 <p class="text-center text-gray-400 mt-4 text-xs">Các nhà khoa học tin rằng rủi ro đốt cháy bầu khí quyển thực sự là bằng không, nhưng sự không chắc chắn của việc làm một điều chưa từng có đã tạo ra sức nặng tâm lý to lớn.</p>
+            </section>
+
+            <section class="md:col-span-1 card">
+                 <h2 class="text-2xl font-bold mb-4 text-center text-[#FFC300]">Ánh Sáng và Âm Thanh</h2>
+                 <p class="text-center text-gray-300 mb-6">Vật lý cơ bản quyết định trải nghiệm kinh hoàng của vụ nổ: ánh sáng đến gần như ngay lập tức, trong khi tiếng gầm của sóng xung kích mất nhiều thời gian hơn để vượt qua khoảng cách.</p>
+                 <div class="chart-container" style="height:250px; max-height:300px;">
+                    <canvas id="lightVsSoundChart"></canvas>
+                </div>
+                <p class="text-center text-gray-400 mt-4 text-xs">Biểu đồ này cho thấy sự chênh lệch lớn về thời gian để ánh sáng và âm thanh đi được 10km, giải thích cho sự im lặng đầy ám ảnh sau ánh chớp chói lòa.</p>
+            </section>
+            
+            <section class="md:col-span-2 lg:col-span-1 card text-center">
+                <h2 class="text-2xl font-bold mb-4 text-[#FFC300]">Sức công phá</h2>
+                 <div class="number-stat">21</div>
+                 <p class="text-gray-400 mt-2">Kiloton TNT</p>
+                 <p class="mt-4">Sức công phá ước tính của vụ thử Trinity, lớn hơn nhiều so với dự đoán của hầu hết các nhà khoa học.</p>
+                 <blockquote class="mt-8 border-l-4 border-[#C70039] pl-4 text-left italic">
+                    "Bây giờ ta đã trở thành Thần chết, kẻ hủy diệt các thế giới."
+                    <footer class="text-gray-400 text-sm mt-1">- J. Robert Oppenheimer, trích dẫn Bhagavad Gita</footer>
+                </blockquote>
+            </section>
+
+            <section class="md:col-span-2 lg:col-span-3 card">
+                <h2 class="text-2xl font-bold mb-4 text-center text-[#FFC300]">Phần IV: Di Sản - Một Phản Ứng Dây Chuyền Không Thể Đảo Ngược</h2>
+                <p class="text-center text-gray-300 mb-8">Dự án Manhattan không chỉ tạo ra một loại vũ khí mới mà còn khai sinh ra "Khoa học Lớn" và khởi đầu một cuộc chạy đua vũ trang địa chính trị. Phản ứng dây chuyền thực sự không phải là vật lý, mà là con người.</p>
+                 <div class="chart-container">
+                    <canvas id="armsRaceChart"></canvas>
+                </div>
+                 <p class="text-center text-gray-400 mt-4">Biểu đồ này minh họa xu hướng gia tăng theo cấp số nhân của kho vũ khí hạt nhân toàn cầu trong những thập kỷ sau năm 1945, phản ứng dây chuyền mà Oppenheimer lo sợ rằng ông đã khởi xướng.</p>
+            </section>
+
+        </main>
+    </div>
+
+<script>
+function wrapLabels(label, maxWidth) {
+    if (typeof label !== 'string' || label.length <= maxWidth) {
+        return label;
+    }
+    const words = label.split(' ');
+    let lines = [];
+    let currentLine = '';
+    for (const word of words) {
+        if ((currentLine + ' ' + word).trim().length > maxWidth && currentLine.length > 0) {
+            lines.push(currentLine);
+            currentLine = word;
+        } else {
+            currentLine = (currentLine + ' ' + word).trim();
+        }
+    }
+    lines.push(currentLine);
+    return lines;
+}
+
+const tooltipTitleCallback = function(tooltipItems) {
+    const item = tooltipItems[0];
+    let label = item.chart.data.labels[item.dataIndex];
+    if (Array.isArray(label)) {
+      return label.join(' ');
+    } else {
+      return label;
+    }
+};
+
+const vibrantFieryPalette = {
+    orange: 'rgba(255, 87, 51, 0.8)',
+    yellow: 'rgba(255, 195, 0, 0.8)',
+    red: 'rgba(199, 0, 57, 0.8)',
+    maroon: 'rgba(144, 12, 63, 0.8)',
+    purple: 'rgba(88, 24, 69, 0.8)'
+};
+
+const vibrantFieryBorders = {
+    orange: 'rgb(255, 87, 51)',
+    yellow: 'rgb(255, 195, 0)',
+    red: 'rgb(199, 0, 57)',
+    maroon: 'rgb(144, 12, 63)',
+    purple: 'rgb(88, 24, 69)'
+};
+
+
+var designComparisonCtx = document.getElementById('designComparisonChart').getContext('2d');
+var designComparisonChart = new Chart(designComparisonCtx, {
+    type: 'radar',
+    data: {
+        labels: ['Độ phức tạp kỹ thuật', 'Yêu cầu tốc độ', 'Hiệu quả vật liệu', 'Độ tin cậy (Lý thuyết)', 'Rủi ro "Xịt"'],
+        datasets: [{
+            label: 'Thiết kế Súng (Uranium)',
+            data: [2, 3, 4, 9, 3],
+            backgroundColor: vibrantFieryPalette.yellow,
+            borderColor: vibrantFieryBorders.yellow,
+            pointBackgroundColor: vibrantFieryBorders.yellow,
+            pointBorderColor: '#fff',
+            pointHoverBackgroundColor: '#fff',
+            pointHoverBorderColor: vibrantFieryBorders.yellow
+        }, {
+            label: 'Thiết kế Nổ vào trong (Plutonium)',
+            data: [10, 10, 8, 5, 8],
+            backgroundColor: vibrantFieryPalette.red,
+            borderColor: vibrantFieryBorders.red,
+            pointBackgroundColor: vibrantFieryBorders.red,
+            pointBorderColor: '#fff',
+            pointHoverBackgroundColor: '#fff',
+            pointHoverBorderColor: vibrantFieryBorders.red
+        }]
+    },
+    options: {
+        maintainAspectRatio: false,
+        scales: {
+            r: {
+                angleLines: { color: 'rgba(255, 255, 255, 0.2)' },
+                grid: { color: 'rgba(255, 255, 255, 0.2)' },
+                pointLabels: { color: '#f0f0f0', font: { size: 12 } },
+                ticks: { backdropColor: 'rgba(0,0,0,0)', color: '#bbb', stepSize: 2 }
+            }
+        },
+        plugins: {
+            legend: { labels: { color: '#f0f0f0' } },
+            tooltip: { callbacks: { title: tooltipTitleCallback } }
+        }
+    }
+});
+
+var riskCtx = document.getElementById('riskChart').getContext('2d');
+var riskChart = new Chart(riskCtx, {
+    type: 'doughnut',
+    data: {
+        labels: ['Rủi ro "Xịt" (Nổ yếu)', 'Thành công như dự tính', 'Đốt cháy Bầu khí quyển'],
+        datasets: [{
+            data: [49.9, 50, 0.1], 
+            backgroundColor: [vibrantFieryPalette.yellow, vibrantFieryPalette.orange, vibrantFieryPalette.red],
+            borderColor: '#2c2c2c',
+            borderWidth: 3
+        }]
+    },
+    options: {
+        maintainAspectRatio: false,
+        responsive: true,
+        plugins: {
+            legend: { position: 'top', labels: { color: '#f0f0f0' } },
+            title: { display: true, text: 'Những lo ngại trước vụ thử', color: '#f0f0f0' },
+            tooltip: { callbacks: { title: tooltipTitleCallback } }
+        }
+    }
+});
+
+var lightVsSoundCtx = document.getElementById('lightVsSoundChart').getContext('2d');
+var lightVsSoundChart = new Chart(lightVsSoundCtx, {
+    type: 'bar',
+    data: {
+        labels: ['Ánh sáng', 'Âm thanh'],
+        datasets: [{
+            label: 'Thời gian di chuyển 10km (giây)',
+            data: [0.000033, 29.15],
+            backgroundColor: [vibrantFieryPalette.yellow, vibrantFieryPalette.maroon],
+            borderColor: [vibrantFieryBorders.yellow, vibrantFieryBorders.maroon],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        indexAxis: 'y',
+        maintainAspectRatio: false,
+        scales: {
+            x: { 
+                type: 'logarithmic',
+                grid: { color: 'rgba(255, 255, 255, 0.2)' },
+                ticks: { color: '#f0f0f0' },
+                title: { display: true, text: 'Giây (thang log)', color: '#f0f0f0'}
+            },
+            y: { grid: { color: 'rgba(255, 255, 255, 0.2)' }, ticks: { color: '#f0f0f0' } }
+        },
+        plugins: {
+            legend: { display: false },
+            tooltip: { callbacks: { title: tooltipTitleCallback } }
+        }
+    }
+});
+
+var armsRaceCtx = document.getElementById('armsRaceChart').getContext('2d');
+var armsRaceChart = new Chart(armsRaceCtx, {
+    type: 'line',
+    data: {
+        labels: ['1945', '1955', '1965', '1975', '1985', '1995', '2005', '2015'],
+        datasets: [{
+            label: 'Số lượng đầu đạn hạt nhân ước tính (Toàn cầu)',
+            data: [3, 2400, 37000, 45000, 65000, 29000, 22000, 15000],
+            fill: true,
+            backgroundColor: vibrantFieryPalette.red,
+            borderColor: vibrantFieryBorders.red,
+            tension: 0.1
+        }]
+    },
+    options: {
+        maintainAspectRatio: false,
+        scales: {
+            y: { grid: { color: 'rgba(255, 255, 255, 0.2)' }, ticks: { color: '#f0f0f0' } },
+            x: { grid: { color: 'rgba(255, 255, 255, 0.2)' }, ticks: { color: '#f0f0f0' } }
+        },
+        plugins: {
+            legend: { labels: { color: '#f0f0f0' } },
+            tooltip: { callbacks: { title: tooltipTitleCallback } }
+        }
+    }
+});
+
+</script>
+    <div style="text-align: center; padding: 3rem 0;">
+        <a href="index.html" style="display: inline-block; background-color: #3498db; color: white; padding: 0.8rem 1.8rem; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: 2px solid transparent; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            Quay lại Trang Blog
+        </a>
+    </div>
+</body>
+</html>

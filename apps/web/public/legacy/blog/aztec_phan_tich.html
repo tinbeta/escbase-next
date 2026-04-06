@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aztec Network: Phân Tích Chuyên Sâu</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Màu nền nhẹ nhàng */
+            color: #2d3748; /* Màu chữ chính */
+        }
+        .container {
+            max-width: 960px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background-color: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background-color: #e2e8f0; /* Màu nền cho header section */
+            border-radius: 0.75rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-bottom: 0.75rem;
+        }
+        .section-header:hover {
+            background-color: #cbd5e0;
+        }
+        .section-content {
+            padding: 0.5rem 1rem 1rem 1rem;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+            max-height: 0;
+            opacity: 0;
+            visibility: hidden;
+        }
+        .section-content.open {
+            max-height: 1000px; /* Giá trị đủ lớn để chứa nội dung */
+            opacity: 1;
+            visibility: visible;
+        }
+        .rotate-icon {
+            transition: transform 0.3s ease;
+        }
+        .rotate-icon.rotated {
+            transform: rotate(90deg);
+        }
+        h1 {
+            color: #2c5282; /* Màu cho tiêu đề chính */
+        }
+        h2 {
+            color: #2d3748; /* Màu cho tiêu đề phụ */
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        b {
+            color: #2a4365;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../blog.html" class="back-link"><i class="fas fa-arrow-left"></i> Quay lại Blog</a>
+        <header class="text-center mb-8">
+            <h1 class="text-4xl font-extrabold mb-2">Aztec Network: Phân Tích Chuyên Sâu</h1>
+            <p class="text-lg text-gray-600">Giải pháp Layer 2 tập trung vào quyền riêng tư lập trình được trên Ethereum</p>
+        </header>
+
+        <section class="mb-6">
+            <div class="section-header" data-section="overview">
+                <h2 class="text-xl font-semibold">Tổng quan</h2>
+                <svg class="w-6 h-6 rotate-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+            <div class="section-content" id="overview-content">
+                <p class="text-gray-700">Aztec đặt mục tiêu tích hợp quyền riêng tư vào nền tảng của web3, hy sinh tính tương thích trực tiếp với Máy ảo Ethereum (EVM) để xây dựng một kiến trúc ưu tiên quyền riêng tư. Công nghệ độc quyền của Aztec, đặc biệt là kiến trúc "ZK-ZK-Rollup" kết hợp với hệ thống chứng minh PLONK và ngôn ngữ lập trình Noir, tạo ra lợi thế cạnh tranh bằng cách cho phép thực thi logic hợp đồng thông minh phức tạp một cách riêng tư. Dự án đối mặt với thách thức về việc xây dựng một hệ sinh thái nhà phát triển mới và điều hướng môi trường pháp lý ngày càng siết chặt đối với các công cụ bảo mật, nhưng đang triển khai chiến lược "tuân thủ có thể lập trình" để cân bằng nhu cầu riêng tư của người dùng và yêu cầu quản lý.</p>
+            </div>
+        </section>
+
+        <section class="mb-6">
+            <div class="section-header" data-section="core-tech">
+                <h2 class="text-xl font-semibold">Công nghệ cốt lõi</h2>
+                <svg class="w-6 h-6 rotate-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+            <div class="section-content" id="core-tech-content">
+                <ul class="text-gray-700">
+                    <li><b>PLONK:</b> Một hệ thống chứng minh ZK-SNARK đột phá do Aztec đồng phát minh, cung cấp thiết lập tin cậy phổ quát và có thể cập nhật, cùng hiệu suất cao.</li>
+                    <li><b>Kiến trúc ZK-ZK-Rollup:</b> Sử dụng bằng chứng ZK cho cả mở rộng quy mô và bảo mật, với hai lớp bằng chứng (Mạch Riêng tư ở phía máy khách và Mạch Rollup do Sequencer tạo).</li>
+                    <li><b>Mô hình Trạng thái UTXO và "Notes":</b> Aztec sử dụng mô hình UTXO với các "ghi chú" được mã hóa, chỉ chủ sở hữu mới có thể xem và chi tiêu.</li>
+                    <li><b>Môi trường Thực thi:</b> Bao gồm Private eXecution Environment (PXE) ở phía máy khách để xử lý các hàm riêng tư và Aztec Virtual Machine (AVM) cho các hàm công khai.</li>
+                    <li><b>Ngôn ngữ Noir:</b> Ngôn ngữ lập trình giống Rust được thiết kế để viết các chương trình Zero-Knowledge, giúp nhà phát triển dễ dàng xây dựng ứng dụng riêng tư.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="mb-6">
+            <div class="section-header" data-section="ecosystem-products">
+                <h2 class="text-xl font-semibold">Hệ sinh thái và Sản phẩm</h2>
+                <svg class="w-6 h-6 rotate-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+            <div class="section-content" id="ecosystem-products-content">
+                <p class="text-gray-700">Aztec đã ngừng hoạt động các sản phẩm trước đây như zk.money và Aztec Connect để tập trung hoàn toàn vào việc xây dựng nền tảng L2 hiện tại. Dự án đã ra mắt Public Testnet vào tháng 5 năm 2025 và đang thúc đẩy phát triển hệ sinh thái thông qua Chương trình Tài trợ và hỗ trợ nhà phát triển.</p>
+            </div>
+        </section>
+
+        <section class="mb-6">
+            <div class="section-header" data-section="team-investors-roadmap">
+                <h2 class="text-xl font-semibold">Đội ngũ, Nhà đầu tư và Lộ trình Phát triển</h2>
+                <svg class="w-6 h-6 rotate-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+            <div class="section-content" id="team-investors-roadmap-content">
+                <p class="text-gray-700">Aztec có đội ngũ mật mã hàng đầu thế giới, bao gồm CEO Zac Williamson (đồng sáng tạo PLONK) và Ariel Gabizon (Nhà khoa học trưởng). Dự án đã huy động được hơn 119 triệu USD từ các quỹ đầu tư hàng đầu như Paradigm và a16z. Lộ trình phát triển tập trung vào hoàn thiện quyền riêng tư lập trình được, phi tập trung hóa, tối ưu hóa hệ thống chứng minh và phát triển Noir lên phiên bản 1.0, với mục tiêu ra mắt mainnet vào khoảng giữa hoặc cuối năm 2025.</p>
+            </div>
+        </section>
+
+        <section class="mb-6">
+            <div class="section-header" data-section="competitive-analysis">
+                <h2 class="text-xl font-semibold">Phân tích Cạnh tranh</h2>
+                <svg class="w-6 h-6 rotate-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+            <div class="section-content" id="competitive-analysis-content">
+                <p class="text-gray-700">Aztec khác biệt so với các ZK-Rollup khác (như zkSync, StarkNet) ở chỗ đặt trọng tâm chính vào "quyền riêng tư có thể lập trình", trong khi các đối thủ tập trung vào khả năng mở rộng. Lợi thế của Aztec là người tiên phong duy nhất trong thị trường ngách này và sở hữu trí tuệ độc quyền (PLONK, Noir). Thách thức lớn nhất là việc không tương thích EVM, đòi hỏi nhà phát triển phải học ngôn ngữ và mô hình mới, tạo ra rào cản chuyển đổi.</p>
+            </div>
+        </section>
+
+        <section class="mb-6">
+            <div class="section-header" data-section="tokenomics-airdrop">
+                <h2 class="text-xl font-semibold">Tokenomics và Triển vọng Airdrop</h2>
+                <svg class="w-6 h-6 rotate-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+            <div class="section-content" id="tokenomics-airdrop-content">
+                <p class="text-gray-700">Aztec chưa có thông báo chính thức về token, nhưng có nhiều đồn đoán về một đợt airdrop trong tương lai, mặc dù dự án tuyên bố "Không có airdrop". Token tiềm năng có thể được sử dụng cho quản trị, bảo mật mạng lưới (staking cho Sequencer và Prover) và thanh toán phí giao dịch.</p>
+            </div>
+        </section>
+
+        <section class="mb-6">
+            <div class="section-header" data-section="risks-opportunities">
+                <h2 class="text-xl font-semibold">Rủi ro và Cơ hội</h2>
+                <svg class="w-6 h-6 rotate-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+            <div class="section-content" id="risks-opportunities-content">
+                <ul class="text-gray-700">
+                    <li><b>Điểm mạnh:</b> Đội ngũ, công nghệ riêng tư độc quyền, hậu thuẫn tài chính mạnh mẽ, tầm nhìn dài hạn.</li>
+                    <li><b>Điểm yếu:</b> Không tương thích EVM, hệ sinh thái non trẻ, hiệu suất ban đầu và sự phức tạp có thể dẫn đến lỗi.</li>
+                    <li><b>Cơ hội:</b> Nhu cầu tăng về quyền riêng tư trong web3, tiềm năng cho các ứng dụng cấp doanh nghiệp và tài chính yêu cầu bảo mật cao, trở thành người dẫn đầu thị trường ngách.</li>
+                    <li><b>Thách thức:</b> Rủi ro pháp lý và quy định (bài học từ Tornado Cash), cạnh tranh khốc liệt từ các L2 tương thích EVM, các lỗ hổng bảo mật chưa được phát hiện. Aztec đang cố gắng giải quyết rủi ro pháp lý bằng "tuân thủ có thể lập trình" và "khả năng kiểm toán tự nguyện".</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="mb-6">
+            <div class="section-header" data-section="conclusion">
+                <h2 class="text-xl font-semibold">Kết luận</h2>
+                <svg class="w-6 h-6 rotate-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+            <div class="section-content" id="conclusion-content">
+                <p class="text-gray-700">Aztec Network là một dự án tham vọng, đặt cược vào một tương lai nơi quyền riêng tư là quyền cơ bản trong web3. Thành công của dự án phụ thuộc vào khả năng thu hút nhà phát triển, điều hướng pháp lý và chứng minh công nghệ an toàn, hiệu quả khi ra mắt mainnet. Đây là một khoản đầu tư dài hạn, có rủi ro cao nhưng tiềm năng đột phá lớn.</p>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const headers = document.querySelectorAll('.section-header');
+
+            headers.forEach(header => {
+                header.addEventListener('click', () => {
+                    const sectionId = header.dataset.section;
+                    const content = document.getElementById(`${sectionId}-content`);
+                    const icon = header.querySelector('.rotate-icon');
+
+                    if (content.classList.contains('open')) {
+                        content.classList.remove('open');
+                        icon.classList.remove('rotated');
+                    } else {
+                        // Đóng tất cả các phần khác trước khi mở phần hiện tại
+                        document.querySelectorAll('.section-content.open').forEach(openContent => {
+                            openContent.classList.remove('open');
+                            const openHeader = openContent.previousElementSibling;
+                            if (openHeader) {
+                                openHeader.querySelector('.rotate-icon').classList.remove('rotated');
+                            }
+                        });
+
+                        content.classList.add('open');
+                        icon.classList.add('rotated');
+                    }
+                });
+            });
+        });
+    </script>
+    <div style="text-align: center; padding: 3rem 0;">
+        <a href="index.html" style="display: inline-block; background-color: #3498db; color: white; padding: 0.8rem 1.8rem; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: 2px solid transparent; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            Quay lại Trang Blog
+        </a>
+    </div>
+</body>
+</html>
