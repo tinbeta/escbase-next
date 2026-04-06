@@ -1,6 +1,6 @@
 [
   {
-    "url": "/blog/gemma4-ondevice-iphone/",
+    "url": "/blog/gemma4-ondevice-iphone",
     "title": "Gemma 4 Chạy Trực Tiếp Trên iPhone: Khi On-Device AI Bắt Đầu Ăn Vào Lãnh Địa Cloud",
     "excerpt": "Gemma 4 E2B đang chạy trực tiếp trên iPhone với tốc độ khoảng 40 token/giây nhờ MLX. Đây không chỉ là một demo đẹp mắt, mà là tín hiệu cho thấy on-device AI đang tiến dần từ vùng thử nghiệm sang lớp hạ tầng sản phẩm thật.",
     "date": "Apr 06, 2026",
@@ -11,7 +11,7 @@
     "featured": true
   },
   {
-    "url": "/blog/ai-memecoin-bnb-real-value/", 
+    "url": "/blog/ai-memecoin-bnb-real-value",
     "title": "AI + Memecoin + Cộng Đồng: Thí Nghiệm Trên BNB Chain Có Tạo Ra Giá Trị Thật Không?",
     "excerpt": "Một token trên BNB Chain đang tự kể mình như thí nghiệm AI + community + charity economics. Narrative rất hút mắt, nhưng câu hỏi thật là giá trị thật nằm ở đâu ngoài vòng lặp đầu cơ.",
     "date": "Apr 06, 2026",
@@ -22,7 +22,7 @@
     "featured": false
   },
   {
-    "url": "/blog/qwen-3-6-plus-zetachain-ai/",
+    "url": "/blog/qwen-3-6-plus-zetachain-ai",
     "title": "Qwen 3.6-Plus Lên ZetaChain: Khi AI Model Bắt Đầu Trở Thành Hạ Tầng Của Web3",
     "excerpt": "ZetaChain đưa Qwen 3.6-Plus vào hệ AI qua AnumaAI với claim 1M context và không cần local install. Câu chuyện lớn hơn không chỉ là model mới, mà là Web3 đang cố trở thành lớp hạ tầng cho AI-native applications.",
     "date": "Apr 06, 2026",
