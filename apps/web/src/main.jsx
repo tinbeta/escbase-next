@@ -1,2 +1,1 @@
-import './styles.css'
-console.log('ESCBase Next is serving the legacy ESC Base site from /public')
+console.log('ESCBase Next is serving the legacy ESC Base site')
