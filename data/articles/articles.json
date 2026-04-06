@@ -1,18 +1,47 @@
 [
   {
-    "slug": "vn-crypto-admin-liability-analysis",
+    "slug": "featured-vn-crypto-law",
     "category": "Pháp Lý Crypto",
-    "title": "Admin Group Crypto Tại Việt Nam Sắp Hết Vùng Xám",
-    "excerpt": "Đây là kiểu bài ESC Base nên đẩy mạnh: vừa có tính thời sự, vừa có chiều sâu, vừa rất sát độc giả Việt Nam.",
-    "readTime": "9 min read",
-    "date": "Apr 06, 2026"
+    "title": "Crypto tại Việt Nam đang bước vào giai đoạn bị quản lý thực chất",
+    "excerpt": "Từ khung thuế, VASP đến trách nhiệm của admin cộng đồng — thị trường crypto Việt Nam không còn ở vùng xám như trước. Đây là lúc nhà đầu tư và người làm nội dung phải thay đổi cách vận hành.",
+    "readTime": "9 phút đọc",
+    "date": "06/04/2026",
+    "featured": true
   },
   {
-    "slug": "xscan-newsroom-vision",
-    "category": "Product Vision",
-    "title": "Xây ESC Base mới thành một crypto intelligence newsroom",
-    "excerpt": "Không chỉ là blog: có X Radar, bài phân tích, daily signals, và quy trình xuất bản rõ ràng.",
-    "readTime": "7 min read",
-    "date": "Apr 06, 2026"
+    "slug": "btc-market-structure",
+    "category": "Phân Tích Thị Trường",
+    "title": "Bitcoin giữ cấu trúc tăng trung hạn, nhưng dòng tiền đang chọn lọc hơn",
+    "excerpt": "BTC vẫn là xương sống của thị trường, nhưng vốn đang luân chuyển rất khác so với các chu kỳ trước. Altcoin không còn được bơm đại trà — narrative và thanh khoản mới là thứ quyết định ai thắng.",
+    "readTime": "7 phút đọc",
+    "date": "06/04/2026",
+    "featured": false
+  },
+  {
+    "slug": "ai-crypto-content",
+    "category": "AI & Crypto",
+    "title": "AI đang thay đổi cách vận hành của các team content crypto",
+    "excerpt": "Từ việc quét X, gom tín hiệu, lên outline cho tới xuất bản đa nền tảng, AI đang biến các team nhỏ thành một newsroom có năng suất như một tòa soạn mini.",
+    "readTime": "6 phút đọc",
+    "date": "05/04/2026",
+    "featured": false
+  },
+  {
+    "slug": "eth-tradfi-tokenization",
+    "category": "TradFi & Blockchain",
+    "title": "Khi các ngân hàng và quỹ lớn dùng blockchain, narrative của Ethereum đổi hẳn",
+    "excerpt": "Thị trường không còn chỉ tranh cãi L1 nào nhanh hơn. Cuộc chơi mới là chain nào được tổ chức tài chính, quỹ và hạ tầng thanh toán chọn để token hóa tài sản ngoài đời thực.",
+    "readTime": "8 phút đọc",
+    "date": "05/04/2026",
+    "featured": false
+  },
+  {
+    "slug": "viet-nam-investor-mindset",
+    "category": "Góc Nhìn Đầu Tư",
+    "title": "Nhà đầu tư Việt cần bỏ tư duy ăn xổi nếu muốn sống sót chu kỳ này",
+    "excerpt": "Thị trường đã trưởng thành hơn, biến động vẫn lớn nhưng lợi nhuận không còn rơi đều cho tất cả. Ai không có chiến lược quản trị rủi ro sẽ tiếp tục là thanh khoản cho người khác.",
+    "readTime": "5 phút đọc",
+    "date": "04/04/2026",
+    "featured": false
   }
 ]

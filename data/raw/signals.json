@@ -1,20 +1,20 @@
 [
   {
-    "slug": "vn-crypto-admin-liability",
-    "tag": "regulation",
-    "title": "Trách nhiệm pháp lý của admin cộng đồng crypto tại Việt Nam",
-    "summary": "Một nhóm tín hiệu rất hợp độc giả Việt Nam: luật, VASP, thuế, và trách nhiệm của người quản trị cộng đồng."
+    "slug": "tin-hieu-phap-ly-viet-nam",
+    "tag": "Pháp lý",
+    "title": "Khung pháp lý crypto Việt Nam đang siết lại từng lớp",
+    "summary": "Đây là nhóm tín hiệu có độ liên quan rất cao với độc giả Việt Nam vì ảnh hưởng trực tiếp đến cách giao dịch, cách truyền thông và cách vận hành cộng đồng."
   },
   {
-    "slug": "xscan-automation",
-    "tag": "ai-workflow",
-    "title": "Tự động scan X để tạo ý tưởng bài mỗi ngày",
-    "summary": "Biến timeline thành newsroom pipeline: scan, score, cluster, generate, biên tập, publish."
+    "slug": "dong-tien-vao-btc-eth",
+    "tag": "Dòng tiền",
+    "title": "Tiền vẫn ưu tiên BTC và ETH thay vì trải đều ra toàn thị trường",
+    "summary": "Một trong những điểm quan trọng của chu kỳ này là thanh khoản chọn lọc hơn nhiều. Muốn viết bài hay phải nhìn được dòng tiền đang trú ở đâu."
   },
   {
-    "slug": "crypto-geopolitics-desk",
-    "tag": "geopolitics",
-    "title": "Desk riêng cho crypto + địa chính trị",
-    "summary": "Một hướng nội dung có độ khác biệt cao vì ít site crypto Việt làm tốt phần macro/geopolitics."
+    "slug": "ai-newsroom-crypto",
+    "tag": "AI",
+    "title": "AI có thể biến một team nhỏ thành newsroom crypto hiệu suất cao",
+    "summary": "Đây là hướng xây thương hiệu rất hợp cho một site Việt Nam muốn đi nhanh: AI hỗ trợ quy trình nhưng giọng viết và góc nhìn vẫn mang bản sắc riêng."
   }
 ]
