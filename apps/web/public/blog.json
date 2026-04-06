@@ -11,6 +11,17 @@
     "featured": true
   },
   {
+    "url": "/blog/binance_ai_trading_copilot_2026_04_06/",
+    "title": "Binance Đẩy AI Trading Copilot: Tiện Ích Thật Hay Mở Đầu Cho Kỷ Nguyên “Trade Hộ Bằng Mô Hình”?",
+    "excerpt": "Binance bắt đầu đẩy mạnh narrative AI trading copilot: phân tích thị trường, theo dõi portfolio, hỗ trợ thực thi lệnh. Khi sàn lớn nhất thị trường AI hóa trading UX, retail có thể đang bước vào một kỷ nguyên mới.",
+    "date": "Apr 06, 2026",
+    "tag": "AI & Crypto Trading",
+    "tagIcon": "fas fa-robot",
+    "tagColor": "#3b82f6",
+    "readTime": "10 min read",
+    "featured": false
+  },
+  {
     "url": "/blog/gemma_4_launch_2026_04_04/",
     "title": "Gemma 4 Chính Thức Ra Mắt: 256K Context, Multimodal, Apache 2.0",
     "excerpt": "Google phát hành Gemma 4 với context window 256K, native function calling, multimodal text/image/video. 2 phiên bản 26B và 31B, license Apache 2.0 miễn phí.",
