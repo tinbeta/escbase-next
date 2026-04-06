@@ -272,7 +272,7 @@
         });
 
         // Auto-load posts from blog.json
-        fetch('blog.json')
+        fetch('/blog.json')
             .then(r => r.json())
             .then(posts => {
                 const grid = document.getElementById('postsGrid');
