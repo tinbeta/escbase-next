@@ -1,0 +1,18 @@
+{
+  "name": "escbase-next",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev -w apps/server\" \"npm run dev -w apps/web\"",
+    "build": "npm run build -w apps/server && npm run build -w apps/web",
+    "scan:x": "node scripts/scan-x.mjs",
+    "generate:article": "node scripts/generate-article.mjs",
+    "publish:local": "node scripts/publish-local.mjs"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
