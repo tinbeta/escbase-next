@@ -1,5 +1,16 @@
 [
   {
+    "url": "/blog/ai-memecoin-bnb-real-value/",
+    "title": "AI + Memecoin + Cộng Đồng: Thí Nghiệm Trên BNB Chain Có Tạo Ra Giá Trị Thật Không?",
+    "excerpt": "Một token trên BNB Chain đang tự kể mình như thí nghiệm AI + community + charity economics. Narrative rất hút mắt, nhưng câu hỏi thật là giá trị thật nằm ở đâu ngoài vòng lặp đầu cơ.",
+    "date": "Apr 06, 2026",
+    "tag": "Memecoin, AI & Community",
+    "tagIcon": "fas fa-coins",
+    "tagColor": "#3b82f6",
+    "readTime": "10 min read",
+    "featured": false
+  },
+  {
     "url": "/blog/qwen-3-6-plus-zetachain-ai/",
     "title": "Qwen 3.6-Plus Lên ZetaChain: Khi AI Model Bắt Đầu Trở Thành Hạ Tầng Của Web3",
     "excerpt": "ZetaChain đưa Qwen 3.6-Plus vào hệ AI qua AnumaAI với claim 1M context và không cần local install. Câu chuyện lớn hơn không chỉ là model mới, mà là Web3 đang cố trở thành lớp hạ tầng cho AI-native applications.",
