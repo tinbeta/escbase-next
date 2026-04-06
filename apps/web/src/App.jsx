@@ -1,13 +1,38 @@
 import { useEffect, useMemo, useState } from 'react'
 
-function SectionTitle({ title, sub }) {
+function SocialLink({ href, label }) {
   return (
-    <div className="section-head">
-      <div>
-        <h2>{title}</h2>
-        <p className="section-sub">{sub}</p>
+    <a className="social-link" href={href} target="_blank" rel="noreferrer">
+      {label}
+    </a>
+  )
+}
+
+function ArticleCard({ item }) {
+  return (
+    <article className="content-card article-card">
+      <div className="card-top">
+        <span className="tiny-tag">{item.category}</span>
+        <span className="tiny-date">{item.date}</span>
       </div>
-    </div>
+      <h3>{item.title}</h3>
+      <p>{item.excerpt}</p>
+      <div className="meta-line small">
+        <span>{item.readTime}</span>
+      </div>
+    </article>
+  )
+}
+
+function SignalCard({ item }) {
+  return (
+    <article className="content-card signal-card">
+      <div className="card-top">
+        <span className="tiny-tag alt">{item.tag}</span>
+      </div>
+      <h3>{item.title}</h3>
+      <p>{item.summary}</p>
+    </article>
   )
 }
 
@@ -27,149 +52,145 @@ export default function App() {
   )
 
   const latest = useMemo(
-    () => data.articles.filter((item) => !featured || item.slug !== featured.slug),
+    () => data.articles.filter((item) => !featured || item.slug !== featured.slug).slice(0, 4),
     [data.articles, featured]
   )
 
   return (
-    <div className="page">
-      <header className="topbar">
-        <div className="brand-wrap">
-          <div className="brand-mark">E</div>
-          <div>
-            <div className="brand-name">ESCBase Next</div>
-            <div className="brand-sub">Tin tức Crypto & Blockchain cho người Việt</div>
-          </div>
-        </div>
-        <nav className="topnav">
-          <a href="#">Trang chủ</a>
-          <a href="#latest">Bài mới</a>
-          <a href="#signals">Tín hiệu</a>
-          <a href="#vision">Định hướng</a>
-        </nav>
-      </header>
+    <div className="page kitze-style">
+      <section className="intro-block">
+        <div className="intro-grid">
+          <div className="intro-main">
+            <div className="eyebrow">Crypto media • Phân tích • Tiếng Việt</div>
+            <h1>ESC Base</h1>
+            <h2>Trang tin crypto dành cho người Việt — rõ, sâu, và đủ sắc để đọc mỗi ngày</h2>
+            <p className="lead">
+              Mình định hướng bản mới của ESC Base theo kiểu landing page rất mạnh về thương hiệu,
+              giống vibe của kitze.io: gọn, sang, nhiều block nội dung rõ ràng, nhưng tối ưu cho một
+              media brand Việt Nam về crypto, blockchain, AI và bối cảnh thị trường.
+            </p>
 
-      <section className="hero-news">
-        <div className="hero-left">
-          <div className="label-hot">Chuyên trang đề xuất</div>
-          <h1>Một web tin tức crypto chuyên nghiệp, đậm chất Việt, dễ mở rộng thành newsroom thực thụ</h1>
-          <p>
-            Đây là hướng mình đề xuất cho bản ESC Base mới: giao diện hiện đại hơn, ngôn ngữ tiếng Việt rõ ràng hơn,
-            cấu trúc giống một trang tin chuyên ngành thay vì blog tĩnh, và sẵn sàng để sau này nối với cron job quét X tự động.
-          </p>
-          <div className="hero-pills">
-            <span>Crypto</span>
-            <span>Pháp lý Việt Nam</span>
-            <span>AI & Blockchain</span>
-            <span>Dòng tiền thị trường</span>
+            <div className="quick-links">
+              <a href="#featured">Bài nổi bật</a>
+              <a href="#latest">Bài mới</a>
+              <a href="#signals">Tín hiệu biên tập</a>
+              <a href="#social">Mạng xã hội</a>
+            </div>
+          </div>
+
+          <aside className="intro-side">
+            <div className="profile-card">
+              <div className="profile-label">Định vị thương hiệu</div>
+              <h3>Crypto Intelligence cho người Việt</h3>
+              <p>
+                Không chỉ là nơi đăng bài. Đây nên là một “media home” — nơi người đọc vào để theo dõi
+                narrative, pháp lý, dòng tiền và các xu hướng quan trọng nhất mỗi ngày.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="social" className="section-block">
+        <div className="section-heading">
+          <div>
+            <div className="eyebrow">Mạng xã hội</div>
+            <h2>Kết nối với ESC Base</h2>
           </div>
         </div>
-        <div className="hero-right">
-          <div className="mini-stat">
-            <strong>Phong cách</strong>
-            <span>Tạp chí / Newsroom</span>
-          </div>
-          <div className="mini-stat">
-            <strong>Ngôn ngữ</strong>
-            <span>Ưu tiên tiếng Việt</span>
-          </div>
-          <div className="mini-stat">
-            <strong>Định vị</strong>
-            <span>Crypto intelligence cho người Việt</span>
-          </div>
+        <div className="social-grid">
+          <SocialLink href="https://www.youtube.com/@ESCBase" label="YouTube" />
+          <SocialLink href="https://discord.gg/SMhy8RjDCf" label="Discord" />
+          <SocialLink href="https://twitter.com/escbase" label="X / Twitter" />
+          <SocialLink href="https://t.me/escbase" label="Telegram" />
         </div>
       </section>
 
       {featured && (
-        <section className="featured-block">
-          <div className="featured-main">
-            <div className="tag red">Bài nổi bật</div>
-            <h2>{featured.title}</h2>
-            <p>{featured.excerpt}</p>
-            <div className="meta-line">
-              <span>{featured.category}</span>
-              <span>{featured.readTime}</span>
-              <span>{featured.date}</span>
+        <section id="featured" className="section-block feature-layout">
+          <div className="section-heading">
+            <div>
+              <div className="eyebrow">Bài nổi bật</div>
+              <h2>Nội dung nên được đẩy lên hero position</h2>
             </div>
           </div>
-          <div className="featured-side">
-            <div className="side-card">
-              <h3>Điểm mạnh của hướng này</h3>
-              <ul>
-                <li>Giao diện hợp độc giả Việt hơn blog cũ</li>
-                <li>Có thể mở rộng rất tốt cho SEO và nhịp xuất bản hàng ngày</li>
-                <li>Dễ thêm trang chuyên mục, trang bài viết, trang dữ liệu</li>
-                <li>Phù hợp để bạn vận hành như một media brand thực sự</li>
-              </ul>
+
+          <div className="feature-grid">
+            <article className="feature-card big">
+              <div className="card-top">
+                <span className="tiny-tag red">Featured</span>
+                <span className="tiny-date">{featured.date}</span>
+              </div>
+              <h3>{featured.title}</h3>
+              <p>{featured.excerpt}</p>
+              <div className="meta-line">
+                <span>{featured.category}</span>
+                <span>{featured.readTime}</span>
+              </div>
+            </article>
+
+            <div className="stack-cards">
+              <div className="content-card note-card">
+                <div className="eyebrow small">Vì sao bố cục này hợp?</div>
+                <h3>Giống một media landing page hơn là blog cổ điển</h3>
+                <p>
+                  Kiểu bố cục này tạo cảm giác chuyên nghiệp, hiện đại, và rất hợp nếu sau này bạn đổ dữ liệu từ cron job vào đều đặn mỗi ngày.
+                </p>
+              </div>
+              <div className="content-card note-card">
+                <div className="eyebrow small">Phong cách</div>
+                <h3>Tối giản, hiện đại, thiên về brand</h3>
+                <p>
+                  Ít chi tiết thừa, nhiều khoảng trắng, headline lớn, block rõ ràng — đúng tinh thần mà bạn nhắc tới với kitze.io.
+                </p>
+              </div>
             </div>
           </div>
         </section>
       )}
 
-      <section id="latest" className="section">
-        <SectionTitle
-          title="Bài viết mới"
-          sub="Cấu trúc phù hợp với một chuyên trang tin tức: bài nổi bật, bài mới, chuyên mục rõ ràng"
-        />
-        <div className="article-grid">
+      <section id="latest" className="section-block">
+        <div className="section-heading">
+          <div>
+            <div className="eyebrow">Bài viết mới</div>
+            <h2>Các mảng nội dung chính</h2>
+          </div>
+        </div>
+        <div className="cards-grid two">
           {latest.map((item) => (
-            <article key={item.slug} className="news-card">
-              <div className="tag blue">{item.category}</div>
-              <h3>{item.title}</h3>
-              <p>{item.excerpt}</p>
-              <div className="meta-line small">
-                <span>{item.readTime}</span>
-                <span>{item.date}</span>
-              </div>
-            </article>
+            <ArticleCard key={item.slug} item={item} />
           ))}
         </div>
       </section>
 
-      <section id="signals" className="section">
-        <SectionTitle
-          title="Tín hiệu biên tập"
-          sub="Khu vực này sau này có thể nối với cron job quét X của bạn để đổ tín hiệu vào mỗi ngày"
-        />
-        <div className="signal-grid">
+      <section id="signals" className="section-block">
+        <div className="section-heading">
+          <div>
+            <div className="eyebrow">Editorial Radar</div>
+            <h2>Tín hiệu biên tập</h2>
+          </div>
+        </div>
+        <div className="cards-grid three">
           {data.signals.map((item) => (
-            <article key={item.slug} className="signal-card">
-              <div className="tag dark">{item.tag}</div>
-              <h3>{item.title}</h3>
-              <p>{item.summary}</p>
-            </article>
+            <SignalCard key={item.slug} item={item} />
           ))}
         </div>
       </section>
 
-      <section id="vision" className="section vision-grid">
-        <div className="vision-card large">
-          <h2>Mình đề xuất tone & structure như sau</h2>
-          <ul>
-            <li><strong>Trang chủ:</strong> headline lớn, bài nổi bật, bài mới, tín hiệu thị trường, chuyên mục</li>
-            <li><strong>Chuyên mục:</strong> Thị trường, Pháp lý, AI & Crypto, Geopolitics, On-chain, Góc nhìn</li>
-            <li><strong>Chi tiết bài:</strong> typography đẹp, đọc thoải mái trên mobile, có box tóm tắt</li>
-            <li><strong>Ngôn ngữ:</strong> ưu tiên tiếng Việt tự nhiên, gãy gọn, bớt “mùi dịch máy”</li>
-            <li><strong>Thương hiệu:</strong> nhìn như một media brand thật, không chỉ là nơi đăng bài</li>
-          </ul>
+      <section className="section-block split-showcase">
+        <div className="content-card showcase-card">
+          <div className="eyebrow">Chuyên mục nên có</div>
+          <h3>Thị trường, Pháp lý, AI & Crypto, Geopolitics, Góc nhìn</h3>
+          <p>
+            Đây là những trục nội dung rất hợp với độc giả Việt Nam và cũng giúp site có cấu trúc rõ để SEO tốt hơn về sau.
+          </p>
         </div>
-        <div className="vision-card">
-          <h3>Hợp với người Việt vì:</h3>
-          <ul>
-            <li>Bài ngắn gọn hơn, rõ ý hơn</li>
-            <li>Ưu tiên chủ đề sát nhà đầu tư Việt</li>
-            <li>Phần pháp lý và bối cảnh Việt Nam được đẩy mạnh</li>
-            <li>Dễ đọc trên điện thoại</li>
-          </ul>
-        </div>
-        <div className="vision-card">
-          <h3>Bước tiếp theo mình khuyên làm</h3>
-          <ol>
-            <li>Thiết kế trang article riêng</li>
-            <li>Thêm danh sách chuyên mục</li>
-            <li>Làm header/footer xịn hơn</li>
-            <li>Thêm chế độ xuất bản bài thật từ JSON/Markdown</li>
-          </ol>
+        <div className="content-card showcase-card">
+          <div className="eyebrow">Bước tiếp theo</div>
+          <h3>Làm tiếp trang bài viết chi tiết và trang chuyên mục</h3>
+          <p>
+            Khi đã có homepage đúng vibe, bước tiếp theo nên là article page đẹp và category page sạch để toàn bộ site nhìn ra đúng chất “newsroom premium”.
+          </p>
         </div>
       </section>
     </div>
