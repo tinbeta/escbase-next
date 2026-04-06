@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: Tương lai của BNB Chain</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* Dark background */
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, #f0b90b, #38bdf8, #8b5cf6);
+            border-radius: 2px;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+        }
+        .timeline-content {
+            position: relative;
+            width: calc(50% - 40px);
+            padding: 20px;
+            border-radius: 12px;
+            background-color: #1f2937;
+            border: 1px solid #374151;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px rgba(240, 185, 11, 0.3);
+        }
+        .timeline-item:nth-child(odd) .timeline-content {
+            left: 0;
+            text-align: right;
+        }
+        .timeline-item:nth-child(even) .timeline-content {
+            left: calc(50% + 38px);
+        }
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 20px;
+            transform: translateX(-50%);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: #f0b90b;
+            border: 4px solid #111827;
+            z-index: 10;
+        }
+        .stat-card {
+            background: #374151;
+            border-left: 4px solid #f0b90b;
+        }
+        .goal-card {
+            background: #374151;
+            border-left: 4px solid #38bdf8;
+        }
+        .future-card {
+            background: #374151;
+            border-left: 4px solid #8b5cf6;
+        }
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 12px;
+            }
+            .timeline-item .timeline-content {
+                width: calc(100% - 50px);
+                left: 40px;
+                text-align: left !important;
+            }
+            .timeline-item:nth-child(even) .timeline-content {
+                left: 40px;
+            }
+            .timeline-dot {
+                left: 12px;
+            }
+        }
+    </style>
+</head>
+<body class="text-gray-200">
+<div style="max-width:800px;margin:0 auto;padding:1rem 1.5rem;"><a href="/blog/" style="display:inline-flex;align-items:center;gap:0.5rem;color:#71717a;text-decoration:none;font-size:0.9rem;font-family:sans-serif;">← Quay lại Blog</a></div>
+
+    <div class="container mx-auto p-4 md:p-8">
+        <!-- Header -->
+        <header class="text-center mb-16">
+            <h1 class="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 mb-2">
+                Tương lai của BNB Chain
+            </h1>
+            <p class="text-lg md:text-xl text-gray-400">Lộ trình nửa cuối 2025 & 2026</p>
+            <p class="max-w-3xl mx-auto mt-4 text-gray-300">
+                Kết hợp tốc độ và sự đơn giản của một sàn giao dịch tập trung (CEX) với sự tự do, quyền truy cập và sở hữu của một chuỗi phi tập trung.
+            </p>
+        </header>
+
+        <!-- Timeline -->
+        <div class="relative timeline mx-auto max-w-5xl">
+
+            <!-- Item 1: H1 2025 Achievements -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h2 class="text-2xl font-bold text-yellow-400 mb-2">Thành tựu Nửa đầu 2025</h2>
+                    <p class="text-sm text-gray-400 mb-4">Nhanh hơn, rẻ hơn, công bằng hơn.</p>
+                    <div class="space-y-4 text-left">
+                        <div class="stat-card p-4 rounded-lg flex items-center gap-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-yellow-400"><path d="m13 19-6-6 6-6"></path><path d="m7 19-6-6 6-6"></path></svg>
+                            <div>
+                                <p class="font-bold text-lg text-white">0.75s</p>
+                                <p class="text-sm text-gray-300">Thời gian tạo khối</p>
+                            </div>
+                        </div>
+                        <div class="stat-card p-4 rounded-lg flex items-center gap-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-yellow-400"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                            <div>
+                                <p class="font-bold text-lg text-white">1.875s</p>
+                                <p class="text-sm text-gray-300">Thời gian hoàn tất giao dịch</p>
+                            </div>
+                        </div>
+                        <div class="stat-card p-4 rounded-lg flex items-center gap-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-yellow-400"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.16"></path></svg>
+                            <div>
+                                <p class="font-bold text-lg text-white">$0.01</p>
+                                <p class="text-sm text-gray-300">Phí gas trung bình</p>
+                            </div>
+                        </div>
+                        <div class="stat-card p-4 rounded-lg flex items-center gap-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-yellow-400"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12-2 2 4-4"></path></svg>
+                            <div>
+                                <p class="font-bold text-lg text-white">Giảm 95%</p>
+                                <p class="text-sm text-gray-300">Tấn công MEV độc hại</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2: Rest of 2025 Goals -->
+            <div class="timeline-item">
+                <div class="timeline-dot" style="background-color: #38bdf8;"></div>
+                <div class="timeline-content">
+                    <h2 class="text-2xl font-bold text-sky-400 mb-2">Mục tiêu Nửa cuối 2025</h2>
+                    <p class="text-sm text-gray-400 mb-4">Tăng sức mạnh lên đến 20 lần.</p>
+                    <div class="space-y-4 text-left">
+                        <div class="goal-card p-4 rounded-lg">
+                            <p class="font-bold text-lg text-white">Tăng giới hạn gas khối lên 1G</p>
+                            <p class="text-sm text-gray-300">Gấp 10 lần hiện tại, hỗ trợ tới <span class="font-bold text-sky-300">5,000 DEX swaps/giây</span>.</p>
+                        </div>
+                         <div class="goal-card p-4 rounded-lg">
+                            <p class="font-bold text-lg text-white">Client dựa trên Rust</p>
+                            <p class="text-sm text-gray-300">Cải thiện bộ nhớ, tăng tốc đồng bộ node để tăng thông lượng <span class="font-bold text-sky-300">10-20 lần</span>.</p>
+                        </div>
+                         <div class="goal-card p-4 rounded-lg">
+                            <p class="font-bold text-lg text-white">Super Instructions</p>
+                            <p class="text-sm text-gray-300">Gộp nhiều hoạt động thành một để tăng tốc các giao dịch phức tạp.</p>
+                        </div>
+                         <div class="goal-card p-4 rounded-lg">
+                            <p class="font-bold text-lg text-white">Tối ưu hóa StateDB</p>
+                            <p class="text-sm text-gray-300">Giảm 30% thời gian thực thi dành cho truy cập trạng thái, tăng tốc hiệu suất cache.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3: 2026 & Beyond -->
+            <div class="timeline-item">
+                <div class="timeline-dot" style="background-color: #8b5cf6;"></div>
+                <div class="timeline-content">
+                    <h2 class="text-2xl font-bold text-violet-400 mb-2">BNB Chain Thế hệ mới (2026+)</h2>
+                    <p class="text-sm text-gray-400 mb-4">Cạnh tranh với các nền tảng tập trung.</p>
+                    <div class="space-y-4 text-left">
+                        <div class="future-card p-4 rounded-lg flex items-start gap-4">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-violet-400 mt-1 flex-shrink-0"><path d="M4.5 12.5l3-3-3-3"></path><path d="M19.5 12.5l-3-3 3-3"></path><path d="M12 19.5l3-3-3-3"></path><path d="M12 4.5l3 3-3 3"></path></svg>
+                            <div>
+                                <p class="font-bold text-lg text-white">Xác nhận gần như tức thì</p>
+                                <p class="text-sm text-gray-300">Hoàn tất giao dịch <span class="font-bold text-violet-300">&lt; 150ms</span>.</p>
+                            </div>
+                        </div>
+                        <div class="future-card p-4 rounded-lg flex items-start gap-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-violet-400 mt-1 flex-shrink-0"><path d="m21.73 18-8-14a2 2 0 0 0-3.46 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg>
+                            <div>
+                                <p class="font-bold text-lg text-white">Tốc độ ngang tầm Nasdaq</p>
+                                <p class="text-sm text-gray-300">Xử lý <span class="font-bold text-violet-300">&gt; 20,000 TPS</span> cho các giao dịch phức tạp.</p>
+                            </div>
+                        </div>
+                        <div class="future-card p-4 rounded-lg flex items-start gap-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-violet-400 mt-1 flex-shrink-0"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle><path d="m20.66 17.66-3.32-3.32"></path></svg>
+                            <div>
+                                <p class="font-bold text-lg text-white">Quyền riêng tư cho mọi người</p>
+                                <p class="text-sm text-gray-300">Hỗ trợ riêng tư gốc cho giao dịch và hợp đồng thông minh.</p>
+                            </div>
+                        </div>
+                        <div class="future-card p-4 rounded-lg flex items-start gap-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-violet-400 mt-1 flex-shrink-0"><path d="M18 8V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"></path><path d="M22 12H12"></path><path d="m15 9-3 3 3 3"></path></svg>
+                            <div>
+                                <p class="font-bold text-lg text-white">Đơn giản như Web2</p>
+                                <p class="text-sm text-gray-300">Trải nghiệm người dùng trực quan với quyền kiểm soát tài sản của Web3.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer / Call to action -->
+        <footer class="text-center mt-16 pt-8 border-t border-gray-700">
+            <h3 class="text-3xl font-bold text-white mb-4">Cùng nhau Xây dựng Tương lai</h3>
+            <p class="max-w-2xl mx-auto text-gray-400 mb-6">
+                Chúng tôi mời các nhà phát triển, nhà nghiên cứu và đối tác hệ sinh thái cùng tham gia định hình thế hệ tiếp theo của cơ sở hạ tầng blockchain.
+            </p>
+            <p class="text-lg font-semibold text-yellow-400">Chúng ta chỉ mới bắt đầu.</p>
+        </footer>
+
+    </div>
+    <div style="text-align: center; padding: 3rem 0;">
+        <a href="/" style="display: inline-block; background-color: #3498db; color: white; padding: 0.8rem 1.8rem; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: 2px solid transparent; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            Quay lại Trang Blog
+        </a>
+    </div>
+
+</body>
+</html>

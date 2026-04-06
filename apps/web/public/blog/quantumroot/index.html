@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: QuantumRoot - Lá Chắn Lượng Tử cho Bitcoin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #F3F8FF;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 350px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+                max-height: 400px;
+            }
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.07), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .flow-arrow {
+            font-size: 2.5rem;
+            color: #0079FF;
+            font-weight: bold;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+<div style="max-width:800px;margin:0 auto;padding:1rem 1.5rem;"><a href="/blog/" style="display:inline-flex;align-items:center;gap:0.5rem;color:#71717a;text-decoration:none;font-size:0.9rem;font-family:sans-serif;">← Quay lại Blog</a></div>
+
+    <div class="container mx-auto p-4 md:p-8 max-w-5xl">
+
+        <header class="text-center my-8 md:my-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-[#004AAD]">QuantumRoot: Lá Chắn Lượng Tử</h1>
+            <p class="text-lg md:text-xl mt-3 text-gray-600">Bảo vệ tương lai của Bitcoin trước mối đe dọa từ máy tính lượng tử.</p>
+        </header>
+
+        <main>
+            <section id="threat" class="card text-center">
+                <h2 class="text-2xl font-bold text-[#004AAD] mb-4">Cơn Bão Đang Đến Gần</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto mb-6">Máy tính lượng tử trong tương lai có khả năng phá vỡ các hệ thống mật mã nền tảng của Bitcoin (ECDSA), đe dọa đến an toàn của hàng triệu ví. Đây không còn là khoa học viễn tưởng mà là một thách thức công nghệ có thể dự báo trước.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                    <div class="text-left p-6 bg-red-50 rounded-lg border border-red-200">
+                         <p class="text-6xl font-extrabold text-red-600">100%</p>
+                         <p class="text-xl font-semibold text-red-800">Rủi ro cho các ví cũ</p>
+                         <p class="mt-2 text-gray-700">Các ví Bitcoin có khóa công khai bị lộ (ví đã từng chi tiêu) sẽ hoàn toàn không được bảo vệ trước thuật toán Shor của máy tính lượng tử.</p>
+                    </div>
+                    <div class="text-left p-6 bg-blue-50 rounded-lg border border-blue-200">
+                        <p class="text-6xl font-extrabold text-[#004AAD]">🛡️</p>
+                         <p class="text-xl font-semibold text-[#004AAD]">Giải Pháp Phòng Thủ</p>
+                         <p class="mt-2 text-gray-700">Cộng đồng đang phát triển các phương pháp mật mã kháng lượng tử (PQC) để nâng cấp và bảo vệ mạng lưới cho tương lai.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="solution" class="card">
+                 <h2 class="text-2xl text-center font-bold text-[#004AAD] mb-2">Giải Pháp "Lá Chắn Lai" của QuantumRoot</h2>
+                 <p class="text-gray-600 text-center max-w-3xl mx-auto mb-8">QuantumRoot không thay thế hoàn toàn công nghệ cũ. Thay vào đó, nó tạo ra một "lá chắn" bảo mật bằng cách kết hợp chữ ký Schnorr hiệu quả của Taproot với chữ ký Lamport cồng kềnh nhưng có khả năng kháng lượng tử.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="font-bold text-lg mb-2 text-[#0079FF]">Cấu trúc một địa chỉ QuantumRoot</h3>
+                        <p class="text-gray-600 mb-4">Biểu đồ thể hiện một địa chỉ QuantumRoot được cấu thành từ hai phần. Phần lớn là chữ ký Lamport để đảm bảo tính kháng lượng tử, trong khi phần nhỏ hơn là chữ ký Schnorr để duy trì tính hiệu quả và tương thích ngược.</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center"><span class="w-4 h-4 rounded-full bg-[#004AAD] mr-3"></span>Chữ ký Lamport (Kháng lượng tử)</li>
+                            <li class="flex items-center"><span class="w-4 h-4 rounded-full bg-[#A3D8FF] mr-3"></span>Chữ ký Schnorr (Tiêu chuẩn)</li>
+                        </ul>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="solutionChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <section id="tradeoffs" class="card">
+                <h2 class="text-2xl text-center font-bold text-[#004AAD] mb-2">Sự Đánh Đổi: An Toàn vs. Chi Phí</h2>
+                <p class="text-gray-600 text-center max-w-3xl mx-auto mb-8">Việc tăng cường bảo mật lượng tử phải trả giá bằng kích thước giao dịch và chi phí. Một giao dịch QuantumRoot lớn hơn và đắt hơn đáng kể so với một giao dịch Taproot thông thường.</p>
+                <div class="chart-container h-[400px] md:h-[450px] max-h-[450px]">
+                     <canvas id="tradeoffsChart"></canvas>
+                </div>
+                 <p class="text-center text-sm text-gray-500 mt-4">Biểu đồ so sánh kích thước giao dịch (ước tính) giữa một giao dịch Taproot tiêu chuẩn và một giao dịch QuantumRoot. Kích thước lớn hơn trực tiếp dẫn đến phí giao dịch cao hơn.</p>
+            </section>
+
+            <section id="howitworks" class="card">
+                <h2 class="text-2xl text-center font-bold text-[#004AAD] mb-2">Quy Trình Hoạt Động</h2>
+                <p class="text-gray-600 text-center max-w-3xl mx-auto mb-8">Quy trình của QuantumRoot bao gồm hai bước chính: tạo một địa chỉ kết hợp và chi tiêu bằng cách cung cấp cả hai loại chữ ký, đảm bảo an toàn tuyệt đối.</p>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8">
+                    <div class="text-center border-2 border-dashed border-[#A3D8FF] p-6 rounded-xl w-full md:w-1/3">
+                        <p class="text-5xl mb-3">🔑</p>
+                        <h3 class="font-bold text-lg mb-2 text-[#0079FF]">Bước 1: Tạo Địa Chỉ</h3>
+                        <p class="text-gray-600 text-sm">Kết hợp khóa công khai Schnorr và khóa công khai Lamport để tạo ra một địa chỉ QuantumRoot duy nhất để nhận Bitcoin.</p>
+                    </div>
+
+                    <div class="flow-arrow hidden md:block">&rarr;</div>
+                     <div class="flow-arrow block md:hidden">&darr;</div>
+
+                    <div class="text-center border-2 border-dashed border-[#A3D8FF] p-6 rounded-xl w-full md:w-1/3">
+                         <p class="text-5xl mb-3">💸</p>
+                        <h3 class="font-bold text-lg mb-2 text-[#0079FF]">Bước 2: Chi Tiêu</h3>
+                        <p class="text-gray-600 text-sm">Khi gửi Bitcoin, giao dịch phải được ký bằng cả hai chữ ký (Schnorr và Lamport). Mạng lưới sẽ xác thực cả hai để phê duyệt giao dịch.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="conclusion" class="card bg-[#004AAD] text-white text-center">
+                 <h2 class="text-2xl font-bold mb-4">Con Đường Phía Trước</h2>
+                <p class="max-w-3xl mx-auto">QuantumRoot là một đề xuất thực tế, cho thấy cộng đồng Bitcoin đang chuẩn bị một cách nghiêm túc cho tương lai. Dù có những nhược điểm về chi phí và sự phức tạp, đây là một bước đi tự nguyện và cần thiết để bảo vệ các khoản đầu tư dài hạn, đảm bảo sự bền vững của mạng lưới trước những thách thức công nghệ sắp tới.</p>
+            </section>
+        </main>
+
+        <footer class="text-center py-6">
+            <p class="text-sm text-gray-500">Infographic được tạo dựa trên phân tích bài viết về QuantumRoot. Không chứa SVG hay Mermaid JS.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const chartJsTooltip = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                              return label.join(' ');
+                            } else {
+                              return label;
+                            }
+                        }
+                    }
+                }
+            }
+        };
+
+        const solutionCtx = document.getElementById('solutionChart');
+        new Chart(solutionCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Chữ ký Lamport (Kháng lượng tử)', 'Chữ ký Schnorr (Tiêu chuẩn)'],
+                datasets: [{
+                    label: 'Cấu trúc địa chỉ',
+                    data: [90, 10],
+                    backgroundColor: [
+                        '#004AAD',
+                        '#A3D8FF'
+                    ],
+                    borderColor: '#FFFFFF',
+                    borderWidth: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: chartJsTooltip.plugins.tooltip
+                },
+                cutout: '70%'
+            }
+        });
+
+        const tradeoffsCtx = document.getElementById('tradeoffsChart');
+        new Chart(tradeoffsCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Giao dịch Taproot Tiêu Chuẩn', 'Giao dịch QuantumRoot'],
+                datasets: [{
+                    label: 'Kích thước Giao dịch Ước tính (vBytes)',
+                    data: [300, 4500],
+                    backgroundColor: [
+                        '#A3D8FF',
+                        '#004AAD'
+                    ],
+                    borderColor: [
+                        '#A3D8FF',
+                        '#004AAD'
+                    ],
+                    borderWidth: 1,
+                    borderRadius: 5
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        grid: {
+                            color: '#e0e0e0',
+                            borderColor: '#e0e0e0',
+                        },
+                        ticks: {
+                           color: '#333'
+                        }
+                    },
+                    y: {
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                           color: '#333',
+                           font: {
+                               size: 14
+                           }
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                     tooltip: chartJsTooltip.plugins.tooltip
+                }
+            }
+        });
+
+    </script>
+    <div style="text-align: center; padding: 3rem 0;">
+        <a href="/" style="display: inline-block; background-color: #3498db; color: white; padding: 0.8rem 1.8rem; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: 2px solid transparent; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            Quay lại Trang Blog
+        </a>
+    </div>
+
+</body>
+</html>

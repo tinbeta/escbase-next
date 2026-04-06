@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: Arc - Blockchain Doanh Nghiệp của Circle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F0F4F8;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 600px;
+            height: 320px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #366E8A, #003F5C);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .flowchart-arrow {
+            position: relative;
+            width: 100%;
+            height: 2px;
+            background-color: #7A9EAF;
+        }
+        .flowchart-arrow::after {
+            content: '';
+            position: absolute;
+            right: -1px;
+            top: -5px;
+            width: 0;
+            height: 0;
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+            border-left: 8px solid #7A9EAF;
+        }
+        .flowchart-arrow-down {
+            position: relative;
+            width: 2px;
+            height: 100%;
+            background-color: #7A9EAF;
+            margin: 0 auto;
+        }
+        .flowchart-arrow-down::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: -5px;
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 8px solid #7A9EAF;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+<div style="max-width:800px;margin:0 auto;padding:1rem 1.5rem;"><a href="/blog/" style="display:inline-flex;align-items:center;gap:0.5rem;color:#71717a;text-decoration:none;font-size:0.9rem;font-family:sans-serif;">← Quay lại Blog</a></div>
+
+    <div class="container mx-auto p-4 md:p-8 max-w-7xl">
+
+        <header class="text-center mb-12 md:mb-16">
+            <h1 class="text-4xl md:text-6xl font-black gradient-text mb-2">ARC</h1>
+            <p class="text-xl md:text-2xl font-semibold text-gray-700">Blockchain Layer-1 của Circle được Xây Dựng cho Tài Chính Toàn Cầu</p>
+            <p class="text-lg text-gray-500 mt-4 max-w-3xl mx-auto">Một phân tích chuyên sâu về cơ sở hạ tầng chiến lược của Circle nhằm định hình lại thị trường thanh toán xuyên biên giới trị giá <span class="font-bold text-blue-900">$190 nghìn tỷ</span>.</p>
+        </header>
+
+        <main class="space-y-12 md:space-y-20">
+
+            <section id="features">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-gray-800">Sự Khác Biệt của Arc: Xây Dựng cho Doanh Nghiệp</h2>
+                    <p class="mt-2 text-gray-600 max-w-2xl mx-auto">Arc giải quyết các vấn đề cốt lõi mà các tổ chức phải đối mặt bằng một bộ tính năng được thiết kế riêng.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-[#003F5C] text-center">
+                        <div class="text-4xl mb-3">💵</div>
+                        <h3 class="text-lg font-bold text-[#003F5C]">Phí Gas Ổn Định</h3>
+                        <p class="text-sm text-gray-600 mt-1">Sử dụng USDC làm phí gas giúp chi phí giao dịch có thể dự đoán được, loại bỏ sự biến động của các token gốc.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-[#366E8A] text-center">
+                        <div class="text-4xl mb-3">⚡️</div>
+                        <h3 class="text-lg font-bold text-[#366E8A]">Hoàn Tất Tức Thì</h3>
+                        <p class="text-sm text-gray-600 mt-1">Các giao dịch được xác nhận và không thể đảo ngược trong vòng chưa đầy một giây, điều cần thiết cho các thị trường vốn.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-[#7A9EAF] text-center">
+                        <div class="text-4xl mb-3">💱</div>
+                        <h3 class="text-lg font-bold text-[#7A9EAF]">Công Cụ FX Tích Hợp</h3>
+                        <p class="text-sm text-gray-600 mt-1">Hệ thống RFQ cấp tổ chức cho phép hoán đổi stablecoin hiệu quả và thanh khoản trực tiếp trên chuỗi.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-[#77DD77] text-center">
+                        <div class="text-4xl mb-3">🛡️</div>
+                        <h3 class="text-lg font-bold text-[#77DD77]">Quyền Riêng Tư Tuân Thủ</h3>
+                        <p class="text-sm text-gray-600 mt-1">Cung cấp quyền riêng tư giao dịch tùy chọn với "khóa xem" để kiểm toán và tuân thủ quy định.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="performance">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-bold text-center mb-1">So Sánh Hiệu Suất Chuỗi</h3>
+                        <p class="text-center text-sm text-gray-500 mb-4">Arc được thiết kế để vượt trội so với các blockchain công cộng về tốc độ và khả năng xác định.</p>
+                        <div class="chart-container">
+                            <canvas id="performanceChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="text-center md:text-left">
+                        <h2 class="text-3xl font-bold text-gray-800">Nền Tảng Công Nghệ Malachite</h2>
+                        <p class="mt-2 text-gray-600">Sức mạnh của Arc đến từ Malachite, một cơ chế đồng thuận BFT thế hệ mới được viết bằng Rust, cung cấp tốc độ, bảo mật và độ tin cậy được chứng minh bằng toán học.</p>
+                        <div class="mt-6 flex flex-col sm:flex-row justify-center md:justify-start gap-6">
+                            <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                                <p class="text-sm font-medium text-gray-500">Mục tiêu TPS</p>
+                                <p class="text-4xl font-extrabold gradient-text">10.000+</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                                <p class="text-sm font-medium text-gray-500">Thời gian Hoàn tất</p>
+                                <p class="text-4xl font-extrabold gradient-text">&lt;350ms</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="strategy">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-gray-800">Động Thái Chiến Lược của Circle</h2>
+                    <p class="mt-2 text-gray-600 max-w-2xl mx-auto">Arc là một phần quan trọng trong chiến lược tích hợp theo chiều dọc của Circle để xây dựng một hệ sinh thái tài chính toàn diện.</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
+                    <div class="lg:col-span-3 bg-white p-6 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-bold text-center mb-4">Vòng Lặp Tích Cực của Hệ Sinh Thái Circle</h3>
+                        <div class="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 md:space-x-2">
+                            <div class="text-center p-3 bg-blue-50 rounded-lg w-full md:w-auto">
+                                <p class="font-bold text-sm text-[#003F5C]">TÀI SẢN</p>
+                                <p class="text-xs">USDC, EURC, USYC</p>
+                            </div>
+                            <div class="w-full md:w-16 h-4 md:h-auto flex items-center justify-center">
+                                <div class="flowchart-arrow hidden md:block"></div>
+                                <div class="flowchart-arrow-down w-2 h-6 md:hidden"></div>
+                            </div>
+                            <div class="text-center p-3 bg-blue-50 rounded-lg w-full md:w-auto">
+                                <p class="font-bold text-sm text-[#003F5C]">THANH TOÁN</p>
+                                <p class="text-xs">Circle Payment Network (CPN)</p>
+                            </div>
+                            <div class="w-full md:w-16 h-4 md:h-auto flex items-center justify-center">
+                                <div class="flowchart-arrow hidden md:block"></div>
+                                <div class="flowchart-arrow-down w-2 h-6 md:hidden"></div>
+                            </div>
+                            <div class="text-center p-3 bg-[#77DD77] text-white rounded-lg w-full md:w-auto shadow-inner">
+                                <p class="font-bold text-sm">CƠ SỞ HẠ TẦNG</p>
+                                <p class="text-xs font-semibold">ARC BLOCKCHAIN</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-end mt-4 md:mt-0 md:mr-12">
+                            <div class="w-2 h-6 flowchart-arrow-down"></div>
+                        </div>
+                        <div class="flex flex-col-reverse md:flex-row items-center justify-between space-y-4 space-y-reverse md:space-y-0 md:space-x-2 mt-4">
+                             <div class="text-center p-3 bg-blue-50 rounded-lg w-full md:w-auto">
+                                <p class="font-bold text-sm text-[#003F5C]">NHÀ PHÁT TRIỂN</p>
+                                <p class="text-xs">APIs, Wallets, CCTP</p>
+                            </div>
+                            <div class="w-full md:w-32 h-4 md:h-auto flex items-center justify-center">
+                                <div class="flowchart-arrow hidden md:block"></div>
+                                <div class="flowchart-arrow-down w-2 h-6 md:hidden"></div>
+                            </div>
+                            <div class="w-full md:w-auto"></div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-2 bg-white p-6 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-bold text-center mb-1">Đa Dạng Hóa Doanh Thu</h3>
+                         <p class="text-center text-sm text-gray-500 mb-4">Arc tạo ra doanh thu từ phí, giảm sự phụ thuộc vào lãi suất từ dự trữ.</p>
+                        <div class="chart-container h-64 md:h-72">
+                            <canvas id="revenueChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="governance">
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+                    <div class="text-center mb-8">
+                        <h2 class="text-3xl font-bold text-gray-800">Sự Đánh Đổi: Consortium so với Công Cộng</h2>
+                        <p class="mt-2 text-gray-600 max-w-3xl mx-auto">Arc hy sinh một phần tính phi tập trung để đạt được hiệu suất, khả năng kiểm soát và sự tuân thủ mà các tổ chức tài chính yêu cầu.</p>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full min-w-max text-sm text-left">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="p-3 font-semibold text-gray-600">Tính Năng</th>
+                                    <th class="p-3 font-semibold text-gray-600 text-center">Blockchain Công Cộng (vd: Ethereum)</th>
+                                    <th class="p-3 font-semibold text-white bg-[#003F5C] text-center rounded-t-lg">Arc (Mô hình Consortium)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y">
+                                <tr class="bg-white">
+                                    <td class="p-3 font-medium">Quản trị</td>
+                                    <td class="p-3 text-center">Không cần cấp phép</td>
+                                    <td class="p-3 text-center font-bold text-[#003F5C]">Cần cấp phép</td>
+                                </tr>
+                                <tr class="bg-gray-50/50">
+                                    <td class="p-3 font-medium">Trình xác thực</td>
+                                    <td class="p-3 text-center">Mở cho tất cả</td>
+                                    <td class="p-3 text-center font-bold text-[#003F5C]">Được lựa chọn</td>
+                                </tr>
+                                <tr class="bg-white">
+                                    <td class="p-3 font-medium">Thân thiện với Quy định</td>
+                                    <td class="p-3 text-center">Thấp</td>
+                                    <td class="p-3 text-center font-bold text-[#003F5C]">Rất cao</td>
+                                </tr>
+                                <tr class="bg-gray-50/50">
+                                    <td class="p-3 font-medium">Chống Kiểm duyệt</td>
+                                    <td class="p-3 text-center">Rất cao</td>
+                                    <td class="p-3 text-center font-bold text-[#003F5C]">Thấp hơn (có thể đảo ngược)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="market">
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="order-2 md:order-1">
+                        <h2 class="text-3xl font-bold text-gray-800">Định Vị Thị Trường & Các Trường Hợp Sử Dụng</h2>
+                        <p class="mt-2 text-gray-600">Arc không cạnh tranh trực tiếp với các L1 công cộng mà nhắm vào phân khúc doanh nghiệp có giá trị cao.</p>
+                        <ul class="mt-6 space-y-4">
+                            <li class="flex items-start">
+                                <span class="text-green-500 font-bold mr-3 mt-1">✓</span>
+                                <div>
+                                    <h4 class="font-semibold">Thanh Toán Xuyên Biên Giới</h4>
+                                    <p class="text-sm text-gray-600">Cung cấp giải pháp thay thế nhanh hơn, rẻ hơn cho các hệ thống như SWIFT.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 font-bold mr-3 mt-1">✓</span>
+                                <div>
+                                    <h4 class="font-semibold">Thị Trường Vốn trên Chuỗi</h4>
+                                    <p class="text-sm text-gray-600">Cho phép thanh toán và bù trừ tức thì cho các tài sản được token hóa.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 font-bold mr-3 mt-1">✓</span>
+                                <div>
+                                    <h4 class="font-semibold">Tài Sản Thực Được Token Hóa (RWA)</h4>
+                                    <p class="text-sm text-gray-600">Một nền tảng tuân thủ để phát hành và giao dịch RWA.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="order-1 md:order-2 bg-white p-6 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-bold text-center mb-1">Phân Tích Cạnh Tranh</h3>
+                        <p class="text-center text-sm text-gray-500 mb-4">So sánh Arc với các nền tảng khác trên các thuộc tính chính.</p>
+                        <div class="chart-container">
+                            <canvas id="competitorChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="roadmap">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-gray-800">Lộ Trình Phía Trước</h2>
+                    <p class="mt-2 text-gray-600">Các cột mốc quan trọng trong quá trình phát triển hệ sinh thái của Circle.</p>
+                </div>
+                <div class="relative">
+                    <div class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-300 hidden md:block"></div>
+                    <div class="space-y-12 md:space-y-0">
+                        <div class="md:grid md:grid-cols-2 md:gap-8 items-center">
+                            <div class="md:text-right md:pr-8">
+                                <p class="text-sm text-gray-500">Tháng 5, 2025</p>
+                                <h4 class="font-bold text-lg text-[#003F5C]">Ra mắt Circle Payment Network (CPN)</h4>
+                            </div>
+                            <div class="relative md:pl-8">
+                                <div class="absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 top-1/2 -translate-y-1/2 w-4 h-4 bg-[#003F5C] rounded-full border-4 border-white shadow"></div>
+                            </div>
+                        </div>
+                        <div class="md:grid md:grid-cols-2 md:gap-8 items-center">
+                            <div class="md:col-start-2 md:pl-8">
+                                <p class="text-sm text-gray-500">Tháng 6, 2025</p>
+                                <h4 class="font-bold text-lg text-[#366E8A]">Circle IPO</h4>
+                            </div>
+                            <div class="relative md:col-start-1 md:row-start-1 md:pr-8">
+                                 <div class="absolute left-1/2 -translate-x-1/2 md:right-0 md:left-auto md:translate-x-0 top-1/2 -translate-y-1/2 w-4 h-4 bg-[#366E8A] rounded-full border-4 border-white shadow"></div>
+                            </div>
+                        </div>
+                         <div class="md:grid md:grid-cols-2 md:gap-8 items-center">
+                            <div class="md:text-right md:pr-8">
+                                <p class="text-sm text-gray-500">Quý 2, 2025</p>
+                                <h4 class="font-bold text-lg text-[#7A9EAF]">Công bố Arc Blockchain</h4>
+                            </div>
+                            <div class="relative md:pl-8">
+                                <div class="absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 top-1/2 -translate-y-1/2 w-4 h-4 bg-[#7A9EAF] rounded-full border-4 border-white shadow"></div>
+                            </div>
+                        </div>
+                        <div class="md:grid md:grid-cols-2 md:gap-8 items-center">
+                            <div class="md:col-start-2 md:pl-8">
+                                <p class="text-sm text-gray-500">Mùa thu, 2025</p>
+                                <h4 class="font-bold text-lg text-[#77DD77]">Ra mắt Public Testnet của Arc</h4>
+                            </div>
+                             <div class="relative md:col-start-1 md:row-start-1 md:pr-8">
+                                 <div class="absolute left-1/2 -translate-x-1/2 md:right-0 md:left-auto md:translate-x-0 top-1/2 -translate-y-1/2 w-4 h-4 bg-[#77DD77] rounded-full border-4 border-white shadow"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="text-center mt-16 pt-8 border-t border-gray-200">
+            <p class="text-sm text-gray-500">&copy; 2025 Infographic được tạo dựa trên báo cáo phân tích về Arc của Circle.</p>
+        </footer>
+    </div>
+
+    <script>
+        const wrapLabel = (label, maxLength = 16) => {
+            if (label.length <= maxLength) {
+                return label;
+            }
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + ' ' + word).trim().length > maxLength) {
+                    lines.push(currentLine.trim());
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            }
+            if (currentLine) {
+                lines.push(currentLine.trim());
+            }
+            return lines;
+        };
+        
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            return Array.isArray(label) ? label.join(' ') : label;
+        };
+
+        const sharedTooltipConfig = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    }
+                }
+            }
+        };
+
+        const palette = {
+            darkBlue: '#003F5C',
+            midBlue: '#366E8A',
+            lightBlue: '#7A9EAF',
+            accentGreen: '#77DD77',
+            white: '#FFFFFF',
+            gray: '#6B7280'
+        };
+
+        const performanceCtx = document.getElementById('performanceChart').getContext('2d');
+        new Chart(performanceCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Thời gian Hoàn tất (giây)', 'TPS (Giao dịch/giây)'],
+                datasets: [{
+                    label: 'Arc (Mục tiêu)',
+                    data: [0.35, 10000],
+                    backgroundColor: palette.darkBlue,
+                    borderColor: palette.darkBlue,
+                    borderWidth: 1
+                }, {
+                    label: 'Solana (Thực tế)',
+                    data: [12.8, 4000],
+                    backgroundColor: palette.midBlue,
+                    borderColor: palette.midBlue,
+                    borderWidth: 1
+                }, {
+                    label: 'Ethereum (L1 Thực tế)',
+                    data: [780, 15],
+                    backgroundColor: palette.lightBlue,
+                    borderColor: palette.lightBlue,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        type: 'logarithmic',
+                        ticks: {
+                           color: palette.gray
+                        },
+                        grid: {
+                            color: '#E5E7EB'
+                        }
+                    },
+                    x: {
+                       ticks: {
+                           color: palette.gray
+                        },
+                        grid: {
+                            display: false
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: {
+                           color: palette.gray
+                        }
+                    },
+                    tooltip: sharedTooltipConfig.plugins.tooltip
+                }
+            }
+        });
+
+        const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+        new Chart(revenueCtx, {
+            type: 'doughnut',
+            data: {
+                labels: [wrapLabel('Doanh thu Q2 2025'), wrapLabel('Chi phí IPO một lần')],
+                datasets: [{
+                    data: [658, 591],
+                    backgroundColor: [palette.darkBlue, palette.lightBlue],
+                    borderColor: [palette.white],
+                    borderWidth: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '60%',
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                           color: palette.gray,
+                           boxWidth: 12,
+                           padding: 20
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback,
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed !== null) {
+                                    label += new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', notation: 'compact' }).format(context.parsed * 1000000);
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        const competitorCtx = document.getElementById('competitorChart').getContext('2d');
+        new Chart(competitorCtx, {
+            type: 'radar',
+            data: {
+                labels: [wrapLabel('Hiệu Suất'), wrapLabel('Phi Tập Trung'), wrapLabel('Tính năng Doanh nghiệp'), wrapLabel('Khả năng Tương tác Công cộng')],
+                datasets: [{
+                    label: 'Arc',
+                    data: [9, 3, 9, 7],
+                    backgroundColor: 'rgba(0, 63, 92, 0.2)',
+                    borderColor: palette.darkBlue,
+                    pointBackgroundColor: palette.darkBlue,
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: palette.darkBlue
+                }, {
+                    label: 'Solana',
+                    data: [8, 8, 3, 9],
+                    backgroundColor: 'rgba(54, 110, 138, 0.2)',
+                    borderColor: palette.midBlue,
+                    pointBackgroundColor: palette.midBlue,
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: palette.midBlue
+                },
+                {
+                    label: 'Arbitrum',
+                    data: [6, 7, 4, 10],
+                    backgroundColor: 'rgba(122, 158, 175, 0.2)',
+                    borderColor: palette.lightBlue,
+                    pointBackgroundColor: palette.lightBlue,
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: palette.lightBlue
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        angleLines: {
+                            color: '#E5E7EB'
+                        },
+                        grid: {
+                            color: '#E5E7EB'
+                        },
+                        pointLabels: {
+                            color: palette.gray,
+                            font: {
+                                size: 10
+                            }
+                        },
+                        ticks: {
+                            backdropColor: 'rgba(255, 255, 255, 0.75)',
+                            color: palette.gray,
+                            stepSize: 2
+                        },
+                        min: 0,
+                        max: 10
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: {
+                           color: palette.gray
+                        }
+                    },
+                    tooltip: sharedTooltipConfig.plugins.tooltip
+                }
+            }
+        });
+    </script>
+    <div style="text-align: center; padding: 3rem 0;">
+        <a href="/" style="display: inline-block; background-color: #3498db; color: white; padding: 0.8rem 1.8rem; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: 2px solid transparent; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            Quay lại Trang Blog
+        </a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic Phân Tích Sâu: Sonic Blockchain</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 640px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        @media (min-width: 1024px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .kpi-card {
+            background: linear-gradient(135deg, #1A2942 0%, #293C5A 100%);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            color: white;
+            text-align: center;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .kpi-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(41, 60, 90, 0.2), 0 10px 10px -5px rgba(41, 60, 90, 0.1);
+        }
+        .kpi-value {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #FC913A;
+            line-height: 1.2;
+        }
+        .kpi-label {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #E1F5C4;
+            margin-top: 0.5rem;
+        }
+        .section-card {
+            background-color: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            margin-bottom: 2rem;
+        }
+        h2 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #1A2942;
+            margin-bottom: 0.5rem;
+        }
+        p.section-intro {
+            color: #4A5568;
+            margin-bottom: 1.5rem;
+            max-width: 48rem;
+        }
+        .flowchart-node {
+            background-color: #e1f5c4;
+            color: #1A2942;
+            padding: 1rem 1.5rem;
+            border-radius: 0.75rem;
+            text-align: center;
+            font-weight: 600;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border: 2px solid #FC913A;
+        }
+        .flowchart-arrow {
+            font-size: 2rem;
+            color: #FC913A;
+            margin: 0.5rem 0;
+            font-weight: bold;
+        }
+        .swot-quadrant {
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+        }
+        .swot-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .swot-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+<div style="max-width:800px;margin:0 auto;padding:1rem 1.5rem;"><a href="/blog/" style="display:inline-flex;align-items:center;gap:0.5rem;color:#71717a;text-decoration:none;font-size:0.9rem;font-family:sans-serif;">← Quay lại Blog</a></div>
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#FF4E50] to-[#FC913A]">
+                Phân Tích Sâu Dự Án Sonic
+            </h1>
+            <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                Một cái nhìn toàn cảnh về kiến trúc công nghệ, hiệu suất và vị thế cạnh tranh của blockchain L1 hiệu suất cao, tương thích EVM.
+            </p>
+        </header>
+
+        <section class="section-card">
+            <h2 class="text-center">Các Chỉ Số Hiệu Suất Nổi Bật</h2>
+            <p class="section-intro text-center mx-auto">
+                Sonic định vị mình là một giải pháp hàng đầu về tốc độ và chi phí, giải quyết các vấn đề cốt lõi mà nhiều mạng lưới hiện tại đối mặt.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="kpi-card">
+                    <div class="kpi-value">>10,000</div>
+                    <div class="kpi-label">Giao dịch mỗi giây (TPS)</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-value">&lt;1 Giây</div>
+                    <div class="kpi-label">Thời gian Hoàn tất Giao dịch</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-value">$0.001</div>
+                    <div class="kpi-label">Chi phí Giao dịch Trung bình</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-card md:col-span-2">
+            <h2 class="text-center">Kiến Trúc Công Nghệ Cốt Lõi</h2>
+            <p class="section-intro text-center mx-auto">
+                Sức mạnh của Sonic đến từ sự kết hợp của ba thành phần công nghệ tiên tiến, được thiết kế để tối ưu hóa hiệu suất từ lớp đồng thuận đến lớp lưu trữ.
+            </p>
+            <div class="flex flex-col items-center">
+                <div class="flowchart-node w-full md:w-3/4 lg:w-1/2">
+                    <strong>Động cơ Đồng thuận: Lachesis aBFT & DAG</strong>
+                    <p class="text-sm font-normal mt-1">Sử dụng Đồ thị Không chu trình có Hướng (DAG) để xử lý giao dịch song song, loại bỏ nút thắt cổ chai.</p>
+                </div>
+                <div class="flowchart-arrow">↓</div>
+                <div class="flowchart-node w-full md:w-3/4 lg:w-1/2">
+                    <strong>Lớp Thực thi: SonicVM</strong>
+                    <p class="text-sm font-normal mt-1">Tương thích 100% với EVM, cho phép triển khai hợp đồng thông minh Solidity mà không cần sửa đổi.</p>
+                </div>
+                <div class="flowchart-arrow">↓</div>
+                <div class="flowchart-node w-full md:w-3/4 lg:w-1/2">
+                    <strong>Lớp Lưu trữ: SonicDB & Live Pruning</strong>
+                    <p class="text-sm font-normal mt-1">Giảm 90% yêu cầu lưu trữ cho node bằng cách tự động cắt tỉa dữ liệu lịch sử, tăng tính phi tập trung.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-card">
+            <h2 class="text-center">So Sánh Hiệu Suất: Sonic và các đối thủ</h2>
+             <p class="section-intro text-center mx-auto">
+                So với các Layer 1 hàng đầu, Sonic thể hiện sự vượt trội về thông lượng và tốc độ hoàn tất giao dịch, đặt mình vào vị thế cạnh tranh trực tiếp với các chuỗi nhanh nhất thị trường.
+            </p>
+            <div class="chart-container">
+                <canvas id="performanceChart"></canvas>
+            </div>
+        </section>
+
+        <section class="section-card">
+            <h2 class="text-center">Mô Hình Kinh Tế Đột Phá: Fee Monetization</h2>
+            <p class="section-intro text-center mx-auto">
+                Điểm khác biệt chiến lược nhất của Sonic là mô hình chia sẻ doanh thu phí, biến phí gas thành nguồn thu nhập trực tiếp cho các nhà phát triển dApp.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="chart-container h-64 sm:h-80">
+                    <canvas id="feeChart"></canvas>
+                </div>
+                <div class="text-center md:text-left">
+                    <h3 class="text-2xl font-bold text-[#FC913A]">90% cho Nhà phát triển</h3>
+                    <p class="text-gray-600 mt-2">
+                        Một cơ chế khuyến khích cực kỳ mạnh mẽ để thu hút các dự án, đặc biệt là trong các lĩnh vực có khối lượng giao dịch cao như GameFi và SocialFi, thúc đẩy sự sáng tạo và tăng trưởng hệ sinh thái.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-card">
+            <h2 class="text-center">Hệ Sinh Thái Hiện Tại: Các Dự Án Nổi Bật</h2>
+            <p class="section-intro text-center mx-auto">
+                Dù còn non trẻ, hệ sinh thái Sonic đã có những dự án cốt lõi trong các lĩnh vực quan trọng như DEX và Lending, tạo ra phí và thu hút người dùng ban đầu. Biểu đồ dưới đây thể hiện doanh thu phí trong 30 ngày của các dApp hàng đầu.
+            </p>
+            <div class="chart-container">
+                <canvas id="dappFeeChart"></canvas>
+            </div>
+        </section>
+
+        <section class="section-card">
+            <h2 class="text-center">Thách Thức Phía Trước: Cuộc Chiến TVL</h2>
+            <p class="section-intro text-center mx-auto">
+                Công nghệ vượt trội là chưa đủ. Thách thức lớn nhất của Sonic là thu hẹp khoảng cách khổng lồ về Tổng giá trị bị khóa (TVL) và hiệu ứng mạng lưới so với các gã khổng lồ đã thành danh.
+            </p>
+            <div class="chart-container">
+                <canvas id="tvlChart"></canvas>
+            </div>
+        </section>
+
+        <section class="section-card">
+            <h2 class="text-center">Phân Tích SWOT: Triển Vọng Tương Lai</h2>
+            <p class="section-intro text-center mx-auto">
+                Một cái nhìn tổng quan về các thế mạnh, điểm yếu, cơ hội và thách thức mà Sonic phải đối mặt trên con đường chinh phục thị trường.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="swot-quadrant bg-green-100 border-l-4 border-green-500">
+                    <h3 class="font-bold text-lg text-green-800">Thế mạnh (Strengths)</h3>
+                    <ul class="swot-list mt-2 text-green-700">
+                        <li>Hiệu suất cao & tương thích EVM.</li>
+                        <li>Chi phí giao dịch cực thấp.</li>
+                        <li>Mô hình "Fee Monetization" độc đáo.</li>
+                        <li>Đội ngũ lãnh đạo giàu kinh nghiệm.</li>
+                    </ul>
+                </div>
+                <div class="swot-quadrant bg-red-100 border-l-4 border-red-500">
+                    <h3 class="font-bold text-lg text-red-800">Điểm yếu (Weaknesses)</h3>
+                    <ul class="swot-list mt-2 text-red-700">
+                        <li>Hiệu ứng mạng lưới và TVL còn rất nhỏ.</li>
+                        <li>Hoạt động chủ yếu mang tính đầu cơ.</li>
+                        <li>Hệ sinh thái phụ trợ chưa hoàn thiện.</li>
+                        <li>Di sản tiêu cực từ sự cố Multichain.</li>
+                    </ul>
+                </div>
+                <div class="swot-quadrant bg-blue-100 border-l-4 border-blue-500">
+                    <h3 class="font-bold text-lg text-blue-800">Cơ hội (Opportunities)</h3>
+                    <ul class="swot-list mt-2 text-blue-700">
+                        <li>Chiếm lĩnh thị trường GameFi & SocialFi.</li>
+                        <li>Thu hút nhà phát triển từ các chuỗi EVM đắt đỏ.</li>
+                        <li>Tận dụng xu hướng tìm kiếm lợi nhuận (yield).</li>
+                        <li>Trở thành nền tảng L1 EVM hiệu suất cao hàng đầu.</li>
+                    </ul>
+                </div>
+                <div class="swot-quadrant bg-yellow-100 border-l-4 border-yellow-500">
+                    <h3 class="font-bold text-lg text-yellow-800">Thách thức (Threats)</h3>
+                    <ul class="swot-list mt-2 text-yellow-700">
+                        <li>Cạnh tranh khốc liệt từ L1 và L2.</li>
+                        <li>Rủi ro bền vững của mô hình kinh tế.</li>
+                        <li>Khó khăn trong việc chuyển đổi người dùng đầu cơ.</li>
+                        <li>Rủi ro công nghệ tiềm ẩn trong hệ thống mới.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center mt-12 py-6 border-t border-gray-200">
+            <p class="text-sm text-gray-500">Infographic được tạo dựa trên "Báo cáo Phân tích Chuyên sâu: Sonic". Dữ liệu mang tính tham khảo tại thời điểm phân tích.</p>
+        </footer>
+    </div>
+
+    <script>
+        const colorPalette = {
+            primary: '#FF4E50',
+            secondary: '#FC913A',
+            tertiary: '#F9D423',
+            background1: 'rgba(252, 145, 58, 0.6)',
+            background2: 'rgba(255, 78, 80, 0.6)',
+            background3: 'rgba(41, 60, 90, 0.6)',
+            background4: 'rgba(128, 128, 128, 0.6)',
+            gridColor: 'rgba(200, 200, 200, 0.2)',
+            textColor: '#1A2942',
+            tooltipBg: '#ffffff',
+            tooltipText: '#1A2942',
+        };
+
+        const chartTooltipOptions = {
+            plugins: {
+                tooltip: {
+                    backgroundColor: colorPalette.tooltipBg,
+                    titleColor: colorPalette.tooltipText,
+                    bodyColor: colorPalette.tooltipText,
+                    borderColor: colorPalette.secondary,
+                    borderWidth: 1,
+                    padding: 10,
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                                return label.join(' ');
+                            }
+                            return label;
+                        }
+                    }
+                }
+            }
+        };
+
+        function wrapLabels(label, maxWidth) {
+            const words = label.split(' ');
+            let lines = [];
+            let currentLine = words[0];
+
+            for (let i = 1; i < words.length; i++) {
+                if (currentLine.length + words[i].length + 1 < maxWidth) {
+                    currentLine += ' ' + words[i];
+                } else {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+
+
+        function createPerformanceChart() {
+            const ctx = document.getElementById('performanceChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['TPS (Giao dịch/giây)', 'Time-to-Finality (giây)'],
+                    datasets: [
+                        {
+                            label: 'Sonic',
+                            data: [10000, 1], 
+                            backgroundColor: colorPalette.background1,
+                            borderColor: colorPalette.secondary,
+                            borderWidth: 2
+                        },
+                        {
+                            label: 'Solana',
+                            data: [50000, 13],
+                            backgroundColor: colorPalette.background2,
+                            borderColor: colorPalette.primary,
+                            borderWidth: 2
+                        },
+                        {
+                            label: 'Avalanche',
+                            data: [4500, 1],
+                            backgroundColor: colorPalette.background3,
+                            borderColor: '#1A2942',
+                            borderWidth: 2
+                        },
+                         {
+                            label: 'Ethereum',
+                            data: [14, 840], 
+                            backgroundColor: colorPalette.background4,
+                            borderColor: '#808080',
+                            borderWidth: 2
+                        }
+                    ]
+                },
+                options: {
+                    ...chartTooltipOptions,
+                    maintainAspectRatio: false,
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            type: 'logarithmic',
+                            title: {
+                                display: true,
+                                text: 'Giá trị (Thang đo Logarithmic)',
+                                color: colorPalette.textColor
+                            },
+                            ticks: { color: colorPalette.textColor },
+                            grid: { color: colorPalette.gridColor }
+                        },
+                        x: {
+                           ticks: { color: colorPalette.textColor, font: { size: 14 } },
+                           grid: { display: false }
+                        }
+                    },
+                    plugins: {
+                        ...chartTooltipOptions.plugins,
+                        title: {
+                            display: true,
+                            text: 'So sánh Hiệu suất (TPS & Thời gian Hoàn tất)',
+                            font: { size: 16 },
+                            color: colorPalette.textColor,
+                            padding: { top: 10, bottom: 20 }
+                        },
+                        legend: {
+                            position: 'top',
+                            labels: { color: colorPalette.textColor }
+                        }
+                    }
+                }
+            });
+        }
+        
+        function createFeeChart() {
+            const ctx = document.getElementById('feeChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Phần của Nhà phát triển', 'Phần của Mạng lưới'],
+                    datasets: [{
+                        label: 'Phân chia Phí Giao dịch',
+                        data: [90, 10],
+                        backgroundColor: [colorPalette.secondary, colorPalette.primary],
+                        borderColor: '#ffffff',
+                        borderWidth: 4,
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    ...chartTooltipOptions,
+                    maintainAspectRatio: false,
+                    responsive: true,
+                    cutout: '70%',
+                    plugins: {
+                        ...chartTooltipOptions.plugins,
+                        title: {
+                            display: true,
+                            text: 'Phân chia Doanh thu từ Phí Giao dịch',
+                            font: { size: 16 },
+                            color: colorPalette.textColor,
+                            padding: { top: 10, bottom: 20 }
+                        },
+                        legend: {
+                            position: 'bottom',
+                            labels: { color: colorPalette.textColor, padding: 20 }
+                        }
+                    }
+                }
+            });
+        }
+
+        function createDappFeeChart() {
+            const ctx = document.getElementById('dappFeeChart').getContext('2d');
+            const rawLabels = ['Shadow (DEX)', 'Silo Finance (Lending)', 'Trevee (Stablecoin)', 'Aave (Lending)', 'Euler (Lending)'];
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: rawLabels.map(label => wrapLabels(label, 16)),
+                    datasets: [{
+                        label: 'Phí 30 ngày (USD)',
+                        data: [1700000, 794200, 538100, 204200, 151800],
+                        backgroundColor: [
+                            colorPalette.background1,
+                            colorPalette.background2,
+                            'rgba(249, 212, 35, 0.6)',
+                            'rgba(41, 60, 90, 0.6)',
+                            'rgba(225, 245, 196, 0.8)'
+                        ],
+                        borderColor: [
+                            colorPalette.secondary,
+                            colorPalette.primary,
+                            colorPalette.tertiary,
+                            '#1A2942',
+                            '#aed581'
+                        ],
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    ...chartTooltipOptions,
+                    maintainAspectRatio: false,
+                    responsive: true,
+                    indexAxis: 'y',
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Doanh thu phí (USD)',
+                                color: colorPalette.textColor
+                            },
+                            ticks: { 
+                                color: colorPalette.textColor,
+                                callback: function(value) {
+                                    return '$' + (value / 1000000) + 'M';
+                                }
+                            },
+                            grid: { color: colorPalette.gridColor }
+                        },
+                        y: {
+                           ticks: { color: colorPalette.textColor, font: { size: 12 } },
+                           grid: { display: false }
+                        }
+                    },
+                    plugins: {
+                        ...chartTooltipOptions.plugins,
+                        title: {
+                            display: true,
+                            text: 'Doanh thu Phí 30 ngày của các dApp hàng đầu',
+                            font: { size: 16 },
+                            color: colorPalette.textColor,
+                            padding: { top: 10, bottom: 20 }
+                        },
+                        legend: { display: false }
+                    }
+                }
+            });
+        }
+        
+        function createTvlChart() {
+            const ctx = document.getElementById('tvlChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Ethereum', 'Solana', 'Fantom (Sonic Start Point)'],
+                    datasets: [{
+                        label: 'TVL (tỷ USD)',
+                        data: [57.58, 7.84, 0.014],
+                        backgroundColor: [
+                            colorPalette.background4,
+                            colorPalette.background2,
+                            colorPalette.background1,
+                        ],
+                         borderColor: [
+                            '#808080',
+                            colorPalette.primary,
+                            colorPalette.secondary,
+                        ],
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    ...chartTooltipOptions,
+                    maintainAspectRatio: false,
+                    responsive: true,
+                    indexAxis: 'y',
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'TVL (tỷ USD)',
+                                color: colorPalette.textColor
+                            },
+                             ticks: { color: colorPalette.textColor },
+                             grid: { color: colorPalette.gridColor }
+                        },
+                        y: {
+                           ticks: { color: colorPalette.textColor, font: { size: 14 } },
+                           grid: { display: false }
+                        }
+                    },
+                     plugins: {
+                        ...chartTooltipOptions.plugins,
+                        title: {
+                            display: true,
+                            text: 'So sánh Tổng Giá trị Bị khóa (TVL)',
+                            font: { size: 16 },
+                            color: colorPalette.textColor,
+                            padding: { top: 10, bottom: 20 }
+                        },
+                        legend: { display: false }
+                    }
+                }
+            });
+        }
+
+        window.onload = function() {
+            createPerformanceChart();
+            createFeeChart();
+            createDappFeeChart();
+            createTvlChart();
+        };
+    </script>
+    <div style="text-align: center; padding: 3rem 0;">
+        <a href="/" style="display: inline-block; background-color: #3498db; color: white; padding: 0.8rem 1.8rem; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: 2px solid transparent; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            Quay lại Trang Blog
+        </a>
+    </div>
+</body>
+</html>

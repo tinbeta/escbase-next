@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: Cuộc Cách Mạng Tài Khoản Thông Minh</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 800;
+            line-height: 2.5rem;
+            color: #004AAD;
+        }
+        .section-subtitle {
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+            color: #475569;
+            margin-top: 0.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .stat-number {
+            font-size: 4rem;
+            font-weight: 800;
+            color: #0079FF;
+            line-height: 1;
+        }
+        .flowchart-step {
+            border: 2px solid #0079FF;
+            background-color: #eff6ff;
+            color: #004AAD;
+        }
+        .flowchart-arrow {
+            color: #0079FF;
+            font-size: 2rem;
+            line-height: 1;
+            margin: 0.5rem 0;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -29px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 18px;
+            height: 18px;
+            border-radius: 9999px;
+            background-color: white;
+            border: 4px solid #0079FF;
+        }
+    </style>
+</head>
+<body class="antialiased">
+<div style="max-width:800px;margin:0 auto;padding:1rem 1.5rem;"><a href="/blog/" style="display:inline-flex;align-items:center;gap:0.5rem;color:#71717a;text-decoration:none;font-size:0.9rem;font-family:sans-serif;">← Quay lại Blog</a></div>
+
+    <!-- Palette Name: Brilliant Blues & Energetic Accents -->
+    <!-- Narrative Plan: 
+        1. Header: Hook with title.
+        2. The Problem: Highlight EOA limitations.
+        3. The Solution (AA): Introduce Account Abstraction & Smart Accounts.
+        4. ERC-4337 Architecture: Visualize the UserOperation flow.
+        5. Key Benefits: Showcase UX, Flexibility, Security advantages in cards.
+        6. Gas Cost Comparison: Bar chart visualizing gas costs from the report's Table X2.
+        7. Ecosystem Snapshot: Display key stats (total accounts, adoption rate) and key players.
+        8. Competitive Landscape: Compare ERC-4337 vs Native AA vs EIP-7702.
+        9. Future Roadmap: Timeline for future EIPs and Chain Abstraction.
+        10. Conclusion: Final summary.
+    -->
+    <!-- Visualization Selection:
+        - ERC-4337 Flow: HTML/CSS Flowchart (Goal: Organize). Method: Styled divs and unicode arrows. Library: Tailwind. NO SVG.
+        - Gas Costs: Chart.js Bar Chart (Goal: Compare). Library: Chart.js. NO SVG.
+        - Adoption Rate: Chart.js Donut Chart (Goal: Inform). Library: Chart.js. NO SVG.
+        - Total Accounts: Single Big Number (Goal: Inform). Method: Large styled text. NO SVG.
+        - Competitive Landscape: HTML/CSS Grid of Cards (Goal: Compare). Method: Tailwind grid. NO SVG.
+        - Roadmap: HTML/CSS Timeline (Goal: Change/Organize). Method: Styled divs with a central line. NO SVG.
+        - Benefits/Players: HTML/CSS Card Grids (Goal: Inform). Method: Tailwind Flexbox/Grid. NO SVG.
+    -->
+    <!-- Confirmation: Neither Mermaid JS nor SVG graphics were used in this document. All visualizations are created using Chart.js (Canvas), HTML, and Tailwind CSS. -->
+
+    <div class="container mx-auto p-4 md:p-8 max-w-7xl">
+
+        <header class="text-center my-8 md:my-16">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#004AAD] to-[#0079FF]">
+                Cuộc Cách Mạng Tài Khoản Thông Minh
+            </h1>
+            <p class="section-subtitle mt-4">Phân tích chuyên sâu về Trừu tượng hóa Tài khoản và tương lai của Web3</p>
+        </header>
+
+        <main class="space-y-16 md:space-y-24">
+
+            <section class="text-center">
+                <h2 class="section-title">Vấn Đề & Giải Pháp</h2>
+                <p class="section-subtitle">Hệ sinh thái Ethereum truyền thống đối mặt với những rào cản lớn, cản trở việc chấp nhận rộng rãi. Trừu tượng hóa Tài khoản nổi lên như một giải pháp đột phá.</p>
+                <div class="grid md:grid-cols-2 gap-8 mt-12">
+                    <div class="card border-l-4 border-red-500">
+                        <h3 class="font-bold text-xl text-slate-800 mb-2">🔴 Thách thức của Tài khoản truyền thống (EOA)</h3>
+                        <ul class="list-disc list-inside text-left space-y-2 text-slate-600">
+                            <li><strong>Quản lý khóa phức tạp:</strong> Mất "seed phrase" đồng nghĩa với mất toàn bộ tài sản một cách vĩnh viễn.</li>
+                            <li><strong>Trải nghiệm người dùng kém:</strong> Buộc phải có ETH để trả phí gas cho mọi hành động, gây khó khăn cho người mới.</li>
+                            <li><strong>Bảo mật hạn chế:</strong> Chỉ có một khóa riêng tư duy nhất, không có cơ chế khôi phục hay đa chữ ký.</li>
+                        </ul>
+                    </div>
+                    <div class="card border-l-4 border-green-500">
+                        <h3 class="font-bold text-xl text-slate-800 mb-2">🟢 Giải pháp của Tài khoản Thông minh (AA)</h3>
+                        <ul class="list-disc list-inside text-left space-y-2 text-slate-600">
+                            <li><strong>Khôi phục linh hoạt:</strong> Cho phép khôi phục xã hội hoặc đa yếu tố, loại bỏ nỗi lo mất khóa.</li>
+                            <li><strong>Trải nghiệm liền mạch:</strong> Hỗ trợ giao dịch không cần gas, trả phí bằng token khác, gộp nhiều giao dịch.</li>
+                            <li><strong>Bảo mật lập trình được:</strong> Tích hợp đa chữ ký, giới hạn chi tiêu, khóa phiên trực tiếp vào tài khoản.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2 class="section-title text-center">Kiến Trúc Cốt Lõi của ERC-4337</h2>
+                <p class="section-subtitle text-center">ERC-4337 giới thiệu một luồng giao dịch song song, cho phép các hợp đồng thông minh hoạt động như tài khoản chính mà không cần thay đổi giao thức cốt lõi của Ethereum.</p>
+                <div class="mt-12 flex flex-col items-center">
+                    <div class="w-full max-w-4xl">
+                        <div class="card flowchart-step text-center p-4">
+                            <p class="font-bold">1. Người dùng (qua Ví/dApp)</p>
+                            <p class="text-sm">Tạo và ký một đối tượng <code class="bg-blue-200 text-blue-800 px-1 rounded">UserOperation</code> thay vì một giao dịch thông thường.</p>
+                        </div>
+                        <div class="text-center flowchart-arrow">⬇️</div>
+                        <div class="card flowchart-step text-center p-4">
+                            <p class="font-bold">2. Mempool thay thế</p>
+                            <p class="text-sm"><code class="bg-blue-200 text-blue-800 px-1 rounded">UserOperation</code> được gửi đến một hàng đợi riêng biệt, chờ xử lý.</p>
+                        </div>
+                        <div class="text-center flowchart-arrow">⬇️</div>
+                        <div class="card flowchart-step text-center p-4">
+                            <p class="font-bold">3. Bundler (Người đóng gói)</p>
+                            <p class="text-sm">Chọn các <code class="bg-blue-200 text-blue-800 px-1 rounded">UserOperation</code>, đóng gói chúng thành một giao dịch duy nhất và trả trước phí gas.</p>
+                        </div>
+                        <div class="text-center flowchart-arrow">⬇️</div>
+                        <div class="card flowchart-step text-center p-4">
+                            <p class="font-bold">4. Hợp đồng EntryPoint</p>
+                            <p class="text-sm">Hợp đồng toàn cục này nhận gói giao dịch, sau đó xác minh và thực thi từng <code class="bg-blue-200 text-blue-800 px-1 rounded">UserOperation</code>.</p>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-4 mt-2">
+                             <div class="text-center"><span class="text-xl">↙️</span></div>
+                             <div class="text-center"><span class="text-xl">↘️</span></div>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-8 mt-2">
+                            <div class="card flowchart-step text-center p-4 h-full">
+                                <p class="font-bold">5a. Paymaster (Tùy chọn)</p>
+                                <p class="text-sm">Xác minh và đồng ý tài trợ phí gas cho người dùng (bằng ETH hoặc token ERC20).</p>
+                            </div>
+                             <div class="card flowchart-step text-center p-4 h-full">
+                                <p class="font-bold">5b. Tài khoản Thông minh (Ví người dùng)</p>
+                                <p class="text-sm">Thực thi logic xác minh (vd: kiểm tra chữ ký) và sau đó là hành động chính (vd: swap token).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2 class="section-title text-center">Những Lợi Ích Thay Đổi Cuộc Chơi</h2>
+                <p class="section-subtitle text-center">Tài khoản Thông minh không chỉ là một cải tiến nhỏ, nó mở ra một kỷ nguyên mới về tính khả dụng và sức mạnh cho người dùng Web3.</p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+                    <div class="card">
+                        <span class="text-4xl">🤝</span>
+                        <h3 class="font-bold text-xl mt-2 mb-2 text-slate-800">Khôi phục Xã hội</h3>
+                        <p class="text-slate-600">Không còn sợ mất "seed phrase". Khôi phục quyền truy cập vào tài khoản của bạn thông qua sự trợ giúp của những người giám hộ đáng tin cậy.</p>
+                    </div>
+                    <div class="card">
+                        <span class="text-4xl">💸</span>
+                        <h3 class="font-bold text-xl mt-2 mb-2 text-slate-800">Tài trợ Phí Gas</h3>
+                        <p class="text-slate-600">Các dApp có thể trả phí gas thay bạn. Bắt đầu tương tác ngay lập tức mà không cần sở hữu ETH, hoặc trả phí bằng token như USDC.</p>
+                    </div>
+                    <div class="card">
+                        <span class="text-4xl">📦</span>
+                        <h3 class="font-bold text-xl mt-2 mb-2 text-slate-800">Gộp Giao dịch</h3>
+                        <p class="text-slate-600">Thực hiện nhiều hành động phức tạp (ví dụ: Phê duyệt + Hoán đổi) chỉ với một lần ký, tiết kiệm thời gian và chi phí.</p>
+                    </div>
+                    <div class="card">
+                        <span class="text-4xl">🛡️</span>
+                        <h3 class="font-bold text-xl mt-2 mb-2 text-slate-800">Đa chữ ký (Multisig)</h3>
+                        <p class="text-slate-600">Yêu cầu sự chấp thuận từ nhiều bên trước khi thực hiện các giao dịch quan trọng, tăng cường bảo mật cho quỹ của tổ chức hoặc gia đình.</p>
+                    </div>
+                    <div class="card">
+                        <span class="text-4xl">⏰</span>
+                        <h3 class="font-bold text-xl mt-2 mb-2 text-slate-800">Khóa Phiên & Giới hạn</h3>
+                        <p class="text-slate-600">Cấp quyền hạn chế cho các dApp (ví dụ: game) để giao dịch thay mặt bạn trong một phiên, với giới hạn chi tiêu được xác định trước.</p>
+                    </div>
+                     <div class="card">
+                        <span class="text-4xl">🔑</span>
+                        <h3 class="font-bold text-xl mt-2 mb-2 text-slate-800">Xác thực Nâng cao</h3>
+                        <p class="text-slate-600">Sử dụng các phương thức xác thực hiện đại và an toàn như Passkeys (FaceID/Vân tay) thay vì các mật khẩu truyền thống.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                 <h2 class="section-title text-center">So Sánh Chi Phí Gas: Một Sự Đánh Đổi</h2>
+                <p class="section-subtitle text-center">Sự linh hoạt của ERC-4337 đi kèm với chi phí gas cao hơn. Tuy nhiên, trên các Layer 2, chi phí này trở nên hợp lý hơn nhiều. Biểu đồ dưới đây so sánh chi phí gas ước tính cho các hoạt động phổ biến.</p>
+                <div class="card mt-12">
+                    <div class="chart-container h-[400px] md:h-[450px]">
+                        <canvas id="gasCostChart"></canvas>
+                    </div>
+                    <p class="text-center text-sm text-slate-500 mt-4">Lưu ý: Các con số là ước tính để so sánh tương đối. Native AA (ví dụ: zkSync) thường có chi phí thấp hơn do tích hợp sâu vào giao thức.</p>
+                </div>
+            </section>
+            
+            <section>
+                <h2 class="section-title text-center">Ảnh Chụp Nhanh Hệ Sinh Thái</h2>
+                <p class="section-subtitle text-center">Account Abstraction đang dần được chấp nhận, với một hệ sinh thái các ví và công cụ hỗ trợ ngày càng phát triển mạnh mẽ.</p>
+                <div class="grid md:grid-cols-2 gap-8 mt-12 items-center">
+                    <div class="card text-center">
+                        <p class="font-bold text-xl text-slate-800 mb-2">Tổng số Tài khoản Thông minh</p>
+                        <p class="stat-number">1.8M+</p>
+                        <p class="text-slate-600">Đã được triển khai trên Ethereum và các Layer 2 hàng đầu tính đến đầu năm 2024, cho thấy sự quan tâm ban đầu mạnh mẽ.</p>
+                    </div>
+                    <div class="card">
+                         <h3 class="font-bold text-xl text-center text-slate-800 mb-4">Tỷ lệ Chấp nhận UserOps (trên Base)</h3>
+                        <div class="chart-container h-64">
+                             <canvas id="adoptionChart"></canvas>
+                        </div>
+                        <p class="text-center text-sm text-slate-500 mt-4">UserOps hiện chiếm khoảng 1.5-2% tổng số giao dịch trên mạng Base, một con số khiêm tốn nhưng đang tăng trưởng.</p>
+                    </div>
+                </div>
+                 <div class="mt-16">
+                    <h3 class="text-2xl font-bold text-center text-slate-800 mb-8">Các Ví Tài Khoản Thông Minh Hàng Đầu</h3>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="card text-center">
+                            <h4 class="font-bold text-lg text-slate-800">Safe</h4>
+                            <p class="text-sm text-slate-500">Tiêu chuẩn vàng cho đa chữ ký. Được tin dùng bởi các DAO và doanh nghiệp.</p>
+                        </div>
+                        <div class="card text-center">
+                            <h4 class="font-bold text-lg text-slate-800">Argent</h4>
+                             <p class="text-sm text-slate-500">Tiên phong về khôi phục xã hội và trải nghiệm không cần seed phrase.</p>
+                        </div>
+                        <div class="card text-center">
+                            <h4 class="font-bold text-lg text-slate-800">Ambire</h4>
+                            <p class="text-sm text-slate-500">Tập trung vào tối ưu hóa phí gas và đăng nhập bằng email.</p>
+                        </div>
+                        <div class="card text-center">
+                            <h4 class="font-bold text-lg text-slate-800">Metamask</h4>
+                            <p class="text-sm text-slate-500">Ví phổ biến nhất thế giới, đang dần tích hợp các tính năng AA.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title text-center">Bối Cảnh Các Giải Pháp Account Abstraction</h2>
+                <p class="section-subtitle text-center">ERC-4337 không phải là giải pháp duy nhất. Cuộc đua đang diễn ra để tìm ra cách tiếp cận tối ưu nhất cho Trừu tượng hóa Tài khoản.</p>
+                <div class="grid lg:grid-cols-3 gap-8 mt-12">
+                    <div class="card">
+                        <h3 class="font-bold text-xl text-blue-700 mb-2">ERC-4337</h3>
+                        <p class="font-semibold text-slate-700">Cách tiếp cận lớp ứng dụng</p>
+                        <p class="text-sm mt-2 text-slate-600">Hoạt động trên các hợp đồng thông minh, không cần thay đổi giao thức lõi.</p>
+                        <hr class="my-3">
+                        <p class="text-sm text-slate-600"><b class="text-green-600">Ưu điểm:</b> Tương thích EVM rộng rãi, triển khai nhanh.</p>
+                        <p class="text-sm mt-1 text-slate-600"><b class="text-red-600">Nhược điểm:</b> Chi phí gas cao hơn, kiến trúc phức tạp.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="font-bold text-xl text-purple-700 mb-2">Native AA</h3>
+                         <p class="font-semibold text-slate-700">Tích hợp vào giao thức</p>
+                        <p class="text-sm mt-2 text-slate-600">Tích hợp trực tiếp vào lớp đồng thuận của blockchain (ví dụ: zkSync, StarkNet).</p>
+                        <hr class="my-3">
+                        <p class="text-sm text-slate-600"><b class="text-green-600">Ưu điểm:</b> Chi phí gas thấp, hiệu suất cao, kiến trúc đơn giản.</p>
+                        <p class="text-sm mt-1 text-slate-600"><b class="text-red-600">Nhược điểm:</b> Hỗ trợ chuỗi hạn chế, không tương thích ngược.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="font-bold text-xl text-orange-700 mb-2">EIP-7702</h3>
+                        <p class="font-semibold text-slate-700">Nâng cấp EOA tạm thời</p>
+                        <p class="text-sm mt-2 text-slate-600">Cho phép các ví EOA hiện tại "vay mượn" khả năng của ví thông minh trong một giao dịch.</p>
+                         <hr class="my-3">
+                        <p class="text-sm text-slate-600"><b class="text-green-600">Ưu điểm:</b> Tiện lợi cho người dùng EOA, không cần di chuyển ví.</p>
+                        <p class="text-sm mt-1 text-slate-600"><b class="text-red-600">Nhược điểm:</b> Yêu cầu hard fork, rủi ro bảo mật từ việc ủy quyền.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                 <h2 class="section-title text-center">Lộ Trình Tương Lai</h2>
+                <p class="section-subtitle text-center">Hành trình của Account Abstraction chỉ mới bắt đầu, với nhiều cải tiến thú vị đang được phát triển.</p>
+                <div class="mt-12 relative border-l-4 border-blue-200 ml-4 pl-8 space-y-12">
+                     <div class="timeline-item relative">
+                        <h3 class="font-bold text-xl text-slate-800">2023: Khởi chạy ERC-4337</h3>
+                        <p class="text-slate-600">Tiêu chuẩn được triển khai trên Ethereum mainnet và các Layer 2, đặt nền móng cho hệ sinh thái Tài khoản Thông minh.</p>
+                    </div>
+                    <div class="timeline-item relative">
+                        <h3 class="font-bold text-xl text-slate-800">2025 (Dự kiến): Nâng cấp Pectra (EIP-7702)</h3>
+                        <p class="text-slate-600">Mang một phần lợi ích của Account Abstraction đến với hàng triệu người dùng EOA hiện tại, là một bước đệm quan trọng.</p>
+                    </div>
+                    <div class="timeline-item relative">
+                        <h3 class="font-bold text-xl text-slate-800">2026+: Kỷ nguyên Native AA & Chain Abstraction</h3>
+                        <p class="text-slate-600">Các đề xuất như RIP-7560 có thể được tích hợp sâu vào giao thức. Sự kết hợp với Trừu tượng hóa Chuỗi (Chain Abstraction) sẽ tạo ra trải nghiệm đa chuỗi thực sự liền mạch.</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-16 md:mt-24 py-8 border-t border-slate-200">
+            <p class="text-slate-600">Bản infographic này được tạo dựa trên "Nghiên Cứu Chuyên Sâu về Tài Khoản Thông Minh và Tiêu Chuẩn ERC-4337".</p>
+            <p class="text-sm text-slate-500 mt-2">Mục đích: Trực quan hóa dữ liệu và các khái niệm chính để dễ dàng tiếp cận.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const wrapLabel = (label, maxLength) => {
+            if (label.length <= maxLength) {
+                return label;
+            }
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + ' ' + word).length > maxLength && currentLine.length > 0) {
+                    lines.push(currentLine);
+                    currentLine = word;
+                } else {
+                    currentLine = currentLine ? currentLine + ' ' + word : word;
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        };
+
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+              return label.join(' ');
+            } else {
+              return label;
+            }
+        };
+
+        const sharedTooltipOptions = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    }
+                }
+            }
+        };
+        
+        const palette = {
+            darkBlue: '#004AAD',
+            brightBlue: '#0079FF',
+            greenAccent: '#00DFA2',
+            yellowAccent: '#F6FA70',
+            lightGray: '#e2e8f0',
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const gasCostCtx = document.getElementById('gasCostChart').getContext('2d');
+            new Chart(gasCostCtx, {
+                type: 'bar',
+                data: {
+                    labels: [
+                        wrapLabel('Chuyển khoản đơn giản', 16), 
+                        wrapLabel('Phê duyệt Token', 16),
+                        wrapLabel('Giao dịch DeFi (Swap)', 16)
+                    ],
+                    datasets: [
+                        {
+                            label: 'EOA Truyền thống',
+                            data: [21000, 45000, 150000],
+                            backgroundColor: palette.lightGray,
+                            borderColor: '#94a3b8',
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'ERC-4337',
+                            data: [95000, 120000, 270000],
+                            backgroundColor: palette.brightBlue,
+                            borderColor: palette.darkBlue,
+                            borderWidth: 1
+                        },
+                         {
+                            label: 'Native AA (tham khảo)',
+                            data: [50000, 70000, 220000],
+                            backgroundColor: palette.greenAccent,
+                            borderColor: '#059669',
+                            borderWidth: 1
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Chi phí Gas Ước tính cho Các Hoạt động (đơn vị: gas)',
+                            font: { size: 16 }
+                        },
+                        tooltip: sharedTooltipOptions.plugins.tooltip
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                             ticks: {
+                                callback: function(value) {
+                                    return value / 1000 + 'k';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            const adoptionCtx = document.getElementById('adoptionChart').getContext('2d');
+            new Chart(adoptionCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['UserOperations', 'Giao dịch khác'],
+                    datasets: [{
+                        data: [2, 98],
+                        backgroundColor: [palette.brightBlue, palette.lightGray],
+                        borderColor: [palette.darkBlue, '#cbd5e1'],
+                        borderWidth: 2,
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed !== null) {
+                                        label += context.parsed + '%';
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+            
+            const cards = document.querySelectorAll('.card, .timeline-item');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+                observer.observe(card);
+            });
+        });
+    </script>
+    
+    <div style="text-align: center; padding: 3rem 0;">
+        <a href="/" style="display: inline-block; background-color: #3498db; color: white; padding: 0.8rem 1.8rem; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: 2px solid transparent; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            Quay lại Trang Blog
+        </a>
+    </div>
+</body>
+</html>

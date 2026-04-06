@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sự Tiến Hóa của Ethereum: Phân Tích Sâu về Tiềm Năng Tương Lai</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .stat-card {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+        }
+        .flowchart-step {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            flex-grow: 1;
+            text-align: center;
+            justify-content: center;
+        }
+        .flowchart-arrow {
+            color: #ffa600;
+            font-size: 2rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 1rem;
+        }
+         .flowchart-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        @media (min-width: 1024px) {
+            .flowchart-container {
+                flex-direction: row;
+                align-items: center;
+            }
+            .flowchart-arrow {
+                transform: rotate(0deg);
+            }
+             .flowchart-step {
+                min-height: 100px;
+            }
+        }
+    </style>
+</head>
+<body class="text-gray-200">
+<div style="max-width:800px;margin:0 auto;padding:1rem 1.5rem;"><a href="/blog/" style="display:inline-flex;align-items:center;gap:0.5rem;color:#71717a;text-decoration:none;font-size:0.9rem;font-family:sans-serif;">← Quay lại Blog</a></div>
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-white leading-tight">
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#ef5675] via-[#ff764a] to-[#ffa600]">Sự Tiến Hóa</span> của Ethereum
+            </h1>
+            <p class="text-lg md:text-xl text-gray-400 mt-4 max-w-3xl mx-auto">Phân tích sâu dưới dạng infographic về các bản nâng cấp định hình tương lai của nền tảng hợp đồng thông minh hàng đầu thế giới.</p>
+        </header>
+
+        <main class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <div class="md:col-span-2 stat-card rounded-lg shadow-2xl p-6 flex flex-col md:flex-row items-center justify-center text-center gap-6">
+                <div class="flex-1">
+                    <h2 class="text-2xl font-bold text-gray-400 mb-2">Tổng giá trị bị khóa (TVL) trong DeFi</h2>
+                    <p class="text-5xl md:text-7xl font-extrabold text-white">100+ tỷ USD</p>
+                    <p class="text-gray-500 mt-2">Minh họa cho hoạt động kinh tế khổng lồ được bảo mật bởi mạng Ethereum, mà các bản nâng cấp gần đây và trong tương lai nhằm mục đích mở rộng theo cấp số nhân.</p>
+                </div>
+                <div class="w-16 h-16 text-6xl">💎</div>
+            </div>
+
+            <div class="stat-card rounded-lg shadow-2xl p-6">
+                <h2 class="text-2xl font-bold text-white mb-2">The Merge: Một Ethereum Xanh hơn</h2>
+                <p class="text-gray-400 mb-4">Việc chuyển từ Bằng chứng Công việc (Proof-of-Work) sang Bằng chứng Cổ phần (Proof-of-Stake) là một trong những nâng cấp quan trọng nhất trong lịch sử blockchain, giúp giảm đáng kể tác động môi trường của Ethereum và đặt nền móng cho khả năng mở rộng trong tương lai.</p>
+                <div class="chart-container h-64 md:h-auto">
+                    <canvas id="energyChart"></canvas>
+                </div>
+                <p class="text-center text-gray-500 mt-4 text-sm">Sự chuyển đổi này giúp mạng lưới trở nên an toàn và bền vững hơn, mở đường cho việc áp dụng rộng rãi hơn từ các tổ chức.</p>
+            </div>
+
+            <div class="stat-card rounded-lg shadow-2xl p-6">
+                <h2 class="text-2xl font-bold text-white mb-2">Sự tăng trưởng của ETH được Staking</h2>
+                <p class="text-gray-400 mb-4">Việc chuyển sang Bằng chứng Cổ phần khuyến khích người dùng khóa ETH của họ để giúp bảo mật mạng lưới. Sự tăng trưởng liên tục của lượng Ether được staking cho thấy sự tự tin và cam kết lâu dài từ cộng đồng.</p>
+                <div class="chart-container h-64 md:h-auto">
+                    <canvas id="stakedEthChart"></canvas>
+                </div>
+                 <p class="text-center text-gray-500 mt-4 text-sm">Càng nhiều ETH được staking, mạng lưới càng phi tập trung và có khả năng chống lại các cuộc tấn công tốt hơn.</p>
+            </div>
+
+            <div class="md:col-span-2 stat-card rounded-lg shadow-2xl p-6">
+                 <h2 class="text-2xl font-bold text-white mb-2 text-center">The Surge: Mở rộng quy mô cho toàn cầu</h2>
+                 <p class="text-gray-400 mb-6 text-center max-w-3xl mx-auto">Giai đoạn lớn tiếp theo, The Surge, tập trung vào việc tăng mạnh thông lượng giao dịch thông qua các giải pháp Layer 2 (rollups) và Proto-Danksharding (EIP-4844), giúp mạng lưới nhanh hơn và rẻ hơn cho mọi người.</p>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold text-center text-white mb-2">Bước nhảy vọt về tốc độ giao dịch</h3>
+                        <p class="text-center text-gray-400 mb-4 text-sm">Mục tiêu là tăng số Giao dịch mỗi giây (TPS) lên nhiều bậc, cuối cùng sánh ngang và vượt qua các hệ thống tài chính truyền thống.</p>
+                        <div class="chart-container h-72 md:h-auto">
+                            <canvas id="tpsChart"></canvas>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-center text-white mb-2">Giảm chi phí giao dịch</h3>
+                         <p class="text-center text-gray-400 mb-4 text-sm">EIP-4844 giới thiệu "blobs" để giảm đáng kể chi phí dữ liệu cho các giải pháp Lớp 2, dẫn đến phí gần như bằng không cho người dùng cuối.</p>
+                        <div class="chart-container h-72 md:h-auto">
+                            <canvas id="feeChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-2 stat-card rounded-lg shadow-2xl p-6">
+                <h2 class="text-2xl font-bold text-white mb-2 text-center">Lộ trình đầy đủ: Một sự tiến hóa theo từng giai đoạn</h2>
+                <p class="text-gray-400 mb-6 text-center">Sự phát triển của Ethereum là một quá trình nhiều giai đoạn, với mỗi giai đoạn nhắm vào các hạn chế cụ thể của mạng để đạt được mục tiêu cuối cùng là một máy tính thế giới có khả năng mở rộng, an toàn và phi tập trung.</p>
+                <div class="flowchart-container">
+                    <div class="flowchart-step"><strong>The Merge</strong><p class="text-sm text-gray-400 ml-2">(Đã hoàn tất)</p></div>
+                    <div class="flowchart-arrow">&rarr;</div>
+                    <div class="flowchart-step"><strong>The Surge</strong><p class="text-sm text-gray-400 ml-2">(Hiện tại)</p></div>
+                    <div class="flowchart-arrow">&rarr;</div>
+                    <div class="flowchart-step"><strong>The Scourge</strong></div>
+                    <div class="flowchart-arrow">&rarr;</div>
+                    <div class="flowchart-step"><strong>The Verge</strong></div>
+                    <div class="flowchart-arrow">&rarr;</div>
+                    <div class="flowchart-step"><strong>The Purge</strong></div>
+                     <div class="flowchart-arrow">&rarr;</div>
+                    <div class="flowchart-step"><strong>The Splurge</strong></div>
+                </div>
+            </div>
+            
+             <div class="md:col-span-2 stat-card rounded-lg shadow-2xl p-6">
+                <h2 class="text-2xl font-bold text-white mb-2 text-center">Tiềm năng tương lai của Ethereum</h2>
+                <p class="text-gray-400 mb-4 text-center max-w-2xl mx-auto">Các nâng cấp này cùng nhau cải thiện các thuộc tính cốt lõi của Ethereum, biến nó từ một công nghệ thích hợp thành một lớp thanh toán toàn cầu mạnh mẽ cho một thế hệ ứng dụng phi tập trung mới.</p>
+                <div class="chart-container h-80 md:h-[450px] max-h-[500px]">
+                    <canvas id="potentialChart"></canvas>
+                </div>
+                <p class="text-center text-gray-500 mt-4 text-sm">Kết quả là một nền tảng mạnh mẽ và dễ tiếp cận hơn cho các nhà phát triển và người dùng, mở ra những đổi mới trong tài chính, trò chơi, nhận dạng và hơn thế nữa.</p>
+            </div>
+
+        </main>
+        
+        <footer class="text-center mt-12 py-6 border-t border-gray-800">
+            <p class="text-gray-500">Infographic được tạo dựa trên dữ liệu từ ethereum.org và nghiên cứu công khai. Chỉ mang tính chất minh họa.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const chartTextColor = 'rgba(209, 213, 219, 1)';
+            const gridColor = 'rgba(55, 65, 81, 0.5)';
+            const brilliantBlues = ['#7a5195', '#ef5675', '#ff764a', '#ffa600', '#374c80', '#003f5c', '#bc5090'];
+
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                    return label.join(' ');
+                }
+                return label;
+            };
+
+            const defaultPlugins = {
+                legend: {
+                    labels: {
+                        color: chartTextColor
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    }
+                }
+            };
+            
+            const defaultScales = {
+                y: {
+                    ticks: { color: chartTextColor, beginAtZero: true },
+                    grid: { color: gridColor }
+                },
+                x: {
+                    ticks: { color: chartTextColor },
+                    grid: { color: gridColor }
+                }
+            };
+
+            const wrapLabel = (label, maxLength = 16) => {
+                const words = label.split(' ');
+                let lines = [];
+                let currentLine = '';
+                words.forEach(word => {
+                    if ((currentLine + ' ' + word).length > maxLength && currentLine.length > 0) {
+                        lines.push(currentLine);
+                        currentLine = word;
+                    } else {
+                        currentLine = currentLine ? currentLine + ' ' + word : word;
+                    }
+                });
+                if (currentLine) {
+                    lines.push(currentLine);
+                }
+                return lines;
+            };
+
+            const energyCtx = document.getElementById('energyChart');
+            if(energyCtx) {
+                new Chart(energyCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Năng lượng giảm (~99.95%)', 'Mức sử dụng còn lại'],
+                        datasets: [{
+                            label: 'Tiêu thụ năng lượng',
+                            data: [99.95, 0.05],
+                            backgroundColor: [brilliantBlues[3], brilliantBlues[4]],
+                            borderColor: '#161b22',
+                            borderWidth: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                           ...defaultPlugins,
+                           legend: {
+                                position: 'bottom',
+                                labels: {
+                                    color: chartTextColor,
+                                    padding: 20
+                                }
+                           }
+                        }
+                    }
+                });
+            }
+
+            const stakedEthCtx = document.getElementById('stakedEthChart');
+            if(stakedEthCtx) {
+                new Chart(stakedEthCtx, {
+                    type: 'line',
+                    data: {
+                        labels: ['Trước The Merge', 'Q4 2022', 'Q2 2023', 'Q4 2023', 'Q2 2024', 'Hiện tại'],
+                        datasets: [{
+                            label: 'Triệu ETH được Staking',
+                            data: [13.5, 15.8, 19.1, 28.7, 31.5, 34.2],
+                            fill: true,
+                            backgroundColor: 'rgba(255, 118, 74, 0.2)',
+                            borderColor: brilliantBlues[2],
+                            tension: 0.3
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: defaultPlugins,
+                        scales: defaultScales
+                    }
+                });
+            }
+            
+            const tpsCtx = document.getElementById('tpsChart');
+            if(tpsCtx) {
+                new Chart(tpsCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Ethereum L1', wrapLabel('Lớp 2 (Hiện tại)'), wrapLabel('Lớp 2 (Mục tiêu sau Surge)'), 'Visa'],
+                        datasets: [{
+                            label: 'Giao dịch mỗi giây (Thang đo Log)',
+                            data: [15, 500, 100000, 65000],
+                            backgroundColor: [brilliantBlues[0], brilliantBlues[1], brilliantBlues[3], brilliantBlues[4]],
+                        }]
+                    },
+                    options: {
+                        indexAxis: 'y',
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            ...defaultPlugins,
+                            legend: { display: false }
+                        },
+                        scales: {
+                           x: {
+                                type: 'logarithmic',
+                                ticks: { color: chartTextColor },
+                                grid: { color: gridColor },
+                                title: { display: true, text: 'TPS (Thang đo Logarithmic)', color: chartTextColor }
+                           },
+                           y: {
+                               ticks: { color: chartTextColor },
+                               grid: { color: gridColor }
+                           }
+                        }
+                    }
+                });
+            }
+
+            const feeCtx = document.getElementById('feeChart');
+            if(feeCtx) {
+                new Chart(feeCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: [wrapLabel('Phí Lớp 2 trước EIP-4844'), wrapLabel('Phí Lớp 2 sau EIP-4844')],
+                        datasets: [{
+                            label: 'Phí giao dịch trung bình',
+                            data: [0.50, 0.01],
+                            backgroundColor: [brilliantBlues[1], brilliantBlues[2]],
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            ...defaultPlugins,
+                            legend: { display: false }
+                        },
+                        scales: {
+                            y: {
+                                ticks: {
+                                    color: chartTextColor,
+                                    callback: function(value) {
+                                        return '$' + value;
+                                    }
+                                },
+                                grid: { color: gridColor },
+                                title: { display: true, text: 'USD', color: chartTextColor }
+                            },
+                             x: {
+                               ticks: { color: chartTextColor },
+                               grid: { color: gridColor }
+                           }
+                        }
+                    }
+                });
+            }
+
+            const potentialCtx = document.getElementById('potentialChart');
+            if(potentialCtx) {
+                 new Chart(potentialCtx, {
+                    type: 'radar',
+                    data: {
+                        labels: ['Khả năng mở rộng', 'Bền vững', 'Hiệu quả chi phí', 'Bảo mật', 'Phi tập trung'],
+                        datasets: [
+                            {
+                                label: 'Trước nâng cấp',
+                                data: [3, 2, 3, 8, 9],
+                                backgroundColor: 'rgba(239, 86, 117, 0.2)',
+                                borderColor: brilliantBlues[1],
+                                pointBackgroundColor: brilliantBlues[1],
+                            },
+                            {
+                                label: 'Sau nâng cấp',
+                                data: [9, 10, 9, 9, 8],
+                                backgroundColor: 'rgba(255, 166, 0, 0.2)',
+                                borderColor: brilliantBlues[3],
+                                pointBackgroundColor: brilliantBlues[3],
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                           ...defaultPlugins,
+                           legend: {
+                                position: 'bottom',
+                                labels: {
+                                    color: chartTextColor
+                                }
+                           }
+                        },
+                        scales: {
+                            r: {
+                                beginAtZero: true,
+                                max: 10,
+                                pointLabels: {
+                                    color: chartTextColor,
+                                    font: {
+                                        size: 12
+                                    }
+                                },
+                                grid: { color: gridColor },
+                                angleLines: { color: gridColor },
+                                ticks: {
+                                    color: chartTextColor,
+                                    backdropColor: 'rgba(0,0,0,0)'
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+    <div style="text-align: center; padding: 3rem 0;">
+        <a href="/" style="display: inline-block; background-color: #3498db; color: white; padding: 0.8rem 1.8rem; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: 2px solid transparent; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            Quay lại Trang Blog
+        </a>
+    </div>
+</body>
+</html>

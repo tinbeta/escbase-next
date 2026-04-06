@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đào sâu Ethereum Classic (ETC): Một Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .flowchart-step {
+            position: relative;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            width: 80%;
+            margin: 0 auto;
+        }
+        .flowchart-arrow {
+            font-size: 2rem;
+            color: #FF6B6B;
+            line-height: 1;
+            margin: 0.5rem 0;
+        }
+    </style>
+</head>
+<body class="bg-[#F7F5F2]">
+<div style="max-width:800px;margin:0 auto;padding:1rem 1.5rem;"><a href="/blog/" style="display:inline-flex;align-items:center;gap:0.5rem;color:#71717a;text-decoration:none;font-size:0.9rem;font-family:sans-serif;">← Quay lại Blog</a></div>
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-[#1A535C] mb-2">Ethereum Classic (ETC)</h1>
+            <p class="text-xl md:text-2xl text-[#4ECDC4] font-bold">Nền tảng Hợp đồng Thông minh Nguyên bản, Bất biến</p>
+            <p class="max-w-3xl mx-auto text-gray-600 mt-4">Cái nhìn sâu sắc về các yếu tố cơ bản, sức mạnh mạng lưới và tiềm năng thị trường của Ethereum Classic sau giai đoạn tích lũy kéo dài.</p>
+        </header>
+        
+        <main class="space-y-16">
+
+            <section id="fundamentals" class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-[#1A535C] text-center mb-8">Nguyên tắc Cốt lõi: Nền tảng của ETC</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-[#F7F5F2] p-6 rounded-lg">
+                        <div class="text-5xl mb-4">📜</div>
+                        <h3 class="text-xl font-bold text-[#1A535C] mb-2">Mã lệnh là Luật</h3>
+                        <p class="text-gray-700">Bảo tồn lịch sử nguyên bản, không bị thay đổi của blockchain Ethereum. Giao dịch là cuối cùng và sổ cái thực sự bất biến.</p>
+                    </div>
+                    <div class="bg-[#F7F5F2] p-6 rounded-lg">
+                        <div class="text-5xl mb-4">🔒</div>
+                        <h3 class="text-xl font-bold text-[#1A535C] mb-2">Bảo mật Proof-of-Work</h3>
+                        <p class="text-gray-700">Cam kết với cơ chế đồng thuận Proof-of-Work đã được kiểm chứng, đảm bảo an ninh và phân quyền tối đa.</p>
+                    </div>
+                    <div class="bg-[#F7F5F2] p-6 rounded-lg">
+                        <div class="text-5xl mb-4">💰</div>
+                        <h3 class="text-xl font-bold text-[#1A535C] mb-2">Nguồn cung Cố định</h3>
+                        <p class="text-gray-700">Nguồn cung tối đa ~210.7 triệu ETC tạo ra một chính sách tiền tệ vững chắc, khiến nó trở thành một kho lưu trữ giá trị tiềm năng dài hạn.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="network-health">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-2xl font-bold text-[#1A535C] mb-4">Sự bùng nổ Hashrate Mạng lưới</h3>
+                        <p class="text-gray-600 mb-4">Sau sự kiện The Merge của Ethereum, một làn sóng thợ đào khổng lồ đã chuyển sang ETC, làm tăng đáng kể hashrate và an ninh mạng. Hashrate cao hơn giúp mạng lưới chống lại các cuộc tấn công tốt hơn.</p>
+                        <div class="chart-container">
+                            <canvas id="hashrateChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-2xl font-bold text-[#1A535C] mb-4">Tăng trưởng Địa chỉ Hoạt động</h3>
+                        <p class="text-gray-600 mb-4">Số lượng địa chỉ duy nhất tương tác với mạng đã cho thấy sự tăng trưởng nhất quán, cho thấy sự chấp nhận của người dùng và hoạt động trên chuỗi đang gia tăng. Đây là một chỉ số quan trọng cho sức khỏe hệ sinh thái.</p>
+                        <div class="chart-container">
+                            <canvas id="activeAddressesChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="market-analysis" class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-[#1A535C] text-center mb-2">Giai đoạn Tích lũy Lớn</h2>
+                <p class="text-center text-gray-600 max-w-3xl mx-auto mb-8">Trong nhiều năm, ETC đã giao dịch trong một phạm vi xác định. Phân tích kỹ thuật cho thấy đây là một vùng tích lũy dài hạn, nơi các nhà đầu tư kiên nhẫn xây dựng vị thế trước một đợt tăng giá lớn tiềm năng. Tích lũy càng lâu, đột phá càng bùng nổ.</p>
+                <div class="chart-container h-96 max-h-[500px] w-full max-w-5xl">
+                    <canvas id="priceHistoryChart"></canvas>
+                </div>
+            </section>
+
+            <section id="ecosystem" class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-[#1A535C] text-center mb-8">Hệ sinh thái: Tăng trưởng Chậm mà Chắc</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                         <p class="text-gray-600 mb-6">Mặc dù không lớn bằng các nền tảng mới hơn, hệ sinh thái của ETC đang phát triển cơ sở hạ tầng quan trọng. Việc tập trung vào khả năng tương tác, các dự án DeFi nền tảng và các sàn giao dịch NFT tạo ra một cơ sở vững chắc cho việc mở rộng và tiện ích trong tương lai.</p>
+                         <div class="space-y-4">
+                            <div class="flex items-start">
+                                <span class="text-2xl text-[#FF6B6B] mr-3">🔄</span>
+                                <div>
+                                    <h4 class="font-bold text-[#1A535C]">Khả năng Tương tác</h4>
+                                    <p class="text-gray-600">Các tài sản được bao bọc (wBTC, wETH) và các cây cầu chuỗi chéo đang kết nối ETC với thế giới tiền điện tử rộng lớn hơn.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-2xl text-[#FF6B6B] mr-3">🏛️</span>
+                                <div>
+                                    <h4 class="font-bold text-[#1A535C]">Các Nguyên tắc DeFi</h4>
+                                    <p class="text-gray-600">Các Sàn giao dịch Phi tập trung (DEX) và các giao thức cho vay đang hoạt động, cho phép các hoạt động tài chính cơ bản.</p>
+                                </div>
+                            </div>
+                             <div class="flex items-start">
+                                <span class="text-2xl text-[#FF6B6B] mr-3">🎨</span>
+                                <div>
+                                    <h4 class="font-bold text-[#1A535C]">NFTs & Gaming</h4>
+                                    <p class="text-gray-600">Số lượng dự án NFT và sàn giao dịch ngày càng tăng đang xuất hiện, mở rộng sự liên quan về văn hóa của mạng lưới.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="bg-white rounded-lg p-6">
+                        <h3 class="text-2xl font-bold text-[#1A535C] mb-4">Thành phần Hệ sinh thái</h3>
+                        <p class="text-gray-600 mb-4">Cái nhìn về sự phân bổ của các loại dự án hiện đang được xây dựng trên Ethereum Classic.</p>
+                        <div class="chart-container">
+                            <canvas id="ecosystemChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="bull-case" class="text-center">
+                <h2 class="text-3xl font-bold text-[#1A535C] mb-4">Kịch bản Tăng giá: Tại sao ETC có thể Tăng vọt</h2>
+                <p class="text-center text-gray-600 max-w-3xl mx-auto mb-8">Sự hội tụ của các thế mạnh cơ bản, sự sẵn sàng về mặt kỹ thuật và câu chuyện thị trường đã định vị Ethereum Classic cho tiềm năng tăng trưởng đáng kể.</p>
+                <div class="flex flex-col items-center">
+                    <div class="flowchart-step bg-[#4ECDC4] text-white shadow-lg">
+                        <h3 class="text-xl font-bold">Câu chuyện về 'Thiên đường PoW'</h3>
+                        <p>Khi các chuỗi PoS đối mặt với lo ngại về tập trung hóa, ETC trở thành giải pháp thay thế hợp đồng thông minh PoW hàng đầu, an toàn.</p>
+                    </div>
+                    <div class="flowchart-arrow">▼</div>
+                    <div class="flowchart-step bg-[#FFE66D] text-[#1A535C] shadow-lg">
+                        <h3 class="text-xl font-bold">Đột phá Kỹ thuật</h3>
+                         <p>Giá cuối cùng đã thoát ra khỏi phạm vi tích lũy kéo dài nhiều năm, thu hút giao dịch kỹ thuật và theo đà một cách ồ ạt.</p>
+                    </div>
+                     <div class="flowchart-arrow">▼</div>
+                     <div class="flowchart-step bg-[#FF6B6B] text-white shadow-lg">
+                        <h3 class="text-xl font-bold">Hashrate theo sau Giá</h3>
+                        <p>Giá tăng thu hút nhiều thợ đào hơn, tiếp tục tăng cường an ninh mạng và tạo ra một vòng lặp phản hồi tích cực.</p>
+                    </div>
+                     <div class="flowchart-arrow">▼</div>
+                     <div class="flowchart-step bg-[#1A535C] text-white shadow-lg">
+                        <h3 class="text-xl font-bold">Luân chuyển Vốn</h3>
+                        <p>Là một "kẻ tụt hậu" lịch sử, vốn từ BTC và ETH luân chuyển sang ETC để tìm kiếm lợi nhuận beta cao hơn vào cuối chu kỳ tăng giá.</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        
+        <footer class="text-center mt-16 pt-8 border-t border-gray-300">
+            <p class="text-gray-600">Infographic này chỉ dành cho mục đích thông tin và không phải là lời khuyên tài chính. Dữ liệu được tổng hợp từ các nguồn công khai và phản ánh tình trạng của dự án vào cuối năm 2025.</p>
+            <p class="text-gray-500 text-sm mt-2">Được tạo bởi Canvas Infographics.</p>
+        </footer>
+    </div>
+
+<script>
+    const processLabels = (labels) => {
+        return labels.map(label => {
+            if (label.length > 16) {
+                const words = label.split(' ');
+                const newLabel = [];
+                let line = '';
+                words.forEach(word => {
+                    if ((line + word).length > 16) {
+                        newLabel.push(line.trim());
+                        line = '';
+                    }
+                    line += word + ' ';
+                });
+                newLabel.push(line.trim());
+                return newLabel;
+            }
+            return label;
+        });
+    };
+    
+    const tooltipTitleCallback = (tooltipItems) => {
+        const item = tooltipItems[0];
+        let label = item.chart.data.labels[item.dataIndex];
+        return Array.isArray(label) ? label.join(' ') : label;
+    };
+
+    const sharedChartOptions = {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                position: 'top',
+                labels: {
+                    color: '#1A535C',
+                    font: {
+                        weight: 'bold'
+                    }
+                }
+            },
+            tooltip: {
+                callbacks: {
+                    title: tooltipTitleCallback
+                }
+            }
+        },
+        scales: {
+            x: {
+                ticks: { color: '#1A535C' },
+                grid: { display: false }
+            },
+            y: {
+                ticks: { color: '#1A535C' },
+                grid: { color: '#e0e0e0' }
+            }
+        }
+    };
+    
+    const colors = {
+        deepJungleGreen: '#1A535C',
+        mediumTurquoise: '#4ECDC4',
+        tomato: '#FF6B6B',
+        sunglow: '#FFE66D',
+        lightGray: '#F7F5F2'
+    };
+
+    const hashrateCtx = document.getElementById('hashrateChart').getContext('2d');
+    new Chart(hashrateCtx, {
+        type: 'line',
+        data: {
+            labels: ['Thg 1 2022', 'Thg 4 2022', 'Thg 7 2022', 'Thg 10 2022 (Sau The Merge)', 'Thg 1 2023', 'Thg 7 2023', 'Thg 1 2024', 'Thg 7 2024', 'Hiện tại'],
+            datasets: [{
+                label: 'Hashrate ETC (TH/s)',
+                data: [30, 28, 35, 180, 160, 140, 155, 165, 175],
+                borderColor: colors.mediumTurquoise,
+                backgroundColor: 'rgba(78, 205, 196, 0.2)',
+                fill: true,
+                tension: 0.4,
+                pointRadius: 4,
+                pointBackgroundColor: colors.mediumTurquoise
+            }]
+        },
+        options: sharedChartOptions
+    });
+
+    const activeAddressesCtx = document.getElementById('activeAddressesChart').getContext('2d');
+    new Chart(activeAddressesCtx, {
+        type: 'bar',
+        data: {
+            labels: ['Quý 1 2023', 'Quý 2 2023', 'Quý 3 2023', 'Quý 4 2023', 'Quý 1 2024', 'Quý 2 2024', 'Quý 3 2024'],
+            datasets: [{
+                label: 'Địa chỉ Hoạt động Hàng tháng (Nghìn)',
+                data: [45, 50, 65, 60, 75, 85, 95],
+                backgroundColor: colors.tomato,
+                borderColor: colors.tomato,
+                borderWidth: 1,
+                borderRadius: 5
+            }]
+        },
+        options: sharedChartOptions
+    });
+
+    const priceHistoryCtx = document.getElementById('priceHistoryChart').getContext('2d');
+    new Chart(priceHistoryCtx, {
+        type: 'line',
+        data: {
+            labels: ['Thg 1 2021', 'Thg 5 2021', 'Thg 1 2022', 'Thg 5 2022', 'Thg 9 2022', 'Thg 1 2023', 'Thg 7 2023', 'Thg 1 2024', 'Thg 7 2024', 'Hiện tại'],
+            datasets: [{
+                label: 'Giá ETC (USD)',
+                data: [6, 178, 35, 20, 40, 18, 16, 28, 32, 30],
+                borderColor: colors.deepJungleGreen,
+                backgroundColor: 'transparent',
+                tension: 0.1,
+                pointRadius: 0
+            }]
+        },
+        options: {
+            ...sharedChartOptions,
+            scales: {
+                ...sharedChartOptions.scales,
+                y: {
+                    ...sharedChartOptions.scales.y,
+                    type: 'logarithmic',
+                    ticks: {
+                        color: '#1A535C',
+                        callback: function(value, index, values) {
+                            if (value === 1 || value === 10 || value === 100 || value === 200) {
+                                return '$' + value;
+                            }
+                        }
+                    }
+                }
+            },
+            plugins: {
+                ...sharedChartOptions.plugins,
+                 annotation: {
+                    annotations: {
+                        box1: {
+                            type: 'box',
+                            xMin: 'Thg 5 2022',
+                            xMax: 'Hiện tại',
+                            yMin: 15,
+                            yMax: 45,
+                            backgroundColor: 'rgba(255, 107, 107, 0.15)',
+                            borderColor: 'rgba(255, 107, 107, 0.5)',
+                            borderWidth: 1,
+                            label: {
+                                content: 'Vùng Tích lũy',
+                                enabled: true,
+                                position: 'center',
+                                color: '#FF6B6B'
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    });
+
+    const ecosystemCtx = document.getElementById('ecosystemChart').getContext('2d');
+    new Chart(ecosystemCtx, {
+        type: 'doughnut',
+        data: {
+            labels: ['DeFi (DEX, Cho vay)', 'NFTs & Sàn giao dịch', 'Hạ tầng & Công cụ', 'Gaming', 'Ví'],
+            datasets: [{
+                label: 'Dự án Hệ sinh thái',
+                data: [35, 25, 20, 15, 5],
+                backgroundColor: [
+                    colors.mediumTurquoise,
+                    colors.tomato,
+                    colors.deepJungleGreen,
+                    colors.sunglow,
+                    '#C4C4C4'
+                ],
+                hoverOffset: 4
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                     labels: {
+                        color: '#1A535C',
+                        font: {
+                            weight: 'bold'
+                        }
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    }
+                }
+            }
+        }
+    });
+</script>
+    <div style="text-align: center; padding: 3rem 0;">
+        <a href="/" style="display: inline-block; background-color: #3498db; color: white; padding: 0.8rem 1.8rem; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: 2px solid transparent; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            Quay lại Trang Blog
+        </a>
+    </div>
+</body>
+</html>

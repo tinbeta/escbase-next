@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clementine: Cầu nối Bitcoin Hiệu quả về Tài sản thế chấp, Giảm thiểu Tin cậy và Có thể Mở rộng</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F0F8FF;
+        }
+        .chart-container {
+            position: relative;
+            margin: auto;
+            height: 320px;
+            max-height: 320px;
+            width: 100%;
+            max-width: 450px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+                max-height: 350px;
+            }
+        }
+        .flow-arrow {
+            font-size: 2rem;
+            line-height: 1;
+            color: #3486F2;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+<div style="max-width:800px;margin:0 auto;padding:1rem 1.5rem;"><a href="/blog/" style="display:inline-flex;align-items:center;gap:0.5rem;color:#71717a;text-decoration:none;font-size:0.9rem;font-family:sans-serif;">← Quay lại Blog</a></div>
+
+    <header class="bg-[#004AAD] text-white text-center py-12 px-6">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-2">Clementine</h1>
+        <p class="text-xl md:text-2xl font-light max-w-4xl mx-auto">Một Cầu nối Bitcoin Hiệu quả về Tài sản thế chấp, Giảm thiểu Tin cậy và Có thể Mở rộng</p>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <section id="problem" class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-[#004AAD] mb-4">Thách thức của Cầu nối Bitcoin</h2>
+            <p class="max-w-3xl mx-auto text-lg leading-relaxed text-gray-600">
+                Các giải pháp Lớp 2 của Bitcoin như zk-rollups hứa hẹn khả năng mở rộng lớn. Tuy nhiên, một nút thắt quan trọng vẫn còn: chuyển tài sản một cách an toàn và hiệu quả từ các lớp này trở lại mạng chính Bitcoin. Các cầu nối hiện tại thường phải hy sinh bảo mật, yêu cầu một lượng vốn khóa khổng lồ, hoặc dựa vào các bên tập trung, cản trở tiềm năng thực sự của Bitcoin.
+            </p>
+        </section>
+
+        <section id="pillars" class="mb-16">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center border-t-4 border-[#0062E1]">
+                    <div class="text-5xl mb-4">🛡️</div>
+                    <h3 class="text-2xl font-bold text-[#004AAD] mb-2">Bảo mật Giảm thiểu Tin cậy</h3>
+                    <p class="text-gray-600">Được xây dựng trên BitVM2, Clementine kế thừa sự bảo mật của Bitcoin, giữ an toàn miễn là có ít nhất một Watchtower trung thực hoạt động trong một tập hợp được cấp phép.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center border-t-4 border-[#3486F2]">
+                    <div class="text-5xl mb-4">🔗</div>
+                    <h3 class="text-2xl font-bold text-[#004AAD] mb-2">Khả năng Mở rộng Vượt trội</h3>
+                    <p class="text-gray-600">Một cơ chế thách thức mang tính cách mạng cho phép một giao dịch trên chuỗi duy nhất có thể tịch thu tài sản của một nhà vận hành vì nhiều lần rút tiền gian lận, giảm đáng kể tải cho mạng lưới.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center border-t-4 border-[#89B8F8]">
+                    <div class="text-5xl mb-4">💰</div>
+                    <h3 class="text-2xl font-bold text-[#004AAD] mb-2">Hiệu quả về Tài sản thế chấp</h3>
+                    <p class="text-gray-600">Giao thức tái sử dụng tài sản thế chấp đã khóa theo thời gian và giảm thiểu lãng phí bằng cách sử dụng các đầu ra có giá trị 0, làm cho cầu nối trở nên khả thi và tinh gọn về mặt kinh tế.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="how-it-works" class="mb-16">
+            <h2 class="text-3xl font-bold text-[#004AAD] text-center mb-8">Cách Clementine Hoạt động: Luồng Đơn giản hóa</h2>
+            <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <div class="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 md:space-x-4">
+                    <div class="text-center flex-1">
+                        <div class="text-4xl">👤</div>
+                        <h4 class="font-bold text-lg">1. Người dùng Khởi tạo</h4>
+                        <p class="text-sm text-gray-600">Một người dùng trên Layer-2 rollup (ví dụ: Citrea) yêu cầu rút BTC.</p>
+                    </div>
+                    <div class="flow-arrow hidden md:block">&rarr;</div>
+                    <div class="flow-arrow md:hidden">&darr;</div>
+                    <div class="text-center flex-1">
+                        <div class="text-4xl">✍️</div>
+                        <h4 class="font-bold text-lg">2. Nhà vận hành Ký</h4>
+                        <p class="text-sm text-gray-600">Các Nhà vận hành Cầu nối chứng thực trạng thái Layer-2 mới chứa giao dịch của người dùng.</p>
+                    </div>
+                    <div class="flow-arrow hidden md:block">&rarr;</div>
+                    <div class="flow-arrow md:hidden">&darr;</div>
+                    <div class="text-center flex-1">
+                        <div class="text-4xl">⛓️</div>
+                        <h4 class="font-bold text-lg">3. Rút Bitcoin</h4>
+                        <p class="text-sm text-gray-600">Chứng thực đã ký ủy quyền cho giao dịch peg-out BTC trên mạng chính Bitcoin.</p>
+                    </div>
+                </div>
+                <div class="flex justify-center my-4">
+                    <div class="flow-arrow">&darr;</div>
+                </div>
+                <div class="border-t-2 border-dashed border-gray-300 my-4 md:my-6"></div>
+                <div class="flex flex-col md:flex-row items-center justify-around space-y-4 md:space-y-0">
+                    <div class="text-center">
+                        <div class="text-4xl">🧐</div>
+                        <h4 class="font-bold text-lg">Giám sát Liên tục</h4>
+                        <p class="text-sm text-gray-600">Một tập hợp các Watchtower được cấp phép liên tục quan sát mọi hoạt động của Nhà vận hành.</p>
+                    </div>
+                    <div class="bg-[#FFEBEB] border-2 border-red-400 rounded-lg p-4 text-center max-w-md">
+                        <div class="text-4xl">🚨</div>
+                        <h4 class="font-bold text-lg text-red-700">Phát hiện Gian lận? Thách thức & Tịch thu!</h4>
+                        <p class="text-sm text-red-600">Nếu một Watchtower phát hiện gian lận, nó sẽ đưa ra một thách thức trên chuỗi. Một thách thức thành công sẽ dẫn đến việc tài sản thế chấp của Nhà vận hành không trung thực bị tịch thu.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="advantages" class="mb-12">
+            <h2 class="text-3xl font-bold text-[#004AAD] text-center mb-8">Nhìn sâu hơn về các Ưu điểm</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold text-[#004AAD] mb-3">Mô hình Bảo mật Giảm thiểu Tin cậy</h3>
+                        <p class="text-gray-600 mb-4">
+                            Bảo mật của Clementine không phụ thuộc vào đa số người tham gia trung thực. Hệ thống an toàn miễn là chỉ cần <strong>một</strong> Watchtower trung thực trực tuyến và giám sát. Mô hình 1-trong-N này cung cấp sự bảo mật mạnh mẽ chống lại các đối thủ mạnh.
+                        </p>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="securityChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold text-[#004AAD] mb-3">Khả năng Mở rộng Trên chuỗi Cấp tiến</h3>
+                        <p class="text-gray-600 mb-4">
+                            Các thiết kế cầu nối cũ hơn yêu cầu một thách thức trên chuỗi riêng biệt cho mỗi hành vi gian lận. Clementine gộp các thách thức lại, cho phép một giao dịch trên chuỗi trừng phạt một Nhà vận hành vì nhiều hành vi sai trái cùng một lúc, tăng hiệu quả và giảm chi phí một cách đáng kể.
+                        </p>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="scalabilityChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg p-6 md:col-span-2">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <h3 class="text-2xl font-bold text-[#004AAD] mb-3">Kinh tế và Hiệu quả từ Thiết kế</h3>
+                            <p class="text-gray-600 mb-4">
+                                Giao thức được thiết kế để tinh gọn. Vốn của các Nhà vận hành không bị khóa vĩnh viễn cho mỗi giao dịch mà được tái sử dụng trong một hệ thống kỷ nguyên luân phiên. Hơn nữa, việc sử dụng chiến lược các đầu ra có giá trị 0 giúp dọn dẹp trạng thái Bitcoin (bộ UTXO), giảm sự cồng kềnh của mạng lưới.
+                            </p>
+                            <p class="text-gray-600">
+                                Sự kết hợp giữa vốn được tái sử dụng và giảm thiểu rác trên chuỗi làm cho Clementine trở thành một giải pháp cầu nối bền vững và hấp dẫn về mặt kinh tế, như được thể hiện trong phân tích giả định về trạng thái rút tiền trong một hệ thống lành mạnh.
+                            </p>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="efficiencyChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="use-case" class="text-center bg-gradient-to-r from-[#0062E1] to-[#3486F2] text-white rounded-lg shadow-xl py-12 px-6">
+            <h2 class="text-3xl font-bold mb-4">Mở khóa ZK-Rollups trên Bitcoin với Citrea</h2>
+            <p class="max-w-3xl mx-auto text-lg leading-relaxed text-[#C2DAFC]">
+                Clementine là công nghệ cốt lõi cho phép peg-out an toàn cho <strong>Citrea</strong>, zk-rollup đầu tiên trên Bitcoin. Bằng cách cung cấp một cầu nối giảm thiểu tin cậy và hiệu quả, Clementine làm cho zk-rollups trở nên thực tế trên Bitcoin, mở đường cho một thế hệ ứng dụng có khả năng mở rộng mới và tăng cường khả năng tương tác mà không cần thay đổi lớp cơ sở của Bitcoin.
+            </p>
+        </section>
+    </main>
+
+    <footer class="text-center py-6 bg-[#004AAD] text-[#C2DAFC]">
+        <p>Clementine: Xây dựng một tương lai an toàn và có thể mở rộng cho hệ sinh thái Bitcoin.</p>
+    </footer>
+
+    <script>
+        const brilliantBlues = {
+            dark: '#004AAD',
+            primary: '#0062E1',
+            medium: '#3486F2',
+            light: '#89B8F8',
+            lightest: '#C2DAFC',
+            red: '#E53E3E'
+        };
+
+        function wrapLabels(labels, maxWidth) {
+            return labels.map(label => {
+                if (label.length <= maxWidth) {
+                    return label;
+                }
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = '';
+                words.forEach(word => {
+                    if ((currentLine + ' ' + word).trim().length > maxWidth) {
+                        lines.push(currentLine.trim());
+                        currentLine = word;
+                    } else {
+                        currentLine = (currentLine + ' ' + word).trim();
+                    }
+                });
+                lines.push(currentLine.trim());
+                return lines;
+            });
+        }
+        
+        const tooltipTitleCallback = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                              return label.join(' ');
+                            }
+                            return label;
+                        }
+                    }
+                }
+            }
+        };
+
+        const securityCtx = document.getElementById('securityChart').getContext('2d');
+        const rawSecurityLabels = ['Các Watchtower khác trong Tập hợp', '1 Watchtower Trung thực (Đủ để Bảo mật)'];
+        new Chart(securityCtx, {
+            type: 'doughnut',
+            data: {
+                labels: wrapLabels(rawSecurityLabels, 16),
+                datasets: [{
+                    data: [8, 1],
+                    backgroundColor: [brilliantBlues.light, brilliantBlues.primary],
+                    borderColor: brilliantBlues.lightest,
+                    borderWidth: 4,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                  return label.join(' ');
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        const scalabilityCtx = document.getElementById('scalabilityChart').getContext('2d');
+        const rawScalabilityLabels = ['Cầu nối Cũ (Xử lý 10 gian lận)', 'Clementine (Xử lý 10 gian lận)'];
+        new Chart(scalabilityCtx, {
+            type: 'bar',
+            data: {
+                labels: wrapLabels(rawScalabilityLabels, 16),
+                datasets: [{
+                    label: 'Giao dịch Thách thức Trên chuỗi',
+                    data: [10, 1],
+                    backgroundColor: [brilliantBlues.medium, brilliantBlues.primary],
+                    borderColor: brilliantBlues.dark,
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            stepSize: 1
+                        }
+                    }
+                },
+                ...tooltipTitleCallback
+            }
+        });
+
+        const efficiencyCtx = document.getElementById('efficiencyChart').getContext('2d');
+        new Chart(efficiencyCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Xử lý Thành công', 'Đang chờ', 'Bị thách thức'],
+                datasets: [{
+                    data: [95, 4, 1],
+                    backgroundColor: [
+                        brilliantBlues.primary,
+                        brilliantBlues.light,
+                        brilliantBlues.red
+                    ],
+                    borderColor: brilliantBlues.lightest,
+                    borderWidth: 4,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                  return label.join(' ');
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+    <div style="text-align: center; padding: 3rem 0;">
+        <a href="/" style="display: inline-block; background-color: #3498db; color: white; padding: 0.8rem 1.8rem; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: 2px solid transparent; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            Quay lại Trang Blog
+        </a>
+    </div>
+</body>
+</html>

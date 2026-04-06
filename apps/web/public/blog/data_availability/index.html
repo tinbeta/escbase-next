@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: Hướng dẫn cần thiết về tính khả dụng dữ liệu Blockchain</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0F172A;
+            color: #E2E8F0;
+        }
+        .chart-container {
+            position: relative;
+            margin: auto;
+            height: 40vh;
+            width: 100%;
+            max-width: 600px;
+        }
+        .kpi-card {
+            background-color: #1E293B;
+            border-left: 4px solid #9B5DE5;
+        }
+        .flow-step {
+            background-color: #1E293B;
+            border: 1px solid #334155;
+        }
+        .flow-arrow {
+            color: #9B5DE5;
+            font-size: 2rem;
+            line-height: 1;
+        }
+        .trilemma-shape {
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+    </style>
+</head>
+<body class="antialiased">
+<div style="max-width:800px;margin:0 auto;padding:1rem 1.5rem;"><a href="/blog/" style="display:inline-flex;align-items:center;gap:0.5rem;color:#71717a;text-decoration:none;font-size:0.9rem;font-family:sans-serif;">← Quay lại Blog</a></div>
+
+    <header class="text-center py-12 px-4 bg-slate-900/50">
+        <h1 class="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#9B5DE5] to-[#00F5D4]">Động cơ vô hình của Web3</h1>
+        <p class="mt-4 text-xl md:text-2xl font-light text-slate-300">Nghiên cứu sâu về Tính khả dụng dữ liệu Blockchain</p>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+        
+        <section id="introduction" class="mb-20 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Tại sao Tính khả dụng dữ liệu lại quan trọng?</h2>
+            <p class="max-w-3xl mx-auto text-lg text-slate-400">
+                Tính khả dụng dữ liệu (DA) là sự đảm bảo rằng bất kỳ người tham gia nào cũng có thể truy cập dữ liệu cần thiết để xác minh trạng thái của blockchain bất cứ lúc nào. Nó không chỉ là một tính năng kỹ thuật; nó là nền tảng của bảo mật, phân cấp và sự tin cậy trong toàn bộ hệ sinh thái Web3. Nếu không có nó, lời hứa về một sổ cái có thể xác minh, không cần tin cậy sẽ sụp đổ.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                <div class="kpi-card rounded-lg shadow-2xl p-6">
+                    <h3 class="text-lg font-semibold text-slate-200">Vấn đề cốt lõi</h3>
+                    <p class="text-4xl font-extrabold text-[#F15BB5] my-2">Vấn đề DA</p>
+                    <p class="text-slate-400">"Vấn đề Tính khả dụng dữ liệu" (DAP) là thách thức trong việc đảm bảo tất cả dữ liệu khối được công bố và có thể truy cập, một trở ngại lớn cho khả năng mở rộng blockchain.</p>
+                </div>
+                <div class="kpi-card rounded-lg shadow-2xl p-6">
+                    <h3 class="text-lg font-semibold text-slate-200">Mối đe dọa lớn nhất</h3>
+                    <p class="text-4xl font-extrabold text-[#F15BB5] my-2">Tấn công giữ lại</p>
+                    <p class="text-slate-400">Kẻ tấn công có thể đề xuất các khối nhưng giấu dữ liệu cơ bản, có khả năng làm ngừng chuỗi hoặc cho phép đánh cắp bằng cách lừa các light client.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="architectures" class="mb-20">
+            <h2 class="text-3xl font-bold text-center text-white mb-8">Câu chuyện về hai kiến trúc</h2>
+             <p class="max-w-3xl mx-auto text-lg text-slate-400 text-center mb-12">
+                Cách tiếp cận Tính khả dụng dữ liệu được định hình một cách cơ bản bởi kiến trúc cốt lõi của blockchain. Sự chuyển đổi từ thiết kế đơn nhất, tất cả trong một sang mô hình chuyên biệt, phân lớp đại diện cho một trong những sự phát triển quan trọng nhất trong hành trình tìm kiếm khả năng mở rộng.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-[#1E293B] rounded-lg shadow-xl p-6 border-t-4 border-[#00AFB9]">
+                    <h3 class="text-2xl font-bold text-white mb-2">Đơn nhất</h3>
+                    <p class="text-slate-400 mb-4">Tích hợp thực thi, đồng thuận và DA trong một lớp duy nhất. Đơn giản và an toàn, nhưng tạo ra nút thắt cổ chai giới hạn khả năng mở rộng và tăng yêu cầu về node.</p>
+                     <ul class="list-disc list-inside text-slate-400 space-y-1">
+                        <li><span class="font-semibold text-slate-300">Nút thắt cổ chai:</span> Thiết kế tất cả trong một gặp khó khăn với khối lượng giao dịch cao.</li>
+                        <li><span class="font-semibold text-slate-300">Chi phí cao:</span> Chạy một full node trở nên đắt đỏ khi dữ liệu tăng.</li>
+                        <li><span class="font-semibold text-slate-300">Nguy cơ tập trung hóa:</span> Chi phí cao có thể hạn chế số lượng người tham gia.</li>
+                    </ul>
+                </div>
+                <div class="bg-[#1E293B] rounded-lg shadow-xl p-6 border-t-4 border-[#9B5DE5]">
+                    <h3 class="text-2xl font-bold text-white mb-2">Mô-đun</h3>
+                    <p class="text-slate-400 mb-4">Tách các trách nhiệm thành các lớp chuyên biệt (ví dụ: DA, thực thi). Điều này cho phép tối ưu hóa, xử lý song song và cải thiện đáng kể khả năng mở rộng.</p>
+                     <ul class="list-disc list-inside text-slate-400 space-y-1">
+                        <li><span class="font-semibold text-slate-300">Khả năng mở rộng:</span> Các lớp chuyên biệt xử lý tác vụ hiệu quả hơn.</li>
+                        <li><span class="font-semibold text-slate-300">Linh hoạt:</span> Nhà phát triển có thể kết hợp các lớp cho nhu cầu cụ thể.</li>
+                        <li><span class="font-semibold text-slate-300">Phân cấp:</span> Giảm rào cản tham gia (ví dụ: light client).</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12">
+                 <div class="chart-container">
+                    <canvas id="architectureChart"></canvas>
+                </div>
+                <p class="text-center text-slate-400 mt-4">Cách tiếp cận mô-đun về cơ bản tách rời các chức năng cốt lõi, cho phép tối ưu hóa chuyên biệt giúp tăng cường đáng kể khả năng mở rộng và tính linh hoạt so với thiết kế đơn nhất cứng nhắc.</p>
+            </div>
+        </section>
+
+        <section id="solutions" class="mb-20">
+            <h2 class="text-3xl font-bold text-center text-white mb-8">Bộ công cụ DA hiện đại</h2>
+             <p class="max-w-3xl mx-auto text-lg text-slate-400 text-center mb-12">
+                Để giải quyết Vấn đề Tính khả dụng dữ liệu, một bộ các giải pháp mã hóa và cấu trúc tiên tiến đã xuất hiện. Các công cụ này tạo thành xương sống của các blockchain hiện đại, có khả năng mở rộng, đảm bảo dữ liệu vừa có sẵn vừa có thể xác minh.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <div class="kpi-card p-6 rounded-lg shadow-xl">
+                    <h3 class="text-xl font-bold text-white">Lấy mẫu khả dụng dữ liệu (DAS)</h3>
+                    <p class="text-slate-400 mt-2">Cho phép light client xác minh tính khả dụng của dữ liệu với xác suất cao bằng cách lấy mẫu một vài phần dữ liệu nhỏ, thay vì tải xuống toàn bộ khối.</p>
+                </div>
+                <div class="kpi-card p-6 rounded-lg shadow-xl">
+                    <h3 class="text-xl font-bold text-white">Mã hóa xóa (EC)</h3>
+                    <p class="text-slate-400 mt-2">Thêm dữ liệu dự phòng (mảnh chẵn lẻ) vào dữ liệu khối gốc, cho phép tái tạo toàn bộ khối ngay cả khi một phần đáng kể của nó bị thiếu.</p>
+                </div>
+                <div class="kpi-card p-6 rounded-lg shadow-xl">
+                    <h3 class="text-xl font-bold text-white">Cam kết KZG</h3>
+                    <p class="text-slate-400 mt-2">Kỹ thuật mật mã tạo ra các bằng chứng nhỏ, kích thước không đổi cho lượng lớn dữ liệu, cho phép xác minh cực kỳ hiệu quả và thường loại bỏ nhu cầu về bằng chứng gian lận.</p>
+                </div>
+            </div>
+             <div class="chart-container">
+                <canvas id="dacVsDalChart"></canvas>
+            </div>
+             <p class="text-center text-slate-400 mt-4">Các Lớp khả dụng dữ liệu chuyên dụng (DAL) cung cấp mô hình giảm thiểu độ tin cậy, phân cấp và an toàn hơn so với các Ủy ban khả dụng dữ liệu (DAC), vốn phụ thuộc vào một tập hợp các tác nhân được tin cậy, được cấp phép.</p>
+        </section>
+
+        <section id="pioneers" class="mb-20">
+            <h2 class="text-3xl font-bold text-center text-white mb-8">Những người tiên phong của Kỷ nguyên mô-đun</h2>
+             <p class="max-w-3xl mx-auto text-lg text-slate-400 text-center mb-12">
+                Một làn sóng các dự án mới đang chuyên tâm giải quyết vấn đề DA. Các lớp chuyên biệt này cung cấp nền tảng an toàn, có khả năng mở rộng cho thế hệ rollup và ứng dụng phi tập trung tiếp theo.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-[#1E293B] rounded-lg shadow-xl p-6">
+                    <h3 class="text-2xl font-bold text-white mb-2">Celestia</h3>
+                    <p class="text-slate-400">Mạng blockchain mô-đun đầu tiên, chỉ tập trung vào DA và đồng thuận. Nó sử dụng DAS và mã hóa Reed-Solomon 2D để cung cấp dữ liệu có khả năng mở rộng, tiết kiệm chi phí cho rollup.</p>
+                </div>
+                <div class="bg-[#1E293B] rounded-lg shadow-xl p-6">
+                    <h3 class="text-2xl font-bold text-white mb-2">Polygon Avail</h3>
+                    <p class="text-slate-400">Một lớp DA mạnh mẽ tận dụng Cam kết KZG để cung cấp các đảm bảo bảo mật mạnh mẽ, loại bỏ nhu cầu về một số bằng chứng gian lận và cho phép xác minh hiệu quả bởi light client.</p>
+                </div>
+                <div class="bg-[#1E293B] rounded-lg shadow-xl p-6">
+                    <h3 class="text-2xl font-bold text-white mb-2">Ethereum (Danksharding)</h3>
+                    <p class="text-slate-400">Sự tiến hóa chiến lược của Ethereum thành một lớp DA hàng đầu cho hệ sinh thái L2 của nó. Thông qua Proto-Danksharding (EIP-4844), nó giới thiệu "blobs" để lưu trữ dữ liệu khối lượng lớn, giá rẻ.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="economics" class="mb-20">
+            <h2 class="text-3xl font-bold text-center text-white mb-12">Kinh tế học của dữ liệu</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Nút thắt cổ chai chi phí của Rollup</h3>
+                    <p class="text-lg text-slate-400 mb-6">Đối với các giải pháp Lớp 2, chi phí hoạt động lớn nhất là xuất bản dữ liệu lên chuỗi chính. Tối ưu hóa chi phí DA là yếu tố quan trọng nhất để làm cho rollup trở nên phải chăng và đạt được sự chấp nhận hàng loạt.</p>
+                    <div class="chart-container h-[30vh]">
+                        <canvas id="costBreakdownChart"></canvas>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Cuộc đua xuống đáy (theo nghĩa tốt)</h3>
+                    <p class="text-lg text-slate-400 mb-6">Sự xuất hiện của các lớp DA chuyên dụng và các đổi mới như blob của Ethereum đã tạo ra một thị trường cạnh tranh, đẩy chi phí dữ liệu xuống và mở khóa những khả năng mới cho các ứng dụng trên chuỗi.</p>
+                     <div class="chart-container h-[40vh]">
+                        <canvas id="costComparisonChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="future" class="text-center">
+             <h2 class="text-3xl font-bold text-white mb-8">Tương lai là mô-đun và giàu dữ liệu</h2>
+            <p class="max-w-3xl mx-auto text-lg text-slate-400 mb-12">
+                Giải quyết Tính khả dụng dữ liệu không chỉ là một cải tiến gia tăng; đó là một sự thay đổi mô hình. Nó mở khóa Bộ ba bất khả thi của Blockchain bằng cách cho phép bảo mật, khả năng mở rộng và phân cấp cùng tồn tại thông qua các lớp chuyên biệt, có thể tương tác. Khi DA trở nên rẻ hơn và hiệu quả hơn, nó mở đường cho một thế hệ ứng dụng phức tạp, thông lượng cao mới được xây dựng hoàn toàn trên chuỗi.
+            </p>
+             <div class="flex justify-center items-center">
+                <div class="grid grid-cols-1 gap-4 w-full max-w-lg">
+                    <div class="flow-step p-4 rounded-lg text-center font-bold text-xl text-[#00F5D4]">Khả năng mở rộng</div>
+                    <div class="flex justify-center transform -translate-y-2">
+                        <div class="flow-step p-4 rounded-lg text-center font-bold text-xl text-[#F15BB5] mr-4">Bảo mật</div>
+                        <div class="flow-step p-4 rounded-lg text-center font-bold text-xl text-[#FEE440] ml-4">Phân cấp</div>
+                    </div>
+                </div>
+            </div>
+             <p class="max-w-3xl mx-auto text-lg text-slate-400 mt-12">
+               Sự cạnh tranh và đổi mới đang diễn ra trong không gian DA sẽ là chất xúc tác chính cho sự mở rộng của Web3 từ các trường hợp sử dụng thích hợp sang việc chấp nhận rộng rãi.
+            </p>
+        </section>
+
+    </main>
+
+    <footer class="text-center p-8 mt-16 border-t border-slate-800">
+        <p class="text-slate-500">Infographic được tạo dựa trên phân tích toàn diện về Tính khả dụng dữ liệu trong Blockchain.</p>
+    </footer>
+
+    <script>
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+
+        const wrapLabel = (label, maxWidth) => {
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + ' ' + word).trim().length > maxWidth && currentLine.length > 0) {
+                    lines.push(currentLine);
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            }
+            if (currentLine.length > 0) {
+                lines.push(currentLine);
+            }
+            return lines;
+        };
+        
+        const sharedChartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    labels: {
+                        color: '#E2E8F0',
+                        font: {
+                            size: 14
+                        }
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    grid: {
+                        color: '#334155'
+                    },
+                    ticks: {
+                        color: '#94A3B8'
+                    }
+                },
+                x: {
+                    grid: {
+                        display: false
+                    },
+                    ticks: {
+                        color: '#94A3B8'
+                    }
+                }
+            }
+        };
+
+        new Chart(document.getElementById('architectureChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Đơn nhất', 'Mô-đun'],
+                datasets: [{
+                    label: 'Điểm khả năng mở rộng & linh hoạt',
+                    data: [30, 90],
+                    backgroundColor: ['#00AFB9', '#9B5DE5'],
+                    borderColor: ['#00CCBF', '#F15BB5'],
+                    borderWidth: 2
+                }]
+            },
+            options: sharedChartOptions
+        });
+
+        new Chart(document.getElementById('dacVsDalChart'), {
+            type: 'radar',
+            data: {
+                labels: ['Bảo mật', 'Phân cấp', 'Hiệu quả chi phí', 'Giả định độ tin cậy', 'Khả năng mở rộng'],
+                datasets: [{
+                    label: 'Ủy ban khả dụng dữ liệu (DAC)',
+                    data: [6, 3, 8, 2, 7],
+                    fill: true,
+                    backgroundColor: 'rgba(241, 91, 181, 0.2)',
+                    borderColor: '#F15BB5',
+                    pointBackgroundColor: '#F15BB5',
+                    pointBorderColor: '#fff'
+                }, {
+                    label: 'Lớp DA chuyên dụng (DAL)',
+                    data: [9, 9, 6, 9, 9],
+                    fill: true,
+                    backgroundColor: 'rgba(0, 245, 212, 0.2)',
+                    borderColor: '#00F5D4',
+                    pointBackgroundColor: '#00F5D4',
+                    pointBorderColor: '#fff'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                     legend: {
+                        position: 'top',
+                        labels: {
+                            color: '#E2E8F0',
+                            font: { size: 12 }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                },
+                scales: {
+                    r: {
+                        angleLines: { color: '#334155' },
+                        grid: { color: '#334155' },
+                        pointLabels: { 
+                            color: '#E2E8F0',
+                            font: { size: 12 }
+                        },
+                        ticks: {
+                            color: '#1E293B',
+                            backdropColor: '#334155'
+                        }
+                    }
+                }
+            }
+        });
+
+        new Chart(document.getElementById('costBreakdownChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Chi phí khả dụng dữ liệu', 'Khác (Thực thi, v.v.)'],
+                datasets: [{
+                    data: [95, 5],
+                    backgroundColor: ['#F15BB5', '#1E293B'],
+                    borderColor: ['#9B5DE5', '#334155'],
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                           color: '#E2E8F0'
+                        }
+                    },
+                     tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback,
+                            label: function(context) {
+                                return context.label + ': ' + context.parsed + '%';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+        
+        const costComparisonLabels = [
+            'Ethereum Blobs (EIP-4844)', 
+            'Celestia (Tiêu chuẩn)', 
+            wrapLabel('Celestia (với SuperBlobs)', 16)
+        ];
+        
+        new Chart(document.getElementById('costComparisonChart'), {
+            type: 'bar',
+            data: {
+                labels: costComparisonLabels,
+                datasets: [{
+                    label: 'Chi phí mỗi MB được đăng (USD)',
+                    data: [20.56, 7.31, 0.81],
+                    backgroundColor: ['#9B5DE5', '#00AFB9', '#00F5D4'],
+                    borderColor: ['#F15BB5', '#00CCBF', '#9EE493'],
+                    borderWidth: 2
+                }]
+            },
+            options: sharedChartOptions
+        });
+
+    </script>
+    <div style="text-align: center; padding: 3rem 0;">
+        <a href="/" style="display: inline-block; background-color: #3498db; color: white; padding: 0.8rem 1.8rem; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: 2px solid transparent; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            Quay lại Trang Blog
+        </a>
+    </div>
+</body>
+</html>

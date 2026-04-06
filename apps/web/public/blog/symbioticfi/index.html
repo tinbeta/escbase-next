@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic Phân Tích Sâu Symbiotic.fi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0A192F;
+            color: #C1D4E3;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .flowchart-node {
+            background-color: #003F5C;
+            border: 2px solid #36698A;
+            color: #F2F2F2;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s;
+        }
+        .flowchart-node:hover {
+            transform: translateY(-5px);
+        }
+        .flowchart-arrow {
+            font-size: 2rem;
+            color: #759DBF;
+            margin: 0 1rem;
+        }
+        .stat-card {
+            background-color: rgba(0, 63, 92, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid #36698A;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #759DBF, #F2F2F2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="antialiased">
+<div style="max-width:800px;margin:0 auto;padding:1rem 1.5rem;"><a href="/blog/" style="display:inline-flex;align-items:center;gap:0.5rem;color:#71717a;text-decoration:none;font-size:0.9rem;font-family:sans-serif;">← Quay lại Blog</a></div>
+
+    <div class="container mx-auto px-4 py-12">
+
+        <header class="text-center mb-16">
+            <h1 class="text-4xl md:text-6xl font-black gradient-text mb-4">SYMBIOTIC</h1>
+            <p class="text-xl md:text-2xl font-light text-c1d4e3 max-w-3xl mx-auto">Giải Cấu Trúc Tương Lai Mô-đun của An Ninh Chung</p>
+        </header>
+
+        <section id="intro" class="mb-20">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                <div class="md:col-span-1 text-center md:text-left">
+                     <div class="stat-card p-8 rounded-xl text-center">
+                        <p class="text-lg text-759dbf mb-2">Tổng vốn huy động</p>
+                        <p class="text-6xl font-bold text-white">$34.8M</p>
+                        <p class="text-md text-c1d4e3 mt-2">Được dẫn dắt bởi Paradigm & Pantera</p>
+                    </div>
+                </div>
+                <div class="md:col-span-2">
+                    <h2 class="text-3xl font-bold text-white mb-4">Không chỉ là Restaking.</h2>
+                    <p class="text-lg text-c1d4e3 leading-relaxed">
+                        Symbiotic là một lớp điều phối không cần cấp phép, mô-đun hóa và trung lập, được thiết kế để giải quyết "vấn đề điều phối" cho các mạng lưới mới. Nó tạo ra một thị trường linh hoạt cho an ninh kinh tế chung, cho phép bất kỳ tài sản ERC-20 nào cũng có thể tham gia bảo mật.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="architecture" class="mb-20">
+            <h2 class="text-3xl font-bold text-white text-center mb-12">Kiến trúc Mô-đun: Các Thành phần Cốt lõi</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-4">
+                <div class="flowchart-node">
+                    <h3 class="font-bold text-lg">Tài sản Thế chấp</h3>
+                    <p class="text-sm">Bất kỳ token ERC-20 nào</p>
+                </div>
+                <div class="flowchart-arrow transform rotate-90 md:rotate-0">&rarr;</div>
+                <div class="flowchart-node">
+                    <h3 class="font-bold text-lg">Vaults & Curators</h3>
+                    <p class="text-sm">Lớp quản lý rủi ro & chiến lược</p>
+                </div>
+                <div class="flowchart-arrow transform rotate-90 md:rotate-0">&rarr;</div>
+                <div class="flowchart-node">
+                    <h3 class="font-bold text-lg">Operators</h3>
+                    <p class="text-sm">Nhà vận hành cơ sở hạ tầng</p>
+                </div>
+                <div class="flowchart-arrow transform rotate-90 md:rotate-0">&rarr;</div>
+                <div class="flowchart-node">
+                    <h3 class="font-bold text-lg">Networks</h3>
+                    <p class="text-sm">Bên tiêu thụ an ninh</p>
+                </div>
+            </div>
+             <p class="text-center mt-8 text-c1d4e3 max-w-2xl mx-auto">Kiến trúc này phân tách rủi ro, chuyển quyền kiểm soát từ một thực thể trung tâm sang các Người quản lý (Curators) của từng Vault, tạo ra một thị trường an ninh do thị trường điều khiển.</p>
+        </section>
+        
+        <section id="comparison" class="mb-20">
+             <h2 class="text-3xl font-bold text-white text-center mb-12">Đối đầu: Symbiotic vs. EigenLayer</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="stat-card rounded-xl p-6">
+                    <h3 class="text-2xl font-bold text-white mb-4">So sánh các Đặc tính Chính</h3>
+                    <p class="text-c1d4e3 mb-6">Symbiotic được xây dựng dựa trên triết lý về sự linh hoạt và phi tập trung, trong khi EigenLayer có cách tiếp cận nguyên khối hơn. Biểu đồ radar này so sánh các khía cạnh cốt lõi của hai giao thức.</p>
+                     <div class="chart-container h-80 md:h-96">
+                        <canvas id="comparisonChart"></canvas>
+                    </div>
+                </div>
+                <div class="text-c1d4e3 space-y-4">
+                    <div>
+                        <h4 class="font-bold text-white text-lg">✓ Kiến trúc Mô-đun</h4>
+                        <p>Cho phép tùy chỉnh tối đa về tài sản thế chấp, nhà vận hành và điều kiện cắt giảm.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-lg">✓ Hợp đồng Bất biến</h4>
+                        <p>Loại bỏ rủi ro quản trị từ bên ngoài, không có multisig hay DAO nào có thể thay đổi quy tắc cốt lõi.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-lg">✓ Hỗ trợ Đa tài sản</h4>
+                        <p>Bất kỳ token ERC-20 nào cũng có thể được sử dụng làm tài sản thế chấp, mở rộng nguồn vốn an ninh.</p>
+                    </div>
+                     <div>
+                        <h4 class="font-bold text-white text-lg">✓ Cô lập Rủi ro</h4>
+                        <p>Sự cố trong một Vault hoặc Mạng lưới không ảnh hưởng đến toàn bộ hệ sinh thái.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ecosystem" class="mb-20">
+            <h2 class="text-3xl font-bold text-white text-center mb-12">Một Hệ sinh thái Mở rộng Nhanh chóng</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="order-2 md:order-1">
+                    <h3 class="text-2xl font-bold text-white mb-4">Hơn 35 Đối tác và còn tiếp tục tăng</h3>
+                    <p class="text-c1d4e3 mb-4 leading-relaxed">
+                        Symbiotic ra mắt với một hệ sinh thái đa dạng, bao gồm các dự án hàng đầu trong nhiều lĩnh vực như L2s, DeFi, Oracles, và Tương tác. Điều này cho thấy sức hút mạnh mẽ và khả năng ứng dụng rộng rãi của giao thức.
+                    </p>
+                    <p class="text-c1d4e3 font-semibold">Các tích hợp nổi bật bao gồm <span class="text-white">Mellow Protocol</span> cho LRT mô-đun và <span class="text-white">Ethena</span>, sử dụng token $ENA của chính mình để bảo mật cơ sở hạ tầng.</p>
+                </div>
+                <div class="order-1 md:order-2 stat-card rounded-xl p-6">
+                    <h3 class="text-xl font-bold text-white text-center mb-4">Phân bổ Đối tác theo Lĩnh vực</h3>
+                    <div class="chart-container h-80">
+                        <canvas id="ecosystemChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="security">
+            <h2 class="text-3xl font-bold text-white text-center mb-12">An ninh Vững chắc: Đã được Kiểm chứng</h2>
+             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="stat-card rounded-xl p-6">
+                    <h3 class="text-xl font-bold text-white mb-4">Kết quả Kiểm toán Hợp đồng Thông minh</h3>
+                    <p class="text-c1d4e3 mb-6">Giao thức đã được kiểm toán nghiêm ngặt bởi các công ty hàng đầu. Kết quả cho thấy chất lượng mã nguồn rất cao.</p>
+                    <div class="chart-container h-80">
+                         <canvas id="auditChart"></canvas>
+                    </div>
+                </div>
+                <div class="text-center md:text-left">
+                    <h3 class="text-2xl font-bold text-white mb-4">Được xác thực bởi các Chuyên gia Hàng đầu</h3>
+                    <p class="text-c1d4e3 mb-6">Symbiotic đã trải qua một quy trình kiểm toán toàn diện với sự tham gia của các công ty uy tín như <span class="font-semibold text-white">Statemind, Zellic, ChainSecurity, OtterSec, và Certora</span>.</p>
+                    <div class="stat-card p-8 rounded-xl text-center">
+                        <p class="text-6xl font-bold text-white">0</p>
+                        <p class="text-lg text-759dbf">Lỗi nghiêm trọng (Critical) được tìm thấy trong các hợp đồng cốt lõi.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        function wrapLabel(str, maxWidth) {
+            if (str.length <= maxWidth) {
+                return str;
+            }
+            const words = str.split(' ');
+            let lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + word).length > maxWidth) {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += word + ' ';
+            }
+            lines.push(currentLine.trim());
+            return lines.filter(line => line.length > 0);
+        }
+
+        const tooltipTitleCallback = function(tooltipItems) {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            } else {
+                return label;
+            }
+        };
+
+        const chartColors = {
+            blue: '#36698A',
+            lightBlue: '#759DBF',
+            extraLightBlue: '#C1D4E3',
+            white: '#F2F2F2',
+            darkBlue: '#003F5C'
+        };
+        
+        Chart.defaults.color = chartColors.extraLightBlue;
+        Chart.defaults.borderColor = 'rgba(117, 157, 191, 0.2)';
+
+        const ecosystemCtx = document.getElementById('ecosystemChart').getContext('2d');
+        new Chart(ecosystemCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Tương tác', 'Rollups & L2s', 'DeFi', 'Oracles', 'Sẵn có Dữ liệu', 'AI & ZK'],
+                datasets: [{
+                    label: 'Phân bổ Đối tác',
+                    data: [4, 3, 3, 3, 2, 4],
+                    backgroundColor: [
+                        chartColors.blue,
+                        chartColors.lightBlue,
+                        chartColors.extraLightBlue,
+                        '#5A86AC',
+                        chartColors.darkBlue,
+                        '#9CB9D1'
+                    ],
+                    borderColor: '#0A192F',
+                    borderWidth: 4,
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            padding: 15,
+                            boxWidth: 12
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+
+        const comparisonCtx = document.getElementById('comparisonChart').getContext('2d');
+        new Chart(comparisonCtx, {
+            type: 'radar',
+            data: {
+                labels: ['Kiến trúc Mô-đun', 'Phi tập trung', 'Hỗ trợ Tài sản', 'Cô lập Rủi ro', 'Quản trị Tối thiểu'],
+                datasets: [{
+                    label: 'Symbiotic',
+                    data: [5, 5, 5, 4, 5],
+                    backgroundColor: 'rgba(54, 105, 138, 0.4)',
+                    borderColor: chartColors.lightBlue,
+                    pointBackgroundColor: chartColors.lightBlue,
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: chartColors.lightBlue,
+                    borderWidth: 2,
+                }, {
+                    label: 'EigenLayer',
+                    data: [2, 3, 3, 2, 2],
+                    backgroundColor: 'rgba(193, 212, 227, 0.4)',
+                    borderColor: chartColors.extraLightBlue,
+                    pointBackgroundColor: chartColors.extraLightBlue,
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: chartColors.extraLightBlue,
+                    borderWidth: 2,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        angleLines: {
+                            color: 'rgba(117, 157, 191, 0.2)'
+                        },
+                        grid: {
+                            color: 'rgba(117, 157, 191, 0.2)'
+                        },
+                        pointLabels: {
+                            font: {
+                                size: 12
+                            },
+                            color: chartColors.extraLightBlue
+                        },
+                        ticks: {
+                            backdropColor: 'transparent',
+                            stepSize: 1
+                        },
+                        min: 0,
+                        max: 5
+                    }
+                },
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    },
+                    legend: {
+                         position: 'bottom',
+                    }
+                }
+            }
+        });
+
+        const auditCtx = document.getElementById('auditChart').getContext('2d');
+        new Chart(auditCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Statemind', 'Zellic', 'ChainSecurity', 'OtterSec', 'Certora'],
+                datasets: [{
+                    label: 'Lỗi Trung bình',
+                    data: [4, 0, 1, 0, 6],
+                    backgroundColor: chartColors.lightBlue,
+                }, {
+                    label: 'Lỗi Cao',
+                    data: [1, 0, 2, 0, 1],
+                    backgroundColor: chartColors.blue,
+                }, {
+                    label: 'Lỗi Nghiêm trọng',
+                    data: [0, 0, 0, 0, 0],
+                    backgroundColor: chartColors.extraLightBlue,
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        stacked: true,
+                        grid: {
+                            display: false
+                        }
+                    },
+                    y: {
+                        stacked: true,
+                         grid: {
+                            color: 'rgba(117, 157, 191, 0.1)'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+    <div style="text-align: center; padding: 3rem 0;">
+        <a href="/" style="display: inline-block; background-color: #3498db; color: white; padding: 0.8rem 1.8rem; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: 2px solid transparent; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            Quay lại Trang Blog
+        </a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Cáo Crypto 07/03: BTC Mất 110 Tỷ Đô - Thị Trường Đỏ Lửa - ESC Base</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --bg: #09090b;
+            --card-bg: #18181b;
+            --card-hover: #27272a;
+            --border: #27272a;
+            --border-hover: #3f3f46;
+            --text: #fafafa;
+            --text-secondary: #a1a1aa;
+            --text-muted: #71717a;
+            --accent: #f7931a;
+            --accent-green: #22c55e;
+            --accent-red: #ef4444;
+            --radius-xl: 32px;
+            --radius-lg: 24px;
+            --radius-md: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--accent);
+        }
+
+        .article-header {
+            margin-bottom: 2.5rem;
+        }
+
+        .category-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(247, 147, 26, 0.1);
+            border: 1px solid rgba(247, 147, 26, 0.2);
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 1.25rem;
+        }
+
+        h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.02em;
+        }
+
+        .meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .featured-image {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            border-radius: var(--radius-lg);
+            margin-bottom: 2.5rem;
+            border: 1px solid var(--border);
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+        }
+
+        .article-content h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-content h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .article-content p {
+            margin-bottom: 1.25rem;
+        }
+
+        .article-content ul,
+        .article-content ol {
+            margin-bottom: 1.25rem;
+            padding-left: 1.5rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(247, 147, 26, 0.1) 0%, rgba(247, 147, 26, 0.05) 100%);
+            border: 1px solid rgba(247, 147, 26, 0.2);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .highlight-box h4 {
+            color: var(--accent);
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.25rem;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 1.75rem;
+            font-weight: 800;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-value.down {
+            color: var(--accent-red);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .video-embed {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16/9;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            margin: 2rem 0;
+            border: 1px solid var(--border);
+        }
+
+        .video-embed iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .tag {
+            padding: 0.5rem 1rem;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            .container {
+                padding: 1.5rem 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="/blog/" class="back-link"><i class="fas fa-arrow-left"></i> Quay lại Blog</a>
+
+        <article>
+            <header class="article-header">
+                <span class="category-badge"><i class="fas fa-chart-line"></i> Báo Cáo Thị Trường</span>
+                <h1>Báo Cáo Crypto 07/03: BTC Mất 110 Tỷ Đô - Thị Trường Đỏ Lửa</h1>
+                <div class="meta">
+                    <span><i class="far fa-calendar"></i> 07/03/2026</span>
+                    <span><i class="far fa-clock"></i> 8 phút đọc</span>
+                    <span><i class="fas fa-user"></i> ESC Base Research</span>
+                </div>
+            </header>
+
+            <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=1200&h=675&fit=crop" alt="Bitcoin Market" class="featured-image">
+
+            <div class="article-content">
+                <p><strong>Thị trường crypto trải qua một ngày đầy biến động khi Bitcoin giảm mạnh từ mức đỉnh $74,200 xuống còn $68,100.</strong> Đây là đợt điều chỉnh mạnh nhất kể từ tháng 1/2026, khiến tổng vốn hóa thị trường bốc hơi hơn 110 tỷ USD chỉ trong 24 giờ.</p>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value down">-3.77%</div>
+                        <div class="stat-label">Bitcoin (BTC)</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value down">-4.48%</div>
+                        <div class="stat-label">Ethereum (ETH)</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value down">$320M</div>
+                        <div class="stat-label">Thanh Lý 24h</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value down">35</div>
+                        <div class="stat-label">Fear & Greed Index</div>
+                    </div>
+                </div>
+
+                <h2>🚨 Nguyên Nhân Chính</h2>
+
+                <h3>1. Trump Tuyên Bố "No Deal" Với Iran</h3>
+                <p>Vào lúc 14:30 UTC ngày 06/03/2026, Tổng thống Donald Trump đã đưa ra tuyên bố cứng rắn về chương trình hạt nhân Iran, khẳng định sẽ không có thỏa thuận nào được ký kết trong thờii gian tới.</p>
+                <p>Ngay sau tuyên bố:</p>
+                <ul>
+                    <li>Giá dầu thô WTI tăng vọt 4.5% lên $78/thùng</li>
+                    <li>USD Index (DXY) tăng 0.8% lên 104.2</li>
+                    <li>Tạo áp lực mạnh lên các tài sản risk-on</li>
+                </ul>
+
+                <h3>2. BlackRock $26 Tỷ Private Credit Fund Hạn Chế Rút Tiền</h3>
+                <p>BlackRock, quỹ quản lý tài sản lớn nhất thế giới với $11 nghìn tỷ AUM, đã phải áp dụng biện pháp "gate" cho quỹ Private Credit trị giá $26 tỷ vào ngày 05/03.</p>
+                <p><strong>Tác động đến crypto:</strong> Bitcoin ETF ghi nhận outflow $45 triệu trong ngày 06/03, chấm dứt chuỗi 15 ngày inflow liên tiếp.</p>
+
+                <h3>3. Short-Term Holders Xả 27,000 BTC Tại Đỉnh $74K</h3>
+                <p>Phân tích on-chain cho thấy một đợt chuyển dịch lớn từ ví ngắn hạn lên các sàn khi BTC chạm $74,200. Tổng cộng 27,340 BTC (~$1.82 tỷ) được chuyển vào các sàn trong khung giờ 14:00-16:00 UTC ngày 05/03.</p>
+
+                <h2>📊 Phân Tích Kỹ Thuật</h2>
+
+                <div class="highlight-box">
+                    <h4><i class="fas fa-chart-bar"></i> Bitcoin (BTC/USDT)</h4>
+                    <ul>
+                        <li><strong>Xu hướng:</strong> Điều chỉnh sau failed breakout tại $74K</li>
+                        <li><strong>Hỗ trợ:</strong> S1: $67,000 | S2: $64,000-$65,000 | S3: $60,000</li>
+                        <li><strong>Kháng cự:</strong> R1: $70,000 | R2: $73,000-$74,000 | R3: $77,500</li>
+                        <li><strong>RSI (14):</strong> 42 - trung tính</li>
+                    </ul>
+                </div>
+
+                <div class="highlight-box">
+                    <h4><i class="fas fa-chart-bar"></i> Ethereum (ETH/USDT)</h4>
+                    <ul>
+                        <li><strong>Xu hướng:</strong> Yếu hơn BTC, mất $2K tâm lý</li>
+                        <li><strong>Hỗ trợ:</strong> S1: $1,950 | S2: $1,850 | S3: $1,750</li>
+                        <li><strong>Kháng cự:</strong> R1: $2,000 | R2: $2,150 | R3: $2,400</li>
+                    </ul>
+                </div>
+
+                <h2>💡 Khuyến Nghị</h2>
+
+                <h3>Cho Trader:</h3>
+                <ul>
+                    <li>Đứng ngoài quan sát hoặc scalp trong range $67K-$70K</li>
+                    <li>Chờ reclaim $70K để hướng tới $72K</li>
+                    <li>Stop loss nếu thủng $67K</li>
+                </ul>
+
+                <h3>Cho Holder:</h3>
+                <ul>
+                    <li>DCA nhẹ nếu BTC về $67K</li>
+                    <li>Không bán panic - đây là điều chỉnh kỹ thuật sau khi tăng mạnh</li>
+                    <li>Theo dõi CPI data tuần tới</li>
+                </ul>
+
+                <h2>🔮 Dự Báo 24-48h</h2>
+                <p>Bitcoin có thể sideway trong vùng $67,000-$70,000. Cần reclaim $70K trong 48h để xác nhận xu hướng hồi phục. Nếu thủng $67K, BTC có thể test lại vùng $64,000-$65,000.</p>
+
+                <p><strong>Các yếu tố cần theo dõi:</strong></p>
+                <ul>
+                    <li>Diễn biến Trump-Iran</li>
+                    <li>Flow ETF Bitcoin</li>
+                    <li>CPI data tuần tới</li>
+                </ul>
+
+                <div class="video-embed">
+                    <iframe src="https://www.youtube.com/embed/kpL7Dc1Vt9M?rel=0" title="Crypto Daily 07/03" allowfullscreen></iframe>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">#Bitcoin</span>
+                    <span class="tag">#Ethereum</span>
+                    <span class="tag">#Crypto</span>
+                    <span class="tag">#Trump</span>
+                    <span class="tag">#BlackRock</span>
+                    <span class="tag">#MarketAnalysis</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+
+</html>

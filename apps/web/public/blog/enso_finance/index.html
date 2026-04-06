@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: Tổng quan Dự án Enso.build</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #f0f4f8;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #0047FF, #651FFF);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .flow-arrow {
+            position: relative;
+            padding-right: 30px;
+        }
+        .flow-arrow::after {
+            content: '→';
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            color: #FF8F00;
+        }
+        .swot-card {
+            border-left-width: 4px;
+            transition: all 0.3s ease-in-out;
+        }
+        .swot-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+<div style="max-width:800px;margin:0 auto;padding:1rem 1.5rem;"><a href="/blog/" style="display:inline-flex;align-items:center;gap:0.5rem;color:#71717a;text-decoration:none;font-size:0.9rem;font-family:sans-serif;">← Quay lại Blog</a></div>
+
+    <div class="container mx-auto p-4 md:p-8">
+        
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black mb-4"><span class="gradient-text">Enso.build</span></h1>
+            <p class="text-xl md:text-2xl font-medium text-gray-600">Kiến tạo sự đơn giản trong Kỷ nguyên Omnichain</p>
+        </header>
+
+        <section id="key-metrics" class="mb-16">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <p class="text-5xl font-extrabold text-[#0047FF]">>15 Tỷ $</p>
+                    <p class="text-lg font-medium text-gray-700 mt-2">Khối lượng thanh toán trên chuỗi</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <p class="text-5xl font-extrabold text-[#0047FF]">100+</p>
+                    <p class="text-lg font-medium text-gray-700 mt-2">Dự án & Doanh nghiệp tin cậy</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <p class="text-5xl font-extrabold text-[#0047FF]">1,900+</p>
+                    <p class="text-lg font-medium text-gray-700 mt-2">Nhà phát triển đang xây dựng</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="problem" class="mb-16">
+             <div class="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-center mb-2">Thách thức hiện hữu: "Mê cung" Đa chuỗi</h2>
+                <p class="max-w-3xl mx-auto text-center text-gray-600 mb-8">Việc phát triển trong Web3 rất phức tạp, tốn kém và mất thời gian. Các nhà phát triển phải đối mặt với nhiều khung blockchain khác nhau, các tương tác hợp đồng thông minh phức tạp và gánh nặng bảo mật lớn, làm chuyển hướng sự tập trung khỏi việc đổi mới sản phẩm.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-lg">
+                        <p class="text-4xl font-bold text-red-600">>6 Tháng</p>
+                        <p class="text-lg font-medium text-gray-700">Thời gian phát triển cho mỗi tích hợp mới.</p>
+                    </div>
+                    <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-lg">
+                        <p class="text-4xl font-bold text-red-600">>$500,000</p>
+                        <p class="text-lg font-medium text-gray-700">Chi phí cho mỗi lần tích hợp tùy chỉnh.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="solution" class="mb-16">
+            <div class="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-center mb-2">Giải pháp của Enso: Lối tắt Blockchain</h2>
+                <p class="max-w-3xl mx-auto text-center text-gray-600 mb-8">Enso thay đổi cuộc chơi bằng cách cung cấp một lớp trừu tượng dựa trên ý định. Thay vì lập trình từng bước, nhà phát triển chỉ cần khai báo kết quả cuối cùng. Mạng lưới của Enso sẽ tự động tìm và thực thi con đường hiệu quả nhất trên các chuỗi.</p>
+                <div class="w-full flex flex-col md:flex-row justify-around items-center space-y-4 md:space-y-0 md:space-x-4 text-center">
+                    <div class="p-6 bg-blue-50 rounded-lg shadow-md flex-1">
+                        <p class="text-2xl font-bold mb-2">1. Ý định người dùng</p>
+                        <p class="text-gray-600">"Hoán đổi Token A và stake vào Giao thức Z"</p>
+                    </div>
+                    <div class="hidden md:block flow-arrow"></div>
+                    <div class="p-6 bg-purple-50 rounded-lg shadow-md flex-1">
+                        <p class="text-2xl font-bold mb-2">2. Mạng lưới Enso</p>
+                        <p class="text-gray-600">Tìm đường đi tối ưu, kết hợp các "Hành động" có sẵn.</p>
+                    </div>
+                     <div class="hidden md:block flow-arrow"></div>
+                    <div class="p-6 bg-green-50 rounded-lg shadow-md flex-1">
+                        <p class="text-2xl font-bold mb-2">3. Thực thi trên chuỗi</p>
+                        <p class="text-gray-600">Tự động thực hiện giao dịch trên các chuỗi liên quan.</p>
+                    </div>
+                </div>
+                <div class="mt-8">
+                     <h3 class="text-2xl font-bold text-center mb-4">Tăng tốc phát triển, giảm chi phí</h3>
+                     <p class="max-w-3xl mx-auto text-center text-gray-600 mb-6">Bằng cách loại bỏ sự phức tạp của việc tích hợp, Enso giúp các nhà phát triển đưa sản phẩm ra thị trường nhanh hơn nhiều, cho phép họ tập trung vào đổi mới thay vì "công việc hệ thống ống nước".</p>
+                    <div class="chart-container mx-auto max-w-4xl">
+                        <canvas id="developmentTimeChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ecosystem" class="mb-16">
+            <div class="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-center mb-2">Hệ sinh thái Enso.build</h2>
+                <p class="max-w-3xl mx-auto text-center text-gray-600 mb-8">Enso được xây dựng trên một hệ sinh thái phi tập trung gồm bốn vai trò chính, được khuyến khích bởi token $ENSO để cùng nhau tạo ra và duy trì mạng lưới.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                    <div class="border p-4 rounded-lg bg-gray-50">
+                        <p class="text-4xl mb-2">🛒</p>
+                        <h3 class="text-xl font-bold mb-2">Người tiêu dùng</h3>
+                        <p class="text-gray-600 text-sm">Gửi yêu cầu ý định đến mạng lưới và trả phí cho việc thực thi.</p>
+                    </div>
+                    <div class="border p-4 rounded-lg bg-gray-50">
+                        <p class="text-4xl mb-2">🧩</p>
+                        <h3 class="text-xl font-bold mb-2">Nhà cung cấp Hành động</h3>
+                        <p class="text-gray-600 text-sm">Xuất bản các "Hành động" - các khối xây dựng có thể tái sử dụng.</p>
+                    </div>
+                    <div class="border p-4 rounded-lg bg-gray-50">
+                         <p class="text-4xl mb-2">🗺️</p>
+                        <h3 class="text-xl font-bold mb-2">Người lập biểu đồ</h3>
+                        <p class="text-gray-600 text-sm">Kết hợp các Hành động để tạo ra các giải pháp tối ưu cho ý định.</p>
+                    </div>
+                    <div class="border p-4 rounded-lg bg-gray-50">
+                        <p class="text-4xl mb-2">🛡️</p>
+                        <h3 class="text-xl font-bold mb-2">Người xác thực</h3>
+                        <p class="text-gray-600 text-sm">Xác minh các giải pháp về tính bảo mật và hiệu quả, bảo vệ mạng lưới.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tokenomics" class="mb-16">
+            <div class="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-center mb-8">Kinh tế học Token $ENSO</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">Tổng quan Token</h3>
+                        <p class="text-gray-600 mb-6">Token $ENSO là trung tâm của hệ sinh thái, điều phối các ưu đãi và quản trị. Nó được sử dụng để trả phí, thưởng cho những người tham gia, staking và bỏ phiếu cho các thay đổi của giao thức.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center"><span class="font-bold text-[#0047FF] w-36">Tổng cung:</span> 100,000,000</li>
+                            <li class="flex items-center"><span class="font-bold text-[#0047FF] w-36">FDV bán công khai:</span> $125,000,000</li>
+                            <li class="flex items-center"><span class="font-bold text-[#0047FF] w-36">Giá bán công khai:</span> $1.25</li>
+                            <li class="flex items-center"><span class="font-bold text-[#0047FF] w-36">Trao quyền (Cộng đồng):</span> Mở khóa 100% tại TGE</li>
+                            <li class="flex items-center"><span class="font-bold text-[#0047FF] w-36">Trao quyền (Đội ngũ/VC):</span> 2 năm tuyến tính</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4 text-center">Phân bổ Token (Ước tính)</h3>
+                        <div class="chart-container mx-auto max-w-sm">
+                            <canvas id="tokenDistributionChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="swot" class="mb-16">
+             <div class="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-center mb-8">Phân tích SWOT</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="swot-card bg-green-50 border-green-500 p-4 rounded-lg">
+                        <h3 class="text-xl font-bold text-green-800 mb-2">Điểm mạnh (Strengths)</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm">
+                            <li>Giải quyết vấn đề cốt lõi của phát triển đa chuỗi</li>
+                            <li>Đội ngũ mạnh và sự hậu thuẫn từ các VC hàng đầu</li>
+                            <li>Sức hút thị trường ban đầu đã được chứng minh</li>
+                            <li>Đề xuất giá trị rõ ràng cho nhà phát triển</li>
+                        </ul>
+                    </div>
+                    <div class="swot-card bg-red-50 border-red-500 p-4 rounded-lg">
+                        <h3 class="text-xl font-bold text-red-800 mb-2">Điểm yếu (Weaknesses)</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm">
+                            <li>Mô hình kinh tế tiền điện tử phức tạp</li>
+                            <li>Thách thức trong việc khởi tạo mạng lưới đa diện</li>
+                            <li>Những cân nhắc về bảo mật với các "Lối tắt" được kết hợp</li>
+                            <li>Dự án vẫn còn ở giai đoạn tương đối non trẻ</li>
+                        </ul>
+                    </div>
+                    <div class="swot-card bg-blue-50 border-blue-500 p-4 rounded-lg">
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">Cơ hội (Opportunities)</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm">
+                            <li>Thị trường cho công cụ phát triển Web3 rộng lớn</li>
+                            <li>Trở thành tiêu chuẩn cho thực thi dựa trên ý định</li>
+                            <li>Sự cộng hưởng với các tác nhân AI trong Web3</li>
+                            <li>Mở rộng thông qua các quan hệ đối tác chiến lược</li>
+                        </ul>
+                    </div>
+                    <div class="swot-card bg-yellow-50 border-yellow-500 p-4 rounded-lg">
+                        <h3 class="text-xl font-bold text-yellow-800 mb-2">Thách thức (Threats)</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm">
+                            <li>Cạnh tranh gay gắt từ các giải pháp khác</li>
+                            <li>Sự phát triển của khả năng tương tác gốc</li>
+                            <li>Rủi ro từ các vi phạm bảo mật tiềm ẩn</li>
+                            <li>Biến động thị trường và bất ổn pháp lý</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="partners" class="text-center">
+            <div class="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                <h2 class="text-3xl font-bold mb-2">Đối tác & Nhà đầu tư chiến lược</h2>
+                <p class="max-w-3xl mx-auto text-gray-600 mb-8">Thành công của Enso được củng cố bởi sự hỗ trợ từ các nhà lãnh đạo ngành, bao gồm các VC hàng đầu và những người sáng lập các dự án Web3 có ảnh hưởng.</p>
+                <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-4">
+                    <span class="text-xl font-semibold text-gray-700">Polychain Capital</span>
+                    <span class="text-xl font-semibold text-gray-700">LayerZero</span>
+                    <span class="text-xl font-semibold text-gray-700">Multicoin Capital</span>
+                    <span class="text-xl font-semibold text-gray-700">Uniswap</span>
+                    <span class="text-xl font-semibold text-gray-700">Spartan Group</span>
+                    <span class="text-xl font-semibold text-gray-700">Berachain</span>
+                     <span class="text-xl font-semibold text-gray-700">Stargate</span>
+                    <span class="text-xl font-semibold text-gray-700">Naval Ravikant</span>
+                    <span class="text-xl font-semibold text-gray-700">Safe</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="text-center p-8 text-gray-500">
+        <p>&copy; 2025 Infographic được tạo dựa trên báo cáo nghiên cứu sâu. Thông tin chỉ mang tính tham khảo.</p>
+        <p>Không phải lời khuyên tài chính.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const FONT_COLOR = '#212121';
+            const BORDER_COLOR = '#E0E0E0';
+            const PRIMARY_COLOR_BLUE = '#0047FF';
+            const ACCENT_COLOR_ORANGE = '#FF8F00';
+            const ACCENT_COLOR_PURPLE = '#651FFF';
+            const LIGHT_GRAY_COLOR = '#E0E0E0';
+            
+            Chart.defaults.font.family = "'Be Vietnam Pro', sans-serif";
+            Chart.defaults.color = FONT_COLOR;
+
+            const wrapLabel = (label, maxLength = 16) => {
+                if (label.length <= maxLength) {
+                    return label;
+                }
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = '';
+                for (const word of words) {
+                    if ((currentLine + ' ' + word).length > maxLength && currentLine.length > 0) {
+                        lines.push(currentLine);
+                        currentLine = word;
+                    } else {
+                        currentLine = currentLine ? currentLine + ' ' + word : word;
+                    }
+                }
+                lines.push(currentLine);
+                return lines;
+            };
+
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                    return label.join(' ');
+                } else {
+                    return label;
+                }
+            };
+            
+            const sharedTooltipOptions = {
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        },
+                        backgroundColor: 'rgba(33, 33, 33, 0.9)',
+                        titleFont: { size: 14, weight: 'bold' },
+                        bodyFont: { size: 12 },
+                        padding: 10,
+                        cornerRadius: 4,
+                        displayColors: false,
+                    },
+                    legend: {
+                        labels: {
+                            font: { size: 12 },
+                            boxWidth: 20
+                        }
+                    }
+                }
+            };
+
+            const developmentTimeCtx = document.getElementById('developmentTimeChart')?.getContext('2d');
+            if (developmentTimeCtx) {
+                new Chart(developmentTimeCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Phát triển Web3 Truyền thống', 'Phát triển với Enso.build'],
+                        datasets: [{
+                            label: 'Thời gian phát triển (Tháng)',
+                            data: [6, 0.25], 
+                            backgroundColor: [ACCENT_COLOR_ORANGE, PRIMARY_COLOR_BLUE],
+                            borderColor: [ACCENT_COLOR_ORANGE, PRIMARY_COLOR_BLUE],
+                            borderWidth: 1,
+                            borderRadius: 4,
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                title: { display: true, text: 'Số tháng' },
+                                grid: { color: BORDER_COLOR }
+                            },
+                            x: {
+                                grid: { display: false }
+                            }
+                        },
+                        ...sharedTooltipOptions,
+                        plugins: {
+                            ...sharedTooltipOptions.plugins,
+                            title: {
+                                display: true,
+                                text: 'So sánh Thời gian Phát triển',
+                                font: { size: 16, weight: 'bold' },
+                                padding: { top: 10, bottom: 20 }
+                            },
+                            legend: { display: false }
+                        }
+                    }
+                });
+            }
+
+            const tokenDistributionCtx = document.getElementById('tokenDistributionChart')?.getContext('2d');
+            if (tokenDistributionCtx) {
+                new Chart(tokenDistributionCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Hệ sinh thái & Phần thưởng', 'Đội ngũ & Cố vấn', 'Nhà đầu tư', 'Bán công khai', 'Kho bạc'],
+                        datasets: [{
+                            label: 'Phân bổ Token $ENSO',
+                            data: [40, 20, 18, 8, 14],
+                            backgroundColor: [PRIMARY_COLOR_BLUE, ACCENT_COLOR_PURPLE, ACCENT_COLOR_ORANGE, '#26a69a', LIGHT_GRAY_COLOR],
+                            borderColor: '#ffffff',
+                            borderWidth: 2,
+                            hoverOffset: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        cutout: '60%',
+                        ...sharedTooltipOptions,
+                        plugins: {
+                            ...sharedTooltipOptions.plugins,
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    font: { size: 11 },
+                                    padding: 15
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+    
+    <div style="text-align: center; padding: 3rem 0;">
+        <a href="/" style="display: inline-block; background-color: #3498db; color: white; padding: 0.8rem 1.8rem; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: 2px solid transparent; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            Quay lại Trang Blog
+        </a>
+    </div>
+    <div style="text-align: center; padding: 3rem 0;">
+        <a href="/" style="display: inline-block; background-color: #3498db; color: white; padding: 0.8rem 1.8rem; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: 2px solid transparent; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            Quay lại Trang Blog
+        </a>
+    </div>
+</body>
+</html>

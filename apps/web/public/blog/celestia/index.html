@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celestia: Phân Tích Chuyên Sâu & Tiềm Năng Tăng Trưởng</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0A2463;
+            color: #F4E8C1;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .card {
+            background-color: rgba(74, 85, 104, 0.2);
+            border: 1px solid rgba(62, 146, 204, 0.3);
+        }
+        .flow-diagram-box {
+            border: 2px solid #3E92CC;
+            background-color: #0A2463;
+            color: #F4E8C1;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            flex-grow: 1;
+        }
+        .arrow {
+            color: #3E92CC;
+            font-size: 2rem;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body class="antialiased">
+<div style="max-width:800px;margin:0 auto;padding:1rem 1.5rem;"><a href="/blog/" style="display:inline-flex;align-items:center;gap:0.5rem;color:#71717a;text-decoration:none;font-size:0.9rem;font-family:sans-serif;">← Quay lại Blog</a></div>
+
+    <div class="container mx-auto px-4 py-8 md:py-12">
+
+        <header class="text-center mb-16">
+            <h1 class="text-4xl md:text-6xl font-black text-white mb-4">Celestia</h1>
+            <p class="text-xl md:text-2xl text-[#3E92CC] font-semibold">Bình Minh Của Kỷ Nguyên Blockchain Mô-đun</p>
+            <p class="max-w-3xl mx-auto mt-4 text-lg text-gray-300">Phân tích chuyên sâu về mạng lưới blockchain mô-đun đầu tiên, công nghệ cốt lõi và tiềm năng định hình lại bối cảnh phi tập trung.</p>
+        </header>
+
+        <main class="space-y-16">
+
+            <section id="problem">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-white">Nút Thắt Cổ Chai Của Kiến Trúc Đơn Khối</h2>
+                    <p class="max-w-2xl mx-auto mt-2 text-gray-300">Các blockchain truyền thống gộp tất cả các chức năng cốt lõi—thực thi, thanh toán, đồng thuận và tính sẵn có của dữ liệu—vào một lớp duy nhất. Điều này tạo ra một nút thắt cổ chai về tài nguyên, hạn chế khả năng mở rộng và buộc các nhà phát triển phải tuân theo một môi trường "một kích cỡ cho tất cả".</p>
+                </div>
+                <div class="w-full max-w-4xl mx-auto p-6 card rounded-lg">
+                    <h3 class="text-center text-xl font-bold mb-6 text-[#3E92CC]">Kiến Trúc Đơn Khối</h3>
+                    <div class="flex flex-col items-center justify-center space-y-4">
+                        <div class="flow-diagram-box w-full md:w-3/4">
+                            <strong>Chuỗi Đơn Khối (ví dụ: Ethereum hiện tại)</strong>
+                        </div>
+                        <div class="arrow">⬇</div>
+                        <div class="w-full md:w-3/4 grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <div class="flow-diagram-box text-sm">Thực thi</div>
+                            <div class="flow-diagram-box text-sm">Thanh toán</div>
+                            <div class="flow-diagram-box text-sm">Đồng thuận</div>
+                            <div class="flow-diagram-box text-sm">Dữ Liệu Sẵn Có</div>
+                        </div>
+                        <p class="text-center mt-4 text-sm text-gray-400">Tất cả chức năng được liên kết chặt chẽ, gây ra tranh chấp tài nguyên.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="solution">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-white">Giải Pháp Mô-đun Của Celestia</h2>
+                    <p class="max-w-2xl mx-auto mt-2 text-gray-300">Celestia tách rời các lớp kiến trúc. Bằng cách chỉ tập trung vào việc sắp xếp giao dịch và đảm bảo dữ liệu luôn sẵn có, nó đóng vai trò là một lớp nền tảng an toàn, có khả năng mở rộng cho một thế hệ blockchain chuyên biệt mới, hay còn gọi là "rollup", để xây dựng lên trên.</p>
+                </div>
+                <div class="w-full max-w-4xl mx-auto p-6 card rounded-lg">
+                     <h3 class="text-center text-xl font-bold mb-6 text-[#3E92CC]">Kiến Trúc Mô-đun</h3>
+                    <div class="flex flex-col items-center justify-center space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
+                            <div class="flow-diagram-box">Rollup A (DeFi)</div>
+                            <div class="flow-diagram-box">Rollup B (Gaming)</div>
+                            <div class="flow-diagram-box">Rollup C (Mạng Xã Hội)</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="arrow">⬇</div>
+                            <p class="text-xs text-gray-400">Đăng Dữ Liệu Lên</p>
+                        </div>
+                        <div class="flow-diagram-box w-full md:w-3/4">
+                            <strong>Celestia (Đồng Thuận & Dữ Liệu Sẵn Có)</strong>
+                            <p class="text-xs mt-2 text-gray-400">Một lớp dữ liệu chung, an toàn cho tất cả.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="technology" class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="card p-6 rounded-lg">
+                    <h2 class="text-3xl font-bold text-white mb-4">Sự Kỳ Diệu Của Lấy Mẫu Dữ Liệu Sẵn Có (DAS)</h2>
+                    <p class="text-gray-300 mb-4">DAS là công nghệ đột phá của Celestia. Nó cho phép các "node nhẹ" xác minh rằng tất cả dữ liệu khối đã được công bố mà không cần tải xuống toàn bộ khối. Đây là chìa khóa để mở rộng một cách an toàn.</p>
+                    <p class="text-gray-300">Khi càng có nhiều node nhẹ tham gia và lấy mẫu dữ liệu, kích thước khối có thể tăng lên mà không ảnh hưởng đến bảo mật hay tính phi tập trung. Điều này về cơ bản đã phá vỡ "bộ ba bất khả thi về khả năng mở rộng" mà các chuỗi đơn khối phải đối mặt.</p>
+                </div>
+                <div class="card p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-4 text-center text-[#3E92CC]">Gánh Nặng Dữ Liệu: Full Node vs. Node Nhẹ</h3>
+                    <p class="text-center text-sm text-gray-400 mb-4">DAS giảm đáng kể yêu cầu phần cứng để tham gia xác thực mạng, thúc đẩy tính phi tập trung.</p>
+                    <div class="chart-container">
+                        <canvas id="dasChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <section id="tokenomics" class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="card p-6 rounded-lg">
+                     <h3 class="text-xl font-bold mb-4 text-center text-[#3E92CC]">Phân Bổ Ban Đầu Của Token TIA</h3>
+                     <p class="text-center text-sm text-gray-400 mb-4">Sự phân bổ ban đầu của token TIA được thiết kế để hỗ trợ phát triển hệ sinh thái lâu dài và thưởng cho những người đóng góp sớm.</p>
+                    <div class="chart-container h-80 md:h-96">
+                        <canvas id="tokenomicsChart"></canvas>
+                    </div>
+                </div>
+                <div class="card p-6 rounded-lg">
+                    <h2 class="text-3xl font-bold text-white mb-4">Token TIA: Nhiên Liệu Cho Tương Lai Mô-đun</h2>
+                    <p class="text-gray-300 mb-4">Tài sản gốc, TIA, là yếu tố thiết yếu cho chức năng và bảo mật của mạng lưới.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <span class="text-[#D8315B] font-bold text-xl mr-3">↳</span>
+                            <div>
+                                <h4 class="font-semibold text-white">Thanh toán cho các "Blob" dữ liệu</h4>
+                                <p class="text-gray-400">Các rollup trả phí bằng TIA để công bố dữ liệu giao dịch của họ lên Celestia, tạo ra một thị trường phí cho không gian khối.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                             <span class="text-[#D8315B] font-bold text-xl mr-3">↳</span>
+                            <div>
+                                <h4 class="font-semibold text-white">Staking & Bảo mật</h4>
+                                <p class="text-gray-400">Người dùng có thể stake TIA với các validator để giúp bảo mật mạng lưới thông qua cơ chế Proof-of-Stake và kiếm phần thưởng.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-[#D8315B] font-bold text-xl mr-3">↳</span>
+                            <div>
+                                <h4 class="font-semibold text-white">Quản trị</h4>
+                                <p class="text-gray-400">Người nắm giữ TIA có thể bỏ phiếu về các tham số mạng và chi tiêu từ quỹ cộng đồng.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section id="competition">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-white">Bối Cảnh Cạnh Tranh</h2>
+                    <p class="max-w-2xl mx-auto mt-2 text-gray-300">Celestia là người tiên phong trong luận điểm mô-đun, nhưng đang đối mặt với sự cạnh tranh ngày càng tăng từ cả các L1 đã thành danh đang phát triển lộ trình của mình và các giải pháp dữ liệu sẵn có chuyên dụng mới.</p>
+                </div>
+                <div class="card p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-4 text-center text-[#3E92CC]">So Sánh Các Giải Pháp Dữ Liệu Sẵn Có</h3>
+                    <p class="text-center text-sm text-gray-400 mb-4">Một so sánh định tính giữa các bên tham gia chính trên các phương diện quan trọng. Lợi thế chính của Celestia nằm ở thiết kế chuyên biệt, ưu tiên chủ quyền.</p>
+                    <div class="chart-container h-96 md:h-[500px]">
+                        <canvas id="competitionChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <section id="swot">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-white">Tiềm Năng Tương Lai: Phân Tích SWOT</h2>
+                    <p class="max-w-2xl mx-auto mt-2 text-gray-300">Đánh giá các điểm mạnh và điểm yếu nội tại của Celestia, cùng với các cơ hội và thách thức bên ngoài sẽ định hình quỹ đạo tăng trưởng của nó.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="card p-6 rounded-lg border-l-4 border-green-400">
+                        <h3 class="text-2xl font-bold mb-3 text-green-400">✅ Điểm mạnh</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300">
+                            <li>Tiên phong trong không gian DA mô-đun</li>
+                            <li>Công nghệ Lấy Mẫu Dữ Liệu Sẵn Có mới lạ</li>
+                            <li>Khả năng mở rộng cao & tiết kiệm chi phí</li>
+                            <li>Thúc đẩy chủ quyền & sự linh hoạt cho nhà phát triển</li>
+                        </ul>
+                    </div>
+                    <div class="card p-6 rounded-lg border-l-4 border-yellow-400">
+                        <h3 class="text-2xl font-bold mb-3 text-yellow-400">⚠️ Điểm yếu</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300">
+                            <li>Hệ sinh thái còn non trẻ, đang phát triển</li>
+                            <li>Bảo mật phụ thuộc vào đa số trung thực của client nhẹ</li>
+                            <li>Giá trị token TIA phụ thuộc vào sự chấp nhận của rollup</li>
+                            <li>Cạnh tranh từ các đối thủ đã có tên tuổi</li>
+                        </ul>
+                    </div>
+                    <div class="card p-6 rounded-lg border-l-4 border-blue-400">
+                        <h3 class="text-2xl font-bold mb-3 text-blue-400">🚀 Cơ hội</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300">
+                            <li>Tăng trưởng khổng lồ của tương lai lấy rollup làm trung tâm</li>
+                            <li>Các giải pháp tương tác cho các kiến trúc mô-đun</li>
+                            <li>Trở thành lớp nền tảng cho các chuỗi ứng dụng riêng</li>
+                            <li>Nhu cầu về dữ liệu sẵn có rẻ hơn</li>
+                        </ul>
+                    </div>
+                    <div class="card p-6 rounded-lg border-l-4 border-red-400">
+                        <h3 class="text-2xl font-bold mb-3 text-red-400">📉 Thách thức</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300">
+                            <li>EIP-4844 (Danksharding) của Ethereum trở nên "đủ tốt"</li>
+                            <li>Cạnh tranh gay gắt từ EigenDA, Avail, v.v.</li>
+                            <li>Các lỗ hổng tiềm tàng trong công nghệ DAS mới</li>
+                            <li>Thị trường gấu làm chậm sự chấp nhận của nhà phát triển</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-16 pt-8 border-t border-gray-700">
+            <p class="text-gray-400">Đồ họa thông tin này cung cấp một phân tích cấp cao dựa trên thông tin công khai về Celestia. Đây không phải là lời khuyên tài chính. Không gian blockchain có tính biến động và đầu cơ cao.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const chartTextColor = '#F4E8C1';
+        const gridColor = 'rgba(244, 232, 193, 0.2)';
+        const brilliantBlue = '#3E92CC';
+        const energeticPink = '#D8315B';
+
+        const processLabels = (labels) => {
+            const maxLen = 16;
+            return labels.map(label => {
+                if (label.length <= maxLen) {
+                    return label;
+                }
+                const words = label.split(' ');
+                let lines = [];
+                let currentLine = '';
+                for (const word of words) {
+                    if ((currentLine + ' ' + word).trim().length > maxLen) {
+                        lines.push(currentLine.trim());
+                        currentLine = word;
+                    } else {
+                        currentLine = (currentLine + ' ' + word).trim();
+                    }
+                }
+                if (currentLine) {
+                    lines.push(currentLine.trim());
+                }
+                return lines;
+            });
+        };
+        
+        const tooltipTitleCallback = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                              return label.join(' ');
+                            } else {
+                              return label;
+                            }
+                        }
+                    }
+                }
+            }
+        };
+
+        const dasChartCtx = document.getElementById('dasChart');
+        if (dasChartCtx) {
+            new Chart(dasChartCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Full Node Đơn Khối', 'Node Nhẹ Celestia'],
+                    datasets: [{
+                        label: 'Dữ liệu tải xuống ước tính mỗi khối (MB)',
+                        data: [128, 0.002],
+                        backgroundColor: [energeticPink, brilliantBlue],
+                        borderColor: ['#D8315B', '#3E92CC'],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    ...tooltipTitleCallback,
+                    indexAxis: 'y',
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            type: 'logarithmic',
+                            beginAtZero: true,
+                            ticks: { color: chartTextColor },
+                            grid: { color: gridColor },
+                            title: { display: true, text: 'Dữ liệu (MB) - Thang Logarit', color: chartTextColor }
+                        },
+                        y: {
+                            ticks: { color: chartTextColor },
+                            grid: { color: 'transparent' }
+                        }
+                    },
+                    plugins: {
+                         ...tooltipTitleCallback.plugins,
+                        legend: { display: false }
+                    }
+                }
+            });
+        }
+
+        const tokenomicsChartCtx = document.getElementById('tokenomicsChart');
+        if (tokenomicsChartCtx) {
+            new Chart(tokenomicsChartCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: processLabels(['Phân Bổ Công Khai', 'R&D & Hệ Sinh Thái', 'Nhà Đóng Góp Cốt Lõi', 'Nhà Đầu Tư Sớm']),
+                    datasets: [{
+                        label: '% Phân Bổ Ban Đầu',
+                        data: [20, 26.8, 17.6, 35.6],
+                        backgroundColor: [brilliantBlue, energeticPink, '#8E44AD', '#27AE60'],
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                     ...tooltipTitleCallback,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        ...tooltipTitleCallback.plugins,
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: chartTextColor,
+                                usePointStyle: true,
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        const competitionChartCtx = document.getElementById('competitionChart');
+        if (competitionChartCtx) {
+            new Chart(competitionChartCtx, {
+                type: 'radar',
+                data: {
+                    labels: processLabels(['Hiệu Quả Chi Phí', 'Tiềm Năng Mở Rộng', 'Chủ Quyền Nhà Phát Triển', 'Tính Phi Tập Trung', 'Độ Trưởng Thành Hệ Sinh Thái']),
+                    datasets: [{
+                        label: 'Celestia',
+                        data: [9, 9, 10, 8, 5],
+                        fill: true,
+                        backgroundColor: 'rgba(62, 146, 204, 0.4)',
+                        borderColor: brilliantBlue,
+                        pointBackgroundColor: brilliantBlue,
+                    }, {
+                        label: 'Ethereum (EIP-4844)',
+                        data: [6, 7, 5, 9, 10],
+                        fill: true,
+                        backgroundColor: 'rgba(216, 49, 91, 0.4)',
+                        borderColor: energeticPink,
+                        pointBackgroundColor: energeticPink,
+                    }]
+                },
+                options: {
+                    ...tooltipTitleCallback,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            angleLines: { color: gridColor },
+                            grid: { color: gridColor },
+                            pointLabels: {
+                                color: chartTextColor,
+                                font: {
+                                    size: 11
+                                }
+                            },
+                            ticks: {
+                                backdropColor: 'transparent',
+                                color: chartTextColor,
+                                stepSize: 2
+                            },
+                            min: 0,
+                            max: 10
+                        }
+                    },
+                    plugins: {
+                        ...tooltipTitleCallback.plugins,
+                        legend: {
+                            position: 'top',
+                            labels: { color: chartTextColor }
+                        }
+                    }
+                }
+            });
+        }
+
+    </script>
+    <div style="text-align: center; padding: 3rem 0;">
+        <a href="/" style="display: inline-block; background-color: #3498db; color: white; padding: 0.8rem 1.8rem; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: 2px solid transparent; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            Quay lại Trang Blog
+        </a>
+    </div>
+</body>
+</html>
