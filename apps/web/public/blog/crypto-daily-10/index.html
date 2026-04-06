@@ -17,7 +17,33 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         :root{--bg:#09090b;--card-bg:#18181b;--border:#27272a;--text:#fafafa;--text-secondary:#a1a1aa;--text-muted:#71717a;--accent:#f7931a;--accent-green:#22c55e;--accent-red:#ef4444;--radius-md:16px;--radius-lg:24px}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased}.container{max-width:800px;margin:0 auto;padding:2rem 1.5rem}.back-link{display:inline-flex;align-items:center;gap:.5rem;color:var(--text-muted);text-decoration:none;font-size:.9rem;margin-bottom:2rem;transition:color .2s}.back-link:hover{color:var(--accent)}.article-header{margin-bottom:2.5rem}.category-badge{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1rem;background:rgba(247,147,26,.1);border:1px solid rgba(247,147,26,.2);border-radius:100px;font-size:.85rem;font-weight:600;color:var(--accent);margin-bottom:1.25rem}h1{font-size:2.25rem;font-weight:800;line-height:1.2;margin-bottom:1.25rem;letter-spacing:-.02em}.meta{display:flex;flex-wrap:wrap;gap:1.5rem;color:var(--text-muted);font-size:.9rem}.meta span{display:flex;align-items:center;gap:.5rem}.article-content{font-size:1.1rem;color:var(--text-secondary)}.article-content h2{font-size:1.5rem;font-weight:700;color:var(--text);margin-top:2.5rem;margin-bottom:1rem}.article-content h3{font-size:1.25rem;font-weight:600;color:var(--text);margin-top:2rem;margin-bottom:.75rem}.article-content p{margin-bottom:1.25rem}.article-content ul{margin-bottom:1.25rem;padding-left:1.5rem}.article-content li{margin-bottom:.5rem}.highlight-box{background:linear-gradient(135deg,rgba(247,147,26,.1) 0%,rgba(247,147,26,.05) 100%);border:1px solid rgba(247,147,26,.2);border-radius:var(--radius-md);padding:1.5rem;margin:2rem 0}.highlight-box.green{background:linear-gradient(135deg,rgba(34,197,94,.1) 0%,rgba(34,197,94,.05) 100%);border:1px solid rgba(34,197,94,.2)}.highlight-box.red{background:linear-gradient(135deg,rgba(239,68,68,.1) 0%,rgba(239,68,68,.05) 100%);border:1px solid rgba(239,68,68,.2)}.highlight-box h4{color:var(--accent);font-size:1.1rem;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}.highlight-box.green h4{color:var(--accent-green)}.highlight-box.red h4{color:var(--accent-red)}.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin:2rem 0}.stat-card{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius-md);padding:1.25rem;text-align:center}.stat-value{font-size:1.75rem;font-weight:800;margin-bottom:.25rem}.stat-value.up{color:var(--accent-green)}.stat-value.down{color:var(--accent-red)}.stat-value.neutral{color:var(--accent)}.stat-label{font-size:.85rem;color:var(--text-muted)}.coin-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.95rem}.coin-table th{text-align:left;padding:.75rem;border-bottom:2px solid var(--border);color:var(--text-muted);font-weight:600;font-size:.85rem;text-transform:uppercase}.coin-table td{padding:.75rem;border-bottom:1px solid var(--border)}.coin-table tr:hover{background:rgba(255,255,255,.02)}.up{color:var(--accent-green)}.down{color:var(--accent-red)}.news-card{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius-md);padding:1.5rem;margin:1.25rem 0}.news-card h4{font-size:1.1rem;margin-bottom:.5rem;color:var(--text)}.news-card .source{font-size:.85rem;color:var(--text-muted);margin-bottom:.75rem}.news-card p{font-size:.95rem;margin-bottom:0}.tags{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}.tag{padding:.5rem 1rem;background:var(--card-bg);border:1px solid var(--border);border-radius:100px;font-size:.85rem;color:var(--text-secondary)}@media(max-width:768px){h1{font-size:1.75rem}.container{padding:1.5rem 1rem}.stats-grid{grid-template-columns:repeat(2,1fr)}.coin-table{font-size:.85rem}.coin-table th,.coin-table td{padding:.5rem}}
-    </style>
+    
+.back-to-blog-footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+}
+
+.back-to-blog-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.95rem 1.25rem;
+    border-radius: 14px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.back-to-blog-btn:hover {
+    background: var(--card-hover);
+    border-color: var(--border-hover);
+}
+
+</style>
 </head>
 <body>
     <div class="container">
@@ -203,6 +229,11 @@
                 </ul>
 
                 <p><em>⚠️ Đây là phân tích thị trường, KHÔNG phải lời khuyên đầu tư. Luôn DYOR (Do Your Own Research) trước khi ra quyết định.</em></p>
+
+                
+                <div class="back-to-blog-footer">
+                    <a href="/blog" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại danh sách bài viết</a>
+                </div>
 
                 <div class="tags">
                     <span class="tag">#Bitcoin</span>
