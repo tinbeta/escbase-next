@@ -1,5 +1,16 @@
 [
   {
+    "url": "/blog/bitcoin-effective-supply-17m",
+    "title": "Nguồn Cung Thật Của Bitcoin Chỉ Còn Quanh 17 Triệu? Nghe Bullish Đấy, Nhưng Đừng Nuốt Nguyên Narrative",
+    "excerpt": "Một luận điểm đang được đẩy mạnh: hard cap của Bitcoin là 21 triệu, nhưng nguồn cung thực sự có thể chỉ quanh 17 triệu vì lượng coin ngủ đông hoặc thất lạc quá lớn. Ý này khá bén, nhưng không phải cứ khan hiếm hơn là giá tự động bay mãi.",
+    "date": "Apr 08, 2026",
+    "tag": "Bitcoin, Scarcity & Market Structure",
+    "tagIcon": "fas fa-bitcoin-sign",
+    "tagColor": "#f7931a",
+    "readTime": "7 min read",
+    "featured": false
+  },
+  {
     "url": "/blog/erc-8211-onchain-agents",
     "title": "ERC-8211: Ethereum Đang Dọn Đường Cho Onchain Agents, Nhưng Đừng Vội Tưởng Mọi Bot Đều Hóa Thiên Tài",
     "excerpt": "ERC-8211 xuất hiện như một chuẩn để user và AI agents mô tả các flow on-chain nhiều bước bằng script off-chain có lớp an toàn đi kèm. Ý tưởng này khá bén: agent không chỉ nói hay, mà bắt đầu có cách hành động bài bản hơn trên chain.",

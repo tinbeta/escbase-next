@@ -7,6 +7,11 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://escbase.xyz/blog/bitcoin-effective-supply-17m</loc>
+    <lastmod>2026-04-08</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://escbase.xyz/blog/near-confidential-private-trading</loc>
     <lastmod>2026-04-07</lastmod>
     <priority>0.8</priority>
