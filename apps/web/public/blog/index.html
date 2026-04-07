@@ -16,27 +16,47 @@
 
 <body>
     <div class="app-container">
-        <button class="mobile-menu-toggle" onclick="toggleMobileNav()" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+        <header class="mobile-header">
+            <a href="/" class="mobile-logo">
+                <img src="/esclogo.png" alt="ESC Base - Trang phân tích Crypto hàng ngày">
+                <span>ESC Base</span>
+            </a>
+            <button class="hamburger" onclick="toggleMobileNav()" aria-label="Mở menu điều hướng">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </header>
 
-        <nav class="sidebar" id="mobileNav">
-            <div class="logo-section">
-                <img src="/esclogo.png" alt="Escbase Logo" class="logo">
-                <p class="tagline">Crypto Intelligence</p>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="/" class="nav-link"><i class="fas fa-home"></i> Trang chủ</a></li>
-                <li><a href="/blog" class="nav-link active"><i class="fas fa-newspaper"></i> Bài viết</a></li>
-                <li><a href="/videos" class="nav-link"><i class="fas fa-video"></i> Video</a></li>
-            </ul>
+        <nav class="mobile-nav" id="mobileNav">
+            <a href="/" class="nav-item" onclick="toggleMobileNav()"><i class="fas fa-home"></i> Trang chủ</a>
+            <a href="/blog" class="nav-item active" onclick="toggleMobileNav()"><i class="fas fa-newspaper"></i> Bài viết</a>
+            <a href="/videos" class="nav-item" onclick="toggleMobileNav()"><i class="fas fa-play-circle"></i> Video</a>
             <div class="social-links">
-                <a href="https://www.youtube.com/@ESCBase" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                <a href="https://x.com/escbasexyz" target="_blank" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.youtube.com/@ESCBase" target="_blank" class="social-btn" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://x.com/escbasexyz" target="_blank" class="social-btn" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
             </div>
         </nav>
+
+        <aside class="sidebar">
+            <a href="/" class="brand">
+                <img src="/esclogo.png" alt="ESC Base - Trang phân tích Crypto hàng ngày">
+                <div class="brand-info">
+                    <h1>ESC Base</h1>
+                    <p>Crypto Intelligence</p>
+                </div>
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="/" class="nav-item"><i class="fas fa-home"></i> Trang chủ</a></li>
+                <li><a href="/blog" class="nav-item active"><i class="fas fa-newspaper"></i> Bài viết</a></li>
+                <li><a href="/videos" class="nav-item"><i class="fas fa-video"></i> Video</a></li>
+            </ul>
+            <div class="social-links">
+                <a href="https://www.youtube.com/@ESCBase" target="_blank" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://x.com/escbasexyz" target="_blank" class="social-btn" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </aside>
 
         <main class="main-content">
             <header class="page-header">
@@ -53,7 +73,10 @@
 
     <script>
         function toggleMobileNav() {
-            document.getElementById('mobileNav').classList.toggle('open');
+            const mobileNav = document.getElementById('mobileNav');
+            const hamburger = document.querySelector('.hamburger');
+            mobileNav.classList.toggle('open');
+            if (hamburger) hamburger.classList.toggle('active');
         }
 
         fetch('/blog.json')
