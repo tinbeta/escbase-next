@@ -390,7 +390,7 @@
                 return;
             }
 
-            grid.innerHTML = coins.map((coin) => {
+            const cards = coins.map((coin) => {
                 const positive = (coin.change24h || 0) >= 0;
                 return `
                     <article class="coin-card">
@@ -402,6 +402,8 @@
                     </article>
                 `;
             }).join('');
+
+            grid.innerHTML = `<div class="coin-track">${cards}${cards}</div>`;
         };
 
         const loadCoins = () => {
