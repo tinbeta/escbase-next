@@ -213,6 +213,24 @@
                 </div>
             </section>
 
+            <section class="signal-strip fade-in" aria-label="Escbase focus areas">
+                <div class="signal-card">
+                    <span class="signal-label">Market Desk</span>
+                    <strong>ETF flows &amp; market structure</strong>
+                    <p>Theo dõi dòng tiền, volume, liquidation và biến động dẫn dắt market.</p>
+                </div>
+                <div class="signal-card">
+                    <span class="signal-label">Research Focus</span>
+                    <strong>AI x Crypto narratives</strong>
+                    <p>Lọc những narrative có lực thật thay vì chỉ đu trend và headline noise.</p>
+                </div>
+                <div class="signal-card">
+                    <span class="signal-label">Watchlist</span>
+                    <strong>Policy, infra, onchain shifts</strong>
+                    <p>Tập trung vào thứ có thể đổi cuộc chơi: pháp lý, hạ tầng và hành vi dòng tiền.</p>
+                </div>
+            </section>
+
             <!-- Latest Articles Grid -->
             <div class="section-header" id="blog">
                 <h3 class="section-title"><i class="fas fa-pen-nib"></i> 3 Bài Viết Mới Nhất</h3>
@@ -276,7 +294,7 @@
             entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
         }, { threshold: 0.1 });
 
-        document.querySelectorAll('.hero').forEach(el => {
+        document.querySelectorAll('.hero, .signal-strip').forEach(el => {
             el.classList.add('fade-in');
             observer.observe(el);
         });
