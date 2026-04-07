@@ -431,6 +431,12 @@
                     <div class="btn-row">
                         <button class="btn btn-blue" data-copy-target="xOutput"><i class="fas fa-copy"></i> Copy bản X</button>
                     </div>
+
+                    <small style="margin-top:1rem;">Link tách riêng để dán vào comment nếu cần.</small>
+                    <textarea id="xLinkOutput" placeholder="Link comment cho X sẽ hiện ở đây..." style="min-height:96px;"></textarea>
+                    <div class="btn-row">
+                        <button class="btn btn-secondary" data-copy-target="xLinkOutput"><i class="fas fa-link"></i> Copy link comment X</button>
+                    </div>
                 </div>
 
                 <div class="platform-card">
@@ -445,6 +451,12 @@
                     <textarea id="fbOutput" placeholder="Draft cho Facebook sẽ hiện ở đây..."></textarea>
                     <div class="btn-row">
                         <button class="btn btn-green" data-copy-target="fbOutput"><i class="fas fa-copy"></i> Copy bản Facebook</button>
+                    </div>
+
+                    <small style="margin-top:1rem;">Link tách riêng để dán vào comment nếu cần.</small>
+                    <textarea id="fbLinkOutput" placeholder="Link comment cho Facebook sẽ hiện ở đây..." style="min-height:96px;"></textarea>
+                    <div class="btn-row">
+                        <button class="btn btn-secondary" data-copy-target="fbLinkOutput"><i class="fas fa-link"></i> Copy link comment Facebook</button>
                     </div>
                 </div>
             </section>
@@ -475,7 +487,9 @@
             metaExcerpt: document.getElementById('metaExcerpt'),
             metaLink: document.getElementById('metaLink'),
             xOutput: document.getElementById('xOutput'),
+            xLinkOutput: document.getElementById('xLinkOutput'),
             fbOutput: document.getElementById('fbOutput'),
+            fbLinkOutput: document.getElementById('fbLinkOutput'),
             copyToast: document.getElementById('copyToast'),
             copyToastText: document.getElementById('copyToastText')
         };
@@ -594,8 +608,7 @@
             const hook = `${post.title}`;
             const poke = heads[0] ? `\n\n👀 ${heads[0]}.` : '';
             const counter = heads[1] ? `\n\n🤔 Nhưng ngược lại, ${heads[1].charAt(0).toLowerCase()}${heads[1].slice(1)}.` : '\n\n🤔 Nhưng narrative ngon chưa bao giờ đồng nghĩa với execution ngon.';
-            const close = `\n\n🔗 ${SITE_BASE}${post.url}/`;
-            return `${hook}\n\n🧠 ${summary}${poke}${counter}\n\n⚡ Chốt nhanh: đáng theo dõi, nhưng đừng auto bullish chỉ vì nghe có mùi tương lai.${close}`.trim();
+            return `${hook}\n\n🧠 ${summary}${poke}${counter}\n\n⚡ Chốt nhanh: đáng theo dõi, nhưng đừng auto bullish chỉ vì nghe có mùi tương lai.`.trim();
         }
 
         function buildFacebookDraft(post, context) {
@@ -604,7 +617,7 @@
             const bullet1 = heads[0] ? `📌 ${heads[0]}` : `📌 Điểm chính: ${post.tag || 'Bối cảnh bài viết'}`;
             const bullet2 = heads[1] ? `🔥 ${heads[1]}` : '🔥 Điểm hay là narrative này chạm đúng một nỗi đau thật của thị trường.';
             const bullet3 = heads[2] ? `⚠️ ${heads[2]}` : '⚠️ Nhưng nếu không có usage thật thì tất cả rất dễ chỉ là câu chuyện đẹp.';
-            return `${post.title}\n\n🧠 Tóm tắt nhanh:\n${summary}\n\n${bullet1}\n${bullet2}\n${bullet3}\n\n🤝 Góc nhìn của mình: case này đáng để theo dõi vì nó gợi ra một hướng đi thú vị, nhưng vẫn nên giữ đầu lạnh. Thị trường thích narrative, còn sản phẩm thật thì thích số liệu và execution.\n\nĐọc bản đầy đủ tại đây:\n${SITE_BASE}${post.url}/`;
+            return `${post.title}\n\n🧠 Tóm tắt nhanh:\n${summary}\n\n${bullet1}\n${bullet2}\n${bullet3}\n\n🤝 Góc nhìn của mình: case này đáng để theo dõi vì nó gợi ra một hướng đi thú vị, nhưng vẫn nên giữ đầu lạnh. Thị trường thích narrative, còn sản phẩm thật thì thích số liệu và execution.`;
         }
 
         refs.generateBtn.addEventListener('click', async () => {
@@ -618,12 +631,17 @@
                 const context = await fetchArticleContext(post);
                 refs.xOutput.value = buildXDraft(post, context);
                 refs.fbOutput.value = buildFacebookDraft(post, context);
+                const commentLink = `Đọc bản đầy đủ tại đây:\n${SITE_BASE}${post.url}/`;
+                refs.xLinkOutput.value = commentLink;
+                refs.fbLinkOutput.value = commentLink;
                 updateMeta(post);
                 setStatus('Xong rồi. Có thể chỉnh tay thêm chút cho hợp mood rồi bấm copy.', 'ok');
             } catch (error) {
                 console.error(error);
                 refs.xOutput.value = '';
                 refs.fbOutput.value = '';
+                refs.xLinkOutput.value = '';
+                refs.fbLinkOutput.value = '';
                 setStatus('Kéo nội dung bài lỗi rồi. Có thể đường dẫn bài chưa build xong.', 'err');
             }
         });
@@ -642,8 +660,15 @@
                 }
                 try {
                     await navigator.clipboard.writeText(target.value);
-                    setStatus(`Đã copy ${button.dataset.copyTarget === 'xOutput' ? 'bản X' : 'bản Facebook'} vào clipboard.`, 'ok');
-                    showToast(button.dataset.copyTarget === 'xOutput' ? 'Đã copy bản X.' : 'Đã copy bản Facebook.');
+                    const labels = {
+                        xOutput: 'bản X',
+                        xLinkOutput: 'link comment X',
+                        fbOutput: 'bản Facebook',
+                        fbLinkOutput: 'link comment Facebook'
+                    };
+                    const label = labels[button.dataset.copyTarget] || 'nội dung';
+                    setStatus(`Đã copy ${label} vào clipboard.`, 'ok');
+                    showToast(`Đã copy ${label}.`);
                 } catch (error) {
                     target.select();
                     document.execCommand('copy');
