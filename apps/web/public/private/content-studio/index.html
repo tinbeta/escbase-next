@@ -306,6 +306,35 @@
             line-height: 1.55;
         }
 
+        .toast {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.65rem;
+            background: rgba(24,24,27,0.96);
+            color: var(--text);
+            border: 1px solid rgba(74, 222, 128, 0.28);
+            box-shadow: 0 18px 50px rgba(0,0,0,0.35);
+            border-radius: 16px;
+            padding: 0.9rem 1rem;
+            min-width: 220px;
+            max-width: 320px;
+            z-index: 10000;
+            opacity: 0;
+            transform: translateY(10px);
+            pointer-events: none;
+            transition: opacity 0.22s ease, transform 0.22s ease;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .toast i { color: #4ade80; }
+
         .hidden { display: none !important; }
 
         @media (max-width: 1024px) {
@@ -422,6 +451,8 @@
         </div>
     </div>
 
+    <div class="toast" id="copyToast"><i class="fas fa-check-circle"></i><span id="copyToastText">Đã copy vào clipboard.</span></div>
+
     <script>
         const PASSWORD_HASH = '6aa38747a9f3a67afadabb72fb66c5692af436e75a08cff4354d05e8a55f5c84';
         const PASSWORD_HINT = 'Tạm thời: đổi ngay nếu dùng public lâu dài.';
@@ -444,10 +475,13 @@
             metaExcerpt: document.getElementById('metaExcerpt'),
             metaLink: document.getElementById('metaLink'),
             xOutput: document.getElementById('xOutput'),
-            fbOutput: document.getElementById('fbOutput')
+            fbOutput: document.getElementById('fbOutput'),
+            copyToast: document.getElementById('copyToast'),
+            copyToastText: document.getElementById('copyToastText')
         };
 
         let posts = [];
+        let toastTimer = null;
 
         async function sha256(text) {
             const data = new TextEncoder().encode(text);
@@ -463,6 +497,15 @@
         function setStatus(message, type = '') {
             refs.studioStatus.className = `status ${type}`.trim();
             refs.studioStatus.innerHTML = message;
+        }
+
+        function showToast(message) {
+            refs.copyToastText.textContent = message;
+            refs.copyToast.classList.add('show');
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => {
+                refs.copyToast.classList.remove('show');
+            }, 1700);
         }
 
         async function checkStoredUnlock() {
@@ -548,7 +591,7 @@
         function buildXDraft(post, context) {
             const summary = context.quickSummary || post.excerpt || '';
             const heads = context.headings || [];
-            const hook = `**${post.title}**`;
+            const hook = `${post.title}`;
             const poke = heads[0] ? `\n\n👀 ${heads[0]}.` : '';
             const counter = heads[1] ? `\n\n🤔 Nhưng ngược lại, ${heads[1].charAt(0).toLowerCase()}${heads[1].slice(1)}.` : '\n\n🤔 Nhưng narrative ngon chưa bao giờ đồng nghĩa với execution ngon.';
             const close = `\n\n🔗 ${SITE_BASE}${post.url}/`;
@@ -600,10 +643,12 @@
                 try {
                     await navigator.clipboard.writeText(target.value);
                     setStatus(`Đã copy ${button.dataset.copyTarget === 'xOutput' ? 'bản X' : 'bản Facebook'} vào clipboard.`, 'ok');
+                    showToast(button.dataset.copyTarget === 'xOutput' ? 'Đã copy bản X.' : 'Đã copy bản Facebook.');
                 } catch (error) {
                     target.select();
                     document.execCommand('copy');
                     setStatus('Đã copy theo kiểu fallback. Trình duyệt hơi khó tính thôi.', 'ok');
+                    showToast('Đã copy xong.');
                 }
             });
         });
