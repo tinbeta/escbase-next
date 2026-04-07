@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESC Base Content Studio</title>
+    <meta name="robots" content="noindex,nofollow">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        :root {
+            --studio-blue: #3b82f6;
+            --studio-green: #22c55e;
+            --studio-red: #ef4444;
+        }
+
+        body { min-height: 100vh; }
+
+        .studio-shell {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 2rem 1.25rem 4rem;
+        }
+
+        .studio-topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .studio-brand {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .studio-brand img {
+            width: 54px;
+            height: 54px;
+            border-radius: 14px;
+            border: 1px solid var(--border);
+        }
+
+        .studio-brand h1 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+        }
+
+        .studio-brand p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-top: 0.2rem;
+        }
+
+        .ghost-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            text-decoration: none;
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+            background: var(--card-bg);
+            padding: 0.85rem 1rem;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+        }
+
+        .ghost-link:hover { color: var(--text); border-color: var(--border-hover); }
+
+        .hero-card {
+            background: linear-gradient(135deg, rgba(247,147,26,0.18), rgba(59,130,246,0.10));
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 1.6rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-card h2 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.03em;
+        }
+
+        .hero-card p {
+            color: var(--text-secondary);
+            max-width: 820px;
+        }
+
+        .warning-note {
+            margin-top: 1rem;
+            display: inline-flex;
+            gap: 0.6rem;
+            align-items: flex-start;
+            color: #fbbf24;
+            background: rgba(251,191,36,0.08);
+            border: 1px solid rgba(251,191,36,0.18);
+            padding: 0.85rem 1rem;
+            border-radius: 14px;
+            font-size: 0.92rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 340px 1fr;
+            gap: 1.25rem;
+            align-items: start;
+        }
+
+        .panel {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 1.25rem;
+        }
+
+        .panel h3 {
+            font-size: 1rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .field + .field { margin-top: 1rem; }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        select, input, textarea {
+            width: 100%;
+            background: #0f0f12;
+            color: var(--text);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 0.95rem 1rem;
+            font: inherit;
+        }
+
+        textarea {
+            min-height: 300px;
+            resize: vertical;
+            line-height: 1.65;
+        }
+
+        .btn-row {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .btn {
+            border: 0;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.65rem;
+            padding: 0.9rem 1.1rem;
+            border-radius: 14px;
+            font-weight: 700;
+            font: inherit;
+            text-decoration: none;
+            transition: transform 0.15s ease, opacity 0.15s ease;
+        }
+
+        .btn:hover { transform: translateY(-1px); }
+        .btn:active { transform: translateY(0); }
+        .btn-primary { background: var(--text); color: var(--bg); }
+        .btn-secondary { background: transparent; color: var(--text); border: 1px solid var(--border); }
+        .btn-blue { background: var(--studio-blue); color: white; }
+        .btn-green { background: var(--studio-green); color: #04130a; }
+
+        .meta-box {
+            display: grid;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+
+        .meta-item {
+            background: #101014;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 0.9rem 1rem;
+        }
+
+        .meta-item small {
+            display: block;
+            color: var(--text-muted);
+            margin-bottom: 0.25rem;
+            text-transform: uppercase;
+            font-size: 0.72rem;
+            letter-spacing: 0.06em;
+        }
+
+        .meta-item strong { display: block; line-height: 1.45; }
+
+        .platform-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .platform-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 1.1rem;
+        }
+
+        .platform-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.85rem;
+        }
+
+        .platform-title {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+
+        .platform-title h4 {
+            font-size: 1rem;
+            font-weight: 800;
+        }
+
+        .pill {
+            font-size: 0.75rem;
+            border-radius: 999px;
+            padding: 0.3rem 0.65rem;
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+            background: #101014;
+            white-space: nowrap;
+        }
+
+        .platform-card small {
+            color: var(--text-muted);
+            display: block;
+            margin-bottom: 0.8rem;
+        }
+
+        .status {
+            margin-top: 1rem;
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+        }
+
+        .status.ok { color: #4ade80; }
+        .status.warn { color: #fbbf24; }
+        .status.err { color: #f87171; }
+
+        .lock-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(9,9,11,0.92);
+            backdrop-filter: blur(14px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            z-index: 9999;
+        }
+
+        .lock-card {
+            width: min(480px, 100%);
+            background: #111114;
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 1.5rem;
+            box-shadow: 0 20px 80px rgba(0,0,0,0.45);
+        }
+
+        .lock-card h2 {
+            font-size: 1.45rem;
+            margin-bottom: 0.65rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+        }
+
+        .lock-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .hint {
+            margin-top: 1rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            line-height: 1.55;
+        }
+
+        .hidden { display: none !important; }
+
+        @media (max-width: 1024px) {
+            .grid { grid-template-columns: 1fr; }
+            .platform-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="lock-overlay" id="lockOverlay">
+        <div class="lock-card">
+            <h2><i class="fas fa-lock"></i> ESC Base Content Studio</h2>
+            <p>Trang này dành riêng để lấy nội dung đăng social. Nhập mật khẩu để mở studio rồi copy bản dành cho <strong>X</strong> hoặc <strong>Facebook</strong>.</p>
+            <form id="unlockForm">
+                <label for="passwordInput">Mật khẩu</label>
+                <input id="passwordInput" type="password" placeholder="Nhập mật khẩu..." autocomplete="current-password">
+                <div class="btn-row">
+                    <button class="btn btn-primary" type="submit"><i class="fas fa-unlock"></i> Mở studio</button>
+                </div>
+                <div class="status" id="unlockStatus"></div>
+            </form>
+            <div class="hint">
+                ⚠️ Đây là lớp khóa phía client để chặn người ngoài bình thường, không phải auth server-side xịn. Muốn khóa thật sự thì sau này phải thêm backend/login tử tế.
+            </div>
+        </div>
+    </div>
+
+    <div class="studio-shell hidden" id="studioApp">
+        <div class="studio-topbar">
+            <div class="studio-brand">
+                <img src="/esclogo.png" alt="ESC Base">
+                <div>
+                    <h1>ESC Base Content Studio</h1>
+                    <p>Chọn bài → ra draft riêng cho X và Facebook → bấm copy là xong.</p>
+                </div>
+            </div>
+            <a class="ghost-link" href="/blog" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square"></i> Mở blog công khai</a>
+        </div>
+
+        <div class="hero-card">
+            <h2>Nơi đỡ phải copy thủ công như thời đồ đá.</h2>
+            <p>Studio này sẽ tự lấy thông tin từ bài viết đang có trên ESC Base, rồi format ra 2 phiên bản riêng: một bản ngắn gọn hơn cho <strong>X</strong>, một bản dài hơn cho <strong>Facebook</strong>. Bạn vẫn có thể chỉnh tay trước khi bấm copy nếu muốn thêm chút gia vị.</p>
+            <div class="warning-note"><i class="fas fa-shield-halved"></i><span>Mật khẩu mặc định hiện đang được đặt trong mã nguồn trang này theo kiểu khóa nhẹ. Dùng ổn cho nhu cầu nội bộ, nhưng đừng nhầm nó với két sắt ngân hàng.</span></div>
+        </div>
+
+        <div class="grid">
+            <aside class="panel">
+                <h3><i class="fas fa-sliders"></i> Nguồn bài & thông tin</h3>
+                <div class="field">
+                    <label for="articleSelect">Chọn bài viết</label>
+                    <select id="articleSelect">
+                        <option value="">Đang tải danh sách bài...</option>
+                    </select>
+                </div>
+
+                <div class="btn-row">
+                    <button class="btn btn-primary" id="generateBtn"><i class="fas fa-wand-magic-sparkles"></i> Tạo draft social</button>
+                    <button class="btn btn-secondary" id="refreshBtn"><i class="fas fa-rotate-right"></i> Nạp lại bài</button>
+                </div>
+
+                <div class="meta-box">
+                    <div class="meta-item">
+                        <small>Tiêu đề</small>
+                        <strong id="metaTitle">—</strong>
+                    </div>
+                    <div class="meta-item">
+                        <small>Tag</small>
+                        <strong id="metaTag">—</strong>
+                    </div>
+                    <div class="meta-item">
+                        <small>Tóm tắt / excerpt</small>
+                        <strong id="metaExcerpt">—</strong>
+                    </div>
+                    <div class="meta-item">
+                        <small>Link bài</small>
+                        <strong id="metaLink">—</strong>
+                    </div>
+                </div>
+
+                <div class="status" id="studioStatus">Chọn bài rồi bấm <strong>“Tạo draft social”</strong>.</div>
+            </aside>
+
+            <section class="platform-grid">
+                <div class="platform-card">
+                    <div class="platform-head">
+                        <div class="platform-title">
+                            <i class="fa-brands fa-x-twitter" style="font-size:1.25rem"></i>
+                            <h4>Bản cho X</h4>
+                        </div>
+                        <span class="pill">ngắn hơn • có chất viral</span>
+                    </div>
+                    <small>Hook nhanh, gãy gọn, dễ đăng ngay. Vẫn có tí phản biện cho đúng chất.</small>
+                    <textarea id="xOutput" placeholder="Draft cho X sẽ hiện ở đây..."></textarea>
+                    <div class="btn-row">
+                        <button class="btn btn-blue" data-copy-target="xOutput"><i class="fas fa-copy"></i> Copy bản X</button>
+                    </div>
+                </div>
+
+                <div class="platform-card">
+                    <div class="platform-head">
+                        <div class="platform-title">
+                            <i class="fa-brands fa-facebook" style="font-size:1.25rem"></i>
+                            <h4>Bản cho Facebook</h4>
+                        </div>
+                        <span class="pill">dài hơn vừa phải • dễ đọc</span>
+                    </div>
+                    <small>Bản này dài hơn một nấc, vẫn đời thường và đủ thịt để kéo người đọc.</small>
+                    <textarea id="fbOutput" placeholder="Draft cho Facebook sẽ hiện ở đây..."></textarea>
+                    <div class="btn-row">
+                        <button class="btn btn-green" data-copy-target="fbOutput"><i class="fas fa-copy"></i> Copy bản Facebook</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        const PASSWORD_HASH = '6aa38747a9f3a67afadabb72fb66c5692af436e75a08cff4354d05e8a55f5c84';
+        const PASSWORD_HINT = 'Tạm thời: đổi ngay nếu dùng public lâu dài.';
+        const BLOG_JSON = '/blog.json';
+        const SITE_BASE = 'https://escbase.xyz';
+        const STORAGE_KEY = 'escbase-content-studio-unlocked-v1';
+
+        const refs = {
+            overlay: document.getElementById('lockOverlay'),
+            app: document.getElementById('studioApp'),
+            unlockForm: document.getElementById('unlockForm'),
+            passwordInput: document.getElementById('passwordInput'),
+            unlockStatus: document.getElementById('unlockStatus'),
+            articleSelect: document.getElementById('articleSelect'),
+            generateBtn: document.getElementById('generateBtn'),
+            refreshBtn: document.getElementById('refreshBtn'),
+            studioStatus: document.getElementById('studioStatus'),
+            metaTitle: document.getElementById('metaTitle'),
+            metaTag: document.getElementById('metaTag'),
+            metaExcerpt: document.getElementById('metaExcerpt'),
+            metaLink: document.getElementById('metaLink'),
+            xOutput: document.getElementById('xOutput'),
+            fbOutput: document.getElementById('fbOutput')
+        };
+
+        let posts = [];
+
+        async function sha256(text) {
+            const data = new TextEncoder().encode(text);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+            return Array.from(new Uint8Array(hashBuffer)).map(b => b.toString(16).padStart(2, '0')).join('');
+        }
+
+        function unlockStudio() {
+            refs.overlay.classList.add('hidden');
+            refs.app.classList.remove('hidden');
+        }
+
+        function setStatus(message, type = '') {
+            refs.studioStatus.className = `status ${type}`.trim();
+            refs.studioStatus.innerHTML = message;
+        }
+
+        async function checkStoredUnlock() {
+            if (localStorage.getItem(STORAGE_KEY) === '1') {
+                unlockStudio();
+                await loadPosts();
+            }
+        }
+
+        refs.unlockForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const value = refs.passwordInput.value.trim();
+            if (!value) {
+                refs.unlockStatus.textContent = 'Nhập mật khẩu đã rồi hẵng mở cửa.';
+                refs.unlockStatus.className = 'status err';
+                return;
+            }
+            const hash = await sha256(value);
+            if (hash === PASSWORD_HASH) {
+                localStorage.setItem(STORAGE_KEY, '1');
+                refs.unlockStatus.textContent = 'Mở khóa thành công.';
+                refs.unlockStatus.className = 'status ok';
+                unlockStudio();
+                await loadPosts();
+                return;
+            }
+            refs.unlockStatus.textContent = 'Sai mật khẩu rồi. Bình tĩnh gõ lại.';
+            refs.unlockStatus.className = 'status err';
+        });
+
+        async function loadPosts() {
+            try {
+                const res = await fetch(BLOG_JSON, { cache: 'no-store' });
+                posts = await res.json();
+                refs.articleSelect.innerHTML = posts.map((post, index) => `
+                    <option value="${index}">${post.title}</option>
+                `).join('');
+                updateMeta(posts[0]);
+                setStatus('Danh sách bài đã tải xong. Chọn bài rồi bấm tạo draft.', 'ok');
+            } catch (error) {
+                setStatus('Không tải được blog.json. Kiểm tra lại build hoặc đường dẫn.', 'err');
+            }
+        }
+
+        function updateMeta(post) {
+            if (!post) return;
+            refs.metaTitle.textContent = post.title || '—';
+            refs.metaTag.textContent = post.tag || '—';
+            refs.metaExcerpt.textContent = post.excerpt || '—';
+            refs.metaLink.textContent = `${SITE_BASE}${post.url}/`;
+        }
+
+        refs.articleSelect.addEventListener('change', () => {
+            const post = posts[Number(refs.articleSelect.value)];
+            updateMeta(post);
+        });
+
+        function pickSentences(excerpt = '') {
+            const cleaned = excerpt.replace(/\s+/g, ' ').trim();
+            if (!cleaned) return [];
+            const chunks = cleaned.split(/(?<=[.!?])\s+/).filter(Boolean);
+            if (chunks.length >= 2) return chunks.slice(0, 2);
+            return [cleaned];
+        }
+
+        function slugToUrl(postUrl) {
+            return postUrl.endsWith('/') ? postUrl : `${postUrl}/`;
+        }
+
+        async function fetchArticleContext(post) {
+            const url = `${slugToUrl(post.url)}index.html`;
+            const res = await fetch(url, { cache: 'no-store' });
+            const html = await res.text();
+            const doc = new DOMParser().parseFromString(html, 'text/html');
+            const quickSummary = doc.querySelector('.highlight-box p')?.textContent?.trim() || post.excerpt || '';
+            const headings = Array.from(doc.querySelectorAll('.article-content h2, .article-content h3'))
+                .map(el => el.textContent.trim())
+                .filter(Boolean)
+                .slice(0, 4);
+            return { quickSummary, headings };
+        }
+
+        function buildXDraft(post, context) {
+            const summary = context.quickSummary || post.excerpt || '';
+            const heads = context.headings || [];
+            const hook = `**${post.title}**`;
+            const poke = heads[0] ? `\n\n👀 ${heads[0]}.` : '';
+            const counter = heads[1] ? `\n\n🤔 Nhưng ngược lại, ${heads[1].charAt(0).toLowerCase()}${heads[1].slice(1)}.` : '\n\n🤔 Nhưng narrative ngon chưa bao giờ đồng nghĩa với execution ngon.';
+            const close = `\n\n🔗 ${SITE_BASE}${post.url}/`;
+            return `${hook}\n\n🧠 ${summary}${poke}${counter}\n\n⚡ Chốt nhanh: đáng theo dõi, nhưng đừng auto bullish chỉ vì nghe có mùi tương lai.${close}`.trim();
+        }
+
+        function buildFacebookDraft(post, context) {
+            const summary = context.quickSummary || post.excerpt || '';
+            const heads = context.headings || [];
+            const bullet1 = heads[0] ? `📌 ${heads[0]}` : `📌 Điểm chính: ${post.tag || 'Bối cảnh bài viết'}`;
+            const bullet2 = heads[1] ? `🔥 ${heads[1]}` : '🔥 Điểm hay là narrative này chạm đúng một nỗi đau thật của thị trường.';
+            const bullet3 = heads[2] ? `⚠️ ${heads[2]}` : '⚠️ Nhưng nếu không có usage thật thì tất cả rất dễ chỉ là câu chuyện đẹp.';
+            return `${post.title}\n\n🧠 Tóm tắt nhanh:\n${summary}\n\n${bullet1}\n${bullet2}\n${bullet3}\n\n🤝 Góc nhìn của mình: case này đáng để theo dõi vì nó gợi ra một hướng đi thú vị, nhưng vẫn nên giữ đầu lạnh. Thị trường thích narrative, còn sản phẩm thật thì thích số liệu và execution.\n\nĐọc bản đầy đủ tại đây:\n${SITE_BASE}${post.url}/`;
+        }
+
+        refs.generateBtn.addEventListener('click', async () => {
+            const post = posts[Number(refs.articleSelect.value)];
+            if (!post) {
+                setStatus('Chưa có bài nào được chọn.', 'warn');
+                return;
+            }
+            try {
+                setStatus('Đang kéo dữ liệu bài và nấu lại thành draft social...', 'warn');
+                const context = await fetchArticleContext(post);
+                refs.xOutput.value = buildXDraft(post, context);
+                refs.fbOutput.value = buildFacebookDraft(post, context);
+                updateMeta(post);
+                setStatus('Xong rồi. Có thể chỉnh tay thêm chút cho hợp mood rồi bấm copy.', 'ok');
+            } catch (error) {
+                console.error(error);
+                refs.xOutput.value = '';
+                refs.fbOutput.value = '';
+                setStatus('Kéo nội dung bài lỗi rồi. Có thể đường dẫn bài chưa build xong.', 'err');
+            }
+        });
+
+        refs.refreshBtn.addEventListener('click', async () => {
+            setStatus('Đang nạp lại danh sách bài...', 'warn');
+            await loadPosts();
+        });
+
+        document.querySelectorAll('[data-copy-target]').forEach((button) => {
+            button.addEventListener('click', async () => {
+                const target = document.getElementById(button.dataset.copyTarget);
+                if (!target?.value.trim()) {
+                    setStatus('Chưa có gì để copy cả. Tạo draft trước đã.', 'warn');
+                    return;
+                }
+                try {
+                    await navigator.clipboard.writeText(target.value);
+                    setStatus(`Đã copy ${button.dataset.copyTarget === 'xOutput' ? 'bản X' : 'bản Facebook'} vào clipboard.`, 'ok');
+                } catch (error) {
+                    target.select();
+                    document.execCommand('copy');
+                    setStatus('Đã copy theo kiểu fallback. Trình duyệt hơi khó tính thôi.', 'ok');
+                }
+            });
+        });
+
+        checkStoredUnlock();
+    </script>
+</body>
+</html>
