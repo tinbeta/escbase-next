@@ -235,9 +235,15 @@
                 <div class="section-header coin-strip-header">
                     <div>
                         <h3 class="section-title"><i class="fas fa-coins"></i> Top 5 Coin</h3>
-                        <p class="coin-strip-subtitle">Giá top coin theo market cap, tự cập nhật mỗi 5 phút.</p>
+                        <p class="coin-strip-subtitle">BTC, ETH, SOL, BNB, XRP — tự cập nhật mỗi 5 phút.</p>
                     </div>
-                    <span class="coin-strip-status" id="coinUpdatedAt">Đang tải...</span>
+                    <div class="coin-strip-actions">
+                        <div class="coin-currency-toggle" id="coinCurrencyToggle">
+                            <button type="button" class="coin-toggle-btn active" data-currency="USD">USD</button>
+                            <button type="button" class="coin-toggle-btn" data-currency="VND">VND</button>
+                        </div>
+                        <span class="coin-strip-status" id="coinUpdatedAt">Đang tải...</span>
+                    </div>
                 </div>
                 <div class="coin-grid" id="coinGrid">
                     <div class="coin-loading">Đang tải dữ liệu giá coin...</div>
@@ -360,6 +366,8 @@
             });
         };
 
+        let currentCoinCurrency = 'USD';
+
         const formatCoinUpdatedAt = (input) => {
             if (!input) return 'Vừa cập nhật';
             const date = new Date(input);
@@ -367,12 +375,18 @@
             return `Cập nhật ${date.toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' })}`;
         };
 
+        const syncCoinToggle = () => {
+            document.querySelectorAll('.coin-toggle-btn').forEach((button) => {
+                button.classList.toggle('active', button.dataset.currency === currentCoinCurrency);
+            });
+        };
+
         const renderCoins = (payload) => {
             const grid = document.getElementById('coinGrid');
             const updatedAt = document.getElementById('coinUpdatedAt');
             const coins = payload?.coins || [];
 
-            updatedAt.textContent = formatCoinUpdatedAt(payload?.updatedAt);
+            updatedAt.textContent = `${payload?.convert || currentCoinCurrency} · ${formatCoinUpdatedAt(payload?.updatedAt)}`;
 
             if (!coins.length) {
                 grid.innerHTML = '<div class="coin-loading">Không thể tải giá coin lúc này.</div>';
@@ -384,7 +398,7 @@
                 return `
                     <article class="coin-card">
                         <div class="coin-card-head">
-                            <span class="coin-rank">#${coin.rank}</span>
+                            <span class="coin-rank">#${coin.rank || '—'}</span>
                             <span class="coin-change ${positive ? 'is-up' : 'is-down'}">${coin.change24hFormatted}</span>
                         </div>
                         <h4>${coin.symbol}</h4>
@@ -396,7 +410,7 @@
         };
 
         const loadCoins = () => {
-            fetch('/api/top-coins')
+            fetch(`/api/top-coins?convert=${currentCoinCurrency}`)
                 .then(r => r.json())
                 .then(renderCoins)
                 .catch(() => {
@@ -405,6 +419,17 @@
                 });
         };
 
+        document.getElementById('coinCurrencyToggle')?.addEventListener('click', (event) => {
+            const button = event.target.closest('.coin-toggle-btn');
+            if (!button) return;
+            const nextCurrency = button.dataset.currency;
+            if (!nextCurrency || nextCurrency === currentCoinCurrency) return;
+            currentCoinCurrency = nextCurrency;
+            syncCoinToggle();
+            loadCoins();
+        });
+
+        syncCoinToggle();
         loadCoins();
         setInterval(loadCoins, 300000);
 

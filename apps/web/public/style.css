@@ -423,6 +423,41 @@ body {
     margin-top: 0.35rem;
 }
 
+.coin-strip-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.coin-currency-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.25rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.coin-toggle-btn {
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    padding: 0.4rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.coin-toggle-btn.active {
+    background: var(--text);
+    color: var(--bg);
+}
+
 .coin-strip-status {
     color: var(--text-muted);
     font-size: 0.9rem;
@@ -848,6 +883,11 @@ body {
 
     .btn-view-all {
         font-size: 0.95rem;
+    }
+
+    .coin-strip-actions {
+        width: 100%;
+        justify-content: space-between;
     }
 
     .video-feature-card {
