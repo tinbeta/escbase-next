@@ -351,51 +351,6 @@ body {
     border-color: rgba(247, 147, 26, 0.2);
 }
 
-/* Homepage signal strip */
-.signal-strip {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1rem;
-    margin: -0.35rem 0 2.2rem;
-}
-
-.signal-card {
-    background: linear-gradient(180deg, rgba(24, 24, 27, 0.96), rgba(24, 24, 27, 0.84));
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    padding: 1.05rem 1.1rem;
-    min-height: 100%;
-}
-
-.signal-card strong {
-    display: block;
-    font-size: 1rem;
-    line-height: 1.45;
-    letter-spacing: -0.01em;
-    margin-bottom: 0.45rem;
-}
-
-.signal-card p {
-    color: var(--text-secondary);
-    font-size: 0.92rem;
-    line-height: 1.6;
-}
-
-.signal-label {
-    display: inline-flex;
-    align-items: center;
-    margin-bottom: 0.7rem;
-    padding: 0.28rem 0.72rem;
-    border-radius: 999px;
-    border: 1px solid rgba(247, 147, 26, 0.18);
-    background: rgba(247, 147, 26, 0.08);
-    color: var(--accent);
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-}
-
 /* Section Headers */
 .section-header {
     display: flex;
@@ -405,7 +360,7 @@ body {
 }
 
 .coin-strip {
-    margin: -0.35rem 0 2rem;
+    margin: -0.1rem 0 2.2rem;
     padding: 0.85rem 1rem;
     border: 1px solid var(--border);
     border-radius: 999px;
@@ -850,46 +805,8 @@ body {
         margin-bottom: 1.35rem;
     }
 
-    .signal-strip {
-        display: flex;
-        gap: 0.75rem;
-        margin: -0.2rem 0 1.25rem;
-        overflow-x: auto;
-        padding-bottom: 0.2rem;
-        scroll-snap-type: x proximity;
-        scrollbar-width: none;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .signal-strip::-webkit-scrollbar {
-        display: none;
-    }
-
-    .signal-card {
-        min-width: 84%;
-        flex: 0 0 84%;
-        padding: 0.95rem 1rem;
-        scroll-snap-align: start;
-    }
-
-    .signal-card strong {
-        font-size: 0.96rem;
-        margin-bottom: 0.3rem;
-    }
-
-    .signal-card p {
-        font-size: 0.88rem;
-        line-height: 1.5;
-    }
-
-    .signal-label {
-        margin-bottom: 0.55rem;
-        padding: 0.24rem 0.62rem;
-        font-size: 0.7rem;
-    }
-
     .coin-strip {
-        margin: -0.05rem 0 1.4rem;
+        margin: 0.15rem 0 1.55rem;
         padding: 0.68rem 0.78rem;
         border-radius: 22px;
     }
@@ -919,10 +836,6 @@ body {
     .coin-price,
     .coin-change {
         font-size: 0.72rem;
-    }
-
-    .signal-card {
-        padding: 1rem;
     }
 
     .section-header {
