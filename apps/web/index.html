@@ -343,6 +343,29 @@
             });
         };
 
+        let coinTickerPaused = false;
+
+        const syncCoinTickerState = () => {
+            const grid = document.getElementById('coinGrid');
+            if (!grid) return;
+            grid.classList.toggle('is-paused', coinTickerPaused);
+        };
+
+        const toggleCoinTicker = () => {
+            coinTickerPaused = !coinTickerPaused;
+            syncCoinTickerState();
+        };
+
+        const bindCoinTickerToggle = () => {
+            const grid = document.getElementById('coinGrid');
+            if (!grid || grid.dataset.toggleBound === 'true') return;
+
+            grid.dataset.toggleBound = 'true';
+            grid.addEventListener('click', toggleCoinTicker);
+            grid.addEventListener('touchstart', () => {}, { passive: true });
+            syncCoinTickerState();
+        };
+
         const renderCoins = (payload) => {
             const grid = document.getElementById('coinGrid');
             const coins = payload?.coins || [];
@@ -367,7 +390,11 @@
             }).join('');
 
             grid.innerHTML = `<div class="coin-track">${cards}${cards}</div>`;
+            bindCoinTickerToggle();
+            syncCoinTickerState();
         };
+
+        bindCoinTickerToggle();
 
         const loadCoins = () => {
             fetch('/api/top-coins')
