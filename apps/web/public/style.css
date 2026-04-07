@@ -79,7 +79,8 @@ body {
     border-right: 1px solid var(--border);
 }
 
-.brand {
+.brand,
+.logo-section {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -89,26 +90,43 @@ body {
     transition: opacity 0.2s;
 }
 
-.brand:hover {
+.brand:hover,
+.logo-section:hover {
     opacity: 0.8;
 }
 
-.brand img {
+.brand img,
+.logo-section .logo {
     width: 56px;
     height: 56px;
     border-radius: var(--radius-sm);
     border: 1px solid var(--border);
     object-fit: cover;
+    flex-shrink: 0;
 }
 
-.brand-info h1 {
+.brand-info h1,
+.logo-section h1 {
     font-size: 1.25rem;
     font-weight: 800;
     letter-spacing: -0.03em;
 }
 
-.brand-info p {
+.brand-info p,
+.logo-section p {
     font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.logo-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.875rem;
+}
+
+.logo-section .tagline {
+    font-size: 0.92rem;
+    font-weight: 600;
     color: var(--text-secondary);
 }
 
@@ -127,7 +145,8 @@ body {
     flex-grow: 1;
 }
 
-.nav-item {
+.nav-item,
+.nav-link {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -141,20 +160,24 @@ body {
     border: 1px solid transparent;
 }
 
-.nav-item i {
+.nav-item i,
+.nav-link i {
     width: 20px;
     font-size: 1.1rem;
     text-align: center;
 }
 
 .nav-item:hover,
-.nav-item.active {
+.nav-item.active,
+.nav-link:hover,
+.nav-link.active {
     background: var(--card-bg);
     color: var(--text);
     border-color: var(--border);
 }
 
-.nav-item:hover {
+.nav-item:hover,
+.nav-link:hover {
     transform: translateX(4px);
 }
 
@@ -167,9 +190,12 @@ body {
     display: flex;
     gap: 0.5rem;
     flex-wrap: wrap;
+    margin-top: auto;
+    padding-top: 2rem;
 }
 
-.social-btn {
+.social-btn,
+.social-links a {
     width: 44px;
     height: 44px;
     border-radius: var(--radius-sm);
@@ -184,7 +210,8 @@ body {
     font-size: 1.1rem;
 }
 
-.social-btn:hover {
+.social-btn:hover,
+.social-links a:hover {
     background: var(--text);
     color: var(--bg);
     transform: translateY(-2px);
