@@ -351,9 +351,34 @@
             grid.classList.toggle('is-paused', coinTickerPaused);
         };
 
-        const toggleCoinTicker = () => {
-            coinTickerPaused = !coinTickerPaused;
+        const pauseCoinTicker = () => {
+            coinTickerPaused = true;
             syncCoinTickerState();
+        };
+
+        const resumeCoinTicker = () => {
+            coinTickerPaused = false;
+            syncCoinTickerState();
+        };
+
+        const handleCoinTickerInteraction = (event) => {
+            if (coinTickerPaused) {
+                resumeCoinTicker();
+                return;
+            }
+
+            pauseCoinTicker();
+            event.stopPropagation();
+        };
+
+        const handleDocumentInteraction = (event) => {
+            if (!coinTickerPaused) return;
+
+            const grid = document.getElementById('coinGrid');
+            if (!grid) return;
+            if (grid.contains(event.target)) return;
+
+            resumeCoinTicker();
         };
 
         const bindCoinTickerToggle = () => {
@@ -361,8 +386,9 @@
             if (!grid || grid.dataset.toggleBound === 'true') return;
 
             grid.dataset.toggleBound = 'true';
-            grid.addEventListener('click', toggleCoinTicker);
+            grid.addEventListener('click', handleCoinTickerInteraction);
             grid.addEventListener('touchstart', () => {}, { passive: true });
+            document.addEventListener('click', handleDocumentInteraction);
             syncCoinTickerState();
         };
 
