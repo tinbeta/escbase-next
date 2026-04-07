@@ -416,19 +416,7 @@ body {
 .coin-strip-bar {
     display: flex;
     align-items: center;
-    gap: 0.9rem;
     min-width: 0;
-}
-
-.coin-strip-label {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.45rem;
-    color: var(--text);
-    font-size: 0.85rem;
-    font-weight: 800;
-    white-space: nowrap;
-    flex-shrink: 0;
 }
 
 .coin-grid {
@@ -811,10 +799,6 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .coin-strip-bar {
-        gap: 0.7rem;
-    }
-
     .coin-grid {
         width: 100%;
         mask-image: none;
@@ -874,14 +858,6 @@ body {
         margin: -0.1rem 0 2rem;
         padding: 0.68rem 0.78rem;
         border-radius: 22px;
-    }
-
-    .coin-strip-bar {
-        gap: 0.55rem;
-    }
-
-    .coin-strip-label {
-        font-size: 0.78rem;
     }
 
     .coin-grid {
