@@ -602,13 +602,58 @@
             return { quickSummary, headings };
         }
 
+        function makeHashtags(post) {
+            const base = ['#escbase'];
+            const tag = (post.tag || '').toLowerCase();
+            const title = (post.title || '').toLowerCase();
+            const url = (post.url || '').toLowerCase();
+            const map = [
+                ['ai', '#AI'],
+                ['polkadot', '#Polkadot'],
+                ['acurast', '#Acurast'],
+                ['binance', '#Binance'],
+                ['ethereum', '#Ethereum'],
+                ['solana', '#Solana'],
+                ['bitcoin', '#Bitcoin'],
+                ['btc', '#BTC'],
+                ['bnb', '#BNBChain'],
+                ['memecoin', '#Memecoin'],
+                ['trading', '#Trading'],
+                ['crypto', '#Crypto'],
+                ['web3', '#Web3'],
+                ['privacy', '#Privacy'],
+                ['legal', '#PhapLyCrypto'],
+                ['pháp lý', '#PhapLyCrypto'],
+                ['security', '#Security'],
+                ['defi', '#DeFi'],
+                ['tradfi', '#TradFi'],
+                ['edge', '#EdgeCompute'],
+                ['compute', '#Compute'],
+                ['depin', '#DePIN']
+            ];
+
+            const seen = new Set(base.map(x => x.toLowerCase()));
+            const result = [...base];
+            const haystack = `${tag} ${title} ${url}`;
+
+            for (const [needle, hash] of map) {
+                if (haystack.includes(needle) && !seen.has(hash.toLowerCase())) {
+                    result.push(hash);
+                    seen.add(hash.toLowerCase());
+                }
+                if (result.length >= 5) break;
+            }
+            return result.join(' ');
+        }
+
         function buildXDraft(post, context) {
             const summary = context.quickSummary || post.excerpt || '';
             const heads = context.headings || [];
             const hook = `${post.title}`;
             const poke = heads[0] ? `\n\n👀 ${heads[0]}.` : '';
             const counter = heads[1] ? `\n\n🤔 Nhưng ngược lại, ${heads[1].charAt(0).toLowerCase()}${heads[1].slice(1)}.` : '\n\n🤔 Nhưng narrative ngon chưa bao giờ đồng nghĩa với execution ngon.';
-            return `${hook}\n\n🧠 ${summary}${poke}${counter}\n\n⚡ Chốt nhanh: đáng theo dõi, nhưng đừng auto bullish chỉ vì nghe có mùi tương lai.`.trim();
+            const hashtags = makeHashtags(post);
+            return `${hook}\n\n🧠 ${summary}${poke}${counter}\n\n⚡ Chốt nhanh: đáng theo dõi, nhưng đừng auto bullish chỉ vì nghe có mùi tương lai.\n\n${hashtags}`.trim();
         }
 
         function buildFacebookDraft(post, context) {
@@ -617,7 +662,8 @@
             const bullet1 = heads[0] ? `📌 ${heads[0]}` : `📌 Điểm chính: ${post.tag || 'Bối cảnh bài viết'}`;
             const bullet2 = heads[1] ? `🔥 ${heads[1]}` : '🔥 Điểm hay là narrative này chạm đúng một nỗi đau thật của thị trường.';
             const bullet3 = heads[2] ? `⚠️ ${heads[2]}` : '⚠️ Nhưng nếu không có usage thật thì tất cả rất dễ chỉ là câu chuyện đẹp.';
-            return `${post.title}\n\n🧠 Tóm tắt nhanh:\n${summary}\n\n${bullet1}\n${bullet2}\n${bullet3}\n\n🤝 Góc nhìn của mình: case này đáng để theo dõi vì nó gợi ra một hướng đi thú vị, nhưng vẫn nên giữ đầu lạnh. Thị trường thích narrative, còn sản phẩm thật thì thích số liệu và execution.`;
+            const hashtags = makeHashtags(post);
+            return `${post.title}\n\n🧠 Tóm tắt nhanh:\n${summary}\n\n${bullet1}\n${bullet2}\n${bullet3}\n\n🤝 Góc nhìn của mình: case này đáng để theo dõi vì nó gợi ra một hướng đi thú vị, nhưng vẫn nên giữ đầu lạnh. Thị trường thích narrative, còn sản phẩm thật thì thích số liệu và execution.\n\n${hashtags}`;
         }
 
         refs.generateBtn.addEventListener('click', async () => {
