@@ -404,6 +404,101 @@ body {
     margin-bottom: 1.5rem;
 }
 
+.coin-strip {
+    margin: -0.5rem 0 3rem;
+    padding: 1.35rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: linear-gradient(180deg, rgba(24, 24, 27, 0.96), rgba(13, 13, 15, 0.98));
+}
+
+.coin-strip-header {
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.coin-strip-subtitle {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-top: 0.35rem;
+}
+
+.coin-strip-status {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.coin-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 0.9rem;
+}
+
+.coin-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+}
+
+.coin-card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.coin-rank {
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.coin-change {
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 0.2rem 0.5rem;
+    border-radius: 999px;
+    border: 1px solid transparent;
+}
+
+.coin-change.is-up {
+    color: #22c55e;
+    background: rgba(34, 197, 94, 0.08);
+    border-color: rgba(34, 197, 94, 0.18);
+}
+
+.coin-change.is-down {
+    color: #ef4444;
+    background: rgba(239, 68, 68, 0.08);
+    border-color: rgba(239, 68, 68, 0.18);
+}
+
+.coin-card h4 {
+    font-size: 1.15rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.coin-name {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin: 0.2rem 0 0.85rem;
+}
+
+.coin-price {
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.coin-loading {
+    grid-column: 1 / -1;
+    color: var(--text-secondary);
+    padding: 0.5rem 0;
+}
+
 .section-title {
     font-size: 1.5rem;
     font-weight: 800;
@@ -683,6 +778,10 @@ body {
         grid-template-columns: 1fr;
     }
 
+    .coin-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .main-content {
         padding: 2rem;
     }
@@ -726,6 +825,15 @@ body {
     .signal-strip {
         margin: -0.25rem 0 2rem;
         gap: 0.9rem;
+    }
+
+    .coin-strip {
+        margin: -0.1rem 0 2rem;
+        padding: 1rem;
+    }
+
+    .coin-grid {
+        grid-template-columns: 1fr;
     }
 
     .signal-card {

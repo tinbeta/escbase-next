@@ -231,6 +231,19 @@
                 </div>
             </section>
 
+            <section class="coin-strip fade-in" aria-label="Top 5 coin prices">
+                <div class="section-header coin-strip-header">
+                    <div>
+                        <h3 class="section-title"><i class="fas fa-coins"></i> Top 5 Coin</h3>
+                        <p class="coin-strip-subtitle">Giá top coin theo market cap, tự cập nhật mỗi 5 phút.</p>
+                    </div>
+                    <span class="coin-strip-status" id="coinUpdatedAt">Đang tải...</span>
+                </div>
+                <div class="coin-grid" id="coinGrid">
+                    <div class="coin-loading">Đang tải dữ liệu giá coin...</div>
+                </div>
+            </section>
+
             <!-- Latest Articles Grid -->
             <div class="section-header" id="blog">
                 <h3 class="section-title"><i class="fas fa-pen-nib"></i> 3 Bài Viết Mới Nhất</h3>
@@ -294,7 +307,7 @@
             entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
         }, { threshold: 0.1 });
 
-        document.querySelectorAll('.hero, .signal-strip').forEach(el => {
+        document.querySelectorAll('.hero, .signal-strip, .coin-strip').forEach(el => {
             el.classList.add('fade-in');
             observer.observe(el);
         });
@@ -346,6 +359,54 @@
                 return true;
             });
         };
+
+        const formatCoinUpdatedAt = (input) => {
+            if (!input) return 'Vừa cập nhật';
+            const date = new Date(input);
+            if (Number.isNaN(date.getTime())) return 'Vừa cập nhật';
+            return `Cập nhật ${date.toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' })}`;
+        };
+
+        const renderCoins = (payload) => {
+            const grid = document.getElementById('coinGrid');
+            const updatedAt = document.getElementById('coinUpdatedAt');
+            const coins = payload?.coins || [];
+
+            updatedAt.textContent = formatCoinUpdatedAt(payload?.updatedAt);
+
+            if (!coins.length) {
+                grid.innerHTML = '<div class="coin-loading">Không thể tải giá coin lúc này.</div>';
+                return;
+            }
+
+            grid.innerHTML = coins.map((coin) => {
+                const positive = (coin.change24h || 0) >= 0;
+                return `
+                    <article class="coin-card">
+                        <div class="coin-card-head">
+                            <span class="coin-rank">#${coin.rank}</span>
+                            <span class="coin-change ${positive ? 'is-up' : 'is-down'}">${coin.change24hFormatted}</span>
+                        </div>
+                        <h4>${coin.symbol}</h4>
+                        <p class="coin-name">${coin.name}</p>
+                        <div class="coin-price">${coin.priceFormatted}</div>
+                    </article>
+                `;
+            }).join('');
+        };
+
+        const loadCoins = () => {
+            fetch('/api/top-coins')
+                .then(r => r.json())
+                .then(renderCoins)
+                .catch(() => {
+                    document.getElementById('coinGrid').innerHTML = '<div class="coin-loading">Không thể tải giá coin lúc này.</div>';
+                    document.getElementById('coinUpdatedAt').textContent = 'Lỗi tải dữ liệu';
+                });
+        };
+
+        loadCoins();
+        setInterval(loadCoins, 300000);
 
         fetch('/videos-feed.json')
             .then(r => r.json())
