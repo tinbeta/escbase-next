@@ -4,686 +4,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài viết - ESC Base | Bài Viết Crypto & Blockchain</title>
-    <meta name="description" content="Tổng hợp bài viết phân tích thị trường Crypto, tin tức Blockchain, và báo cáo chuyên sâu về Web3 từ ESC Base.">
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="ESC Base">
-    <meta property="og:title" content="Bài viết - ESC Base | Bài Viết Crypto & Blockchain">
-    <meta property="og:description" content="Tổng hợp bài viết phân tích thị trường Crypto, tin tức Blockchain, và báo cáo chuyên sâu về Web3.">
-    <meta property="og:url" content="https://escbase.xyz/blog">
-    <meta property="og:image" content="https://escbase.xyz/og-default.jpg">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@escbase">
-    <meta name="twitter:title" content="Bài viết - ESC Base | Bài Viết Crypto & Blockchain">
-    <meta name="twitter:description" content="Tổng hợp bài viết phân tích thị trường Crypto, tin tức Blockchain, và báo cáo chuyên sâu về Web3.">
-    <meta name="twitter:image" content="https://escbase.xyz/og-default.jpg">
-
+    <title>Bài viết - Escbase</title>
+    <meta name="description" content="Tất cả bài viết phân tích thị trường Crypto, blockchain, AI và geopolitics trên Escbase.">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="/style.css">
-    <style>
-        /* Posts-specific styles */
-        .posts-list {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .post-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-md);
-            padding: 2rem;
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.3s cubic-bezier(0.1, 0, 0.3, 1);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .post-card:hover {
-            border-color: var(--border-hover);
-            transform: translateY(-4px);
-            background: var(--card-hover);
-            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-        }
-
-        .post-meta-top {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 1rem;
-        }
-
-        .post-date {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            font-weight: 500;
-        }
-
-        .post-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            line-height: 1.3;
-            margin-bottom: 0.75rem;
-            letter-spacing: -0.01em;
-        }
-
-        .post-excerpt {
-            color: var(--text-secondary);
-            font-size: 1rem;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-        }
-
-        .post-footer {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            margin-top: auto;
-        }
-
-        .pdf-link {
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-            color: #3b82f6;
-            font-weight: 500;
-            margin-left: auto;
-        }
-
-        .month-divider {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--text);
-            margin: 2rem 0 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid var(--border);
-            letter-spacing: -0.01em;
-        }
-
-        @media (max-width: 768px) {
-            .post-card {
-                padding: 1.25rem;
-            }
-
-            .post-title {
-                font-size: 1.25rem;
-            }
-        }
-    
-.back-to-blog-footer {
-    margin-top: 3rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--border);
-}
-
-.back-to-blog-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.6rem;
-    padding: 0.95rem 1.25rem;
-    border-radius: 14px;
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    color: var(--text);
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.2s ease;
-}
-
-.back-to-blog-btn:hover {
-    background: var(--card-hover);
-    border-color: var(--border-hover);
-}
-
-</style>
 </head>
 
 <body>
     <div class="app-container">
-        <!-- Mobile Header -->
-        <header class="mobile-header">
-            <a href="/" class="mobile-logo">
-                <img src="/esclogo.png" alt="ESC Base - Trang phân tích Crypto hàng ngày">
-                <span>ESC Base</span>
-            </a>
-            <button class="hamburger" onclick="toggleMobileNav()" aria-label="Mở menu điều hướng">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </header>
+        <button class="mobile-menu-toggle" onclick="toggleMobileNav()" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-        <!-- Mobile Nav Overlay -->
-        <nav class="mobile-nav" id="mobileNav">
-            <a href="/" class="nav-item" onclick="toggleMobileNav()"><i class="fas fa-home"></i> Trang chủ</a>
-            <a href="/blog" class="nav-item active" onclick="toggleMobileNav()"><i class="fas fa-newspaper"></i> Bài viết</a>
-            <a href="/videos" class="nav-item" onclick="toggleMobileNav()"><i class="fas fa-play-circle"></i> Video</a>
+        <nav class="sidebar" id="mobileNav">
+            <div class="logo-section">
+                <img src="/esclogo.png" alt="Escbase Logo" class="logo">
+                <p class="tagline">Crypto Intelligence</p>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/" class="nav-link"><i class="fas fa-home"></i> Trang chủ</a></li>
+                <li><a href="/blog" class="nav-link active"><i class="fas fa-newspaper"></i> Bài viết</a></li>
+                <li><a href="/videos" class="nav-link"><i class="fas fa-video"></i> Video</a></li>
+            </ul>
             <div class="social-links">
-                <a href="https://www.youtube.com/@ESCBase" target="_blank" class="social-btn" title="YouTube"><i class="fab fa-youtube"></i></a>
-                <a href="https://discord.gg/SMhy8RjDCf" target="_blank" class="social-btn" title="Discord"><i class="fab fa-discord"></i></a>
-                <a href="https://twitter.com/escbase" target="_blank" class="social-btn" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://t.me/escbase" target="_blank" class="social-btn" title="Telegram"><i class="fab fa-telegram"></i></a>
+                <a href="https://www.youtube.com/@ESCBase" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://x.com/escbasexyz" target="_blank" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
             </div>
         </nav>
 
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <a href="/" class="brand">
-                <img src="/esclogo.png" alt="ESC Base - Trang phân tích Crypto và Blockchain hàng ngày">
-                <div class="brand-info">
-                    <h1>ESC Base</h1>
-                    <p>Crypto Intelligence</p>
-                </div>
-            </a>
+        <main class="main-content">
+            <header class="page-header">
+                <span class="page-label">Bài viết</span>
+                <h1>Tất cả bài viết trên Escbase</h1>
+                <p>Phân tích crypto, blockchain, AI và các chuyển động đáng chú ý của thị trường theo kiểu ngắn gọn, dễ đọc.</p>
+            </header>
 
-            <p class="bio">
-                Báo cáo thị trường Crypto hàng ngày, phân tích chuyên sâu về công nghệ Blockchain, và các xu hướng mới nhất trong Web3.
-            </p>
-
-            <nav class="nav-menu">
-                <a href="/" class="nav-item"><i class="fas fa-home"></i> Trang chủ</a>
-                <a href="/blog" class="nav-item active"><i class="fas fa-newspaper"></i> Bài viết</a>
-                <a href="/videos" class="nav-item"><i class="fas fa-play-circle"></i> Video</a>
-            </nav>
-
-            <div class="social-box">
-                <h4 style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.75rem; font-weight: 600; letter-spacing: 0.05em;">Connect</h4>
-                <div class="social-links">
-                    <a href="https://www.youtube.com/@ESCBase" target="_blank" class="social-btn" title="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="https://discord.gg/SMhy8RjDCf" target="_blank" class="social-btn" title="Discord"><i class="fab fa-discord"></i></a>
-                    <a href="https://twitter.com/escbase" target="_blank" class="social-btn" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="https://t.me/escbase" target="_blank" class="social-btn" title="Telegram"><i class="fab fa-telegram"></i></a>
-                </div>
+            <div class="bento-grid" id="postsGrid">
+                <!-- Auto-generated latest posts -->
             </div>
-        </aside>
-
-        <!-- Main Content -->
-        <main class="main-content" style="max-width: 900px;">
-            <div class="page-header">
-                <h2>All Articles</h2>
-                <p>Báo cáo thị trường crypto, tin tức, và phân tích chuyên sâu</p>
-            </div>
-
-            <div class="posts-list" id="blogList">
-                <p style="color:var(--text-muted);">Đang tải...</p>
-            </div>
-
-            <div style="display:none">
-                <a href="/blog/tether-deep-dive-conglomerate" class="post-card">
-                    <div class="post-meta-top">
-                        <span class="card-tag" style="color: #f7931a; border-color: rgba(247,147,26,.2); background: rgba(247,147,26,.1);"><i class="fas fa-building"></i> Deep Dive</span>
-                        <span class="post-date">Mar 24, 2026</span>
-                    </div>
-                    <h2 class="post-title">Tether Không Phải Công Ty Stablecoin: Bên Trong "Cỗ Máy In Tiền" $10 Tỷ/Năm Đang Xây Đế Chế</h2>
-                    <p class="post-excerpt">$10B lợi nhuận, 300 nhân viên, nhiều Treasuries hơn Đức. Tether đang mua tiệm tạp hóa, nông trại, và xây AI platform — trở thành Berkshire Hathaway của crypto.</p>
-                    <div class="post-footer">
-                        <span><i class="far fa-clock"></i> 15 min read</span>
-                    </div>
-                </a>
-
-                <a href="/blog/ethereum-foundation-l1-l2-vision" class="post-card">
-                    <div class="post-meta-top">
-                        <span class="card-tag" style="color: #3b82f6; border-color: rgba(59,130,246,.2); background: rgba(59,130,246,.1);"><i class="fab fa-ethereum"></i> Ethereum</span>
-                        <span class="post-date">Mar 24, 2026</span>
-                    </div>
-                    <h2 class="post-title">Ethereum Foundation Định Nghĩa Lại L2: Không Còn Chỉ Để Scale, Mà Là Nền Tảng Cho Dịch Vụ Riêng Biệt</h2>
-                    <p class="post-excerpt">EF công bố tầm nhìn L1/L2 mới: L2 chuyển từ pure scaling sang differentiated services. Blobs chỉ 30% full — còn massive headroom. Stage 1 security là bắt buộc.</p>
-                    <div class="post-footer">
-                        <span><i class="far fa-clock"></i> 8 min read</span>
-                    </div>
-                </a>
-
-                <a href="/blog/circle-blackrock-ethb" class="post-card">
-                    <div class="post-meta-top">
-                        <span class="card-tag" style="color: #22c55e; border-color: rgba(34,197,94,.2); background: rgba(34,197,94,.1);"><i class="fas fa-landmark"></i> Institutional</span>
-                        <span class="post-date">Mar 24, 2026</span>
-                    </div>
-                    <h2 class="post-title">Circle Tăng 100%+ Trong 1 Tháng, BlackRock ETHB Hút $150M: Institutional Crypto Đã Khác</h2>
-                    <p class="post-excerpt">Cổ phiếu Circle tăng gấp đôi, BlackRock ETHB hút $150M+. Institutional money không còn quan sát — họ đang đổ tiền vào crypto infrastructure.</p>
-                    <div class="post-footer">
-                        <span><i class="far fa-clock"></i> 10 min read</span>
-                    </div>
-                </a>
-
-                <a href="/blog/ai-crypto-weekly-recap" class="post-card">
-                    <div class="post-meta-top">
-                        <span class="card-tag" style="color: #3b82f6; border-color: rgba(59,130,246,.2); background: rgba(59,130,246,.1);"><i class="fas fa-robot"></i> AI & Crypto</span>
-                        <span class="post-date">Mar 24, 2026</span>
-                    </div>
-                    <h2 class="post-title">AI Crypto Tuần Này: Siren Pump 284%, Bittensor Nhắm $2,800, Và Bài Học Về Supply Tập Trung</h2>
-                    <p class="post-excerpt">AI crypto hạ nhiệt cùng thị trường chung, nhưng Siren pump 284% với 88.5% supply tập trung gây tranh cãi. Bittensor được Jensen Huang khen ngợi.</p>
-                    <div class="post-footer">
-                        <span><i class="far fa-clock"></i> 12 min read</span>
-                    </div>
-                </a>
-
-                <a href="/blog/swift-ethereum-banks" class="post-card">
-                    <div class="post-meta-top">
-                        <span class="card-tag" style="color: #3b82f6; border-color: rgba(59,130,246,.2); background: rgba(59,130,246,.1);"><i class="fas fa-university"></i> TradFi & Blockchain</span>
-                        <span class="post-date">Mar 24, 2026</span>
-                    </div>
-                    <h2 class="post-title">SWIFT & 25+ Ngân Hàng Thanh Toán Trên Ethereum: Bước Ngoặt Hay Chỉ Là PR?</h2>
-                    <p class="post-excerpt">SWIFT xác nhận 25+ ngân hàng go live trước tháng 6, thanh toán xuyên biên giới trên Ethereum L2 (Consensys Linea). Nhưng permissioned chain có thực sự là Ethereum?</p>
-                    <div class="post-footer">
-                        <span><i class="far fa-clock"></i> 11 min read</span>
-                    </div>
-                </a>
-
-                <a href="/blog/campunance-money-laundering" class="post-card">
-                    <div class="post-meta-top">
-                        <span class="card-tag" style="color: #ef4444; border-color: rgba(239,68,68,.2); background: rgba(239,68,68,.1);"><i class="fas fa-gavel"></i> Pháp Lý & An Ninh</span>
-                        <span class="post-date">Mar 24, 2026</span>
-                    </div>
-                    <h2 class="post-title">Sàn Campunance Bị Bắt: Nhân Viên Mở Backdoor Rửa Tiền — Tiền Bạn Có Sạch Không?</h2>
-                    <p class="post-excerpt">Cảnh sát Campuchia bắt nhân viên sàn Campunance mở backdoor cho rửa tiền. Insider money laundering — rủi ro mới cho mọi user OTC/P2P.</p>
-                    <div class="post-footer">
-                        <span><i class="far fa-clock"></i> 9 min read</span>
-                    </div>
-                </a>
-
-                <a href="/blog/crypto-daily-9" class="post-card">
-                    <div class="post-meta-top">
-                        <span class="card-tag" style="color: #f7931a; border-color: rgba(247,147,26,.2); background: rgba(247,147,26,.1);"><i class="fas fa-chart-line"></i> Báo Cáo Hàng Ngày</span>
-                        <span class="post-date">Mar 23, 2026</span>
-                    </div>
-                    <h2 class="post-title">BTC $67.8K Điều Chỉnh — $400M Thanh Lý, Volume +46%, HYPE +26%</h2>
-                    <p class="post-excerpt">Smart money tích lũy khi volume tăng vọt 46% dù giá giảm. SEC-CFTC làm rõ khung pháp lý. Scaramucci dự báo BTC đỉnh mới Q4/2026. HYPE là ngôi sao sáng top 10.</p>
-                    <div class="post-footer">
-                        <span><i class="far fa-clock"></i> 10 min read</span>
-                    </div>
-                </a>
-
-                <a href="/blog/xhunt-frontrun-security" class="post-card">
-                    <div class="post-meta-top">
-                        <span class="card-tag" style="color: #ef4444; border-color: rgba(239,68,68,.2); background: rgba(239,68,68,.1);"><i class="fas fa-shield-alt"></i> Security</span>
-                        <span class="post-date">Mar 23, 2026</span>
-                    </div>
-                    <h2 class="post-title">xHunt & Frontrun Extension: "Open Source" Nhưng Theo Dõi Mọi Thứ Bạn Làm</h2>
-                    <p class="post-excerpt">Phân tích code thực tế: xHunt gửi IP, fingerprint, mọi URL về server. Wallet injection function sẵn sàng kích hoạt. "Open source" ≠ an toàn.</p>
-                    <div class="post-footer">
-                        <span><i class="far fa-clock"></i> 12 min read</span>
-                    </div>
-                </a>
-
-                <a href="/blog/zachxbt-scam-network" class="post-card">
-                    <div class="post-meta-top">
-                        <span class="card-tag" style="color: #ef4444; border-color: rgba(239,68,68,.2); background: rgba(239,68,68,.1);"><i class="fas fa-user-secret"></i> Investigation</span>
-                        <span class="post-date">Mar 23, 2026</span>
-                    </div>
-                    <h2 class="post-title">ZachXBT: Mạng Lưới 10+ Tài Khoản Giả Tung Tin Chiến Tranh, Pump & Dump Crypto</h2>
-                    <p class="post-excerpt">Coordinated network: mua account, AI fake personas, doompost chiến tranh hàng triệu views/ngày, pump & dump $ORAMAMA profit 6 figures.</p>
-                    <div class="post-footer">
-                        <span><i class="far fa-clock"></i> 10 min read</span>
-                    </div>
-                </a>
-
-                <a href="/blog/binance-mod-vn-phap-ly" class="post-card">
-                    <div class="post-meta-top">
-                        <span class="card-tag" style="color: #f7931a; border-color: rgba(247,147,26,.2); background: rgba(247,147,26,.1);"><i class="fas fa-gavel"></i> Pháp Lý & Quy Định</span>
-                        <span class="post-date">Mar 23, 2026</span>
-                    </div>
-                    <h2 class="post-title">Mod Binance Rời Nhóm Cộng Đồng Việt Nam: Tín Hiệu Gì Từ Cuộc Siết Pháp Lý?</h2>
-                    <p class="post-excerpt">Mod Binance người Việt rời hết nhóm hỗ trợ. Bộ Tài chính siết sàn nước ngoài, Bộ Công an yêu cầu định danh mod nhóm. Tài sản trên Binance có an toàn?</p>
-                    <div class="post-footer">
-                        <span><i class="far fa-clock"></i> 10 min read</span>
-                    </div>
-                </a>
-
-                <a href="/blog/a16z-agentic-commerce" class="post-card">
-                    <div class="post-meta-top">
-                        <span class="card-tag" style="color: #3b82f6; border-color: rgba(59,130,246,.2); background: rgba(59,130,246,.1);"><i class="fas fa-robot"></i> AI & Crypto</span>
-                        <span class="post-date">Mar 23, 2026</span>
-                    </div>
-                    <h2 class="post-title">Agentic Commerce: Khi AI Agents Định Hình Lại Thương Mại Số</h2>
-                    <p class="post-excerpt">Cuộc chiến AOL vs HTTP tái hiện: marketplace đóng hay protocol mở sẽ thắng trong kỷ nguyên AI agents? Phân tích chuyên sâu về stablecoins, KYA, và verification problem.</p>
-                    <div class="post-footer">
-                        <span><i class="far fa-clock"></i> 14 min read</span>
-                    </div>
-                </a>
-
-                <a href="/blog/siren-1-2b-binance" class="post-card">
-                    <div class="post-meta-top">
-                        <span class="card-tag" style="color: #22c55e; border-color: rgba(34,197,94,.2); background: rgba(34,197,94,.1);"><i class="fas fa-chart-line"></i> Market Analysis</span>
-                        <span class="post-date">Mar 23, 2026</span>
-                    </div>
-                    <h2 class="post-title">$SIREN Tăng Gấp Đôi Lên $1.2B: Binance Effect Và Bài Học Về Listing Momentum</h2>
-                    <p class="post-excerpt">Triple listing trên Binance Futures, Binance Alpha và Hashkey đưa $SIREN vượt $1.2B market cap. Phân tích cơ chế pump và bài học cho traders.</p>
-                    <div class="post-footer">
-                        <span><i class="far fa-clock"></i> 8 min read</span>
-                    </div>
-                </a>
-
-                <a href="/blog/resolv-usr-exploit" class="post-card">
-                    <div class="post-meta-top">
-                        <span class="card-tag" style="color: #ef4444; border-color: rgba(239,68,68,.2); background: rgba(239,68,68,.1);"><i class="fas fa-shield-alt"></i> DeFi Security</span>
-                        <span class="post-date">Mar 22, 2026</span>
-                    </div>
-                    <h2 class="post-title">Resolv USR Exploit: $23M Bốc Hơi Vì Một Private Key</h2>
-                    <p class="post-excerpt">Attacker biến $200K thành $23M nhờ lỗ hổng thiết kế — không phải bug code. USR depeg từ $1 xuống $0.14. Bài học đắt giá về DeFi security.</p>
-                    <div class="post-footer">
-                        <span><i class="far fa-clock"></i> 12 min read</span>
-                    </div>
-                </a>
-
-                <a href="/blog/trump-iran-48h" class="post-card">
-                    <div class="post-meta-top">
-                        <span class="card-tag" style="color: #ef4444; border-color: rgba(239,68,68,.2); background: rgba(239,68,68,.1);"><i class="fas fa-exclamation-triangle"></i> Breaking News</span>
-                        <span class="post-date">Mar 22, 2026</span>
-                    </div>
-                    <h2 class="post-title">Trump Ra Tối Hậu Thư 48h Cho Iran: "Mở Hormuz Hoặc Bị Tấn Công"</h2>
-                    <p class="post-excerpt">Nhà Trắng công bố: Iran có 48 giờ để mở Hormuz, nếu không Mỹ sẽ tấn công nhà máy điện. Phân tích 3 kịch bản và tác động đến crypto.</p>
-                    <div class="post-footer">
-                        <span><i class="far fa-clock"></i> 8 min read</span>
-                    </div>
-                </a>
-
-                <a href="/blog/crypto-events-march-2026" class="post-card">
-                    <div class="post-meta-top">
-                        <span class="card-tag" style="color: #8b5cf6; border-color: rgba(139,92,246,.2); background: rgba(139,92,246,.1);"><i class="fas fa-calendar-alt"></i> Events</span>
-                        <span class="post-date">Mar 22, 2026</span>
-                    </div>
-                    <h2 class="post-title">Sự Kiện Crypto Cuối Tháng 3/2026: TGEs, Launches & Conferences</h2>
-                    <p class="post-excerpt">Backpack TGE 23/03, BASED launch 30/03, EdgeX airdrop, MEZO vault unlock, EthCC Paris. Calendar đầy đủ cho nhà đầu tư.</p>
-                    <div class="post-footer">
-                        <span><i class="far fa-clock"></i> 9 min read</span>
-                    </div>
-                </a>
-
-                <a href="/blog/ai-research-lab-autoresearch" class="post-card">
-                    <div class="post-meta-top">
-                        <span class="card-tag" style="color: #3b82f6; border-color: rgba(59,130,246,.2); background: rgba(59,130,246,.1);"><i class="fas fa-flask"></i> AI & Tech</span>
-                        <span class="post-date">Mar 22, 2026</span>
-                    </div>
-                    <h2 class="post-title">AI Research Lab Cá Nhân 24/7: Khi Một Người Bằng Cả Phòng Nghiên Cứu</h2>
-                    <p class="post-excerpt">Autoresearch framework của Karpathy cho phép solo founders chạy phòng R&D 24/7 với chi phí gần bằng 0. Local models + multi-agent systems.</p>
-                    <div class="post-footer">
-                        <span><i class="far fa-clock"></i> 11 min read</span>
-                    </div>
-                </a>
-
-                <a href="/blog/ai-crypto-narrative" class="post-card">
-                    <div class="post-meta-top">
-                        <span class="card-tag" style="color: #10a37f; border-color: rgba(16,163,127,.2); background: rgba(16,163,127,.1);"><i class="fas fa-robot"></i> AI & Crypto</span>
-                        <span class="post-date">Mar 22, 2026</span>
-                    </div>
-                    <h2 class="post-title">AI Coins Bùng Nổ +40.9% Trong 24h — Narrative Lớn Nhất Crypto 2026?</h2>
-                    <p class="post-excerpt">AI category tăng 40.9% trong 24h với $AKT, $PIPPIN, $ARC dẫn đầu. Phân tích DePIN, AI agents on-chain, và tại sao AI + Crypto là narrative chính 2026.</p>
-                    <div class="post-footer">
-                        <span><i class="far fa-clock"></i> 12 min read</span>
-                    </div>
-                </a>
-
-                <a href="/blog/hormuz-geopolitics" class="post-card">
-                    <div class="post-meta-top">
-                        <span class="card-tag" style="color: #f7931a; border-color: rgba(247,147,26,.2); background: rgba(247,147,26,.1);"><i class="fas fa-globe"></i> Geopolitics & Crypto</span>
-                        <span class="post-date">Mar 22, 2026</span>
-                    </div>
-                    <h2 class="post-title">Eo Biển Hormuz: 34km Quyết Định Toàn Bộ Thị Trường Tài Chính</h2>
-                    <p class="post-excerpt">Phân tích chuyên sâu: tại sao eo biển Hormuz 34km ảnh hưởng trực tiếp đến BTC, AI, năng lượng toàn cầu. Chuỗi domino từ dầu mỏ đến portfolio crypto của bạn.</p>
-                    <div class="post-footer">
-                        <span><i class="far fa-clock"></i> 10 min read</span>
-                    </div>
-                </a>
-
-                <a href="/blog/crypto-daily-8" class="post-card">
-                    <div class="post-meta-top">
-                        <span class="card-tag" style="color: #ef4444; border-color: rgba(239,68,68,.2); background: rgba(239,68,68,.1);"><i class="fas fa-exclamation-triangle"></i> Thị Trường Đỏ Lửa</span>
-                        <span class="post-date">Mar 22, 2026</span>
-                    </div>
-                    <h2 class="post-title">BTC Rơi Về $69K — Extreme Fear, $232M Liquidations</h2>
-                    <p class="post-excerpt">Bitcoin giảm từ $70K về ~$69K do căng thẳng Trump-Iran. Fear Index chạm 10 (Extreme Fear). $232M long positions bị thanh lý. Whales vẫn tích lũy 270,000 BTC.</p>
-                    <div class="post-footer">
-                        <span><i class="far fa-clock"></i> 8 min read</span>
-                    </div>
-                </a>
-
-                <a href="/blog/crypto-daily-7" class="post-card">
-                    <div class="post-meta-top">
-                        <span class="card-tag highlight"><i class="fas fa-chart-line"></i> Market Analysis</span>
-                        <span class="post-date">Mar 21, 2026</span>
-                    </div>
-                    <h2 class="post-title">BTC $70K, ETH $2.1K, Ledger Chuẩn Bị IPO, Kalshi $22 Tỷ Đô</h2>
-                    <p class="post-excerpt">Bitcoin giữ $70K, Ethereum $2.1K. Ledger — nhà sản xuất hardware wallet hàng đầu — chuẩn bị IPO. Kalshi đạt volume $22 tỷ đô.</p>
-                    <div class="post-footer">
-                        <span><i class="far fa-clock"></i> 7 min read</span>
-                    </div>
-                </a>
-
-                <a href="/blog/crypto-daily-6" class="post-card">
-                    <div class="post-meta-top">
-                        <span class="card-tag highlight"><i class="fas fa-chart-line"></i> Market Analysis</span>
-                        <span class="post-date">Mar 20, 2026</span>
-                    </div>
-                    <h2 class="post-title">SEC Công Nhận 16 Coin, BTC Giữ $70K, Kỷ Nguyên AI Agents</h2>
-                    <p class="post-excerpt">SEC chính thức công nhận 16 loại coin. Bitcoin giữ vững mốc $70K trong bối cảnh thị trường biến động. Kỷ nguyên AI Agents bùng nổ trong crypto.</p>
-                    <div class="post-footer">
-                        <span><i class="far fa-clock"></i> 8 min read</span>
-                    </div>
-                </a>
-
-                <a href="/blog/crypto-daily-5" class="post-card">
-                    <div class="post-meta-top">
-                        <span class="card-tag highlight"><i class="fas fa-chart-line"></i> Market Analysis</span>
-                        <span class="post-date">Mar 16, 2026</span>
-                    </div>
-                    <h2 class="post-title">BTC Phá $72K, SEC & CFTC Bắt Tay — Kỷ Nguyên Mới?</h2>
-                    <p class="post-excerpt">Bitcoin phá vỡ mốc $72,000. SEC và CFTC hợp tác quản lý crypto — bước ngoặt pháp lý lớn cho ngành. Liệu đây là khởi đầu của kỷ nguyên mới?</p>
-                    <div class="post-footer">
-                        <span><i class="far fa-clock"></i> 7 min read</span>
-                    </div>
-                </a>
-
-                <a href="/blog/crypto-daily-4" class="post-card">
-                    <div class="post-meta-top">
-                        <span class="card-tag highlight"><i class="fas fa-chart-line"></i> Market Analysis</span>
-                        <span class="post-date">Mar 14, 2026</span>
-                    </div>
-                    <h2 class="post-title">Bitcoin Quay Xe Sau Khi Chạm $74K, Ethereum Công Bố Bước Ngoặt Lịch Sử</h2>
-                    <p class="post-excerpt">BTC quay đầu giảm sau khi test mốc $74K. Ethereum công bố bước ngoặt lịch sử với bản upgrade mới, mở ra chương mới cho hệ sinh thái.</p>
-                    <div class="post-footer">
-                        <span><i class="far fa-clock"></i> 8 min read</span>
-                    </div>
-                </a>
-
-                <a href="/blog/crypto-daily-3" class="post-card">
-                    <div class="post-meta-top">
-                        <span class="card-tag highlight"><i class="fas fa-chart-line"></i> Market Analysis</span>
-                        <span class="post-date">Mar 13, 2026</span>
-                    </div>
-                    <h2 class="post-title">Bitcoin Vượt $71K, BlackRock Tung Staked Ether ETF</h2>
-                    <p class="post-excerpt">Bitcoin vượt $71K. BlackRock ra mắt Staked Ether ETF (ETHB) — thu hút dòng vốn lớn từ Phố Wall. Pi Network tăng 30% sau tin Kraken. Bài học về slippage $50M trên Aave.</p>
-                    <div class="post-footer">
-                        <span><i class="far fa-clock"></i> 7 min read</span>
-                    </div>
-                </a>
-
-                <a href="/blog/gpt5-prompt-guide" class="post-card">
-                    <div class="post-meta-top">
-                        <span class="card-tag" style="background:#10a37f; color:#fff;"><i class="fas fa-robot"></i> AI</span>
-                        <span class="post-date">Mar 7, 2026</span>
-                    </div>
-                    <h2 class="post-title">GPT-5.4 Prompt Guide: Cách Viết Prompt Hiệu Quả</h2>
-                    <p class="post-excerpt">Hướng dẫn viết prompt cho GPT-5.4 từ OpenAI. Output contracts, follow-through policies, tool use persistence, và completeness checks - tất cả những gì bạn cần biết.</p>
-                    <div class="post-footer">
-                        <span><i class="far fa-clock"></i> 10 min read</span>
-                    </div>
-                </a>
-
-                <a href="/blog/crypto-daily-2" class="post-card">
-                    <div class="post-meta-top">
-                        <span class="card-tag highlight"><i class="fas fa-chart-line"></i> Market Analysis</span>
-                        <span class="post-date">Mar 7, 2026</span>
-                    </div>
-                    <h2 class="post-title">Báo Cáo Crypto 07/03: BTC Mất 110 Tỷ Đô - Thị Trường Đỏ Lửa</h2>
-                    <p class="post-excerpt">Bitcoin giảm mạnh từ $74,200 về $68,100 sau tin Trump-Iran và BlackRock. Phân tích kỹ thuật và khuyến nghị cho traders và holders.</p>
-                    <div class="post-footer">
-                        <span><i class="far fa-clock"></i> 8 min read</span>
-                        <span class="pdf-link"><i class="far fa-file-pdf"></i> Download PDF</span>
-                    </div>
-                </a>
-
-                <a href="/blog/crypto-daily" class="post-card">
-                    <div class="post-meta-top">
-                        <span class="card-tag highlight"><i class="fas fa-chart-line"></i> Market Analysis</span>
-                        <span class="post-date">Mar 5, 2026</span>
-                    </div>
-                    <h2 class="post-title">BTC Phá $72K — Rally Mạnh Khi Lo Ngại Chiến Tranh Giảm</h2>
-                    <p class="post-excerpt">Bitcoin phá vỡ mốc $72,000 khi thị trường hồi phục mạnh mẽ sau khi lo ngại chiến tranh giảm bớt. Dòng tiền tổ chức tiếp tục đổ vào, ETF inflow đạt kỷ lục mới trong tuần...</p>
-                    <div class="post-footer">
-                        <span><i class="far fa-clock"></i> 7 min read</span>
-                        <span class="pdf-link"><i class="far fa-file-pdf"></i> Download PDF</span>
-                    </div>
-                </a>
-
-                <a href="/blog/vitalik-sanctuary-tech" class="post-card">
-                    <div class="post-meta-top">
-                        <span class="card-tag"><i class="fab fa-ethereum"></i> Ethereum</span>
-                        <span class="post-date">Mar 4, 2026</span>
-                    </div>
-                    <h2 class="post-title">Vitalik Buterin - Sanctuary Technologies</h2>
-                    <p class="post-excerpt">Vitalik Buterin giới thiệu Sanctuary Technologies — dự án kết hợp AI và blockchain nhằm tạo ra không gian kỹ thuật số an toàn, phi tập trung cho dữ liệu cá nhân...</p>
-                    <div class="post-footer">
-                        <span><i class="far fa-clock"></i> 8 min read</span>
-                        <span class="pdf-link"><i class="far fa-file-pdf"></i> Download PDF</span>
-                    </div>
-                </a>
-
-                <a href="/reports/report_2026_03_02" class="post-card">
-                    <div class="post-meta-top">
-                        <span class="card-tag">Market Update</span>
-                        <span class="post-date">Mar 2, 2026</span>
-                    </div>
-                    <h2 class="post-title">BTC Test $66K - MicroStrategy Mua Thêm 15,000 BTC</h2>
-                    <p class="post-excerpt">Bitcoin tiếp tục đà phục hồi và test mốc $66,000. MicroStrategy công bố mua thêm 15,000 BTC với giá trung bình $65,500, nâng tổng nắm giữ lên 268,000 BTC.</p>
-                    <div class="post-footer">
-                        <span><i class="far fa-clock"></i> 6 min read</span>
-                        <span class="pdf-link"><i class="far fa-file-pdf"></i> Download PDF</span>
-                    </div>
-                </a>
-
-                <div class="month-divider">February 2026</div>
-
-                <a href="/reports/report_2026_02_28" class="post-card">
-                    <div class="post-meta-top">
-                        <span class="card-tag"><i class="fas fa-robot"></i> AI & Mining</span>
-                        <span class="post-date">Feb 28, 2026</span>
-                    </div>
-                    <h2 class="post-title">AI Thâu Tóm Đào Bitcoin - ZachXBT Vạch Trần Nội Gián</h2>
-                    <p class="post-excerpt">OpenAI công bố kế hoạch chi $110B thâu tóm công ty đào Bitcoin. ZachXBT tiếp dẫn expose mạng lưới nội gián trong các sàn giao dịch lớn.</p>
-                    <div class="post-footer">
-                        <span><i class="far fa-clock"></i> 8 min read</span>
-                        <span class="pdf-link"><i class="far fa-file-pdf"></i> Download PDF</span>
-                    </div>
-                </a>
-
-                <a href="/reports/report_2026_02_27" class="post-card">
-                    <div class="post-meta-top">
-                        <span class="card-tag">Altcoin Season</span>
-                        <span class="post-date">Feb 27, 2026</span>
-                    </div>
-                    <h2 class="post-title">Thị Trường Phục Hồi - Các Altcoin Bứt Phá Mạnh</h2>
-                    <p class="post-excerpt">Bitcoin phục hồi về vùng $64,000 sau đợt điều chỉnh. SOL, AVAX, và các altcoin layer 1 dẫn dắt đà tăng. Dòng tiền ETF Bitcoin quay lại dương.</p>
-                    <div class="post-footer">
-                        <span><i class="far fa-clock"></i> 6 min read</span>
-                        <span class="pdf-link"><i class="far fa-file-pdf"></i> Download PDF</span>
-                    </div>
-                </a>
-
-                <div class="month-divider">Deep Dive Analysis Series</div>
-
-                <a href="/blog/bitcoin" class="post-card">
-                    <div class="post-meta-top">
-                        <span class="card-tag" style="background:#f59e0b; color:#18181b;"><i class="fab fa-bitcoin"></i> Bitcoin</span>
-                        <span class="post-date">Analysis Series</span>
-                    </div>
-                    <h2 class="post-title">Bitcoin Deep Analysis - Tiềm Năng Tăng Trưởng 2026</h2>
-                    <p class="post-excerpt">Phân tích toàn diện về Bitcoin: halving cycle, dòng tiền tổ chức, ETF impact, và các kịch bản giá cho năm 2026.</p>
-                    <div class="post-footer">
-                        <span><i class="far fa-clock"></i> 12 min read</span>
-                    </div>
-                </a>
-
-                <a href="/blog/ethereum" class="post-card">
-                    <div class="post-meta-top">
-                        <span class="card-tag" style="background:#6366f1; color:#fff;"><i class="fab fa-ethereum"></i> Ethereum</span>
-                        <span class="post-date">Analysis Series</span>
-                    </div>
-                    <h2 class="post-title">Ethereum 2025 Roadmap & Tương Lai</h2>
-                    <p class="post-excerpt">Tổng quan về Ethereum roadmap: Pectra upgrade, L2 scaling, và tầm nhìn của Vitalik Buterin.</p>
-                    <div class="post-footer">
-                        <span><i class="far fa-clock"></i> 10 min read</span>
-                    </div>
-                </a>
-            </div>
-
-            <footer class="site-footer">
-                <p>&copy; 2026 ESC Base. Crypto Góc Nhìn Mỗi Ngày & Analysis.</p>
-            </footer>
         </main>
     </div>
 
     <script>
         function toggleMobileNav() {
-            const nav = document.getElementById('mobileNav');
-            const hamburger = document.querySelector('.hamburger');
-            nav.classList.toggle('open');
-            hamburger.classList.toggle('active');
-            document.body.style.overflow = nav.classList.contains('open') ? 'hidden' : '';
+            document.getElementById('mobileNav').classList.toggle('open');
         }
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-        }, { threshold: 0.1 });
-
-        // Auto-load posts from blog.json
         fetch('/blog.json')
             .then(r => r.json())
             .then(posts => {
-                const list = document.getElementById('blogList');
-                list.innerHTML = '';
-                let currentMonth = '';
-
-                posts.forEach(p => {
-                    // Month divider
-                    const month = p.date.replace(/\d+,/, '').trim();
-                    if (month !== currentMonth) {
-                        currentMonth = month;
-                        list.innerHTML += `<div class="month-divider fade-in">${currentMonth}</div>`;
-                    }
-
-                    const tagStyle = p.tag === 'AI'
-                        ? `background:${p.tagColor}; color:#fff;`
-                        : `color: ${p.tagColor}; border-color: ${p.tagColor}33; background: ${p.tagColor}1a;`;
-
-                    list.innerHTML += `
-                        <a href="${p.url}" class="post-card fade-in">
-                            <div class="post-meta-top">
-                                <span class="card-tag" style="${tagStyle}"><i class="${p.tagIcon}"></i> ${p.tag}</span>
-                                <span class="post-date">${p.date}</span>
-                            </div>
-                            <h2 class="post-title">${p.title}</h2>
-                            <p class="post-excerpt">${p.excerpt}</p>
-                            <div class="post-footer">
-                                <span><i class="far fa-clock"></i> ${p.readTime || '8 min read'}</span>
-                            </div>
-                        </a>`;
-                });
-
-                list.querySelectorAll('.post-card, .month-divider').forEach(el => observer.observe(el));
+                const grid = document.getElementById('postsGrid');
+                grid.innerHTML = posts.map(post => `
+                    <a href="${post.url}" class="bento-item col-4">
+                        <div class="card-meta">
+                            <span class="card-tag" style="color:${post.tagColor};border-color:${post.tagColor}33;background:${post.tagColor}1a;">
+                                <i class="${post.tagIcon || 'fas fa-newspaper'}"></i> ${post.tag}
+                            </span>
+                            <span class="card-date">${post.date}</span>
+                        </div>
+                        <h3 class="card-title">${post.title}</h3>
+                        <p class="card-excerpt">${post.excerpt}</p>
+                        <div class="card-footer">
+                            <span class="read-time"><i class="far fa-clock"></i> ${post.readTime}</span>
+                        </div>
+                    </a>
+                `).join('');
             })
-            .catch(() => {
-                document.getElementById('blogList').innerHTML = '<p style="color:var(--text-muted);">Không thể tải bài viết.</p>';
+            .catch(err => {
+                console.error('Error loading posts:', err);
+                document.getElementById('postsGrid').innerHTML = '<p style="color: var(--text-muted);">Không thể tải bài viết.</p>';
             });
     </script>
 </body>
