@@ -62,10 +62,10 @@ export default function App() {
         <div className="intro-grid">
           <div className="intro-main">
             <div className="eyebrow">Crypto media • Phân tích • Tiếng Việt</div>
-            <h1>ESC Base</h1>
+            <h1>Escbase</h1>
             <h2>Trang tin crypto dành cho người Việt — rõ, sâu, và đủ sắc để đọc mỗi ngày</h2>
             <p className="lead">
-              Mình định hướng bản mới của ESC Base theo kiểu landing page rất mạnh về thương hiệu,
+              Mình định hướng bản mới của Escbase theo kiểu landing page rất mạnh về thương hiệu,
               giống vibe của kitze.io: gọn, sang, nhiều block nội dung rõ ràng, nhưng tối ưu cho một
               media brand Việt Nam về crypto, blockchain, AI và bối cảnh thị trường.
             </p>
@@ -95,7 +95,7 @@ export default function App() {
         <div className="section-heading">
           <div>
             <div className="eyebrow">Mạng xã hội</div>
-            <h2>Kết nối với ESC Base</h2>
+            <h2>Kết nối với Escbase</h2>
           </div>
         </div>
         <div className="social-grid">
