@@ -38,18 +38,24 @@
 
   <g>
     <rect x="140" y="170" width="170" height="170" rx="38" fill="#111827" stroke="#27272A"/>
-    <image href="/esclogo.png" x="158" y="188" width="134" height="134" preserveAspectRatio="xMidYMid meet"/>
+    <g transform="translate(174 204)">
+      <path d="M26 18L76 18L116 58L66 58Z" fill="#EF4444"/>
+      <path d="M66 58L116 58L76 98L26 98Z" fill="#DC2626"/>
+      <path d="M18 26L58 66L18 106L0 88L22 66L0 44Z" fill="#F87171"/>
+      <path d="M124 26L142 44L120 66L142 88L124 106L84 66Z" fill="#B91C1C"/>
+      <rect x="58" y="0" width="26" height="116" rx="13" fill="#991B1B"/>
+    </g>
   </g>
 
   <text x="140" y="440" fill="#F8FAFC" font-size="110" font-family="Inter, Arial, sans-serif" font-weight="800" letter-spacing="-3">Escbase</text>
   <text x="145" y="515" fill="#CBD5E1" font-size="40" font-family="Inter, Arial, sans-serif" font-weight="500">Phân tích Crypto &amp; Blockchain hằng ngày</text>
 
   <g>
-    <rect x="145" y="580" width="210" height="52" rx="26" fill="#111827" stroke="#334155"/>
-    <text x="185" y="614" fill="#93C5FD" font-size="24" font-family="Inter, Arial, sans-serif" font-weight="700">Crypto Intelligence</text>
+    <rect x="145" y="580" width="270" height="52" rx="26" fill="#111827" stroke="#334155"/>
+    <text x="180" y="614" fill="#93C5FD" font-size="24" font-family="Inter, Arial, sans-serif" font-weight="700">Crypto Intelligence</text>
 
-    <rect x="372" y="580" width="175" height="52" rx="26" fill="#111827" stroke="#334155"/>
-    <text x="415" y="614" fill="#FCD34D" font-size="24" font-family="Inter, Arial, sans-serif" font-weight="700">Tin tức mỗi ngày</text>
+    <rect x="432" y="580" width="215" height="52" rx="26" fill="#111827" stroke="#334155"/>
+    <text x="468" y="614" fill="#FCD34D" font-size="24" font-family="Inter, Arial, sans-serif" font-weight="700">Tin tức mỗi ngày</text>
   </g>
 
   <text x="145" y="710" fill="#94A3B8" font-size="28" font-family="Inter, Arial, sans-serif" font-weight="500">escbase.xyz</text>
