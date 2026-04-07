@@ -1,5 +1,16 @@
 [
   {
+    "url": "/blog/openclaw-dreaming-la-gi",
+    "title": "Dreaming Trong OpenClaw Là Gì? Cách AI Tự Nghĩ Lại Công Việc Khi Bạn Không Nhắn",
+    "excerpt": "Dreaming là chế độ thử nghiệm của OpenClaw cho phép assistant tự chạy một lượt suy nghĩ nền khi hệ thống rảnh, nhằm rà việc đang dang dở và chuẩn bị bước tiếp theo. Đây không phải AI tự do hành động, mà là một lớp ngẫm lại có kiểm soát hơn.",
+    "date": "Apr 07, 2026",
+    "tag": "AI & OpenClaw",
+    "tagIcon": "fas fa-moon",
+    "tagColor": "#60a5fa",
+    "readTime": "4 min read",
+    "featured": true
+  },
+  {
     "url": "/blog/gemma4-ondevice-iphone",
     "title": "Gemma 4 Chạy Trực Tiếp Trên iPhone: Khi On-Device AI Bắt Đầu Ăn Vào Lãnh Địa Cloud",
     "excerpt": "Gemma 4 E2B đang chạy trực tiếp trên iPhone với tốc độ khoảng 40 token/giây nhờ MLX. Đây không chỉ là một demo đẹp mắt, mà là tín hiệu cho thấy on-device AI đang tiến dần từ vùng thử nghiệm sang lớp hạ tầng sản phẩm thật.",

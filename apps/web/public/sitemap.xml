@@ -229,4 +229,10 @@
     <loc>https://escbase.xyz/tos/</loc>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://escbase.xyz/blog/openclaw-dreaming-la-gi</loc>
+    <lastmod>2026-04-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
