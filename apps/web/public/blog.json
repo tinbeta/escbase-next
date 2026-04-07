@@ -1,5 +1,16 @@
 [
   {
+    "url": "/blog/polkadot-acurast-edge-compute",
+    "title": "Acurast Trên Polkadot: Khi Điện Thoại Rảnh Bắt Đầu Đòi Cướp Miếng Bánh Cloud",
+    "excerpt": "Polkadot đang đẩy Acurast như một lựa chọn compute phi tập trung: biến điện thoại nhàn rỗi thành hạ tầng có thể xác minh. Ý tưởng nghe rất ngầu, nhưng liệu đây là mầm compute mới hay chỉ là narrative đẹp để chọc vào nỗi sợ hyperscaler?",
+    "date": "Apr 07, 2026",
+    "tag": "Compute, Polkadot & Edge",
+    "tagIcon": "fas fa-microchip",
+    "tagColor": "#3b82f6",
+    "readTime": "9 min read",
+    "featured": false
+  },
+  {
     "url": "/blog/openclaw-dreaming-la-gi",
     "title": "Dreaming Trong OpenClaw Là Gì? Cách AI Tự Nghĩ Lại Công Việc Khi Bạn Không Nhắn",
     "excerpt": "Dreaming là chế độ thử nghiệm của OpenClaw cho phép assistant tự chạy một lượt suy nghĩ nền khi hệ thống rảnh, nhằm rà việc đang dang dở và chuẩn bị bước tiếp theo. Đây không phải AI tự do hành động, mà là một lớp ngẫm lại có kiểm soát hơn.",
