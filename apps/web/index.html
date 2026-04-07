@@ -232,21 +232,18 @@
             </section>
 
             <section class="coin-strip fade-in" aria-label="Top 5 coin prices">
-                <div class="section-header coin-strip-header">
-                    <div>
-                        <h3 class="section-title"><i class="fas fa-coins"></i> Top 5 Coin</h3>
-                        <p class="coin-strip-subtitle">BTC, ETH, SOL, BNB, XRP — tự cập nhật mỗi 5 phút.</p>
-                    </div>
-                    <div class="coin-strip-actions">
+                <div class="coin-strip-bar">
+                    <div class="coin-strip-intro">
+                        <span class="coin-strip-label"><i class="fas fa-coins"></i> Top 5</span>
                         <div class="coin-currency-toggle" id="coinCurrencyToggle">
                             <button type="button" class="coin-toggle-btn active" data-currency="USD">USD</button>
                             <button type="button" class="coin-toggle-btn" data-currency="VND">VND</button>
                         </div>
-                        <span class="coin-strip-status" id="coinUpdatedAt">Đang tải...</span>
                     </div>
-                </div>
-                <div class="coin-grid" id="coinGrid">
-                    <div class="coin-loading">Đang tải dữ liệu giá coin...</div>
+                    <div class="coin-grid" id="coinGrid">
+                        <div class="coin-loading">Đang tải dữ liệu giá coin...</div>
+                    </div>
+                    <span class="coin-strip-status" id="coinUpdatedAt">Đang tải...</span>
                 </div>
             </section>
 
@@ -397,13 +394,11 @@
                 const positive = (coin.change24h || 0) >= 0;
                 return `
                     <article class="coin-card">
-                        <div class="coin-card-head">
-                            <span class="coin-rank">#${coin.rank || '—'}</span>
-                            <span class="coin-change ${positive ? 'is-up' : 'is-down'}">${coin.change24hFormatted}</span>
+                        <div class="coin-main">
+                            <span class="coin-symbol">${coin.symbol}</span>
+                            <span class="coin-price">${coin.priceFormatted}</span>
                         </div>
-                        <h4>${coin.symbol}</h4>
-                        <p class="coin-name">${coin.name}</p>
-                        <div class="coin-price">${coin.priceFormatted}</div>
+                        <span class="coin-change ${positive ? 'is-up' : 'is-down'}">${coin.change24hFormatted}</span>
                     </article>
                 `;
             }).join('');
