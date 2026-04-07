@@ -420,13 +420,6 @@ body {
     min-width: 0;
 }
 
-.coin-strip-intro {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    flex-shrink: 0;
-}
-
 .coin-strip-label {
     display: inline-flex;
     align-items: center;
@@ -434,39 +427,6 @@ body {
     color: var(--text);
     font-size: 0.85rem;
     font-weight: 800;
-    white-space: nowrap;
-}
-
-.coin-currency-toggle {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.25rem;
-    padding: 0.2rem;
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.02);
-}
-
-.coin-toggle-btn {
-    border: none;
-    background: transparent;
-    color: var(--text-secondary);
-    padding: 0.3rem 0.65rem;
-    border-radius: 999px;
-    font-size: 0.76rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.coin-toggle-btn.active {
-    background: var(--text);
-    color: var(--bg);
-}
-
-.coin-strip-status {
-    color: var(--text-muted);
-    font-size: 0.8rem;
     white-space: nowrap;
     flex-shrink: 0;
 }
@@ -495,24 +455,39 @@ body {
 .coin-card {
     display: inline-flex;
     align-items: center;
-    gap: 0.6rem;
+    gap: 0.55rem;
     flex-shrink: 0;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid var(--border);
     border-radius: 999px;
-    padding: 0.45rem 0.8rem;
+    padding: 0.42rem 0.78rem;
+}
+
+.coin-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.78rem;
+    font-weight: 900;
+    color: #09090b;
+    background: var(--coin-color, #fafafa);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
 .coin-main {
     display: inline-flex;
     align-items: baseline;
-    gap: 0.45rem;
+    gap: 0.42rem;
 }
 
 .coin-symbol {
     font-size: 0.82rem;
     font-weight: 800;
     letter-spacing: 0.01em;
+    color: var(--text);
 }
 
 .coin-change {
@@ -837,12 +812,11 @@ body {
     }
 
     .coin-strip-bar {
-        flex-wrap: wrap;
+        gap: 0.7rem;
     }
 
     .coin-grid {
         width: 100%;
-        order: 3;
         mask-image: none;
         -webkit-mask-image: none;
     }
@@ -898,45 +872,43 @@ body {
 
     .coin-strip {
         margin: -0.1rem 0 2rem;
-        padding: 0.75rem 0.8rem;
+        padding: 0.68rem 0.78rem;
         border-radius: 22px;
     }
 
     .coin-strip-bar {
-        gap: 0.65rem;
+        gap: 0.55rem;
     }
 
-    .coin-strip-intro {
-        width: 100%;
-        justify-content: space-between;
-        gap: 0.6rem;
-    }
-
-    .coin-strip-status {
-        order: 2;
-        font-size: 0.74rem;
+    .coin-strip-label {
+        font-size: 0.78rem;
     }
 
     .coin-grid {
         width: 100%;
-        order: 3;
         padding-bottom: 0.1rem;
     }
 
     .coin-track {
         animation-duration: 16s;
-        gap: 0.5rem;
+        gap: 0.45rem;
     }
 
     .coin-card {
-        padding: 0.38rem 0.65rem;
-        gap: 0.5rem;
+        padding: 0.34rem 0.58rem;
+        gap: 0.42rem;
+    }
+
+    .coin-icon {
+        width: 1.05rem;
+        height: 1.05rem;
+        font-size: 0.68rem;
     }
 
     .coin-symbol,
     .coin-price,
     .coin-change {
-        font-size: 0.74rem;
+        font-size: 0.72rem;
     }
 
     .signal-card {
