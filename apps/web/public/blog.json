@@ -1,5 +1,16 @@
 [
   {
+    "url": "/blog/near-confidential-private-trading",
+    "title": "NEAR Confidential Mode: Private Trading Nghe Rất Đã, Nhưng Liệu Có Giải Được Bài Toán Thanh Khoản?",
+    "excerpt": "NEAR vừa đẩy Confidential Mode cho private trading: che thông tin lệnh để giảm lộ chiến lược và bớt đất diễn cho đám soi orderflow. Ý tưởng khá bén, nhưng privacy trong trading chưa bao giờ là bữa ăn miễn phí.",
+    "date": "Apr 07, 2026",
+    "tag": "Privacy, Trading & NEAR",
+    "tagIcon": "fas fa-user-secret",
+    "tagColor": "#22c55e",
+    "readTime": "8 min read",
+    "featured": false
+  },
+  {
     "url": "/blog/polkadot-acurast-edge-compute",
     "title": "Acurast Trên Polkadot: Khi Điện Thoại Rảnh Bắt Đầu Đòi Cướp Miếng Bánh Cloud",
     "excerpt": "Polkadot đang đẩy Acurast như một lựa chọn compute phi tập trung: biến điện thoại nhàn rỗi thành hạ tầng có thể xác minh. Ý tưởng nghe rất ngầu, nhưng liệu đây là mầm compute mới hay chỉ là narrative đẹp để chọc vào nỗi sợ hyperscaler?",
