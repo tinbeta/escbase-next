@@ -255,6 +255,28 @@
             margin-bottom: 0.8rem;
         }
 
+        .x-meta-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.75rem;
+            margin: 0.55rem 0 0.9rem;
+            flex-wrap: wrap;
+        }
+
+        .char-counter {
+            font-size: 0.84rem;
+            color: var(--text-muted);
+            padding: 0.4rem 0.7rem;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            background: #101014;
+        }
+
+        .char-counter.ok { color: #4ade80; border-color: rgba(74,222,128,0.3); }
+        .char-counter.warn { color: #fbbf24; border-color: rgba(251,191,36,0.3); }
+        .char-counter.err { color: #f87171; border-color: rgba(248,113,113,0.3); }
+
         .status {
             margin-top: 1rem;
             font-size: 0.92rem;
@@ -427,6 +449,10 @@
                         <span class="pill">ngắn hơn • có chất viral</span>
                     </div>
                     <small>Hook nhanh, gãy gọn, dễ đăng ngay. Vẫn có tí phản biện cho đúng chất.</small>
+                    <div class="x-meta-row">
+                        <span class="pill">ưu tiên dưới ~280 ký tự nếu muốn gọn</span>
+                        <span class="char-counter" id="xCharCounter">0 ký tự</span>
+                    </div>
                     <textarea id="xOutput" placeholder="Draft cho X sẽ hiện ở đây..."></textarea>
                     <div class="btn-row">
                         <button class="btn btn-blue" data-copy-target="xOutput"><i class="fas fa-copy"></i> Copy bản X</button>
@@ -487,6 +513,7 @@
             metaExcerpt: document.getElementById('metaExcerpt'),
             metaLink: document.getElementById('metaLink'),
             xOutput: document.getElementById('xOutput'),
+            xCharCounter: document.getElementById('xCharCounter'),
             xLinkOutput: document.getElementById('xLinkOutput'),
             fbOutput: document.getElementById('fbOutput'),
             fbLinkOutput: document.getElementById('fbLinkOutput'),
@@ -520,6 +547,22 @@
             toastTimer = setTimeout(() => {
                 refs.copyToast.classList.remove('show');
             }, 1700);
+        }
+
+        function updateXCounter() {
+            const value = refs.xOutput.value || '';
+            const count = value.length;
+            let cls = 'ok';
+            let note = `${count} ký tự`;
+            if (count > 280) {
+                cls = 'err';
+                note = `${count} ký tự • hơi dài cho 1 post X`;
+            } else if (count > 240) {
+                cls = 'warn';
+                note = `${count} ký tự • sát trần rồi`;
+            }
+            refs.xCharCounter.className = `char-counter ${cls}`;
+            refs.xCharCounter.textContent = note;
         }
 
         async function checkStoredUnlock() {
@@ -677,6 +720,7 @@
                 const context = await fetchArticleContext(post);
                 refs.xOutput.value = buildXDraft(post, context);
                 refs.fbOutput.value = buildFacebookDraft(post, context);
+                updateXCounter();
                 const commentLink = `Đọc bản đầy đủ tại đây:\n${SITE_BASE}${post.url}/`;
                 refs.xLinkOutput.value = commentLink;
                 refs.fbLinkOutput.value = commentLink;
@@ -686,6 +730,7 @@
                 console.error(error);
                 refs.xOutput.value = '';
                 refs.fbOutput.value = '';
+                updateXCounter();
                 refs.xLinkOutput.value = '';
                 refs.fbLinkOutput.value = '';
                 setStatus('Kéo nội dung bài lỗi rồi. Có thể đường dẫn bài chưa build xong.', 'err');
@@ -724,6 +769,8 @@
             });
         });
 
+        refs.xOutput.addEventListener('input', updateXCounter);
+        updateXCounter();
         checkStoredUnlock();
     </script>
 </body>
