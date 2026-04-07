@@ -597,6 +597,37 @@ body {
     font-size: 0.9rem;
 }
 
+.site-footer .footer-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    align-items: center;
+}
+
+.site-footer .footer-note {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.site-footer .footer-socials {
+    justify-content: center;
+    margin-top: 1rem;
+    padding-top: 0;
+}
+
+.featured-home-card {
+    background: linear-gradient(180deg, rgba(247, 147, 26, 0.07), rgba(24, 24, 27, 1));
+}
+
+.featured-home-card .card-title {
+    font-size: 1.35rem;
+    line-height: 1.35;
+}
+
+.featured-home-card .card-excerpt {
+    font-size: 0.98rem;
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
     .col-8, .col-6, .col-4 {

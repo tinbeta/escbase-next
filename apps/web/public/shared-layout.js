@@ -1,5 +1,6 @@
 (function () {
   const page = document.body.dataset.page || (location.pathname.startsWith('/blog') ? 'blog' : location.pathname.startsWith('/videos') ? 'videos' : 'home');
+  const path = location.pathname.replace(/\/$/, '') || '/';
 
   const navItems = [
     { href: '/', label: 'Trang chủ', icon: 'fas fa-home', key: 'home' },
@@ -14,9 +15,14 @@
     { href: 'https://t.me/escbase', label: 'Telegram', icon: 'fab fa-telegram' },
   ];
 
+  function isActive(item) {
+    if (item.key === 'home') return path === '' || path === '/';
+    return path === item.href || path.startsWith(item.href + '/');
+  }
+
   function navLink(item, mobile) {
     const cls = mobile ? 'nav-item' : 'nav-item';
-    const active = item.key === page ? ' active' : '';
+    const active = isActive(item) ? ' active' : '';
     const click = mobile ? ' onclick="toggleMobileNav()"' : '';
     return `<a href="${item.href}" class="${cls}${active}"${click}><i class="${item.icon}"></i> ${item.label}</a>`;
   }
@@ -89,7 +95,10 @@
       main.appendChild(footer);
     }
     footer.innerHTML = `
-      <p>© 2026 Escbase. Phân tích crypto, blockchain và AI theo kiểu ngắn gọn, dễ đọc.</p>
+      <div class="footer-copy">
+        <p>© 2026 Escbase. Phân tích crypto, blockchain và AI theo kiểu ngắn gọn, dễ đọc.</p>
+        <span class="footer-note">Theo dõi Escbase trên YouTube, Discord, X và Telegram.</span>
+      </div>
       <div class="social-links footer-socials">
         ${socials.map(socialLink).join('')}
       </div>
