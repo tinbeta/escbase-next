@@ -332,11 +332,26 @@
                 document.getElementById('postsGrid').innerHTML = '<p style="color:var(--text-muted);">Không thể tải bài viết.</p>';
             });
 
+        const dedupeVideos = (videos) => {
+            const seen = new Set();
+            return videos.filter((video) => {
+                const normalized = (video.title || '')
+                    .replace(/\s*-\s*full\s*$/i, '')
+                    .replace(/\s+/g, ' ')
+                    .trim()
+                    .toLowerCase();
+
+                if (seen.has(normalized)) return false;
+                seen.add(normalized);
+                return true;
+            });
+        };
+
         fetch('/videos-feed.json')
             .then(r => r.json())
             .then(videos => {
                 const grid = document.getElementById('videosGrid');
-                const shown = videos.slice(0, 3);
+                const shown = dedupeVideos(videos).slice(0, 3);
 
                 shown.forEach((video) => {
                     grid.innerHTML += `
