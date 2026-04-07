@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 
-<body>
+<body data-page="blog">
     <div class="app-container">
         <header class="mobile-header">
             <a href="/" class="mobile-logo">
@@ -71,14 +71,8 @@
         </main>
     </div>
 
+    <script src="/shared-layout.js"></script>
     <script>
-        function toggleMobileNav() {
-            const mobileNav = document.getElementById('mobileNav');
-            const hamburger = document.querySelector('.hamburger');
-            mobileNav.classList.toggle('open');
-            if (hamburger) hamburger.classList.toggle('active');
-        }
-
         fetch('/blog.json')
             .then(r => r.json())
             .then(posts => {

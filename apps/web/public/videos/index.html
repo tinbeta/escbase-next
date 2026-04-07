@@ -159,7 +159,7 @@
     </style>
 </head>
 
-<body>
+<body data-page="videos">
     <div class="app-container">
         <header class="mobile-header">
             <a href="/" class="mobile-logo">
@@ -228,11 +228,8 @@
         </main>
     </div>
 
+    <script src="/shared-layout.js"></script>
     <script>
-        function toggleMobileNav() {
-            document.getElementById('mobileNav').classList.toggle('open');
-        }
-
         async function loadVideos() {
             const grid = document.getElementById('videosGrid');
             const feedUrl = 'https://www.youtube.com/feeds/videos.xml?channel_id=UCTZxiCiz5ehczZFjyEU4h5A';
