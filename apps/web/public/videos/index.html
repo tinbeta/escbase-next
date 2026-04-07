@@ -233,10 +233,23 @@
             document.getElementById('mobileNav').classList.toggle('open');
         }
 
-        fetch('/videos-feed.json')
-            .then(r => r.json())
-            .then(videos => {
-                const grid = document.getElementById('videosGrid');
+        async function loadVideos() {
+            const grid = document.getElementById('videosGrid');
+            const feedUrl = 'https://www.youtube.com/feeds/videos.xml?channel_id=UCTZxiCiz5ehczZFjyEU4h5A';
+            const rss2jsonUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feedUrl)}`;
+
+            try {
+                const response = await fetch(rss2jsonUrl);
+                const data = await response.json();
+                if (!data.items || !data.items.length) throw new Error('No feed items');
+
+                const videos = data.items.slice(0, 12).map(item => ({
+                    title: item.title,
+                    url: item.link,
+                    published: new Date(item.pubDate).toLocaleDateString('vi-VN'),
+                    thumb: item.thumbnail || `https://i.ytimg.com/vi/${item.guid}/hqdefault.jpg`
+                }));
+
                 grid.innerHTML = videos.map(video => `
                     <a class="video-link-card" href="${video.url}" target="_blank" rel="noopener noreferrer">
                         <div class="video-thumb">
@@ -245,16 +258,38 @@
                         <div class="video-info">
                             <h3>${video.title}</h3>
                             <div class="meta">
-                                <span>ESC Base</span>
+                                <span>Escbase</span>
                                 <span>${video.published}</span>
                             </div>
                         </div>
                     </a>
                 `).join('');
-            })
-            .catch(() => {
-                document.getElementById('videosGrid').innerHTML = '<p style="color:var(--text-muted);">Không tải được danh sách video. Bạn có thể xem trực tiếp trên kênh YouTube ESC Base.</p>';
-            });
+            } catch (err) {
+                fetch('/videos-feed.json')
+                    .then(r => r.json())
+                    .then(videos => {
+                        grid.innerHTML = videos.map(video => `
+                            <a class="video-link-card" href="${video.url}" target="_blank" rel="noopener noreferrer">
+                                <div class="video-thumb">
+                                    <img src="${video.thumb}" alt="${video.title}">
+                                </div>
+                                <div class="video-info">
+                                    <h3>${video.title}</h3>
+                                    <div class="meta">
+                                        <span>Escbase</span>
+                                        <span>${video.published}</span>
+                                    </div>
+                                </div>
+                            </a>
+                        `).join('');
+                    })
+                    .catch(() => {
+                        grid.innerHTML = '<p style="color:var(--text-muted);">Không tải được danh sách video. Bạn có thể xem trực tiếp trên kênh YouTube Escbase.</p>';
+                    });
+            }
+        }
+
+        loadVideos();
     </script>
 </body>
 
