@@ -22,9 +22,14 @@
 
   function navLink(item, mobile) {
     const cls = mobile ? 'nav-item' : 'nav-item';
+    const targetHref = page === 'home' && item.key === 'blog'
+      ? '#latest-posts'
+      : page === 'home' && item.key === 'videos'
+        ? '#latest-videos'
+        : item.href;
     const active = isActive(item) ? ' active' : '';
     const click = mobile ? ' onclick="toggleMobileNav()"' : '';
-    return `<a href="${item.href}" class="${cls}${active}"${click}><i class="${item.icon}"></i> ${item.label}</a>`;
+    return `<a href="${targetHref}" class="${cls}${active}"${click}><i class="${item.icon}"></i> ${item.label}</a>`;
   }
 
   function socialLink(item) {
