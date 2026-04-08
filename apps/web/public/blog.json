@@ -113,7 +113,8 @@
     "tagIcon": "fas fa-terminal",
     "tagColor": "#60a5fa",
     "readTime": "7 min read",
-    "featured": false
+    "featured": false,
+    "image": "/images/claude-code-2-1-94-defaults-memory-tooling-thumb.png"
   },
   {
     "url": "/blog/ray-dalio-big-cycle-world-war",
