@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/codex-3-trieu-user-reset-limit",
+    "title": "Codex Chạm 3 Triệu User Mỗi Tuần Và Reset Giới Hạn Dùng: AI Coding Đang Hết Cửa Làm Đồ Chơi",
+    "excerpt": "Codex vừa đạt 3 triệu weekly users và OpenAI reset usage limits để ăn mừng. Đây không chỉ là một con số đẹp, mà là dấu hiệu AI coding đã bắt đầu thành thói quen làm việc thật chứ không còn là màn demo cho vui.",
+    "date": "Apr 08, 2026",
+    "tag": "AI Coding",
+    "tagIcon": "fas fa-terminal",
+    "tagColor": "#3b82f6",
+    "readTime": "6 min read",
+    "featured": true,
+    "image": "/images/codex-3-trieu-user-reset-limit-thumb.svg"
+  },
+  {
     "url": "/blog/aztec-alpha-ethereum-privacy",
     "title": "Aztec Alpha Live: Ethereum Có Native Privacy Thật Sự, Nhưng Đừng Vội Tưởng Đây Là Kèo Dễ Ăn",
     "excerpt": "Aztec vừa bật Alpha với thông điệp native privacy, built on Ethereum. Đây là tín hiệu đáng chú ý cho hạ tầng riêng tư trên Ethereum, nhưng để thành sân chơi thật thì Aztec còn phải thắng ở builder, sản phẩm và tokenomics.",
