@@ -99,7 +99,8 @@
     "tagIcon": "fas fa-bitcoin-sign",
     "tagColor": "#f7931a",
     "readTime": "7 min read",
-    "featured": false
+    "featured": false,
+    "image": "/images/bitcoin-effective-supply-17m-thumb.svg"
   },
   {
     "url": "/blog/erc-8211-onchain-agents",
