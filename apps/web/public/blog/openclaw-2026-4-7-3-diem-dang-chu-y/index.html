@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Thứ Đáng Chú Ý Nhất Trong OpenClaw 2026.4.7 - Escbase</title>
+    <meta name="description" content="Nếu không muốn đọc cả changelog dài, đây là 3 điểm đáng chú ý nhất trong OpenClaw 2026.4.7: infer hub, memory-wiki và webhook TaskFlows.">
+    <meta property="og:title" content="3 Thứ Đáng Chú Ý Nhất Trong OpenClaw 2026.4.7">
+    <meta property="og:description" content="Một bản tóm tắt ngắn gọn về 3 thay đổi đáng chú ý nhất trong OpenClaw 2026.4.7: infer hub, memory-wiki và webhook TaskFlows.">
+    <meta property="og:image" content="https://escbase.xyz/images/openclaw-2026-4-7-thumb.png">
+    <meta property="og:url" content="https://escbase.xyz/blog/openclaw-2026-4-7-3-diem-dang-chu-y">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root{--bg:#09090b;--card-bg:#18181b;--border:#27272a;--text:#fafafa;--text-secondary:#a1a1aa;--text-muted:#71717a;--accent:#f7931a;--accent-green:#22c55e;--accent-red:#ef4444;--accent-blue:#3b82f6;--radius-md:16px}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased}.container{max-width:820px;margin:0 auto;padding:2rem 1.5rem}.article-header{margin-bottom:2.5rem}.hero-image{width:100%;border-radius:18px;border:1px solid rgba(255,255,255,.08);margin:1.5rem 0 2rem;display:block}.category-badge{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1rem;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.2);border-radius:100px;font-size:.85rem;font-weight:600;color:#60a5fa;margin-bottom:1.25rem}h1{font-size:2.15rem;font-weight:800;line-height:1.2;margin-bottom:1.25rem;letter-spacing:-.02em}.meta{display:flex;flex-wrap:wrap;gap:1.5rem;color:var(--text-muted);font-size:.9rem}.meta span{display:flex;align-items:center;gap:.5rem}.article-content{font-size:1.08rem;color:var(--text-secondary)}.article-content h2{font-size:1.45rem;font-weight:700;color:var(--text);margin-top:2.4rem;margin-bottom:1rem}.article-content p{margin-bottom:1.25rem}.highlight-box{background:linear-gradient(135deg,rgba(59,130,246,.1) 0%,rgba(59,130,246,.05) 100%);border:1px solid rgba(59,130,246,.2);border-radius:var(--radius-md);padding:1.5rem;margin:2rem 0}.highlight-box h4{color:var(--accent-blue);font-size:1.1rem;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}.back-to-blog-footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border)}.back-to-blog-btn{display:inline-flex;align-items:center;gap:.6rem;padding:.95rem 1.25rem;border-radius:14px;background:var(--card-bg);border:1px solid var(--border);color:var(--text);text-decoration:none;font-weight:600}.tags{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}.tag{padding:.5rem 1rem;background:var(--card-bg);border:1px solid var(--border);border-radius:100px;font-size:.85rem;color:var(--text-secondary)}@media(max-width:768px){h1{font-size:1.75rem}.container{padding:1.5rem 1rem}}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <span class="category-badge"><i class="fas fa-bolt"></i> AI & OpenClaw</span>
+                <h1>3 Thứ Đáng Chú Ý Nhất Trong OpenClaw 2026.4.7</h1>
+                <div class="meta">
+                    <span><i class="far fa-calendar"></i> 08/04/2026</span>
+                    <span><i class="far fa-clock"></i> 4 phút đọc</span>
+                    <span><i class="far fa-folder"></i> AI Agent, Product Update</span>
+                </div>
+                <img class="hero-image" src="/images/openclaw-2026-4-7-thumb.png" alt="OpenClaw 2026.4.7">
+            </header>
+
+            <div class="article-content">
+                <div class="highlight-box">
+                    <h4>✨ Nếu không muốn đọc cả changelog dài...</h4>
+                    <p style="margin-bottom:0">OpenClaw 2026.4.7 có rất nhiều thay đổi, nhưng nếu phải chọn ra 3 thứ đáng chú ý nhất thì đó là: infer hub mới, memory-wiki quay lại với cấu trúc rõ ràng hơn, và webhook TaskFlows giúp agent nối vào automation bên ngoài.</p>
+                </div>
+
+                <h2>1. Infer Hub: OpenClaw bắt đầu gom inference về một cửa</h2>
+                <p>Điểm đầu tiên đáng chú ý là việc xuất hiện một hub inference chính thức qua nhóm lệnh <code>openclaw infer ...</code>. Đây không chỉ là thêm command mới cho vui. Nó cho thấy OpenClaw đang muốn gom các nhu cầu model, media, web và embedding về một bề mặt thống nhất hơn.</p>
+                <p>Với người dùng, điều này đồng nghĩa workflow inference sẽ bớt rời rạc hơn. Với hệ thống, đây là bước tiến quan trọng để OpenClaw trở thành một runtime đa năng hơn thay vì chỉ là assistant chat có thêm vài tool.</p>
+
+                <h2>2. Memory-wiki: trí nhớ của agent bắt đầu có cấu trúc hơn</h2>
+                <p>Memory-wiki là thay đổi thứ hai đáng để ý. Release này không chỉ “mang memory trở lại”, mà còn đi xa hơn với structured claim/evidence, freshness-weighted search, contradiction clustering và compiled digest retrieval.</p>
+                <p>Nói dễ hiểu: OpenClaw đang cố biến memory thành một lớp tri thức có tổ chức, chứ không chỉ là đống note được lưu lại. Đây là hướng rất đúng nếu muốn agent làm được việc dài hơi và ít “quên có hệ thống” hơn.</p>
+
+                <h2>3. Webhook TaskFlows: agent không còn chỉ chờ chat</h2>
+                <p>Điểm thứ ba là bundled webhook ingress plugin. Nó cho phép hệ thống bên ngoài tạo và điều khiển TaskFlows qua endpoint có shared secret. Ý nghĩa của thay đổi này rất lớn: OpenClaw có thể bước vào các luồng automation thật sự, thay vì chỉ ngồi chờ người dùng nhắn lệnh trong chat.</p>
+                <p>Khi webhook đi vào, agent bắt đầu có thể được trigger bởi CI, cron, alert, ingestion jobs hoặc các hệ thống nội bộ khác. Đây là bước cần thiết nếu muốn OpenClaw trở thành platform automation đa điểm chạm.</p>
+
+                <h2>Kết luận</h2>
+                <p>Nếu phải chốt cực ngắn, OpenClaw 2026.4.7 đáng chú ý vì nó không chỉ thêm tính năng lẻ, mà đẩy hệ thống về một hướng rõ hơn: inference thống nhất hơn, memory có cấu trúc hơn và automation mở hơn. Ba thay đổi này có thể không phải thứ hào nhoáng nhất trên bề mặt, nhưng lại là những mảnh ghép quan trọng nhất nếu nhìn theo chiều dài hạn.</p>
+
+                <div class="back-to-blog-footer">
+                    <a href="/blog" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại blog</a>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">#OpenClaw</span>
+                    <span class="tag">#InferHub</span>
+                    <span class="tag">#MemoryWiki</span>
+                    <span class="tag">#TaskFlows</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

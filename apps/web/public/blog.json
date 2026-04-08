@@ -1,5 +1,16 @@
 [
   {
+    "url": "/blog/openclaw-2026-4-7-3-diem-dang-chu-y",
+    "title": "3 Thứ Đáng Chú Ý Nhất Trong OpenClaw 2026.4.7",
+    "excerpt": "Nếu không muốn đọc cả changelog dài, đây là 3 điểm đáng chú ý nhất trong OpenClaw 2026.4.7: infer hub, memory-wiki và webhook TaskFlows.",
+    "date": "Apr 08, 2026",
+    "tag": "AI & OpenClaw",
+    "tagIcon": "fas fa-bolt",
+    "tagColor": "#60a5fa",
+    "readTime": "4 min read",
+    "featured": true
+  },
+  {
     "url": "/blog/openclaw-2026-4-7-release-chi-tiet",
     "title": "OpenClaw 2026.4.7 Có Gì Mới? Toàn Cảnh Chi Tiết Về Infer Hub, Memory-Wiki, TaskFlows Và Hàng Loạt Bản Vá",
     "excerpt": "Một bài nhìn toàn cảnh release OpenClaw 2026.4.7: infer hub, media generation, memory-wiki, webhook TaskFlows, session branch/restore, Gemma 4, dreaming, cùng hàng loạt bản vá về security, auth, gateway và plugin.",
