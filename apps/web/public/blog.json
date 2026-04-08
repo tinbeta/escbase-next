@@ -8,7 +8,8 @@
     "tagIcon": "fas fa-building-columns",
     "tagColor": "#3b82f6",
     "readTime": "7 min read",
-    "featured": false
+    "featured": false,
+    "image": "/images/fdic-genius-act-stablecoin-thumb.svg"
   },
   {
     "url": "/blog/viet-nam-crypto-exchange-joint-venture",
@@ -19,7 +20,8 @@
     "tagIcon": "fas fa-gavel",
     "tagColor": "#ef4444",
     "readTime": "8 min read",
-    "featured": false
+    "featured": false,
+    "image": "/images/viet-nam-crypto-exchange-joint-venture-thumb.svg"
   },
   {
     "url": "/blog/openclaw-2026-4-7-3-diem-dang-chu-y",
