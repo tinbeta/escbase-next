@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/adam-back-satoshi-mystery",
+    "title": "Adam Back Có Phải Satoshi? NYT Đào Lại Bí Ẩn Bitcoin, Nhưng Cộng Đồng Không Nuốt Câu Chuyện Này Dễ Thế",
+    "excerpt": "New York Times vừa gợi lại giả thuyết Adam Back là Satoshi Nakamoto sau một năm điều tra. Nhưng cộng đồng Bitcoin phản ứng rất gắt: chưa có private key proof thì tất cả vẫn chỉ là suy đoán đẹp mồm.",
+    "date": "Apr 08, 2026",
+    "tag": "Bitcoin Narrative",
+    "tagIcon": "fas fa-bitcoin-sign",
+    "tagColor": "#f7931a",
+    "readTime": "6 min read",
+    "featured": true,
+    "image": "/images/adam-back-satoshi-mystery-thumb.svg"
+  },
+  {
     "url": "/blog/thue-crypto-viet-nam-thong-tu-41",
     "title": "Thuế Crypto Việt Nam Đã Rõ Hơn: Thông Tư 41 Chốt Cơ Chế Sàn Khấu Trừ 0,1% Nhưng Chưa Thu Ngay",
     "excerpt": "Thông tư 41/2026/TT-BTC làm rõ cách thu thuế với giao dịch tài sản mã hóa tại Việt Nam: sàn được cấp phép sẽ khấu trừ và nộp thay. Khung thu đã rõ hơn, nhưng thị trường chưa bước vào giai đoạn thu thực tế ngay lập tức.",
