@@ -434,12 +434,14 @@
         loadCoins();
         setInterval(loadCoins, 300000);
 
-        fetch('/videos-feed.json')
-            .then(r => r.json())
-            .then(videos => {
-                const grid = document.getElementById('videosGrid');
-                const shown = dedupeVideos(videos).slice(0, 3);
+        async function loadHomepageVideos() {
+            const grid = document.getElementById('videosGrid');
+            const feedUrl = 'https://www.youtube.com/feeds/videos.xml?channel_id=UCTZxiCiz5ehczZFjyEU4h5A';
+            const rss2jsonUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feedUrl)}`;
 
+            function renderVideos(videos) {
+                const shown = dedupeVideos(videos).slice(0, 3);
+                grid.innerHTML = '';
                 shown.forEach((video) => {
                     grid.innerHTML += `
                         <a href="${video.url}" target="_blank" rel="noopener noreferrer" class="bento-item col-4 fade-in">
@@ -452,18 +454,32 @@
                             </div>
                             <h3 class="card-title">${video.title}</h3>
                             <p class="card-excerpt">Video mới nhất từ kênh Escbase trên YouTube.</p>
-                            <div class="card-footer">
-                                <span><i class="fab fa-youtube"></i> Xem video</span>
-                                <span style="margin-left:auto; color:var(--text);"><i class="fas fa-arrow-right"></i></span>
-                            </div>
                         </a>`;
                 });
-
                 grid.querySelectorAll('.bento-item').forEach(el => observer.observe(el));
-            })
-            .catch(() => {
-                document.getElementById('videosGrid').innerHTML = '<p style="color:var(--text-muted);">Không thể tải video.</p>';
-            });
+            }
+
+            try {
+                const response = await fetch(rss2jsonUrl);
+                const data = await response.json();
+                if (!data.items || !data.items.length) throw new Error('No feed items');
+                renderVideos(data.items.map(item => ({
+                    title: item.title,
+                    url: item.link,
+                    published: new Date(item.pubDate).toLocaleDateString('vi-VN'),
+                    thumb: item.thumbnail || `https://i.ytimg.com/vi/${item.guid}/hqdefault.jpg`
+                })));
+            } catch (err) {
+                fetch('/videos-feed.json')
+                    .then(r => r.json())
+                    .then(renderVideos)
+                    .catch(() => {
+                        grid.innerHTML = '<p style="color:var(--text-muted);">Không thể tải video.</p>';
+                    });
+            }
+        }
+
+        loadHomepageVideos();
     </script>
 </body>
 
