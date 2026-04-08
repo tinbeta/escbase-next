@@ -3,14 +3,14 @@
 <circle cx="1020" cy="110" r="220" fill="#EF4444" fill-opacity="0.14"/>
 <circle cx="170" cy="560" r="250" fill="#F59E0B" fill-opacity="0.1"/>
 <rect x="58" y="58" width="1084" height="514" rx="32" fill="url(#g)" stroke="#27272A"/>
-<rect x="86" y="88" width="246" height="44" rx="22" fill="#3F1D1D"/>
-<text x="114" y="117" fill="#FDBA74" font-size="24" font-family="Inter, Arial, sans-serif" font-weight="700">Thuế Crypto Việt Nam</text>
+<rect x="86" y="88" width="296" height="44" rx="22" fill="#3F1D1D"/>
+<text x="112" y="117" fill="#FDBA74" font-size="24" font-family="Inter, Arial, sans-serif" font-weight="700">Thuế Crypto Việt Nam</text>
 <text x="88" y="196" fill="#FAFAFA" font-size="56" font-family="Inter, Arial, sans-serif" font-weight="800">Thông tư 41 làm rõ</text>
 <text x="88" y="266" fill="#F59E0B" font-size="56" font-family="Inter, Arial, sans-serif" font-weight="800">cơ chế thu 0,1%</text>
 <text x="88" y="344" fill="#A1A1AA" font-size="28" font-family="Inter, Arial, sans-serif" font-weight="500">Khung thu rõ hơn, nhưng chưa tới cảnh bị trừ ngay ngày mai.</text>
 <text x="88" y="386" fill="#A1A1AA" font-size="28" font-family="Inter, Arial, sans-serif" font-weight="500">Crypto đang được kéo dần vào logic vận hành thị trường thật.</text>
-<rect x="88" y="464" width="290" height="58" rx="18" fill="#FAFAFA"/>
-<text x="120" y="502" fill="#09090B" font-size="28" font-family="Inter, Arial, sans-serif" font-weight="800">ESC Base · Góc nhìn thuế</text>
+<rect x="88" y="464" width="322" height="58" rx="18" fill="#FAFAFA"/>
+<text x="118" y="502" fill="#09090B" font-size="28" font-family="Inter, Arial, sans-serif" font-weight="800">Escbase · Góc nhìn thuế</text>
 <g opacity="0.95">
 <rect x="828" y="176" width="228" height="162" rx="22" fill="#1C1917" stroke="#EF4444"/>
 <rect x="860" y="210" width="154" height="18" rx="9" fill="#FCA5A5" fill-opacity="0.88"/>
