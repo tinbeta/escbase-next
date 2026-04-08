@@ -11,6 +11,17 @@
     "featured": true
   },
   {
+    "url": "/blog/claude-code-2-1-94-defaults-memory-tooling",
+    "title": "Claude Code 2.1.94: Đổi Defaults, Sửa Memory, Ép Agent Dùng Tool Khôn Hơn",
+    "excerpt": "Claude Code 2.1.94 không phải bản update kiểu màu mè cho vui. Nó chỉnh đúng ba thứ ảnh hưởng trải nghiệm thật: effort mặc định lên high, memory bớt cư xử ngu khi bị ignore, và agent được đẩy sang dùng tool sớm hơn, thực dụng hơn.",
+    "date": "Apr 08, 2026",
+    "tag": "AI Coding Agents",
+    "tagIcon": "fas fa-terminal",
+    "tagColor": "#60a5fa",
+    "readTime": "7 min read",
+    "featured": false
+  },
+  {
     "url": "/blog/ray-dalio-big-cycle-world-war",
     "title": "Ray Dalio Cảnh Báo “World War Kiểu Mới”: Crypto Có Thể Chưa Sập Vì Tin Xấu, Mà Vì Cả Hệ Thống Đang Đổi Pha",
     "excerpt": "Ray Dalio cho rằng thế giới đã bước vào giai đoạn đầu của một cuộc chiến đa mặt trận kiểu mới. Với crypto, thứ đáng sợ không chỉ là headline chiến sự, mà là việc thanh khoản, năng lượng và trật tự quyền lực toàn cầu đang đổi pha.",
