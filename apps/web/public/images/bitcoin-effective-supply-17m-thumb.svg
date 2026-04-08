@@ -9,7 +9,7 @@
 <text x="88" y="266" fill="#F7931A" font-size="56" font-family="Inter, Arial, sans-serif" font-weight="800">Bitcoin chỉ còn 17M?</text>
 <text x="88" y="344" fill="#A1A1AA" font-size="28" font-family="Inter, Arial, sans-serif" font-weight="500">Narrative khan hiếm nghe rất bullish, nhưng đừng nuốt nguyên.</text>
 <text x="88" y="386" fill="#A1A1AA" font-size="28" font-family="Inter, Arial, sans-serif" font-weight="500">Scarcity mạnh không tự động biến mọi mức giá thành rẻ.</text>
-<rect x="88" y="464" width="316" height="58" rx="18" fill="#FAFAFA"/>
+<rect x="88" y="464" width="356" height="58" rx="18" fill="#FAFAFA"/>
 <text x="118" y="502" fill="#09090B" font-size="28" font-family="Inter, Arial, sans-serif" font-weight="800">Escbase · Góc nhìn Bitcoin</text>
 <g opacity="0.95">
 <circle cx="958" cy="274" r="98" fill="#1C1917" stroke="#F7931A" stroke-width="4"/>
