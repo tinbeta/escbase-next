@@ -222,7 +222,7 @@
             </section>
 
             <!-- Latest Articles Grid -->
-            <div class="section-header" id="blog">
+            <div class="section-header" id="latest-posts">
                 <div class="section-copy">
                     <h3 class="section-title"><i class="fas fa-pen-nib"></i> 3 Bài Viết Mới Nhất</h3>
                     <p class="section-subtitle">Những bài phân tích mới nhất về crypto, blockchain, AI và các dịch chuyển đáng chú ý của thị trường.</p>
@@ -234,7 +234,7 @@
                 <!-- Auto-loaded from blog.json -->
             </div>
 
-            <div class="section-header" id="videos" style="margin-top: 1rem;">
+            <div class="section-header" id="latest-videos" style="margin-top: 1rem;">
                 <div class="section-copy">
                     <h3 class="section-title"><i class="fas fa-play-circle"></i> 3 Video Mới Nhất</h3>
                     <p class="section-subtitle">Video mới từ kênh Escbase để xem nhanh các chủ đề nổi bật mà không phải lục cả feed YouTube.</p>
@@ -436,8 +436,6 @@
 
         async function loadHomepageVideos() {
             const grid = document.getElementById('videosGrid');
-            const feedUrl = 'https://www.youtube.com/feeds/videos.xml?channel_id=UCTZxiCiz5ehczZFjyEU4h5A';
-            const rss2jsonUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feedUrl)}`;
 
             function renderVideos(videos) {
                 const shown = dedupeVideos(videos).slice(0, 3);
@@ -460,15 +458,10 @@
             }
 
             try {
-                const response = await fetch(rss2jsonUrl);
+                const response = await fetch('/api/youtube-feed');
                 const data = await response.json();
-                if (!data.items || !data.items.length) throw new Error('No feed items');
-                renderVideos(data.items.map(item => ({
-                    title: item.title,
-                    url: item.link,
-                    published: new Date(item.pubDate).toLocaleDateString('vi-VN'),
-                    thumb: item.thumbnail || `https://i.ytimg.com/vi/${item.guid}/hqdefault.jpg`
-                })));
+                if (!data.videos || !data.videos.length) throw new Error('No feed items');
+                renderVideos(data.videos);
             } catch (err) {
                 fetch('/videos-feed.json')
                     .then(r => r.json())
