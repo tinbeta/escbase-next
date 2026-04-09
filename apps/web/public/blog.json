@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/openclaw-rem-backfill-dreaming",
+    "title": "OpenClaw 2026.4.9 Có REM Backfill: Agent Giờ Có Thể “Mơ Lại” Những Ký Ức Cũ Bị Bỏ Lỡ",
+    "excerpt": "REM backfill là một trong những điểm đáng tiền nhất của OpenClaw 2026.4.9. Nó cho phép daily notes cũ replay vào dreaming pipeline mà không cần dựng thêm một memory stack mới.",
+    "date": "Apr 09, 2026",
+    "tag": "OpenClaw AI",
+    "tagIcon": "fas fa-brain",
+    "tagColor": "#60a5fa",
+    "readTime": "6 min read",
+    "featured": true,
+    "image": "/images/openclaw-rem-backfill-dreaming-thumb.png"
+  },
+  {
     "url": "/blog/claude-managed-agents-public-beta",
     "title": "Claude Managed Agents Public Beta: Anthropic Không Còn Chỉ Bán Model, Họ Đang Bán Cả Hạ Tầng Agent",
     "excerpt": "Claude Managed Agents cho thấy Anthropic đang muốn bán trọn gói từ model đến agent runtime: sandboxing, long-running sessions, tracing, CLI, Claude Code và hạ tầng production. Đây là cú dịch chuyển từ AI model sang AI platform rõ rệt hơn nhiều người nghĩ.",
