@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/anthropic-managed-agents-brain-hands",
+    "title": "Managed Agents Của Anthropic: Vì Sao Họ Tách “Bộ Não” Khỏi “Đôi Tay” Của Agent?",
+    "excerpt": "Anthropic đang giải quyết bài toán rất thực tế của agent: làm sao để phần suy nghĩ và phần thao tác không dính chặt vào nhau. Kết quả là hệ thống có thể nhanh hơn, ổn hơn và an toàn hơn.",
+    "date": "Apr 09, 2026",
+    "tag": "Anthropic",
+    "tagIcon": "fas fa-brain",
+    "tagColor": "#f59e0b",
+    "readTime": "7 min read",
+    "featured": true,
+    "image": "/images/anthropic-managed-agents-brain-hands-thumb.png"
+  },
+  {
     "url": "/blog/openclaw-rem-backfill-dreaming",
     "title": "OpenClaw 2026.4.9 Có REM Backfill: Agent Giờ Có Thể “Mơ Lại” Những Ký Ức Cũ Bị Bỏ Lỡ",
     "excerpt": "REM backfill là một trong những điểm đáng tiền nhất của OpenClaw 2026.4.9. Nó cho phép daily notes cũ replay vào dreaming pipeline mà không cần dựng thêm một memory stack mới.",
