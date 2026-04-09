@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/gemini-notebooks-notebooklm",
+    "title": "Gemini Có Notebooks Đồng Bộ Với NotebookLM: Google Đang Muốn Biến Chatbot Thành Bàn Làm Việc Thật",
+    "excerpt": "Google vừa đưa notebooks vào Gemini và cho sync thẳng với NotebookLM. Đây không chỉ là thêm một chỗ gom chat, mà là bước đi cho thấy các hãng AI đang cố biến chatbot thành không gian làm việc có trí nhớ, có tài liệu và có workflow dài hơi.",
+    "date": "Apr 09, 2026",
+    "tag": "Google AI",
+    "tagIcon": "fas fa-book",
+    "tagColor": "#3b82f6",
+    "readTime": "6 min read",
+    "featured": true,
+    "image": "/images/gemini-notebooks-notebooklm-thumb.png"
+  },
+  {
     "url": "/blog/fdic-genius-act-stablecoin",
     "title": "FDIC Bắt Đầu Viết Luật Cho Stablecoin: Crypto Không Còn Đứng Ngoài Cửa Ngân Hàng",
     "excerpt": "FDIC vừa duyệt đề xuất quy định cho stablecoin issuer theo GENIUS Act. Đây không chỉ là tin pháp lý, mà là dấu hiệu stablecoin đang được kéo sát hơn vào lõi hệ thống tài chính Mỹ.",
