@@ -1,13 +1,13 @@
 [
   {
     "url": "/blog/claude-managed-agents-public-beta",
-    "title": "Claude Managed Agents Public Beta: Anthropic Không Muốn Chỉ Bán Model, Họ Muốn Bán Cả Agent Runtime",
-    "excerpt": "Anthropic vừa giới thiệu Claude Managed Agents ở public beta. Đây không chỉ là thêm tính năng cho Claude Platform, mà là dấu hiệu họ đang muốn bán trọn gói từ model đến agent harness và hạ tầng production.",
+    "title": "Claude Managed Agents Public Beta: Anthropic Không Còn Chỉ Bán Model, Họ Đang Bán Cả Hạ Tầng Agent",
+    "excerpt": "Đọc đủ thread, blog gốc và phản ứng cộng đồng mới thấy Claude Managed Agents không chỉ là launch tính năng. Anthropic đang muốn bán cả agent runtime với sandbox, long-running sessions, tracing, CLI và production infrastructure.",
     "date": "Apr 09, 2026",
     "tag": "Claude AI",
     "tagIcon": "fas fa-brain",
     "tagColor": "#f59e0b",
-    "readTime": "6 min read",
+    "readTime": "8 min read",
     "featured": true,
     "image": "/images/claude-managed-agents-public-beta-thumb.png"
   },
