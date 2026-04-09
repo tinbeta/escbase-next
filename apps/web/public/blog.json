@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/claude-managed-agents-public-beta",
+    "title": "Claude Managed Agents Public Beta: Anthropic Không Muốn Chỉ Bán Model, Họ Muốn Bán Cả Agent Runtime",
+    "excerpt": "Anthropic vừa giới thiệu Claude Managed Agents ở public beta. Đây không chỉ là thêm tính năng cho Claude Platform, mà là dấu hiệu họ đang muốn bán trọn gói từ model đến agent harness và hạ tầng production.",
+    "date": "Apr 09, 2026",
+    "tag": "Claude AI",
+    "tagIcon": "fas fa-brain",
+    "tagColor": "#f59e0b",
+    "readTime": "6 min read",
+    "featured": true,
+    "image": "/images/claude-managed-agents-public-beta-thumb.png"
+  },
+  {
     "url": "/blog/openclaw-2026-4-9-release",
     "title": "OpenClaw 2026.4.9: Không Còn Chỉ Đua Tính Năng, Bản Này Quay Sang Vá Nền Móng Hệ Thống",
     "excerpt": "OpenClaw 2026.4.9 tập trung vào memory/dreaming, browser security, auth, routing và hàng loạt bản vá stability. Ít hào nhoáng hơn 2026.4.7, nhưng thực dụng hơn hẳn vì nó cho thấy dự án đang quay lại siết phần móng.",
