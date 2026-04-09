@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etherscan Làm Mới Tab Contract: Từ Chỗ Chỉ Đọc Code Sang Trải Nghiệm Gần Giống IDE - Escbase</title>
+    <meta name="description" content="Etherscan vừa làm mới tab Contract với trình duyệt code kiểu IDE, multi-file tabs, outline hàm và giao diện read/write rõ ràng hơn. Đây là nâng cấp nhỏ về UI nhưng rất đáng tiền với dev, auditor và cả người dùng DeFi thích tự kiểm chứng.">
+    <meta property="og:title" content="Etherscan Làm Mới Tab Contract: Từ Chỗ Chỉ Đọc Code Sang Trải Nghiệm Gần Giống IDE">
+    <meta property="og:description" content="Etherscan đang biến tab Contract thành thứ dễ dùng hơn nhiều: file tree, multi-tab, jump giữa hàm, và read/write contract gọn hơn.">
+    <meta property="og:image" content="https://escbase.xyz/images/etherscan-contract-tab-revamp-hero.png">
+    <meta property="og:url" content="https://escbase.xyz/blog/etherscan-contract-tab-revamp/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/shared-article-footer.css">
+    <style>
+        :root{--bg:#09090b;--card:#18181b;--border:#27272a;--text:#fafafa;--muted:#a1a1aa;--soft:#71717a;--amber:#f59e0b;--blue:#60a5fa;--green:#22c55e;--radius:16px}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased}.container{max-width:860px;margin:0 auto;padding:2rem 1.25rem}.article-header{margin-bottom:2.5rem}.category-badge{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1rem;background:rgba(96,165,250,.1);border:1px solid rgba(96,165,250,.22);border-radius:999px;font-size:.85rem;font-weight:600;color:#93c5fd;margin-bottom:1.25rem}h1{font-size:2.2rem;line-height:1.16;font-weight:800;letter-spacing:-.02em;margin-bottom:1.25rem}.meta{display:flex;flex-wrap:wrap;gap:1.25rem;color:var(--soft);font-size:.92rem}.meta span{display:flex;align-items:center;gap:.45rem}.hero-image,.article-figure img,video{width:100%;display:block;border-radius:18px;border:1px solid rgba(255,255,255,.08);background:#111}.hero-image{margin:1rem 0 1.5rem}.article-content{font-size:1.08rem;color:var(--muted)}.article-content h2{font-size:1.5rem;color:var(--text);margin:2.3rem 0 1rem;font-weight:700}.article-content p{margin-bottom:1.15rem}.article-content ul{padding-left:1.35rem;margin-bottom:1.1rem}.article-content li{margin-bottom:.45rem}.highlight-box,.highlight-green{border-radius:var(--radius);padding:1.35rem 1.45rem;margin:1.8rem 0}.highlight-box{background:linear-gradient(135deg,rgba(96,165,250,.12),rgba(245,158,11,.08));border:1px solid rgba(96,165,250,.2)}.highlight-green{background:linear-gradient(135deg,rgba(34,197,94,.12),rgba(34,197,94,.05));border:1px solid rgba(34,197,94,.2)}.highlight-box h4,.highlight-green h4{margin-bottom:.6rem;font-size:1.08rem}.article-figure{margin:1.7rem 0}.article-figure figcaption{margin-top:.7rem;color:var(--soft);font-size:.94rem}.video-wrap{margin:1.8rem 0}.mini-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin:1.6rem 0}.mini-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.15rem}.mini-card strong{display:block;color:var(--text);margin-bottom:.35rem}.quote{border-left:4px solid var(--amber);background:rgba(245,158,11,.06);padding:1.1rem 1.2rem;border-radius:0 14px 14px 0;margin:1.5rem 0;color:var(--text)}.tags{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}.tag{padding:.5rem .95rem;background:var(--card);border:1px solid var(--border);border-radius:999px;font-size:.84rem;color:var(--muted)}@media(max-width:768px){h1{font-size:1.74rem}.container{padding:1.5rem 1rem}}
+    </style>
+</head>
+<body>
+<div class="container">
+<article>
+<header class="article-header">
+    <span class="category-badge"><i class="fas fa-cube"></i> Ethereum Tools</span>
+    <h1>Etherscan Làm Mới Tab Contract: Từ Chỗ Chỉ Đọc Code Sang Trải Nghiệm Gần Giống IDE</h1>
+    <div class="meta">
+        <span><i class="far fa-calendar"></i> 09/04/2026</span>
+        <span><i class="far fa-clock"></i> 6 phút đọc</span>
+        <span><i class="far fa-folder"></i> Etherscan, Ethereum</span>
+    </div>
+    <img class="hero-image" src="/images/etherscan-contract-tab-revamp-hero.png" alt="Etherscan contract tab revamp">
+</header>
+<div class="article-content">
+    <div class="highlight-box">
+        <h4>⚡ Tóm tắt nhanh</h4>
+        <p style="margin-bottom:0">Etherscan vừa làm mới tab <strong>Contract</strong>. Thay đổi lớn nhất là phần xem mã nguồn giờ trông và hoạt động gần giống một IDE nhẹ: có cây file, tab nhiều file, outline để nhảy nhanh giữa các hàm, search theo từ khoá, cùng giao diện read/write contract gọn hơn. Nghe như chuyện UI, nhưng thật ra đây là nâng cấp khá đáng giá cho dev, auditor và cả người dùng DeFi thích tự soi hợp đồng.</p>
+    </div>
+
+    <h2>Etherscan đang đổi gì?</h2>
+    <p>Trước đây, mở source code trên Etherscan thường là một trải nghiệm hơi cực hình: kéo lên kéo xuống khá nhiều, file dài thì nhìn ngợp, muốn nhảy sang chỗ khác cũng không thật sự thoải mái. Bản làm mới lần này đi đúng vào nỗi đau đó.</p>
+    <p>Phần tab Contract giờ được tách rõ hơn thành hai lớp: <strong>xem code cho dễ</strong> và <strong>đọc/ghi function cho rõ</strong>. Nói dân dã: Etherscan đang biến chỗ “xem contract cho có” thành chỗ “xài được thật”.</p>
+
+    <div class="mini-grid">
+        <div class="mini-card"><strong>Code browser kiểu IDE</strong><span>File tree, multi-file tabs, outline hàm, keyword search.</span></div>
+        <div class="mini-card"><strong>Read/Write rõ ràng hơn</strong><span>Giao diện bớt rối, dễ hiểu hơn khi tương tác contract.</span></div>
+        <div class="mini-card"><strong>Mở sang công cụ khác</strong><span>Có đường sang BlockscanHQ hoặc Ethereum Remix với exact match contracts.</span></div>
+    </div>
+
+    <h2>Phần đáng tiền nhất là trình duyệt code mới</h2>
+    <p>Ở thread này, Etherscan nhấn mạnh nhất vào phần <strong>IDE-style code browser</strong>. Thứ đó gồm 4 mảnh chính:</p>
+    <ul>
+        <li><strong>File tree</strong> để thấy toàn bộ file trong contract project thay vì nhìn một cục code liền.</li>
+        <li><strong>Multi-file tabs</strong> để mở nhiều file cùng lúc, đổi qua lại nhanh như VS Code bản mini.</li>
+        <li><strong>Contract outline</strong> để nhảy thẳng tới function hoặc section quan trọng.</li>
+        <li><strong>Keyword search</strong> để tìm biến, hàm, hay logic liên quan trong project.</li>
+    </ul>
+
+    <figure class="article-figure">
+        <img src="/images/etherscan-contract-tab-revamp-browser.png" alt="Etherscan code browser multi-file tabs">
+        <figcaption>Giao diện code browser mới cho thấy Etherscan không còn muốn chỉ là chỗ hiển thị source code. Họ đang đẩy nó thành một công cụ đọc contract nghiêm túc hơn.</figcaption>
+    </figure>
+
+    <div class="quote">Đây là kiểu cải tiến nhìn qua tưởng nhỏ, nhưng ai từng mở một contract dài vài nghìn dòng trên explorer sẽ hiểu: đỡ cuộn chuột vô nghĩa là đỡ bực hẳn.</div>
+
+    <h2>Video demo cho thấy trải nghiệm đã mượt hơn rõ</h2>
+    <p>Tweet thứ hai trong thread đi kèm video demo. Nó cho thấy cách người dùng có thể đổi file, nhảy theo outline và xem nhiều phần của project mà không còn bị kẹt trong một khung code phẳng lì như trước.</p>
+    <div class="video-wrap">
+        <video controls playsinline preload="metadata" poster="/images/etherscan-contract-tab-revamp-video_thumb.jpg">
+            <source src="/videos/etherscan-contract-tab-revamp-demo.mp4" type="video/mp4">
+        </video>
+    </div>
+    <p>Điểm quan trọng ở đây không chỉ là “đẹp hơn”. Nó giúp việc kiểm tra contract bớt ma sát hơn, nhất là với những protocol lớn có nhiều file, nhiều interface, nhiều thư viện đi kèm.</p>
+
+    <h2>Không chỉ xem code, Etherscan còn muốn nối thẳng sang nơi chỉnh sửa</h2>
+    <p>Etherscan cũng thêm tuỳ chọn mở contract trong <strong>BlockscanHQ</strong> hoặc <strong>Ethereum Remix</strong> với các contract khớp chính xác. Đây là bước đi khá hợp lý: explorer không cần ôm hết mọi thứ, nhưng nên trở thành cửa ngõ tốt để đi sang nơi làm việc sâu hơn.</p>
+
+    <figure class="article-figure">
+        <img src="/images/etherscan-contract-tab-revamp-blockscan.png" alt="Etherscan open in BlockscanHQ">
+        <figcaption>Một phần của bản nâng cấp là kết nối sang BlockscanHQ để tiếp tục đọc hoặc chỉnh sửa trong môi trường phù hợp hơn.</figcaption>
+    </figure>
+
+    <figure class="article-figure">
+        <img src="/images/etherscan-contract-tab-revamp-remix.png" alt="Etherscan open in Ethereum Remix">
+        <figcaption>Khả năng mở sang Remix khiến flow của dev mượt hơn: xem trên explorer, rồi nhảy sang môi trường dev nếu cần đào sâu hoặc thử chỉnh.</figcaption>
+    </figure>
+
+    <h2>Tab Read / Write Contract cũng được dọn lại cho dễ thở</h2>
+    <p>Phần thứ hai trong thread là <strong>read/write contract tabs</strong> được làm mới. Đây là chỗ cực nhiều người dùng bình thường sẽ đụng tới, nhất là khi cần đọc dữ liệu từ contract hoặc bấm tương tác trực tiếp qua ví.</p>
+    <p>Etherscan nói thẳng mục tiêu là <strong>cleaner UI/UX</strong> để người dùng hiểu function tốt hơn và tương tác đỡ rối hơn. Với mấy contract có nhiều method, đó là khác biệt không nhỏ.</p>
+
+    <figure class="article-figure">
+        <img src="/images/etherscan-contract-tab-revamp-readwrite.png" alt="Etherscan refreshed read write contract tabs">
+        <figcaption>Phần read/write contract mới rõ ràng hơn, gọn hơn, và nhìn bớt “đồ nghề cho người trong nghề” hơn trước.</figcaption>
+    </figure>
+
+    <div class="highlight-green">
+        <h4>✅ Vì sao thay đổi này đáng chú ý?</h4>
+        <ul style="margin-bottom:0">
+            <li><strong>Dev</strong> đỡ mất thời gian khi lần theo một contract nhiều file.</li>
+            <li><strong>Auditor / researcher</strong> dễ rà logic hơn ngay trên explorer.</li>
+            <li><strong>Người dùng DeFi</strong> có cơ hội kiểm chứng contract thuận tay hơn thay vì chỉ tin giao diện của dự án.</li>
+            <li><strong>Etherscan</strong> giữ người dùng lâu hơn trong hệ sinh thái tool của mình, thay vì chỉ làm điểm dừng trung chuyển.</li>
+        </ul>
+    </div>
+
+    <h2>Ý nghĩa lớn hơn: explorer đang tiến gần hơn tới “workspace”</h2>
+    <p>Nếu nhìn rộng hơn, đây là tín hiệu cho thấy blockchain explorer không còn muốn chỉ là nơi tra cứu transaction hay copy contract address. Những sản phẩm như Etherscan đang dần biến thành lớp giao diện làm việc thật sự cho on-chain power users.</p>
+    <p>Điều này hợp lý. Càng nhiều hoạt động on-chain phức tạp, người dùng càng cần một chỗ để <strong>xem, hiểu, kiểm tra và tương tác</strong> mà không phải nhảy qua quá nhiều tab. Etherscan có sẵn traffic, có sẵn niềm tin thương hiệu, nên nâng cấp theo hướng này là khá khôn.</p>
+
+    <h2>Kết luận</h2>
+    <p>Bản revamp này chưa phải kiểu thay đổi làm rung chuyển cả thị trường, nhưng nó là một nâng cấp rất thực dụng. Với Etherscan, đó là cách giữ vị thế mặc định của mình trong hệ Ethereum. Với người dùng, đó là một trải nghiệm bớt khó chịu và hữu ích hơn hẳn khi phải soi smart contract.</p>
+    <p>Nói gọn: <strong>Etherscan đang làm tab Contract bớt giống một trang dump code, và giống một công cụ làm việc thực thụ hơn.</strong></p>
+
+    <div class="back-to-blog-footer">
+        <a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+    </div>
+
+    <div class="tags">
+        <span class="tag">#Etherscan</span>
+        <span class="tag">#Ethereum</span>
+        <span class="tag">#SmartContract</span>
+        <span class="tag">#BlockExplorer</span>
+        <span class="tag">#DeFiTools</span>
+    </div>
+</div>
+</article>
+</div>
+</body>
+</html>

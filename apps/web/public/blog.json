@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/etherscan-contract-tab-revamp",
+    "title": "Etherscan Làm Mới Tab Contract: Từ Chỗ Chỉ Đọc Code Sang Trải Nghiệm Gần Giống IDE",
+    "excerpt": "Etherscan vừa nâng cấp tab Contract với code browser kiểu IDE, multi-file tabs, outline hàm và giao diện read/write rõ ràng hơn. Một thay đổi nhỏ về UI nhưng rất đáng tiền với dev, auditor và người dùng DeFi thích tự kiểm chứng.",
+    "date": "Apr 09, 2026",
+    "tag": "Etherscan",
+    "tagIcon": "fas fa-cube",
+    "tagColor": "#60a5fa",
+    "readTime": "6 min read",
+    "featured": true,
+    "image": "/images/etherscan-contract-tab-revamp-hero.png"
+  },
+  {
     "url": "/blog/anthropic-managed-agents-brain-hands",
     "title": "Managed Agents Của Anthropic: Vì Sao Họ Tách “Bộ Não” Khỏi “Đôi Tay” Của Agent?",
     "excerpt": "Anthropic đang giải quyết bài toán rất thực tế của agent: làm sao để phần suy nghĩ và phần thao tác không dính chặt vào nhau. Kết quả là hệ thống có thể nhanh hơn, ổn hơn và an toàn hơn.",
