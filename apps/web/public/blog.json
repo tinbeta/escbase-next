@@ -1,6 +1,18 @@
 [
   {
-    "url": "/blog/arc-open-source-bug-bounty",
+    "url": "/blog/shopify-ai-toolkit",
+    "title": "Shopify AI Toolkit: Shopify Muốn Biến Claude Code, Codex Và Cursor Thành Bảng Điều Khiển Cửa Hàng",
+    "excerpt": "Shopify vừa tung AI Toolkit để kết nối các AI coding agents như Claude Code, Codex, Cursor, Gemini CLI và VS Code trực tiếp với nền tảng Shopify. Đây là nước đi nghiêm túc để biến agent thành lớp điều khiển mới cho vận hành e-commerce.",
+    "date": "Apr 10, 2026",
+    "tag": "Shopify & AI",
+    "tagIcon": "fas fa-store",
+    "tagColor": "#22c55e",
+    "readTime": "6 min read",
+    "featured": true,
+    "image": "/og-default.png"
+  },
+  {
+    "url": "/blog/arc-open-source-bug-bounty", 
     "title": "Arc Mở Mã Nguồn Testnet, Cho Chạy Node Và Treo Bug Bounty Trước Mainnet",
     "excerpt": "Arc vừa công bố 3 bước quan trọng trước mainnet: open source testnet code, mở bug bounty trên HackerOne và cho developer tự chạy Arc node. Đây là cách mở rộng kiểm thử trước khi vốn thật vào mạng lưới.",
     "date": "Apr 09, 2026",
