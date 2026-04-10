@@ -1,0 +1,53 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#09090B"/>
+  <circle cx="1080" cy="92" r="220" fill="#22C55E" fill-opacity="0.12"/>
+  <circle cx="142" cy="560" r="250" fill="#60A5FA" fill-opacity="0.10"/>
+  <rect x="52" y="52" width="1096" height="526" rx="32" fill="#111315" stroke="#27272A"/>
+
+  <rect x="86" y="92" width="572" height="446" rx="28" fill="url(#panelGlow)" stroke="#2A2F33"/>
+  <rect x="86" y="92" width="572" height="76" rx="28" fill="#151A1E"/>
+  <circle cx="126" cy="130" r="8" fill="#EF4444"/>
+  <circle cx="152" cy="130" r="8" fill="#F59E0B"/>
+  <circle cx="178" cy="130" r="8" fill="#22C55E"/>
+  <text x="210" y="137" fill="#A1A1AA" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600">Shopify AI Toolkit</text>
+
+  <text x="122" y="226" fill="#FAFAFA" font-family="Inter, Arial, sans-serif" font-size="64" font-weight="800">SHOPIFY</text>
+  <text x="122" y="292" fill="#4ADE80" font-family="Inter, Arial, sans-serif" font-size="64" font-weight="800">AI TOOLKIT</text>
+  <text x="122" y="350" fill="#D4D4D8" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="500">Biến Claude Code, Codex, Cursor thành</text>
+  <text x="122" y="388" fill="#D4D4D8" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="500">bảng điều khiển mới cho store ops</text>
+
+  <rect x="122" y="430" width="190" height="44" rx="22" fill="#16A34A" fill-opacity="0.18" stroke="#22C55E"/>
+  <text x="152" y="458" fill="#86EFAC" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">Commerce + Agent</text>
+
+  <rect x="706" y="96" width="404" height="172" rx="26" fill="#12171B" stroke="#2B3136"/>
+  <text x="742" y="140" fill="#FAFAFA" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">Favorite agents</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700">
+    <rect x="742" y="164" width="144" height="42" rx="21" fill="#1F2937" stroke="#374151"/>
+    <text x="766" y="192" fill="#E5E7EB">Claude Code</text>
+    <rect x="898" y="164" width="94" height="42" rx="21" fill="#1F2937" stroke="#374151"/>
+    <text x="925" y="192" fill="#E5E7EB">Codex</text>
+    <rect x="742" y="216" width="98" height="42" rx="21" fill="#1F2937" stroke="#374151"/>
+    <text x="768" y="244" fill="#E5E7EB">Cursor</text>
+    <rect x="852" y="216" width="90" height="42" rx="21" fill="#1F2937" stroke="#374151"/>
+    <text x="879" y="244" fill="#E5E7EB">VS Code</text>
+  </g>
+
+  <rect x="706" y="288" width="404" height="250" rx="26" fill="#12171B" stroke="#2B3136"/>
+  <text x="742" y="332" fill="#FAFAFA" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">Agent actions</text>
+
+  <rect x="742" y="356" width="332" height="42" rx="14" fill="#0F172A" stroke="#1E293B"/>
+  <text x="764" y="384" fill="#93C5FD" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600">✓ Docs + API schemas</text>
+  <rect x="742" y="410" width="332" height="42" rx="14" fill="#0B1A13" stroke="#1F3A2B"/>
+  <text x="764" y="438" fill="#86EFAC" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600">✓ Code validation</text>
+  <rect x="742" y="464" width="332" height="42" rx="14" fill="#1A130B" stroke="#3A2A1F"/>
+  <text x="764" y="492" fill="#FCD34D" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600">✓ Store execute via CLI</text>
+
+  <text x="86" y="606" fill="#71717A" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="600">escbase.xyz</text>
+
+  <defs>
+    <linearGradient id="panelGlow" x1="86" y1="92" x2="658" y2="538" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#151A1E"/>
+      <stop offset="1" stop-color="#0F1115"/>
+    </linearGradient>
+  </defs>
+</svg>
