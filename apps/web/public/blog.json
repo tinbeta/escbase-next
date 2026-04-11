@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/openclaw-2026-4-10-changelog-chi-tiet",
+    "title": "OpenClaw 2026.4.10 Changelog Chi Tiết: Toàn Cảnh Những Thay Đổi Quan Trọng Nhất",
+    "excerpt": "Phân tích chi tiết changelog OpenClaw 2026.4.10 từ GitHub: Active Memory, Codex harness, MLX Talk, hàng loạt bản vá bảo mật và những cải tiến đa kênh đáng chú ý.",
+    "date": "Apr 11, 2026",
+    "tag": "OpenClaw AI",
+    "tagIcon": "fas fa-terminal",
+    "tagColor": "#60a5fa",
+    "readTime": "9 min read",
+    "featured": true,
+    "image": "/images/openclaw-2026-4-9-release-thumb.png"
+  },
+  {
     "url": "/blog/openclaw-2026-4-10-release",
     "title": "OpenClaw 2026.4.10: Active Memory, MLX Talk Và Tốc Độ Ship Không Ngừng Nghỉ",
     "excerpt": "OpenClaw 2026.4.10 ra mắt Active Memory plugin, local MLX Talk mode trên macOS, Codex app-server harness và hàng loạt bản vá bảo mật. Bản release cho thấy họ đang chuyển từ thử nghiệm sang nền tảng agent nghiêm túc.",
