@@ -515,8 +515,9 @@
         const onlineBadge = document.getElementById('liveReadersBadge');
         const onlineCount = document.getElementById('liveReadersCount');
         const ONLINE_VISITOR_KEY = 'escbase_live_visitor_id';
-        const ONLINE_HEARTBEAT_MS = 25000;
+        const ONLINE_HEARTBEAT_MS = 15000;
         let onlineHeartbeatTimer = null;
+        let onlineVisibilityTimer = null;
 
         function getOnlineVisitorId() {
             try {
@@ -531,14 +532,26 @@
             }
         }
 
+        async function sendOnlinePresence(action = 'ping', useBeacon = false) {
+            const url = `/api/online-now?visitorId=${encodeURIComponent(getOnlineVisitorId())}&path=${encodeURIComponent(location.pathname)}&action=${encodeURIComponent(action)}`;
+
+            if (useBeacon && navigator.sendBeacon) {
+                navigator.sendBeacon(url);
+                return null;
+            }
+
+            const response = await fetch(url, {
+                cache: 'no-store',
+                keepalive: action === 'leave'
+            });
+            return response.json();
+        }
+
         async function updateOnlineReaders() {
             if (!onlineBadge || !onlineCount) return;
 
             try {
-                const response = await fetch(`/api/online-now?visitorId=${encodeURIComponent(getOnlineVisitorId())}&path=${encodeURIComponent(location.pathname)}`, {
-                    cache: 'no-store'
-                });
-                const data = await response.json();
+                const data = await sendOnlinePresence('ping');
                 const count = Number.isFinite(data?.onlineNow) ? data.onlineNow : null;
 
                 if (count == null) throw new Error('invalid_online_count');
@@ -551,8 +564,36 @@
             }
         }
 
-        updateOnlineReaders();
-        onlineHeartbeatTimer = setInterval(updateOnlineReaders, ONLINE_HEARTBEAT_MS);
+        function clearOnlineTimers() {
+            if (onlineHeartbeatTimer) clearInterval(onlineHeartbeatTimer);
+            if (onlineVisibilityTimer) clearTimeout(onlineVisibilityTimer);
+        }
+
+        function startOnlineHeartbeat() {
+            clearOnlineTimers();
+            updateOnlineReaders();
+            onlineHeartbeatTimer = setInterval(updateOnlineReaders, ONLINE_HEARTBEAT_MS);
+        }
+
+        async function handlePageLeave() {
+            clearOnlineTimers();
+            try {
+                await sendOnlinePresence('leave', true);
+            } catch (_) {}
+        }
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.visibilityState === 'hidden') {
+                handlePageLeave();
+            } else {
+                startOnlineHeartbeat();
+            }
+        });
+
+        window.addEventListener('pagehide', handlePageLeave);
+        window.addEventListener('beforeunload', handlePageLeave);
+
+        startOnlineHeartbeat();
     </script>
 </body>
 

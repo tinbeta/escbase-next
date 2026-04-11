@@ -1,4 +1,4 @@
-const WINDOW_SECONDS = 120;
+const WINDOW_SECONDS = 45;
 const HEARTBEAT_PREFIX = 'escbase:presence:';
 
 function json(res, status, payload) {
@@ -30,22 +30,33 @@ function pruneMemoryStore(store, cutoffMs) {
   }
 }
 
-async function updateWithUpstash(visitorId, path, nowMs) {
+async function updateWithUpstash(visitorId, path, nowMs, action = 'ping') {
   const baseUrl = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL;
   const token = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN;
   if (!baseUrl || !token) return null;
 
   const headers = { Authorization: `Bearer ${token}` };
   const key = `${HEARTBEAT_PREFIX}${visitorId}`;
-  const payload = JSON.stringify({ lastSeen: nowMs, path });
 
-  const setResponse = await fetch(`${baseUrl}/set/${encodeURIComponent(key)}/${encodeURIComponent(payload)}?EX=${WINDOW_SECONDS}`, {
-    method: 'POST',
-    headers,
-  });
+  if (action === 'leave') {
+    const delResponse = await fetch(`${baseUrl}/del/${encodeURIComponent(key)}`, {
+      method: 'POST',
+      headers,
+    });
 
-  if (!setResponse.ok) {
-    throw new Error(`presence_set_failed:${setResponse.status}`);
+    if (!delResponse.ok) {
+      throw new Error(`presence_del_failed:${delResponse.status}`);
+    }
+  } else {
+    const payload = JSON.stringify({ lastSeen: nowMs, path });
+    const setResponse = await fetch(`${baseUrl}/set/${encodeURIComponent(key)}/${encodeURIComponent(payload)}?EX=${WINDOW_SECONDS}`, {
+      method: 'POST',
+      headers,
+    });
+
+    if (!setResponse.ok) {
+      throw new Error(`presence_set_failed:${setResponse.status}`);
+    }
   }
 
   const keysResponse = await fetch(`${baseUrl}/keys/${encodeURIComponent(`${HEARTBEAT_PREFIX}*`)}`, {
@@ -61,10 +72,16 @@ async function updateWithUpstash(visitorId, path, nowMs) {
   return { onlineNow: result, storage: 'upstash-rest' };
 }
 
-async function updateWithMemory(visitorId, path, nowMs) {
+async function updateWithMemory(visitorId, path, nowMs, action = 'ping') {
   const store = getMemoryStore();
   const cutoffMs = nowMs - WINDOW_SECONDS * 1000;
-  store.set(visitorId, { path, lastSeen: nowMs });
+
+  if (action === 'leave') {
+    store.delete(visitorId);
+  } else {
+    store.set(visitorId, { path, lastSeen: nowMs });
+  }
+
   pruneMemoryStore(store, cutoffMs);
   return { onlineNow: store.size, storage: 'memory-fallback' };
 }
@@ -75,6 +92,7 @@ export default async function handler(req, res) {
   try {
     const visitorId = sanitizeVisitorId(req.query?.visitorId);
     const path = sanitizePath(req.query?.path);
+    const action = req.query?.action === 'leave' ? 'leave' : 'ping';
 
     if (!visitorId) {
       return json(res, 400, { error: 'missing_visitor_id' });
@@ -84,13 +102,13 @@ export default async function handler(req, res) {
     let result = null;
 
     try {
-      result = await updateWithUpstash(visitorId, path, nowMs);
+      result = await updateWithUpstash(visitorId, path, nowMs, action);
     } catch (error) {
       console.error('[online-now] upstash error:', error);
     }
 
     if (!result) {
-      result = await updateWithMemory(visitorId, path, nowMs);
+      result = await updateWithMemory(visitorId, path, nowMs, action);
     }
 
     return json(res, 200, {
@@ -98,6 +116,7 @@ export default async function handler(req, res) {
       storage: result.storage,
       windowSeconds: WINDOW_SECONDS,
       path,
+      action,
       updatedAt: new Date(nowMs).toISOString(),
     });
   } catch (error) {
