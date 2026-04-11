@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/okx-ventures-caex-viet-nam",
+    "title": "OKX Ventures Rót Vào CAEX: Việt Nam Đang Ép Crypto Đi Vào Sân Chơi Có Giấy Phép",
+    "excerpt": "OKX Ventures đầu tư chiến lược vào CAEX để hỗ trợ sàn này tham gia chương trình thí điểm giao dịch crypto có quản lý tại Việt Nam. Đây không chỉ là một deal vốn, mà là tín hiệu dòng tiền đang nghiêng về các nền tảng compliant.",
+    "date": "Apr 11, 2026",
+    "tag": "Pháp lý Crypto Việt Nam",
+    "tagIcon": "fas fa-landmark",
+    "tagColor": "#2563eb",
+    "readTime": "6 min read",
+    "featured": true,
+    "image": "/images/okx-ventures-caex-thumb.jpg"
+  },
+  {
     "url": "/blog/minimax-mmx-cli",
     "title": "MiniMax MMX-CLI: Khi AI Agent Không Còn Chỉ Biết Gõ Chữ",
     "excerpt": "MiniMax vừa ra mắt MMX-CLI để cho AI agent thêm 7 giác quan: image, video, speech, music, vision, search và conversation. Đây không chỉ là thêm tool, mà là cách biến agent thành giao diện đa phương thức thật sự.",
