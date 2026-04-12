@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenClaw 2026.4.11: Ít Tính Năng Mới Hơn 2026.4.10, Nhưng Siết Stability Và Cleanup Mạnh Hơn | Escbase</title>
-    <meta name="description" content="So với OpenClaw 2026.4.10, bản 2026.4.11 ít headline feature hơn nhưng tập trung siết stability, cleanup và sửa các điểm đau thực tế ở routing, subagents, OAuth, webchat và chat integrations.">
-    <meta property="og:title" content="OpenClaw 2026.4.11: Ít Tính Năng Mới Hơn 2026.4.10, Nhưng Siết Stability Và Cleanup Mạnh Hơn">
-    <meta property="og:description" content="Nếu 2026.4.10 là bản mở capability như Active Memory và Codex harness, thì 2026.4.11 là bản siết nền: cleanup, reliability, parity gate và một loạt bản vá production hơn.">
+    <title>OpenClaw 2026.4.11: ChatGPT Import, Richer Webchat Và Một Đợt Siết Stability Rất Mạnh | Escbase</title>
+    <meta name="description" content="OpenClaw 2026.4.11 bổ sung ChatGPT import, webchat rich output, mở rộng video generation, plugin manifests và đồng thời siết mạnh stability, cleanup, routing, OAuth cùng nhiều lỗi production.">
+    <meta property="og:title" content="OpenClaw 2026.4.11: ChatGPT Import, Richer Webchat Và Một Đợt Siết Stability Rất Mạnh">
+    <meta property="og:description" content="Bản 2026.4.11 có thêm ChatGPT import, rich output trong webchat, plugin manifests và nhiều cải tiến hữu dụng khác, đồng thời đẩy mạnh cleanup, reliability và production fixes.">
     <meta property="og:image" content="https://escbase.xyz/images/openclaw-2026-4-11-release-thumb.png">
     <meta property="og:url" content="https://escbase.xyz/blog/openclaw-2026-4-11-release/">
     <meta name="twitter:card" content="summary_large_image">
@@ -25,7 +25,7 @@
         <article>
             <header class="article-header">
                 <span class="category-badge"><i class="fas fa-terminal"></i> OpenClaw AI</span>
-                <h1>OpenClaw 2026.4.11: Ít Tính Năng Mới Hơn 2026.4.10, Nhưng Siết Stability Và Cleanup Mạnh Hơn</h1>
+                <h1>OpenClaw 2026.4.11: ChatGPT Import, Richer Webchat Và Một Đợt Siết Stability Rất Mạnh</h1>
                 <div class="meta">
                     <span><i class="far fa-calendar"></i> 12/04/2026</span>
                     <span><i class="far fa-clock"></i> 7 phút đọc</span>
@@ -37,29 +37,12 @@
             <div class="article-content">
                 <div class="highlight-box">
                     <h4>🧠 Tóm tắt nhanh</h4>
-                    <p style="margin-bottom:0">Nếu <strong>OpenClaw 2026.4.10</strong> là bản mở capability với Active Memory, Codex harness và MLX Talk, thì <strong>2026.4.11</strong> là một bản <strong>polish + stability release</strong> rõ rệt hơn: ít tính năng headline hơn, nhưng siết mạnh phần reliability, cleanup, routing, OAuth, webchat và chat integrations. Đây là kiểu bản update không hào nhoáng, nhưng lại đúng thứ người dùng production cần.</p>
+                    <p style="margin-bottom:0">OpenClaw 2026.4.11 không phải bản chỉ có bugfix. Nó vẫn có các cập nhật đáng kể như <strong>ChatGPT import vào Dreaming/memory-wiki</strong>, <strong>rich output trong webchat</strong>, mở rộng <strong>video generation</strong>, <strong>plugin manifests</strong> và cải tiến cho <strong>Teams/Feishu</strong>. Nhưng song song với đó là một đợt <strong>siết stability + cleanup</strong> rất mạnh ở routing, OAuth, subagents, timeouts và chat integrations.</p>
                 </div>
 
-                <p>Nếu đọc hai release sát nhau, sự khác biệt khá rõ: <strong>2026.4.10 là bản mở rộng capability</strong>, còn <strong>2026.4.11 là bản siết nền</strong>. Nó không cố gây wow bằng feature khủng. Nó vá, làm sạch, và dựng thêm mấy cái lan can an toàn ở đúng chỗ thường gây đau đầu nhất khi chạy agent thật.</p>
+                <p>Nhìn tổng thể, đây là một bản update có hai lớp rõ ràng: <strong>lớp trên là các capability mới hữu dụng hơn</strong>, còn <strong>lớp dưới là một đợt siết nền để hệ thống bớt vỡ khi chạy thật</strong>. Chính vì vậy, bài này nên đọc từ phần cập nhật mới trước, rồi mới xuống phần so với bản cũ.</p>
 
-                <h2>So với 2026.4.10, 2026.4.11 khác gì?</h2>
-
-                <p>Đây mới là so sánh nên đứng đầu bài.</p>
-
-                <ul>
-                    <li><strong>2026.4.10:</strong> thêm những capability dễ nhìn thấy ngay như <strong>Active Memory</strong>, <strong>bundled Codex provider/harness</strong>, <strong>MLX Talk</strong>, video generation updates và nhiều thay đổi lớn ở QA/live transport.</li>
-                    <li><strong>2026.4.11:</strong> không bùng nổ feature theo kiểu đó, mà tập trung vào <strong>cleanup, stability, reliability và production polish</strong>.</li>
-                    <li><strong>2026.4.10:</strong> cho cảm giác “OpenClaw đang mở thêm sức mạnh mới”.</li>
-                    <li><strong>2026.4.11:</strong> cho cảm giác “OpenClaw đang cố làm cho đống sức mạnh đó bớt vỡ mặt khi chạy thật”.</li>
-                </ul>
-
-                <div class="quote-block">
-                    Nói gọn: 2026.4.10 là bản mở capability. 2026.4.11 là bản làm cho capability đó dùng được tử tế hơn.
-                </div>
-
-                <p>Đó là lý do bản 2026.4.11 nhìn ít wow hơn, nhưng với người dùng production thì lại rất đáng giá. Nó sửa đúng những thứ làm agent mất điểm nhất: sign-in lỗi, routing lệch, child chatter bị rò, timeout sai, media/tool pairing lộn xộn và các lỗi chat integration rất đời thường.</p>
-
-                <h2>OpenClaw thực sự announce cái gì?</h2>
+                <h2>Những cập nhật mới đáng chú ý nhất của 2026.4.11</h2>
 
                 <p>Tweet gốc của OpenClaw nói rất rõ đây là một <strong>“big polish drop for stability”</strong> với 5 cụm chính:</p>
 
@@ -71,7 +54,7 @@
                     <li>chunky cleanup pass</li>
                 </ul>
 
-                <p>Nếu chỉ đọc tweet, người ta dễ nghĩ đây là một bản vá linh tinh. Nhưng release notes cho thấy 2026.4.11 vẫn có vài thay đổi đáng kể — chỉ là nó không mang tinh thần “mở tính năng mới lớn” như 2026.4.10:</p>
+                <p>Nếu chỉ đọc tweet, người ta dễ nghĩ đây là một bản vá linh tinh. Nhưng release notes cho thấy 2026.4.11 vẫn có vài thay đổi mới khá đáng giá:</p>
 
                 <ul>
                     <li><strong>ChatGPT import ingestion</strong> vào Dreaming/memory-wiki — biến chat export cũ thành memory hữu dụng.</li>
@@ -80,8 +63,6 @@
                     <li><strong>plugin manifests</strong> có thể tự mô tả activation và setup descriptors.</li>
                     <li><strong>Teams + Feishu</strong> được mở rộng reaction support và document-thread workflows.</li>
                 </ul>
-
-                <h2>Ngoài cleanup, điểm mới nào của 2026.4.11 đáng giữ lại?</h2>
 
                 <div class="highlight-box-green">
                     <h4>📌 5 tác động thực tế</h4>
@@ -92,6 +73,19 @@
                         <li><strong>Plugin setup bớt mù mờ:</strong> plugin tự khai báo auth/config needs thay vì bắt user đi mò docs.</li>
                         <li><strong>Chat integrations usable hơn:</strong> Teams, Feishu, WhatsApp, Telegram, Matrix đều được vá đúng các luồng dùng thật.</li>
                     </ul>
+                </div>
+
+                <h2>So với 2026.4.10, 2026.4.11 khác gì?</h2>
+
+                <ul>
+                    <li><strong>2026.4.10:</strong> thêm những capability dễ nhìn thấy ngay như <strong>Active Memory</strong>, <strong>bundled Codex provider/harness</strong>, <strong>MLX Talk</strong>, video generation updates và nhiều thay đổi lớn ở QA/live transport.</li>
+                    <li><strong>2026.4.11:</strong> vẫn có cập nhật mới, nhưng trọng tâm đã chuyển sang <strong>cleanup, stability, reliability và production polish</strong>.</li>
+                    <li><strong>2026.4.10:</strong> cho cảm giác “OpenClaw đang mở thêm sức mạnh mới”.</li>
+                    <li><strong>2026.4.11:</strong> cho cảm giác “OpenClaw đang cố làm cho đống sức mạnh đó bớt vỡ mặt khi chạy thật”.</li>
+                </ul>
+
+                <div class="quote-block">
+                    Nói gọn: 2026.4.10 mở rộng capability. 2026.4.11 vừa thêm vài capability hữu dụng, vừa siết lại để cả hệ thống vận hành tử tế hơn.
                 </div>
 
                 <h2>Phần fixes đáng tiền nằm ở đâu?</h2>
