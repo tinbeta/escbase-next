@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MiniMax M2.7 Open Source: Khi Cuộc Chơi Agent Không Còn Chỉ Là Sân Củа Model Đóng | Escbase</title>
+    <title>MiniMax M2.7 Open Source: Khi Cuộc Chơi Agent Không Còn Chỉ Là Sân Của Model Đóng | Escbase</title>
     <meta name="description" content="MiniMax vừa open source M2.7 với benchmark mạnh ở SWE-Pro, Terminal Bench 2 và office tasks. Điểm đáng nói không chỉ là benchmark, mà là cách họ định vị M2.7 như một model dành cho agent tự tiến hóa.">
-    <meta property="og:title" content="MiniMax M2.7 Open Source: Khi Cuộc Chơi Agent Không Còn Chỉ Là Sân Củа Model Đóng">
+    <meta property="og:title" content="MiniMax M2.7 Open Source: Khi Cuộc Chơi Agent Không Còn Chỉ Là Sân Của Model Đóng">
     <meta property="og:description" content="MiniMax M2.7 được open source trên Hugging Face với thông điệp rất rõ: model này không chỉ giỏi code, mà còn được thiết kế để tự cải thiện harness và làm việc trong môi trường agent phức tạp.">
     <meta property="og:image" content="https://escbase.xyz/images/minimax-m27-open-source-thumb.jpg">
     <meta property="og:url" content="https://escbase.xyz/blog/minimax-m27-open-source/">
@@ -25,7 +25,7 @@
         <article>
             <header class="article-header">
                 <span class="category-badge"><i class="fas fa-robot"></i> Open Models & Agents</span>
-                <h1>MiniMax M2.7 Open Source: Khi Cuộc Chơi Agent Không Còn Chỉ Là Sân Củа Model Đóng</h1>
+                <h1>MiniMax M2.7 Open Source: Khi Cuộc Chơi Agent Không Còn Chỉ Là Sân Của Model Đóng</h1>
                 <div class="meta">
                     <span><i class="far fa-calendar"></i> 12/04/2026</span>
                     <span><i class="far fa-clock"></i> 7 phút đọc</span>
@@ -37,7 +37,7 @@
             <div class="article-content">
                 <div class="highlight-box">
                     <h4>🧠 Tóm tắt nhanh</h4>
-                    <p style="margin-bottom:0">MiniMax vừa <strong>open source M2.7</strong> trên Hugging Face với thông điệp không vòng vo: model này mạnh ở <strong>software engineering, office productivity và agent workflows</strong>. Nhưng thứ đáng bàn hơn benchmark là cách MiniMax kể câu chuyện về <strong>model tự tham gia vào quá trình tiến hóa của chính nó</strong> — một narrative rất hợp thờii trong làn sóng AI agents hiện tại.</p>
+                    <p style="margin-bottom:0">MiniMax vừa <strong>open source M2.7</strong> trên Hugging Face với thông điệp không vòng vo: model này mạnh ở <strong>software engineering, office productivity và agent workflows</strong>. Nhưng thứ đáng bàn hơn benchmark là cách MiniMax kể câu chuyện về <strong>model tự tham gia vào quá trình tiến hóa của chính nó</strong> — một narrative rất hợp thời trong làn sóng AI agents hiện tại.</p>
                 </div>
 
                 <p>Open source model không còn là chuyện hiếm. Nhưng <strong>open source một model được định vị rõ như một “agent-native model”</strong> thì khác. Ở M2.7, MiniMax không chỉ nói model này biết code tốt. Họ đang nói nó có thể tham gia xây harness, quản lý memory, chạy thí nghiệm, tối ưu workflow và tự cải thiện cách làm việc của chính nó.</p>
@@ -58,31 +58,32 @@
                     <li><strong>Character consistency + EQ:</strong> mở đường cho các sản phẩm mang tính persona hoặc tương tác dài hạn hơn.</li>
                 </ul>
 
-                <p>Con số benchmark trong ảnh không chỉ khoe điểm riêng M2.7, mà còn đặt cạnh nó những cái tên rất nặng ký: <strong>GPT-4o, Claude 3.5 Sonnet, Claude 3 Opus và Gemini 1.1 Pro</strong>. Đối chiếu từng benchmark cho thấy câu chuyện rất rõ:</p>
+                <p>Nếu bám đúng vào <strong>blog gốc của MiniMax</strong>, thì bộ số liệu đáng chú ý nhất của M2.7 là thế này:</p>
 
                 <ul>
-                    <li><strong>Multi-SWE Bench:</strong> M2.7 dẫn đầu với <strong>52.7</strong>, vượt cả GPT-4o (49.0) và Claude 3 Opus (50.3).</li>
-                    <li><strong>SWE-Pro:</strong> M2.7 đạt <strong>56.2</strong>, đứng thứ 4 sau GPT-4o (57.7), Claude 3 Opus (57.3) và Claude 3.5 Sonnet (57.2). Khoảng cách chỉ ~1.5 điểm.</li>
-                    <li><strong>VIBE-Pro:</strong> M2.7 <strong>55.6</strong>, bằng điểm Claude 3 Opus và chỉ kém Claude 3.5 Sonnet (56.1) đúng nửa điểm.</li>
-                    <li><strong>Toolathlon:</strong> M2.7 <strong>46.3</strong>, vượt Claude 3.5 Sonnet (44.8) nhưng xếp sau GPT-4o (54.6), Claude 3 Opus (47.2) và Gemini 1.1 Pro (48.8).</li>
-                    <li><strong>MM-ClawBench:</strong> M2.7 <strong>62.7</strong>, đứng thứ 4 sau Claude 3 Opus (75.4), GPT-4o (73.6) và Claude 3.5 Sonnet (64.2).</li>
-                    <li><strong>MLE-Bench lite:</strong> M2.7 <strong>68.6</strong>, đứng sau Claude 3 Opus (75.7), Claude 3.5 Sonnet (72.7) và GPT-4o (71.2).</li>
-                    <li><strong>GDPval-AA (trong ảnh):</strong> M2.7 score = <strong>50</strong>. Tuy nhiên theo blog chính thức, ELO rating của M2.7 là <strong>1495</strong> và được claim cao nhất trong nhóm open-source model.</li>
+                    <li><strong>SWE-Pro:</strong> <strong>56.22%</strong> — MiniMax nói M2.7 đã gần chạm mức tốt nhất của Opus, và <strong>matching GPT-5.3-Codex</strong>.</li>
+                    <li><strong>SWE Multilingual:</strong> <strong>76.5</strong> — một chỉ dấu khá mạnh cho năng lực code đa ngôn ngữ.</li>
+                    <li><strong>Multi SWE Bench:</strong> <strong>52.7</strong> — MiniMax nhấn đây là benchmark gần với engineering thực tế hơn.</li>
+                    <li><strong>VIBE-Pro:</strong> <strong>55.6%</strong> — được mô tả là <strong>nearly on par with Opus 4.6</strong> ở repo-level code generation.</li>
+                    <li><strong>Terminal Bench 2:</strong> <strong>57.0%</strong> và <strong>NL2Repo:</strong> <strong>39.8%</strong> — cho thấy năng lực hiểu hệ thống phần mềm phức tạp, không chỉ sinh code.</li>
+                    <li><strong>GDPval-AA:</strong> <strong>ELO 1495</strong> trong tập <strong>45 models</strong>, xếp sau <strong>Opus 4.6, Sonnet 4.6 và GPT-5.4</strong>, đồng thời vượt <strong>GPT-5.3</strong>.</li>
+                    <li><strong>Toolathon:</strong> <strong>46.3%</strong> — MiniMax gọi đây là <strong>global top tier</strong>.</li>
+                    <li><strong>MM Claw:</strong> <strong>62.7%</strong> — được mô tả là <strong>close to Sonnet 4.6</strong>.</li>
                 </ul>
 
                 <div class="highlight-box-green">
-                    <h4>📊 Từ ảnh benchmark</h4>
-                    <p>Ảnh benchmark không đặt M2.7 cạnh mấy model yếu để làm đẹp số, mà thẳng tay ném lên bàn cân với <strong>GPT-4o, Claude 3.5 Sonnet, Claude 3 Opus và Gemini 1.1 Pro</strong>.</p>
-                    <p style="margin-bottom:0">Ở <strong>Multi-SWE Bench</strong>, M2.7 dẫn đầu tuyệt đối. Ở <strong>SWE-Pro và VIBE-Pro</strong>, M2.7 đứng sát nút nhóm đầu, chênh lệch chỉ 1–2 điểm. Điều này cho thấy MiniMax không còn đóng vai “kẻ theo sau” trong phân khúc coding/agent, mà đang chen thẳng vào nhóm model đóng mạnh nhất hiện tại — và thậm chí vượt qua ở một số bài test thực chiến.</p>
+                    <h4>📊 Đọc đúng phần benchmark</h4>
+                    <p>Điểm quan trọng là M2.7 không được MiniMax định vị như một open model “khá ổn”, mà như một model đã bắt đầu chạm vào vùng benchmark của nhóm đầu bảng ở các bài test agent/coding thực chiến.</p>
+                    <p style="margin-bottom:0">Nếu phải rút ra ý chính từ số liệu, thì nó là thế này: <strong>M2.7 đã bước vào vùng cạnh tranh nghiêm túc ở software engineering, office-agent workflows và tool-heavy tasks</strong>. Nó chưa phải model mạnh nhất toàn cục, nhưng đã đủ gần nhóm top để trở thành lựa chọn đáng kể trong thế giới agent.</p>
                 </div>
 
                 <h2>“Self-evolution” ở đây là gì?</h2>
 
                 <p>Đây là phần dễ bị hiểu lố, nên phải nói cho rõ.</p>
 
-                <p>MiniMax mô tả một quy trình nội bộ nơi M2.7 được dùng để xây agent harness cho nghiên cứu, theo dõii experiment, đọc log, debug, sửa code, chạy evaluation, rồi dựa trên kết quả đó tiếp tục tối ưu harness và workflow. Trong một ví dụ, họ để M2.7 tự động tối ưu một programming scaffold hơn <strong>100 vòng lặp</strong>, đạt <strong>30% cải thiện</strong> trên internal evaluation.</p>
+                <p>MiniMax mô tả một quy trình nội bộ nơi M2.7 được dùng để xây agent harness cho nghiên cứu, theo dõi experiment, đọc log, debug, sửa code, chạy evaluation, rồi dựa trên kết quả đó tiếp tục tối ưu harness và workflow. Trong một ví dụ, họ để M2.7 tự động tối ưu một programming scaffold hơn <strong>100 vòng lặp</strong>, đạt <strong>30% performance improvement</strong> trên internal evaluation sets.</p>
 
-                <p>Nói thẳng: đây chưa phải “AI tự tiến hóa hoàn toàn” kiểu sci-fi. Nhưng nó là một bước rất quan trọng: <strong>model không chỉ là công cụ để con ngườii dùng, mà bắt đầu trở thành một tác nhân trong quy trình cải thiện chính hệ thống mà nó đang chạy trong đó</strong>.</p>
+                <p>Nói thẳng: đây chưa phải “AI tự tiến hóa hoàn toàn” kiểu sci-fi. Nhưng nó là một bước rất quan trọng: <strong>model không chỉ là công cụ để con người dùng, mà bắt đầu trở thành một tác nhân trong quy trình cải thiện chính hệ thống mà nó đang chạy trong đó</strong>.</p>
 
                 <div class="quote-block">
                     Nếu trước đây ta fine-tune model rồi đem nó đi dùng, thì narrative mới là: model được đặt vào một vòng lặp có memory, feedback, tool use và evaluation — rồi từ đó tự kéo hiệu suất của chính nó đi lên.
@@ -90,7 +91,7 @@
 
                 <h2>Điều gì làm M2.7 đáng chú ý hơn một model open-source bình thường?</h2>
 
-                <p>Thứ nhất, MiniMax đang đi rất sát nhu cầu của làn sóng agent hiện tại: <strong>khả năng dùng tools, tuân thủ skills, và làm việc trong harness phức tạp</strong>. Họ nói M2.7 có <strong>97% skill adherence</strong> khi làm việc với hơn 40 complex skills, mỗi skill dài hơn 2,000 tokens. Đây là kiểu thông số không hấp dẫn với ngườii dùng phổ thông, nhưng cực kỳ quan trọng với ai đang xây agent workflows.</p>
+                <p>Thứ nhất, MiniMax đang đi rất sát nhu cầu của làn sóng agent hiện tại: <strong>khả năng dùng tools, tuân thủ skills, và làm việc trong harness phức tạp</strong>. Họ nói M2.7 có <strong>97% skill adherence</strong> khi làm việc với hơn <strong>40 complex skills</strong>, mỗi skill dài hơn <strong>2,000 tokens</strong>. Đây là kiểu thông số không hấp dẫn với người dùng phổ thông, nhưng cực kỳ quan trọng với ai đang xây agent workflows.</p>
 
                 <p>Nói theo cách dễ hiểu hơn: nếu Claude/Opus hiện vẫn là chuẩn tham chiếu cho “agent làm việc tử tế”, thì M2.7 đang cố chứng minh rằng <strong>open model cũng có thể chơi cùng mâm</strong> ở những bài toán khó như multi-step coding, terminal operations và office editing. Nó chưa hẳn đã đè được các model đóng mạnh nhất trên mọi trục, nhưng nó đã đủ gần để trở thành lựa chọn nghiêm túc — nhất là với ai muốn self-host, tối ưu chi phí hoặc cần quyền kiểm soát cao hơn.</p>
 
@@ -113,7 +114,7 @@
 
                 <p>Vì nó cho thấy cuộc đua đang đổi trục.</p>
 
-                <p>Trước đây, ngườii ta hỏi model nào viết code hay hơn, trả lờii tự nhiên hơn, benchmark chat cao hơn. Bây giờ, câu hỏi thú vị hơn là: <strong>model nào sống tốt hơn trong một agent harness thật?</strong> Model nào biết dùng tool, giữ vai, tuân thủ protocol, sửa workflow, đọc log, xử lý memory, và sống sót qua các vòng lặp dài?</p>
+                <p>Trước đây, người ta hỏi model nào viết code hay hơn, trả lời tự nhiên hơn, benchmark chat cao hơn. Bây giờ, câu hỏi thú vị hơn là: <strong>model nào sống tốt hơn trong một agent harness thật?</strong> Model nào biết dùng tool, giữ vai, tuân thủ protocol, sửa workflow, đọc log, xử lý memory, và sống sót qua các vòng lặp dài?</p>
 
                 <p>M2.7 đang được bán đúng theo câu chuyện đó. Nếu MiniMax giữ được chất lượng khi cộng đồng bắt đầu chạy thật trên OpenClaw, Claude-style harnesses hoặc infra coding agents, nó sẽ trở thành một đối trọng đáng gờm với các model đóng trong phân khúc “agentic coding + productivity”.</p>
 
