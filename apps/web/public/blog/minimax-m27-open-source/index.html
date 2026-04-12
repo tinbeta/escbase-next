@@ -58,20 +58,21 @@
                     <li><strong>Character consistency + EQ:</strong> mở đường cho các sản phẩm mang tính persona hoặc tương tác dài hạn hơn.</li>
                 </ul>
 
-                <p>Con số benchmark mà MiniMax nhấn mạnh cũng không tệ chút nào:</p>
+                <p>Con số benchmark mà MiniMax nhấn mạnh cũng không tệ chút nào, nhưng quan trọng hơn là <strong>nó được đặt cạnh ai</strong>:</p>
 
                 <ul>
-                    <li><strong>SWE-Pro:</strong> 56.22%</li>
-                    <li><strong>VIBE-Pro:</strong> 55.6%</li>
-                    <li><strong>Terminal Bench 2:</strong> 57.0%</li>
-                    <li><strong>GDPval-AA:</strong> ELO 1495 — cao nhất trong nhóm open-source model theo cách họ công bố</li>
-                    <li><strong>MM-Claw end-to-end:</strong> 62.7%</li>
-                    <li><strong>Toolathlon:</strong> 46.3%</li>
+                    <li><strong>SWE-Pro:</strong> 56.22% — gần sát vùng của Opus/GPT đời mới và đủ để MiniMax nói thẳng rằng đây không còn là open model “cho vui”.</li>
+                    <li><strong>VIBE-Pro:</strong> 55.6% — gần chạm Opus 4.6 trong bài test giao project end-to-end.</li>
+                    <li><strong>Terminal Bench 2:</strong> 57.0% — tức là model không chỉ sinh code, mà còn hiểu hệ thống đủ sâu để thao tác trong terminal workflow.</li>
+                    <li><strong>GDPval-AA:</strong> ELO 1495 — MiniMax claim đây là điểm cao nhất trong nhóm open-source model, và vượt cả GPT-5.3 trong bảng họ đưa ra.</li>
+                    <li><strong>MM-Claw end-to-end:</strong> 62.7% — một chỉ dấu khá rõ là M2.7 được tối ưu cho harness/tool use thay vì chat thuần.</li>
+                    <li><strong>Toolathlon:</strong> 46.3% — thuộc nhóm đầu bảng theo cách MiniMax trình bày.</li>
                 </ul>
 
                 <div class="highlight-box-green">
                     <h4>📊 Từ ảnh benchmark</h4>
-                    <p style="margin-bottom:0">Điểm đáng tiền nhất trong ảnh là M2.7 không chỉ nhích nhẹ so với M2.5, mà có bước tăng khá rõ ở các bài test agent/tool-heavy. Điều này cho thấy MiniMax đang tối ưu model theo hướng <strong>làm việc thật trong harness</strong>, không chỉ tối ưu benchmark chat thuần.</p>
+                    <p>Ảnh benchmark đáng đọc ở đúng phần so sánh ngang hàng. M2.7 không được đặt cạnh mấy model yếu để làm đẹp số, mà bị ném thẳng lên bàn cân với <strong>GPT-4o, Claude 3.5 Sonnet và Gemini 1.5 Pro</strong>.</p>
+                    <p style="margin-bottom:0">Ở vài bảng, M2.7 chưa hẳn đứng số 1 tuyệt đối. Nhưng cái đáng nói là nó <strong>đứng đủ gần nhóm model đóng mạnh nhất</strong> trong khi vẫn là một model mở. Đặc biệt ở các bài test như SWE-bench Pro, Multi-SWE Bench, MM-ClawBench và Toolathlon, thông điệp rất rõ: MiniMax không còn ở vai “kẻ theo sau”, mà đang chen thẳng vào phân khúc agent/coding vốn trước đây gần như do Claude và GPT giữ sân.</p>
                 </div>
 
                 <h2>“Self-evolution” ở đây là gì?</h2>
@@ -89,6 +90,8 @@
                 <h2>Điều gì làm M2.7 đáng chú ý hơn một model open-source bình thường?</h2>
 
                 <p>Thứ nhất, MiniMax đang đi rất sát nhu cầu của làn sóng agent hiện tại: <strong>khả năng dùng tools, tuân thủ skills, và làm việc trong harness phức tạp</strong>. Họ nói M2.7 có <strong>97% skill adherence</strong> khi làm việc với hơn 40 complex skills, mỗi skill dài hơn 2,000 tokens. Đây là kiểu thông số không hấp dẫn với ngườì dùng phổ thông, nhưng cực kỳ quan trọng với ai đang xây agent workflows.</p>
+
+                <p>Nói theo cách dễ hiểu hơn: nếu Claude/Opus hiện vẫn là chuẩn tham chiếu cho “agent làm việc tử tế”, thì M2.7 đang cố chứng minh rằng <strong>open model cũng có thể chơi cùng mâm</strong> ở những bài toán khó như multi-step coding, terminal operations và office editing. Nó chưa hẳn đã đè được các model đóng mạnh nhất trên mọi trục, nhưng nó đã đủ gần để trở thành lựa chọn nghiêm túc — nhất là với ai muốn self-host, tối ưu chi phí hoặc cần quyền kiểm soát cao hơn.</p>
 
                 <p>Thứ hai, model này không chỉ được mở qua Hugging Face, mà còn có guides cho <strong>SGLang, vLLM, Transformers, ModelScope và NVIDIA NIM</strong>. Nghĩa là MiniMax không chỉ vứt weights lên rồi mặc kệ. Họ đang cố làm cho model này dễ đi vào production hơn.</p>
 
