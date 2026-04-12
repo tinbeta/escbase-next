@@ -111,6 +111,33 @@
 
                 <p>Cũng có vài tín hiệu trái chiều đáng chú ý. Một số người dùng agent thật nói M2.7 là một <strong>pleasant surprise</strong> cho orchestrator-level tasks, nhưng cũng đã xuất hiện report sớm về việc model bị hụt hơi ở vòng lặp dài. Ngoài ra, phần <strong>license</strong> cũng đang bị tranh cãi: có người gọi đây là fully open/commercial-friendly, có người lại cho rằng nó vẫn mang màu source-available và cần đọc kỹ điều khoản hơn là tin headline.</p>
 
+                <h2>Cài local có dễ không?</h2>
+
+                <p>Câu trả lời ngắn là: <strong>không dễ như headline “open source” khiến người ta tưởng</strong>.</p>
+
+                <p>Theo guide chính thức trên Hugging Face, MiniMax khuyến nghị chạy M2.7 bằng <strong>vLLM hoặc SGLang trên Linux</strong>, với yêu cầu phần cứng thuộc loại rất nặng:</p>
+
+                <ul>
+                    <li><strong>OS:</strong> Linux</li>
+                    <li><strong>GPU:</strong> compute capability 7.0+</li>
+                    <li><strong>weights:</strong> khoảng <strong>220 GB</strong></li>
+                    <li><strong>KV cache:</strong> khoảng <strong>240 GB cho mỗi 1M context tokens</strong></li>
+                    <li><strong>cấu hình gợi ý:</strong> <strong>4 x 96GB GPU</strong> hoặc <strong>8 x 144GB GPU</strong> nếu muốn chơi ở mức chính thống</li>
+                </ul>
+
+                <p>Nói kiểu dễ hiểu: đây không phải dạng model mà đa số người dùng chỉ việc kéo về laptop rồi chạy ngon lành. Nếu muốn self-host chuẩn, bạn đang nói tới hạ tầng server thật chứ không còn là thú vui cuối tuần nữa.</p>
+
+                <div class="highlight-box-green">
+                    <h4>🛠️ Ba đường cài thực tế nhất</h4>
+                    <ul style="margin-bottom:0">
+                        <li><strong>Chuẩn official:</strong> chạy <strong>vLLM/SGLang trên Linux</strong> nếu có dàn GPU lớn.</li>
+                        <li><strong>Mac/local community route:</strong> dùng <strong>mlx-community quant</strong>, <strong>exo</strong> hoặc các bản đóng gói cho Mac. Cộng đồng đã có support khá nhanh, nhưng thường đòi máy RAM lớn hoặc nhiều máy ghép cụm.</li>
+                        <li><strong>Thực tế nhất với đa số người dùng:</strong> không self-host full, mà chạy qua <strong>MiniMax API</strong>, <strong>NVIDIA NIM</strong> hoặc endpoint community để test trước.</li>
+                    </ul>
+                </div>
+
+                <p>Đây cũng là lý do cộng đồng đang rất quan tâm tới <strong>eCosystem support day-0</strong> như vLLM, mlx-community, exo hay NVIDIA endpoints. Với những model cỡ này, benchmark mạnh là một chuyện; còn có đường deploy thực sự hay không lại là chuyện khác.</p>
+
                 <h2>Điểm yếu hoặc dấu hỏi nằm ở đâu?</h2>
 
                 <div class="highlight-box-red">
