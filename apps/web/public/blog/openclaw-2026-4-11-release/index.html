@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw 2026.4.11: Không Còn Test Agent Bằng Cảm Giác, Giờ Có Parity Gate GPT-5.4 vs Opus 4.6 | Escbase</title>
+    <meta name="description" content="OpenClaw 2026.4.11 là một bản polish release thiên về stability, nhưng điểm đáng chú ý nhất là parity gate GPT-5.4 vs Opus 4.6 cùng hàng loạt bản vá routing, subagents, OAuth và chat integrations.">
+    <meta property="og:title" content="OpenClaw 2026.4.11: Không Còn Test Agent Bằng Cảm Giác, Giờ Có Parity Gate GPT-5.4 vs Opus 4.6">
+    <meta property="og:description" content="Bản 2026.4.11 không hào nhoáng như các release nhiều feature, nhưng nó siết chất lượng đúng chỗ: parity gate giữa model, plugin manifests, ChatGPT import, richer webchat và rất nhiều bugfix thực chiến.">
+    <meta property="og:image" content="https://escbase.xyz/images/openclaw-2026-4-10-release-thumb.png">
+    <meta property="og:url" content="https://escbase.xyz/blog/openclaw-2026-4-11-release/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/shared-article-footer.css">
+    <style>
+        :root{--bg:#09090b;--card-bg:#18181b;--border:#27272a;--text:#fafafa;--text-secondary:#a1a1aa;--text-muted:#71717a;--accent:#60a5fa;--accent-blue:#60a5fa;--accent-yellow:#f59e0b;--accent-red:#ef4444;--accent-green:#22c55e;--radius-md:16px;--radius-lg:24px}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased}.container{max-width:820px;margin:0 auto;padding:2rem 1.5rem}.article-header{margin-bottom:2.5rem}.category-badge{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1rem;background:rgba(96,165,250,.12);border:1px solid rgba(96,165,250,.22);border-radius:100px;font-size:.85rem;font-weight:600;color:#93c5fd;margin-bottom:1.25rem}h1{font-size:2.2rem;font-weight:800;line-height:1.2;margin-bottom:1.25rem;letter-spacing:-.02em}.meta{display:flex;flex-wrap:wrap;gap:1.5rem;color:var(--text-muted);font-size:.9rem}.meta span{display:flex;align-items:center;gap:.5rem}.article-content{font-size:1.1rem;color:var(--text-secondary)}.article-content h2{font-size:1.5rem;font-weight:700;color:var(--text);margin-top:2.5rem;margin-bottom:1rem}.article-content p{margin-bottom:1.25rem}.article-content ul{margin-bottom:1.25rem;padding-left:1.5rem}.article-content li{margin-bottom:.5rem}.highlight-box{background:linear-gradient(135deg,rgba(96,165,250,.12) 0%,rgba(96,165,250,.06) 100%);border:1px solid rgba(96,165,250,.22);border-radius:var(--radius-md);padding:1.5rem;margin:2rem 0}.highlight-box h4{color:#93c5fd;font-size:1.1rem;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}.highlight-box-green{background:linear-gradient(135deg,rgba(34,197,94,.12) 0%,rgba(34,197,94,.05) 100%);border:1px solid rgba(34,197,94,.2);border-radius:var(--radius-md);padding:1.5rem;margin:2rem 0}.highlight-box-green h4{color:#4ade80;font-size:1.1rem;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}.highlight-box-red{background:linear-gradient(135deg,rgba(239,68,68,.1) 0%,rgba(239,68,68,.05) 100%);border:1px solid rgba(239,68,68,.2);border-radius:var(--radius-md);padding:1.5rem;margin:2rem 0}.highlight-box-red h4{color:#f87171;font-size:1.1rem;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}.quote-block{border-left:4px solid var(--accent-yellow);padding:1.25rem 1.5rem;margin:2rem 0;background:rgba(245,158,11,.05);border-radius:0 var(--radius-md) var(--radius-md) 0;font-style:italic;color:var(--text)}.inline-image{width:100%;max-width:680px;display:block;border-radius:18px;border:1px solid rgba(255,255,255,.08);margin:1rem auto 1.5rem}.tags{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}.tag{padding:.5rem 1rem;background:var(--card-bg);border:1px solid var(--border);border-radius:100px;font-size:.85rem;color:var(--text-secondary)}a{color:#93c5fd}@media(max-width:768px){h1{font-size:1.72rem}.container{padding:1.5rem 1rem}}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <span class="category-badge"><i class="fas fa-terminal"></i> OpenClaw AI</span>
+                <h1>OpenClaw 2026.4.11: Không Còn Test Agent Bằng Cảm Giác, Giờ Có Parity Gate GPT-5.4 vs Opus 4.6</h1>
+                <div class="meta">
+                    <span><i class="far fa-calendar"></i> 12/04/2026</span>
+                    <span><i class="far fa-clock"></i> 7 phút đọc</span>
+                    <span><i class="far fa-folder"></i> OpenClaw, Stability & Agent QA</span>
+                </div>
+                <img src="/images/openclaw-2026-4-10-release-thumb.png" alt="OpenClaw 2026.4.11 thumbnail" class="inline-image" style="margin-top:1rem;">
+            </header>
+
+            <div class="article-content">
+                <div class="highlight-box">
+                    <h4>🧠 Tóm tắt nhanh</h4>
+                    <p style="margin-bottom:0">OpenClaw 2026.4.11 nhìn bề ngoài là một bản <strong>polish + stability release</strong>. Nhưng điểm đáng tiền nhất lại không nằm ở câu “cleanup pass”, mà ở việc dự án đã thêm <strong>GPT-5.4 vs Opus 4.6 agentic parity report gate</strong> với shared scenario coverage, stricter evidence heuristics và skipped-scenario accounting. Dịch sang tiếng người: họ đang bắt đầu đo chất lượng agent một cách có hệ thống hơn, thay vì nhìn vài demo rồi tự khen nhau.</p>
+                </div>
+
+                <p>Nếu 2026.4.10 là bản thêm nhiều capability mới như Active Memory hay Codex harness, thì 2026.4.11 giống một cú siết nền. Nó không cố gây wow bằng feature khủng. Nó vá, làm sạch, và dựng thêm mấy cái lan can an toàn ở đúng chỗ thường gây đau đầu nhất khi chạy agent thật.</p>
+
+                <h2>Con số/so sánh đáng chú ý nhất: parity gate GPT-5.4 vs Opus 4.6</h2>
+
+                <p>Đây là ý quan trọng nhất của bản này và cũng là thứ đáng đứng đầu bài.</p>
+
+                <p>OpenClaw thêm một <strong>QA/parity gate</strong> để so <strong>GPT-5.4 với Opus 4.6</strong> trong các scenario agentic dùng chung. Không phải một bảng benchmark PR đẹp mắt, mà là một cổng kiểm soát cho maintainer review với ba thứ đáng giá:</p>
+
+                <ul>
+                    <li><strong>shared scenario coverage checks</strong> — cùng một tập tình huống, không đổi đề giữa chừng.</li>
+                    <li><strong>stricter evidence heuristics</strong> — đòi bằng chứng chặt hơn, bớt kiểu “trông có vẻ làm được”.</li>
+                    <li><strong>skipped-scenario accounting</strong> — không cho lờ đi những case bị bỏ qua rồi giả vờ như mọi thứ vẫn ổn.</li>
+                </ul>
+
+                <div class="quote-block">
+                    Cái hay ở đây không phải OpenClaw chọn GPT hay Opus. Cái hay là họ bắt đầu coi chuyện so model như một quy trình QA nghiêm túc, không còn là cuộc thi ai kể demo mượt hơn.
+                </div>
+
+                <p>Trong thế giới agent, đây là chuyện cực lớn. Vì model nào cũng có thể có một buổi demo nhìn rất đỉnh. Nhưng khi vào production, thứ phá bạn thường không phải là một failure quá lộ, mà là hàng loạt case lệch nhỏ: model bỏ qua bước, dừng ở “here’s my plan”, hay trôi khỏi tool path. Một parity gate nghiêm túc là cách để bóc mấy lỗi đó ra khỏi vùng cảm tính.</p>
+
+                <h2>OpenClaw thực sự announce cái gì?</h2>
+
+                <p>Tweet gốc của OpenClaw nói rất rõ đây là một <strong>“big polish drop for stability”</strong> với 5 cụm chính:</p>
+
+                <ul>
+                    <li>safer provider transport/routing</li>
+                    <li>more reliable subagents + exec approvals</li>
+                    <li>lots of Slack / WhatsApp / Telegram / Matrix fixes</li>
+                    <li>browser + mobile cleanup</li>
+                    <li>chunky cleanup pass</li>
+                </ul>
+
+                <p>Nếu chỉ đọc tweet, người ta dễ nghĩ đây là một bản vá linh tinh. Nhưng release notes cho thấy có vài thay đổi rất đáng chú ý ngoài phần fix:</p>
+
+                <ul>
+                    <li><strong>ChatGPT import ingestion</strong> vào Dreaming/memory-wiki — biến chat export cũ thành memory hữu dụng.</li>
+                    <li><strong>Rich output trong Control UI/webchat</strong> — assistant media/reply/voice directives thành structured bubbles.</li>
+                    <li><strong>video_generate được mở rộng mạnh</strong> — URL-only delivery, reference audio, per-asset role hints, aspect ratio adapt, tăng image-input cap.</li>
+                    <li><strong>plugin manifests</strong> có thể tự mô tả activation và setup descriptors.</li>
+                    <li><strong>Teams + Feishu</strong> được mở rộng reaction support và document-thread workflows.</li>
+                </ul>
+
+                <h2>Nhìn từ góc sản phẩm: bản này làm gì cho người dùng thật?</h2>
+
+                <div class="highlight-box-green">
+                    <h4>📌 5 tác động thực tế</h4>
+                    <ul style="margin-bottom:0">
+                        <li><strong>Import lịch sử ChatGPT:</strong> ngườì dùng có thể kéo ký ức cũ vào OpenClaw thay vì để export chết dí trong ổ cứng.</li>
+                        <li><strong>Web UI hữu dụng hơn:</strong> rich output + media/voice bubbles làm trải nghiệm đỡ “agent nói một đằng, UI hiển thị một nẻo”.</li>
+                        <li><strong>Video generation đỡ ngu hơn:</strong> input giàu hơn, output delivery sạch hơn, đỡ phải vật nhau với tool.</li>
+                        <li><strong>Plugin setup bớt mù mờ:</strong> plugin tự khai báo auth/config needs thay vì bắt user đi mò docs.</li>
+                        <li><strong>Chat integrations usable hơn:</strong> Teams, Feishu, WhatsApp, Telegram, Matrix đều được vá đúng các luồng dùng thật.</li>
+                    </ul>
+                </div>
+
+                <h2>Phần fixes đáng tiền nằm ở đâu?</h2>
+
+                <p>Danh sách fixes của 2026.4.11 dài nhưng không lan man. Nó tập trung vào những điểm đã từng khiến người dùng cáu thật:</p>
+
+                <ul>
+                    <li><strong>OpenAI/Codex OAuth:</strong> sửa invalid_scope khi sign-in mới.</li>
+                    <li><strong>Audio transcription:</strong> làm OpenAI/Groq/Mistral transcription hoạt động lại mà không mở toang phần request path khác.</li>
+                    <li><strong>Talk Mode macOS:</strong> cấp mic permission xong không phải bật tắt lần hai nữa.</li>
+                    <li><strong>ACP/agents:</strong> chặn progress chatter của child run khỏi rò vào parent stream.</li>
+                    <li><strong>Agents/timeouts:</strong> tôn trọng explicit run timeouts đúng hơn cho model chậm.</li>
+                    <li><strong>WhatsApp + Telegram:</strong> sửa routing, reactions, topic-scoped session init.</li>
+                    <li><strong>MiniMax/OAuth:</strong> giữ Bearer auth routing hoạt động sau configure/re-auth.</li>
+                </ul>
+
+                <p>Nói cách khác: đây là dạng release mà người dùng production sẽ thích hơn người thích headline. Nó không sexy bằng model mới, nhưng nó làm agent bớt cư xử ngớ ngẩn ở những chỗ gây mất niềm tin nhất.</p>
+
+                <h2>Phản ứng cộng đồng nói gì?</h2>
+
+                <p>Thread này khá thú vị vì phản ứng bị chia đôi rất rõ:</p>
+
+                <ul>
+                    <li><strong>Phe thích stability:</strong> khen OpenClaw đang tập trung vào release an toàn hơn, ít “shiny feature” hơn.</li>
+                    <li><strong>Phe mệt vì tốc độ update:</strong> than rằng chưa vá xong bản cũ thì bản mới đã ra, không có breathing room.</li>
+                    <li><strong>Phe builder nghiêm túc:</strong> đặc biệt thích parity gate GPT-5.4 vs Opus 4.6 vì đó là thứ giúp họ tin hơn vào chất lượng thật.</li>
+                </ul>
+
+                <div class="highlight-box-red">
+                    <h4>⚠️ Điểm căng nhất của OpenClaw lúc này</h4>
+                    <p style="margin-bottom:0">OpenClaw đang đi rất nhanh. Vấn đề không còn là “ship được không”, mà là “ship nhanh như vậy có để người dùng tiêu hóa nổi không”. 2026.4.11 là một nỗ lực rõ ràng để trả lởi câu hỏi đó bằng chất lượng và cleanup. Nhưng cộng đồng vẫn muốn thêm một chút breathing room.</p>
+                </div>
+
+                <h2>Kết luận</h2>
+
+                <p>OpenClaw 2026.4.11 là một bản release thực dụng. Không quá màu mè, không tung feature kiểu bắn phá headline, mà tập trung vào thứ khó hơn: <strong>làm agent đáng tin hơn trong đời sống thật</strong>.</p>
+
+                <p>Và nếu phải chọn một ý để nhớ về bản này, mình chọn ý này: <strong>OpenClaw bắt đầu dựng parity gate giữa các model agent mạnh như GPT-5.4 và Opus 4.6</strong>. Chuyện đó quan trọng hơn cả một đống changelog lặt vặt, vì nó cho thấy dự án đang học cách đánh giá agent như một hệ thống — không phải như một con chatbot biết nói mượt.</p>
+
+                <p><strong>Source:</strong> <a href="https://x.com/openclaw/status/2043132528094036332" target="_blank" rel="noopener noreferrer">Thread của OpenClaw trên X</a><br>
+                <strong>Release notes:</strong> <a href="https://github.com/openclaw/openclaw/releases/tag/v2026.4.11" target="_blank" rel="noopener noreferrer">GitHub openclaw 2026.4.11</a></p>
+
+                <div class="back-to-blog-footer">
+                    <a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+                </div>
+
+                <div class="article-cta-stack">
+                    <a href="/blog/openclaw-2026-4-10-release" class="article-suggestion-card">
+                        <span class="article-suggestion-label"><i class="fas fa-book-open"></i> Đọc tiếp</span>
+                        <span class="article-suggestion-title">OpenClaw 2026.4.10: Active Memory, MLX Talk Và Tốc Độ Ship Không Ngừng Nghỉ</span>
+                    </a>
+                    <div class="article-cta-actions">
+                        <a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a>
+                    </div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">#OpenClaw</span>
+                    <span class="tag">#GPT54</span>
+                    <span class="tag">#Opus46</span>
+                    <span class="tag">#AgentQA</span>
+                    <span class="tag">#Stability</span>
+                    <span class="tag">#ParityTesting</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>
