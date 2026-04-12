@@ -1,0 +1,50 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0b1020"/>
+      <stop offset="0.55" stop-color="#161123"/>
+      <stop offset="1" stop-color="#28131a"/>
+    </linearGradient>
+    <linearGradient id="card" x1="182" y1="118" x2="979" y2="555" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#171d32"/>
+      <stop offset="1" stop-color="#23161d"/>
+    </linearGradient>
+    <linearGradient id="warn" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#f59e0b"/>
+      <stop offset="1" stop-color="#ef4444"/>
+    </linearGradient>
+    <filter id="blur" x="0" y="0" width="1200" height="630" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g opacity="0.45" filter="url(#blur)">
+    <circle cx="1013" cy="129" r="121" fill="#ef4444"/>
+    <circle cx="222" cy="530" r="132" fill="#f59e0b"/>
+    <circle cx="593" cy="362" r="163" fill="#7c3aed"/>
+  </g>
+  <rect x="92" y="72" width="1016" height="486" rx="34" fill="url(#card)" stroke="rgba(255,255,255,0.12)"/>
+  <rect x="138" y="122" width="168" height="40" rx="20" fill="#1f2b48" stroke="#35507d"/>
+  <text x="222" y="148" text-anchor="middle" fill="#93c5fd" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">ESC BASE</text>
+  <text x="138" y="230" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="60" font-weight="800">JUSTIN SUN</text>
+  <text x="138" y="292" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="60" font-weight="800">CÁO BUỘC WLFI</text>
+  <text x="138" y="372" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="500">Tố hợp đồng có blacklist backdoor,</text>
+  <text x="138" y="412" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="500">có thể đóng băng token nhà đầu tư.</text>
+  <rect x="138" y="454" width="378" height="58" rx="16" fill="#121826" stroke="#334155"/>
+  <text x="165" y="491" fill="#f59e0b" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">DEFI</text>
+  <text x="258" y="491" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">HAY CHỈ LÀ CỬA SAU?</text>
+  <g transform="translate(810 160)">
+    <rect x="0" y="0" width="210" height="280" rx="28" fill="#0f172a" stroke="#334155"/>
+    <rect x="34" y="40" width="140" height="22" rx="11" fill="#1e293b"/>
+    <rect x="34" y="86" width="110" height="18" rx="9" fill="#1e293b"/>
+    <rect x="34" y="120" width="142" height="18" rx="9" fill="#1e293b"/>
+    <rect x="34" y="154" width="120" height="18" rx="9" fill="#1e293b"/>
+    <path d="M103 214C130.614 214 153 191.614 153 164C153 136.386 130.614 114 103 114C75.3858 114 53 136.386 53 164C53 191.614 75.3858 214 103 214Z" stroke="url(#warn)" stroke-width="10" opacity="0.8"/>
+    <path d="M77 164L95 182L132 145" stroke="url(#warn)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(905 377)">
+    <rect x="0" y="0" width="88" height="106" rx="16" fill="#190f15" stroke="#7f1d1d"/>
+    <path d="M22 46C22 32.7452 32.7452 22 46 22C59.2548 22 70 32.7452 70 46V58H22V46Z" stroke="#ef4444" stroke-width="10"/>
+    <rect x="18" y="56" width="56" height="36" rx="8" fill="#ef4444"/>
+  </g>
+</svg>
