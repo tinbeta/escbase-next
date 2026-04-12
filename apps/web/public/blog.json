@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/minimax-m27-open-source",
+    "title": "MiniMax M2.7 Open Source: Khi Cuộc Chơi Agent Không Còn Chỉ Là Sân Của Model Đóng",
+    "excerpt": "MiniMax vừa open source M2.7 với benchmark mạnh ở SWE-Pro, Terminal Bench 2 và office tasks. Điểm đáng nói không chỉ là benchmark, mà là cách họ định vị M2.7 như một model dành cho agent tự tiến hóa.",
+    "date": "Apr 12, 2026",
+    "tag": "Open Models & Agents",
+    "tagIcon": "fas fa-robot",
+    "tagColor": "#7c3aed",
+    "readTime": "7 min read",
+    "featured": true,
+    "image": "/images/minimax-m27-open-source-thumb.jpg"
+  },
+  {
     "url": "/blog/garry-tan-gbrain",
     "title": "GBrain Củа Garry Tan: Khi AI Agent Cần Một Bộ Não Riêng",
     "excerpt": "GBrain là dự án mã nguồn mở của Garry Tan để xây dựng personal knowledge base cho AI agent. Agent đọc trước mỗi câu trả lởi và viết lại sau mỗi cuộc trò chuyện — biến trí nhớ từ thụ động thành chủ động.",
