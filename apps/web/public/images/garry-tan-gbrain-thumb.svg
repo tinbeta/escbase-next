@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0c29"/>
+      <stop offset="50%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#24243e"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="600" cy="315" r="280" fill="url(#glow)"/>
+
+  <!-- Brain outline -->
+  <path d="M540,220 C500,220 470,260 470,310 C470,360 500,410 540,420 C550,425 560,420 570,415 C580,425 590,435 600,435 C610,435 620,425 630,415 C640,420 650,425 660,420 C700,410 730,360 730,310 C730,260 700,220 660,220 C640,220 620,230 600,245 C580,230 560,220 540,220 Z" fill="none" stroke="#8b5cf6" stroke-width="3" opacity="0.9"/>
+
+  <!-- Inner brain connections -->
+  <path d="M520,300 Q560,280 600,300 Q640,320 680,300" fill="none" stroke="#c4b5fd" stroke-width="2" opacity="0.7"/>
+  <path d="M530,340 Q570,330 600,350 Q630,330 670,340" fill="none" stroke="#c4b5fd" stroke-width="2" opacity="0.7"/>
+  <circle cx="560" cy="290" r="5" fill="#c4b5fd" opacity="0.9"/>
+  <circle cx="640" cy="310" r="5" fill="#c4b5fd" opacity="0.9"/>
+  <circle cx="600" cy="340" r="5" fill="#c4b5fd" opacity="0.9"/>
+
+  <!-- Floating nodes/documents -->
+  <g opacity="0.85">
+    <rect x="380" y="180" width="50" height="65" rx="6" fill="none" stroke="#22d3ee" stroke-width="2"/>
+    <line x1="390" y1="200" x2="420" y2="200" stroke="#22d3ee" stroke-width="2" opacity="0.6"/>
+    <line x1="390" y1="215" x2="415" y2="215" stroke="#22d3ee" stroke-width="2" opacity="0.6"/>
+    <line x1="390" y1="230" x2="420" y2="230" stroke="#22d3ee" stroke-width="2" opacity="0.6"/>
+  </g>
+
+  <g opacity="0.85">
+    <rect x="770" y="200" width="55" height="70" rx="6" fill="none" stroke="#22d3ee" stroke-width="2"/>
+    <line x1="780" y1="220" x2="815" y2="220" stroke="#22d3ee" stroke-width="2" opacity="0.6"/>
+    <line x1="780" y1="235" x2="810" y2="235" stroke="#22d3ee" stroke-width="2" opacity="0.6"/>
+    <line x1="780" y1="250" x2="815" y2="250" stroke="#22d3ee" stroke-width="2" opacity="0.6"/>
+  </g>
+
+  <!-- Calendar icon -->
+  <g opacity="0.85">
+    <rect x="750" y="360" width="55" height="50" rx="5" fill="none" stroke="#f59e0b" stroke-width="2"/>
+    <line x1="758" y1="375" x2="797" y2="375" stroke="#f59e0b" stroke-width="2" opacity="0.8"/>
+    <line x1="765" y1="365" x2="765" y2="355" stroke="#f59e0b" stroke-width="2.5"/>
+    <line x1="790" y1="365" x2="790" y2="355" stroke="#f59e0b" stroke-width="2.5"/>
+  </g>
+
+  <!-- Email icon -->
+  <g opacity="0.85">
+    <rect x="395" y="380" width="55" height="40" rx="5" fill="none" stroke="#f472b6" stroke-width="2"/>
+    <polyline points="395,385 422,405 450,385" fill="none" stroke="#f472b6" stroke-width="2" opacity="0.8"/>
+  </g>
+
+  <!-- Connection lines to brain -->
+  <line x1="430" y1="215" x2="525" y2="255" stroke="#8b5cf6" stroke-width="1.5" opacity="0.5"/>
+  <line x1="770" y1="240" x2="675" y2="270" stroke="#8b5cf6" stroke-width="1.5" opacity="0.5"/>
+  <line x1="780" y1="370" x2="660" y2="360" stroke="#8b5cf6" stroke-width="1.5" opacity="0.5"/>
+  <line x1="450" y1="395" x2="540" y2="370" stroke="#8b5cf6" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- Glow dots on connections -->
+  <circle cx="477" cy="235" r="3" fill="#22d3ee" opacity="0.8"/>
+  <circle cx="722" cy="255" r="3" fill="#22d3ee" opacity="0.8"/>
+  <circle cx="720" cy="365" r="3" fill="#f59e0b" opacity="0.8"/>
+  <circle cx="495" cy="387" r="3" fill="#f472b6" opacity="0.8"/>
+</svg>
