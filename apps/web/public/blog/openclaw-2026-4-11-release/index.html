@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenClaw 2026.4.11: Không Còn Test Agent Bằng Cảm Giác, Giờ Có Parity Gate GPT-5.4 vs Opus 4.6 | Escbase</title>
-    <meta name="description" content="OpenClaw 2026.4.11 là một bản polish release thiên về stability, nhưng điểm đáng chú ý nhất là parity gate GPT-5.4 vs Opus 4.6 cùng hàng loạt bản vá routing, subagents, OAuth và chat integrations.">
-    <meta property="og:title" content="OpenClaw 2026.4.11: Không Còn Test Agent Bằng Cảm Giác, Giờ Có Parity Gate GPT-5.4 vs Opus 4.6">
-    <meta property="og:description" content="Bản 2026.4.11 không hào nhoáng như các release nhiều feature, nhưng nó siết chất lượng đúng chỗ: parity gate giữa model, plugin manifests, ChatGPT import, richer webchat và rất nhiều bugfix thực chiến.">
-    <meta property="og:image" content="https://escbase.xyz/images/openclaw-2026-4-10-release-thumb.png">
+    <title>OpenClaw 2026.4.11: Ít Tính Năng Mới Hơn 2026.4.10, Nhưng Siết Stability Và Cleanup Mạnh Hơn | Escbase</title>
+    <meta name="description" content="So với OpenClaw 2026.4.10, bản 2026.4.11 ít headline feature hơn nhưng tập trung siết stability, cleanup và sửa các điểm đau thực tế ở routing, subagents, OAuth, webchat và chat integrations.">
+    <meta property="og:title" content="OpenClaw 2026.4.11: Ít Tính Năng Mới Hơn 2026.4.10, Nhưng Siết Stability Và Cleanup Mạnh Hơn">
+    <meta property="og:description" content="Nếu 2026.4.10 là bản mở capability như Active Memory và Codex harness, thì 2026.4.11 là bản siết nền: cleanup, reliability, parity gate và một loạt bản vá production hơn.">
+    <meta property="og:image" content="https://escbase.xyz/images/openclaw-2026-4-11-release-thumb.png">
     <meta property="og:url" content="https://escbase.xyz/blog/openclaw-2026-4-11-release/">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -25,7 +25,7 @@
         <article>
             <header class="article-header">
                 <span class="category-badge"><i class="fas fa-terminal"></i> OpenClaw AI</span>
-                <h1>OpenClaw 2026.4.11: Không Còn Test Agent Bằng Cảm Giác, Giờ Có Parity Gate GPT-5.4 vs Opus 4.6</h1>
+                <h1>OpenClaw 2026.4.11: Ít Tính Năng Mới Hơn 2026.4.10, Nhưng Siết Stability Và Cleanup Mạnh Hơn</h1>
                 <div class="meta">
                     <span><i class="far fa-calendar"></i> 12/04/2026</span>
                     <span><i class="far fa-clock"></i> 7 phút đọc</span>
@@ -37,28 +37,27 @@
             <div class="article-content">
                 <div class="highlight-box">
                     <h4>🧠 Tóm tắt nhanh</h4>
-                    <p style="margin-bottom:0">OpenClaw 2026.4.11 nhìn bề ngoài là một bản <strong>polish + stability release</strong>. Nhưng điểm đáng tiền nhất lại không nằm ở câu “cleanup pass”, mà ở việc dự án đã thêm <strong>GPT-5.4 vs Opus 4.6 agentic parity report gate</strong> với shared scenario coverage, stricter evidence heuristics và skipped-scenario accounting. Dịch sang tiếng người: họ đang bắt đầu đo chất lượng agent một cách có hệ thống hơn, thay vì nhìn vài demo rồi tự khen nhau.</p>
+                    <p style="margin-bottom:0">Nếu <strong>OpenClaw 2026.4.10</strong> là bản mở capability với Active Memory, Codex harness và MLX Talk, thì <strong>2026.4.11</strong> là một bản <strong>polish + stability release</strong> rõ rệt hơn: ít tính năng headline hơn, nhưng siết mạnh phần reliability, cleanup, routing, OAuth, webchat và chat integrations. Đây là kiểu bản update không hào nhoáng, nhưng lại đúng thứ người dùng production cần.</p>
                 </div>
 
-                <p>Nếu 2026.4.10 là bản thêm nhiều capability mới như Active Memory hay Codex harness, thì 2026.4.11 giống một cú siết nền. Nó không cố gây wow bằng feature khủng. Nó vá, làm sạch, và dựng thêm mấy cái lan can an toàn ở đúng chỗ thường gây đau đầu nhất khi chạy agent thật.</p>
+                <p>Nếu đọc hai release sát nhau, sự khác biệt khá rõ: <strong>2026.4.10 là bản mở rộng capability</strong>, còn <strong>2026.4.11 là bản siết nền</strong>. Nó không cố gây wow bằng feature khủng. Nó vá, làm sạch, và dựng thêm mấy cái lan can an toàn ở đúng chỗ thường gây đau đầu nhất khi chạy agent thật.</p>
 
-                <h2>Con số/so sánh đáng chú ý nhất: parity gate GPT-5.4 vs Opus 4.6</h2>
+                <h2>So với 2026.4.10, 2026.4.11 khác gì?</h2>
 
-                <p>Đây là ý quan trọng nhất của bản này và cũng là thứ đáng đứng đầu bài.</p>
-
-                <p>OpenClaw thêm một <strong>QA/parity gate</strong> để so <strong>GPT-5.4 với Opus 4.6</strong> trong các scenario agentic dùng chung. Không phải một bảng benchmark PR đẹp mắt, mà là một cổng kiểm soát cho maintainer review với ba thứ đáng giá:</p>
+                <p>Đây mới là so sánh nên đứng đầu bài.</p>
 
                 <ul>
-                    <li><strong>shared scenario coverage checks</strong> — cùng một tập tình huống, không đổi đề giữa chừng.</li>
-                    <li><strong>stricter evidence heuristics</strong> — đòi bằng chứng chặt hơn, bớt kiểu “trông có vẻ làm được”.</li>
-                    <li><strong>skipped-scenario accounting</strong> — không cho lờ đi những case bị bỏ qua rồi giả vờ như mọi thứ vẫn ổn.</li>
+                    <li><strong>2026.4.10:</strong> thêm những capability dễ nhìn thấy ngay như <strong>Active Memory</strong>, <strong>bundled Codex provider/harness</strong>, <strong>MLX Talk</strong>, video generation updates và nhiều thay đổi lớn ở QA/live transport.</li>
+                    <li><strong>2026.4.11:</strong> không bùng nổ feature theo kiểu đó, mà tập trung vào <strong>cleanup, stability, reliability và production polish</strong>.</li>
+                    <li><strong>2026.4.10:</strong> cho cảm giác “OpenClaw đang mở thêm sức mạnh mới”.</li>
+                    <li><strong>2026.4.11:</strong> cho cảm giác “OpenClaw đang cố làm cho đống sức mạnh đó bớt vỡ mặt khi chạy thật”.</li>
                 </ul>
 
                 <div class="quote-block">
-                    Cái hay ở đây không phải OpenClaw chọn GPT hay Opus. Cái hay là họ bắt đầu coi chuyện so model như một quy trình QA nghiêm túc, không còn là cuộc thi ai kể demo mượt hơn.
+                    Nói gọn: 2026.4.10 là bản mở capability. 2026.4.11 là bản làm cho capability đó dùng được tử tế hơn.
                 </div>
 
-                <p>Trong thế giới agent, đây là chuyện cực lớn. Vì model nào cũng có thể có một buổi demo nhìn rất đỉnh. Nhưng khi vào production, thứ phá bạn thường không phải là một failure quá lộ, mà là hàng loạt case lệch nhỏ: model bỏ qua bước, dừng ở “here’s my plan”, hay trôi khỏi tool path. Một parity gate nghiêm túc là cách để bóc mấy lỗi đó ra khỏi vùng cảm tính.</p>
+                <p>Đó là lý do bản 2026.4.11 nhìn ít wow hơn, nhưng với người dùng production thì lại rất đáng giá. Nó sửa đúng những thứ làm agent mất điểm nhất: sign-in lỗi, routing lệch, child chatter bị rò, timeout sai, media/tool pairing lộn xộn và các lỗi chat integration rất đời thường.</p>
 
                 <h2>OpenClaw thực sự announce cái gì?</h2>
 
@@ -72,7 +71,7 @@
                     <li>chunky cleanup pass</li>
                 </ul>
 
-                <p>Nếu chỉ đọc tweet, người ta dễ nghĩ đây là một bản vá linh tinh. Nhưng release notes cho thấy có vài thay đổi rất đáng chú ý ngoài phần fix:</p>
+                <p>Nếu chỉ đọc tweet, người ta dễ nghĩ đây là một bản vá linh tinh. Nhưng release notes cho thấy 2026.4.11 vẫn có vài thay đổi đáng kể — chỉ là nó không mang tinh thần “mở tính năng mới lớn” như 2026.4.10:</p>
 
                 <ul>
                     <li><strong>ChatGPT import ingestion</strong> vào Dreaming/memory-wiki — biến chat export cũ thành memory hữu dụng.</li>
@@ -82,12 +81,12 @@
                     <li><strong>Teams + Feishu</strong> được mở rộng reaction support và document-thread workflows.</li>
                 </ul>
 
-                <h2>Nhìn từ góc sản phẩm: bản này làm gì cho người dùng thật?</h2>
+                <h2>Ngoài cleanup, điểm mới nào của 2026.4.11 đáng giữ lại?</h2>
 
                 <div class="highlight-box-green">
                     <h4>📌 5 tác động thực tế</h4>
                     <ul style="margin-bottom:0">
-                        <li><strong>Import lịch sử ChatGPT:</strong> ngườì dùng có thể kéo ký ức cũ vào OpenClaw thay vì để export chết dí trong ổ cứng.</li>
+                        <li><strong>Import lịch sử ChatGPT:</strong> người dùng có thể kéo ký ức cũ vào OpenClaw thay vì để export chết dí trong ổ cứng.</li>
                         <li><strong>Web UI hữu dụng hơn:</strong> rich output + media/voice bubbles làm trải nghiệm đỡ “agent nói một đằng, UI hiển thị một nẻo”.</li>
                         <li><strong>Video generation đỡ ngu hơn:</strong> input giàu hơn, output delivery sạch hơn, đỡ phải vật nhau với tool.</li>
                         <li><strong>Plugin setup bớt mù mờ:</strong> plugin tự khai báo auth/config needs thay vì bắt user đi mò docs.</li>
@@ -111,6 +110,18 @@
 
                 <p>Nói cách khác: đây là dạng release mà người dùng production sẽ thích hơn người thích headline. Nó không sexy bằng model mới, nhưng nó làm agent bớt cư xử ngớ ngẩn ở những chỗ gây mất niềm tin nhất.</p>
 
+                <h2>Parity gate GPT-5.4 vs Opus 4.6 nên hiểu thế nào?</h2>
+
+                <p>Parity gate vẫn là một điểm hay của bản này, nhưng nó nên được đọc như <strong>một phần của nỗ lực siết QA</strong>, chứ không phải headline chính của toàn bộ release.</p>
+
+                <ul>
+                    <li><strong>shared scenario coverage checks</strong> — cùng một tập tình huống, không đổi đề giữa chừng.</li>
+                    <li><strong>stricter evidence heuristics</strong> — đòi bằng chứng chặt hơn, bớt kiểu “trông có vẻ làm được”.</li>
+                    <li><strong>skipped-scenario accounting</strong> — không cho lờ đi những case bị bỏ qua rồi giả vờ như mọi thứ vẫn ổn.</li>
+                </ul>
+
+                <p>Điểm hay ở đây không phải OpenClaw chọn GPT hay Opus. Điểm hay là họ bắt đầu coi chuyện so model như một quy trình QA nghiêm túc. Trong một bản release thiên về reliability như 2026.4.11, chi tiết này hợp vai hơn hẳn: nó là một cái <strong>lan can kiểm định</strong>, không phải cái hook chính để bán release.</p>
+
                 <h2>Phản ứng cộng đồng nói gì?</h2>
 
                 <p>Thread này khá thú vị vì phản ứng bị chia đôi rất rõ:</p>
@@ -118,19 +129,19 @@
                 <ul>
                     <li><strong>Phe thích stability:</strong> khen OpenClaw đang tập trung vào release an toàn hơn, ít “shiny feature” hơn.</li>
                     <li><strong>Phe mệt vì tốc độ update:</strong> than rằng chưa vá xong bản cũ thì bản mới đã ra, không có breathing room.</li>
-                    <li><strong>Phe builder nghiêm túc:</strong> đặc biệt thích parity gate GPT-5.4 vs Opus 4.6 vì đó là thứ giúp họ tin hơn vào chất lượng thật.</li>
+                    <li><strong>Phe builder nghiêm túc:</strong> thích parity gate vì nó giúp họ tin hơn vào chất lượng thật, nhưng bản thân release này vẫn được nhớ nhiều hơn như một đợt cleanup lớn.</li>
                 </ul>
 
                 <div class="highlight-box-red">
                     <h4>⚠️ Điểm căng nhất của OpenClaw lúc này</h4>
-                    <p style="margin-bottom:0">OpenClaw đang đi rất nhanh. Vấn đề không còn là “ship được không”, mà là “ship nhanh như vậy có để người dùng tiêu hóa nổi không”. 2026.4.11 là một nỗ lực rõ ràng để trả lởi câu hỏi đó bằng chất lượng và cleanup. Nhưng cộng đồng vẫn muốn thêm một chút breathing room.</p>
+                    <p style="margin-bottom:0">OpenClaw đang đi rất nhanh. Vấn đề không còn là “ship được không”, mà là “ship nhanh như vậy có để người dùng tiêu hóa nổi không”. 2026.4.11 là một nỗ lực rõ ràng để trả lời câu hỏi đó bằng chất lượng và cleanup. Nhưng cộng đồng vẫn muốn thêm một chút breathing room.</p>
                 </div>
 
                 <h2>Kết luận</h2>
 
                 <p>OpenClaw 2026.4.11 là một bản release thực dụng. Không quá màu mè, không tung feature kiểu bắn phá headline, mà tập trung vào thứ khó hơn: <strong>làm agent đáng tin hơn trong đời sống thật</strong>.</p>
 
-                <p>Và nếu phải chọn một ý để nhớ về bản này, mình chọn ý này: <strong>OpenClaw bắt đầu dựng parity gate giữa các model agent mạnh như GPT-5.4 và Opus 4.6</strong>. Chuyện đó quan trọng hơn cả một đống changelog lặt vặt, vì nó cho thấy dự án đang học cách đánh giá agent như một hệ thống — không phải như một con chatbot biết nói mượt.</p>
+                <p>Nếu phải tóm gọn mối quan hệ giữa hai bản gần nhau nhất, thì mình chốt thế này: <strong>2026.4.10 mở thêm sức mạnh, còn 2026.4.11 siết lại để sức mạnh đó đỡ hỏng khi dùng thật</strong>. Parity gate GPT-5.4 vs Opus 4.6 là một chi tiết tốt của hướng đi đó, nhưng không phải trung tâm narrative bằng chính cú chuyển dịch từ capability sang stability.</p>
 
                 <p><strong>Source:</strong> <a href="https://x.com/openclaw/status/2043132528094036332" target="_blank" rel="noopener noreferrer">Thread của OpenClaw trên X</a><br>
                 <strong>Release notes:</strong> <a href="https://github.com/openclaw/openclaw/releases/tag/v2026.4.11" target="_blank" rel="noopener noreferrer">GitHub openclaw 2026.4.11</a></p>
@@ -151,11 +162,11 @@
 
                 <div class="tags">
                     <span class="tag">#OpenClaw</span>
-                    <span class="tag">#GPT54</span>
-                    <span class="tag">#Opus46</span>
-                    <span class="tag">#AgentQA</span>
+                    <span class="tag">#ReleaseComparison</span>
                     <span class="tag">#Stability</span>
-                    <span class="tag">#ParityTesting</span>
+                    <span class="tag">#Cleanup</span>
+                    <span class="tag">#Reliability</span>
+                    <span class="tag">#AgentQA</span>
                 </div>
             </div>
         </article>
