@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw 2026.4.12: Active Memory, LM Studio Và Một Cú Nâng Nền Rất Rộng Cho Production | Escbase</title>
+    <meta name="description" content="OpenClaw 2026.4.12 thêm Active Memory, LM Studio provider, bundled Codex path, exec-policy tiện hơn, plugin loading chặt hơn và một đợt vá production rất dày cho gateway, memory, dreaming và chat integrations.">
+    <meta property="og:title" content="OpenClaw 2026.4.12: Active Memory, LM Studio Và Một Cú Nâng Nền Rất Rộng Cho Production">
+    <meta property="og:description" content="Bản 2026.4.12 không chỉ là bugfix. Đây là một cú nâng nền rộng ở memory, local models, plugin loading và reliability cho OpenClaw khi chạy thật.">
+    <meta property="og:image" content="https://escbase.xyz/images/openclaw-2026-4-12-release-thumb.png">
+    <meta property="og:url" content="https://escbase.xyz/blog/openclaw-2026-4-12-release/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/shared-article-footer.css">
+    <style>
+        :root{--bg:#09090b;--card-bg:#18181b;--border:#27272a;--text:#fafafa;--text-secondary:#a1a1aa;--text-muted:#71717a;--accent:#38bdf8;--accent-blue:#60a5fa;--accent-purple:#8b5cf6;--accent-green:#22c55e;--accent-red:#ef4444;--accent-yellow:#f59e0b;--radius-md:16px;--radius-lg:24px}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased}.container{max-width:820px;margin:0 auto;padding:2rem 1.5rem}.article-header{margin-bottom:2.5rem}.category-badge{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1rem;background:rgba(56,189,248,.12);border:1px solid rgba(56,189,248,.22);border-radius:100px;font-size:.85rem;font-weight:600;color:#7dd3fc;margin-bottom:1.25rem}h1{font-size:2.2rem;font-weight:800;line-height:1.2;margin-bottom:1.25rem;letter-spacing:-.02em}.meta{display:flex;flex-wrap:wrap;gap:1.5rem;color:var(--text-muted);font-size:.9rem}.meta span{display:flex;align-items:center;gap:.5rem}.article-content{font-size:1.1rem;color:var(--text-secondary)}.article-content h2{font-size:1.5rem;font-weight:700;color:var(--text);margin-top:2.5rem;margin-bottom:1rem}.article-content p{margin-bottom:1.25rem}.article-content ul{margin-bottom:1.25rem;padding-left:1.5rem}.article-content li{margin-bottom:.5rem}.highlight-box{background:linear-gradient(135deg,rgba(56,189,248,.12) 0%,rgba(139,92,246,.06) 100%);border:1px solid rgba(56,189,248,.22);border-radius:var(--radius-md);padding:1.5rem;margin:2rem 0}.highlight-box h4{color:#7dd3fc;font-size:1.1rem;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}.highlight-box-green{background:linear-gradient(135deg,rgba(34,197,94,.12) 0%,rgba(20,184,166,.05) 100%);border:1px solid rgba(34,197,94,.2);border-radius:var(--radius-md);padding:1.5rem;margin:2rem 0}.highlight-box-green h4{color:#4ade80;font-size:1.1rem;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}.highlight-box-red{background:linear-gradient(135deg,rgba(239,68,68,.10) 0%,rgba(245,158,11,.05) 100%);border:1px solid rgba(239,68,68,.2);border-radius:var(--radius-md);padding:1.5rem;margin:2rem 0}.highlight-box-red h4{color:#f87171;font-size:1.1rem;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}.quote-block{border-left:4px solid var(--accent-yellow);padding:1.25rem 1.5rem;margin:2rem 0;background:rgba(245,158,11,.05);border-radius:0 var(--radius-md) var(--radius-md) 0;font-style:italic;color:var(--text)}.inline-image{width:100%;max-width:680px;display:block;border-radius:18px;border:1px solid rgba(255,255,255,.08);margin:1rem auto 1.5rem}.tags{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}.tag{padding:.5rem 1rem;background:var(--card-bg);border:1px solid var(--border);border-radius:100px;font-size:.85rem;color:var(--text-secondary)}a{color:#7dd3fc}@media(max-width:768px){h1{font-size:1.72rem}.container{padding:1.5rem 1rem}}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <span class="category-badge"><i class="fas fa-memory"></i> OpenClaw AI</span>
+                <h1>OpenClaw 2026.4.12: Active Memory, LM Studio Và Một Cú Nâng Nền Rất Rộng Cho Production</h1>
+                <div class="meta">
+                    <span><i class="far fa-calendar"></i> 13/04/2026</span>
+                    <span><i class="far fa-clock"></i> 8 phút đọc</span>
+                    <span><i class="far fa-folder"></i> OpenClaw, Memory & Local Model</span>
+                </div>
+                <img src="/images/openclaw-2026-4-12-release-thumb.png" alt="OpenClaw 2026.4.12 thumbnail" class="inline-image" style="margin-top:1rem;">
+            </header>
+
+            <div class="article-content">
+                <div class="highlight-box">
+                    <h4>🧠 Tóm tắt nhanh</h4>
+                    <p style="margin-bottom:0">OpenClaw 2026.4.12 là kiểu release nhìn qua tưởng chỉ là một đợt vá dày, nhưng đọc kỹ thì thấy đây là <strong>một cú nâng nền rất rộng</strong>: có <strong>Active Memory plugin</strong>, có <strong>LM Studio provider</strong>, có <strong>bundled Codex path</strong>, có <strong>exec-policy</strong> rõ hơn, plugin loading cũng bị siết chặt hơn, và phía dưới là một mớ fixes rất thực dụng cho <strong>gateway, memory, dreaming, Telegram, WhatsApp, Matrix, Discord</strong>.</p>
+                </div>
+
+                <p>Nếu bản 2026.4.11 mang cảm giác “siết stability để đỡ vỡ”, thì 2026.4.12 đi xa hơn một bước: <strong>vừa thêm capability mới, vừa dọn lại hạ tầng để capability đó sống được ngoài đời thật</strong>.</p>
+
+                <h2>Điểm đáng chú ý nhất: OpenClaw bắt đầu kéo memory lên thành lớp chủ động hơn</h2>
+
+                <p>Phần đáng tiền nhất của bản này, theo mình, là <strong>Active Memory plugin</strong>.</p>
+
+                <p>Ý tưởng không mới theo kiểu khoa học viễn tưởng, nhưng rất đúng chỗ đau: thay vì bắt người dùng phải nhớ gõ “remember this” hay phải tự nói agent đi search memory, OpenClaw giờ có thể cắm thêm một <strong>memory sub-agent</strong> chạy ngay trước câu trả lời chính để tự kéo lại các preference, context và chi tiết cũ có liên quan.</p>
+
+                <ul>
+                    <li>có thể chạy theo mode recent/full/context khác nhau,</li>
+                    <li>có verbose inspection để xem nó đang lôi cái gì lên,</li>
+                    <li>có override prompt/thinking để tinh chỉnh hành vi,</li>
+                    <li>và còn hỗ trợ transcript persistence kiểu opt-in để debug.</li>
+                </ul>
+
+                <div class="quote-block">
+                    Đây là kiểu tính năng không ồn ào bằng model mới, nhưng nếu làm đúng thì nó thay đổi cảm giác dùng hằng ngày rất mạnh: agent bớt mất trí nhớ, và người dùng đỡ phải làm thư ký cho chính AI của mình.
+                </div>
+
+                <h2>LM Studio và Codex làm rõ hơn hướng local + bundled provider</h2>
+
+                <p>Bản này cũng rất thú vị ở chỗ nó tiếp tục đẩy OpenClaw xa hơn khỏi tư duy “chỉ là vỏ bọc quanh API bên ngoài”.</p>
+
+                <ul>
+                    <li><strong>Bundled Codex provider</strong> giúp route riêng các model codex/gpt-* theo path Codex-managed auth, native threads, model discovery và compaction.</li>
+                    <li><strong>LM Studio provider</strong> được thêm như một bundled provider đúng nghĩa: có onboarding, runtime model discovery, stream preload và cả memory-search embeddings cho local/self-hosted OpenAI-compatible models.</li>
+                </ul>
+
+                <p>Nói thẳng ra: OpenClaw đang cố làm cho chuyện dùng model local hoặc self-hosted bớt giống một mớ hack tạm. Và đó là hướng rất đúng, vì càng về sau người dùng càng không muốn lệ thuộc hoàn toàn vào một đường API duy nhất.</p>
+
+                <div class="highlight-box-green">
+                    <h4>📌 4 tác động thực tế của bản này</h4>
+                    <ul style="margin-bottom:0">
+                        <li><strong>Memory đỡ bị động hơn:</strong> agent có cơ hội tự kéo đúng ngữ cảnh thay vì đợi người dùng nhắc.</li>
+                        <li><strong>Model local usable hơn:</strong> LM Studio không còn là lựa chọn “tự nối dây điện bằng tay” nữa.</li>
+                        <li><strong>Codex path rõ ràng hơn:</strong> auth, threads và discovery đi đúng luồng riêng, ít lẫn vào OpenAI provider thường.</li>
+                        <li><strong>Plugin runtime gọn hơn:</strong> OpenClaw tránh load bừa những thứ không liên quan khi startup và runtime activation.</li>
+                    </ul>
+                </div>
+
+                <h2>Plugin loading bị siết lại — nghe khô nhưng cực đáng tiền</h2>
+
+                <p>Một trong những thay đổi dễ bị bỏ qua nhất là cụm update về <strong>plugin loading</strong>.</p>
+
+                <p>Release note nói rất rõ: OpenClaw đang thu hẹp activation của CLI, provider và channel về đúng những gì manifest khai báo cần thiết; đồng thời giữ scope/trust boundary rõ hơn và gom policy về manifest-owner vào một chỗ.</p>
+
+                <p>Dịch sang tiếng người:</p>
+
+                <ul>
+                    <li>ít load runtime linh tinh hơn,</li>
+                    <li>ít side effect ngớ ngẩn hơn,</li>
+                    <li>và ranh giới giữa plugin nào được quyền làm gì cũng sáng sủa hơn.</li>
+                </ul>
+
+                <p>Đây chính là kiểu thay đổi mà người dùng bình thường không thấy ngay, nhưng maintainers thì thở phào. Vì khi hệ thống càng nhiều plugin, càng nhiều channel, càng nhiều provider, chuyện “load nhầm một thứ không cần” chính là nguồn sinh bug rất bẩn.</p>
+
+                <h2>Feishu, gateway command discovery và exec-policy đều đang được làm cho đỡ mù mờ</h2>
+
+                <p>Bản này có một chuỗi cập nhật nhỏ nhưng rất đúng hướng:</p>
+
+                <ul>
+                    <li><strong>Feishu setup path</strong> được làm mượt hơn.</li>
+                    <li><strong>Gateway commands.list RPC</strong> giúp client từ xa biết runtime đang có command gì, skill gì, plugin gì.</li>
+                    <li><strong>openclaw exec-policy</strong> có show/preset/set để sync config với local approvals file thay vì để người dùng mò config kiểu nửa tay.</li>
+                </ul>
+
+                <p>Nếu nhìn riêng lẻ thì mấy món này hơi lẻ tẻ. Nhưng đặt chung lại thì pattern khá rõ: OpenClaw đang cố biến những vùng trước đây hơi “đọc docs rồi cầu nguyện” thành các luồng setup/inspection cụ thể hơn.</p>
+
+                <h2>Fixes của 2026.4.12 dày theo kiểu production thật sự</h2>
+
+                <p>Danh sách fix của bản này dài, nhưng không phải kiểu vá cho có. Nó đụng vào rất nhiều thứ từng đủ khó chịu để làm agent mất uy tín:</p>
+
+                <ul>
+                    <li><strong>Security:</strong> chặn một loạt đường injection/shell-wrapper ngớ ngẩn, không để approver list rỗng mà vẫn coi là approved, blank ví dụ credential mặc định để người dùng khỏi boot bằng secret công khai.</li>
+                    <li><strong>Memory + Dreaming:</strong> sửa recall channel resolution, ngăn dreaming nuốt lại transcript của chính nó, tăng confidence/promotion để durable memory bớt mắc kẹt ngay sát ngưỡng, sửa timestamp diary theo timezone local.</li>
+                    <li><strong>Gateway:</strong> giữ WebSocket tick không bị coi là droppable, tránh client tự disconnect khi tác vụ dài còn đang sống; preserve isolated-agent config qua reload; sửa idempotencyKey cho plugin subagent runs.</li>
+                    <li><strong>Telegram/WhatsApp/Matrix/Discord/iMessage:</strong> vá một đống lỗi routing, mentions, login recovery, approval callbacks, reconnect timer và restart path.</li>
+                    <li><strong>Audio transcription:</strong> surfacing lỗi thật thay vì ném generic skip, sửa FormData boundary bug khiến request âm thanh HTTP 400 vớ vẩn.</li>
+                </ul>
+
+                <div class="highlight-box-red">
+                    <h4>⚠️ Vì sao bản này đáng đọc hơn vẻ ngoài của nó</h4>
+                    <p style="margin-bottom:0">Nhiều release nhìn exciting vì có một headline to đùng. Bản 2026.4.12 không đi theo kiểu đó. Nó đáng giá vì nó chạm vào những điểm làm agent “trông thông minh nhưng dùng thật lại bực mình”: memory lệch ngữ cảnh, plugin load bừa, reconnect ngu, approvals kẹt, long-run dễ rơi, local model setup lằng nhằng.</p>
+                </div>
+
+                <h2>So với 2026.4.11, 2026.4.12 khác ở đâu?</h2>
+
+                <ul>
+                    <li><strong>2026.4.11</strong> nghiêng mạnh về cleanup + stability + production polish.</li>
+                    <li><strong>2026.4.12</strong> vẫn giữ nhịp stability đó, nhưng thêm vài capability nền rất rõ: Active Memory, LM Studio, Codex path, exec-policy và command discovery.</li>
+                    <li><strong>2026.4.11</strong> cho cảm giác vá và siết.</li>
+                    <li><strong>2026.4.12</strong> cho cảm giác vừa siết vừa lắp thêm các mảnh kiến trúc mà OpenClaw sẽ dùng lâu dài.</li>
+                </ul>
+
+                <p>Nói ngắn gọn: nếu 2026.4.11 là “dọn để nhà bớt vỡ”, thì 2026.4.12 là “dọn xong rồi bắt đầu đặt lại nội thất cho hợp lý hơn”.</p>
+
+                <h2>Kết luận</h2>
+
+                <p>OpenClaw 2026.4.12 là một release rất “builder-pilled”: không cần một headline loè loẹt duy nhất để chứng minh giá trị. Nó quan trọng vì nó làm ba việc cùng lúc:</p>
+
+                <ul>
+                    <li>nâng memory từ bị động sang chủ động hơn,</li>
+                    <li>làm local/self-hosted model path tử tế hơn,</li>
+                    <li>và tiếp tục dọn những điểm production dễ vỡ nhất.</li>
+                </ul>
+
+                <p>Nếu phải chốt bằng một câu, mình sẽ nói thế này: <strong>2026.4.12 là bản cho thấy OpenClaw không chỉ muốn có thêm tính năng — họ muốn các tính năng đó thật sự sống sót ngoài production</strong>.</p>
+
+                <p><strong>Source:</strong> <a href="https://github.com/openclaw/openclaw/releases/tag/v2026.4.12" target="_blank" rel="noopener noreferrer">GitHub openclaw 2026.4.12</a></p>
+
+                <div class="back-to-blog-footer">
+                    <a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+                </div>
+
+                <div class="article-cta-stack">
+                    <a href="/blog/openclaw-2026-4-11-release" class="article-suggestion-card">
+                        <span class="article-suggestion-label"><i class="fas fa-book-open"></i> Đọc tiếp</span>
+                        <span class="article-suggestion-title">OpenClaw 2026.4.11: ChatGPT Import, Richer Webchat Và Một Đợt Siết Stability Rất Mạnh</span>
+                    </a>
+                    <div class="article-cta-actions">
+                        <a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a>
+                    </div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">#OpenClaw</span>
+                    <span class="tag">#ActiveMemory</span>
+                    <span class="tag">#LMStudio</span>
+                    <span class="tag">#PluginLoading</span>
+                    <span class="tag">#LocalModel</span>
+                    <span class="tag">#ProductionStability</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

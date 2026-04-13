@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/openclaw-2026-4-12-release",
+    "title": "OpenClaw 2026.4.12: Active Memory, LM Studio Và Một Cú Nâng Nền Rất Rộng Cho Production",
+    "excerpt": "OpenClaw 2026.4.12 thêm Active Memory, LM Studio provider, bundled Codex path, exec-policy tiện hơn, plugin loading chặt hơn và một đợt vá production rất dày cho gateway, memory, dreaming và chat integrations.",
+    "date": "Apr 13, 2026",
+    "tag": "OpenClaw AI",
+    "tagIcon": "fas fa-memory",
+    "tagColor": "#38bdf8",
+    "readTime": "8 min read",
+    "featured": true,
+    "image": "/images/openclaw-2026-4-12-release-thumb.png"
+  },
+  {
     "url": "/blog/polkadot-dot-hack",
     "title": "1 Tỷ DOT Bị Mint Trái Phép Trên Ethereum: Hyperbridge Bị Exploit, Nhưng Polkadot Mainnet Không Sập",
     "excerpt": "Một exploit trên Hyperbridge gateway cho phép hacker mint 1 tỷ DOT trên Ethereum và bán ra lấy khoảng 237.000 USD. Điểm quan trọng: đây là bridged DOT trên Ethereum, không phải native DOT trên Polkadot bị hack trực tiếp.",
