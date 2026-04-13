@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/polkadot-dot-hack",
+    "title": "1 Tỷ DOT Bị Mint Trái Phép Trên Ethereum: Hyperbridge Bị Exploit, Nhưng Polkadot Mainnet Không Sập",
+    "excerpt": "Một exploit trên Hyperbridge gateway cho phép hacker mint 1 tỷ DOT trên Ethereum và bán ra lấy khoảng 237.000 USD. Điểm quan trọng: đây là bridged DOT trên Ethereum, không phải native DOT trên Polkadot bị hack trực tiếp.",
+    "date": "Apr 13, 2026",
+    "tag": "Bridge Exploit",
+    "tagIcon": "fas fa-shield-halved",
+    "tagColor": "#e879f9",
+    "readTime": "7 min read",
+    "featured": true,
+    "image": "/images/polkadot-dot-hack-thumb.png"
+  },
+  {
     "url": "/blog/justin-sun-wlfi-blacklist",
     "title": "Justin Sun Tố WLFI Cài Blacklist Backdoor: Một Dự Án Tự Xưng DeFi Có Thể Đóng Băng Holder?",
     "excerpt": "Justin Sun công khai cáo buộc World Liberty Financial cài blacklist backdoor trong token WLFI, cho phép đóng băng hoặc tước quyền tài sản của holder. Đây không chỉ là drama cá nhân, mà là cú đánh thẳng vào narrative DeFi của dự án.",
