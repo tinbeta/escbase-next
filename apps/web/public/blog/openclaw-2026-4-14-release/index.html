@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw 2026.4.14: GPT-5.4 Rõ Ràng Hơn, Telegram Đỡ Mù Tên Topic, Và Một Bản Vá Cực Dày Cho Runtime | Escbase</title>
+    <meta name="description" content="OpenClaw 2026.4.14 không có headline hào nhoáng, nhưng lại là một bản nâng chất lượng rất thực dụng: GPT-5.4 support rõ hơn, Telegram topic names tử tế hơn, Ollama/local model đỡ vướng timeout và hàng loạt bản vá production cho browser, memory, cron, queue, SSRF và channel integrations.">
+    <meta property="og:title" content="OpenClaw 2026.4.14: GPT-5.4 Rõ Ràng Hơn, Telegram Đỡ Mù Tên Topic, Và Một Bản Vá Cực Dày Cho Runtime">
+    <meta property="og:description" content="Một release nhìn ngoài tưởng chỉ là quality pass, nhưng thực ra chạm đúng các chỗ đau nhất khi chạy agent ngoài đời: provider alias, Ollama timeout, Telegram topic names, browser SSRF, cron, queue và memory.">
+    <meta property="og:image" content="https://escbase.xyz/images/openclaw-2026-4-14-release-thumb.png">
+    <meta property="og:url" content="https://escbase.xyz/blog/openclaw-2026-4-14-release/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/shared-article-footer.css">
+    <style>
+        :root{--bg:#09090b;--card-bg:#18181b;--border:#27272a;--text:#fafafa;--text-secondary:#a1a1aa;--text-muted:#71717a;--accent:#38bdf8;--accent-blue:#60a5fa;--accent-purple:#8b5cf6;--accent-green:#22c55e;--accent-red:#ef4444;--accent-yellow:#f59e0b;--radius-md:16px;--radius-lg:24px}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased}.container{max-width:820px;margin:0 auto;padding:2rem 1.5rem}.article-header{margin-bottom:2.5rem}.category-badge{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1rem;background:rgba(56,189,248,.12);border:1px solid rgba(56,189,248,.22);border-radius:100px;font-size:.85rem;font-weight:600;color:#7dd3fc;margin-bottom:1.25rem}h1{font-size:2.2rem;font-weight:800;line-height:1.2;margin-bottom:1.25rem;letter-spacing:-.02em}.meta{display:flex;flex-wrap:wrap;gap:1.5rem;color:var(--text-muted);font-size:.9rem}.meta span{display:flex;align-items:center;gap:.5rem}.article-content{font-size:1.1rem;color:var(--text-secondary)}.article-content h2{font-size:1.5rem;font-weight:700;color:var(--text);margin-top:2.5rem;margin-bottom:1rem}.article-content p{margin-bottom:1.25rem}.article-content ul{margin-bottom:1.25rem;padding-left:1.5rem}.article-content li{margin-bottom:.5rem}.highlight-box{background:linear-gradient(135deg,rgba(56,189,248,.12) 0%,rgba(139,92,246,.06) 100%);border:1px solid rgba(56,189,248,.22);border-radius:var(--radius-md);padding:1.5rem;margin:2rem 0}.highlight-box h4{color:#7dd3fc;font-size:1.1rem;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}.highlight-box-green{background:linear-gradient(135deg,rgba(34,197,94,.12) 0%,rgba(20,184,166,.05) 100%);border:1px solid rgba(34,197,94,.2);border-radius:var(--radius-md);padding:1.5rem;margin:2rem 0}.highlight-box-green h4{color:#4ade80;font-size:1.1rem;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}.highlight-box-red{background:linear-gradient(135deg,rgba(239,68,68,.10) 0%,rgba(245,158,11,.05) 100%);border:1px solid rgba(239,68,68,.2);border-radius:var(--radius-md);padding:1.5rem;margin:2rem 0}.highlight-box-red h4{color:#f87171;font-size:1.1rem;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}.quote-block{border-left:4px solid var(--accent-yellow);padding:1.25rem 1.5rem;margin:2rem 0;background:rgba(245,158,11,.05);border-radius:0 var(--radius-md) var(--radius-md) 0;font-style:italic;color:var(--text)}.inline-image{width:100%;max-width:680px;display:block;border-radius:18px;border:1px solid rgba(255,255,255,.08);margin:1rem auto 1.5rem}.tags{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}.tag{padding:.5rem 1rem;background:var(--card-bg);border:1px solid var(--border);border-radius:100px;font-size:.85rem;color:var(--text-secondary)}a{color:#7dd3fc}@media(max-width:768px){h1{font-size:1.72rem}.container{padding:1.5rem 1rem}}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <span class="category-badge"><i class="fas fa-terminal"></i> OpenClaw AI</span>
+                <h1>OpenClaw 2026.4.14: GPT-5.4 Rõ Ràng Hơn, Telegram Đỡ Mù Tên Topic, Và Một Bản Vá Cực Dày Cho Runtime</h1>
+                <div class="meta">
+                    <span><i class="far fa-calendar"></i> 15/04/2026</span>
+                    <span><i class="far fa-clock"></i> 8 phút đọc</span>
+                    <span><i class="far fa-folder"></i> OpenClaw, Runtime & Reliability</span>
+                </div>
+                <img src="/images/openclaw-2026-4-14-release-thumb.png" alt="OpenClaw 2026.4.14 thumbnail" class="inline-image" style="margin-top:1rem;">
+            </header>
+
+            <div class="article-content">
+                <div class="highlight-box">
+                    <h4>🧠 Tóm tắt nhanh</h4>
+                    <p style="margin-bottom:0">OpenClaw 2026.4.14 không phải kiểu release có một headline quá kịch tính. Nhưng đây lại là <strong>một bản quality release rất đáng tiền</strong>: support <strong>GPT-5.4 family</strong> rõ ràng hơn, <strong>Telegram forum topic names</strong> finally ra hồn, local/Ollama đỡ chết vì timeout hoặc usage ảo, và bên dưới là một lớp fixes cực dày cho <strong>browser SSRF, memory, cron, outbound queue, Discord, Telegram, WhatsApp và gateway</strong>.</p>
+                </div>
+
+                <p>Nói ngắn gọn: nếu bạn dùng OpenClaw kiểu chạy thật mỗi ngày, bản này đáng chú ý không phải vì nó “wow”, mà vì nó <strong>giảm rất nhiều kiểu bực mình lặt vặt nhưng độc hại</strong>.</p>
+
+                <h2>Điểm headline nhỏ nhưng đúng chỗ: GPT-5.4 và Codex đỡ mù alias hơn</h2>
+
+                <p>Phần thay đổi dễ thấy nhất là OpenClaw đã thêm forward-compat support cho <strong>gpt-5.4-pro</strong>, bao gồm pricing, limits và visibility trong list/status ngay cả khi catalog upstream chưa cập nhật kịp.</p>
+
+                <p>Đây là kiểu fix nghe nhỏ, nhưng cực thực dụng. Vì một trong những thứ khó chịu nhất khi dùng hệ model mới là: model thì đã tồn tại, nhưng tooling xung quanh vẫn cư xử như nó chưa ra đời.</p>
+
+                <ul>
+                    <li><strong>Codex pricing/limits</strong> đỡ lệch thực tế hơn,</li>
+                    <li><strong>list/status</strong> đỡ nhập nhằng,</li>
+                    <li>và alias cũ kiểu <strong>openai-codex/gpt-5.4-codex</strong> cũng được canonicalize lại để không còn tạo ra mấy bug override rất ngớ ngẩn.</li>
+                </ul>
+
+                <div class="quote-block">
+                    Đây là kiểu polish mà ai dùng model bleeding-edge đều hiểu giá trị: không có gì quê hơn việc model chạy được nhưng cả runtime xung quanh vẫn gọi nhầm tên, tính sai giá, hoặc giấu mất nó khỏi status.
+                </div>
+
+                <h2>Telegram finally đỡ “mù tên topic”</h2>
+
+                <p>Một thay đổi cực đáng giá khác là OpenClaw giờ <strong>học và lưu được tên topic thật của Telegram forum</strong>, thay vì chỉ bám vào ID hoặc metadata cứng đầu khó đọc.</p>
+
+                <p>Bản 2026.4.14 không chỉ surface tên topic vào agent context và prompt metadata, mà còn <strong>persist luôn nó vào session sidecar store</strong>. Nghĩa là sau restart, agent vẫn nhớ topic đó tên gì, không phải ngồi học lại từ đầu khi có service message mới.</p>
+
+                <p>Nghe có vẻ nhỏ. Nhưng ai từng debug thread/forum chat sẽ biết đây là khác biệt giữa:</p>
+
+                <ul>
+                    <li>một hệ thống “có vẻ biết mình đang ở đâu”,</li>
+                    <li>và một hệ thống “đang sống trong ma trận số ID vô hồn”.</li>
+                </ul>
+
+                <h2>Local model và Ollama được vá đúng các chỗ đau thật</h2>
+
+                <p>Bản này có một chuỗi fixes rất thực tế cho local/Ollama:</p>
+
+                <ul>
+                    <li><strong>embedded-run timeout</strong> được forward đúng vào stream timeout tuning, nên Ollama chậm không còn chết oan vì default cutoff.</li>
+                    <li><strong>stream_options.include_usage</strong> được gửi cho Ollama streaming completions, nên usage report đỡ bị bogus và không còn kéo theo mấy pha compaction sớm rất ngu.</li>
+                    <li><strong>memory embeddings</strong> giữ được provider prefix và endpoint-aware cache keys, nên các setup proxy-backed hoặc nhiều host Ollama đỡ vỡ hơn.</li>
+                    <li><strong>session-memory slug generation</strong> cũng chịu nghe timeout override, không còn auto fallback quá sớm khi local model chạy chậm.</li>
+                </ul>
+
+                <div class="highlight-box-green">
+                    <h4>📌 Vì sao cụm fix này đáng tiền</h4>
+                    <ul style="margin-bottom:0">
+                        <li><strong>Đỡ timeout oan:</strong> model chậm không còn bị xử như model chết.</li>
+                        <li><strong>Usage thật hơn:</strong> tránh token accounting ảo kéo theo quyết định runtime sai.</li>
+                        <li><strong>Proxy + self-hosted đỡ mong manh:</strong> đặc biệt với memory và media-understanding.</li>
+                        <li><strong>Trải nghiệm local bớt hacky:</strong> không còn cảm giác cứ chạy self-hosted là phải chấp nhận vài lỗi vô duyên.</li>
+                    </ul>
+                </div>
+
+                <h2>Security fixes lần này khá dày — và không phải kiểu dằn mặt cho có</h2>
+
+                <p>2026.4.14 vá rất nhiều điểm kiểu “nếu để lâu sẽ thành lỗ hổng thật sự”, chứ không chỉ cleanup đẹp changelog:</p>
+
+                <ul>
+                    <li><strong>Slack interactions</strong> bị siết allowlist đúng nghĩa hơn, tránh chuyện block-action/modal event đi vòng qua intent allowlist.</li>
+                    <li><strong>Media attachments</strong> fail-closed nếu local path không realpath canonicalize được, tránh downgrade allowlist check.</li>
+                    <li><strong>Gateway tool</strong> chặn model-facing patch/apply nếu patch đó cố bật các flag bị audit coi là nguy hiểm.</li>
+                    <li><strong>Browser</strong> tiếp tục được siết SSRF ở snapshot/screenshot/tab routes, nhưng vẫn cứu lại các luồng local CDP control để khỏi tự bắn vào chân mình.</li>
+                    <li><strong>UI/chat</strong> thay marked.js bằng markdown-it để tránh ReDoS kiểu markdown crafted độc hại làm đóng băng control UI.</li>
+                </ul>
+
+                <p>Điểm mình thích là team không vá theo kiểu cực đoan “đóng hết cho chắc”, mà cố giữ cân bằng: <strong>siết chỗ nguy hiểm, nhưng vẫn giữ được luồng local/managed browser hoạt động bình thường</strong>.</p>
+
+                <h2>Browser, cron và queue: đống “máy móc hậu trường” được đại tu khá mạnh</h2>
+
+                <p>Phần nhiều người bỏ qua nhất, nhưng thực ra cực quan trọng, là cụm fixes cho runtime machinery:</p>
+
+                <ul>
+                    <li><strong>Browser/CDP</strong> được sửa nhiều vòng để local Chrome, attach-only profile, managed browser và strict SSRF policy không còn cắn nhau loạn xạ.</li>
+                    <li><strong>Cron/scheduler</strong> ngừng tự bịa retry ngắn khi không tính được next-run hợp lệ, đồng thời giữ được error-backoff floor sau maintenance repair.</li>
+                    <li><strong>Outbound delivery queue</strong> giờ giữ được origin session context qua restart, tránh send sau reboot mà mất đúng media policy/context ban đầu.</li>
+                    <li><strong>Auto-reply queue</strong> cũng được tách group theo authorization context, tránh queue này chạy ké approval/owner context của queue khác.</li>
+                </ul>
+
+                <div class="highlight-box-red">
+                    <h4>⚠️ Cái hay của bản này là nó vá những lỗi không hào nhoáng nhưng cực phá mood</h4>
+                    <p style="margin-bottom:0">Bạn không lên X khoe “hôm nay queue của tôi preserve đúng outbound session context sau restart”. Nhưng chính những thứ như vậy mới quyết định agent có đáng tin khi chạy thật hay không. Nếu runtime nền cứ lệch nhẹ mỗi chỗ một tí, sớm muộn gì user cũng chửi.</p>
+                </div>
+
+                <h2>Một loạt channel/provider fixes rất thực dụng</h2>
+
+                <p>Ngoài Telegram, release này còn vá thêm cả rổ vấn đề cho đa kênh:</p>
+
+                <ul>
+                    <li><strong>Discord</strong> trả lại status card thật cho native <code>/status</code> thay vì đôi khi rơi về quả ack “✅ Done.” vô nghĩa.</li>
+                    <li><strong>Telegram media downloads</strong> đỡ chết trong môi trường proxy-backed.</li>
+                    <li><strong>WhatsApp / BlueBubbles</strong> được vá các lỗi gửi media, reply threading và effect degradation khi cache/status mù.</li>
+                    <li><strong>OpenAI-compatible onboarding</strong> dùng <code>max_tokens=16</code> cho verify probe, đỡ bị custom endpoint khó tính chặn oan.</li>
+                </ul>
+
+                <p>Pattern ở đây khá rõ: OpenClaw đang giảm dần mấy thứ “works on my machine nhưng ra production là hành xác”.</p>
+
+                <h2>Kết luận</h2>
+
+                <p>OpenClaw 2026.4.14 không phải kiểu release có một tính năng sexy duy nhất để headline hóa. Nó đáng đọc vì nó cho thấy team đang làm ba việc đúng đắn cùng lúc:</p>
+
+                <ul>
+                    <li>giữ pace với model/provider mới như GPT-5.4,</li>
+                    <li>làm context đa kênh thực dụng hơn như Telegram topic names,</li>
+                    <li>và dọn đống runtime debt ở browser, queue, cron, memory, proxy và local models.</li>
+                </ul>
+
+                <p>Nếu phải chốt bằng một câu: <strong>2026.4.14 là bản release làm OpenClaw đỡ “lệch vặt” đi rất nhiều — và đó chính là thứ khiến một agent framework bắt đầu đáng tin hơn theo thời gian</strong>.</p>
+
+                <p><strong>Source:</strong> <a href="https://github.com/openclaw/openclaw/releases/tag/v2026.4.14" target="_blank" rel="noopener noreferrer">GitHub openclaw 2026.4.14</a></p>
+
+                <div class="back-to-blog-footer">
+                    <a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+                </div>
+
+                <div class="article-cta-stack">
+                    <a href="/blog/openclaw-2026-4-12-release" class="article-suggestion-card">
+                        <span class="article-suggestion-label"><i class="fas fa-book-open"></i> Đọc tiếp</span>
+                        <span class="article-suggestion-title">OpenClaw 2026.4.12: Active Memory, LM Studio Và Một Cú Nâng Nền Rất Rộng Cho Production</span>
+                    </a>
+                    <div class="article-cta-actions">
+                        <a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a>
+                    </div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">#OpenClaw</span>
+                    <span class="tag">#GPT54</span>
+                    <span class="tag">#TelegramTopics</span>
+                    <span class="tag">#Ollama</span>
+                    <span class="tag">#RuntimeReliability</span>
+                    <span class="tag">#BrowserSSRF</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>
