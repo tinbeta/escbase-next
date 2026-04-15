@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/google-chrome-skills",
+    "title": "Google Đưa “Skills” Vào Chrome: Khi Prompt Không Còn Chỉ Là Một Ô Chat Dùng Rồi Quên",
+    "excerpt": "Google vừa thêm Skills vào Gemini in Chrome, cho phép lưu prompt hay dùng thành workflow một chạm chạy trực tiếp trên tab web đang mở. Đây không chỉ là tiện hơn — mà là bước kéo AI từ chỗ hỏi-đáp sang chỗ hành động lặp lại hằng ngày.",
+    "date": "Apr 15, 2026",
+    "tag": "AI Browser Tools",
+    "tagIcon": "fas fa-window-maximize",
+    "tagColor": "#60a5fa",
+    "readTime": "6 min read",
+    "featured": true,
+    "image": "/images/google-chrome-skills-thumb.png"
+  },
+  {
     "url": "/blog/openclaw-2026-4-14-release",
     "title": "OpenClaw 2026.4.14: GPT-5.4 Rõ Ràng Hơn, Telegram Đỡ Mù Tên Topic, Và Một Bản Vá Cực Dày Cho Runtime",
     "excerpt": "OpenClaw 2026.4.14 không có headline hào nhoáng, nhưng lại là một bản nâng chất lượng rất thực dụng: GPT-5.4 support rõ hơn, Telegram topic names tử tế hơn, Ollama/local model đỡ vướng timeout và hàng loạt bản vá production cho browser, memory, cron, queue, SSRF và channel integrations.",
