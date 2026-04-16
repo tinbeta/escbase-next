@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qwen3.6-35B-A3B Open Source: Một Model 3B Active Nhưng Dám Đấu Qwen3.5-27B, Gemma 4 31B Và Cả Claude Sonnet 4.5 | Escbase</title>
-    <meta name="description" content="Alibaba Qwen vừa open source Qwen3.6-35B-A3B dưới giấy phép Apache 2.0. Điểm đáng chú ý không chỉ là 35B total, 3B active, mà là benchmark blog gốc cho thấy nó vượt xa Qwen3.5-35B-A3B, cạnh tranh với Qwen3.5-27B và Gemma 4 31B ở coding, đồng thời bám rất sát Claude Sonnet 4.5 ở mảng vision-language.">
+    <meta name="description" content="Alibaba Qwen vừa open source Qwen3.6-35B-A3B dưới giấy phép Apache 2.0. Điểm đáng chú ý không chỉ là 35B total, 3B active, mà là benchmark trên blog của họ cho thấy nó vượt xa Qwen3.5-35B-A3B, cạnh tranh với Qwen3.5-27B và Gemma 4 31B ở coding, đồng thời bám rất sát Claude Sonnet 4.5 ở mảng vision-language.">
     <meta property="og:title" content="Qwen3.6-35B-A3B Open Source: Một Model 3B Active Nhưng Dám Đấu Qwen3.5-27B, Gemma 4 31B Và Cả Claude Sonnet 4.5">
     <meta property="og:description" content="Qwen3.6-35B-A3B không chỉ khoe 3B active. Blog gốc benchmark nó trực tiếp với Qwen3.5-27B, Gemma 4 31B, Qwen3.5-35B-A3B, Gemma 4 26B-A4B và cả Claude Sonnet 4.5 ở phần vision-language.">
     <meta property="og:image" content="https://escbase.xyz/images/qwen-3-6-35b-a3b-open-source-thumb.png">
@@ -37,10 +37,10 @@
             <div class="article-content">
                 <div class="highlight-box">
                     <h4>⚡ Tóm tắt nhanh</h4>
-                    <p style="margin-bottom:0">Alibaba Qwen vừa open source <strong>Qwen3.6-35B-A3B</strong> dưới giấy phép <strong>Apache 2.0</strong>. Điểm đáng chú ý không chỉ là kiến trúc <strong>sparse MoE 35B total, 3B active</strong>, mà là benchmark blog gốc cho thấy nó được đặt cạnh <strong>Qwen3.5-27B</strong>, <strong>Gemma 4 31B</strong>, <strong>Qwen3.5-35B-A3B</strong>, <strong>Gemma 4 26B-A4B</strong> ở phần coding/language, còn ở vision-language thì Qwen tự tin đem nó so trực tiếp với <strong>Claude Sonnet 4.5</strong>.</p>
+                    <p style="margin-bottom:0">Alibaba Qwen vừa open source <strong>Qwen3.6-35B-A3B</strong> dưới giấy phép <strong>Apache 2.0</strong>. Điểm đáng chú ý không chỉ là kiến trúc <strong>sparse MoE 35B total, 3B active</strong>, mà là benchmark trên blog của họ cho thấy nó được đặt cạnh <strong>Qwen3.5-27B</strong>, <strong>Gemma 4 31B</strong>, <strong>Qwen3.5-35B-A3B</strong>, <strong>Gemma 4 26B-A4B</strong> ở phần coding/language, còn ở vision-language thì Qwen tự tin đem nó so trực tiếp với <strong>Claude Sonnet 4.5</strong>.</p>
                 </div>
 
-                <p>Post trên X của <strong>@Alibaba_Qwen</strong> khá ngắn, nhưng blog gốc thì nói rõ hơn nhiều: đây không phải một model open source kiểu “thêm cho đủ lineup”. Họ đang cố chứng minh rằng <strong>3B active</strong> vẫn có thể đánh nhau sòng phẳng với các model to hơn ở những benchmark coding và multimodal thật sự.</p>
+                <p>Post trên X của <strong>@Alibaba_Qwen</strong> khá ngắn, nhưng bài blog của họ thì nói rõ hơn nhiều: đây không phải một model open source kiểu “thêm cho đủ lineup”. Họ đang cố chứng minh rằng <strong>3B active</strong> vẫn có thể đánh nhau sòng phẳng với các model to hơn ở những benchmark coding và multimodal thật sự.</p>
 
                 <p>Nói kiểu đời thường: Qwen vừa ném ra một con model bảo rằng “tôi không cần bật cả khối tham số khổng lồ, nhưng vẫn đủ sức đấu với <strong>Qwen3.5-27B</strong>, <strong>Gemma 4 31B</strong> và ở vision-language còn dám đứng cùng mâm với <strong>Claude Sonnet 4.5</strong>”. Nếu benchmark của họ đứng được, đây là cú chọc khá đau vào cả thị trường open model lẫn lớp model API thương mại đắt tiền hơn.</p>
 
@@ -65,7 +65,7 @@
 
                 <h2>Ở phần coding, blog gốc benchmark nó với ai?</h2>
 
-                <p>Trong phần <strong>Language</strong>, blog gốc đặt Qwen3.6-35B-A3B cạnh:</p>
+                <p>Trong phần <strong>Language</strong>, bài blog của họ đặt Qwen3.6-35B-A3B cạnh:</p>
 
                 <ul>
                     <li><strong>Qwen3.5-27B</strong></li>
@@ -89,7 +89,7 @@
 
                 <h2>Phần vision-language mới là chỗ Qwen chơi to hơn mình tưởng</h2>
 
-                <p>Post X chỉ nói model có <strong>multimodal perception and reasoning ability</strong>. Nhưng blog gốc đi xa hơn nhiều: ở phần <strong>Vision Language</strong>, Qwen so model này trực tiếp với:</p>
+                <p>Post X chỉ nói model có <strong>multimodal perception and reasoning ability</strong>. Nhưng bài blog của họ đi xa hơn nhiều: ở phần <strong>Vision Language</strong>, Qwen so model này trực tiếp với:</p>
 
                 <ul>
                     <li><strong>Qwen3.5-27B</strong></li>
@@ -99,7 +99,7 @@
                     <li><strong>Qwen3.5-35B-A3B</strong></li>
                 </ul>
 
-                <p>Và chính blog gốc viết khá thẳng: trên đa số benchmark vision-language, hiệu năng của Qwen3.6-35B-A3B <strong>match Claude Sonnet 4.5</strong>, thậm chí có vài task còn vượt. Đây mới là phần khiến model này bớt bị nhìn như một con chỉ biết code.</p>
+                <p>Và chính bài blog này viết khá thẳng: trên đa số benchmark vision-language, hiệu năng của Qwen3.6-35B-A3B <strong>match Claude Sonnet 4.5</strong>, thậm chí có vài task còn vượt. Đây mới là phần khiến model này bớt bị nhìn như một con chỉ biết code.</p>
 
                 <p>Nói ngắn gọn: Qwen không chỉ cố chứng minh rằng model này rẻ hơn khi chạy coding agent. Họ còn muốn nó được nhìn như một <strong>multimodal open model đủ toàn diện để bước vào nhiều workflow thật</strong>.</p>
 
@@ -130,7 +130,7 @@
 
                 <p>Nếu benchmark của họ đứng vững trong thực chiến, đây sẽ là kiểu model rất đáng gờm: không cần to nhất, không cần marketing ồn ào nhất, nhưng lại rất dễ trở thành lựa chọn cực khó chịu trong thế giới agent và AI app thực dụng.</p>
 
-                <p><strong>Source:</strong> <a href="https://qwen.ai/blog?id=qwen3.6-35b-a3b" target="_blank" rel="noopener noreferrer">Blog gốc từ Qwen</a> · <a href="https://x.com/Alibaba_Qwen/status/2044768734234243427" target="_blank" rel="noopener noreferrer">Post trên X</a></p>
+                <p><strong>Source:</strong> <a href="https://qwen.ai/blog?id=qwen3.6-35b-a3b" target="_blank" rel="noopener noreferrer">Blog từ Qwen</a> · <a href="https://x.com/Alibaba_Qwen/status/2044768734234243427" target="_blank" rel="noopener noreferrer">Post trên X</a></p>
 
                 <div class="back-to-blog-footer">
                     <a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
