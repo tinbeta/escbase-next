@@ -1,54 +1,53 @@
 <svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#060816"/>
-      <stop offset="0.55" stop-color="#101935"/>
-      <stop offset="1" stop-color="#1E1147"/>
-    </linearGradient>
-    <linearGradient id="card" x1="216" y1="120" x2="1000" y2="500" gradientUnits="userSpaceOnUse">
-      <stop stop-color="rgba(255,255,255,0.14)"/>
-      <stop offset="1" stop-color="rgba(255,255,255,0.04)"/>
-    </linearGradient>
-    <linearGradient id="accent" x1="258" y1="184" x2="866" y2="462" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#38BDF8"/>
-      <stop offset="0.55" stop-color="#8B5CF6"/>
-      <stop offset="1" stop-color="#22C55E"/>
-    </linearGradient>
-    <filter id="blur" x="694" y="86" width="298" height="298" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feGaussianBlur stdDeviation="45"/>
-    </filter>
-  </defs>
+  <rect width="1200" height="630" fill="#09090B"/>
+  <circle cx="1042" cy="98" r="220" fill="#8B5CF6" fill-opacity="0.12"/>
+  <circle cx="174" cy="558" r="228" fill="#2563EB" fill-opacity="0.08"/>
+  <rect x="52" y="52" width="1096" height="526" rx="32" fill="url(#panel)" stroke="#27272A"/>
 
-  <rect width="1200" height="630" fill="url(#bg)"/>
-  <circle cx="840" cy="235" r="104" fill="#38BDF8" fill-opacity="0.22" filter="url(#blur)"/>
-  <circle cx="920" cy="188" r="42" fill="#8B5CF6" fill-opacity="0.35"/>
-  <circle cx="985" cy="284" r="22" fill="#22C55E" fill-opacity="0.8"/>
+  <rect x="88" y="88" width="210" height="44" rx="22" fill="#1E1B4B"/>
+  <text x="118" y="117" fill="#C4B5FD" font-size="24" font-family="Inter, Arial, sans-serif" font-weight="700">AI Voice · Google</text>
 
-  <rect x="88" y="72" width="1024" height="486" rx="32" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)"/>
-  <rect x="128" y="112" width="944" height="406" rx="28" fill="url(#card)" stroke="rgba(255,255,255,0.1)"/>
+  <text x="88" y="194" fill="#FAFAFA" font-size="58" font-family="Inter, Arial, sans-serif" font-weight="800">Gemini 3.1 Flash TTS</text>
+  <text x="88" y="260" fill="#A78BFA" font-size="56" font-family="Inter, Arial, sans-serif" font-weight="800">Voice AI giờ có thể “đạo diễn”</text>
 
-  <rect x="164" y="154" width="168" height="38" rx="19" fill="rgba(56,189,248,0.14)" stroke="rgba(56,189,248,0.35)"/>
-  <text x="248" y="178" text-anchor="middle" fill="#93C5FD" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">AI VOICE</text>
+  <text x="88" y="336" fill="#A1A1AA" font-size="26" font-family="Inter, Arial, sans-serif" font-weight="500">Không chỉ đọc tự nhiên hơn. Google đang đẩy text-to-speech</text>
+  <text x="88" y="374" fill="#A1A1AA" font-size="26" font-family="Inter, Arial, sans-serif" font-weight="500">thành công cụ chỉnh được nhịp, giọng, vai diễn và cảm xúc.</text>
 
-  <text x="164" y="260" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="62" font-weight="800">Gemini 3.1 Flash TTS</text>
-  <text x="164" y="318" fill="#D4D4D8" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="600">Text-to-speech giờ không chỉ đọc hay hơn.</text>
-  <text x="164" y="364" fill="#D4D4D8" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="600">Google đang đẩy nó thành công cụ có thể</text>
-  <text x="164" y="410" fill="#D4D4D8" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="600">điều khiển giọng, nhân vật và cảm xúc.</text>
+  <rect x="88" y="466" width="472" height="58" rx="18" fill="#FAFAFA"/>
+  <text x="118" y="504" fill="#09090B" font-size="28" font-family="Inter, Arial, sans-serif" font-weight="800">Escbase · AI, Voice &amp; Product Design</text>
 
-  <g transform="translate(804 184)">
-    <circle cx="0" cy="0" r="88" fill="rgba(10,14,28,0.7)" stroke="rgba(255,255,255,0.12)"/>
-    <circle cx="0" cy="0" r="52" fill="none" stroke="url(#accent)" stroke-width="14"/>
-    <rect x="-14" y="-92" width="28" height="114" rx="14" fill="url(#accent)"/>
-    <rect x="-34" y="18" width="68" height="84" rx="34" fill="url(#accent)"/>
-    <path d="M-72 -16C-104 -8 -124 18 -124 48" stroke="#38BDF8" stroke-width="10" stroke-linecap="round" opacity="0.85"/>
-    <path d="M-96 -48C-142 -30 -172 12 -172 58" stroke="#38BDF8" stroke-width="10" stroke-linecap="round" opacity="0.45"/>
-    <path d="M72 -16C104 -8 124 18 124 48" stroke="#22C55E" stroke-width="10" stroke-linecap="round" opacity="0.85"/>
-    <path d="M96 -48C142 -30 172 12 172 58" stroke="#22C55E" stroke-width="10" stroke-linecap="round" opacity="0.45"/>
+  <g transform="translate(770 122)">
+    <rect x="0" y="0" width="292" height="352" rx="28" fill="#111827" stroke="#312E81"/>
+    <rect x="24" y="24" width="110" height="34" rx="17" fill="#1F2937"/>
+    <text x="45" y="47" fill="#E5E7EB" font-size="18" font-family="Inter, Arial, sans-serif" font-weight="700">AUDIO TAGS</text>
+
+    <circle cx="76" cy="126" r="36" fill="#1E1B4B"/>
+    <rect x="62" y="100" width="28" height="54" rx="14" fill="url(#accent)"/>
+    <rect x="48" y="148" width="56" height="42" rx="21" fill="url(#accent)"/>
+    <path d="M117 121C134 126 145 139 145 155" stroke="#C4B5FD" stroke-width="8" stroke-linecap="round"/>
+    <path d="M132 108C156 116 172 136 172 160" stroke="#8B5CF6" stroke-width="8" stroke-linecap="round" opacity="0.55"/>
+
+    <rect x="188" y="92" width="76" height="24" rx="12" fill="#312E81"/>
+    <text x="204" y="108" fill="#E9D5FF" font-size="14" font-family="Inter, Arial, sans-serif" font-weight="700">pace: calm</text>
+    <rect x="188" y="126" width="86" height="24" rx="12" fill="#0F766E"/>
+    <text x="204" y="142" fill="#CCFBF1" font-size="14" font-family="Inter, Arial, sans-serif" font-weight="700">tone: warm</text>
+    <rect x="188" y="160" width="74" height="24" rx="12" fill="#4C1D95"/>
+    <text x="204" y="176" fill="#DDD6FE" font-size="14" font-family="Inter, Arial, sans-serif" font-weight="700">accent: en</text>
+
+    <rect x="24" y="232" width="244" height="88" rx="18" fill="#0B1220" stroke="#1F2937"/>
+    <text x="42" y="262" fill="#F9FAFB" font-size="18" font-family="Inter, Arial, sans-serif" font-weight="700">Director mode</text>
+    <text x="42" y="290" fill="#9CA3AF" font-size="16" font-family="Inter, Arial, sans-serif" font-weight="500">Multi-speaker dialogue</text>
+    <text x="42" y="314" fill="#9CA3AF" font-size="16" font-family="Inter, Arial, sans-serif" font-weight="500">70+ languages · Export to API</text>
   </g>
 
-  <rect x="164" y="456" width="224" height="22" rx="11" fill="rgba(255,255,255,0.09)"/>
-  <rect x="164" y="456" width="136" height="22" rx="11" fill="url(#accent)"/>
-  <text x="408" y="473" fill="#A1A1AA" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="600">Audio tags • Multi-speaker • 70+ languages</text>
-
-  <text x="164" y="535" fill="#71717A" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">ESCBASE.XYZ</text>
+  <defs>
+    <linearGradient id="panel" x1="86" y1="74" x2="1094" y2="556" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#18181B"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="48" y1="100" x2="104" y2="190" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+  </defs>
 </svg>
