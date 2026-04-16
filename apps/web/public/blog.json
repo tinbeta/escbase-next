@@ -1,8 +1,8 @@
 [
   {
     "url": "/blog/qwen-3-6-35b-a3b-open-source",
-    "title": "Qwen3.6-35B-A3B Open Source: Khi Model 3B Active Dám Đòi So Găng Với Đối Thủ To Hơn Gấp 10 Lần",
-    "excerpt": "Alibaba Qwen vừa open source Qwen3.6-35B-A3B dưới giấy phép Apache 2.0. Điểm đáng chú ý không chỉ là 35B total, 3B active, mà là cách họ định vị nó như một model sparse MoE vừa mạnh cho agentic coding, vừa có multimodal reasoning, lại còn đủ nhẹ để tạo sức ép rất khó chịu lên phần còn lại của thị trường open model.",
+    "title": "Qwen3.6-35B-A3B Open Source: Một Model 3B Active Nhưng Dám Đấu Qwen3.5-27B, Gemma 4 31B Và Cả Claude Sonnet 4.5",
+    "excerpt": "Alibaba Qwen vừa open source Qwen3.6-35B-A3B dưới giấy phép Apache 2.0. Điểm đáng chú ý không chỉ là 35B total, 3B active, mà là benchmark blog gốc cho thấy nó vượt xa Qwen3.5-35B-A3B, cạnh tranh với Qwen3.5-27B và Gemma 4 31B ở coding, đồng thời bám rất sát Claude Sonnet 4.5 ở mảng vision-language.",
     "date": "Apr 16, 2026",
     "tag": "Open Models & Agents",
     "tagIcon": "fas fa-cubes",
