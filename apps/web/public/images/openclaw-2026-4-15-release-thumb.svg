@@ -1,0 +1,51 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#09090B"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="170" y1="120" x2="840" y2="480" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#60A5FA"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="150" y1="108" x2="850" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#18181B" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#111827" stop-opacity="0.92"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1030" cy="130" r="160" fill="#60A5FA" fill-opacity="0.12"/>
+  <circle cx="1100" cy="490" r="190" fill="#8B5CF6" fill-opacity="0.12"/>
+  <circle cx="170" cy="530" r="170" fill="#22C55E" fill-opacity="0.08"/>
+
+  <rect x="150" y="108" width="710" height="392" rx="28" fill="url(#panel)" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="184" y="140" width="166" height="36" rx="18" fill="#60A5FA" fill-opacity="0.12" stroke="#93C5FD" stroke-opacity="0.32"/>
+  <text x="267" y="163" fill="#93C5FD" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">OPENCLAW AI</text>
+
+  <text x="194" y="226" fill="#FAFAFA" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="800">OpenClaw 2026.4.15</text>
+  <text x="194" y="286" fill="url(#accent)" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">Opus 4.7, Gemini TTS bundled</text>
+  <text x="194" y="346" fill="#D4D4D8" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="500">slimmer context • bounded memory • safer tools</text>
+  <text x="194" y="382" fill="#D4D4D8" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="500">Một bản boring release rất đúng nghĩa production</text>
+
+  <rect x="194" y="424" width="236" height="24" rx="12" fill="#27272A"/>
+  <rect x="194" y="424" width="172" height="24" rx="12" fill="url(#accent)"/>
+  <text x="450" y="442" fill="#A1A1AA" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="600">self-heal codex • auth status • channel fixes</text>
+
+  <g transform="translate(882 120)">
+    <rect width="188" height="300" rx="28" fill="#0B1220" stroke="#60A5FA" stroke-opacity="0.28"/>
+    <rect x="18" y="20" width="152" height="260" rx="20" fill="#111827"/>
+    <circle cx="55" cy="54" r="10" fill="#22C55E"/>
+    <circle cx="86" cy="54" r="10" fill="#F59E0B"/>
+    <circle cx="117" cy="54" r="10" fill="#EF4444"/>
+    <rect x="34" y="88" width="120" height="18" rx="9" fill="#1F2937"/>
+    <rect x="34" y="118" width="94" height="14" rx="7" fill="#1E3A8A"/>
+    <rect x="34" y="144" width="108" height="14" rx="7" fill="#1F2937"/>
+    <rect x="34" y="170" width="82" height="14" rx="7" fill="#1F2937"/>
+    <rect x="34" y="206" width="122" height="56" rx="16" fill="#111827" stroke="#8B5CF6" stroke-opacity="0.35"/>
+    <path d="M52 234H92" stroke="#93C5FD" stroke-width="10" stroke-linecap="round"/>
+    <path d="M106 234H138" stroke="#22C55E" stroke-width="10" stroke-linecap="round"/>
+    <path d="M52 254H128" stroke="#F59E0B" stroke-width="10" stroke-linecap="round"/>
+  </g>
+
+  <text x="82" y="584" fill="#A1A1AA" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="600">escbase.xyz</text>
+</svg>
