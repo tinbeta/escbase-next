@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/claude-design",
+    "title": "Claude Design: Anthropic Đang Kéo Claude Từ Chỗ Viết Ý Tưởng Sang Chỗ Làm Thẳng Prototype, Slide Và One-Pager",
+    "excerpt": "Anthropic Labs vừa giới thiệu Claude Design ở dạng research preview, cho phép tạo prototype, slide và one-pager bằng hội thoại, rồi chỉnh tiếp qua comment trực tiếp, slider tùy biến và design system của cả team.",
+    "date": "Apr 18, 2026",
+    "tag": "AI Design Tools",
+    "tagIcon": "fas fa-object-group",
+    "tagColor": "#8b5cf6",
+    "readTime": "7 min read",
+    "featured": true,
+    "image": "/images/claude-design/claude-design-hero.jpg"
+  },
+  {
     "url": "/blog/openclaw-2026-4-15-release",
     "title": "OpenClaw 2026.4.15: Opus 4.7, Gemini TTS Bundled Và Một Bản “Boring Release” Đúng Nghĩa Production",
     "excerpt": "OpenClaw 2026.4.15 thêm support Claude Opus 4.7, Gemini TTS bundled, bounded memory reads, context gọn hơn, Codex transport tự self-heal và một loạt bản vá production cho tool/media, auth, memory, dashboard và channels.",
