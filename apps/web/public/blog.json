@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/tradingview-mcp-safety-review",
+    "title": "TradingView MCP Có An Toàn Không? Repo Này Không Có Mùi Malware Rõ, Nhưng Là Một Power Tool Rất Nhạy",
+    "excerpt": "Repo tradingview-mcp không có dấu hiệu malware lộ liễu trong phần code/package mình rà nhanh, nhưng bản chất của nó là một cầu điều khiển rất mạnh vào TradingView Desktop qua Chrome DevTools Protocol.",
+    "date": "Apr 18, 2026",
+    "tag": "Security Review",
+    "tagIcon": "fas fa-shield-halved",
+    "tagColor": "#f59e0b",
+    "readTime": "7 min read",
+    "featured": true,
+    "image": "/images/tradingview-mcp-safety-review-thumb.png"
+  },
+  {
     "url": "/blog/nvidia-lyra-2",
     "title": "NVIDIA Lyra 2.0: Biến Một Tấm Ảnh Thành Thế Giới 3D Có Thể Đi Dạo, Chứ Không Chỉ Là Một Đoạn Video Đẹp",
     "excerpt": "Lyra 2.0 của NVIDIA không chỉ sinh video đẹp từ một ảnh. Nó cố tạo ra thế giới 3D có thể khám phá, giữ nhất quán khi camera đi xa, quay lại cảnh cũ và xuất tiếp sang 3DGS, mesh hay mô phỏng robot.",
