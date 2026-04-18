@@ -1,13 +1,13 @@
 [
   {
     "url": "/blog/tradingview-mcp-safety-review",
-    "title": "TradingView MCP Có An Toàn Không? Repo Này Không Có Mùi Malware Rõ, Nhưng Là Một Power Tool Rất Nhạy",
-    "excerpt": "Repo tradingview-mcp không có dấu hiệu malware lộ liễu trong phần code/package mình rà nhanh, nhưng bản chất của nó là một cầu điều khiển rất mạnh vào TradingView Desktop qua Chrome DevTools Protocol.",
+    "title": "TradingView Giờ Có Thể Nối Thẳng Với Claude: Nghe Như Trò Hack Điên Rồ, Nhưng Có Thể Là Món Mọi Trader Đều Muốn Save",
+    "excerpt": "TradingView MCP cho phép nối TradingView Desktop với Claude hoặc nền tảng AI khác để đọc chart, sửa Pine, tạo alert và tự động hóa workflow. Nghe rất cuốn, nhưng dùng nó ở đâu cho đáng và rủi ro thật nằm ở đâu mới là câu hỏi quan trọng.",
     "date": "Apr 18, 2026",
-    "tag": "Security Review",
-    "tagIcon": "fas fa-shield-halved",
+    "tag": "Trading AI Tools",
+    "tagIcon": "fas fa-bolt",
     "tagColor": "#f59e0b",
-    "readTime": "7 min read",
+    "readTime": "8 min read",
     "featured": true,
     "image": "/images/tradingview-mcp-safety-review-thumb.png"
   },
