@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/hermes-agent-vs-openclaw",
+    "title": "Hermes Agent Là Gì? Vì Sao Nó Đang Được So Thẳng Với OpenClaw",
+    "excerpt": "Hermes Agent của Nous Research đang nổi lên rất nhanh nhờ ý tưởng self-improving AI agent: memory, skills, learning loop, chạy đa nền tảng và remote-first. Nhưng nếu so với OpenClaw, đâu là điểm mạnh thật, điểm yếu thật và nó có đáng để chuyển sang không?",
+    "date": "Apr 18, 2026",
+    "tag": "AI Agents",
+    "tagIcon": "fas fa-robot",
+    "tagColor": "#8b5cf6",
+    "readTime": "9 min read",
+    "featured": true,
+    "image": "/images/hermes-agent-vs-openclaw-thumb.png"
+  },
+  {
     "url": "/blog/tradingview-mcp-safety-review",
     "title": "TradingView Giờ Có Thể Nối Thẳng Với Claude: Nghe Như Trò Hack Điên Rồ, Nhưng Có Thể Là Món Mọi Trader Đều Muốn Save",
     "excerpt": "TradingView MCP cho phép nối TradingView Desktop với Claude hoặc nền tảng AI khác để đọc chart, sửa Pine, tạo alert và tự động hóa workflow. Nghe rất cuốn, nhưng dùng nó ở đâu cho đáng và rủi ro thật nằm ở đâu mới là câu hỏi quan trọng.",
