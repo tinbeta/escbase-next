@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/nvidia-lyra-2",
+    "title": "NVIDIA Lyra 2.0: Biến Một Tấm Ảnh Thành Thế Giới 3D Có Thể Đi Dạo, Chứ Không Chỉ Là Một Đoạn Video Đẹp",
+    "excerpt": "Lyra 2.0 của NVIDIA không chỉ sinh video đẹp từ một ảnh. Nó cố tạo ra thế giới 3D có thể khám phá, giữ nhất quán khi camera đi xa, quay lại cảnh cũ và xuất tiếp sang 3DGS, mesh hay mô phỏng robot.",
+    "date": "Apr 18, 2026",
+    "tag": "AI 3D Worlds",
+    "tagIcon": "fas fa-cubes",
+    "tagColor": "#22c55e",
+    "readTime": "8 min read",
+    "featured": true,
+    "image": "/images/nvidia-lyra-2-thumb.png"
+  },
+  {
     "url": "/blog/claude-design",
     "title": "Claude Design: Anthropic Đang Kéo Claude Từ Chỗ Viết Ý Tưởng Sang Chỗ Làm Thẳng Prototype, Slide Và One-Pager",
     "excerpt": "Anthropic Labs vừa giới thiệu Claude Design ở dạng research preview, cho phép tạo prototype, slide và one-pager bằng hội thoại, rồi chỉnh tiếp qua comment trực tiếp, slider tùy biến và design system của cả team.",
