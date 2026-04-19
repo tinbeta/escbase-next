@@ -1,7 +1,7 @@
 [
   {
     "url": "/blog/autogenesis-self-evolving-agent-protocol",
-    "title": "Autogenesis: Paper Muốn Biến Agent Tự Tiến Hóa Thành Một Giao Thức Chuẩn, Không Còn Là Mớ Glue Code Mong Manh",
+    "title": "Autogenesis: Giao Thức Mới Cho Agent Tự Tiến Hóa",
     "excerpt": "Paper Autogenesis: A Self-Evolving Agent Protocol không chỉ nói về agent tự tiến hóa. Nó muốn chuẩn hóa chuyện đó thành một protocol có versioning, lifecycle, rollback và vòng lặp tự cải thiện an toàn — tức một bước chuyển từ prompt engineering sang protocol engineering cho AI agents.",
     "date": "Apr 19, 2026",
     "tag": "Agent Protocols",
