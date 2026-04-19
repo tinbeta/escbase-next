@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/autogenesis-self-evolving-agent-protocol",
+    "title": "Autogenesis: Paper Muốn Biến Agent Tự Tiến Hóa Thành Một Giao Thức Chuẩn, Không Còn Là Mớ Glue Code Mong Manh",
+    "excerpt": "Paper Autogenesis: A Self-Evolving Agent Protocol không chỉ nói về agent tự tiến hóa. Nó muốn chuẩn hóa chuyện đó thành một protocol có versioning, lifecycle, rollback và vòng lặp tự cải thiện an toàn — tức một bước chuyển từ prompt engineering sang protocol engineering cho AI agents.",
+    "date": "Apr 19, 2026",
+    "tag": "Agent Protocols",
+    "tagIcon": "fas fa-diagram-project",
+    "tagColor": "#22c55e",
+    "readTime": "9 min read",
+    "featured": true,
+    "image": "/images/autogenesis-self-evolving-agent-protocol-thumb.png"
+  },
+  {
     "url": "/blog/hermes-agent-vs-openclaw",
     "title": "Hermes Agent Là Gì? Vì Sao Nó Đang Được So Thẳng Với OpenClaw",
     "excerpt": "Hermes Agent của Nous Research đang nổi lên rất nhanh nhờ ý tưởng self-improving AI agent: memory, skills, learning loop, chạy đa nền tảng và remote-first. Nhưng nếu so với OpenClaw, đâu là điểm mạnh thật, điểm yếu thật và nó có đáng để chuyển sang không?",
