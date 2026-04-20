@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/claude-md-trending-github",
+    "title": "Vì Sao Một File CLAUDE.md Lại Leo Top GitHub Trending?",
+    "excerpt": "Một repo chỉ xoay quanh file CLAUDE.md đang leo top GitHub trending với hơn 44.000 star trong tuần. Điều đáng chú ý không phải file markdown đó thần thánh cỡ nào, mà là việc nút thắt mới của AI coding giờ nằm ở behavior, context và execution discipline — không chỉ ở model.",
+    "date": "Apr 20, 2026",
+    "tag": "AI Coding",
+    "tagIcon": "fas fa-file-lines",
+    "tagColor": "#8b5cf6",
+    "readTime": "7 min read",
+    "featured": true,
+    "image": "/images/claude-md-trending-github-thumb.png"
+  },
+  {
     "url": "/blog/arkham-kelpdao-funds-flow",
     "title": "Arkham Theo Dấu Dòng Tiền Sau Vụ KelpDAO: Từ rsETH Sang ETH",
     "excerpt": "Arkham vừa theo dấu dòng tiền sau vụ KelpDAO bị exploit gần $294M. Điều đáng chú ý không chỉ là số tiền bị rút, mà là cách attacker dùng Aave, Compound, KyberSwap, Euler Finance và Wintermute để dần biến rsETH thành ETH.",
