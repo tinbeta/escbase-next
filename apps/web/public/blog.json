@@ -1,8 +1,8 @@
 [
   {
     "url": "/blog/arkham-kelpdao-funds-flow",
-    "title": "Arkham Vừa Vẽ Rõ Đường Đi Của Số Tiền Sau Vụ KelpDAO: Hacker Không Chỉ Rút rsETH, Mà Đang Biến Nó Thành ETH Qua Cả Một Chuỗi DeFi",
-    "excerpt": "Arkham vừa theo dấu dòng tiền sau vụ KelpDAO bị exploit gần $294M. Điểm đáng chú ý không chỉ là số tiền bị rút, mà là cách attacker dùng Aave, Compound, KyberSwap, Euler Finance và Wintermute để dần biến rsETH thành ETH. Đây mới là phần mà thị trường phải theo dõi sát.",
+    "title": "Arkham Theo Dấu Dòng Tiền Sau Vụ KelpDAO: Từ rsETH Sang ETH",
+    "excerpt": "Arkham vừa theo dấu dòng tiền sau vụ KelpDAO bị exploit gần $294M. Điều đáng chú ý không chỉ là số tiền bị rút, mà là cách attacker dùng Aave, Compound, KyberSwap, Euler Finance và Wintermute để dần biến rsETH thành ETH.",
     "date": "Apr 20, 2026",
     "tag": "Onchain Forensics",
     "tagIcon": "fas fa-money-bill-transfer",
