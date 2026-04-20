@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/hermes-agent-see-it-in-action",
+    "title": "Hermes Agent: Nhìn Tận Mắt Nó Làm Việc Thì Mới Thấy Agent Tốt Không Chỉ Là Chatbot Biết Gọi Tool",
+    "excerpt": "Nhìn các screenshot Hermes Agent đang xử lý PR, sửa lỗi, chạy test và truy lại kiến thức cũ cho thấy một điều khá rõ: agent hữu ích không phải vì nó trả lời thông minh, mà vì nó bắt đầu làm việc như một cộng sự kỹ thuật có trí nhớ và có quy trình.",
+    "date": "Apr 20, 2026",
+    "tag": "AI Agents",
+    "tagIcon": "fas fa-robot",
+    "tagColor": "#8b5cf6",
+    "readTime": "8 min read",
+    "featured": true,
+    "image": "/images/hermes-agent-see-it-in-action-thumb.png"
+  },
+  {
     "url": "/blog/0xjeff-hermes-skills",
     "title": "3 Skill Hermes Mà 0xJeff Thấy Đáng Dùng Nhất — Và Đống Bài Học Đắt Tiền Đi Kèm",
     "excerpt": "0xJeff vừa chia sẻ 3 skill Hermes anh thấy hữu ích nhất: đọc insight từ X, bóc tách bookmarks và reflection từ memory dài hạn. Nhưng phần đáng tiền hơn lại là các lỗi anh đã đụng: Bird CLI có quyền post, Browser Harness quá nhạy, Hindsight nối sai model có thể đốt hàng chục USD token chỉ trong một ngày.",

@@ -1,0 +1,43 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#09090B"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="220" cy="130" r="110" fill="#8B5CF6" fill-opacity="0.18" filter="url(#blur)"/>
+  <circle cx="980" cy="500" r="140" fill="#60A5FA" fill-opacity="0.18" filter="url(#blur)"/>
+  <rect x="82" y="88" width="1036" height="454" rx="30" fill="#0F172A" fill-opacity="0.82" stroke="#1F2937"/>
+
+  <text x="120" y="148" fill="#C4B5FD" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">HERMES AGENT</text>
+  <text x="120" y="220" fill="#FAFAFA" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="800">SEE IT</text>
+  <text x="120" y="278" fill="#FAFAFA" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="800">IN ACTION</text>
+  <text x="120" y="350" fill="#A1A1AA" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="500">PR review • Debugging • Memory recall</text>
+  <text x="120" y="390" fill="#A1A1AA" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="500">Agent that works, remembers, and verifies</text>
+
+  <g transform="translate(740 140)">
+    <rect x="0" y="0" width="260" height="120" rx="22" fill="#111827" stroke="#374151"/>
+    <text x="20" y="34" fill="#C4B5FD" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">TASK</text>
+    <text x="20" y="68" fill="#FAFAFA" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">Review PR #42</text>
+    <text x="20" y="96" fill="#A1A1AA" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="500">Fix issues and run tests</text>
+
+    <rect x="30" y="164" width="230" height="86" rx="22" fill="#111827" stroke="#374151"/>
+    <text x="45" y="198" fill="#93C5FD" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">MEMORY SEARCH</text>
+    <text x="45" y="230" fill="#FAFAFA" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">Docker networking fix</text>
+
+    <rect x="0" y="294" width="260" height="96" rx="22" fill="#111827" stroke="#374151"/>
+    <text x="20" y="330" fill="#86EFAC" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">RESULT</text>
+    <text x="20" y="364" fill="#FAFAFA" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">Patched • Tested • Saved skill</text>
+  </g>
+
+  <rect x="120" y="446" width="208" height="52" rx="18" fill="#111827" stroke="#27272A"/>
+  <text x="224" y="479" text-anchor="middle" fill="#C4B5FD" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">NOT JUST CHAT</text>
+  <rect x="344" y="446" width="304" height="52" rx="18" fill="#111827" stroke="#27272A"/>
+  <text x="496" y="479" text-anchor="middle" fill="#93C5FD" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">WORKFLOW-CARRYING AGENT</text>
+
+  <text x="82" y="590" fill="#71717A" font-family="Inter, Arial, sans-serif" font-size="22">escbase.xyz</text>
+</svg>
