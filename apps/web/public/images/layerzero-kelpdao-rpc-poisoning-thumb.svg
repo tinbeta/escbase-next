@@ -1,0 +1,64 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#09090B"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="redGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#F87171"/>
+      <stop offset="1" stop-color="#EF4444"/>
+    </linearGradient>
+    <linearGradient id="blueGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#93C5FD"/>
+      <stop offset="1" stop-color="#60A5FA"/>
+    </linearGradient>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="230" cy="120" r="110" fill="#EF4444" fill-opacity="0.18" filter="url(#blur)"/>
+  <circle cx="1020" cy="500" r="150" fill="#60A5FA" fill-opacity="0.18" filter="url(#blur)"/>
+  <circle cx="870" cy="120" r="80" fill="#F59E0B" fill-opacity="0.14" filter="url(#blur)"/>
+
+  <rect x="74" y="82" width="1052" height="466" rx="30" fill="#0F172A" fill-opacity="0.82" stroke="#1F2937"/>
+
+  <text x="120" y="150" fill="#FCA5A5" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">LAYERZERO × KELPDAO</text>
+  <text x="120" y="222" fill="#FAFAFA" font-family="Inter, Arial, sans-serif" font-size="56" font-weight="800">$290M HACK</text>
+  <text x="120" y="282" fill="#FAFAFA" font-family="Inter, Arial, sans-serif" font-size="56" font-weight="800">RPC POISONING</text>
+
+  <text x="120" y="352" fill="#A1A1AA" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="500">Single-DVN • Failover • Offchain verifier risk</text>
+  <text x="120" y="392" fill="#A1A1AA" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="500">Audit contract là chưa đủ</text>
+
+  <!-- left network nodes -->
+  <g transform="translate(730 150)">
+    <circle cx="70" cy="78" r="26" fill="#111827" stroke="#374151" stroke-width="2"/>
+    <circle cx="200" cy="40" r="26" fill="#111827" stroke="#374151" stroke-width="2"/>
+    <circle cx="236" cy="170" r="26" fill="#111827" stroke="#374151" stroke-width="2"/>
+    <circle cx="112" cy="216" r="26" fill="#111827" stroke="#374151" stroke-width="2"/>
+    <circle cx="332" cy="106" r="30" fill="#0B1220" stroke="#374151" stroke-width="2"/>
+
+    <path d="M95 71L176 47" stroke="#60A5FA" stroke-width="5" stroke-linecap="round"/>
+    <path d="M219 62L320 96" stroke="#60A5FA" stroke-width="5" stroke-linecap="round"/>
+    <path d="M222 58L227 144" stroke="#60A5FA" stroke-width="5" stroke-linecap="round"/>
+    <path d="M101 96L112 190" stroke="#60A5FA" stroke-width="5" stroke-linecap="round"/>
+    <path d="M136 207L210 182" stroke="#EF4444" stroke-width="5" stroke-dasharray="10 10" stroke-linecap="round"/>
+    <path d="M256 155L314 119" stroke="#EF4444" stroke-width="5" stroke-dasharray="10 10" stroke-linecap="round"/>
+
+    <circle cx="332" cy="106" r="12" fill="#FCA5A5"/>
+    <text x="332" y="112" text-anchor="middle" fill="#0B1220" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="800">DVN</text>
+
+    <circle cx="70" cy="78" r="8" fill="#93C5FD"/>
+    <circle cx="200" cy="40" r="8" fill="#93C5FD"/>
+    <circle cx="236" cy="170" r="8" fill="#F87171"/>
+    <circle cx="112" cy="216" r="8" fill="#F87171"/>
+  </g>
+
+  <rect x="118" y="440" width="220" height="52" rx="18" fill="#111827" stroke="#27272A"/>
+  <text x="228" y="473" text-anchor="middle" fill="#FCA5A5" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">STATE ACTOR?</text>
+  <rect x="356" y="440" width="280" height="52" rx="18" fill="#111827" stroke="#27272A"/>
+  <text x="496" y="473" text-anchor="middle" fill="#93C5FD" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">THREAT MODEL CHANGED</text>
+
+  <text x="74" y="590" fill="#71717A" font-family="Inter, Arial, sans-serif" font-size="22">escbase.xyz</text>
+</svg>
