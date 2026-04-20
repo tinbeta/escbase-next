@@ -1,0 +1,39 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#09090B"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="220" cy="130" r="110" fill="#8B5CF6" fill-opacity="0.18" filter="url(#blur)"/>
+  <circle cx="980" cy="500" r="140" fill="#60A5FA" fill-opacity="0.18" filter="url(#blur)"/>
+  <rect x="82" y="88" width="1036" height="454" rx="30" fill="#0F172A" fill-opacity="0.82" stroke="#1F2937"/>
+
+  <text x="120" y="148" fill="#C4B5FD" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">0xJEFF × HERMES</text>
+  <text x="120" y="220" fill="#FAFAFA" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="800">3 USEFUL SKILLS</text>
+  <text x="120" y="278" fill="#FAFAFA" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="800">REAL COST LESSONS</text>
+  <text x="120" y="350" fill="#A1A1AA" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="500">X insights • Bookmarks • Reflect</text>
+  <text x="120" y="390" fill="#A1A1AA" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="500">Permissions • Memory • Token burn</text>
+
+  <g transform="translate(760 140)">
+    <rect x="0" y="0" width="250" height="78" rx="20" fill="#111827" stroke="#374151"/>
+    <text x="125" y="48" text-anchor="middle" fill="#93C5FD" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800">X INSIGHTS</text>
+    <rect x="0" y="102" width="250" height="78" rx="20" fill="#111827" stroke="#374151"/>
+    <text x="125" y="150" text-anchor="middle" fill="#93C5FD" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800">BOOKMARKS</text>
+    <rect x="0" y="204" width="250" height="78" rx="20" fill="#111827" stroke="#374151"/>
+    <text x="125" y="252" text-anchor="middle" fill="#93C5FD" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800">REFLECT</text>
+    <rect x="38" y="320" width="174" height="64" rx="18" fill="#2A0F13" stroke="#7F1D1D"/>
+    <text x="125" y="360" text-anchor="middle" fill="#FCA5A5" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">$50 / DAY?</text>
+  </g>
+
+  <rect x="120" y="446" width="220" height="52" rx="18" fill="#111827" stroke="#27272A"/>
+  <text x="230" y="479" text-anchor="middle" fill="#C4B5FD" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">AGENT WORKFLOWS</text>
+  <rect x="358" y="446" width="260" height="52" rx="18" fill="#111827" stroke="#27272A"/>
+  <text x="488" y="479" text-anchor="middle" fill="#FCA5A5" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">COST CONTROL MATTERS</text>
+
+  <text x="82" y="590" fill="#71717A" font-family="Inter, Arial, sans-serif" font-size="22">escbase.xyz</text>
+</svg>

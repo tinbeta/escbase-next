@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/0xjeff-hermes-skills",
+    "title": "3 Skill Hermes Mà 0xJeff Thấy Đáng Dùng Nhất — Và Đống Bài Học Đắt Tiền Đi Kèm",
+    "excerpt": "0xJeff vừa chia sẻ 3 skill Hermes anh thấy hữu ích nhất: đọc insight từ X, bóc tách bookmarks và reflection từ memory dài hạn. Nhưng phần đáng tiền hơn lại là các lỗi anh đã đụng: Bird CLI có quyền post, Browser Harness quá nhạy, Hindsight nối sai model có thể đốt hàng chục USD token chỉ trong một ngày.",
+    "date": "Apr 20, 2026",
+    "tag": "AI Agents",
+    "tagIcon": "fas fa-robot",
+    "tagColor": "#8b5cf6",
+    "readTime": "8 min read",
+    "featured": true,
+    "image": "/images/0xjeff-hermes-skills-thumb.png"
+  },
+  {
     "url": "/blog/justin-sun-kelpdao-hacker-talk",
     "title": "Justin Sun Muốn “Nói Chuyện” Với Hacker Vụ KelpDAO",
     "excerpt": "Justin Sun vừa công khai kêu gọi hacker vụ KelpDAO ngồi xuống nói chuyện, với lập luận rằng không đáng để kéo cả Aave lẫn KelpDAO đi xuống vì cú hack gần $300M. Nghe hơi kịch tính, nhưng phản ứng cộng đồng cho thấy thị trường đang thật sự lo về rủi ro lan sang Aave.",
