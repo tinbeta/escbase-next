@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/justin-sun-kelpdao-hacker-talk",
+    "title": "Justin Sun Muốn “Nói Chuyện” Với Hacker Vụ KelpDAO",
+    "excerpt": "Justin Sun vừa công khai kêu gọi hacker vụ KelpDAO ngồi xuống nói chuyện, với lập luận rằng không đáng để kéo cả Aave lẫn KelpDAO đi xuống vì cú hack gần $300M. Nghe hơi kịch tính, nhưng phản ứng cộng đồng cho thấy thị trường đang thật sự lo về rủi ro lan sang Aave.",
+    "date": "Apr 20, 2026",
+    "tag": "Crypto Drama",
+    "tagIcon": "fas fa-comments-dollar",
+    "tagColor": "#f59e0b",
+    "readTime": "6 min read",
+    "featured": true,
+    "image": "/images/justin-sun-kelpdao-hacker-talk-thumb.png"
+  },
+  {
     "url": "/blog/claude-md-trending-github",
     "title": "Vì Sao Một File CLAUDE.md Lại Leo Top GitHub Trending?",
     "excerpt": "Một repo chỉ xoay quanh file CLAUDE.md đang leo top GitHub trending với hơn 44.000 star trong tuần. Điều đáng chú ý không phải file markdown đó thần thánh cỡ nào, mà là việc nút thắt mới của AI coding giờ nằm ở behavior, context và execution discipline — không chỉ ở model.",
