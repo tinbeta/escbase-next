@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/arkham-kelpdao-funds-flow",
+    "title": "Arkham Vừa Vẽ Rõ Đường Đi Của Số Tiền Sau Vụ KelpDAO: Hacker Không Chỉ Rút rsETH, Mà Đang Biến Nó Thành ETH Qua Cả Một Chuỗi DeFi",
+    "excerpt": "Arkham vừa theo dấu dòng tiền sau vụ KelpDAO bị exploit gần $294M. Điểm đáng chú ý không chỉ là số tiền bị rút, mà là cách attacker dùng Aave, Compound, KyberSwap, Euler Finance và Wintermute để dần biến rsETH thành ETH. Đây mới là phần mà thị trường phải theo dõi sát.",
+    "date": "Apr 20, 2026",
+    "tag": "Onchain Forensics",
+    "tagIcon": "fas fa-money-bill-transfer",
+    "tagColor": "#f59e0b",
+    "readTime": "8 min read",
+    "featured": true,
+    "image": "/images/arkham-kelpdao-funds-flow-thumb.png"
+  },
+  {
     "url": "/blog/layerzero-kelpdao-rpc-poisoning",
     "title": "Vụ KelpDAO Mất $290M Đang Buộc Cả Đám Cross-Chain Nhìn Lại Một Sự Thật Khó Chịu: Audit Contract Là Chưa Đủ",
     "excerpt": "LayerZero nói vụ KelpDAO mất khoảng $290M không phải lỗi protocol mà là hậu quả của cấu hình 1-of-1 DVN, kết hợp một đòn RPC poisoning rất tinh vi nhắm vào hạ tầng downstream. Nhưng bài học lớn hơn là: từ giờ, threat model của bridge và cross-chain app không thể chỉ dừng ở smart contract nữa.",
