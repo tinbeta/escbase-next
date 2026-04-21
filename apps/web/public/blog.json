@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/a16z-agent-blockchain-infrastructure",
+    "title": "a16z: Blockchains Là Hạ Tầng Còn Thiếu Cho AI Agents, Không Chỉ Là Chỗ Thanh Toán",
+    "excerpt": "a16z crypto vừa đưa ra thesis khá rõ: AI agents đang tiến từ copilots sang economic actors, nhưng hạ tầng xung quanh vẫn thiếu identity, governance, payments, verification và user control. Theo họ, blockchain có thể lấp đúng 5 lỗ hổng này. Điểm đáng chú ý là đây không chỉ là bài nói về stablecoin, mà là một cách định vị crypto như trust layer cho agent economy.",
+    "date": "Apr 21, 2026",
+    "tag": "AI x Crypto",
+    "tagIcon": "fas fa-link",
+    "tagColor": "#f97316",
+    "readTime": "9 min read",
+    "featured": true,
+    "image": "/images/a16z-agent-blockchain-infrastructure-thumb.png"
+  },
+  {
     "url": "/blog/arbitrum-freezes-kelpdao-funds",
     "title": "Arbitrum Đóng Băng 30,766 ETH Từ Vụ KelpDAO, Cứu Tiền Xong Thì Drama “Phi Tập Trung” Bùng Lên",
     "excerpt": "Arbitrum Security Council đã dùng quyền khẩn cấp để đóng băng 30,766 ETH liên quan vụ hack KelpDAO và chuyển số tiền này vào ví frozen trung gian. Về mặt cứu tài sản, đây là tin tốt. Nhưng về mặt hình ảnh, Arbitrum vừa tự đẩy mình vào đúng câu hỏi khó nhất của crypto: nếu một hội đồng có thể can thiệp và đóng băng tiền khi cần, thì phi tập trung còn được hiểu tới đâu?",
