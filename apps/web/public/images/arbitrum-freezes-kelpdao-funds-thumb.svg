@@ -1,0 +1,37 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#09090B"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="220" cy="130" r="110" fill="#3B82F6" fill-opacity="0.18" filter="url(#blur)"/>
+  <circle cx="980" cy="500" r="140" fill="#EF4444" fill-opacity="0.15" filter="url(#blur)"/>
+  <rect x="82" y="88" width="1036" height="454" rx="30" fill="#0F172A" fill-opacity="0.82" stroke="#1F2937"/>
+
+  <text x="120" y="148" fill="#93C5FD" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">ARBITRUM × KELPDAO</text>
+  <text x="120" y="220" fill="#FAFAFA" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="800">30,766 ETH</text>
+  <text x="120" y="278" fill="#FAFAFA" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="800">FROZEN</text>
+  <text x="120" y="350" fill="#A1A1AA" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="500">Emergency action by Security Council</text>
+  <text x="120" y="390" fill="#A1A1AA" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="500">Saved funds, sparked decentralization debate</text>
+
+  <g transform="translate(760 148)">
+    <rect x="0" y="0" width="246" height="80" rx="22" fill="#111827" stroke="#374151"/>
+    <text x="123" y="50" text-anchor="middle" fill="#93C5FD" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">SAFE WALLET</text>
+    <rect x="0" y="104" width="246" height="80" rx="22" fill="#111827" stroke="#374151"/>
+    <text x="123" y="154" text-anchor="middle" fill="#FCA5A5" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">FREEZE POWER</text>
+    <rect x="0" y="208" width="246" height="80" rx="22" fill="#111827" stroke="#374151"/>
+    <text x="123" y="258" text-anchor="middle" fill="#FDE68A" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">DEBATE</text>
+  </g>
+
+  <rect x="120" y="446" width="230" height="52" rx="18" fill="#111827" stroke="#27272A"/>
+  <text x="235" y="479" text-anchor="middle" fill="#93C5FD" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">LAYER 2 SECURITY</text>
+  <rect x="366" y="446" width="308" height="52" rx="18" fill="#111827" stroke="#27272A"/>
+  <text x="520" y="479" text-anchor="middle" fill="#FCA5A5" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">DECENTRALIZATION TRADEOFF</text>
+
+  <text x="82" y="590" fill="#71717A" font-family="Inter, Arial, sans-serif" font-size="22">escbase.xyz</text>
+</svg>
