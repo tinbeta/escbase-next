@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kimi K2.6 Ra Mắt: Đánh Thẳng Vào Coding Agent, Long-Run Tasks Và Swarm | Escbase</title>
+    <meta name="description" content="Moonshot vừa open-source Kimi K2.6, model mới nhắm thẳng vào coding agent, long-horizon execution và agent swarm. Điểm đáng chú ý không chỉ là benchmark, mà là các demo 12 đến 13 giờ liên tục, 4.000+ tool calls và việc Kimi gọi thẳng tên OpenClaw, Hermes Agent trong use case proactive agents.">
+    <meta property="og:title" content="Kimi K2.6 Ra Mắt: Đánh Thẳng Vào Coding Agent, Long-Run Tasks Và Swarm">
+    <meta property="og:description" content="Kimi K2.6 không chỉ khoe benchmark. Moonshot đang định vị đây là model open-source cho coding thật, proactive agents chạy dài hơi, agent swarms 300 sub-agents và cả workflow kiểu OpenClaw, Hermes Agent.">
+    <meta property="og:image" content="https://escbase.xyz/images/kimi-k2-6-open-source-coding-thumb.png">
+    <meta property="og:url" content="https://escbase.xyz/blog/kimi-k2-6-open-source-coding/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/shared-article-footer.css">
+    <style>
+        :root{--bg:#09090b;--card-bg:#18181b;--border:#27272a;--text:#fafafa;--text-secondary:#a1a1aa;--text-muted:#71717a;--accent:#7c3aed;--accent-blue:#60a5fa;--accent-green:#22c55e;--accent-yellow:#f59e0b;--radius-md:16px;--radius-lg:24px}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased}.container{max-width:820px;margin:0 auto;padding:2rem 1.5rem}.article-header{margin-bottom:2.5rem}.category-badge{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1rem;background:rgba(124,58,237,.12);border:1px solid rgba(124,58,237,.22);border-radius:100px;font-size:.85rem;font-weight:600;color:#c4b5fd;margin-bottom:1.25rem}h1{font-size:2.2rem;font-weight:800;line-height:1.2;margin-bottom:1.25rem;letter-spacing:-.02em}.meta{display:flex;flex-wrap:wrap;gap:1.5rem;color:var(--text-muted);font-size:.9rem}.meta span{display:flex;align-items:center;gap:.5rem}.article-content{font-size:1.1rem;color:var(--text-secondary)}.article-content h2{font-size:1.5rem;font-weight:700;color:var(--text);margin-top:2.5rem;margin-bottom:1rem}.article-content p{margin-bottom:1.25rem}.article-content ul{margin-bottom:1.25rem;padding-left:1.5rem}.article-content li{margin-bottom:.5rem}.highlight-box{background:linear-gradient(135deg,rgba(124,58,237,.12) 0%,rgba(96,165,250,.06) 100%);border:1px solid rgba(124,58,237,.22);border-radius:var(--radius-md);padding:1.5rem;margin:2rem 0}.highlight-box h4{color:#c4b5fd;font-size:1.1rem;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}.highlight-box-blue{background:linear-gradient(135deg,rgba(96,165,250,.10) 0%,rgba(34,197,94,.05) 100%);border:1px solid rgba(96,165,250,.22);border-radius:var(--radius-md);padding:1.5rem;margin:2rem 0}.highlight-box-blue h4{color:#93c5fd;font-size:1.1rem;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}.quote-block{border-left:4px solid var(--accent-blue);padding:1.25rem 1.5rem;margin:2rem 0;background:rgba(96,165,250,.05);border-radius:0 var(--radius-md) var(--radius-md) 0;font-style:italic;color:var(--text)}.inline-image{width:100%;max-width:680px;max-height:380px;object-fit:cover;display:block;border-radius:18px;border:1px solid rgba(255,255,255,.08);margin:1rem 0 1.5rem}a{color:#93c5fd}.tags{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}.tag{padding:.5rem 1rem;background:var(--card-bg);border:1px solid var(--border);border-radius:100px;font-size:.85rem;color:var(--text-secondary)}@media(max-width:768px){h1{font-size:1.72rem}.container{padding:1.5rem 1rem}.inline-image{max-height:220px;margin:.85rem 0 1.1rem}}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <span class="category-badge"><i class="fas fa-robot"></i> AI Models</span>
+                <h1>Kimi K2.6 Ra Mắt: Đánh Thẳng Vào Coding Agent, Long-Run Tasks Và Swarm</h1>
+                <div class="meta">
+                    <span><i class="far fa-calendar"></i> 21/04/2026</span>
+                    <span><i class="far fa-clock"></i> 8 phút đọc</span>
+                    <span><i class="far fa-folder"></i> AI Models, AI Agents</span>
+                </div>
+                <img src="/images/kimi-k2-6-open-source-coding-thumb.png" alt="Kimi K2.6 thumbnail" class="inline-image" style="margin-top:1rem;">
+            </header>
+
+            <div class="article-content">
+                <div class="highlight-box">
+                    <h4>⚡ Tóm tắt nhanh</h4>
+                    <p style="margin-bottom:0">Moonshot vừa open-source <strong>Kimi K2.6</strong> và cách họ pitch sản phẩm lần này rất rõ: đây không chỉ là model để chat, mà là model để <strong>code dài hơi, chạy agent liên tục, điều phối swarm và xử lý workflow thật</strong>. Tweet launch khoe benchmark, nhưng tech blog mới là phần đáng đọc, vì nó cho thấy Moonshot đang muốn K2.6 trở thành lớp model nền cho OpenClaw, Hermes Agent, Kimi Code và các hệ agent tự vận hành dài hạn.</p>
+                </div>
+
+                <p>Nếu chỉ đọc tweet launch, bạn sẽ thấy một mớ số benchmark khá dày: HLE with tools 54.0, SWE-Bench Pro 58.6, SWE-bench Multilingual 76.7, BrowseComp 83.2, Toolathlon 50.0, CharXiv with python 86.7, Math Vision with python 93.2.</p>
+
+                <p>Ổn, nhưng benchmark bây giờ model nào ra mắt cũng khoe. Phần thật sự đáng chú ý nằm ở chỗ Moonshot không định vị K2.6 như một chatbot “giỏi hơn một tí”. Họ định vị nó như <strong>một engine cho coding agents và proactive agents</strong>.</p>
+
+                <div class="quote-block">
+                    Tín hiệu đáng đọc nhất trong đợt launch này là Moonshot gọi thẳng tên OpenClaw và Hermes Agent trong phần proactive agents. Tức là họ đang bán K2.6 như một model sinh ra để ngồi trong workflow agent chạy dài hạn, chứ không chỉ để benchmark đẹp.
+                </div>
+
+                <h2>1. Kimi K2.6 đang nhắm vào “coding thật”, không phải coding demo</h2>
+                <p>Điểm nhấn lớn nhất của K2.6 là <strong>long-horizon coding</strong>. Moonshot claim model này có thể chạy hơn <strong>4.000 tool calls</strong>, kéo dài hơn <strong>12 giờ liên tục</strong>, và vẫn giữ được chất lượng đủ ổn để giải quyết các bài toán kỹ thuật nhiều bước qua nhiều ngôn ngữ như Rust, Go, Python.</p>
+
+                <p>Đây là chỗ khác biệt thật. Rất nhiều model code tốt ở mức giải bài hoặc vá bug nhỏ. Nhưng khi bài toán kéo sang dạng:</p>
+                <ul>
+                    <li>đọc repo lớn,</li>
+                    <li>chạy benchmark,</li>
+                    <li>thử nhiều hướng tối ưu,</li>
+                    <li>lặp lại nhiều giờ,</li>
+                    <li>và không chết context giữa đường,</li>
+                </ul>
+
+                <p>thì số model đứng được không nhiều.</p>
+
+                <p>Moonshot đưa ra hai demo khá nặng tay:</p>
+                <ul>
+                    <li>một case tải và deploy model Qwen3.5-0.8B local trên Mac, rồi tối ưu inference bằng Zig qua 14 vòng lặp, nâng throughput từ khoảng 15 lên 193 tokens/giây, nhanh hơn LM Studio khoảng 20%,</li>
+                    <li>một case overhaul exchange-core, engine matching 8 năm tuổi, chạy 13 giờ, hơn 1.000 tool calls, sửa hơn 4.000 dòng code và đẩy medium throughput lên 185%.</li>
+                </ul>
+
+                <div class="highlight-box-blue">
+                    <h4>🧠 Vì sao phần này đáng để ý</h4>
+                    <p style="margin-bottom:0">Nếu con số Moonshot đưa ra giữ được trong thực chiến, thì K2.6 không còn chỉ cạnh tranh ở bài toán “ai code đúng hơn”. Nó đang cạnh tranh ở bài toán khó hơn nhiều: <strong>ai trụ được lâu hơn trong workflow engineering nhiều bước</strong>.</p>
+                </div>
+
+                <h2>2. K2.6 cũng đang nhắm mạnh vào front-end generation và coding-driven design</h2>
+                <p>Moonshot không dừng ở coding backend hay infra. Họ dành hẳn một section cho <strong>coding-driven design</strong>, tức là biến prompt ngắn thành website hoàn chỉnh với layout có chủ đích, animation, hero section đẹp, tương tác cuộn trang, thậm chí dùng cả video gen và image gen để polish giao diện.</p>
+
+                <p>Nói đơn giản, Moonshot đang đánh vào nhóm người dùng muốn model không chỉ viết được code chạy, mà còn viết ra thứ nhìn ra hồn sản phẩm.</p>
+
+                <p>Đây là một hướng đi khá khôn. Vì hiện tại phần đông người dùng agent code không chỉ muốn “pass task”. Họ muốn model:</p>
+                <ul>
+                    <li>biết dựng landing page tử tế,</li>
+                    <li>biết dùng Framer Motion, GSAP, Three.js,</li>
+                    <li>và nếu cần thì kéo luôn cả flow full-stack đơn giản như auth, DB, session logging.</li>
+                </ul>
+
+                <h2>3. Phần nâng level thật sự là Agent Swarms</h2>
+                <p>Trong tweet, Moonshot nhấn mạnh K2.6 có thể chạy <strong>300 parallel sub-agents × 4.000 steps</strong> cho mỗi run, tăng mạnh từ mốc 100 agents và 1.500 steps của K2.5.</p>
+
+                <p>Con số này nghe thì rất marketing, nhưng ý chiến lược ở dưới nó mới quan trọng: Moonshot không còn xem agent là một tác nhân đơn lẻ. Họ đang đẩy mô hình <strong>nhiều agent chuyên môn hóa chạy song song</strong>, rồi có một lớp điều phối gom đầu ra thành sản phẩm hoàn chỉnh.</p>
+
+                <p>Theo tech blog, K2.6 swarm có thể phối hợp nhiều kiểu tác vụ cùng lúc:</p>
+                <ul>
+                    <li>search rộng rồi đào sâu research,</li>
+                    <li>phân tích tài liệu quy mô lớn rồi viết dài,</li>
+                    <li>tạo nội dung nhiều format song song như docs, website, slide, spreadsheet.</li>
+                </ul>
+
+                <p>Đấy là hướng rất hợp với OpenClaw-style workflows, vì nó mở đường cho việc tách nhiệm vụ thành từng node chuyên trách thay vì đẩy hết vào một model duy nhất rồi hy vọng nó không loạn.</p>
+
+                <h2>4. Moonshot đang public định vị K2.6 cho OpenClaw và Hermes</h2>
+                <p>Đây là đoạn đáng chú ý nhất với ai đang theo dõi hệ agent: trong phần <strong>Proactive Agents</strong>, Moonshot viết thẳng rằng K2.6 cho kết quả mạnh trên các agent tự vận hành như <strong>OpenClaw</strong> và <strong>Hermes</strong>.</p>
+
+                <p>Họ mô tả đây là dạng workflow khác hẳn chat thường:</p>
+                <ul>
+                    <li>phải tự quản lịch,</li>
+                    <li>chạy code,</li>
+                    <li>điều phối thao tác qua nhiều ứng dụng,</li>
+                    <li>và hoạt động kiểu background 24/7.</li>
+                </ul>
+
+                <p>Moonshot còn nêu một case nội bộ: agent dùng K2.6 chạy tự động suốt <strong>5 ngày</strong> để theo dõi monitoring, ứng phó incident và xử lý vận hành hệ thống từ alert tới resolution.</p>
+
+                <div class="highlight-box-blue">
+                    <h4>💡 Ý nghĩa chiến lược</h4>
+                    <p style="margin-bottom:0">Khi một lab model bắt đầu nói công khai về OpenClaw, Hermes và proactive agents, nghĩa là cuộc chơi không còn xoay quanh chatbot UI nữa. Trục cạnh tranh đang dịch sang model nào chịu tải tốt hơn trong môi trường agent nhiều bước, dài hơi, có tool use và có background execution.</p>
+                </div>
+
+                <h2>5. Claw Groups là mảnh ghép rất đáng xem</h2>
+                <p>Moonshot còn đưa ra một research preview tên là <strong>Claw Groups</strong>. Nghe ngầu thì có, nhưng quan trọng hơn là concept của nó khá rõ: <strong>bring your own agents</strong>.</p>
+
+                <p>Tức là không chỉ một agent của bạn, mà nhiều agent khác nhau, chạy trên thiết bị khác nhau, model khác nhau, tool khác nhau, thậm chí có cả con người trong vòng lặp, đều có thể cộng tác trong một không gian chung.</p>
+
+                <p>Ở giữa hệ đó, K2.6 đóng vai trò điều phối:</p>
+                <ul>
+                    <li>match task với agent phù hợp,</li>
+                    <li>phát hiện tác vụ bị kẹt hoặc fail,</li>
+                    <li>chia nhỏ lại công việc,</li>
+                    <li>và quản lý vòng đời deliverable từ đầu tới cuối.</li>
+                </ul>
+
+                <p>Nếu làm được thật, đây là bước đi rất khác so với đa số sản phẩm agent hiện giờ, vốn vẫn chủ yếu là “một agent, một prompt, một cửa sổ chat”.</p>
+
+                <h2>6. Nhưng benchmark của K2.6 không phải chỗ nào cũng áp đảo</h2>
+                <p>Cũng nên nói thẳng cho công bằng. Bảng benchmark của Moonshot khá mạnh, nhưng không phải kiểu thắng tuyệt đối mọi nơi.</p>
+
+                <p>Ví dụ:</p>
+                <ul>
+                    <li>Toolathlon 50.0 vẫn thấp hơn GPT-5.4 ở 54.6,</li>
+                    <li>BrowseComp 83.2 cũng chưa vượt Gemini 3.1 Pro ở 85.9,</li>
+                    <li>và một số benchmark reasoning hay vision cao cấp khác vẫn chưa dẫn đầu tuyệt đối.</li>
+                </ul>
+
+                <p>Thế nên cách đọc K2.6 hợp lý nhất không phải là “model open-source thắng sạch closed-source”. Cách đọc đúng hơn là: <strong>K2.6 đang kéo model open-source lên rất sát lớp model mạnh nhất ở những bài toán agentic coding và long-run execution</strong>.</p>
+
+                <h2>7. Chốt lại, K2.6 đáng chú ý ở đâu?</h2>
+                <p>Theo mình, có ba điểm đáng nhớ nhất.</p>
+
+                <ul>
+                    <li><strong>Một là</strong>, Moonshot đang đánh rất chuẩn vào nhu cầu thật của thị trường agent, tức là model phải bền trong workflow dài hơi, không chỉ giỏi benchmark ngắn.</li>
+                    <li><strong>Hai là</strong>, họ public gắn K2.6 với OpenClaw, Hermes, Kimi Code và Claw Groups, tức là positioning đã xoay hẳn sang “model cho hệ agent”.</li>
+                    <li><strong>Ba là</strong>, nếu cost/performance đúng như các đối tác beta nói, K2.6 có thể thành lựa chọn rất khó bỏ qua cho các hệ coding agent open hoặc hybrid.</li>
+                </ul>
+
+                <p>Và đó mới là phần đáng tiền nhất của đợt launch này. Không phải chỉ vì Moonshot ra một model mạnh hơn. Mà vì họ đang đặt cược rất rõ rằng <strong>tương lai của AI model không chỉ nằm trong cửa sổ chat, mà nằm trong những hệ agent chạy dài, chủ động và có tổ chức hơn nhiều</strong>.</p>
+
+                <div class="highlight-box">
+                    <h4>🎯 Chốt một câu</h4>
+                    <p style="margin-bottom:0"><strong>Kimi K2.6 không chỉ là một bản nâng benchmark. Nó là tín hiệu cho thấy cuộc đua model đang chuyển rất nhanh sang đất của coding agents, proactive workflows và swarm orchestration.</strong></p>
+                </div>
+
+                <p><strong>Source:</strong> <a href="https://x.com/Kimi_Moonshot/status/2046249571882500354?s=20" target="_blank" rel="noopener noreferrer">tweet launch</a> và <a href="https://kimi.com/blog/kimi-k2-6" target="_blank" rel="noopener noreferrer">tech blog Kimi K2.6</a></p>
+
+                <div class="back-to-blog-footer">
+                    <a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+                </div>
+
+                <div class="article-cta-stack">
+                    <a href="/blog/hermes-agent-see-it-in-action" class="article-suggestion-card">
+                        <span class="article-suggestion-label"><i class="fas fa-book-open"></i> Đọc tiếp</span>
+                        <span class="article-suggestion-title">Hermes Agent: Nhìn Tận Mắt Nó Làm Việc Thì Mới Thấy Agent Tốt Không Chỉ Là Chatbot Biết Gọi Tool</span>
+                    </a>
+                    <div class="article-cta-actions">
+                        <a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a>
+                    </div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">#KimiK26</span>
+                    <span class="tag">#MoonshotAI</span>
+                    <span class="tag">#OpenSourceAI</span>
+                    <span class="tag">#CodingAgents</span>
+                    <span class="tag">#OpenClaw</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

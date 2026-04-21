@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/kimi-k2-6-open-source-coding",
+    "title": "Kimi K2.6 Ra Mắt: Đánh Thẳng Vào Coding Agent, Long-Run Tasks Và Swarm",
+    "excerpt": "Moonshot vừa open-source Kimi K2.6, model mới nhắm thẳng vào coding agent, long-horizon execution và agent swarm. Điểm đáng chú ý không chỉ là benchmark, mà là các demo 12 đến 13 giờ liên tục, 4.000+ tool calls và việc Kimi gọi thẳng tên OpenClaw, Hermes Agent trong use case proactive agents.",
+    "date": "Apr 21, 2026",
+    "tag": "AI Models",
+    "tagIcon": "fas fa-robot",
+    "tagColor": "#7c3aed",
+    "readTime": "8 min read",
+    "featured": true,
+    "image": "/images/kimi-k2-6-open-source-coding-thumb.png"
+  },
+  {
     "url": "/blog/hermes-agent-see-it-in-action",
     "title": "Hermes Agent: Nhìn Tận Mắt Nó Làm Việc Thì Mới Thấy Agent Tốt Không Chỉ Là Chatbot Biết Gọi Tool",
     "excerpt": "Nhìn các screenshot Hermes Agent đang xử lý PR, sửa lỗi, chạy test và truy lại kiến thức cũ cho thấy một điều khá rõ: agent hữu ích không phải vì nó trả lời thông minh, mà vì nó bắt đầu làm việc như một cộng sự kỹ thuật có trí nhớ và có quy trình.",
