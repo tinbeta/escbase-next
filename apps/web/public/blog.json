@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/alex-finn-local-ai-hardware-bottleneck",
+    "title": "Alex Finn: Open-Weight AI Đã Chạm Tới Mốc Khiến Người Ta Đổ Xô Mua Mac Studio",
+    "excerpt": "Alex Finn đang đẩy một luận điểm rất rõ sau màn ra mắt Kimi K2.6: open-weight models đã mạnh tới mức bài toán không còn chỉ là model nào tốt hơn, mà là ai sở hữu đủ phần cứng để chạy local, riêng tư và 24/7. Nhưng cùng lúc đó, cộng đồng cũng phản pháo mạnh bằng những câu hỏi rất thực tế về benchmark, RAM 700GB, capex phần cứng và ROI so với cloud.",
+    "date": "Apr 21, 2026",
+    "tag": "Local AI",
+    "tagIcon": "fas fa-microchip",
+    "tagColor": "#10b981",
+    "readTime": "8 min read",
+    "featured": true,
+    "image": "/images/alex-finn-local-ai-hardware-bottleneck-thumb.png"
+  },
+  {
     "url": "/blog/a16z-agent-blockchain-infrastructure",
     "title": "a16z: Blockchains Là Hạ Tầng Còn Thiếu Cho AI Agents, Không Chỉ Là Chỗ Thanh Toán",
     "excerpt": "a16z crypto vừa đưa ra thesis khá rõ: AI agents đang tiến từ copilots sang economic actors, nhưng hạ tầng xung quanh vẫn thiếu identity, governance, payments, verification và user control. Theo họ, blockchain có thể lấp đúng 5 lỗ hổng này. Điểm đáng chú ý là đây không chỉ là bài nói về stablecoin, mà là một cách định vị crypto như trust layer cho agent economy.",
