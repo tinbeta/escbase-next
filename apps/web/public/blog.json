@@ -1,6 +1,18 @@
 [
   {
-    "url": "/blog/claude-code-ultrareview",
+    "url": "/blog/openai-workspace-agents",
+    "title": "OpenAI Ra Mắt Workspace Agents: ChatGPT Đang Bỏ Vai Trợ Lý Cá Nhân Để Thành Hạ Tầng Workflow Cho Cả Team",
+    "excerpt": "OpenAI vừa giới thiệu workspace agents trong ChatGPT, cho phép tạo agent dùng chung cho cả team, chạy workflow dài hơi qua docs, email, chat, code và các hệ thống nội bộ. Điểm đáng chú ý là ChatGPT đang được kéo từ một trợ lý cá nhân sang hạ tầng workflow có memory, approvals, analytics và admin controls.",
+    "date": "Apr 23, 2026",
+    "tag": "AI for Teams",
+    "tagIcon": "fas fa-building",
+    "tagColor": "#10b981",
+    "readTime": "9 min read",
+    "featured": true,
+    "image": "/images/openai-workspace-agents-thumb.png"
+  },
+  {
+    "url": "/blog/claude-code-ultrareview", 
     "title": "Claude Code /ultrareview: Anthropic Đang Biến Code Review Thành Một Đội Săn Bug Chạy Trên Cloud",
     "excerpt": "Anthropic vừa đưa /ultrareview vào Claude Code ở dạng research preview. Điểm đáng chú ý không chỉ là thêm một lệnh review mới, mà là việc code review đang bị đẩy từ một lượt đọc thủ công sang một fleet bug-hunting agents chạy trên cloud, tự verify findings trước khi trả về CLI.",
     "date": "Apr 23, 2026",
