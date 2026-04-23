@@ -1,6 +1,18 @@
 [
   {
-    "url": "/blog/xiaomi-mimo-v25-open-source-agents",
+    "url": "/blog/claude-code-ultrareview",
+    "title": "Claude Code /ultrareview: Anthropic Đang Biến Code Review Thành Một Đội Săn Bug Chạy Trên Cloud",
+    "excerpt": "Anthropic vừa đưa /ultrareview vào Claude Code ở dạng research preview. Điểm đáng chú ý không chỉ là thêm một lệnh review mới, mà là việc code review đang bị đẩy từ một lượt đọc thủ công sang một fleet bug-hunting agents chạy trên cloud, tự verify findings trước khi trả về CLI.",
+    "date": "Apr 23, 2026",
+    "tag": "AI Coding",
+    "tagIcon": "fas fa-code-branch",
+    "tagColor": "#8b5cf6",
+    "readTime": "8 min read",
+    "featured": true,
+    "image": "/images/claude-code-ultrareview-thumb.png"
+  },
+  {
+    "url": "/blog/xiaomi-mimo-v25-open-source-agents", 
     "title": "Xiaomi MiMo-V2.5: Open-Source Agent Áp Sát Claude Opus, GPT-5.4 Nhưng Ăn Ít Token Hơn",
     "excerpt": "Xiaomi vừa tung MiMo-V2.5 và MiMo-V2.5-Pro với một thesis rất rõ: open-source agent muốn đáng dùng thì không chỉ cần benchmark đẹp, mà còn phải chạy dài hơi, dùng ít token và đủ rẻ để triển khai thật. Điểm đáng chú ý là Xiaomi đang đặt MiMo vào cùng khung với Claude Opus 4.6, GPT-5.4 và Gemini 3 Pro, rồi cố thắng ở performance-per-token.",
     "date": "Apr 23, 2026",
