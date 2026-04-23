@@ -6,6 +6,7 @@
     { href: '/', label: 'Trang chủ', icon: 'fas fa-home', key: 'home' },
     { href: '/blog', label: 'Bài viết', icon: 'fas fa-newspaper', key: 'blog' },
     { href: '/videos', label: 'Video', icon: 'fas fa-play-circle', key: 'videos' },
+    { href: 'https://shop.escbase.xyz/', label: 'Shop', icon: 'fas fa-bag-shopping', key: 'shop', external: true },
   ];
 
   const socials = [
@@ -16,6 +17,7 @@
   ];
 
   function isActive(item) {
+    if (item.external) return false;
     if (item.key === 'home') return path === '' || path === '/';
     return path === item.href || path.startsWith(item.href + '/');
   }
@@ -29,7 +31,8 @@
         : item.href;
     const active = isActive(item) ? ' active' : '';
     const click = mobile ? ' onclick="toggleMobileNav()"' : '';
-    return `<a href="${targetHref}" class="${cls}${active}"${click}><i class="${item.icon}"></i> ${item.label}</a>`;
+    const extra = item.external ? ' target="_blank" rel="noopener noreferrer"' : '';
+    return `<a href="${targetHref}" class="${cls}${active}"${click}${extra}><i class="${item.icon}"></i> ${item.label}</a>`;
   }
 
   function socialLink(item) {
