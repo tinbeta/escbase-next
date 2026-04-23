@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/google-deep-research-max-gemini-api",
+    "title": "Google Đưa Deep Research Và Deep Research Max Lên Gemini API: Khi “Nghiên Cứu” Bắt Đầu Trông Giống Một Job Nền Hơn Là Một Prompt",
+    "excerpt": "Google vừa đưa Deep Research và Deep Research Max lên Gemini API với Gemini 3.1 Pro, hỗ trợ MCP, chart/infographic native, collaborative planning, streaming và grounding từ cả web lẫn file riêng. Điểm đáng chú ý không chỉ là nghiên cứu sâu hơn, mà là Google đang biến research agent thành một hạ tầng workflow thực thụ.",
+    "date": "Apr 23, 2026",
+    "tag": "AI Research",
+    "tagIcon": "fas fa-microscope",
+    "tagColor": "#3b82f6",
+    "readTime": "9 min read",
+    "featured": true,
+    "image": "/images/google-deep-research-max-thumb.png"
+  },
+  {
     "url": "/blog/bud-ai-human-emulator-worker-computer",
     "title": "Bud Tự Gọi Mình Là “AI Human Emulator”: Đây Là Agent Có Máy Tính Thật Hay Chỉ Là Một Cách Đặt Tên Khôn?",
     "excerpt": "Bud vừa launch với claim rất kêu: 'the first AI Human Emulator'. Sản phẩm này cho agent một máy tính, browser, memory, số điện thoại, Telegram và khả năng dùng tool như một người thật. Điều đáng bàn không phải chỉ là nó làm được gì, mà là cách Bud đang reframe AI agent thành 'AI worker' có hạ tầng làm việc riêng.",
