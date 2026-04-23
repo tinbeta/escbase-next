@@ -1,8 +1,8 @@
 [
   {
     "url": "/blog/xiaomi-mimo-v25-open-source-agents",
-    "title": "Xiaomi MiMo-V2.5: Open-Source Agent Giờ Không Chỉ Đòi Mạnh, Mà Còn Phải Rẻ Token",
-    "excerpt": "Xiaomi vừa tung MiMo-V2.5 và MiMo-V2.5-Pro với một thesis rất rõ: open-source agent muốn đáng dùng thì không chỉ cần benchmark đẹp, mà còn phải chạy dài hơi, dùng ít token và đủ rẻ để triển khai thật. Điểm đáng chú ý là Xiaomi đang đẩy câu chuyện từ model quality sang performance-per-token.",
+    "title": "Xiaomi MiMo-V2.5: Open-Source Agent Áp Sát Claude Opus, GPT-5.4 Nhưng Ăn Ít Token Hơn",
+    "excerpt": "Xiaomi vừa tung MiMo-V2.5 và MiMo-V2.5-Pro với một thesis rất rõ: open-source agent muốn đáng dùng thì không chỉ cần benchmark đẹp, mà còn phải chạy dài hơi, dùng ít token và đủ rẻ để triển khai thật. Điểm đáng chú ý là Xiaomi đang đặt MiMo vào cùng khung với Claude Opus 4.6, GPT-5.4 và Gemini 3 Pro, rồi cố thắng ở performance-per-token.",
     "date": "Apr 23, 2026",
     "tag": "AI Models & Agents",
     "tagIcon": "fas fa-brain",

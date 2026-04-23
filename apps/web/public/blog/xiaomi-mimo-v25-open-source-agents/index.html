@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xiaomi MiMo-V2.5: Open-Source Agent Giờ Không Chỉ Đòi Mạnh, Mà Còn Phải Rẻ Token | Escbase</title>
-    <meta name="description" content="Xiaomi vừa tung MiMo-V2.5 và MiMo-V2.5-Pro với một thesis rất rõ: open-source agent muốn đáng dùng thì không chỉ cần benchmark đẹp, mà còn phải chạy dài hơi, dùng ít token và đủ rẻ để triển khai thật. Điểm đáng chú ý là Xiaomi đang đẩy câu chuyện từ model quality sang performance-per-token.">
-    <meta property="og:title" content="Xiaomi MiMo-V2.5: Open-Source Agent Giờ Không Chỉ Đòi Mạnh, Mà Còn Phải Rẻ Token">
-    <meta property="og:description" content="MiMo-V2.5 và V2.5-Pro của Xiaomi không chỉ khoe benchmark ngang frontier models. Họ đang cố thắng ở một mặt trận khó hơn: long-horizon agent tasks, multimodal capability và token efficiency đủ tốt để đem vào production.">
+    <meta name="description" content="Xiaomi vừa tung MiMo-V2.5 và MiMo-V2.5-Pro với một thesis rất rõ: open-source agent muốn đáng dùng thì không chỉ cần benchmark đẹp, mà còn phải chạy dài hơi, dùng ít token và đủ rẻ để triển khai thật. Điểm đáng chú ý là Xiaomi đang đặt MiMo vào cùng khung với Claude Opus 4.6, GPT-5.4 và Gemini 3 Pro, rồi cố thắng ở performance-per-token.">
+    <meta property="og:title" content="Xiaomi MiMo-V2.5: Open-Source Agent Áp Sát Claude Opus, GPT-5.4 Nhưng Ăn Ít Token Hơn">
+    <meta property="og:description" content="MiMo-V2.5 và V2.5-Pro của Xiaomi không chỉ khoe benchmark ngang frontier models như Claude Opus 4.6, GPT-5.4 hay Gemini 3 Pro. Họ đang cố thắng ở một mặt trận khó hơn: long-horizon agent tasks, multimodal capability và token efficiency đủ tốt để đem vào production.">
     <meta property="og:image" content="https://escbase.xyz/images/xiaomi-mimo-v25-open-source-agents-thumb.png">
     <meta property="og:url" content="https://escbase.xyz/blog/xiaomi-mimo-v25-open-source-agents/">
     <meta name="twitter:card" content="summary_large_image">
@@ -25,7 +25,7 @@
         <article>
             <header class="article-header">
                 <span class="category-badge"><i class="fas fa-brain"></i> AI Models & Agents</span>
-                <h1>Xiaomi MiMo-V2.5: Open-Source Agent Giờ Không Chỉ Đòi Mạnh, Mà Còn Phải Rẻ Token</h1>
+                <h1>Xiaomi MiMo-V2.5: Open-Source Agent Áp Sát Claude Opus, GPT-5.4 Nhưng Ăn Ít Token Hơn</h1>
                 <div class="meta">
                     <span><i class="far fa-calendar"></i> 23/04/2026</span>
                     <span><i class="far fa-clock"></i> 9 phút đọc</span>
@@ -37,10 +37,10 @@
             <div class="article-content">
                 <div class="highlight-box">
                     <h4>⚡ Tóm tắt nhanh</h4>
-                    <p style="margin-bottom:0">Xiaomi vừa tung MiMo-V2.5 và MiMo-V2.5-Pro với một thesis rất rõ: open-source agent muốn đáng dùng thì không chỉ cần benchmark đẹp, mà còn phải chạy dài hơi, gọi tool bền, hiểu đa phương thức và <strong>dùng ít token hơn</strong> ở cùng mặt bằng hiệu năng. Đây là điểm khiến MiMo đáng chú ý hơn một bài “model mới ra mắt” thông thường.</p>
+                    <p style="margin-bottom:0">Xiaomi vừa tung MiMo-V2.5 và MiMo-V2.5-Pro với một thesis rất rõ: open-source agent muốn đáng dùng thì không chỉ cần benchmark đẹp, mà còn phải chạy dài hơi, gọi tool bền, hiểu đa phương thức và <strong>dùng ít token hơn</strong> ở cùng mặt bằng hiệu năng. Khi chính Xiaomi đặt MiMo-V2.5-Pro vào khung so với <strong>Claude Opus 4.6, GPT-5.4</strong> và bản thường thì so sát <strong>Gemini 3 Pro</strong>, câu chuyện lập tức hấp dẫn hơn nhiều.</p>
                 </div>
 
-                <p>Thread launch của Xiaomi MiMo khá dày thông tin nhưng nếu bóc kỹ thì họ đang push một narrative rất cụ thể: <strong>open-source agents đã tiến tới mức không chỉ so benchmark với frontier models, mà còn bắt đầu cạnh tranh ở cost efficiency trên các long-horizon tasks</strong>.</p>
+                <p>Thread launch của Xiaomi MiMo khá dày thông tin nhưng nếu bóc kỹ thì họ đang push một narrative rất cụ thể: <strong>open-source agents đã tiến tới mức không chỉ so benchmark với frontier models như Claude Opus 4.6, GPT-5.4 hay Gemini 3 Pro, mà còn bắt đầu cạnh tranh ở cost efficiency trên các long-horizon tasks</strong>.</p>
 
                 <p>Nói dễ hiểu: không còn là cuộc chơi “model nào thông minh hơn một chút”, mà là “model nào đủ mạnh để làm việc thật, đủ rẻ để deploy thật, và đủ bền để không chết giữa đường”.</p>
 
@@ -67,7 +67,7 @@
                 <p>Đó là framing khôn. Vì ở giai đoạn này, model nào cũng có thể khoe benchmark. Cái khó hơn là giải thích vì sao người dùng phải chọn model A cho case này và model B cho case kia.</p>
 
                 <h2>2. MiMo-V2.5-Pro muốn được nhìn như một con agent thật sự biết làm việc dài hơi</h2>
-                <p>Blog của Xiaomi về bản Pro có mấy chi tiết khá đắt.</p>
+                <p>Blog của Xiaomi về bản Pro có mấy chi tiết khá đắt. Quan trọng nhất là họ không né so sánh lớn: thread mở đầu nói thẳng MiMo-V2.5-Pro đang matching frontier models như <strong>Claude Opus 4.6</strong> và <strong>GPT-5.4</strong> trên phần lớn benchmark chính, từ SWE-bench Pro tới Claw-Eval và τ3-Bench.</p>
 
                 <p>Thứ nhất, họ nhấn rất mạnh chuyện <strong>1.000+ tool calls</strong> và long-horizon coherence. Đây không còn là kiểu benchmark “trả lời một phát”. Họ muốn chứng minh model giữ được mạch suy nghĩ và kỷ luật thực thi qua những tác vụ kéo dài hàng giờ.</p>
 
@@ -95,6 +95,8 @@
                     <li>khả năng xử lý image, audio, video trong cùng một model,</li>
                     <li>và hiệu năng agent đủ sát bản Pro trong nhiều use case nhưng với chi phí thấp hơn đáng kể.</li>
                 </ul>
+
+                <p>Ở mảng multimodal, Xiaomi cũng chơi trò so thẳng tay: họ nói MiMo-V2.5 gần như ngang <strong>Gemini 3 Pro</strong> trên Video-MME, bám rất sát ở image understanding, và trên Claw-Eval Multimodal thì chỉ còn kém <strong>Claude Opus 4.6</strong> đúng 1 điểm. Đây là kiểu so sánh đủ bắt mắt để kéo click, vì nó đẩy MiMo ra khỏi vùng “model Trung Quốc giá rẻ” sang vùng “model đang chạm bàn của đám frontier thật”.</p>
 
                 <p>Đây là kiểu model dễ đi vào use case thật hơn. Vì ngoài một số task coding cực khó, phần lớn production workloads cần một model đủ thông minh, hiểu nhiều modality, phản hồi nhanh và không đốt ngân sách quá hung hãn.</p>
 
@@ -160,7 +162,7 @@
                 <h2>8. Chốt lại</h2>
                 <p>MiMo-V2.5 và MiMo-V2.5-Pro đáng chú ý không phải vì Xiaomi lại ra thêm một model mới. Chúng đáng chú ý vì Xiaomi đang đánh đúng vào câu hỏi thật của thị trường agent: <strong>frontier performance có thể trở nên đủ rẻ và đủ bền để dùng rộng rãi hay chưa?</strong></p>
 
-                <p>Họ chưa chứng minh được mọi thứ. Cộng đồng vẫn sẽ còn test, soi và bắt lỗi tiếp. Nhưng angle “frontier-level open-source agents with token efficiency” là angle rất mạnh, và thành thật mà nói, mạnh hơn nhiều so với kiểu launch chỉ chăm chăm khoe benchmark đẹp.</p>
+                <p>Họ chưa chứng minh được mọi thứ. Cộng đồng vẫn sẽ còn test, soi và bắt lỗi tiếp. Nhưng angle “open-source agent đang áp sát Claude Opus 4.6, GPT-5.4 và Gemini 3 Pro, trong khi ăn ít token hơn” là angle rất mạnh, và thành thật mà nói, hút hơn nhiều so với kiểu launch chỉ chăm chăm khoe benchmark đẹp.</p>
 
                 <div class="highlight-box-blue">
                     <h4>⚙️ Chốt một câu</h4>
