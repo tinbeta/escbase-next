@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/bud-ai-human-emulator-worker-computer",
+    "title": "Bud Tự Gọi Mình Là “AI Human Emulator”: Đây Là Agent Có Máy Tính Thật Hay Chỉ Là Một Cách Đặt Tên Khôn?",
+    "excerpt": "Bud vừa launch với claim rất kêu: 'the first AI Human Emulator'. Sản phẩm này cho agent một máy tính, browser, memory, số điện thoại, Telegram và khả năng dùng tool như một người thật. Điều đáng bàn không phải chỉ là nó làm được gì, mà là cách Bud đang reframe AI agent thành 'AI worker' có hạ tầng làm việc riêng.",
+    "date": "Apr 23, 2026",
+    "tag": "AI Agents",
+    "tagIcon": "fas fa-desktop",
+    "tagColor": "#8b5cf6",
+    "readTime": "8 min read",
+    "featured": true,
+    "image": "/images/bud-ai-human-emulator-thumb.png"
+  },
+  {
     "url": "/blog/justin-sun-wlfi-lawsuit-governance-risk",
     "title": "Justin Sun Kiện WLFI: Drama Cá Nhân Hay Cảnh Báo Rủi Ro Governance Của Crypto Chính Trị?",
     "excerpt": "Justin Sun nói đã kiện World Liberty Financial vì token WLFI bị freeze, mất quyền vote và có nguy cơ bị burn. Đằng sau drama cá nhân là một câu hỏi lớn hơn: khi quyền token có thể bị khóa và sửa bằng proposal, governance trong crypto thực ra đang phi tập trung tới đâu?",
