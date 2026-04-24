@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DeepSeek V4 Preview Mở Màn Bằng Cú So Với Gemini 3.1 Pro Và Closed Models | Escbase</title>
-    <meta name="description" content="DeepSeek vừa ra DeepSeek-V4 Preview theo đúng kiểu không lòng vòng: tự đặt mình cạnh Gemini 3.1 Pro, tuyên bố vượt mọi open model hiện tại ở nhiều mảng và rival top closed-source models. Điểm đáng chú ý không chỉ là benchmark, mà là cách DeepSeek gói open-source, 1M context, agentic coding và API rollout thành một cú launch có thể kéo người dùng vào thử ngay.">
-    <meta property="og:title" content="DeepSeek V4 Preview Mở Màn Bằng Cú So Với Gemini 3.1 Pro Và Closed Models">
-    <meta property="og:description" content="DeepSeek-V4-Pro và V4-Flash được giới thiệu với 1M context, agentic coding mạnh hơn, long-context efficiency tốt hơn và API sẵn ngay ngày đầu. Nhưng phần hấp dẫn nhất của launch là DeepSeek chủ động đặt mình cạnh các đối thủ mạnh nhất ngay từ thread đầu tiên.">
+    <title>DeepSeek V4 Preview So Găng Claude, GPT, Gemini Và Cả Nhóm Open Models Ngay Từ Thread Launch | Escbase</title>
+    <meta name="description" content="DeepSeek vừa ra DeepSeek-V4 Preview theo kiểu đánh thẳng vào bảng xếp hạng: slide launch kéo Claude, GPT, Gemini, K2.6 và GLM vào nhiều mảng benchmark khác nhau như knowledge, coding, agentic tasks, long context và pricing. Điểm đáng chú ý không chỉ là 1M context hay open-source, mà là cách DeepSeek dùng cả một bộ slide so găng đa mặt trận để tự nâng vị thế.">
+    <meta property="og:title" content="DeepSeek V4 Preview So Găng Claude, GPT, Gemini Và Cả Nhóm Open Models Ngay Từ Thread Launch">
+    <meta property="og:description" content="DeepSeek-V4-Pro và V4-Flash không chỉ được mô tả bằng vài câu slogan. Các slide launch đem DeepSeek ra so với Gemini 3.1 Pro, GPT-5.4 xHigh, Claude Opus 4.6 Max, K2.6 Thinking và GLM-5.1 Thinking ở nhiều mảng khác nhau, từ knowledge đến agentic benchmarks và long-context performance.">
     <meta property="og:image" content="https://escbase.xyz/images/deepseek-v4-preview-thumb.png">
     <meta property="og:url" content="https://escbase.xyz/blog/deepseek-v4-preview-open-vs-closed/">
     <meta name="twitter:card" content="summary_large_image">
@@ -25,7 +25,7 @@
         <article>
             <header class="article-header">
                 <span class="category-badge"><i class="fas fa-brain"></i> Open Models</span>
-                <h1>DeepSeek V4 Preview Mở Màn Bằng Cú So Với Gemini 3.1 Pro Và Closed Models</h1>
+                <h1>DeepSeek V4 Preview So Găng Claude, GPT, Gemini Và Cả Nhóm Open Models Ngay Từ Thread Launch</h1>
                 <div class="meta">
                     <span><i class="far fa-calendar"></i> 24/04/2026</span>
                     <span><i class="far fa-clock"></i> 10 phút đọc</span>
@@ -37,32 +37,55 @@
             <div class="article-content">
                 <div class="highlight-box">
                     <h4>⚡ Tóm tắt nhanh</h4>
-                    <p style="margin-bottom:0">DeepSeek ra <strong>V4 Preview</strong> theo đúng kiểu không lòng vòng: vừa mở source, vừa đẩy <strong>1M context</strong>, vừa tự đặt mình cạnh <strong>Gemini 3.1 Pro</strong> và nhóm <strong>top closed-source models</strong> ngay trong thread launch. Thông điệp rất rõ: DeepSeek-V4-Pro muốn được nhìn như model open mạnh nhất hiện tại cho reasoning, world knowledge và agentic coding; còn V4-Flash muốn phá định nghĩa “budget model” bằng cách giữ hiệu năng gần Pro nhưng rẻ và nhanh hơn nhiều.</p>
+                    <p style="margin-bottom:0">DeepSeek ra <strong>V4 Preview</strong> bằng một bộ slide benchmark dày hơn hẳn kiểu launch thông thường. Họ không chỉ nhắc <strong>Gemini 3.1 Pro</strong>, mà còn kéo cả <strong>GPT-5.4 xHigh</strong>, <strong>Claude Opus 4.6 Max</strong>, <strong>K2.6 Thinking</strong> và <strong>GLM-5.1 Thinking</strong> vào các mảng khác nhau như knowledge, coding, agentic tasks, long context và pricing. Thông điệp rất rõ: DeepSeek không còn muốn đóng vai model open “ngon trong tầm giá”, mà muốn được nhìn như một đối thủ nghiêm túc trên nhiều mặt trận cùng lúc.</p>
                 </div>
 
-                <p>Điểm đáng chú ý nhất của launch này không phải là con số 1.6T total params hay việc DeepSeek lại open weights. Phần hấp dẫn nhất là cách họ mở bài bằng đối thủ.</p>
+                <p>Điểm đáng chú ý nhất của launch này không phải riêng con số 1.6T total params hay chuyện DeepSeek tiếp tục open weights. Phần đáng nói hơn là cách họ dùng từng slide để dựng một narrative đối đầu rất có chủ đích.</p>
 
-                <p>Ngay trong thread, DeepSeek nói V4-Pro “trailing only Gemini-3.1-Pro” ở rich world knowledge, “beats all current open models” ở Math/STEM/Coding và có hiệu năng “rivaling the world's top closed-source models”. Đây không phải kiểu khoe khéo. Đây là cách định vị rất có chủ ý: <strong>DeepSeek muốn bước ra khỏi vai open alternative giá rẻ để đòi ngồi chung bàn với frontier closed models.</strong></p>
+                <p>Có slide nhấn world knowledge và reasoning để kéo Gemini, GPT, Claude vào cùng khung. Có slide benchmark table rộng hơn để lôi thêm K2.6 Thinking và GLM-5.1 Thinking vào nhóm so sánh open-model. Có slide context efficiency để nói về chi phí suy luận dài hơi. Có slide agent use case và slide API/pricing để chốt adoption. Tức là đây không phải một cú launch “một claim ăn tất”, mà là một bộ bài so găng theo từng mảng.</p>
 
                 <img src="/images/deepseek-v4-preview/benchmark-pro.png" alt="DeepSeek V4 Pro benchmark slide" class="inline-image">
-                <p class="image-caption">Slide benchmark từ thread. Cái hay là DeepSeek không né đối thủ — họ kéo thẳng Gemini 3.1 Pro và nhóm closed models vào narrative ngay từ đầu.</p>
+                <p class="image-caption">Slide benchmark đầu tiên cho thấy DeepSeek so trực diện với Claude Opus 4.6 Max, GPT-5.4 xHigh và Gemini 3.1 Pro High ở nhiều mảng khác nhau, thay vì chỉ chọn một benchmark đẹp để khoe.</p>
 
-                <h2>1. So với đối thủ ngay ở đầu: đây là launch để giành vị thế, không chỉ để thông báo model mới</h2>
-                <p>Nếu nhiều lab thích nói chung chung kiểu “state-of-the-art” hoặc “best in class”, DeepSeek lần này nói cụ thể hơn nhiều. V4-Pro được mô tả như:</p>
+                <h2>1. DeepSeek đang so với ai ở mảng nào?</h2>
+                <p>Nếu bóc kỹ các slide, DeepSeek không hề chỉ nói một câu “trail only Gemini 3.1 Pro” rồi thôi. Họ đang làm ba lớp so sánh song song:</p>
                 <ul>
-                    <li>open-source SOTA trong <strong>agentic coding benchmarks</strong>,</li>
-                    <li>dẫn đầu các model open hiện tại về <strong>world knowledge</strong>, chỉ sau <strong>Gemini 3.1 Pro</strong>,</li>
-                    <li>mạnh nhất trong nhóm open models ở <strong>Math/STEM/Coding</strong>,</li>
-                    <li>và đủ mạnh để “rival” nhóm model closed hàng đầu.</li>
+                    <li><strong>Nhóm closed / frontier models:</strong> Gemini 3.1 Pro High, GPT-5.4 xHigh, Claude Opus 4.6 Max.</li>
+                    <li><strong>Nhóm open / reasoning models:</strong> K2.6 Thinking, GLM-5.1 Thinking.</li>
+                    <li><strong>Nhóm model cũ của chính DeepSeek:</strong> để chứng minh bước nhảy về context efficiency, pricing và deployment path.</li>
                 </ul>
 
-                <p>Nói thẳng: DeepSeek không còn muốn được khen là “ngon trong tầm giá”. Họ đang đòi được nhìn như một đối thủ thật trong nhóm đầu bảng.</p>
+                <p>Và từng nhóm đối thủ được kéo vào các mảng khác nhau:</p>
+                <ul>
+                    <li><strong>Knowledge & Reasoning:</strong> SimpleQA Verified, HLE, Apex Shortlist, Codeforces.</li>
+                    <li><strong>Agentic Capabilities:</strong> SWE Verified, Terminal Bench 2.0, Toolathlon, BrowseComp, MCPAtlas, GDPval-AA.</li>
+                    <li><strong>Long Context:</strong> các bài MRCR 1M, CorpusQA 1M và slide efficiency về FLOPs/KV cache.</li>
+                    <li><strong>Adoption / API:</strong> pricing, 1M context mặc định, compatibility với OpenAI/Anthropic APIs.</li>
+                </ul>
 
                 <div class="quote-block">
-                    Khi một model open bắt đầu tự so mình với Gemini 3.1 Pro và closed frontier models ngay câu mở màn, thứ họ bán không chỉ là chi phí thấp hơn. Họ đang bán vị thế.
+                    Cái hay của DeepSeek lần này là họ không khoe một benchmark đơn lẻ. Họ dựng cả một ma trận so sánh để nói rằng V4 có thể đứng cùng bàn với Gemini, GPT, Claude ở từng mặt trận khác nhau — đồng thời vẫn giữ lợi thế của một model open và rẻ hơn.
                 </div>
 
-                <h2>2. 1M context chỉ hấp dẫn khi đi kèm efficiency, và DeepSeek biết điều đó</h2>
+                <h2>2. Ở knowledge, coding và agentic tasks, DeepSeek đang chọn đánh nhiều hướng cùng lúc</h2>
+                <p>Ở slide benchmark đầu tiên, DeepSeek đem V4-Pro Max so với Claude Opus 4.6 Max, GPT-5.4 xHigh và Gemini 3.1 Pro High trên hai cụm rõ ràng: <strong>Knowledge & Reasoning</strong> và <strong>Agentic Capabilities</strong>.</p>
+
+                <p>Ảnh này cho thấy vài ý rất đáng chú ý:</p>
+                <ul>
+                    <li>Ở <strong>SimpleQA Verified</strong>, DeepSeek vượt Claude và GPT nhưng vẫn đứng sau Gemini.</li>
+                    <li>Ở <strong>Apex Shortlist</strong> và <strong>Codeforces</strong>, DeepSeek nằm trong nhóm dẫn đầu, thậm chí đứng đầu ở vài điểm chính.</li>
+                    <li>Ở <strong>SWE Verified</strong>, DeepSeek bám rất sát nhóm frontier models.</li>
+                    <li>Ở <strong>Terminal Bench 2.0</strong> và <strong>Toolathlon</strong>, DeepSeek vẫn cạnh tranh nhưng chưa đè toàn bộ đối thủ.</li>
+                </ul>
+
+                <p>Nói cách khác, DeepSeek không thắng đều mọi thứ. Nhưng đó cũng chính là lý do bộ slide này đáng tin hơn kiểu claim một chiều. Nó cho cảm giác DeepSeek đang cố chứng minh mình đã đủ gần nhóm đầu bảng trên nhiều mảng, thay vì chỉ ăn may ở một leaderboard hẹp.</p>
+
+                <h2>3. Bảng benchmark rộng hơn mới là chỗ DeepSeek lộ rõ tham vọng</h2>
+                <p>Nếu chỉ đọc caption tweet, rất dễ tưởng DeepSeek chỉ đang đánh vào Gemini và closed models. Nhưng ở bảng benchmark chi tiết hơn, họ kéo thêm <strong>K2.6 Thinking</strong> và <strong>GLM-5.1 Thinking</strong> vào cùng khung. Đây là chi tiết quan trọng, vì nó cho thấy DeepSeek không chỉ muốn thắng trong narrative “open vs closed”, mà còn muốn đè luôn nhóm open/reasoning rivals đang nổi.</p>
+
+                <p>Trong bảng này, DeepSeek-V4-Pro Max thường xuyên nằm top 1 hoặc top 2 ở nhiều benchmark trải dài từ MMLU-Pro, GPQA, LiveCodeBench đến BrowseComp, MCPAtlas và long-context tests. Điều này làm launch mạnh hơn nhiều, vì họ không tự đóng mình trong một storyline duy nhất. Họ đang nói: dù bạn nhìn theo hướng closed frontier, open reasoning, coding hay agentic, V4 vẫn có quyền được nhắc tên.</p>
+
+                <h2>4. 1M context chỉ hấp dẫn khi đi kèm efficiency, và DeepSeek biết điều đó</h2>
                 <p>Long context tự nó không còn đủ gây sốc nữa. Người ta nghe 128K, 256K, 1M quá nhiều rồi. DeepSeek hiểu chuyện đó, nên họ không chỉ nói “1M context”, mà nói <strong>cost-effective 1M context</strong> và “world-leading long context with drastically reduced compute & memory costs”.</p>
 
                 <img src="/images/deepseek-v4-preview/context.jpg" alt="DeepSeek long context efficiency slide" class="inline-image">
@@ -76,7 +99,7 @@
 
                 <p>Đó là framing khá khôn. Nếu chỉ kéo context window lên mà cost và memory usage phình quá mạnh, model rất dễ thành đồ trưng bày. DeepSeek đang cố nói rằng V4 không chỉ “dài hơn”, mà còn “dùng được hơn” trong các workflow thật như code, agent loops và document-heavy tasks.</p>
 
-                <h2>3. Agentic coding mới là thứ DeepSeek muốn lấy làm bàn đạp</h2>
+                <h2>5. Agentic coding mới là thứ DeepSeek muốn lấy làm bàn đạp</h2>
                 <p>Trong thread, DeepSeek nhấn khá mạnh vào agent capabilities. Họ nói V4 đã được tối ưu riêng cho agent use cases, tích hợp với các agent tools lớn như <strong>Claude Code, OpenClaw và OpenCode</strong>, đồng thời dùng chính nó cho in-house agentic coding.</p>
 
                 <img src="/images/deepseek-v4-preview/agent-pdf.jpg" alt="DeepSeek agent capabilities slide" class="inline-image">
@@ -92,7 +115,7 @@
 
                 <p>Nói gọn: DeepSeek đang cố nhảy từ sân benchmark sang sân làm việc thật.</p>
 
-                <h2>4. V4-Flash mới là phần có thể làm thị trường khó chịu</h2>
+                <h2>6. V4-Flash mới là phần có thể làm thị trường khó chịu</h2>
                 <p>V4-Pro là flagship để lấy uy tín. Nhưng V4-Flash mới là con dễ làm đối thủ đau đầu hơn về mặt sản phẩm. Theo DeepSeek, V4-Flash:</p>
                 <ul>
                     <li>reasoning gần với V4-Pro,</li>
@@ -105,7 +128,7 @@
 
                 <p>Đây là chỗ thú vị: rất nhiều lần thị trường bị hút bởi flagship, nhưng adoption thật lại chạy theo model “đủ giỏi nhưng rẻ và nhanh”. Nếu V4-Flash giữ được chất lượng gần Pro ở các task đơn giản và agent tasks nhẹ, thì nó có thể trở thành cái tên cực khó chịu trong tầng ứng dụng.</p>
 
-                <h2>5. Day-0 usability cũng được DeepSeek làm khá bài bản</h2>
+                <h2>7. Day-0 usability cũng được DeepSeek làm khá bài bản</h2>
                 <p>Một điểm mình đánh giá cao ở launch này là DeepSeek không để model nằm chơ vơ trên paper hoặc leaderboard. Họ bung cùng lúc:</p>
                 <ul>
                     <li><strong>chat.deepseek.com</strong> với Expert Mode / Instant Mode,</li>
@@ -120,7 +143,7 @@
 
                 <p>Đây là phần quan trọng vì rất nhiều model launch nghe hay nhưng chưa dùng được ngay. DeepSeek lần này cố thu hẹp ma sát day-0 khá tốt.</p>
 
-                <h2>6. Chỗ cần tỉnh táo</h2>
+                <h2>8. Chỗ cần tỉnh táo</h2>
                 <p>Dĩ nhiên, vẫn cần dè chừng với mọi launch benchmark-heavy. Những câu như “trailing only Gemini 3.1 Pro” hay “rivaling top closed-source models” nghe đã tai, nhưng chỉ thực sự đáng giá nếu model giữ được chất lượng trong điều kiện bẩn hơn ngoài đời: context dài thật, tool loops dài, retrieval tệ, prompt không sạch, và workflow nhiều lỗi lặt vặt.</p>
 
                 <div class="highlight-box-red">
@@ -128,16 +151,16 @@
                     <p style="margin-bottom:0">1M context không tự động đồng nghĩa output tốt hơn. Agentic coding benchmark cao cũng chưa chắc translate hoàn hảo sang mọi workflow thực tế. Điểm đáng theo dõi tiếp là context degradation, độ ổn định trong loops dài, và chất lượng tool use khi đụng dữ liệu xấu.</p>
                 </div>
 
-                <h2>7. Chốt lại</h2>
+                <h2>9. Chốt lại</h2>
                 <p>DeepSeek V4 Preview đáng chú ý không chỉ vì open-source hay 1M context. Nó đáng chú ý vì DeepSeek đang đổi cách tự định vị: không còn đóng vai “lựa chọn open rẻ hơn”, mà đang cố chen thẳng vào cuộc chơi giữa các model mạnh nhất.</p>
 
                 <p>Và họ làm điều đó bằng một package khá khôn:</p>
                 <ul>
-                    <li>so đối thủ ngay ở đầu,</li>
-                    <li>đẩy benchmark agentic coding,</li>
-                    <li>gắn long-context với efficiency,</li>
-                    <li>mở weights,</li>
-                    <li>và cho API/chat dùng ngay ngày đầu.</li>
+                    <li>so đối thủ ngay ở đầu, nhưng không chỉ một đối thủ,</li>
+                    <li>chia benchmark theo nhiều mảng để tự dựng thế trận có lợi,</li>
+                    <li>đánh cả closed frontier lẫn open reasoning rivals,</li>
+                    <li>gắn long-context với efficiency thay vì chỉ khoe cửa sổ ngữ cảnh,</li>
+                    <li>mở weights, và cho API/chat dùng ngay ngày đầu.</li>
                 </ul>
 
                 <div class="highlight-box">
