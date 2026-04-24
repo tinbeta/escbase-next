@@ -1,6 +1,18 @@
 [
   {
-    "url": "/blog/openclaw-2026-4-22-release",
+    "url": "/blog/xai-grok-voice-think-fast-enterprise-voice-agent",
+    "title": "xAI Ra Grok Voice Think Fast 1.0: Đang Bán Voice Agent Cho Workflow Doanh Nghiệp Chứ Không Chỉ Bán Giọng Nói",
+    "excerpt": "xAI vừa ra Grok Voice Think Fast 1.0 và điểm đáng chú ý không chỉ là voice model mới. Họ đang bán một voice agent cho customer support, sales, booking và enterprise workflows với tool calling, read-back dữ liệu, 25+ ngôn ngữ, benchmark τ-voice dẫn đầu và case study Starlink khá nặng ký.",
+    "date": "Apr 24, 2026",
+    "tag": "Voice AI",
+    "tagIcon": "fas fa-microphone-lines",
+    "tagColor": "#38bdf8",
+    "readTime": "9 min read",
+    "featured": true,
+    "image": "/images/xai-grok-voice-think-fast-thumb.png"
+  },
+  {
+    "url": "/blog/openclaw-2026-4-22-release", 
     "title": "OpenClaw 2026.4.22: Grok Image, Tencent Hy3, Local TUI Và Một Bản Mở Rộng Biên Dùng Thật",
     "excerpt": "OpenClaw 2026.4.22 thêm Grok image/voice tools, Tencent Hy3, local embedded TUI, /models add, auto-install plugin và diagnostics export, kèm một khối fix dày cho sessions, Codex, security, channels và runtime. Đây là bản update mở rộng biên dùng thật chứ không chỉ thêm headline mới.",
     "date": "Apr 24, 2026",
