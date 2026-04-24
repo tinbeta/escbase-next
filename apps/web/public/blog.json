@@ -1,6 +1,18 @@
 [
   {
-    "url": "/blog/xai-grok-voice-think-fast-enterprise-voice-agent",
+    "url": "/blog/valsai-deepseek-v4-vibe-code-benchmark",
+    "title": "Vals AI: DeepSeek V4 Là Open-Weight Model Số 1 Trên Vibe Code Bench, Hơn Kimi K2.6 Tới 12 Điểm",
+    "excerpt": "Vals AI vừa đưa DeepSeek V4 lên vị trí #1 open-weight model trên Vibe Code Bench v1.1 với 49.93%, bỏ xa Kimi K2.6 ở vị trí #2 với khoảng cách 12.04 điểm. Điều đáng nói không chỉ là top 1 open model, mà là benchmark này đo khả năng xây web app từ đầu với pipeline đánh giá tự động khá nặng tay.",
+    "date": "Apr 24, 2026",
+    "tag": "AI Coding",
+    "tagIcon": "fas fa-code",
+    "tagColor": "#2563eb",
+    "readTime": "8 min read",
+    "featured": true,
+    "image": "/images/valsai-deepseek-v4-vibe-code-thumb.png"
+  },
+  {
+    "url": "/blog/xai-grok-voice-think-fast-enterprise-voice-agent", 
     "title": "xAI Ra Grok Voice Think Fast 1.0: Đang Bán Voice Agent Cho Workflow Doanh Nghiệp Chứ Không Chỉ Bán Giọng Nói",
     "excerpt": "xAI vừa ra Grok Voice Think Fast 1.0 và điểm đáng chú ý không chỉ là voice model mới. Họ đang bán một voice agent cho customer support, sales, booking và enterprise workflows với tool calling, read-back dữ liệu, 25+ ngôn ngữ, benchmark τ-voice dẫn đầu và case study Starlink khá nặng ký.",
     "date": "Apr 24, 2026",
