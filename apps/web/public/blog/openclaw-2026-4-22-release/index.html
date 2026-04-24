@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw 2026.4.22: Grok Image, Tencent Hy3, Local TUI Và Một Bản Mở Rộng Biên Dùng Thật | Escbase</title>
+    <meta name="description" content="OpenClaw 2026.4.22 thêm Grok image/voice tools, Tencent Hy3, local embedded TUI, /models add, auto-install plugin và diagnostics export, kèm một khối fix dày cho sessions, Codex, security, channels và runtime. Đây là bản update mở rộng biên dùng thật chứ không chỉ thêm headline mới.">
+    <meta property="og:title" content="OpenClaw 2026.4.22: Grok Image, Tencent Hy3, Local TUI Và Một Bản Mở Rộng Biên Dùng Thật">
+    <meta property="og:description" content="Từ model mới và media tools đến local TUI, plugin auto-install và diagnostics export, OpenClaw 2026.4.22 là bản release đẩy cả bề rộng lẫn độ ổn định của hệ agent self-hosted.">
+    <meta property="og:image" content="https://escbase.xyz/images/openclaw-2026-4-22-release-thumb.png">
+    <meta property="og:url" content="https://escbase.xyz/blog/openclaw-2026-4-22-release/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/shared-article-footer.css">
+    <style>
+        :root{--bg:#09090b;--card-bg:#18181b;--border:#27272a;--text:#fafafa;--text-secondary:#a1a1aa;--text-muted:#71717a;--accent:#60a5fa;--accent-purple:#8b5cf6;--accent-green:#22c55e;--accent-red:#ef4444;--accent-yellow:#f59e0b;--radius-md:16px;--radius-lg:24px}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased}.container{max-width:820px;margin:0 auto;padding:2rem 1.5rem}.article-header{margin-bottom:2.5rem}.category-badge{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1rem;background:rgba(96,165,250,.12);border:1px solid rgba(96,165,250,.22);border-radius:100px;font-size:.85rem;font-weight:600;color:#93c5fd;margin-bottom:1.25rem}h1{font-size:2.2rem;font-weight:800;line-height:1.2;margin-bottom:1.25rem;letter-spacing:-.02em}.meta{display:flex;flex-wrap:wrap;gap:1.5rem;color:var(--text-muted);font-size:.9rem}.meta span{display:flex;align-items:center;gap:.5rem}.article-content{font-size:1.1rem;color:var(--text-secondary)}.article-content h2{font-size:1.5rem;font-weight:700;color:var(--text);margin-top:2.5rem;margin-bottom:1rem}.article-content p{margin-bottom:1.25rem}.article-content ul{margin-bottom:1.25rem;padding-left:1.5rem}.article-content li{margin-bottom:.5rem}.highlight-box{background:linear-gradient(135deg,rgba(96,165,250,.12) 0%,rgba(139,92,246,.06) 100%);border:1px solid rgba(96,165,250,.22);border-radius:var(--radius-md);padding:1.5rem;margin:2rem 0}.highlight-box h4{color:#93c5fd;font-size:1.1rem;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}.highlight-box-green{background:linear-gradient(135deg,rgba(34,197,94,.12) 0%,rgba(20,184,166,.05) 100%);border:1px solid rgba(34,197,94,.2);border-radius:var(--radius-md);padding:1.5rem;margin:2rem 0}.highlight-box-green h4{color:#4ade80;font-size:1.1rem;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}.highlight-box-red{background:linear-gradient(135deg,rgba(239,68,68,.10) 0%,rgba(245,158,11,.05) 100%);border:1px solid rgba(239,68,68,.2);border-radius:var(--radius-md);padding:1.5rem;margin:2rem 0}.highlight-box-red h4{color:#f87171;font-size:1.1rem;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}.quote-block{border-left:4px solid var(--accent-yellow);padding:1.25rem 1.5rem;margin:2rem 0;background:rgba(245,158,11,.05);border-radius:0 var(--radius-md) var(--radius-md) 0;font-style:italic;color:var(--text)}.inline-image{width:100%;max-width:680px;max-height:320px;object-fit:cover;display:block;border-radius:18px;border:1px solid rgba(255,255,255,.08);margin:1rem 0 1.5rem}.tags{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}.tag{padding:.5rem 1rem;background:var(--card-bg);border:1px solid var(--border);border-radius:100px;font-size:.85rem;color:var(--text-secondary)}a{color:#93c5fd}@media(max-width:768px){h1{font-size:1.72rem}.container{padding:1.5rem 1rem}.inline-image{max-height:180px;margin:.85rem 0 1.1rem}}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <span class="category-badge"><i class="fas fa-terminal"></i> OpenClaw AI</span>
+                <h1>OpenClaw 2026.4.22: Grok Image, Tencent Hy3, Local TUI Và Một Bản Mở Rộng Biên Dùng Thật</h1>
+                <div class="meta">
+                    <span><i class="far fa-calendar"></i> 24/04/2026</span>
+                    <span><i class="far fa-clock"></i> 10 phút đọc</span>
+                    <span><i class="far fa-folder"></i> OpenClaw, Agents & Tooling</span>
+                </div>
+                <img src="/images/openclaw-2026-4-22-release-thumb.png" alt="OpenClaw 2026.4.22 thumbnail" class="inline-image" style="margin-top:1rem;">
+            </header>
+
+            <div class="article-content">
+                <div class="highlight-box">
+                    <h4>🦞 Tóm tắt nhanh</h4>
+                    <p style="margin-bottom:0">OpenClaw 2026.4.22 thêm <strong>Grok image + voice tools</strong>, <strong>Tencent Hy3</strong>, <strong>local embedded TUI</strong>, lệnh <strong>/models add</strong>, <strong>auto-install plugin</strong> và <strong>diagnostics export</strong>. Nhưng phần đáng tiền hơn nằm ở lớp dưới: session mailbox tốt hơn, Codex/Pi/Codex harness bớt lệch pha, channel/runtime/security được vá dày hơn, và hệ self-hosted nhìn chung đỡ đau đầu hơn khi chạy thật.</p>
+                </div>
+
+                <p>Tweet của <strong>@openclaw</strong> tóm release này bằng mấy bullet rất gọn: Tencent Hy3, Grok image + voice, local TUI, /models add, auto-install plugins, diagnostics export. Nhìn qua thì giống một bản update “nhiều đồ chơi mới”. Nhưng đọc changelog kỹ hơn sẽ thấy đây không phải kiểu thêm feature cho vui.</p>
+
+                <p><strong>OpenClaw 2026.4.22 là bản mở rộng biên dùng thật.</strong> Nó mở rộng theo cả chiều ngang lẫn chiều sâu: nhiều model và media path hơn, UX local đỡ rườm hơn, và lớp hạ tầng production được siết lại để agent ít gãy hơn khi vào việc thật.</p>
+
+                <h2>1. Grok image + voice tools là cách OpenClaw đẩy agent ra khỏi text-only</h2>
+
+                <p>Headline dễ thấy nhất là xAI/Grok. Bản này thêm support cho:</p>
+                <ul>
+                    <li><strong>image generation</strong>,</li>
+                    <li><strong>reference-image edits</strong>,</li>
+                    <li><strong>text-to-speech</strong> với nhiều format như MP3/WAV/PCM/G.711,</li>
+                    <li><strong>speech-to-text</strong>, kể cả realtime transcription cho voice call streaming.</li>
+                </ul>
+
+                <p>Điểm này quan trọng hơn vẻ ngoài của nó. Vì khi một hệ agent như OpenClaw có thể đụng cả <strong>ảnh, giọng nói, audio transcript</strong> trong cùng một runtime, nó bắt đầu rời khỏi vai trò “chat app gọi model” để tiến gần hơn tới một lớp orchestration đa phương thức thật sự.</p>
+
+                <div class="quote-block">
+                    Nếu bản 2026.4.15 mang mùi production boring release, thì 2026.4.22 lại giống kiểu release mở rộng bề mặt làm việc: agent không chỉ chat, mà bắt đầu đụng media, local terminal, onboarding và diagnostics theo cách có thể dùng ngay.
+                </div>
+
+                <h2>2. Tencent Hy3 không chỉ là thêm model mới, mà là thêm một trục lựa chọn mới</h2>
+
+                <p>OpenClaw thêm bundled Tencent Cloud provider plugin với onboarding qua TokenHub, docs, model catalog và pricing metadata cho <strong>Hy3</strong>. Việc này không chỉ là “thêm một model nữa vào list”.</p>
+
+                <p>Nó nói lên hai chuyện:</p>
+                <ul>
+                    <li>OpenClaw tiếp tục mở rộng bề mặt provider theo hướng <strong>đa cực</strong>, không khóa mình quanh vài ông quen như OpenAI/Anthropic/Google.</li>
+                    <li>Dự án đang cố làm chuyện khó hơn: không chỉ gọi được model, mà còn gói luôn <strong>onboarding + catalog + pricing metadata</strong> để model mới có thể bước vào runtime mượt hơn.</li>
+                </ul>
+
+                <p>Nói ngắn: thêm model thì nhiều tool cũng làm được. Nhưng thêm model theo kiểu <strong>dùng được ngay, nhìn thấy giá, setup đỡ đau</strong> mới là thứ đáng tiền với người dùng thật.</p>
+
+                <h2>3. Local embedded TUI + /models add là cú kéo OpenClaw gần terminal hơn</h2>
+
+                <p>Một trong những điểm ngon nhất của bản này là <strong>local embedded TUI mode</strong>: chạy terminal chats ngay tại local mà không cần Gateway, nhưng vẫn giữ approval gates cho plugin/tool. Đây là thay đổi rất hợp với nhóm người dùng thích terminal-native workflow nhưng không muốn mất guardrails.</p>
+
+                <p>Đi cùng với đó là lệnh <strong>/models add &lt;provider&gt; &lt;modelId&gt;</strong>. Cái này nghe nhỏ, nhưng lại chạm đúng chỗ friction cũ: muốn thử model mới thì trước đây dễ phải chạm config hoặc restart. Giờ OpenClaw cho thêm model ngay trong chat, rồi dùng luôn mà không cần reboot Gateway.</p>
+
+                <div class="highlight-box-green">
+                    <h4>✅ Vì sao 2 thay đổi này đáng chú ý</h4>
+                    <ul style="margin-bottom:0">
+                        <li><strong>TUI local embedded:</strong> làm OpenClaw bớt phụ thuộc vào một topology vận hành cố định.</li>
+                        <li><strong>/models add:</strong> giảm ma sát thử nghiệm model mới, nhất là với dân hay đổi provider/model liên tục.</li>
+                        <li><strong>Cả hai cùng nhau:</strong> kéo OpenClaw gần hơn với trải nghiệm “hack nhanh, test nhanh, iterate nhanh” mà không bỏ mặc safety.</li>
+                    </ul>
+                </div>
+
+                <h2>4. Auto-install plugin + diagnostics export là hai món nhìn không sexy nhưng cực thực dụng</h2>
+
+                <p>OpenClaw 2026.4.22 thêm <strong>auto-install missing provider/channel plugins during setup</strong>. Dịch ra tiếng người: lần đầu set up đỡ phải vấp mấy lỗi ngớ ngẩn kiểu config xong mà plugin chưa có, rồi đi mò recovery bằng tay.</p>
+
+                <p>Đi cùng với đó là <strong>diagnostics export</strong> với logs đã sanitize, status, health, config và stability snapshots. Đây là kiểu tính năng khiến người mới ít reo hò, nhưng dân self-hosted sẽ thấy ngay giá trị: khi hệ thống có vấn đề, ít nhất bạn còn có một gói dữ liệu sạch để debug hoặc gửi bug report tử tế.</p>
+
+                <p>Hai món này nói lên một điều rất rõ: OpenClaw không chỉ chăm lo lúc hệ đang chạy đẹp, mà bắt đầu quan tâm hơn tới <strong>vòng đời đầy đủ của vận hành</strong> — từ setup, lỗi, support cho tới recovery.</p>
+
+                <h2>5. Phần changelog dày nhất lại nằm ở stability, sessions, Codex và security</h2>
+
+                <p>Nếu chỉ đọc tweet thì sẽ bỏ lỡ nửa giá trị của release này. Changelog thật có một khối fix rất dày, và nhiều cái đáng tiền hơn mấy headline ngoài mặt.</p>
+
+                <p>Một vài cụm nổi bật:</p>
+                <ul>
+                    <li><strong>Sessions/mailbox:</strong> thêm filter tốt hơn cho <code>sessions_list</code>, giữ maintenance bookkeeping không làm conversation trông giả active, transcript locks chặt hơn.</li>
+                    <li><strong>Codex/Pi/harness:</strong> hàng loạt fix để lifecycle hooks, approvals, transport, thread reuse, tool_result middleware và auth handling bớt lệch nhau giữa các runner.</li>
+                    <li><strong>Security/sandbox/gateway:</strong> siết authenticated access cho Control UI config, chặn vài đường leak bootstrap metadata, harden verified file reads trong sandbox và tăng fail-closed ở nhiều chỗ.</li>
+                    <li><strong>Channels/runtime:</strong> Discord, Telegram, Slack, WhatsApp, Matrix đều được vá thêm những lỗi khó chịu kiểu duplicate send, partial thread metadata, webhook retry hay routing drift.</li>
+                </ul>
+
+                <p>Đây là thứ tạo ra cảm giác rất OpenClaw: một release vừa thêm feature mới, vừa tranh thủ dọn cả đống mảnh vỡ nhỏ mà chỉ những người chạy hệ thật mới thấy đau.</p>
+
+                <h2>6. Điều thú vị là OpenClaw đang nối nhiều runner khác nhau thành một trải nghiệm thống nhất hơn</h2>
+
+                <p>Đọc kỹ changelog sẽ thấy một motif lặp đi lặp lại: <strong>đừng để Pi, Codex harness, embedded runs, ACPX và các plugin drift quá xa nhau</strong>. Rất nhiều fix xoay quanh chuyện đó:</p>
+                <ul>
+                    <li>đồng bộ hooks,</li>
+                    <li>đồng bộ approval path,</li>
+                    <li>đồng bộ tool_result handling,</li>
+                    <li>đồng bộ session behavior,</li>
+                    <li>và giữ GPT-5/Codex overlays nhất quán giữa các runtime.</li>
+                </ul>
+
+                <p>Nghe hơi kỹ thuật, nhưng ý nghĩa rất thực tế: OpenClaw đang cố tránh tình trạng mỗi runner là một thế giới riêng. Nếu làm tốt chuyện này, hệ sẽ bớt “đoán mò” hơn khi người dùng đổi backend hoặc chuyển giữa local, gateway, CLI và ACP.</p>
+
+                <h2>7. Chỗ cần nhìn tỉnh: release này mạnh, nhưng cũng là kiểu release làm hệ phức tạp hơn</h2>
+
+                <p>Càng nhiều provider, media path, TUI mode, plugin automation và runtime bridges, hệ càng mạnh nhưng cũng càng có nhiều bề mặt để lỗi. Điều này không có gì lạ — nó là cái giá của một nền tảng agent đa năng.</p>
+
+                <div class="highlight-box-red">
+                    <h4>⚠️ Điểm cần nhìn tỉnh</h4>
+                    <p style="margin-bottom:0">OpenClaw 2026.4.22 là bản release tốt theo nghĩa mở rộng được rất nhiều thứ cùng lúc. Nhưng đó cũng là lý do người dùng self-hosted nên đọc changelog kỹ trước khi update. Bản này đụng tới provider runtime, sessions, channels, security, Codex/Pi, plugin startup và config reload — tức là nhiều phần nhạy cảm chứ không chỉ vài feature bề mặt.</p>
+                </div>
+
+                <h2>Kết luận</h2>
+
+                <p>OpenClaw 2026.4.22 không phải kiểu release chỉ cần nhìn tweet là xong. Tweet nói đúng phần headline: <strong>Grok image + voice</strong>, <strong>Tencent Hy3</strong>, <strong>local TUI</strong>, <strong>/models add</strong>, <strong>auto-install plugin</strong>, <strong>diagnostics export</strong>. Nhưng phần đáng giá hơn nằm bên dưới: <strong>đây là một bản mở rộng biên dùng thật của OpenClaw</strong>.</p>
+
+                <p>Nó làm hệ đa phương thức hơn, local-friendly hơn, setup đỡ ngu hơn, debug đỡ mù hơn, và runtime bớt lệch pha hơn. Nếu bản 2026.4.15 mang tinh thần boring release cho production, thì 2026.4.22 giống một bản <strong>scale-out release</strong>: thêm nhiều cánh tay hơn cho hệ agent, đồng thời cố không để khung xương gãy theo.</p>
+
+                <p><strong>Source:</strong> <a href="https://x.com/openclaw/status/2047338834648555793" target="_blank" rel="noopener noreferrer">Tweet release OpenClaw 2026.4.22 trên X</a> · <a href="https://github.com/openclaw/openclaw/releases/tag/v2026.4.22" target="_blank" rel="noopener noreferrer">GitHub release notes</a></p>
+
+                <div class="back-to-blog-footer">
+                    <a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+                </div>
+
+                <div class="article-cta-stack">
+                    <a href="/blog/openclaw-2026-4-15-release" class="article-suggestion-card">
+                        <span class="article-suggestion-label"><i class="fas fa-book-open"></i> Đọc tiếp</span>
+                        <span class="article-suggestion-title">OpenClaw 2026.4.15: Opus 4.7, Gemini TTS Bundled Và Một Bản “Boring Release” Đúng Nghĩa Production</span>
+                    </a>
+                    <div class="article-cta-actions">
+                        <a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a>
+                    </div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">#OpenClaw</span>
+                    <span class="tag">#Agents</span>
+                    <span class="tag">#Grok</span>
+                    <span class="tag">#TencentHy3</span>
+                    <span class="tag">#SelfHostedAI</span>
+                    <span class="tag">#AIInfra</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

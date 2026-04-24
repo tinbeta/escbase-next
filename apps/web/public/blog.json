@@ -1,6 +1,18 @@
 [
   {
-    "url": "/blog/deepseek-v4-preview-open-vs-closed",
+    "url": "/blog/openclaw-2026-4-22-release",
+    "title": "OpenClaw 2026.4.22: Grok Image, Tencent Hy3, Local TUI Và Một Bản Mở Rộng Biên Dùng Thật",
+    "excerpt": "OpenClaw 2026.4.22 thêm Grok image/voice tools, Tencent Hy3, local embedded TUI, /models add, auto-install plugin và diagnostics export, kèm một khối fix dày cho sessions, Codex, security, channels và runtime. Đây là bản update mở rộng biên dùng thật chứ không chỉ thêm headline mới.",
+    "date": "Apr 24, 2026",
+    "tag": "OpenClaw",
+    "tagIcon": "fas fa-terminal",
+    "tagColor": "#60a5fa",
+    "readTime": "10 min read",
+    "featured": true,
+    "image": "/images/openclaw-2026-4-22-release-thumb.png"
+  },
+  {
+    "url": "/blog/deepseek-v4-preview-open-vs-closed", 
     "title": "DeepSeek V4 Preview Mở Màn Bằng Cú So Với Gemini 3.1 Pro Và Closed Models",
     "excerpt": "DeepSeek vừa ra DeepSeek-V4 Preview theo đúng kiểu không lòng vòng: tự đặt mình cạnh Gemini 3.1 Pro, tuyên bố vượt mọi open model hiện tại ở nhiều mảng và rival top closed-source models. Điểm đáng chú ý không chỉ là benchmark, mà là cách DeepSeek gói open-source, 1M context, agentic coding và API rollout thành một cú launch có thể kéo người dùng vào thử ngay.",
     "date": "Apr 24, 2026",
