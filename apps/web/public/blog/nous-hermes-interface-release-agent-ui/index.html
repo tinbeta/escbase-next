@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nous Ra Hermes Agent “The Interface Release”: Cuộc Chiến Agent Đang Chuyển Từ Model Sang Giao Diện | Escbase</title>
+    <meta name="description" content="Nous Research vừa ra Hermes Agent v0.11.0 với tên gọi The Interface Release. Điểm đáng chú ý không phải chỉ là thêm model hay provider mới, mà là một tín hiệu sản phẩm rất rõ: khi model dần bị commoditize, lớp interface, orchestration và execution layer mới là nơi agent tạo ra khác biệt thật.">
+    <meta property="og:title" content="Nous Ra Hermes Agent “The Interface Release”: Cuộc Chiến Agent Đang Chuyển Từ Model Sang Giao Diện">
+    <meta property="og:description" content="Hermes Agent v0.11.0 mang tới một đợt nâng cấp rất lớn: TUI viết lại bằng React/Ink, plugin surface nở mạnh, transport layer tách riêng, Bedrock support, GPT-5.5 qua Codex OAuth, Gemini CLI OAuth và dashboard extensibility. Nhưng cái đáng nói hơn là product signal của cái tên 'The Interface Release'.">
+    <meta property="og:image" content="https://escbase.xyz/images/nous-hermes-interface-release-thumb.png">
+    <meta property="og:url" content="https://escbase.xyz/blog/nous-hermes-interface-release-agent-ui/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/shared-article-footer.css">
+    <style>
+        :root{--bg:#09090b;--card-bg:#18181b;--border:#27272a;--text:#fafafa;--text-secondary:#a1a1aa;--text-muted:#71717a;--accent:#a78bfa;--accent-blue:#60a5fa;--accent-red:#f87171;--radius-md:16px}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased}.container{max-width:860px;margin:0 auto;padding:2rem 1.5rem}.article-header{margin-bottom:2.5rem}.category-badge{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1rem;background:rgba(167,139,250,.12);border:1px solid rgba(167,139,250,.22);border-radius:100px;font-size:.85rem;font-weight:600;color:#c4b5fd;margin-bottom:1.25rem}h1{font-size:2.1rem;font-weight:800;line-height:1.2;margin-bottom:1.25rem;letter-spacing:-.02em}.meta{display:flex;flex-wrap:wrap;gap:1.5rem;color:var(--text-muted);font-size:.9rem}.meta span{display:flex;align-items:center;gap:.5rem}.article-content{font-size:1.1rem;color:var(--text-secondary)}.article-content h2{font-size:1.5rem;font-weight:700;color:var(--text);margin-top:2.5rem;margin-bottom:1rem}.article-content p{margin-bottom:1.25rem}.article-content ul{margin-bottom:1.25rem;padding-left:1.5rem}.article-content li{margin-bottom:.5rem}.highlight-box{background:linear-gradient(135deg,rgba(167,139,250,.10) 0%,rgba(96,165,250,.05) 100%);border:1px solid rgba(167,139,250,.22);border-radius:var(--radius-md);padding:1.5rem;margin:2rem 0}.highlight-box h4{color:#c4b5fd;font-size:1.1rem;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}.highlight-box-red{background:linear-gradient(135deg,rgba(248,113,113,.10) 0%,rgba(96,165,250,.04) 100%);border:1px solid rgba(248,113,113,.22);border-radius:var(--radius-md);padding:1.5rem;margin:2rem 0}.highlight-box-red h4{color:#fca5a5;font-size:1.1rem;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}.quote-block{border-left:4px solid var(--accent-blue);padding:1.25rem 1.5rem;margin:2rem 0;background:rgba(96,165,250,.05);border-radius:0 var(--radius-md) var(--radius-md) 0;font-style:italic;color:var(--text)}.inline-image,.inline-video{width:100%;max-width:720px;display:block;border-radius:18px;border:1px solid rgba(255,255,255,.08);margin:1rem 0 1.5rem;background:#000}.image-caption{font-size:.9rem;color:var(--text-muted);margin-top:-.7rem;margin-bottom:1.5rem}.tags{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}.tag{padding:.5rem 1rem;background:var(--card-bg);border:1px solid var(--border);border-radius:100px;font-size:.85rem;color:var(--text-secondary)}a{color:#93c5fd}@media(max-width:768px){h1{font-size:1.72rem}.container{padding:1.5rem 1rem}}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <span class="category-badge"><i class="fas fa-terminal"></i> Agent Tools</span>
+                <h1>Nous Ra Hermes Agent “The Interface Release”: Cuộc Chiến Agent Đang Chuyển Từ Model Sang Giao Diện</h1>
+                <div class="meta">
+                    <span><i class="far fa-calendar"></i> 24/04/2026</span>
+                    <span><i class="far fa-clock"></i> 9 phút đọc</span>
+                    <span><i class="far fa-folder"></i> Nous Research, AI Agents</span>
+                </div>
+                <img src="/images/nous-hermes-interface-release-thumb.png" alt="Nous Hermes interface release thumbnail" class="inline-image" style="margin-top:1rem;">
+            </header>
+
+            <div class="article-content">
+                <div class="highlight-box">
+                    <h4>⚡ Tóm tắt nhanh</h4>
+                    <p style="margin-bottom:0">Nous Research vừa ra <strong>Hermes Agent v0.11.0</strong> với cái tên cực đáng chú ý: <strong>The Interface Release</strong>. Đây không chỉ là một đợt update tính năng lớn với hơn 700 PR merge, TUI viết lại bằng React/Ink, plugin surface mở rộng mạnh, Bedrock support, GPT-5.5 qua Codex OAuth và Gemini CLI OAuth. Cái đáng nói hơn là product signal đằng sau cái tên này: khi model đang dần thành commodity, lớp <strong>interface</strong>, <strong>orchestration</strong> và <strong>execution layer</strong> mới là nơi agent tạo khác biệt thật.</p>
+                </div>
+
+                <p>Phần lớn các tool AI thích khoe model mới, benchmark mới hoặc reasoning mới. Hermes lần này chọn cách khác: đặt tên hẳn bản phát hành là “The Interface Release”. Chỉ riêng cái tên đó đã nói lên một quan điểm sản phẩm rất rõ.</p>
+
+                <p>Nó ngụ ý rằng bottleneck của agent không còn nằm thuần ở raw capability nữa. Vấn đề giờ là: agent có dễ điều khiển không, có nhìn được trạng thái không, có plugin đủ sâu không, có steer được giữa chừng không, có lắp ghép được nhiều provider và workflow thật không.</p>
+
+                <video class="inline-video" controls playsinline preload="metadata" poster="/images/nous-hermes-interface-release/hero.jpg">
+                    <source src="/media/nous-hermes-interface-release/launch.mp4" type="video/mp4">
+                </video>
+                <p class="image-caption">Video launch gốc từ thread của Nous Research. Mình nhúng video thật vào bài thay vì chỉ chụp poster.</p>
+
+                <h2>1. “The Interface Release” là product signal, không chỉ là tên gọi màu mè</h2>
+                <p>Nếu đọc nhanh changelog, bạn sẽ thấy một đống tính năng: TUI mới, transport layer mới, plugin hooks mới, dashboard plugin system, Bedrock, GPT-5.5, Gemini OAuth, QQBot, shell hooks, webhook direct-delivery, smarter delegation. Nhưng nếu chỉ đọc như checklist, bạn sẽ bỏ lỡ phần hay nhất.</p>
+
+                <p>Phần hay nhất là Nous đang nói thẳng: <strong>giao diện cộng tác giữa người và agent</strong> mới là nơi cuộc chơi bắt đầu phân hóa.</p>
+
+                <div class="quote-block">
+                    Năng lực model vẫn quan trọng, nhưng khi model nào cũng ngày càng mạnh, lợi thế thật sẽ chuyển sang lớp điều phối: interface, context surfacing, observability, steerability, hooks và plugin surface.
+                </div>
+
+                <h2>2. Hermes đang dày lên ở đúng lớp execution layer</h2>
+                <p>Release notes của Hermes v0.11.0 khá nặng đô:</p>
+                <ul>
+                    <li>TUI interactive CLI được viết lại bằng <strong>React/Ink</strong>,</li>
+                    <li>transport layer được tách riêng để hỗ trợ provider clean hơn,</li>
+                    <li>native <strong>AWS Bedrock</strong>,</li>
+                    <li>thêm nhiều inference path mới như <strong>Gemini CLI OAuth</strong>, <strong>Vercel AI Gateway</strong>, <strong>NVIDIA NIM</strong>,</li>
+                    <li><strong>GPT-5.5 qua Codex OAuth</strong>,</li>
+                    <li>plugin surface nở mạnh với command registration, tool dispatch, result transform, dashboard tabs,</li>
+                    <li><strong>/steer</strong> để nắn agent giữa chừng,</li>
+                    <li>dashboard có plugin system và live theme switching.</li>
+                </ul>
+
+                <p>Nói gọn: Hermes không chỉ thêm model. Nó đang xây cả tầng thao tác quanh model.</p>
+
+                <img src="/images/nous-hermes-interface-release/release-note.png" alt="Hermes Agent release note image" class="inline-image">
+                <p class="image-caption">Ảnh release note từ thread. Nội dung nhìn nhỏ, nhưng cái tên “The Interface Release” mới là hook quan trọng nhất.</p>
+
+                <h2>3. Điểm đáng tiền nhất không phải GPT-5.5 support, mà là cách Hermes hấp thụ model mới</h2>
+                <p>Nhiều người sẽ nhìn vào dòng “GPT-5.5 over Codex OAuth” rồi nghĩ đây là headline chính. Thật ra không hẳn. GPT-5.5 support là một miếng ngon, nhưng nó không phải linh hồn của release.</p>
+
+                <p>Linh hồn nằm ở việc Hermes đang xây một kiến trúc đủ mở để hấp thụ model mới nhanh và bớt đau hơn: model picker live discovery, transport abstraction, nhiều provider path, auxiliary models UI, plugin hooks và orchestration layer rõ hơn.</p>
+
+                <p>Nói cách khác, Nous không chỉ hỏi “model nào mạnh hơn?”. Họ đang hỏi câu khác hay hơn: <strong>khi model mới xuất hiện, agent của mình hấp thụ và triển khai nó nhanh đến mức nào?</strong></p>
+
+                <h2>4. Đây là lý do “interface” đang trở thành chiến trường thật</h2>
+                <p>Khi ai cũng có thể gọi API của model frontier, phần khó hơn không còn là có model hay không. Phần khó là:</p>
+                <ul>
+                    <li>người dùng thấy được agent đang làm gì không,</li>
+                    <li>can thiệp giữa chừng có mượt không,</li>
+                    <li>tool/plugin có đủ sâu để thành workflow thật không,</li>
+                    <li>giao diện có giúp con người trust hệ thống hơn không,</li>
+                    <li>và nhiều agent có phối hợp với nhau mà không tự phá filesystem không.</li>
+                </ul>
+
+                <p>Hermes v0.11.0 chạm đúng những chỗ đó: observability overlay cho subagent, /steer cho mid-run correction, shell hooks cho lifecycle control, dashboard tabs từ plugin, transport layer riêng cho provider complexity. Đây đều là những thứ nghe không sexy bằng benchmark, nhưng mới là thứ quyết định agent có dùng thật được hay không.</p>
+
+                <div class="highlight-box">
+                    <h4>🧠 Ý chính</h4>
+                    <p style="margin-bottom:0">Nếu các model đang dần bị hàng hóa hóa, thì Hermes đang cố lấy lợi thế ở lớp sản phẩm nằm trên model: interface, pluginability, orchestration và execution ergonomics.</p>
+                </div>
+
+                <h2>5. Hơn 700 PR merge không chỉ là tốc độ ship, mà là tín hiệu về chiến lược</h2>
+                <p>Theo Teknium, đây là “our biggest release yet” với hơn 700 PR merge. Con số đó tự nó chưa nói lên chất lượng, nhưng nó cho thấy một điều: Hermes đang được đẩy như một platform sống, không phải một CLI nhỏ thêm vài command mỗi tuần.</p>
+
+                <p>Khi một agent tool bắt đầu có transport layer riêng, plugin API đủ rộng, dashboard extensibility, nhiều provider path và subagent orchestration nghiêm túc, nó đang từ tool chuyển thành <strong>execution environment</strong>.</p>
+
+                <h2>6. Chỗ cần tỉnh táo: ship nhanh không tự động đồng nghĩa UX tốt</h2>
+                <p>Tất nhiên, gọi tên release là “The Interface Release” không có nghĩa interface đã solved. Ship nhanh quá đôi khi còn làm UX nứt nhiều hơn. Một vài reply trong thread cũng chạm vào chuyện framework choice, model naming confusion hay nhu cầu computer use sâu hơn.</p>
+
+                <div class="highlight-box-red">
+                    <h4>⚠️ Chỗ cần soi tiếp</h4>
+                    <p style="margin-bottom:0">Hermes đang đi đúng hướng nếu mục tiêu là biến agent thành công cụ làm việc thật. Nhưng để thắng dài hạn, họ không chỉ cần nhiều hooks hơn hay nhiều provider hơn. Họ cần biến độ phức tạp đó thành trải nghiệm dễ hiểu, ít ma sát và đủ đáng tin để dùng mỗi ngày.</p>
+                </div>
+
+                <h2>7. Chốt lại</h2>
+                <p>Hermes Agent v0.11.0 đáng chú ý không chỉ vì thêm GPT-5.5, Bedrock hay Gemini OAuth. Nó đáng chú ý vì Nous Research đang phát đi một product thesis rất rõ: <strong>cuộc chiến agent đang chuyển từ model sang interface</strong>.</p>
+
+                <p>Và nói thật, mình nghĩ đây là một thesis đúng. Model mạnh hơn sẽ còn tiếp tục ra đều. Nhưng thứ khiến agent thành sản phẩm thật sẽ nằm ở lớp giữa con người và model: giao diện, điều phối, khả năng quan sát, khả năng steer, khả năng mở rộng qua plugin và cách workflow được đóng gói.</p>
+
+                <div class="highlight-box">
+                    <h4>🎯 Chốt một câu</h4>
+                    <p style="margin-bottom:0"><strong>Hermes không chỉ đang thêm tính năng cho agent. Nó đang cố biến interface của agent thành moat.</strong></p>
+                </div>
+
+                <p><strong>Source:</strong> <a href="https://x.com/NousResearch/status/2047495677651918885" target="_blank" rel="noopener noreferrer">thread của Nous Research</a> và <a href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.4.23" target="_blank" rel="noopener noreferrer">release notes trên GitHub</a>.</p>
+
+                <div class="back-to-blog-footer">
+                    <a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+                </div>
+
+                <div class="article-cta-stack">
+                    <a href="/blog/openai-gpt-5-5-real-work-agents" class="article-suggestion-card">
+                        <span class="article-suggestion-label"><i class="fas fa-book-open"></i> Đọc tiếp</span>
+                        <span class="article-suggestion-title">OpenAI Ra GPT-5.5 Và Đánh Thẳng Vào Claude Opus 4.7, Gemini 3.1 Pro</span>
+                    </a>
+                    <div class="article-cta-actions">
+                        <a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a>
+                    </div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">Nous Research</span>
+                    <span class="tag">Hermes Agent</span>
+                    <span class="tag">Agent UI</span>
+                    <span class="tag">AI Agents</span>
+                    <span class="tag">Developer Tools</span>
+                </div>
+            </div>
+        </article>
+    </div>
+    <script src="/article-footer.js"></script>
+</body>
+</html>

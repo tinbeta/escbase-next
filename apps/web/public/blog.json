@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/nous-hermes-interface-release-agent-ui",
+    "title": "Nous Ra Hermes Agent “The Interface Release”: Cuộc Chiến Agent Đang Chuyển Từ Model Sang Giao Diện",
+    "excerpt": "Nous Research vừa ra Hermes Agent v0.11.0 với tên gọi The Interface Release. Điểm đáng chú ý không phải chỉ là thêm model hay provider mới, mà là một tín hiệu sản phẩm rất rõ: khi model dần bị commoditize, lớp interface, orchestration và execution layer mới là nơi agent tạo ra khác biệt thật.",
+    "date": "Apr 24, 2026",
+    "tag": "Nous Research",
+    "tagIcon": "fas fa-terminal",
+    "tagColor": "#a78bfa",
+    "readTime": "9 min read",
+    "featured": true,
+    "image": "/images/nous-hermes-interface-release-thumb.png"
+  },
+  {
     "url": "/blog/openai-gpt-5-5-real-work-agents",
     "title": "OpenAI Ra GPT-5.5: Đang Biến “Làm Việc Trên Máy Tính” Thành Một Primitive Mới Của Model",
     "excerpt": "OpenAI vừa ra GPT-5.5 với thông điệp rất rõ: model này không chỉ thông minh hơn, mà được tối ưu cho real work và agent workflows. Nó giỏi hơn ở coding, research, computer use, knowledge work và early scientific research, nhưng vẫn giữ latency ngang GPT-5.4. Đây có thể là lúc OpenAI đang biến 'computer work' thành một primitive sản phẩm mới.",
@@ -8,7 +20,7 @@
     "tagIcon": "fas fa-briefcase",
     "tagColor": "#10b981",
     "readTime": "10 min read",
-    "featured": true,
+    "featured": false,
     "image": "/images/openai-gpt-5-5-thumb.png"
   },
   {
