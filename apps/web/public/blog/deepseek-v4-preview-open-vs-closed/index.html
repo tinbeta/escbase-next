@@ -37,7 +37,7 @@
             <div class="article-content">
                 <div class="highlight-box">
                     <h4>⚡ Tóm tắt nhanh</h4>
-                    <p style="margin-bottom:0">DeepSeek ra <strong>V4 Preview</strong> bằng một bộ slide benchmark dày hơn hẳn kiểu launch thông thường. Họ không chỉ nhắc <strong>Gemini 3.1 Pro</strong>, mà còn kéo cả <strong>GPT-5.4 xHigh</strong>, <strong>Claude Opus 4.6 Max</strong>, <strong>K2.6 Thinking</strong> và <strong>GLM-5.1 Thinking</strong> vào các mảng khác nhau như knowledge, coding, agentic tasks, long context và pricing. Thông điệp rất rõ: DeepSeek không còn muốn đóng vai model open “ngon trong tầm giá”, mà muốn được nhìn như một đối thủ nghiêm túc trên nhiều mặt trận cùng lúc.</p>
+                    <p style="margin-bottom:0">DeepSeek ra <strong>V4 Preview</strong> bằng một bộ slide benchmark đủ cụ thể để không thể nói chung chung. Ở slide chính, <strong>DeepSeek-V4-Pro Max</strong> đạt <strong>90.2</strong> trên <strong>Apex Shortlist</strong> và <strong>3206</strong> trên <strong>Codeforces</strong> — tức là vượt cả <strong>Claude Opus 4.6 Max</strong>, <strong>GPT-5.4 xHigh</strong> và <strong>Gemini 3.1 Pro High</strong> ở các mảng này. Ở <strong>SimpleQA Verified</strong>, DeepSeek đạt <strong>57.9</strong>, hơn Claude và GPT nhưng vẫn sau Gemini. Ở <strong>SWE Verified</strong>, DeepSeek đạt <strong>80.6</strong>, tức là đã bám rất sát nhóm frontier models trong agentic coding. Nói cách khác: DeepSeek không còn chỉ bán câu chuyện open-source giá rẻ nữa, mà đang cố chứng minh mình thật sự hơn top model ở một số mảng cụ thể.</p>
                 </div>
 
                 <p>Điểm đáng chú ý nhất của launch này không phải riêng con số 1.6T total params hay chuyện DeepSeek tiếp tục open weights. Phần đáng nói hơn là cách họ dùng từng slide để dựng một narrative đối đầu rất có chủ đích.</p>
@@ -70,20 +70,31 @@
                 <h2>2. Ở knowledge, coding và agentic tasks, DeepSeek đang chọn đánh nhiều hướng cùng lúc</h2>
                 <p>Ở slide benchmark đầu tiên, DeepSeek đem V4-Pro Max so với Claude Opus 4.6 Max, GPT-5.4 xHigh và Gemini 3.1 Pro High trên hai cụm rõ ràng: <strong>Knowledge & Reasoning</strong> và <strong>Agentic Capabilities</strong>.</p>
 
-                <p>Ảnh này cho thấy vài ý rất đáng chú ý:</p>
+                <p>Ảnh này cho thấy vài điểm cực kỳ cụ thể, và đây mới là chỗ nên nhấn:</p>
                 <ul>
-                    <li>Ở <strong>SimpleQA Verified</strong>, DeepSeek vượt Claude và GPT nhưng vẫn đứng sau Gemini.</li>
-                    <li>Ở <strong>Apex Shortlist</strong> và <strong>Codeforces</strong>, DeepSeek nằm trong nhóm dẫn đầu, thậm chí đứng đầu ở vài điểm chính.</li>
-                    <li>Ở <strong>SWE Verified</strong>, DeepSeek bám rất sát nhóm frontier models.</li>
-                    <li>Ở <strong>Terminal Bench 2.0</strong> và <strong>Toolathlon</strong>, DeepSeek vẫn cạnh tranh nhưng chưa đè toàn bộ đối thủ.</li>
+                    <li>Ở <strong>SimpleQA Verified</strong>, DeepSeek đạt <strong>57.9</strong> — hơn <strong>Claude Opus 4.6 Max</strong> và <strong>GPT-5.4 xHigh</strong>, nhưng vẫn thua <strong>Gemini 3.1 Pro High</strong>. Tức là ở mảng world knowledge kiểu factual QA, Gemini vẫn còn nhỉnh hơn.</li>
+                    <li>Ở <strong>Apex Shortlist</strong>, DeepSeek đạt <strong>90.2</strong> và đứng đầu nhóm so sánh. Đây là một trong những điểm đẹp nhất để DeepSeek nói rằng model của họ không chỉ “ổn với open models”, mà còn vượt cả các top model closed ở một benchmark reasoning quan trọng.</li>
+                    <li>Ở <strong>Codeforces</strong>, DeepSeek đạt <strong>3206</strong> rating và cũng đứng đầu slide. Đây là số rất đáng đưa lên đầu bài, vì nó giúp claim “beats all current open models in Math/STEM/Coding” bớt mơ hồ hẳn.</li>
+                    <li>Ở <strong>SWE Verified</strong>, DeepSeek đạt <strong>80.6</strong>. Điểm này không tạo cảm giác hủy diệt toàn bộ đối thủ, nhưng nó cho thấy DeepSeek đã bám rất sát nhóm frontier models ở agentic coding thực chiến.</li>
+                    <li>Ở <strong>Terminal Bench 2.0</strong> và <strong>Toolathlon</strong>, DeepSeek vẫn chưa đè hết nhóm top closed models. Đây là chỗ nên viết tỉnh táo: DeepSeek mạnh thật, nhưng chưa phải top 1 ở mọi mảng agent.</li>
                 </ul>
 
-                <p>Nói cách khác, DeepSeek không thắng đều mọi thứ. Nhưng đó cũng chính là lý do bộ slide này đáng tin hơn kiểu claim một chiều. Nó cho cảm giác DeepSeek đang cố chứng minh mình đã đủ gần nhóm đầu bảng trên nhiều mảng, thay vì chỉ ăn may ở một leaderboard hẹp.</p>
+                <p>Nói ngắn gọn: nếu muốn chọn ra mấy con số để đóng đinh vị thế của V4, thì nên lấy <strong>90.2 ở Apex Shortlist</strong>, <strong>3206 ở Codeforces</strong> và <strong>80.6 ở SWE Verified</strong>. Ba số này cho thấy DeepSeek hơn nhóm top model ở một số mảng reasoning/coding cụ thể, chứ không chỉ nói chung chung kiểu “rivaling”.</p>
 
                 <h2>3. Bảng benchmark rộng hơn mới là chỗ DeepSeek lộ rõ tham vọng</h2>
                 <p>Nếu chỉ đọc caption tweet, rất dễ tưởng DeepSeek chỉ đang đánh vào Gemini và closed models. Nhưng ở bảng benchmark chi tiết hơn, họ kéo thêm <strong>K2.6 Thinking</strong> và <strong>GLM-5.1 Thinking</strong> vào cùng khung. Đây là chi tiết quan trọng, vì nó cho thấy DeepSeek không chỉ muốn thắng trong narrative “open vs closed”, mà còn muốn đè luôn nhóm open/reasoning rivals đang nổi.</p>
 
-                <p>Trong bảng này, DeepSeek-V4-Pro Max thường xuyên nằm top 1 hoặc top 2 ở nhiều benchmark trải dài từ MMLU-Pro, GPQA, LiveCodeBench đến BrowseComp, MCPAtlas và long-context tests. Điều này làm launch mạnh hơn nhiều, vì họ không tự đóng mình trong một storyline duy nhất. Họ đang nói: dù bạn nhìn theo hướng closed frontier, open reasoning, coding hay agentic, V4 vẫn có quyền được nhắc tên.</p>
+                <p>Trong bảng này, DeepSeek-V4-Pro Max thường xuyên nằm top 1 hoặc top 2 ở nhiều benchmark trải dài từ <strong>MMLU-Pro</strong>, <strong>GPQA</strong>, <strong>LiveCodeBench</strong> đến <strong>BrowseComp</strong>, <strong>MCPAtlas</strong> và các bài test long context. Điểm nên nhấn ở đây là DeepSeek không chỉ hơn ở một chỗ: họ cố chứng minh rằng mình có thể thắng hoặc bám top ở cả coding, knowledge lẫn agentic tasks.</p>
+
+                <p>Theo chính bảng slide, các con số nổi bật đáng lấy ra để nói thẳng là:</p>
+                <ul>
+                    <li><strong>LiveCodeBench: 93.5</strong> — một điểm rất mạnh để đẩy narrative coding.</li>
+                    <li><strong>BrowseComp: 83.4</strong> — cho thấy năng lực browse/agent task không chỉ là lời nói suông.</li>
+                    <li><strong>MCPAtlas: 73.6</strong> — đây là chỉ dấu khá ngon nếu muốn nhấn vào khả năng agent/tool ecosystem.</li>
+                    <li><strong>MRCR 1M: 83.5</strong> — giúp củng cố claim 1M context không chỉ là marketing headline.</li>
+                </ul>
+
+                <p>Vì vậy, bài này nên xoáy theo kiểu: <strong>DeepSeek hơn top model ở những điểm nào?</strong> Câu trả lời ngắn là: họ có vài điểm thắng rất rõ ở coding/reasoning như <strong>Codeforces 3206</strong>, <strong>Apex 90.2</strong>, <strong>LiveCodeBench 93.5</strong>; và họ có thêm vài mốc đủ mạnh ở agent/browser/long-context để biến narrative thành một package hoàn chỉnh hơn.</p>
 
                 <h2>4. 1M context chỉ hấp dẫn khi đi kèm efficiency, và DeepSeek biết điều đó</h2>
                 <p>Long context tự nó không còn đủ gây sốc nữa. Người ta nghe 128K, 256K, 1M quá nhiều rồi. DeepSeek hiểu chuyện đó, nên họ không chỉ nói “1M context”, mà nói <strong>cost-effective 1M context</strong> và “world-leading long context with drastically reduced compute & memory costs”.</p>
