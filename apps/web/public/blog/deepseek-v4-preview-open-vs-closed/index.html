@@ -158,7 +158,20 @@
                     <li><strong>V4-Flash</strong>: input miss <strong>$0.14</strong>, output <strong>$0.28</strong>,</li>
                     <li>cả hai đều hỗ trợ <strong>1M context</strong>.</li>
                 </ul>
-                <p>Điều này giúp người dùng nhìn khá rõ bài toán triển khai thực tế: nên chọn Pro hay Flash, và chi phí khác nhau ra sao.</p>
+                <p>Nếu đặt cạnh vài model lớn đang có giá public khá rõ, lợi thế giá của DeepSeek lộ ra rất nhanh:</p>
+                <ul>
+                    <li><strong>Claude Opus 4.7</strong>: <strong>$5 input / $25 output</strong> trên mỗi triệu token.</li>
+                    <li><strong>Claude Sonnet 4.6</strong>: <strong>$3 input / $15 output</strong>.</li>
+                    <li><strong>Gemini 3.1 Pro</strong> ở text: <strong>$0.75 input / $4.50 output</strong> trên mỗi triệu token.</li>
+                </ul>
+                <p>So nhanh:</p>
+                <ul>
+                    <li><strong>DeepSeek V4-Pro</strong> rẻ hơn <strong>Claude Opus 4.7</strong> khá mạnh ở cả hai chiều: <strong>$1.74 vs $5</strong> input và <strong>$3.48 vs $25</strong> output.</li>
+                    <li>So với <strong>Claude Sonnet 4.6</strong>, DeepSeek V4-Pro vẫn rẻ hơn rõ: <strong>$1.74 vs $3</strong> input và <strong>$3.48 vs $15</strong> output.</li>
+                    <li>So với <strong>Gemini 3.1 Pro</strong>, DeepSeek V4-Pro đắt hơn ở input (<strong>$1.74 vs $0.75</strong>) nhưng vẫn rẻ hơn ở output (<strong>$3.48 vs $4.50</strong>).</li>
+                    <li><strong>DeepSeek V4-Flash</strong> thì ở một tầng giá khác hẳn: <strong>$0.14 / $0.28</strong>, tức rẻ hơn rất mạnh so với nhóm frontier model phía trên.</li>
+                </ul>
+                <p>Điều này giúp người dùng nhìn khá rõ bài toán triển khai thực tế: nên chọn Pro hay Flash, và DeepSeek đang cạnh tranh bằng hiệu năng thôi chưa đủ — nó còn cố chen vào bằng một mức giá mềm hơn đáng kể so với Claude, trong khi vẫn giữ output rẻ hơn cả Gemini 3.1 Pro.</p>
 
                 <h2>8. Chỗ cần tỉnh táo</h2>
                 <p>Dĩ nhiên, vẫn cần dè chừng với mọi model benchmark-heavy. Những câu như “trailing only Gemini 3.1 Pro” hay “rivaling top closed-source models” chỉ thực sự đáng giá nếu model giữ được chất lượng trong điều kiện bẩn hơn ngoài đời: context dài thật, tool loops dài, retrieval tệ, prompt không sạch, và workflow nhiều lỗi lặt vặt.</p>
