@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenAI Ra GPT-5.5: Đang Biến “Làm Việc Trên Máy Tính” Thành Một Primitive Mới Của Model | Escbase</title>
-    <meta name="description" content="OpenAI vừa ra GPT-5.5 với thông điệp rất rõ: model này không chỉ thông minh hơn, mà được tối ưu cho real work và agent workflows. Nó giỏi hơn ở coding, research, computer use, knowledge work và early scientific research, nhưng vẫn giữ latency ngang GPT-5.4. Đây có thể là lúc OpenAI đang biến 'computer work' thành một primitive sản phẩm mới.">
-    <meta property="og:title" content="OpenAI Ra GPT-5.5: Đang Biến “Làm Việc Trên Máy Tính” Thành Một Primitive Mới Của Model">
-    <meta property="og:description" content="GPT-5.5 không được định vị như một model chỉ mạnh hơn benchmark. OpenAI đang bán nó như một lớp intelligence cho real work: hiểu goal phức tạp, dùng tool, tự check, kéo task đi đến completion và chạy được trên cả ChatGPT lẫn Codex. Đây là bước đẩy mạnh từ reasoning sang execution.">
+    <title>OpenAI Ra GPT-5.5 Và Đánh Thẳng Vào Claude Opus 4.7, Gemini 3.1 Pro | Escbase</title>
+    <meta name="description" content="OpenAI ra GPT-5.5 không theo kiểu khoe model mới cho vui. Họ quăng thẳng bảng so sánh với Claude Opus 4.7 và Gemini 3.1 Pro để chốt thông điệp: GPT-5.5 là model cho real work, agent workflows và computer use, mạnh hơn nhưng vẫn giữ latency ngang GPT-5.4.">
+    <meta property="og:title" content="OpenAI Ra GPT-5.5 Và Đánh Thẳng Vào Claude Opus 4.7, Gemini 3.1 Pro">
+    <meta property="og:description" content="Benchmark chart trong thread GPT-5.5 không chỉ để minh họa. Nó là đòn định vị rất rõ của OpenAI: so trực diện với Claude Opus 4.7 và Gemini 3.1 Pro ở các bài test mang mùi công việc thật như coding, tool use, browse, OS tasks và frontier math.">
     <meta property="og:image" content="https://escbase.xyz/images/openai-gpt-5-5-thumb.png">
     <meta property="og:url" content="https://escbase.xyz/blog/openai-gpt-5-5-real-work-agents/">
     <meta name="twitter:card" content="summary_large_image">
@@ -25,7 +25,7 @@
         <article>
             <header class="article-header">
                 <span class="category-badge"><i class="fas fa-briefcase"></i> AI Workflows</span>
-                <h1>OpenAI Ra GPT-5.5: Đang Biến “Làm Việc Trên Máy Tính” Thành Một Primitive Mới Của Model</h1>
+                <h1>OpenAI Ra GPT-5.5 Và Đánh Thẳng Vào Claude Opus 4.7, Gemini 3.1 Pro</h1>
                 <div class="meta">
                     <span><i class="far fa-calendar"></i> 24/04/2026</span>
                     <span><i class="far fa-clock"></i> 10 phút đọc</span>
@@ -37,19 +37,21 @@
             <div class="article-content">
                 <div class="highlight-box">
                     <h4>⚡ Tóm tắt nhanh</h4>
-                    <p style="margin-bottom:0">OpenAI vừa ra <strong>GPT-5.5</strong> với framing rất rõ: đây không chỉ là model thông minh hơn, mà là một lớp intelligence cho <strong>real work</strong> và <strong>agent workflows</strong>. GPT-5.5 được quảng bá là giỏi hơn ở coding, research, data analysis, document/spreadsheet generation, computer use và early scientific research, trong khi vẫn giữ per-token latency ngang GPT-5.4. Điểm đáng chú ý không chỉ là benchmark tăng, mà là OpenAI đang biến <strong>computer work</strong> thành một primitive sản phẩm mới.</p>
+                    <p style="margin-bottom:0">OpenAI ra <strong>GPT-5.5</strong> không theo kiểu khoe model mới cho vui. Họ quăng thẳng một bảng so sánh đặt GPT-5.5 cạnh <strong>Claude Opus 4.7</strong> và <strong>Gemini 3.1 Pro</strong>, rồi chốt thông điệp rất rõ: đây là model mạnh nhất của họ cho <strong>real work</strong>, <strong>agent workflows</strong> và <strong>computer use</strong>. Cú khó chịu nhất nằm ở chỗ OpenAI không chỉ khoe điểm cao hơn trên các benchmark mang mùi công việc thật, mà còn nói GPT-5.5 giữ latency ngang GPT-5.4.</p>
                 </div>
 
-                <p>Tweet launch của OpenAI không nói “smartest model ever” theo kiểu cũ rồi thôi. Họ chọn một câu khác đáng để ý hơn nhiều: GPT-5.5 là “a new class of intelligence for real work and powering agents”.</p>
+                <p>Nếu nhìn vào ảnh benchmark OpenAI tự chọn để tung ra đầu tiên, thông điệp gần như không cần giải thích: GPT-5.5 không chỉ muốn hơn GPT-5.4, mà còn muốn đóng đinh vị thế trước Claude Opus 4.7 và Gemini 3.1 Pro trong cuộc đua AI cho công việc thật.</p>
 
-                <p>Đây là cách định vị rất có chủ ý. OpenAI không muốn bạn nhìn GPT-5.5 như một model trả lời hay hơn vài câu hỏi benchmark. Họ muốn bạn nhìn nó như một hệ thực thi công việc trên máy tính: hiểu goal phức tạp, dùng tool, tự check, đi xuyên qua ambiguity và kéo task đến completion.</p>
+                <p>Đó là chi tiết đáng chú ý nhất của cả launch này. OpenAI không né đối thủ, không so mơ hồ, mà đặt tên thẳng các model cạnh tranh ngay trong chart rồi kéo cuộc chơi về những bài test nghe rất “đi làm”: coding, browse, tool use, OS tasks, frontier math, cyber. Nói cách khác, họ không bán GPT-5.5 như model trả lời hay hơn vài câu hỏi benchmark. Họ bán nó như một hệ thực thi công việc trên máy tính.</p>
 
                 <video class="inline-video" controls playsinline preload="metadata" poster="/images/openai-gpt-5-5/hero.jpg">
                     <source src="/media/openai-gpt-5-5/launch.mp4" type="video/mp4">
                 </video>
                 <p class="image-caption">Video launch gốc từ tweet của OpenAI. Mình nhúng thẳng video thật vào bài.</p>
 
-                <h2>1. OpenAI đang bán GPT-5.5 như một execution model</h2>
+                <h2>1. OpenAI đang biến benchmark chart thành chiến thư gửi Opus và Gemini</h2>
+                <p>Chart trong thread không phải ảnh minh họa cho có. Nó là đòn định vị rất có chủ đích. Khi OpenAI đem GPT-5.5 đặt cạnh Claude Opus 4.7 và Gemini 3.1 Pro ở các bài test như Terminal-Bench 2.0, GDPval, OSWorld-Verified, BrowseComp, FrontierMath và CyberGym, họ đang nói một câu rất rõ: nếu cuộc đua tiếp theo là AI làm việc thật trên máy tính, GPT-5.5 mới là con họ muốn ngồi ghế đầu.</p>
+
                 <p>Theo thread và trang giới thiệu, GPT-5.5 mạnh ở một nhóm việc rất cụ thể:</p>
                 <ul>
                     <li>viết và debug code,</li>
