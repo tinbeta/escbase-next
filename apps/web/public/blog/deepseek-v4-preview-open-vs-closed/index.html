@@ -86,6 +86,9 @@
 
                 <p>Trong bảng này, DeepSeek-V4-Pro Max thường xuyên nằm top 1 hoặc top 2 ở nhiều benchmark trải dài từ <strong>MMLU-Pro</strong>, <strong>GPQA</strong>, <strong>LiveCodeBench</strong> đến <strong>BrowseComp</strong>, <strong>MCPAtlas</strong> và các bài test long context. Điểm nên nhấn ở đây là DeepSeek không chỉ hơn ở một chỗ: họ cố chứng minh rằng mình có thể thắng hoặc bám top ở cả coding, knowledge lẫn agentic tasks.</p>
 
+                <img src="/images/deepseek-v4-preview/flash.jpg" alt="DeepSeek V4 benchmark table slide" class="inline-image">
+                <p class="image-caption">Đây mới là bảng benchmark rộng: DeepSeek kéo thêm K2.6 Thinking, GLM-5.1 Thinking, Claude Opus 4.6 Max, GPT-5.4 xHigh và Gemini 3.1 Pro High vào cùng một mặt bàn để so từng mảng.</p>
+
                 <p>Theo chính bảng slide, các con số nổi bật đáng lấy ra để nói thẳng là:</p>
                 <ul>
                     <li><strong>LiveCodeBench: 93.5</strong> — một điểm rất mạnh để đẩy narrative coding.</li>
@@ -100,7 +103,7 @@
                 <p>Long context tự nó không còn đủ gây sốc nữa. Người ta nghe 128K, 256K, 1M quá nhiều rồi. DeepSeek hiểu chuyện đó, nên họ không chỉ nói “1M context”, mà nói <strong>cost-effective 1M context</strong> và “world-leading long context with drastically reduced compute & memory costs”.</p>
 
                 <img src="/images/deepseek-v4-preview/context.jpg" alt="DeepSeek long context efficiency slide" class="inline-image">
-                <p class="image-caption">DeepSeek nhấn mạnh 1M context như một tiêu chuẩn mặc định trên toàn bộ official services, đi kèm narrative về efficiency chứ không chỉ capacity.</p>
+                <p class="image-caption">Slide này nói về efficiency thật sự: FLOPs theo token position và KV cache theo sequence length. Ý chính là V4-Pro và nhất là V4-Flash rẻ hơn rõ rệt khi chạy context dài, chứ không chỉ đơn giản là có cửa sổ 1M.</p>
 
                 <p>Theo thread, phần này đến từ hai ý chính:</p>
                 <ul>
@@ -127,17 +130,14 @@
                 <p>Nói gọn: DeepSeek đang cố nhảy từ sân benchmark sang sân làm việc thật.</p>
 
                 <h2>6. V4-Flash mới là phần có thể làm thị trường khó chịu</h2>
-                <p>V4-Pro là flagship để lấy uy tín. Nhưng V4-Flash mới là con dễ làm đối thủ đau đầu hơn về mặt sản phẩm. Theo DeepSeek, V4-Flash:</p>
+                <p>V4-Pro là flagship để lấy uy tín. Nhưng V4-Flash mới là con dễ làm đối thủ đau đầu hơn về mặt sản phẩm. Từ các slide của DeepSeek, ý chính về Flash không phải là “đứng đầu mọi benchmark”, mà là:</p>
                 <ul>
-                    <li>reasoning gần với V4-Pro,</li>
-                    <li>simple agent tasks ngang ngửa V4-Pro,</li>
-                    <li>nhỏ hơn, nhanh hơn, rẻ hơn rõ rệt.</li>
+                    <li>giữ được một phần đáng kể chất lượng của dòng V4,</li>
+                    <li>đủ mạnh cho các task nhanh và một phần agent workflow,</li>
+                    <li>và quan trọng nhất là có profile <strong>chi phí/độ trễ</strong> hấp dẫn hơn nhiều.</li>
                 </ul>
 
-                <img src="/images/deepseek-v4-preview/flash.jpg" alt="DeepSeek V4 Flash slide" class="inline-image">
-                <p class="image-caption">Nếu V4-Pro dùng để tuyên bố vị thế, thì V4-Flash là quân bài để đánh vào adoption thực tế.</p>
-
-                <p>Đây là chỗ thú vị: rất nhiều lần thị trường bị hút bởi flagship, nhưng adoption thật lại chạy theo model “đủ giỏi nhưng rẻ và nhanh”. Nếu V4-Flash giữ được chất lượng gần Pro ở các task đơn giản và agent tasks nhẹ, thì nó có thể trở thành cái tên cực khó chịu trong tầng ứng dụng.</p>
+                <p>Đây mới là chỗ đáng sợ về mặt sản phẩm: rất nhiều lần thị trường bị hút bởi flagship, nhưng adoption thật lại chạy theo model “đủ giỏi nhưng rẻ và nhanh”. Nếu V4-Flash giữ được chất lượng đủ gần Pro ở các task phổ biến, thì nó có thể trở thành cái tên cực khó chịu trong tầng ứng dụng — không phải vì thắng tuyệt đối benchmark, mà vì tỷ lệ <strong>giá / tốc độ / chất lượng</strong> quá ổn.</p>
 
                 <h2>7. Day-0 usability cũng được DeepSeek làm khá bài bản</h2>
                 <p>Một điểm mình đánh giá cao ở launch này là DeepSeek không để model nằm chơ vơ trên paper hoặc leaderboard. Họ bung cùng lúc:</p>
@@ -150,9 +150,15 @@
                 </ul>
 
                 <img src="/images/deepseek-v4-preview/api.jpg" alt="DeepSeek API slide" class="inline-image">
-                <p class="image-caption">DeepSeek chốt luôn deployment path: giữ base_url, chỉ đổi model. Kiểu ra mắt này rất thân thiện với team muốn test workflow ngay ngày đầu.</p>
+                <p class="image-caption">Đây là slide pricing/API, không phải benchmark: DeepSeek chốt luôn giá Pro vs Flash, context 1M và deployment path kiểu giữ base_url, chỉ đổi model.</p>
 
-                <p>Đây là phần quan trọng vì rất nhiều model launch nghe hay nhưng chưa dùng được ngay. DeepSeek lần này cố thu hẹp ma sát day-0 khá tốt.</p>
+                <p>Đây là phần quan trọng vì rất nhiều model launch nghe hay nhưng chưa dùng được ngay. DeepSeek lần này cố thu hẹp ma sát day-0 khá tốt, đồng thời nói rất thẳng bài toán thương mại:</p>
+                <ul>
+                    <li><strong>V4-Pro</strong>: input miss <strong>$1.74</strong>, output <strong>$3.48</strong>,</li>
+                    <li><strong>V4-Flash</strong>: input miss <strong>$0.14</strong>, output <strong>$0.28</strong>,</li>
+                    <li>cả hai đều hỗ trợ <strong>1M context</strong>.</li>
+                </ul>
+                <p>Tức là slide này nên được đọc như một cú chốt adoption: không chỉ “model mạnh”, mà còn cho team một lý do rất thực dụng để thử ngay xem bài toán của mình hợp Pro hay Flash.</p>
 
                 <h2>8. Chỗ cần tỉnh táo</h2>
                 <p>Dĩ nhiên, vẫn cần dè chừng với mọi launch benchmark-heavy. Những câu như “trailing only Gemini 3.1 Pro” hay “rivaling top closed-source models” nghe đã tai, nhưng chỉ thực sự đáng giá nếu model giữ được chất lượng trong điều kiện bẩn hơn ngoài đời: context dài thật, tool loops dài, retrieval tệ, prompt không sạch, và workflow nhiều lỗi lặt vặt.</p>
