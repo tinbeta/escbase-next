@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepSeek V4 Preview Mở Màn Bằng Cú So Với Gemini 3.1 Pro Và Closed Models | Escbase</title>
+    <meta name="description" content="DeepSeek vừa ra DeepSeek-V4 Preview theo đúng kiểu không lòng vòng: tự đặt mình cạnh Gemini 3.1 Pro, tuyên bố vượt mọi open model hiện tại ở nhiều mảng và rival top closed-source models. Điểm đáng chú ý không chỉ là benchmark, mà là cách DeepSeek gói open-source, 1M context, agentic coding và API rollout thành một cú launch có thể kéo người dùng vào thử ngay.">
+    <meta property="og:title" content="DeepSeek V4 Preview Mở Màn Bằng Cú So Với Gemini 3.1 Pro Và Closed Models">
+    <meta property="og:description" content="DeepSeek-V4-Pro và V4-Flash được giới thiệu với 1M context, agentic coding mạnh hơn, long-context efficiency tốt hơn và API sẵn ngay ngày đầu. Nhưng phần hấp dẫn nhất của launch là DeepSeek chủ động đặt mình cạnh các đối thủ mạnh nhất ngay từ thread đầu tiên.">
+    <meta property="og:image" content="https://escbase.xyz/images/deepseek-v4-preview-thumb.png">
+    <meta property="og:url" content="https://escbase.xyz/blog/deepseek-v4-preview-open-vs-closed/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/shared-article-footer.css">
+    <style>
+        :root{--bg:#09090b;--card-bg:#18181b;--border:#27272a;--text:#fafafa;--text-secondary:#a1a1aa;--text-muted:#71717a;--accent:#2563eb;--accent-blue:#60a5fa;--accent-red:#f87171;--radius-md:16px}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased}.container{max-width:860px;margin:0 auto;padding:2rem 1.5rem}.article-header{margin-bottom:2.5rem}.category-badge{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1rem;background:rgba(37,99,235,.12);border:1px solid rgba(37,99,235,.22);border-radius:100px;font-size:.85rem;font-weight:600;color:#93c5fd;margin-bottom:1.25rem}h1{font-size:2.1rem;font-weight:800;line-height:1.2;margin-bottom:1.25rem;letter-spacing:-.02em}.meta{display:flex;flex-wrap:wrap;gap:1.5rem;color:var(--text-muted);font-size:.9rem}.meta span{display:flex;align-items:center;gap:.5rem}.article-content{font-size:1.1rem;color:var(--text-secondary)}.article-content h2{font-size:1.5rem;font-weight:700;color:var(--text);margin-top:2.5rem;margin-bottom:1rem}.article-content p{margin-bottom:1.25rem}.article-content ul{margin-bottom:1.25rem;padding-left:1.5rem}.article-content li{margin-bottom:.5rem}.highlight-box{background:linear-gradient(135deg,rgba(37,99,235,.10) 0%,rgba(96,165,250,.05) 100%);border:1px solid rgba(37,99,235,.22);border-radius:var(--radius-md);padding:1.5rem;margin:2rem 0}.highlight-box h4{color:#93c5fd;font-size:1.1rem;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}.highlight-box-red{background:linear-gradient(135deg,rgba(248,113,113,.10) 0%,rgba(96,165,250,.04) 100%);border:1px solid rgba(248,113,113,.22);border-radius:var(--radius-md);padding:1.5rem;margin:2rem 0}.highlight-box-red h4{color:#fca5a5;font-size:1.1rem;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}.quote-block{border-left:4px solid var(--accent-blue);padding:1.25rem 1.5rem;margin:2rem 0;background:rgba(96,165,250,.05);border-radius:0 var(--radius-md) var(--radius-md) 0;font-style:italic;color:var(--text)}.inline-image,.inline-video{width:100%;max-width:720px;display:block;border-radius:18px;border:1px solid rgba(255,255,255,.08);margin:1rem 0 1.5rem;background:#000}.image-caption{font-size:.9rem;color:var(--text-muted);margin-top:-.7rem;margin-bottom:1.5rem}.tags{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}.tag{padding:.5rem 1rem;background:var(--card-bg);border:1px solid var(--border);border-radius:100px;font-size:.85rem;color:var(--text-secondary)}a{color:#93c5fd}@media(max-width:768px){h1{font-size:1.72rem}.container{padding:1.5rem 1rem}}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <span class="category-badge"><i class="fas fa-brain"></i> Open Models</span>
+                <h1>DeepSeek V4 Preview Mở Màn Bằng Cú So Với Gemini 3.1 Pro Và Closed Models</h1>
+                <div class="meta">
+                    <span><i class="far fa-calendar"></i> 24/04/2026</span>
+                    <span><i class="far fa-clock"></i> 10 phút đọc</span>
+                    <span><i class="far fa-folder"></i> DeepSeek, Open Models</span>
+                </div>
+                <img src="/images/deepseek-v4-preview-thumb.png" alt="DeepSeek V4 Preview thumbnail" class="inline-image" style="margin-top:1rem;">
+            </header>
+
+            <div class="article-content">
+                <div class="highlight-box">
+                    <h4>⚡ Tóm tắt nhanh</h4>
+                    <p style="margin-bottom:0">DeepSeek ra <strong>V4 Preview</strong> theo đúng kiểu không lòng vòng: vừa mở source, vừa đẩy <strong>1M context</strong>, vừa tự đặt mình cạnh <strong>Gemini 3.1 Pro</strong> và nhóm <strong>top closed-source models</strong> ngay trong thread launch. Thông điệp rất rõ: DeepSeek-V4-Pro muốn được nhìn như model open mạnh nhất hiện tại cho reasoning, world knowledge và agentic coding; còn V4-Flash muốn phá định nghĩa “budget model” bằng cách giữ hiệu năng gần Pro nhưng rẻ và nhanh hơn nhiều.</p>
+                </div>
+
+                <p>Điểm đáng chú ý nhất của launch này không phải là con số 1.6T total params hay việc DeepSeek lại open weights. Phần hấp dẫn nhất là cách họ mở bài bằng đối thủ.</p>
+
+                <p>Ngay trong thread, DeepSeek nói V4-Pro “trailing only Gemini-3.1-Pro” ở rich world knowledge, “beats all current open models” ở Math/STEM/Coding và có hiệu năng “rivaling the world's top closed-source models”. Đây không phải kiểu khoe khéo. Đây là cách định vị rất có chủ ý: <strong>DeepSeek muốn bước ra khỏi vai open alternative giá rẻ để đòi ngồi chung bàn với frontier closed models.</strong></p>
+
+                <img src="/images/deepseek-v4-preview/benchmark-pro.png" alt="DeepSeek V4 Pro benchmark slide" class="inline-image">
+                <p class="image-caption">Slide benchmark từ thread. Cái hay là DeepSeek không né đối thủ — họ kéo thẳng Gemini 3.1 Pro và nhóm closed models vào narrative ngay từ đầu.</p>
+
+                <h2>1. So với đối thủ ngay ở đầu: đây là launch để giành vị thế, không chỉ để thông báo model mới</h2>
+                <p>Nếu nhiều lab thích nói chung chung kiểu “state-of-the-art” hoặc “best in class”, DeepSeek lần này nói cụ thể hơn nhiều. V4-Pro được mô tả như:</p>
+                <ul>
+                    <li>open-source SOTA trong <strong>agentic coding benchmarks</strong>,</li>
+                    <li>dẫn đầu các model open hiện tại về <strong>world knowledge</strong>, chỉ sau <strong>Gemini 3.1 Pro</strong>,</li>
+                    <li>mạnh nhất trong nhóm open models ở <strong>Math/STEM/Coding</strong>,</li>
+                    <li>và đủ mạnh để “rival” nhóm model closed hàng đầu.</li>
+                </ul>
+
+                <p>Nói thẳng: DeepSeek không còn muốn được khen là “ngon trong tầm giá”. Họ đang đòi được nhìn như một đối thủ thật trong nhóm đầu bảng.</p>
+
+                <div class="quote-block">
+                    Khi một model open bắt đầu tự so mình với Gemini 3.1 Pro và closed frontier models ngay câu mở màn, thứ họ bán không chỉ là chi phí thấp hơn. Họ đang bán vị thế.
+                </div>
+
+                <h2>2. 1M context chỉ hấp dẫn khi đi kèm efficiency, và DeepSeek biết điều đó</h2>
+                <p>Long context tự nó không còn đủ gây sốc nữa. Người ta nghe 128K, 256K, 1M quá nhiều rồi. DeepSeek hiểu chuyện đó, nên họ không chỉ nói “1M context”, mà nói <strong>cost-effective 1M context</strong> và “world-leading long context with drastically reduced compute & memory costs”.</p>
+
+                <img src="/images/deepseek-v4-preview/context.jpg" alt="DeepSeek long context efficiency slide" class="inline-image">
+                <p class="image-caption">DeepSeek nhấn mạnh 1M context như một tiêu chuẩn mặc định trên toàn bộ official services, đi kèm narrative về efficiency chứ không chỉ capacity.</p>
+
+                <p>Theo thread, phần này đến từ hai ý chính:</p>
+                <ul>
+                    <li><strong>token-wise compression</strong>,</li>
+                    <li>và <strong>DSA (DeepSeek Sparse Attention)</strong>.</li>
+                </ul>
+
+                <p>Đó là framing khá khôn. Nếu chỉ kéo context window lên mà cost và memory usage phình quá mạnh, model rất dễ thành đồ trưng bày. DeepSeek đang cố nói rằng V4 không chỉ “dài hơn”, mà còn “dùng được hơn” trong các workflow thật như code, agent loops và document-heavy tasks.</p>
+
+                <h2>3. Agentic coding mới là thứ DeepSeek muốn lấy làm bàn đạp</h2>
+                <p>Trong thread, DeepSeek nhấn khá mạnh vào agent capabilities. Họ nói V4 đã được tối ưu riêng cho agent use cases, tích hợp với các agent tools lớn như <strong>Claude Code, OpenClaw và OpenCode</strong>, đồng thời dùng chính nó cho in-house agentic coding.</p>
+
+                <img src="/images/deepseek-v4-preview/agent-pdf.jpg" alt="DeepSeek agent capabilities slide" class="inline-image">
+                <p class="image-caption">DeepSeek không chỉ bán model chat. Họ đang gói nó như engine cho agentic coding và workflow dài hơi.</p>
+
+                <p>Đây là điểm đáng để ý hơn nhiều so với mấy câu khoe parameter size. Vì nếu một model open thực sự đủ tốt cho agentic coding, thì nó có thể chen vào nhóm use case mang giá trị rất cao:</p>
+                <ul>
+                    <li>coding agents,</li>
+                    <li>multi-step tool use,</li>
+                    <li>PDF/report generation,</li>
+                    <li>workflow tự động hóa dài hơn chat thông thường.</li>
+                </ul>
+
+                <p>Nói gọn: DeepSeek đang cố nhảy từ sân benchmark sang sân làm việc thật.</p>
+
+                <h2>4. V4-Flash mới là phần có thể làm thị trường khó chịu</h2>
+                <p>V4-Pro là flagship để lấy uy tín. Nhưng V4-Flash mới là con dễ làm đối thủ đau đầu hơn về mặt sản phẩm. Theo DeepSeek, V4-Flash:</p>
+                <ul>
+                    <li>reasoning gần với V4-Pro,</li>
+                    <li>simple agent tasks ngang ngửa V4-Pro,</li>
+                    <li>nhỏ hơn, nhanh hơn, rẻ hơn rõ rệt.</li>
+                </ul>
+
+                <img src="/images/deepseek-v4-preview/flash.jpg" alt="DeepSeek V4 Flash slide" class="inline-image">
+                <p class="image-caption">Nếu V4-Pro dùng để tuyên bố vị thế, thì V4-Flash là quân bài để đánh vào adoption thực tế.</p>
+
+                <p>Đây là chỗ thú vị: rất nhiều lần thị trường bị hút bởi flagship, nhưng adoption thật lại chạy theo model “đủ giỏi nhưng rẻ và nhanh”. Nếu V4-Flash giữ được chất lượng gần Pro ở các task đơn giản và agent tasks nhẹ, thì nó có thể trở thành cái tên cực khó chịu trong tầng ứng dụng.</p>
+
+                <h2>5. Day-0 usability cũng được DeepSeek làm khá bài bản</h2>
+                <p>Một điểm mình đánh giá cao ở launch này là DeepSeek không để model nằm chơ vơ trên paper hoặc leaderboard. Họ bung cùng lúc:</p>
+                <ul>
+                    <li><strong>chat.deepseek.com</strong> với Expert Mode / Instant Mode,</li>
+                    <li><strong>API update ngay trong ngày</strong>,</li>
+                    <li>hỗ trợ cả <strong>OpenAI ChatCompletions</strong> lẫn <strong>Anthropic APIs</strong>,</li>
+                    <li>thinking / non-thinking modes,</li>
+                    <li>và roadmap retire các model cũ để ép migration sang V4.</li>
+                </ul>
+
+                <img src="/images/deepseek-v4-preview/api.jpg" alt="DeepSeek API slide" class="inline-image">
+                <p class="image-caption">DeepSeek chốt luôn deployment path: giữ base_url, chỉ đổi model. Kiểu ra mắt này rất thân thiện với team muốn test workflow ngay ngày đầu.</p>
+
+                <p>Đây là phần quan trọng vì rất nhiều model launch nghe hay nhưng chưa dùng được ngay. DeepSeek lần này cố thu hẹp ma sát day-0 khá tốt.</p>
+
+                <h2>6. Chỗ cần tỉnh táo</h2>
+                <p>Dĩ nhiên, vẫn cần dè chừng với mọi launch benchmark-heavy. Những câu như “trailing only Gemini 3.1 Pro” hay “rivaling top closed-source models” nghe đã tai, nhưng chỉ thực sự đáng giá nếu model giữ được chất lượng trong điều kiện bẩn hơn ngoài đời: context dài thật, tool loops dài, retrieval tệ, prompt không sạch, và workflow nhiều lỗi lặt vặt.</p>
+
+                <div class="highlight-box-red">
+                    <h4>⚠️ Điều nên soi tiếp</h4>
+                    <p style="margin-bottom:0">1M context không tự động đồng nghĩa output tốt hơn. Agentic coding benchmark cao cũng chưa chắc translate hoàn hảo sang mọi workflow thực tế. Điểm đáng theo dõi tiếp là context degradation, độ ổn định trong loops dài, và chất lượng tool use khi đụng dữ liệu xấu.</p>
+                </div>
+
+                <h2>7. Chốt lại</h2>
+                <p>DeepSeek V4 Preview đáng chú ý không chỉ vì open-source hay 1M context. Nó đáng chú ý vì DeepSeek đang đổi cách tự định vị: không còn đóng vai “lựa chọn open rẻ hơn”, mà đang cố chen thẳng vào cuộc chơi giữa các model mạnh nhất.</p>
+
+                <p>Và họ làm điều đó bằng một package khá khôn:</p>
+                <ul>
+                    <li>so đối thủ ngay ở đầu,</li>
+                    <li>đẩy benchmark agentic coding,</li>
+                    <li>gắn long-context với efficiency,</li>
+                    <li>mở weights,</li>
+                    <li>và cho API/chat dùng ngay ngày đầu.</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <h4>🎯 Chốt một câu</h4>
+                    <p style="margin-bottom:0"><strong>DeepSeek V4 Preview không chỉ là một model open mới. Nó là cú tuyên bố rằng open models giờ không muốn đứng ngoài bàn nữa — chúng muốn ngồi thẳng vào mâm của Gemini và nhóm frontier closed-source.</strong></p>
+                </div>
+
+                <p><strong>Source:</strong> <a href="https://x.com/deepseek_ai/status/2047516922263285776" target="_blank" rel="noopener noreferrer">thread của DeepSeek</a>, <a href="https://huggingface.co/collections/deepseek-ai/deepseek-v4" target="_blank" rel="noopener noreferrer">trang weights trên Hugging Face</a>, và <a href="https://api-docs.deepseek.com/guides/thinking_mode" target="_blank" rel="noopener noreferrer">docs DeepSeek API</a>.</p>
+
+                <div class="back-to-blog-footer">
+                    <a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+                </div>
+
+                <div class="article-cta-stack">
+                    <a href="/blog/openai-gpt-5-5-real-work-agents" class="article-suggestion-card">
+                        <span class="article-suggestion-label"><i class="fas fa-book-open"></i> Đọc tiếp</span>
+                        <span class="article-suggestion-title">OpenAI Ra GPT-5.5 Và Đánh Thẳng Vào Claude Opus 4.7, Gemini 3.1 Pro</span>
+                    </a>
+                    <div class="article-cta-actions">
+                        <a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a>
+                    </div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">DeepSeek</span>
+                    <span class="tag">DeepSeek V4</span>
+                    <span class="tag">Open Models</span>
+                    <span class="tag">Agentic Coding</span>
+                    <span class="tag">Long Context</span>
+                </div>
+            </div>
+        </article>
+    </div>
+    <script src="/article-footer.js"></script>
+</body>
+</html>
