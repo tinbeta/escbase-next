@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/openai-gpt-5-5-real-work-agents",
+    "title": "OpenAI Ra GPT-5.5: Đang Biến “Làm Việc Trên Máy Tính” Thành Một Primitive Mới Của Model",
+    "excerpt": "OpenAI vừa ra GPT-5.5 với thông điệp rất rõ: model này không chỉ thông minh hơn, mà được tối ưu cho real work và agent workflows. Nó giỏi hơn ở coding, research, computer use, knowledge work và early scientific research, nhưng vẫn giữ latency ngang GPT-5.4. Đây có thể là lúc OpenAI đang biến 'computer work' thành một primitive sản phẩm mới.",
+    "date": "Apr 24, 2026",
+    "tag": "OpenAI",
+    "tagIcon": "fas fa-briefcase",
+    "tagColor": "#10b981",
+    "readTime": "10 min read",
+    "featured": true,
+    "image": "/images/openai-gpt-5-5-thumb.png"
+  },
+  {
     "url": "/blog/google-deep-research-max-gemini-api",
     "title": "Google Đưa Deep Research Và Deep Research Max Lên Gemini API: Khi “Nghiên Cứu” Bắt Đầu Trông Giống Một Job Nền Hơn Là Một Prompt",
     "excerpt": "Google vừa đưa Deep Research và Deep Research Max lên Gemini API với Gemini 3.1 Pro, hỗ trợ MCP, chart/infographic native, collaborative planning, streaming và grounding từ cả web lẫn file riêng. Điểm đáng chú ý không chỉ là nghiên cứu sâu hơn, mà là Google đang biến research agent thành một hạ tầng workflow thực thụ.",
