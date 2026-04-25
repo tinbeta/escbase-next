@@ -24,6 +24,15 @@ const reportPages = existsSync(reportsDir)
       .map((d) => ({ loc: `/reports/${d.name}`, priority: '0.6' }))
   : [];
 
+function escapeXml(str) {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+}
+
 function toISODate(dateStr) {
   if (!dateStr) return new Date().toISOString().split('T')[0];
   try {
@@ -36,11 +45,11 @@ function toISODate(dateStr) {
 const urls = [
   ...[...staticPages, ...reportPages].map(
     (p) =>
-      `  <url>\n    <loc>${SITE}${p.loc}</loc>${p.changefreq ? `\n    <changefreq>${p.changefreq}</changefreq>` : ''}\n    <priority>${p.priority}</priority>\n  </url>`
+      `  <url>\n    <loc>${escapeXml(`${SITE}${p.loc}`)}</loc>${p.changefreq ? `\n    <changefreq>${p.changefreq}</changefreq>` : ''}\n    <priority>${p.priority}</priority>\n  </url>`
   ),
   ...posts.map(
     (post) =>
-      `  <url>\n    <loc>${SITE}${post.url}</loc>\n    <lastmod>${toISODate(post.date)}</lastmod>\n    <priority>0.8</priority>\n  </url>`
+      `  <url>\n    <loc>${escapeXml(`${SITE}${post.url}`)}</loc>\n    <lastmod>${toISODate(post.date)}</lastmod>\n    <priority>0.8</priority>\n  </url>`
   ),
 ];
 

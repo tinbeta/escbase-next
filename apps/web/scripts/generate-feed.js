@@ -37,12 +37,12 @@ function mimeFromExt(path) {
 
 const items = posts.slice(0, 50).map((post) => {
   const imageTag = post.image
-    ? `\n      <enclosure url="${SITE}${post.image}" type="${mimeFromExt(post.image)}" length="0" />`
+    ? `\n      <enclosure url="${escapeXml(`${SITE}${post.image}`)}" type="${mimeFromExt(post.image)}" length="0" />`
     : '';
   return `    <item>
       <title>${escapeXml(post.title)}</title>
-      <link>${SITE}${post.url}</link>
-      <guid isPermaLink="true">${SITE}${post.url}</guid>
+      <link>${escapeXml(`${SITE}${post.url}`)}</link>
+      <guid isPermaLink="true">${escapeXml(`${SITE}${post.url}`)}</guid>
       <pubDate>${toRFC822(post.date)}</pubDate>
       <description>${escapeXml(post.excerpt || '')}</description>
       <category>${escapeXml(post.tag || '')}</category>${imageTag}
