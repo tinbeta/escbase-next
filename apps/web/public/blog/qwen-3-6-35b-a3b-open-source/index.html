@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qwen3.6-35B-A3B Open Source: Một Model 3B Active Nhưng Dám Đấu Qwen3.5-27B, Gemma 4 31B Và Cả Claude Sonnet 4.5 | Escbase</title>
+    <meta name="description" content="Alibaba Qwen vừa open source Qwen3.6-35B-A3B dưới giấy phép Apache 2.0. Điểm đáng chú ý không chỉ là 35B total, 3B active, mà là benchmark trên blog của họ cho thấy nó vượt xa Qwen3.5-35B-A3B, cạnh tranh với Qwen3.5-27B và Gemma 4 31B ở coding, đồng thời bám rất sát Claude Sonnet 4.5 ở mảng vision-language.">
+    <meta property="og:title" content="Qwen3.6-35B-A3B Open Source: Một Model 3B Active Nhưng Dám Đấu Qwen3.5-27B, Gemma 4 31B Và Cả Claude Sonnet 4.5">
+    <meta property="og:description" content="Qwen3.6-35B-A3B không chỉ khoe 3B active. Blog gốc benchmark nó trực tiếp với Qwen3.5-27B, Gemma 4 31B, Qwen3.5-35B-A3B, Gemma 4 26B-A4B và cả Claude Sonnet 4.5 ở phần vision-language.">
+    <meta property="og:image" content="https://escbase.xyz/images/qwen-3-6-35b-a3b-open-source-thumb.png">
+    <meta property="og:url" content="https://escbase.xyz/blog/qwen-3-6-35b-a3b-open-source/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/shared-article-footer.css">
+    <style>
+        :root{--bg:#09090b;--card-bg:#18181b;--border:#27272a;--text:#fafafa;--text-secondary:#a1a1aa;--text-muted:#71717a;--accent:#60a5fa;--accent-purple:#8b5cf6;--accent-green:#22c55e;--accent-red:#ef4444;--accent-yellow:#f59e0b;--radius-md:16px;--radius-lg:24px}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased}.container{max-width:820px;margin:0 auto;padding:2rem 1.5rem}.article-header{margin-bottom:2.5rem}.category-badge{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1rem;background:rgba(139,92,246,.12);border:1px solid rgba(139,92,246,.22);border-radius:100px;font-size:.85rem;font-weight:600;color:#c4b5fd;margin-bottom:1.25rem}h1{font-size:2.2rem;font-weight:800;line-height:1.2;margin-bottom:1.25rem;letter-spacing:-.02em}.meta{display:flex;flex-wrap:wrap;gap:1.5rem;color:var(--text-muted);font-size:.9rem}.meta span{display:flex;align-items:center;gap:.5rem}.article-content{font-size:1.1rem;color:var(--text-secondary)}.article-content h2{font-size:1.5rem;font-weight:700;color:var(--text);margin-top:2.5rem;margin-bottom:1rem}.article-content p{margin-bottom:1.25rem}.article-content ul{margin-bottom:1.25rem;padding-left:1.5rem}.article-content li{margin-bottom:.5rem}.highlight-box{background:linear-gradient(135deg,rgba(139,92,246,.12) 0%,rgba(96,165,250,.06) 100%);border:1px solid rgba(139,92,246,.22);border-radius:var(--radius-md);padding:1.5rem;margin:2rem 0}.highlight-box h4{color:#c4b5fd;font-size:1.1rem;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}.highlight-box-green{background:linear-gradient(135deg,rgba(34,197,94,.12) 0%,rgba(20,184,166,.05) 100%);border:1px solid rgba(34,197,94,.2);border-radius:var(--radius-md);padding:1.5rem;margin:2rem 0}.highlight-box-green h4{color:#4ade80;font-size:1.1rem;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}.highlight-box-red{background:linear-gradient(135deg,rgba(239,68,68,.10) 0%,rgba(245,158,11,.05) 100%);border:1px solid rgba(239,68,68,.2);border-radius:var(--radius-md);padding:1.5rem;margin:2rem 0}.highlight-box-red h4{color:#f87171;font-size:1.1rem;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}.quote-block{border-left:4px solid var(--accent-yellow);padding:1.25rem 1.5rem;margin:2rem 0;background:rgba(245,158,11,.05);border-radius:0 var(--radius-md) var(--radius-md) 0;font-style:italic;color:var(--text)}.inline-image{width:100%;max-width:680px;max-height:320px;object-fit:cover;display:block;border-radius:18px;border:1px solid rgba(255,255,255,.08);margin:1rem auto 1.5rem}.tags{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}.tag{padding:.5rem 1rem;background:var(--card-bg);border:1px solid var(--border);border-radius:100px;font-size:.85rem;color:var(--text-secondary)}a{color:#93c5fd}@media(max-width:768px){h1{font-size:1.72rem}.container{padding:1.5rem 1rem}.inline-image{max-height:180px;margin:.85rem auto 1.1rem}}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <span class="category-badge"><i class="fas fa-cubes"></i> Open Models & Agents</span>
+                <h1>Qwen3.6-35B-A3B Open Source: Một Model 3B Active Nhưng Dám Đấu Qwen3.5-27B, Gemma 4 31B Và Cả Claude Sonnet 4.5</h1>
+                <div class="meta">
+                    <span><i class="far fa-calendar"></i> 16/04/2026</span>
+                    <span><i class="far fa-clock"></i> 7 phút đọc</span>
+                    <span><i class="far fa-folder"></i> Qwen, Open Source & AI Models</span>
+                </div>
+                <img src="/images/qwen-3-6-35b-a3b-open-source-thumb.png" alt="Qwen3.6-35B-A3B thumbnail" class="inline-image" style="margin-top:1rem;">
+            </header>
+
+            <div class="article-content">
+                <div class="highlight-box">
+                    <h4>⚡ Tóm tắt nhanh</h4>
+                    <p style="margin-bottom:0">Alibaba Qwen vừa open source <strong>Qwen3.6-35B-A3B</strong> dưới giấy phép <strong>Apache 2.0</strong>. Điểm đáng chú ý không chỉ là kiến trúc <strong>sparse MoE 35B total, 3B active</strong>, mà là benchmark trên blog của họ cho thấy nó được đặt cạnh <strong>Qwen3.5-27B</strong>, <strong>Gemma 4 31B</strong>, <strong>Qwen3.5-35B-A3B</strong>, <strong>Gemma 4 26B-A4B</strong> ở phần coding/language, còn ở vision-language thì Qwen tự tin đem nó so trực tiếp với <strong>Claude Sonnet 4.5</strong>.</p>
+                </div>
+
+                <p>Post trên X của <strong>@Alibaba_Qwen</strong> khá ngắn, nhưng bài blog của họ thì nói rõ hơn nhiều: đây không phải một model open source kiểu “thêm cho đủ lineup”. Họ đang cố chứng minh rằng <strong>3B active</strong> vẫn có thể đánh nhau sòng phẳng với các model to hơn ở những benchmark coding và multimodal thật sự.</p>
+
+                <p>Nói kiểu đời thường: Qwen vừa ném ra một con model bảo rằng “tôi không cần bật cả khối tham số khổng lồ, nhưng vẫn đủ sức đấu với <strong>Qwen3.5-27B</strong>, <strong>Gemma 4 31B</strong> và ở vision-language còn dám đứng cùng mâm với <strong>Claude Sonnet 4.5</strong>”. Nếu benchmark của họ đứng được, đây là cú chọc khá đau vào cả thị trường open model lẫn lớp model API thương mại đắt tiền hơn.</p>
+
+                <h2>35B total nhưng chỉ 3B active mới là phần đáng tiền</h2>
+
+                <p>Qwen3.6-35B-A3B là một model <strong>sparse MoE</strong>. Nghĩa là tổng hệ thống có 35B parameters, nhưng mỗi lượt suy luận chỉ kích hoạt khoảng 3B.</p>
+
+                <p>Đây mới là chỗ đáng nói. Vì trong thực chiến, người dùng không sống bằng “tổng tham số nghe oách”, mà sống bằng:</p>
+
+                <ul>
+                    <li>độ nhanh,</li>
+                    <li>chi phí chạy,</li>
+                    <li>khả năng deploy,</li>
+                    <li>và hiệu năng trên task thật.</li>
+                </ul>
+
+                <div class="quote-block">
+                    Điểm đáng nói không phải là Qwen3.6-35B-A3B có 3B active còn bản cũ thì không. Cả Qwen3.6-35B-A3B lẫn Qwen3.5-35B-A3B đều cùng kiểu 35B total / 3B active. Thứ đáng nhìn là: trong cùng kiến trúc đó, bản mới vượt bản cũ khá xa, rồi còn đủ sức cạnh tranh với Qwen3.5-27B và Gemma 4 31B ở nhiều bài coding.
+                </div>
+
+                <p>Nói ngắn gọn: Qwen đang cố đẩy narrative từ <strong>model càng to càng ngon</strong> sang <strong>model dùng ít hơn nhưng làm được việc hơn</strong>.</p>
+
+                <h2>Ở phần coding, blog gốc benchmark nó với ai?</h2>
+
+                <p>Trong phần <strong>Language</strong>, bài blog của họ đặt Qwen3.6-35B-A3B cạnh:</p>
+
+                <ul>
+                    <li><strong>Qwen3.5-27B</strong></li>
+                    <li><strong>Gemma 4 31B</strong></li>
+                    <li><strong>Qwen3.5-35B-A3B</strong></li>
+                    <li><strong>Gemma 4 26B-A4B</strong></li>
+                </ul>
+
+                <p>Và lời claim của họ cũng rất cụ thể: model mới <strong>vượt xa Qwen3.5-35B-A3B</strong>, đồng thời đủ sức cạnh tranh với các dense model lớn hơn như <strong>Qwen3.5-27B</strong> và <strong>Gemma 4 31B</strong> trên nhiều benchmark coding và reasoning.</p>
+
+                <p>Nhìn vào bảng điểm trong blog, Qwen3.6-35B-A3B đặc biệt nổi bật ở các benchmark như <strong>Terminal-Bench 2.0</strong>, <strong>Claw-Eval Avg</strong>, <strong>SkillsBench Avg5</strong>, <strong>NL2Repo</strong> và <strong>QwenWebBench</strong>. Không phải chỗ nào nó cũng thắng tuyệt đối, nhưng narrative tổng thể của blog là rất rõ: <strong>nó vượt bản cũ rất mạnh và đủ sức đánh nhau với mấy con dense model to hơn</strong>.</p>
+
+                <div class="highlight-box-green">
+                    <h4>✅ Vì sao bài này đáng chú ý</h4>
+                    <ul style="margin-bottom:0">
+                        <li><strong>Hiệu quả tính toán:</strong> 3B active là con số nghe rất khác so với những model cứ phải lôi cả khối lớn ra chạy.</li>
+                        <li><strong>Benchmark rõ ràng hơn post X:</strong> blog gốc chỉ đích danh đối thủ so sánh, chứ không nói mơ hồ.</li>
+                        <li><strong>Apache 2.0:</strong> giấy phép này khiến model dễ được nhét vào sản phẩm và workflow thương mại hơn nhiều.</li>
+                    </ul>
+                </div>
+
+                <h2>Phần vision-language mới là chỗ Qwen chơi to hơn mình tưởng</h2>
+
+                <p>Post X chỉ nói model có <strong>multimodal perception and reasoning ability</strong>. Nhưng bài blog của họ đi xa hơn nhiều: ở phần <strong>Vision Language</strong>, Qwen so model này trực tiếp với:</p>
+
+                <ul>
+                    <li><strong>Qwen3.5-27B</strong></li>
+                    <li><strong>Claude Sonnet 4.5</strong></li>
+                    <li><strong>Gemma 4 31B</strong></li>
+                    <li><strong>Gemma 4 26B-A4B</strong></li>
+                    <li><strong>Qwen3.5-35B-A3B</strong></li>
+                </ul>
+
+                <p>Và chính bài blog này viết khá thẳng: trên đa số benchmark vision-language, hiệu năng của Qwen3.6-35B-A3B <strong>match Claude Sonnet 4.5</strong>, thậm chí có vài task còn vượt. Đây mới là phần khiến model này bớt bị nhìn như một con chỉ biết code.</p>
+
+                <p>Nói ngắn gọn: Qwen không chỉ cố chứng minh rằng model này rẻ hơn khi chạy coding agent. Họ còn muốn nó được nhìn như một <strong>multimodal open model đủ toàn diện để bước vào nhiều workflow thật</strong>.</p>
+
+                <h2>Điểm mạnh thật sự có thể nằm ở licensing chứ không chỉ benchmark</h2>
+
+                <p>Apache 2.0 nghe không sexy bằng benchmark, nhưng lại là phần rất đáng tiền.</p>
+
+                <p>Vì khi một model open source đi kèm license đủ rộng, nó mở ra mấy chuyện rất thực tế:</p>
+
+                <ul>
+                    <li>công ty dễ đem vào sản phẩm nội bộ hơn,</li>
+                    <li>đội kỹ thuật dễ thử fine-tune / serve / tối ưu hơn,</li>
+                    <li>và cộng đồng dễ build tooling quanh nó hơn.</li>
+                </ul>
+
+                <p>Nói thẳng: nhiều model mạnh nhưng license lằng nhằng thì cuối cùng vẫn bị loại khỏi bàn làm việc thật. Apache 2.0 giúp Qwen tự mở thêm cửa cho chính mình.</p>
+
+                <div class="highlight-box-red">
+                    <h4>⚠️ Nhưng vẫn đừng nuốt claim nguyên cục</h4>
+                    <p style="margin-bottom:0">Giờ câu hỏi đúng không còn là “Qwen có nói hay không”, mà là: các benchmark này phản ánh use case ngoài đời tới đâu, harness có công bằng không, và độ ổn định khi nhét model vào workflow agent dài hơi ra sao. Open source model hay chết ở chỗ bảng điểm đẹp nhưng production mệt.</p>
+                </div>
+
+                <h2>Kết luận</h2>
+
+                <p>Cách nhìn đúng về Qwen3.6-35B-A3B không phải là “lại thêm một model open source nữa”. Cách nhìn đúng hơn là:</p>
+
+                <p><strong>Qwen đang thử chứng minh rằng một model chỉ 3B active vẫn có thể vượt mạnh bản cũ, đấu với Qwen3.5-27B và Gemma 4 31B ở coding, rồi còn bám sát Claude Sonnet 4.5 ở vision-language.</strong></p>
+
+                <p>Nếu benchmark của họ đứng vững trong thực chiến, đây sẽ là kiểu model rất đáng gờm: không cần to nhất, không cần marketing ồn ào nhất, nhưng lại rất dễ trở thành lựa chọn cực khó chịu trong thế giới agent và AI app thực dụng.</p>
+
+                <p><strong>Source:</strong> <a href="https://qwen.ai/blog?id=qwen3.6-35b-a3b" target="_blank" rel="noopener noreferrer">Blog từ Qwen</a> · <a href="https://x.com/Alibaba_Qwen/status/2044768734234243427" target="_blank" rel="noopener noreferrer">Post trên X</a></p>
+
+                <div class="back-to-blog-footer">
+                    <a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+                </div>
+
+                <div class="article-cta-stack">
+                    <a href="/blog/qwen-3-6-35b-a3b-open-source" class="article-suggestion-card">
+                        <span class="article-suggestion-label"><i class="fas fa-book-open"></i> Bài mới</span>
+                        <span class="article-suggestion-title">Qwen3.6-35B-A3B Open Source: Một Model 3B Active Nhưng Dám Đấu Qwen3.5-27B, Gemma 4 31B Và Cả Claude Sonnet 4.5</span>
+                    </a>
+                    <div class="article-cta-actions">
+                        <a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a>
+                    </div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">#Qwen</span>
+                    <span class="tag">#OpenSourceAI</span>
+                    <span class="tag">#MoE</span>
+                    <span class="tag">#AgenticCoding</span>
+                    <span class="tag">#ClaudeSonnet45</span>
+                    <span class="tag">#Gemma4</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

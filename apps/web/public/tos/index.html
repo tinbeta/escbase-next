@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Điều khoản sử dụng - Escbase</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #f7931a;
+            --secondary-color: #e67e22;
+            --background-color: #0a0a0a;
+            --card-background: #141414;
+            --text-color: #e0e0e0;
+            --muted-text: #888;
+            --border-color: #2a2a2a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Be Vietnam Pro', sans-serif;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.8;
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.4rem;
+        }
+
+        .nav-logo img {
+            height: 36px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--muted-text);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Content */
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 8rem 1.5rem 4rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--primary-color) 0%, #ffd700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            color: var(--muted-text);
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            margin: 2rem 0 1rem;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        ul {
+            margin: 1rem 0 1rem 1.5rem;
+            color: var(--text-color);
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .warning-box {
+            background: rgba(231, 76, 60, 0.1);
+            border: 1px solid rgba(231, 76, 60, 0.3);
+            border-radius: 8px;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+        }
+
+        .warning-box i {
+            color: #e74c3c;
+            margin-right: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #050505;
+            border-top: 1px solid var(--border-color);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            color: var(--muted-text);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            h1 {
+                font-size: 1.6rem;
+            }
+
+            .content {
+                padding-top: 6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="/esclogo.png" alt="Escbase">
+                Escbase
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Trang chủ</a></li>
+                <li><a href="/crypto-reports">Crypto Reports</a></li>
+                <li><a href="/blog/index">Bài viết</a></li>
+                <li><a href="/read/index">Reading</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="content">
+        <h1><i class="fas fa-file-contract"></i> Điều khoản sử dụng</h1>
+        <p class="subtitle">Cập nhật lần cuối: 01/03/2026</p>
+
+        <div class="warning-box">
+            <i class="fas fa-exclamation-triangle"></i>
+            <strong>Lưu ý quan trọng:</strong> Các thông tin trên website Escbase chỉ mang tính chất tham khảo, không phải lờì khuyên đầu tư. Bạn chịu hoàn toàn trách nhiệm với các quyết định đầu tư của mình.
+        </div>
+
+        <h2><i class="fas fa-handshake"></i> Chấp nhận điều khoản</h2>
+        <p>Bằng việc truy cập và sử dụng website Escbase, bạn đồng ý tuân thủ các điều khoản và điều kiện được quy định tại đây. Nếu bạn không đồng ý với bất kỳ phần nào của các điều khoản này, vui lòng không sử dụng website.</p>
+
+        <h2><i class="fas fa-chart-line"></i> Nội dung và thông tin</h2>
+        <p>Escbase cung cấp các thông tin sau:</p>
+        <ul>
+            <li>Báo cáo phân tích thị trường cryptocurrency</li>
+            <li>Tin tức và cập nhật về blockchain</li>
+            <li>Phân tích các dự án crypto</li>
+            <li>Kiến thức về trading và đầu tư</li>
+        </ul>
+
+        <h2><i class="fas fa-ban"></i> Tuyên bố từ chối trách nhiệm</h2>
+        <p>Thông tin trên website Escbase:</p>
+        <ul>
+            <li><strong>Không phải lờì khuyên đầu tư:</strong> Mọi nội dung chỉ mang tính chất thông tin và giáo dục.</li>
+            <li><strong>Không bảo đảm:</strong> Chúng tôi không đảm bảo tính chính xác, đầy đủ hoặc kịp thờì của thông tin.</li>
+            <li><strong>Rủi ro tài chính:</strong> Đầu tư cryptocurrency có rủi ro cao. Bạn có thể mất toàn bộ vốn.</li>
+            <li><strong>Tự chịu rủi ro:</strong> Bạn chịu hoàn toàn trách nhiệm với các quyết định đầu tư của mình.</li>
+        </ul>
+
+        <h2><i class="fas fa-copyright"></i> Bản quyền nội dung</h2>
+        <p>Tất cả nội dung trên website Escbase (bao gồm văn bản, hình ảnh, video, logo) đều thuộc sở hữu của Escbase hoặc được sử dụng với sự cho phép. Bạn không được:</p>
+        <ul>
+            <li>Sao chép, phân phối hoặc sử dụng nội dung cho mục đích thương mại mà không có sự cho phép bằng văn bản</li>
+            <li>Chỉnh sửa hoặc tạo tác phẩm phái sinh từ nội dung</li>
+            <li>Loại bỏ các thông báo bản quyền hoặc thuộc tính</li>
+        </ul>
+        <p>Bạn được phép chia sẻ link đến nội dung của chúng tôi với đầy đủ thuộc tính nguồn.</p>
+
+        <h2><i class="fas fa-user-shield"></i> Hành vi ngườì dùng</h2>
+        <p>Khi sử dụng website, bạn đồng ý không:</p>
+        <ul>
+            <li>Sử dụng website cho mục đích bất hợp pháp</li>
+            <li>Gây hại, làm gián đoạn hoặc xâm phạm bảo mật của website</li>
+            <li>Thu thập thông tin cá nhân của ngườì dùng khác</li>
+            <li>Phát tán malware, virus hoặc mã độc hại</li>
+            <li>Spam hoặc gửi tin nhắn không mong muốn</li>
+        </ul>
+
+        <h2><i class="fas fa-link"></i> Liên kết bên thứ ba</h2>
+        <p>Website có thể chứa liên kết đến các website bên thứ ba. Chúng tôi không kiểm soát và không chịu trách nhiệm về nội dung, chính sách quyền riêng tư hoặc thực hành của các website này.</p>
+
+        <h2><i class="fas fa-gavel"></i> Thay đổi điều khoản</h2>
+        <p>Chúng tôi có quyền cập nhật hoặc thay đổi các điều khoản này bất cứ lúc nào. Thay đổi sẽ có hiệu lực ngay khi được đăng tải. Việc tiếp tục sử dụng website sau khi có thay đổi đồng nghĩa với việc bạn chấp nhận các điều khoản mới.</p>
+
+        <h2><i class="fas fa-envelope"></i> Liên hệ</h2>
+        <p>Nếu bạn có bất kỳ câu hỏi nào về điều khoản sử dụng, vui lòng liên hệ:</p>
+        <ul>
+            <li>Email: <a href="mailto:contact@escbase.xyz">contact@escbase.xyz</a></li>
+            <li>Discord: <a href="https://discord.gg/SMhy8RjDCf" target="_blank">Escbase Community</a></li>
+        </ul>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Escbase. <a href="/privacy">Chính sách quyền riêng tư</a> | <a href="/">Trang chủ</a></p>
+    </footer>
+</body>
+</html>

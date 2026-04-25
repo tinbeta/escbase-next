@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tư Thế Tối Ưu Cho Cơ Thể Khỏe Mạnh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F9FA;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .flowchart-step {
+            position: relative;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            text-align: center;
+        }
+        .flowchart-arrow {
+            position: relative;
+            text-align: center;
+            font-size: 2rem;
+            color: #577590;
+            margin: 0.5rem 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+         .flowchart-arrow::before {
+            content: '↓';
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-7xl">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-[#F94144] mb-4">Cân Bằng Tư Thế: Chìa Khóa Vàng Cho Sức Khỏe</h1>
+            <p class="text-lg md:text-xl text-[#577590] max-w-3xl mx-auto">Trong thế giới hiện đại, chúng ta dành phần lớn thời gian để ngồi. Nhưng ngồi, đứng, hay nằm mới là tốt nhất? Câu trả lời nằm ở sự cân bằng và vận động thường xuyên. Infographic này sẽ hướng dẫn bạn cách tối ưu hóa các tư thế hàng ngày để có một cơ thể khỏe mạnh.</p>
+        </header>
+
+        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <section class="lg:col-span-3 bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-[#F3722C] mb-4 text-center">Phân Bổ Thời Gian Hoạt Động Lý Tưởng Trong 24 Giờ</h2>
+                <p class="text-center text-[#577590] mb-6">Một ngày của bạn không nên chỉ có ngồi làm việc và nằm ngủ. Sự vận động nhẹ nhàng và thay đổi tư thế thường xuyên là yếu tố cực kỳ quan trọng để duy trì sức khỏe thể chất và tinh thần.</p>
+                <div class="chart-container h-80 md:h-96">
+                    <canvas id="dailyActivityChart"></canvas>
+                </div>
+            </section>
+
+            <section class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-[#F94144] mb-4">Mặt Trái Của Việc Ngồi Quá Nhiều</h2>
+                 <p class="text-[#577590] mb-4">Ngồi liên tục hơn 8 tiếng mỗi ngày làm tăng đáng kể nguy cơ mắc các bệnh mãn tính, ngay cả khi bạn có tập thể dục. Các cơ quan trong cơ thể bị chèn ép, quá trình trao đổi chất chậm lại và cột sống phải chịu áp lực lớn.</p>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <span class="text-2xl mr-4">💔</span>
+                        <div>
+                            <h3 class="font-semibold">Bệnh tim mạch</h3>
+                            <p class="text-sm text-gray-600">Nguy cơ tăng 147%. Lưu thông máu kém, dễ tích tụ mỡ.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="text-2xl mr-4">🍬</span>
+                        <div>
+                            <h3 class="font-semibold">Tiểu đường tuýp 2</h3>
+                            <p class="text-sm text-gray-600">Nguy cơ tăng 91%. Giảm độ nhạy của insulin.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="text-2xl mr-4">🦴</span>
+                        <div>
+                            <h3 class="font-semibold">Đau lưng & thoái hóa cột sống</h3>
+                            <p class="text-sm text-gray-600">Áp lực lên đĩa đệm cột sống thắt lưng tăng 40% so với đứng.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+             <section class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-[#F8961E] mb-4">Rủi Ro Khi Đứng Quá Lâu</h2>
+                <p class="text-[#577590] mb-4">Mặc dù đứng giúp đốt cháy nhiều calo hơn ngồi, việc đứng yên trong thời gian dài cũng gây ra những vấn đề sức khỏe riêng. Áp lực liên tục dồn xuống chân và hệ tuần hoàn phải làm việc vất vả hơn để đưa máu về tim.</p>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <span class="text-2xl mr-4">🦵</span>
+                        <div>
+                            <h3 class="font-semibold">Giãn tĩnh mạch</h3>
+                            <p class="text-sm text-gray-600">Máu bị ứ đọng ở chi dưới, gây sưng, đau và nổi mạch máu.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="text-2xl mr-4">🦶</span>
+                        <div>
+                            <h3 class="font-semibold">Đau cơ & khớp</h3>
+                            <p class="text-sm text-gray-600">Gây mỏi cơ bắp chân, hông và đau khớp bàn chân, đầu gối.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="text-2xl mr-4">💓</span>
+                        <div>
+                            <h3 class="font-semibold">Tăng gánh nặng cho tim</h3>
+                            <p class="text-sm text-gray-600">Hệ tuần hoàn phải chống lại trọng lực nhiều hơn.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="lg:col-span-1 bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-[#43AA8B] mb-4 text-center">So Sánh Nguy Cơ Sức Khỏe</h2>
+                 <p class="text-center text-[#577590] mb-6">Biểu đồ này so sánh mức độ rủi ro tương đối của các vấn đề sức khỏe phổ biến giữa việc ngồi nhiều và đứng nhiều. Điều này cho thấy không có tư thế nào là hoàn hảo nếu duy trì quá lâu.</p>
+                <div class="chart-container h-80">
+                    <canvas id="riskComparisonChart"></canvas>
+                </div>
+            </section>
+
+            <section class="lg:col-span-3 bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-[#577590] mb-4 text-center">Chu Trình Làm Việc & Nghỉ Ngơi Năng Động</h2>
+                <p class="text-center text-[#577590] mb-8">Giải pháp không phải là loại bỏ hoàn toàn việc ngồi hay đứng, mà là tạo ra một chu trình vận động linh hoạt. Hãy áp dụng quy tắc "30-20-10" hoặc các biến thể tương tự trong mỗi giờ làm việc để tối ưu hóa sức khỏe.</p>
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-4 items-center">
+                    <div class="flowchart-step bg-[#F9C74F]">
+                        <h3 class="font-bold text-lg">30 phút</h3>
+                        <p>Ngồi làm việc tập trung. Chú ý giữ thẳng lưng, vai thả lỏng.</p>
+                    </div>
+                    <div class="flowchart-arrow"></div>
+                    <div class="flowchart-step bg-[#90BE6D]">
+                        <h3 class="font-bold text-lg">20 phút</h3>
+                        <p>Đứng làm việc tại bàn nâng hạ hoặc khu vực làm việc đứng.</p>
+                    </div>
+                    <div class="flowchart-arrow"></div>
+                    <div class="flowchart-step bg-[#43AA8B]">
+                        <h3 class="font-bold text-lg">10 phút</h3>
+                        <p>Di chuyển, đi lại, vươn vai hoặc thực hiện các bài tập giãn cơ nhẹ nhàng.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="lg:col-span-3 bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-[#F3722C] mb-6 text-center">Thực Hành Hàng Ngày Để Có Cơ Thể Khỏe Mạnh</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-[#F94144] mb-2">Buổi Sáng</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                            <li>Vươn vai ngay khi thức dậy.</li>
+                            <li>Đi bộ hoặc tập thể dục nhẹ 15-30 phút.</li>
+                            <li>Ưu tiên đứng khi chờ phương tiện công cộng.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-[#F8961E] mb-2">Trong Giờ Làm</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                             <li>Áp dụng chu trình 30-20-10.</li>
+                            <li>Đi lấy nước thường xuyên.</li>
+                            <li>Đi lại khi nghe điện thoại.</li>
+                             <li>Chọn cầu thang bộ thay vì thang máy.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-[#90BE6D] mb-2">Buổi Chiều Tối</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                            <li>Đi dạo sau bữa tối.</li>
+                            <li>Làm việc nhà (cũng là một hình thức vận động).</li>
+                            <li>Giãn cơ nhẹ nhàng trước khi ngủ.</li>
+                        </ul>
+                    </div>
+                     <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="font-bold text-lg text-[#43AA8B] mb-2">Tư Thế Ngủ</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                            <li>Nằm nghiêng với gối kẹp giữa hai chân là tốt nhất.</li>
+                            <li>Nằm ngửa với gối dưới đầu gối cũng là lựa chọn tốt.</li>
+                            <li>Tránh nằm sấp vì gây hại cho cột sống cổ và lưng.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 text-sm text-gray-500">
+            <p>Thông tin trong infographic này dựa trên các nghiên cứu về sức khỏe và công thái học. Hãy tham khảo ý kiến chuyên gia y tế cho các vấn đề sức khỏe cụ thể.</p>
+             <p class="mt-2">Thiết kế bởi Canvas Infographics. Đã xác nhận không sử dụng Mermaid JS hay SVG.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const wrapLabel = (label) => {
+            if (label.length > 16) {
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = '';
+                words.forEach(word => {
+                    if ((currentLine + ' ' + word).trim().length > 16) {
+                        lines.push(currentLine.trim());
+                        currentLine = word;
+                    } else {
+                        currentLine = (currentLine + ' ' + word).trim();
+                    }
+                });
+                lines.push(currentLine.trim());
+                return lines;
+            }
+            return label;
+        };
+
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            } else {
+                return label;
+            }
+        };
+        
+        const commonChartOptions = {
+            maintainAspectRatio: false,
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        padding: 20,
+                        font: {
+                            family: "'Inter', sans-serif"
+                        }
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    },
+                    bodyFont: {
+                        family: "'Inter', sans-serif"
+                    },
+                    titleFont: {
+                        family: "'Inter', sans-serif"
+                    }
+                }
+            }
+        };
+
+        const dailyActivityCtx = document.getElementById('dailyActivityChart').getContext('2d');
+        new Chart(dailyActivityCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Ngủ (7-8 giờ)', 'Ngồi (≤ 8 giờ)', 'Đứng (4-6 giờ)', 'Vận động nhẹ & Đi lại (≥ 2 giờ)'],
+                datasets: [{
+                    label: 'Phân bổ thời gian',
+                    data: [8, 8, 6, 2],
+                    backgroundColor: [
+                        '#577590', 
+                        '#F94144',
+                        '#F9C74F',
+                        '#90BE6D', 
+                    ],
+                    borderColor: '#F8F9FA',
+                    borderWidth: 4,
+                    hoverOffset: 8
+                }]
+            },
+            options: {
+                 ...commonChartOptions,
+                 cutout: '60%',
+            }
+        });
+
+        const riskComparisonCtx = document.getElementById('riskComparisonChart').getContext('2d');
+        const originalLabels = ['Đau lưng & Cột sống', 'Bệnh tim mạch', 'Giãn tĩnh mạch', 'Đau mỏi cơ bắp & khớp'];
+        const processedLabels = originalLabels.map(wrapLabel);
+        
+        new Chart(riskComparisonCtx, {
+            type: 'bar',
+            data: {
+                labels: processedLabels,
+                datasets: [
+                    {
+                        label: 'Nguy cơ do Ngồi nhiều',
+                        data: [9, 8, 3, 4],
+                        backgroundColor: '#F94144',
+                        borderRadius: 4
+                    },
+                    {
+                        label: 'Nguy cơ do Đứng nhiều',
+                        data: [4, 5, 9, 8],
+                        backgroundColor: '#F8961E',
+                        borderRadius: 4
+                    }
+                ]
+            },
+            options: {
+                ...commonChartOptions,
+                 scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Mức độ rủi ro (Thang điểm 10)'
+                        }
+                    },
+                    x: {
+                         ticks: {
+                             font: {
+                                size: 10
+                             }
+                         }
+                    }
+                },
+                 indexAxis: 'y',
+            }
+        });
+    </script>
+</body>
+</html>

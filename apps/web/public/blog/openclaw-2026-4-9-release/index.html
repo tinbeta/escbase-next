@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw 2026.4.9: Không Còn Chỉ Đua Tính Năng, Bản Này Quay Sang Vá Nền Móng Hệ Thống - Escbase</title>
+    <meta name="description" content="OpenClaw 2026.4.9 không phải kiểu release bắn phá bằng feature mới cho vui. Bản này dồn lực vào memory/dreaming, auth, browser security, routing và hàng loạt bản vá vận hành — dấu hiệu cho thấy dự án đang bắt đầu siết lại nền móng sau giai đoạn tăng tốc khá điên.">
+    <meta property="og:title" content="OpenClaw 2026.4.9: Không Còn Chỉ Đua Tính Năng, Bản Này Quay Sang Vá Nền Móng Hệ Thống">
+    <meta property="og:description" content="OpenClaw 2026.4.9 tập trung vào security, memory/dreaming, routing, auth và stability. Ít hào nhoáng hơn, nhưng thực dụng hơn hẳn.">
+    <meta property="og:image" content="https://escbase.xyz/images/openclaw-2026-4-9-release-thumb.png">
+    <meta property="og:url" content="https://escbase.xyz/blog/openclaw-2026-4-9-release/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/shared-article-footer.css">
+    <style>
+        :root{--bg:#09090b;--card-bg:#18181b;--border:#27272a;--text:#fafafa;--text-secondary:#a1a1aa;--text-muted:#71717a;--accent-blue:#60a5fa;--accent-green:#22c55e;--accent-red:#ef4444;--radius-md:16px;--radius-lg:24px}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased}.container{max-width:820px;margin:0 auto;padding:2rem 1.5rem}.article-header{margin-bottom:2.5rem}.hero-image{width:100%;max-width:680px;max-height:320px;object-fit:cover;border-radius:18px;border:1px solid rgba(255,255,255,.08);margin:1rem 0 1.5rem;display:block}.category-badge{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1rem;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.22);border-radius:100px;font-size:.85rem;font-weight:600;color:#93c5fd;margin-bottom:1.25rem}h1{font-size:2.2rem;font-weight:800;line-height:1.2;margin-bottom:1.25rem;letter-spacing:-.02em}.meta{display:flex;flex-wrap:wrap;gap:1.5rem;color:var(--text-muted);font-size:.9rem}.meta span{display:flex;align-items:center;gap:.5rem}.article-content{font-size:1.1rem;color:var(--text-secondary)}.article-content h2{font-size:1.5rem;font-weight:700;color:var(--text);margin-top:2.5rem;margin-bottom:1rem}.article-content h3{font-size:1.2rem;font-weight:700;color:var(--text);margin-top:2rem;margin-bottom:.75rem}.article-content p{margin-bottom:1.25rem}.article-content ul{margin-bottom:1.25rem;padding-left:1.5rem}.article-content li{margin-bottom:.5rem}.highlight-box{background:linear-gradient(135deg,rgba(59,130,246,.12) 0%,rgba(34,211,238,.06) 100%);border:1px solid rgba(59,130,246,.2);border-radius:var(--radius-md);padding:1.5rem;margin:2rem 0}.highlight-box h4{color:#93c5fd;font-size:1.1rem;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}.highlight-box-green{background:linear-gradient(135deg,rgba(34,197,94,.1) 0%,rgba(34,197,94,.05) 100%);border:1px solid rgba(34,197,94,.2);border-radius:var(--radius-md);padding:1.5rem;margin:2rem 0}.highlight-box-green h4{color:var(--accent-green);font-size:1.1rem;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}.highlight-box-red{background:linear-gradient(135deg,rgba(239,68,68,.1) 0%,rgba(239,68,68,.05) 100%);border:1px solid rgba(239,68,68,.2);border-radius:var(--radius-md);padding:1.5rem;margin:2rem 0}.highlight-box-red h4{color:var(--accent-red);font-size:1.1rem;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}.quote-block{border-left:4px solid var(--accent-blue);padding:1.25rem 1.5rem;margin:2rem 0;background:rgba(59,130,246,.05);border-radius:0 var(--radius-md) var(--radius-md) 0;font-style:italic;color:var(--text)}.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin:2rem 0}.stat-card{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius-md);padding:1.25rem;text-align:center}.stat-value{font-size:1.75rem;font-weight:800;margin-bottom:.25rem;color:#93c5fd}.tags{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}.tag{padding:.5rem 1rem;background:var(--card-bg);border:1px solid var(--border);border-radius:100px;font-size:.85rem;color:var(--text-secondary)}@media(max-width:768px){h1{font-size:1.72rem}.container{padding:1.5rem 1rem}.hero-image{max-height:180px;margin:.85rem 0 1.1rem;border-radius:14px}}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <span class="category-badge"><i class="fas fa-robot"></i> OpenClaw AI</span>
+                <h1>OpenClaw 2026.4.9: Không Còn Chỉ Đua Tính Năng, Bản Này Quay Sang Vá Nền Móng Hệ Thống</h1>
+                <div class="meta">
+                    <span><i class="far fa-calendar"></i> 09/04/2026</span>
+                    <span><i class="far fa-clock"></i> 7 phút đọc</span>
+                    <span><i class="far fa-folder"></i> AI Agent, Security & Runtime Stability</span>
+                </div>
+                <img class="hero-image" src="/images/openclaw-2026-4-9-release-thumb.png" alt="OpenClaw 2026.4.9 release">
+            </header>
+
+            <div class="article-content">
+                <div class="highlight-box">
+                    <h4>🧠 Tóm tắt nhanh</h4>
+                    <p style="margin-bottom:0">OpenClaw 2026.4.9 không phải kiểu release đập vào mắt bằng một feature hào nhoáng. Thay vào đó, nó dồn sức cho <strong>memory/dreaming</strong>, <strong>browser security</strong>, <strong>provider auth</strong>, <strong>session routing</strong> và một loạt bản vá stability trên Android, Matrix, Slack, QA, plugin SDK. Nói ngắn gọn: sau giai đoạn tăng tốc khá điên, OpenClaw đang quay lại siết phần móng.</p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value">Security</div>
+                        <div>vá SSRF, dotenv độc hại, node exec event và auth collision</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">Memory</div>
+                        <div>siết grounded REM backfill, diary flow và durable-fact extraction</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">Stability</div>
+                        <div>sửa Android pairing, Matrix sync, Slack reply và session routing</div>
+                    </div>
+                </div>
+
+                <h2>Ít màu mè hơn 2026.4.7, nhưng thực dụng hơn hẳn</h2>
+                <p>Nếu bản 2026.4.7 cho cảm giác “feature bắn ra như súng máy”, thì 2026.4.9 lại giống kiểu release mà đội maintainers ngồi xuống và nói: được rồi, giờ phải dọn nền. Changelog lần này vẫn có thêm thứ mới, nhất là ở memory/dreaming và control UI, nhưng phần nặng ký hơn nằm ở các bản vá bảo mật, auth, routing và runtime behavior.</p>
+                <p>Đây là loại release nghe ít sexy hơn, nhưng với một agent platform thì lại đáng giá hơn nhiều. Vì cuối cùng người dùng production không sống bằng demo; họ sống bằng những thứ không được phép vỡ.</p>
+
+                <h2>Memory/dreaming tiếp tục được đẩy sâu, nhưng lần này là theo hướng “grounded” hơn</h2>
+                <p>Điểm mới nổi bật nhất của bản này là OpenClaw tiếp tục xây memory/dreaming, nhưng không theo hướng mơ hồ. Họ thêm <strong>grounded REM backfill lane</strong>, cho phép replay ghi chú cũ vào Dreams và durable memory mà không phải dựng thêm một memory stack riêng. Kéo theo đó là diary commit/reset flows, durable-fact extraction sạch hơn và một UI diary có timeline, traceable summaries cùng Scene lane để theo dõi backfill có căn cứ hơn.</p>
+                <p>Nói dễ hiểu: OpenClaw đang cố làm cho “trí nhớ dài hạn” bớt mang màu thần bí và tiến gần hơn tới một hệ lưu vết có thể kiểm tra, reset và backfill có chủ đích.</p>
+
+                <div class="highlight-box-green">
+                    <h4>✅ Vì sao hướng này đáng chú ý?</h4>
+                    <ul style="margin-bottom:0">
+                        <li><strong>Không dựng memory stack thứ hai:</strong> daily notes cũ có thể replay vào Dreams và durable memory ngay trên cùng một flow.</li>
+                        <li><strong>Có trace rõ hơn:</strong> diary view, timeline navigation và promotion hints giúp memory đỡ kiểu “tin thì tin”.</li>
+                        <li><strong>Grounded hơn:</strong> bản vá đi kèm còn siết source-day labels, target validation và claim splitting để tránh memory bị bẩn.</li>
+                    </ul>
+                </div>
+
+                <div class="quote-block">
+                    Release này cho thấy OpenClaw không chỉ muốn agent “nhớ lâu”, mà muốn agent nhớ kiểu có thể kiểm tra, reset và truy nguồn được.
+                </div>
+
+                <h2>Phần security mới là thứ nói lên mood thật của release này</h2>
+                <p>Changelog lần này dày đặc các bản vá bảo mật, và đây mới là phần đáng đọc nhất nếu bạn chạy OpenClaw nghiêm túc. Browser interaction giờ bị re-run blocked-destination safety checks sau các main-frame navigation do click/evaluate/hook-triggered flows gây ra, để tránh lách SSRF quarantine. Workspace `.env` không còn được phép lén override các runtime-control env vars nguy hiểm. Node exec events từ remote cũng bị đánh dấu untrusted và sanitize kỹ hơn để khỏi chui vào transcript như system content đáng tin.</p>
+                <p>Nói thẳng: team đang bịt những lỗ rất thật của một nền agent runtime có nhiều bề mặt tấn công — browser, node, plugin, env, auth onboarding. Đây là thứ ít ai khoe trên banner, nhưng nếu bỏ qua thì sớm muộn cũng ăn đòn.</p>
+
+                <div class="highlight-box-red">
+                    <h4>🚨 Những điểm security đáng chú ý nhất</h4>
+                    <ul style="margin-bottom:0">
+                        <li><strong>Browser/SSRF:</strong> click và navigation không còn là đường vòng để chui qua quarantine.</li>
+                        <li><strong>Workspace .env:</strong> chặn các env var có thể can thiệp runtime/browser control từ môi trường không đáng tin.</li>
+                        <li><strong>Remote node events:</strong> output từ node bị sanitize trước khi vào luồng system event.</li>
+                        <li><strong>Provider onboarding:</strong> chặn plugin không tin cậy tranh chấp auth-choice ids của provider bundle.</li>
+                    </ul>
+                </div>
+
+                <h2>Rất nhiều bản vá nhỏ, nhưng toàn đụng đúng chỗ đau của người dùng thật</h2>
+                <p>Android pairing được sửa theo hướng thực dụng hơn: clear stale setup-code auth, bootstrap lại từ pairing mới, ưu tiên stored device tokens, tạm dừng auto-retry khi app ở background. Matrix thì không còn được phép “startup thành công giả” trước khi sync thật sự sẵn sàng. Slack được vá ở cả media redirect, ACP delivery lẫn partial streaming fallback. Session routing cũng được sửa để inter-session announce không cướp mất route đang gắn với Telegram, Discord hay các kênh ngoài khác.</p>
+                <p>Đọc changelog kỹ sẽ thấy một pattern rất rõ: nhiều bug fix lần này không phải lỗi nhỏ lẻ, mà là lỗi làm người dùng mất niềm tin vì hệ thống cư xử không đúng trong các flow đang chạy thật.</p>
+
+                <h2>Điều thú vị: OpenClaw đang bớt “nghiện tính năng” hơn một nhịp</h2>
+                <p>Bản này vẫn có thứ mới: character-vibes evaluation cho QA/lab, providerAuthAliases cho manifests, pin workflow rõ hơn cho iOS release train, export plugin SDK contracts công khai hơn. Nhưng nhìn tổng thể, mood của 2026.4.9 không phải “xem chúng tôi thêm được bao nhiêu đồ chơi”, mà là “xem chúng tôi bắt đầu dọn lại hệ thống như thế nào”.</p>
+                <p>Đó là tín hiệu tốt. Vì sau một bản quá nặng velocity như 2026.4.7, thứ cộng đồng cần không phải thêm 10 feature mới để khoe. Thứ họ cần là dấu hiệu cho thấy maintainers biết lúc nào nên quay lại sửa phần lõi.</p>
+
+                <h2>Kết luận</h2>
+                <p>OpenClaw 2026.4.9 không phải release gây wow theo kiểu demo stage. Nhưng xét từ góc sản phẩm thật, đây lại là một trong những bản quan trọng hơn. Nó cho thấy dự án đang bắt đầu cân bằng lại giữa <strong>velocity</strong> và <strong>operational trust</strong>.</p>
+                <p>Nếu 2026.4.7 là cú đạp ga, thì 2026.4.9 là pha siết vô-lăng để xe khỏi lao khỏi đường. Và thành thật mà nói, với một platform agent ngày càng nhiều quyền như OpenClaw, mấy bản như thế này mới là thứ quyết định người dùng dám ở lại lâu hay không.</p>
+
+                <div class="back-to-blog-footer">
+                    <a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+                </div>
+
+                <div class="article-cta-stack">
+                    <a href="/blog/openclaw-2026-4-7-release" class="article-suggestion-card">
+                        <span class="article-suggestion-label"><i class="fas fa-book-open"></i> Đọc tiếp</span>
+                        <span class="article-suggestion-title">OpenClaw 2026.4.7: Infer Hub, Memory-Wiki Và Mặt Trái Của Một Bản Update Quá Nhanh</span>
+                    </a>
+                    <div class="article-cta-actions">
+                        <a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a>
+                    </div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">#OpenClaw</span>
+                    <span class="tag">#AIAgent</span>
+                    <span class="tag">#Security</span>
+                    <span class="tag">#Memory</span>
+                    <span class="tag">#Runtime</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

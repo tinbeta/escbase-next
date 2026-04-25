@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video - Escbase | Phân Tích Crypto Hằng Ngày</title>
+    <meta name="description" content="Video mới nhất từ kênh Escbase: cập nhật thị trường crypto hằng ngày, phân tích Bitcoin, Ethereum và các narrative quan trọng.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Escbase">
+    <meta property="og:title" content="Video - Escbase | Phân Tích Crypto Hằng Ngày">
+    <meta property="og:description" content="Xem video mới nhất từ kênh Escbase với các bản tin và phân tích crypto hằng ngày.">
+    <meta property="og:url" content="https://escbase.xyz/videos">
+    <meta property="og:image" content="https://escbase.xyz/og-default.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@escbase">
+    <meta name="twitter:title" content="Video - Escbase | Phân Tích Crypto Hằng Ngày">
+    <meta name="twitter:description" content="Video mới nhất từ kênh Escbase.">
+    <meta name="twitter:image" content="https://escbase.xyz/og-default.png">
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .videos-hero {
+            background: linear-gradient(135deg, rgba(255, 0, 60, 0.12), rgba(59, 130, 246, 0.08));
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .videos-hero h2 {
+            font-size: 2.2rem;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.02em;
+        }
+
+        .videos-hero p {
+            color: var(--text-secondary);
+            max-width: 760px;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .videos-hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .videos-hero-actions a {
+            min-width: 180px;
+            justify-content: center;
+            display: inline-flex;
+            align-items: center;
+            text-align: center;
+            min-height: 48px;
+        }
+
+        .videos-hero-actions .btn-primary,
+        .videos-hero-actions .btn-secondary-inline {
+            border-radius: 14px;
+            font-weight: 700;
+        }
+
+        .videos-hero-actions .btn-secondary-inline {
+            background: var(--card-bg);
+        }
+
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        .video-link-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.25s ease;
+        }
+
+        .video-link-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--border-hover);
+            background: var(--card-hover);
+        }
+
+        .video-thumb {
+            aspect-ratio: 16 / 9;
+            background: #000;
+            overflow: hidden;
+        }
+
+        .video-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .video-info {
+            padding: 0.95rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.65rem;
+            min-height: 132px;
+        }
+
+        .video-info h3 {
+            font-size: 0.98rem;
+            line-height: 1.4;
+            margin: 0;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .video-info .meta {
+            display: flex;
+            justify-content: space-between;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            margin-top: auto;
+        }
+
+        @media (max-width: 1100px) {
+            .videos-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .videos-hero {
+                padding: 1.4rem;
+            }
+
+            .videos-hero h2 {
+                font-size: 1.75rem;
+            }
+
+            .videos-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body data-page="videos">
+    <div class="app-container">
+        <header class="mobile-header">
+            <a href="/" class="mobile-logo">
+                <img src="/esclogo.png" alt="Escbase">
+                <span>Escbase</span>
+            </a>
+            <button class="hamburger" onclick="toggleMobileNav()" aria-label="Mở menu điều hướng">
+                <span></span><span></span><span></span>
+            </button>
+        </header>
+
+        <nav class="mobile-nav" id="mobileNav">
+            <a href="/" class="nav-item" onclick="toggleMobileNav()"><i class="fas fa-home"></i> Trang chủ</a>
+            <a href="/blog" class="nav-item" onclick="toggleMobileNav()"><i class="fas fa-newspaper"></i> Bài viết</a>
+            <a href="/videos" class="nav-item active" onclick="toggleMobileNav()"><i class="fas fa-play-circle"></i> Video</a>
+            <div class="social-links">
+                <a href="https://www.youtube.com/@ESCBase" target="_blank" class="social-btn" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://discord.gg/SMhy8RjDCf" target="_blank" class="social-btn" title="Discord"><i class="fab fa-discord"></i></a>
+                <a href="https://twitter.com/escbase" target="_blank" class="social-btn" title="X"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://t.me/escbase" target="_blank" class="social-btn" title="Telegram"><i class="fab fa-telegram"></i></a>
+            </div>
+        </nav>
+
+        <aside class="sidebar">
+            <a href="/" class="brand">
+                <img src="/esclogo.png" alt="Escbase">
+                <div class="brand-info">
+                    <h1>Escbase</h1>
+                    <p>Crypto Intelligence</p>
+                </div>
+            </a>
+
+            <p class="bio">Video cập nhật thị trường crypto hằng ngày, bản tin nhanh và các góc nhìn đáng chú ý từ Escbase.</p>
+
+            <nav class="nav-menu">
+                <a href="/" class="nav-item"><i class="fas fa-home"></i> Trang chủ</a>
+                <a href="/blog" class="nav-item"><i class="fas fa-newspaper"></i> Bài viết</a>
+                <a href="/videos" class="nav-item active"><i class="fas fa-play-circle"></i> Video</a>
+            </nav>
+
+            <div class="social-box">
+                <h4 style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.75rem; font-weight: 600; letter-spacing: 0.05em;">Kết nối</h4>
+                <div class="social-links">
+                    <a href="https://www.youtube.com/@ESCBase" target="_blank" class="social-btn" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://discord.gg/SMhy8RjDCf" target="_blank" class="social-btn" title="Discord"><i class="fab fa-discord"></i></a>
+                    <a href="https://twitter.com/escbase" target="_blank" class="social-btn" title="X"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://t.me/escbase" target="_blank" class="social-btn" title="Telegram"><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content" style="max-width: 1100px;">
+            <div class="videos-hero">
+                <span class="card-tag" style="color: #ff5b5b; border-color: rgba(255,91,91,.2); background: rgba(255,91,91,.1);"><i class="fab fa-youtube"></i> Tự động cập nhật từ kênh</span>
+                <h2>Video mới nhất từ kênh Escbase</h2>
+                <p>Trang này tự lấy danh sách video từ kênh YouTube Escbase, nên khi có video mới, danh sách sẽ được cập nhật mà không cần sửa tay từng video nữa.</p>
+                <div class="videos-hero-actions">
+                    <a href="https://www.youtube.com/@ESCBase/videos" target="_blank" class="btn-primary"><i class="fab fa-youtube"></i> Xem kênh</a>
+                    <a href="https://www.youtube.com/@ESCBase?sub_confirmation=1" target="_blank" class="btn-secondary-inline"><i class="fas fa-bell"></i> Đăng ký kênh</a>
+                </div>
+            </div>
+
+            <div class="videos-grid" id="videosGrid">
+                <p style="color:var(--text-muted);">Đang tải video...</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="/shared-layout.js"></script>
+    <script>
+        async function loadVideos() {
+            const grid = document.getElementById('videosGrid');
+
+            function renderVideos(videos) {
+                grid.innerHTML = videos.map(video => `
+                    <a class="video-link-card" href="${video.url}" target="_blank" rel="noopener noreferrer">
+                        <div class="video-thumb">
+                            <img src="${video.thumb}" alt="${video.title}">
+                        </div>
+                        <div class="video-info">
+                            <h3>${video.title}</h3>
+                            <div class="meta">
+                                <span>Escbase</span>
+                                <span>${video.published}</span>
+                            </div>
+                        </div>
+                    </a>
+                `).join('');
+            }
+
+            try {
+                const response = await fetch(`/api/youtube-feed?t=${Date.now()}`, { cache: 'no-store' });
+                const data = await response.json();
+                if (!data.videos || !data.videos.length) throw new Error('No feed items');
+                renderVideos(data.videos);
+            } catch (err) {
+                fetch('/videos-feed.json')
+                    .then(r => r.json())
+                    .then(renderVideos)
+                    .catch(() => {
+                        grid.innerHTML = '<p style="color:var(--text-muted);">Không tải được danh sách video. Bạn có thể xem trực tiếp trên kênh YouTube Escbase.</p>';
+                    });
+            }
+        }
+
+        loadVideos();
+    </script>
+</body>
+
+</html>

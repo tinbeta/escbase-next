@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: Phân tích Nâng cấp Ethereum Pectra</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- 
+    Narrative & Structure Plan:
+    1. Hero: Introduce Pectra as "The People's Upgrade" with key stats.
+    2. Three Pillars: Visually break down the 3 core goals (UX, Staking, L2s).
+    3. User Impact Deep Dive: Focus on EIP-7702 (Account Abstraction) with a "before/after" flow and a benefits chart.
+    4. Staker Impact Deep Dive: Visualize the MAX_EFFECTIVE_BALANCE increase and activation time reduction.
+    5. L2 Scaling Deep Dive: Show the increase in blob capacity with a grouped bar chart.
+    6. Foundational EIPs: Briefly list other key improvements in a structured way.
+    7. Conclusion: Summarize the upgrade's strategic importance.
+
+    Visualization Selection Plan:
+    - EIP-7702 Benefits: Donut Chart (Goal: Compare). Justification: Shows composition of benefits clearly. Library: Chart.js (Canvas). NO SVG.
+    - EIP-7702 Flow: Flow Diagram (Goal: Organize). Justification: Illustrates a process. Method: Styled HTML/CSS. NO SVG/Mermaid.
+    - EIP-7251 Staking Limit: Bar Chart (Goal: Compare). Justification: Best for comparing two distinct values. Library: Chart.js (Canvas). NO SVG.
+    - EIP-6110 Activation Time: Big Number (Goal: Inform). Justification: Highlights a single, dramatic change. Method: Styled HTML/CSS. NO SVG.
+    - EIP-7691 Blob Throughput: Grouped Bar Chart (Goal: Compare/Change). Justification: Compares old vs. new values for two related categories. Library: Chart.js (Canvas). NO SVG.
+    - Other EIPs: List (Goal: Organize). Justification: Clearly presents structured information. Method: Styled HTML/CSS. NO SVG.
+    - Icons: Unicode characters (e.g., 🚀, 💡, 🧑‍💻, 🛡️, ⛓️). Method: Text. NO SVG.
+
+    Color Palette: Brilliant Blues (#00449E, #0076CE, #56A8E0, #E9F1FA, #FFFFFF).
+    
+    Confirmation: NEITHER Mermaid JS NOR SVG were used anywhere in this output.
+    -->
+    <style>
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #E9F1FA;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .flow-arrow {
+            font-size: 2rem;
+            color: #0076CE;
+            line-height: 1;
+        }
+    
+.back-to-blog-footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+}
+
+.back-to-blog-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.95rem 1.25rem;
+    border-radius: 14px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.back-to-blog-btn:hover {
+    background: var(--card-hover);
+    border-color: var(--border-hover);
+}
+
+</style>
+</head>
+<body class="text-gray-800">
+<div style="max-width:800px;margin:0 auto;padding:1rem 1.5rem;"><a href="/blog" style="display:inline-flex;align-items:center;gap:0.5rem;color:#71717a;text-decoration:none;font-size:0.9rem;font-family:sans-serif;">← Quay lại Bài viết</a></div>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-16">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-[#00449E] mb-4">Nâng cấp Ethereum Pectra</h1>
+            <p class="text-xl md:text-2xl text-[#0076CE] font-semibold">Bản Nâng Cấp "Dành Cho Mọi Người"</p>
+            <div class="mt-8 flex justify-center items-center space-x-8">
+                <div class="text-center">
+                    <p class="text-4xl font-bold text-[#00449E]">11</p>
+                    <p class="text-sm text-[#0076CE]">EIPs được triển khai</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-4xl font-bold text-[#00449E]">5/2025</p>
+                    <p class="text-sm text-[#0076CE]">Thời gian kích hoạt</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-4xl font-bold text-[#00449E]">🚀</p>
+                    <p class="text-sm text-[#0076CE]">Lớn nhất từ The Merge</p>
+                </div>
+            </div>
+        </header>
+
+        <section id="pillars" class="mb-20">
+            <h2 class="text-3xl font-bold text-center text-[#00449E] mb-2">Ba Trụ Cột Chiến Lược</h2>
+            <p class="text-center text-lg text-gray-600 mb-12 max-w-3xl mx-auto">Pectra chuyển trọng tâm của Ethereum, tập trung vào việc cải thiện trải nghiệm cho người dùng, nhà vận hành node và các nhà phát triển Lớp 2.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-5xl mb-4">🧑‍💻</div>
+                    <h3 class="text-2xl font-bold text-[#00449E] mb-2">Trải nghiệm Người dùng</h3>
+                    <p class="text-gray-600">Đơn giản hóa ví và giao dịch thông qua Trừu tượng hóa Tài khoản, giúp Ethereum dễ tiếp cận hơn bao giờ hết.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-5xl mb-4">🛡️</div>
+                    <h3 class="text-2xl font-bold text-[#00449E] mb-2">Hiệu quả cho Validator</h3>
+                    <p class="text-gray-600">Tối ưu hóa hoạt động staking, giúp quản lý vốn hiệu quả, giảm chi phí và tăng cường sức khỏe mạng lưới.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-5xl mb-4">⛓️</div>
+                    <h3 class="text-2xl font-bold text-[#00449E] mb-2">Mở rộng Lớp 2</h3>
+                    <p class="text-gray-600">Tăng gấp đôi dung lượng dữ liệu cho các giải pháp Lớp 2, củng cố lộ trình lấy rollup làm trung tâm.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="ux-revolution" class="mb-20">
+            <h2 class="text-3xl font-bold text-center text-[#00449E] mb-2">Cuộc Cách mạng Ví với EIP-7702</h2>
+            <p class="text-center text-lg text-gray-600 mb-12 max-w-3xl mx-auto">EIP-7702 là "khoảnh khắc iPhone" của ví Ethereum, mang sức mạnh của hợp đồng thông minh đến các tài khoản thông thường, mở ra vô số khả năng mới.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold text-[#00449E] mb-4 text-center">Lợi ích chính của Trừu tượng hóa Tài khoản</h3>
+                    <div class="chart-container" style="height: 300px; max-height: 300px;">
+                        <canvas id="uxBenefitsChart"></canvas>
+                    </div>
+                     <p class="text-sm text-center text-gray-500 mt-4">Biểu đồ thể hiện các lợi ích chính mà EIP-7702 mang lại, giúp đơn giản hóa và bảo mật các tương tác trên chuỗi cho người dùng cuối.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold text-[#00449E] mb-4 text-center">Gộp Giao dịch: Trước và Sau</h3>
+                    <p class="text-center text-gray-600 mb-6">Thay vì thực hiện nhiều bước riêng lẻ, người dùng có thể gộp chúng vào một giao dịch duy nhất, tiết kiệm thời gian và phí gas.</p>
+                    <div class="flex flex-col space-y-4">
+                        <div>
+                            <p class="font-semibold text-gray-500">TRƯỚC:</p>
+                            <div class="flex items-center justify-center space-x-2 mt-2">
+                                <div class="p-2 bg-[#E9F1FA] border border-[#56A8E0] rounded-md">Ký Approve</div>
+                                <div class="flow-arrow">→</div>
+                                <div class="p-2 bg-[#E9F1FA] border border-[#56A8E0] rounded-md">Ký Swap</div>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-[#0076CE]">SAU (VỚI PECTRA):</p>
+                            <div class="flex items-center justify-center mt-2">
+                                <div class="p-3 bg-[#D6EAF8] border-2 border-[#0076CE] rounded-lg shadow">Ký 1 Lần (Approve + Swap)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="staking" class="mb-20">
+            <h2 class="text-3xl font-bold text-center text-[#00449E] mb-2">Tối ưu hóa Staking và Validator</h2>
+            <p class="text-center text-lg text-gray-600 mb-12 max-w-3xl mx-auto">Pectra tái định hình cơ chế staking, làm cho nó hiệu quả, linh hoạt và hấp dẫn hơn, đặc biệt với các tổ chức lớn.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold text-[#00449E] mb-4 text-center">Tăng giới hạn Stake hiệu dụng (EIP-7251)</h3>
+                    <p class="text-center text-gray-600 mb-6">Giới hạn stake tối đa cho mỗi validator tăng 64 lần, cho phép hợp nhất validator và tự động gộp lãi, giảm tải cho mạng.</p>
+                    <div class="chart-container">
+                        <canvas id="stakingLimitChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col justify-center items-center">
+                     <h3 class="text-xl font-bold text-[#00449E] mb-4 text-center">Tăng tốc Kích hoạt Validator (EIP-6110)</h3>
+                     <p class="text-center text-gray-600 mb-6">Thời gian chờ để một validator mới đi vào hoạt động giảm đáng kể, tăng tính linh hoạt cho các staker.</p>
+                    <div class="text-center">
+                        <p class="text-2xl text-gray-500 line-through">Nhiều giờ</p>
+                        <p class="text-6xl font-extrabold text-[#0076CE] my-2">~13 phút</p>
+                        <p class="text-lg font-semibold text-[#00449E]">Thời gian chờ trung bình</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="l2-scaling" class="mb-20">
+            <h2 class="text-3xl font-bold text-center text-[#00449E] mb-2">Tăng cường Sức mạnh cho Lớp 2</h2>
+             <p class="text-center text-lg text-gray-600 mb-12 max-w-3xl mx-auto">Pectra tiếp tục sứ mệnh của Dencun, tăng gấp đôi thông lượng dữ liệu blob để giúp Lớp 2 rẻ hơn và nhanh hơn.</p>
+             <div class="bg-white p-8 rounded-xl shadow-lg">
+                <h3 class="text-xl font-bold text-[#00449E] mb-4 text-center">Tăng thông lượng Blob mỗi Block (EIP-7691)</h3>
+                <p class="text-center text-gray-600 mb-6">Bằng cách tăng cả số lượng blob mục tiêu và tối đa, Ethereum cung cấp nhiều không gian dữ liệu giá rẻ hơn cho các rollup, thúc đẩy việc áp dụng.</p>
+                <div class="chart-container">
+                    <canvas id="blobThroughputChart"></canvas>
+                </div>
+             </div>
+        </section>
+
+        <section id="foundation" class="mb-20">
+            <h2 class="text-3xl font-bold text-center text-[#00449E] mb-2">Đặt Nền Móng Cho Tương Lai</h2>
+            <p class="text-center text-lg text-gray-600 mb-12 max-w-3xl mx-auto">Pectra cũng bao gồm các cải tiến kỹ thuật quan trọng, mở đường cho các nâng cấp trong tương lai và các ứng dụng tiên tiến.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-[#0076CE]">
+                    <h3 class="font-bold text-[#00449E]">EIP-2537: Precompile BLS12-381</h3>
+                    <p class="text-gray-600 mt-2">Giảm đáng kể chi phí gas cho các phép toán mật mã tiên tiến, hỗ trợ ZK-SNARKs và các cầu nối an toàn hơn.</p>
+                </div>
+                 <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-[#0076CE]">
+                    <h3 class="font-bold text-[#00449E]">EIP-2935: Mở rộng BLOCKHASH</h3>
+                    <p class="text-gray-600 mt-2">Tăng lịch sử block hash có thể truy cập lên 8192 block, một bước đệm quan trọng cho Verkle Trees và stateless clients.</p>
+                </div>
+                 <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-[#0076CE]">
+                    <h3 class="font-bold text-[#00449E]">EIP-7002: Rút tiền từ Lớp Thực thi</h3>
+                    <p class="text-gray-600 mt-2">Cho phép các staking pool và nhà đầu tư tổ chức tự động hóa việc rút tiền một cách an toàn và linh hoạt.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center mt-16 py-8 border-t border-gray-300">
+            <p class="text-gray-600">Pectra không phải là điểm kết thúc, mà là một bước đệm quan trọng, đưa Ethereum đến gần hơn với tầm nhìn trở thành một "máy tính thế giới" phi tập trung, an toàn và dễ tiếp cận cho tất cả mọi người.</p>
+        </footer>
+
+    </main>
+
+    <script>
+        function wrapLabels(label, maxLength) {
+            if (typeof label !== 'string' || label.length <= maxLength) {
+                return label;
+            }
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + ' ' + word).trim().length > maxLength) {
+                    lines.push(currentLine.trim());
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            }
+            if (currentLine) {
+                lines.push(currentLine.trim());
+            }
+            return lines;
+        }
+
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+
+        const defaultChartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'top',
+                    labels: {
+                        font: {
+                            family: "'Be Vietnam Pro', sans-serif",
+                            size: 14,
+                        },
+                        color: '#374151'
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    },
+                    bodyFont: {
+                        family: "'Be Vietnam Pro', sans-serif",
+                    },
+                    titleFont: {
+                        family: "'Be Vietnam Pro', sans-serif",
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    ticks: {
+                        color: '#4B5563',
+                        font: { family: "'Be Vietnam Pro', sans-serif" }
+                    },
+                    grid: { color: '#E5E7EB' }
+                },
+                x: {
+                    ticks: {
+                        color: '#4B5563',
+                        font: { family: "'Be Vietnam Pro', sans-serif" }
+                    },
+                    grid: { display: false }
+                }
+            }
+        };
+
+        const chartColors = {
+            darkBlue: '#00449E',
+            mediumBlue: '#0076CE',
+            lightBlue: '#56A8E0',
+            backgroundBlue: '#E9F1FA'
+        };
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            if (document.getElementById('uxBenefitsChart')) {
+                new Chart(document.getElementById('uxBenefitsChart'), {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Tài trợ Phí Gas', 'Gộp Giao dịch', 'Bảo mật Nâng cao'],
+                        datasets: [{
+                            label: 'Lợi ích UX',
+                            data: [35, 40, 25],
+                            backgroundColor: [chartColors.darkBlue, chartColors.mediumBlue, chartColors.lightBlue],
+                            borderColor: '#FFFFFF',
+                            borderWidth: 3,
+                        }]
+                    },
+                    options: {
+                        ...defaultChartOptions,
+                        cutout: '60%',
+                         scales: { y: { display: false }, x: { display: false } }
+                    }
+                });
+            }
+
+            if (document.getElementById('stakingLimitChart')) {
+                new Chart(document.getElementById('stakingLimitChart'), {
+                    type: 'bar',
+                    data: {
+                        labels: ['Trước Pectra', 'Sau Pectra'],
+                        datasets: [{
+                            label: 'Giới hạn Stake hiệu dụng (ETH)',
+                            data: [32, 2048],
+                            backgroundColor: [chartColors.lightBlue, chartColors.darkBlue],
+                            borderColor: [chartColors.mediumBlue, chartColors.darkBlue],
+                            borderWidth: 1,
+                            barPercentage: 0.5,
+                        }]
+                    },
+                    options: {
+                        ...defaultChartOptions,
+                        scales: {
+                            y: {
+                                type: 'logarithmic',
+                                title: { display: true, text: 'ETH (thang log)', font: { family: "'Be Vietnam Pro', sans-serif" }, color: '#374151' }
+                            },
+                            x: { grid: { display: false } }
+                        }
+                    }
+                });
+            }
+            
+            if (document.getElementById('blobThroughputChart')) {
+                const rawLabels = ['Mục tiêu mỗi Block', 'Tối đa mỗi Block'];
+                new Chart(document.getElementById('blobThroughputChart'), {
+                    type: 'bar',
+                    data: {
+                        labels: rawLabels.map(l => wrapLabels(l, 16)),
+                        datasets: [
+                            {
+                                label: 'Trước Pectra',
+                                data: [3, 6],
+                                backgroundColor: chartColors.lightBlue,
+                                borderColor: chartColors.mediumBlue,
+                                borderWidth: 1
+                            },
+                            {
+                                label: 'Sau Pectra',
+                                data: [6, 9],
+                                backgroundColor: chartColors.darkBlue,
+                                borderColor: chartColors.darkBlue,
+                                borderWidth: 1
+                            }
+                        ]
+                    },
+                    options: {
+                        ...defaultChartOptions,
+                        scales: {
+                            y: { title: { display: true, text: 'Số lượng Blob', font: { family: "'Be Vietnam Pro', sans-serif" }, color: '#374151' } }
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+    <div style="text-align: center; padding: 3rem 0;">
+        <a href="/" style="display: inline-block; background-color: #3498db; color: white; padding: 0.8rem 1.8rem; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: 2px solid transparent; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            Quay lại Trang Bài viết
+        </a>
+    </div>
+</body>
+</html>

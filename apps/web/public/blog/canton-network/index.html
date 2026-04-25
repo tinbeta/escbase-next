@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đồ Họa Thông Tin: Mạng Lưới Canton - Tương Lai Của Tài Chính Kết Nối</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #F0F4F8;
+            color: #102A43;
+        }
+        .card {
+            background-color: #FFFFFF;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.1);
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 350px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .flow-arrow {
+            position: relative;
+            width: 100%;
+            height: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .flow-arrow::after {
+            content: '▼';
+            font-size: 1.5rem;
+            color: #3B9AE1;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+        .flow-box {
+            border: 2px solid #51C4E7;
+            background-color: #F0F4F8;
+        }
+        .stat-number {
+            font-weight: 800;
+            color: #0A4F9D;
+            line-height: 1;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #0A4F9D, #3B9AE1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    
+.back-to-blog-footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+}
+
+.back-to-blog-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.95rem 1.25rem;
+    border-radius: 14px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.back-to-blog-btn:hover {
+    background: var(--card-hover);
+    border-color: var(--border-hover);
+}
+
+</style>
+</head>
+<body class="antialiased">
+<div style="max-width:800px;margin:0 auto;padding:1rem 1.5rem;"><a href="/blog" style="display:inline-flex;align-items:center;gap:0.5rem;color:#71717a;text-decoration:none;font-size:0.9rem;font-family:sans-serif;">← Quay lại Bài viết</a></div>
+
+    <div class="container mx-auto p-4 md:p-8">
+        
+        <header class="text-center mb-12 md:mb-16">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 gradient-text">Mạng Lưới Canton</h1>
+            <p class="text-xl md:text-2xl text-[#102A43] max-w-4xl mx-auto">Kiến tạo tương lai tài chính tổ chức bằng cách giải quyết nghịch lý giữa quyền riêng tư và khả năng tương tác.</p>
+        </header>
+
+        <main class="space-y-16">
+
+            <section id="problem">
+                <h2 class="text-3xl font-bold text-center mb-8">Vấn Đề Ngàn Tỷ Đô: Sự Phân Mảnh Của Tài Chính</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="card p-6">
+                        <div class="text-6xl mb-4">🏦</div>
+                        <h3 class="text-xl font-bold mb-2">Hệ Thống Silo</h3>
+                        <p class="text-gray-600">Dữ liệu bị cô lập trong các hệ thống riêng biệt, dẫn đến quy trình đối chiếu thủ công, tốn kém và chậm chạp.</p>
+                    </div>
+                    <div class="card p-6">
+                        <div class="text-6xl mb-4">💰</div>
+                        <h3 class="text-xl font-bold mb-2">Vốn Bị "Mắc Kẹt"</h3>
+                        <p class="text-gray-600">Hàng tỷ đô la bị khóa làm tài sản thế chấp trong các chu kỳ thanh toán kéo dài (T+1/T+2), làm giảm hiệu quả vốn.</p>
+                    </div>
+                    <div class="card p-6">
+                        <div class="text-6xl mb-4">⛓️</div>
+                        <h3 class="text-xl font-bold mb-2">Lưỡng Nan Blockchain</h3>
+                        <p class="text-gray-600">Các chuỗi công khai thiếu riêng tư. Các chuỗi riêng tư thiếu khả năng tương tác, tạo ra các "hòn đảo kỹ thuật số" mới.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="architecture">
+                <h2 class="text-3xl font-bold text-center mb-8">Giải Pháp Của Canton: Một "Mạng Lưới Của Các Mạng Lưới"</h2>
+                <p class="text-center max-w-3xl mx-auto mb-12 text-lg">Canton cho phép các ứng dụng độc lập, có chủ quyền kết nối và giao dịch một cách nguyên tử, giống như cách Internet kết nối các máy tính riêng lẻ, mà không phải hy sinh quyền riêng tư.</p>
+                <div class="card p-8">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-4xl">
+                            <div class="flow-box p-4 rounded-lg">
+                                <p class="font-bold">Ứng Dụng A (ví dụ: Thị trường Trái phiếu)</p>
+                                <p class="text-sm">Trên Miền Đồng Bộ Hóa 1</p>
+                            </div>
+                            <div class="flow-box p-4 rounded-lg">
+                                <p class="font-bold">Ứng Dụng B (ví dụ: Hệ thống Thanh toán)</p>
+                                <p class="text-sm">Trên Miền Đồng Bộ Hóa 2</p>
+                            </div>
+                        </div>
+
+                        <div class="flow-arrow rotate-90 md:rotate-0"></div>
+                        <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4 my-4">
+                            <div class="w-px h-8 md:w-8 md:h-px bg-[#3B9AE1]"></div>
+                            <div class="flow-arrow"></div>
+                            <div class="w-px h-8 md:w-8 md:h-px bg-[#3B9AE1]"></div>
+                        </div>
+
+                        <div class="bg-[#0A4F9D] text-white p-6 rounded-xl shadow-2xl">
+                            <h4 class="text-2xl font-bold">Global Synchronizer</h4>
+                            <p>Lớp tương tác công cộng, phi tập trung đảm bảo các giao dịch xuyên miền diễn ra một cách nguyên tử và đồng bộ.</p>
+                        </div>
+                         <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4 my-4">
+                            <div class="w-px h-8 md:w-8 md:h-px bg-[#3B9AE1]"></div>
+                             <div class="flow-arrow rotate-180"></div>
+                            <div class="w-px h-8 md:w-8 md:h-px bg-[#3B9AE1]"></div>
+                        </div>
+                         <div class="flow-box p-4 rounded-lg w-full max-w-sm">
+                            <p class="font-bold">Kết Quả: Giao Dịch Nguyên Tử</p>
+                            <p class="text-sm">Thanh toán trái phiếu (từ App A) bằng tiền mặt (từ App B) trong một giao dịch duy nhất, liền mạch, riêng tư.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="technology">
+                <h2 class="text-3xl font-bold text-center mb-8">Động Cơ Công Nghệ Đột Phá</h2>
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="card p-6">
+                        <h3 class="text-xl font-bold mb-3">Daml: Quyền Riêng Tư Theo Thiết Kế</h3>
+                        <p class="mb-4 text-gray-600">Ngôn ngữ hợp đồng thông minh định nghĩa ai có thể xem và làm gì với dữ liệu ở cấp độ chi tiết, đảm bảo quyền riêng tư dưới-giao-dịch (sub-transaction).</p>
+                        <ul class="space-y-2 text-left">
+                            <li class="flex items-center"><span class="text-blue-500 mr-2">🔑</span> <strong>Bên ký (Signatories):</strong> Phải ủy quyền tạo hợp đồng.</li>
+                            <li class="flex items-center"><span class="text-blue-500 mr-2">👁️</span> <strong>Bên quan sát (Observers):</strong> Có thể xem dữ liệu hợp đồng.</li>
+                             <li class="flex items-center"><span class="text-blue-500 mr-2">⚙️</span> <strong>Bên kiểm soát (Controllers):</strong> Có thể thực hiện hành động.</li>
+                        </ul>
+                    </div>
+                    <div class="card p-6">
+                        <h3 class="text-xl font-bold mb-3">Proof-of-Stakeholder</h3>
+                        <p class="text-gray-600">Cơ chế đồng thuận mới lạ, nơi chỉ các bên liên quan trực tiếp mới xác thực giao dịch. Điều này loại bỏ các nút thắt cổ chai và tối đa hóa tính bảo mật.</p>
+                        <p class="mt-4 font-semibold text-center text-[#0A4F9D]">Xác thực hiệu quả, an toàn và có thể mở rộng theo chiều ngang.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="tokenomics">
+                <h2 class="text-3xl font-bold text-center mb-8">Canton Coin (CCN): Thúc Đẩy Hệ Sinh Thái</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="card p-6 text-center">
+                        <h3 class="text-xl font-bold mb-4">Nguyên Tắc "Phát Hành Công Bằng"</h3>
+                        <p class="mb-4 text-gray-600">100% token được tạo ra để thưởng cho việc cung cấp tiện ích có thể kiểm chứng cho mạng lưới, xây dựng lòng tin từ các tổ chức.</p>
+                        <div class="chart-container mx-auto">
+                            <canvas id="fairLaunchChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="card p-6">
+                         <h3 class="text-xl font-bold mb-4 text-center">Cấu Trúc Khuyến Khích Tiến Hóa</h3>
+                         <p class="mb-4 text-gray-600 text-center">Phần thưởng mạng lưới chuyển dịch theo thời gian, từ việc xây dựng cơ sở hạ tầng ban đầu sang thúc đẩy việc tạo ra ứng dụng.</p>
+                        <div class="chart-container mx-auto">
+                            <canvas id="incentiveShiftChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="use-cases">
+                <h2 class="text-3xl font-bold text-center mb-8">Tác Động Thực Tế: Các Siêu Cường Tài Chính Đã Tham Gia</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="card p-8 text-center">
+                        <p class="text-lg font-semibold text-gray-700">Broadridge DLR</p>
+                        <p class="text-5xl md:text-6xl stat-number my-2">$2T+</p>
+                        <p class="font-bold text-[#102A43]">Khối lượng giao dịch Repo hàng tháng được xử lý, cách mạng hóa một thị trường trị giá 10 nghìn tỷ đô la.</p>
+                    </div>
+                    <div class="card p-8 text-center">
+                        <p class="text-lg font-semibold text-gray-700">Goldman Sachs DAP</p>
+                         <p class="text-5xl md:text-6xl stat-number my-2">€100M</p>
+                        <p class="font-bold text-[#102A43]">Giá trị trái phiếu kỹ thuật số đầu tiên do Ngân hàng Đầu tư Châu Âu (EIB) phát hành trên nền tảng.</p>
+                    </div>
+                    <div class="card p-8 text-center">
+                        <p class="text-lg font-semibold text-gray-700">Versana</p>
+                         <p class="text-5xl md:text-6xl stat-number my-2">$8T</p>
+                        <p class="font-bold text-[#102A43]">Quy mô thị trường cho vay hợp vốn đang được hiện đại hóa bởi một liên minh do ngành công nghiệp hậu thuẫn.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ecosystem">
+                <h2 class="text-3xl font-bold text-center mb-8">Một Liên Minh Hùng Mạnh</h2>
+                <div class="card p-8">
+                    <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-4 text-center">
+                        <span class="font-bold text-lg text-gray-700">Goldman Sachs</span>
+                        <span class="font-bold text-lg text-gray-700">BNP Paribas</span>
+                        <span class="font-bold text-lg text-gray-700">Broadridge</span>
+                        <span class="font-bold text-lg text-gray-700">DTCC</span>
+                        <span class="font-bold text-lg text-gray-700">Microsoft</span>
+                        <span class="font-bold text-lg text-gray-700">Euroclear</span>
+                        <span class="font-bold text-lg text-gray-700">Deutsche Börse</span>
+                        <span class="font-bold text-lg text-gray-700">Circle</span>
+                        <span class="font-bold text-lg text-gray-700">Cumberland (DRW)</span>
+                        <span class="font-bold text-lg text-gray-700">Moody's</span>
+                        <span class="font-bold text-lg text-gray-700">J.P. Morgan</span>
+                        <span class="font-bold text-lg text-gray-700">Citadel Securities</span>
+                        <span class="font-bold text-lg text-gray-700">Paxos</span>
+                         <span class="font-bold text-lg text-gray-700">& Hơn 30 Thành Viên</span>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="comparison">
+                <h2 class="text-3xl font-bold text-center mb-8">Lợi Thế Cạnh Tranh</h2>
+                <div class="card overflow-x-auto p-2">
+                    <table class="w-full min-w-max text-left">
+                        <thead class="border-b-2 border-[#51C4E7]">
+                            <tr>
+                                <th class="p-4 font-bold text-[#0A4F9D]">Tính Năng</th>
+                                <th class="p-4 font-bold text-[#0A4F9D]">Mạng Lưới Canton</th>
+                                <th class="p-4 font-bold text-gray-500">R3 Corda</th>
+                                <th class="p-4 font-bold text-gray-500">Hyperledger Fabric</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-gray-200">
+                                <td class="p-4 font-semibold">Độ Chi Tiết Quyền Riêng Tư</td>
+                                <td class="p-4 font-semibold text-green-600">Dưới-Giao-Dịch</td>
+                                <td class="p-4 text-gray-600">Giao dịch</td>
+                                <td class="p-4 text-gray-600">Kênh</td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="p-4 font-semibold">Khả Năng Tương Tác</td>
+                                <td class="p-4 font-semibold text-green-600">Nguyên tử, Toàn Mạng Lưới</td>
+                                <td class="p-4 text-gray-600">Bị giới hạn trong Vùng</td>
+                                <td class="p-4 text-gray-600">Không có (Tạo silo)</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-semibold">Chủ Quyền</td>
+                                <td class="p-4 font-semibold text-green-600">Nút Tham Gia có chủ quyền</td>
+                                <td class="p-4 text-gray-600">Mạng lưới kinh doanh chung</td>
+                                <td class="p-4 text-gray-600">Nhà xác thực kênh chung</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <footer class="text-center mt-16 pt-8 border-t border-gray-300">
+             <p class="text-lg text-gray-700">Canton Network đang định vị mình là lớp cơ sở hạ tầng nền tảng cho kỷ nguyên tài sản thế giới thực (RWA) được mã hóa.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                    return label.join(' ');
+                }
+                return label;
+            };
+
+            const wrapLabel = (label, maxWidth = 16) => {
+                if (label.length <= maxWidth) {
+                    return label;
+                }
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = '';
+                words.forEach(word => {
+                    if ((currentLine + ' ' + word).trim().length > maxWidth) {
+                        lines.push(currentLine.trim());
+                        currentLine = word;
+                    } else {
+                        currentLine = (currentLine + ' ' + word).trim();
+                    }
+                });
+                if (currentLine) {
+                    lines.push(currentLine.trim());
+                }
+                return lines;
+            };
+
+            const fairLaunchCtx = document.getElementById('fairLaunchChart');
+            if(fairLaunchCtx) {
+                new Chart(fairLaunchCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Phát hành dựa trên Tiện ích', 'Pre-mine / Bán trước / VC'],
+                        datasets: [{
+                            label: 'Phân bổ Token',
+                            data: [100, 0],
+                            backgroundColor: [
+                                '#247BA0',
+                                '#F0F4F8' 
+                            ],
+                            borderColor: [
+                                '#FFFFFF',
+                                '#FFFFFF'
+                            ],
+                            borderWidth: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    font: {
+                                        family: "'Be Vietnam Pro', sans-serif"
+                                    }
+                                }
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    title: tooltipTitleCallback
+                                }
+                            }
+                        },
+                        cutout: '70%'
+                    }
+                });
+            }
+
+            const incentiveShiftCtx = document.getElementById('incentiveShiftChart');
+            if (incentiveShiftCtx) {
+                const labels = ['Năm 1', 'Năm 2', 'Năm 3', 'Năm 4', 'Năm 5+'];
+                new Chart(incentiveShiftCtx, {
+                    type: 'line',
+                    data: {
+                        labels: labels.map(l => wrapLabel(l)),
+                        datasets: [
+                            {
+                                label: wrapLabel('Nhà cung cấp Ứng dụng/Xác thực'),
+                                data: [20, 35, 48, 55, 62],
+                                fill: true,
+                                backgroundColor: 'rgba(59, 154, 225, 0.2)',
+                                borderColor: '#3B9AE1',
+                                tension: 0.4,
+                                pointBackgroundColor: '#3B9AE1'
+                            },
+                            {
+                                label: wrapLabel('Siêu Xác Thực (Hạ tầng)'),
+                                data: [80, 65, 52, 45, 20],
+                                fill: true,
+                                backgroundColor: 'rgba(36, 123, 160, 0.2)',
+                                borderColor: '#247BA0',
+                                tension: 0.4,
+                                pointBackgroundColor: '#247BA0'
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                max: 100,
+                                ticks: {
+                                    callback: function(value) {
+                                        return value + '%'
+                                    },
+                                    font: {
+                                        family: "'Be Vietnam Pro', sans-serif"
+                                    }
+                                }
+                            },
+                             x: {
+                                ticks: {
+                                    font: {
+                                        family: "'Be Vietnam Pro', sans-serif"
+                                    }
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                     font: {
+                                        family: "'Be Vietnam Pro', sans-serif"
+                                    },
+                                    usePointStyle: true,
+                                }
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    title: tooltipTitleCallback
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+    <div style="text-align: center; padding: 3rem 0;">
+        <a href="/" style="display: inline-block; background-color: #3498db; color: white; padding: 0.8rem 1.8rem; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: 2px solid transparent; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            Quay lại Trang Bài viết
+        </a>
+    </div>
+</body>
+</html>

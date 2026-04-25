@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>So sánh Sei vs. Sui & Aptos: Phân tích Blockchain Lớp 1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .flowchart-step {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .flowchart-step:not(:last-child)::after {
+            content: '→';
+            position: absolute;
+            right: -2.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2.5rem;
+            color: #FC913A;
+        }
+    
+.back-to-blog-footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+}
+
+.back-to-blog-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.95rem 1.25rem;
+    border-radius: 14px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.back-to-blog-btn:hover {
+    background: var(--card-hover);
+    border-color: var(--border-hover);
+}
+
+</style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+<div style="max-width:800px;margin:0 auto;padding:1rem 1.5rem;"><a href="/blog" style="display:inline-flex;align-items:center;gap:0.5rem;color:#71717a;text-decoration:none;font-size:0.9rem;font-family:sans-serif;">← Quay lại Bài viết</a></div>
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12 md:mb-16">
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-2" style="color: #FF4E50;">Làn Sóng Blockchain Lớp 1 Mới</h1>
+            <p class="text-lg md:text-xl text-gray-400">Phân Tích Chuyên Sâu về Sei, Sui, & Aptos và Tiềm Năng Tăng Trưởng</p>
+        </header>
+
+        <section class="mb-12 md:mb-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
+                    <h3 class="text-2xl font-bold mb-2" style="color: #F9D423;">Sei</h3>
+                    <p class="text-5xl font-black text-white">22.000</p>
+                    <p class="text-gray-400">TPS Đỉnh (Công bố)</p>
+                    <p class="mt-4 text-sm">Lớp 1 chuyên biệt được tối ưu hóa cho giao dịch on-chain, hướng tới việc trở thành lớp thực thi nhanh nhất cho các sàn DEX.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
+                    <h3 class="text-2xl font-bold mb-2" style="color: #F9D423;">Sui</h3>
+                    <p class="text-5xl font-black text-white">120.000+</p>
+                    <p class="text-gray-400">TPS Đỉnh (Công bố)</p>
+                    <p class="mt-4 text-sm">Lớp 1 đa dụng với mô hình lấy đối tượng làm trung tâm, được thiết kế cho các ứng dụng rộng rãi như game và mạng xã hội.</p>
+                </div>
+                 <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
+                    <h3 class="text-2xl font-bold mb-2" style="color: #F9D423;">Aptos</h3>
+                    <p class="text-5xl font-black text-white">160.000+</p>
+                    <p class="text-gray-400">TPS Đỉnh (Công bố)</p>
+                    <p class="mt-4 text-sm">Lớp 1 đa dụng tập trung vào an toàn và khả năng mở rộng thông qua cơ chế thực thi song song Block-STM.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12 md:mb-16 bg-gray-800 p-6 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold text-center mb-2" style="color: #FC913A;">Phân Tích Sâu về Sei: Siêu Xa Lộ Giao Dịch</h2>
+            <p class="text-center text-gray-400 mb-8 max-w-3xl mx-auto">Kiến trúc của Sei không phải là đa dụng; nó được thiết kế tỉ mỉ để cung cấp cơ sở hạ tầng tối ưu cho các ứng dụng giao dịch. Cải tiến cốt lõi của nó là cơ chế đồng thuận "Twin-Turbo".</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 text-center">
+                 <div class="flowchart-step">
+                    <div class="p-4 border-2 border-dashed rounded-lg" style="border-color: #FF4E50;">
+                        <h4 class="font-bold text-lg text-white">Lan Truyền Khối Thông Minh</h4>
+                        <p class="text-sm text-gray-400">Truyền dữ liệu giao dịch đến các trình xác thực một cách hiệu quả.</p>
+                    </div>
+                </div>
+                <div class="flowchart-step">
+                     <div class="p-4 border-2 border-dashed rounded-lg" style="border-color: #FF4E50;">
+                        <h4 class="font-bold text-lg text-white">Xử Lý Khối Lạc Quan</h4>
+                        <p class="text-sm text-gray-400">Cho phép thực thi giao dịch song song, giảm đáng kể độ trễ.</p>
+                    </div>
+                </div>
+                <div class="flowchart-step">
+                     <div class="p-4 border-2 border-dashed rounded-lg" style="border-color: #FF4E50;">
+                        <h4 class="font-bold text-lg text-white">Cơ Chế Khớp Lệnh Gốc</h4>
+                        <p class="text-sm text-gray-400">Cung cấp một tính năng cốt lõi ở cấp độ chuỗi để các sàn DEX mở rộng hiệu quả.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12 md:mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8" style="color: #FC913A;">Chỉ Số Hiệu Năng: So Sánh Đối Đầu</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-center mb-4">Tốc Độ Giao Dịch (TPS Đỉnh Công Bố)</h3>
+                    <p class="text-center text-sm text-gray-400 mb-4">Càng cao càng tốt. Chỉ số này phản ánh số lượng giao dịch tối đa trên lý thuyết mà mạng có thể xử lý mỗi giây. Hiệu suất thực tế có thể thay đổi.</p>
+                    <div class="chart-container">
+                        <canvas id="tpsChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-center mb-4">Thời Gian Hoàn Tất (Giây)</h3>
+                    <p class="text-center text-sm text-gray-400 mb-4">Càng thấp càng tốt. Đây là thời gian cần thiết để một giao dịch được xác nhận là không thể đảo ngược trên blockchain. Thời gian hoàn tất nhanh hơn giúp cải thiện trải nghiệm người dùng.</p>
+                     <div class="chart-container">
+                        <canvas id="finalityChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="mb-12 md:mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8" style="color: #FC913A;">Các Yếu Tố Công Nghệ Cốt Lõi Khác Biệt</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse bg-gray-800 rounded-lg shadow-lg">
+                    <thead>
+                        <tr>
+                            <th class="p-4 border-b border-gray-700 text-lg font-semibold" style="color: #F9D423;">Blockchain</th>
+                            <th class="p-4 border-b border-gray-700 text-lg font-semibold" style="color: #F9D423;">Cải Tiến Chính</th>
+                            <th class="p-4 border-b border-gray-700 text-lg font-semibold" style="color: #F9D423;">Phù Hợp Nhất Cho</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="hover:bg-gray-700">
+                            <td class="p-4 border-b border-gray-600 font-bold text-white">Sei</td>
+                            <td class="p-4 border-b border-gray-600">Đồng thuận Twin-Turbo & Cơ chế Khớp lệnh Gốc</td>
+                            <td class="p-4 border-b border-gray-600">Sàn giao dịch phi tập trung (DEX), Ứng dụng giao dịch</td>
+                        </tr>
+                        <tr class="hover:bg-gray-700">
+                            <td class="p-4 border-b border-gray-600 font-bold text-white">Sui</td>
+                            <td class="p-4 border-b border-gray-600">Mô hình dữ liệu lấy đối tượng làm trung tâm</td>
+                            <td class="p-4 border-b border-gray-600">Game, NFT, Mạng xã hội, Mã hóa tài sản</td>
+                        </tr>
+                        <tr class="hover:bg-gray-700">
+                            <td class="p-4 font-bold text-white">Aptos</td>
+                            <td class="p-4">Cơ chế thực thi song song Block-STM</td>
+                            <td class="p-4">Ứng dụng doanh nghiệp, DeFi, dApp đa dụng</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="mb-12 md:mb-16">
+             <h2 class="text-3xl font-bold text-center mb-8" style="color: #FC913A;">Tổng Quan Hệ Sinh Thái & Nguồn Vốn</h2>
+             <p class="text-center text-gray-400 mb-8 max-w-3xl mx-auto">Sui và Aptos ra mắt với sự hậu thuẫn vốn mạo hiểm khổng lồ, thu hút một loạt các dự án ban đầu. Sei có cách tiếp cận tập trung hơn, xây dựng một hệ sinh thái chuyên biệt xoay quanh cơ sở hạ tầng tối ưu cho giao dịch.</p>
+             <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                 <div class="chart-container h-96 max-h-[500px]">
+                    <canvas id="ecosystemChart"></canvas>
+                </div>
+             </div>
+        </section>
+
+        <section>
+            <h2 class="text-3xl font-bold text-center mb-8" style="color: #FC913A;">Tiềm Năng Tăng Trưởng & Triển Vọng Tương Lai</h2>
+             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                 <div class="border-2 rounded-lg p-6" style="border-color: #FF4E50;">
+                     <h3 class="text-2xl font-bold mb-3 text-white">Sei</h3>
+                     <p class="mb-2"><strong class="text-green-400">Điểm mạnh:</strong> Chuyên môn hóa vượt trội cho thị trường ngách giao dịch có giá trị cao.</p>
+                     <p class="mb-2"><strong class="text-yellow-400">Cơ hội:</strong> Có thể trở thành trung tâm không thể tranh cãi cho mọi hoạt động giao dịch on-chain bằng cách cung cấp hiệu suất vượt trội.</p>
+                     <p class="mb-2"><strong class="text-red-400">Thách thức:</strong> Các Lớp 1 đa dụng có thể trở nên "đủ tốt", hạn chế sức hút của Sei nếu không duy trì được lợi thế hiệu suất đáng kể.</p>
+                 </div>
+                 <div class="border-2 rounded-lg p-6" style="border-color: #FC913A;">
+                     <h3 class="text-2xl font-bold mb-3 text-white">Sui</h3>
+                     <p class="mb-2"><strong class="text-green-400">Điểm mạnh:</strong> Mô hình đối tượng sáng tạo rất hiệu quả cho các trường hợp sử dụng cụ thể như tài sản game và NFT.</p>
+                     <p class="mb-2"><strong class="text-yellow-400">Cơ hội:</strong> Có thể thống trị không gian game Web3 và đồ sưu tầm kỹ thuật số nếu công nghệ của nó chứng tỏ ưu việt trong việc quản lý hàng triệu tài sản độc nhất.</p>
+                     <p class="mb-2"><strong class="text-red-400">Thách thức:</strong> Đối mặt với sự cạnh tranh gay gắt từ các chuỗi đa dụng khác và phải chứng minh mô hình của mình có thể thích ứng với mọi loại dApp.</p>
+                 </div>
+                 <div class="border-2 rounded-lg p-6" style="border-color: #F9D423;">
+                     <h3 class="text-2xl font-bold mb-3 text-white">Aptos</h3>
+                     <p class="mb-2"><strong class="text-green-400">Điểm mạnh:</strong> Tập trung vào sự an toàn, độ tin cậy và trải nghiệm nhà phát triển, được hỗ trợ bởi một cơ chế thực thi song song mạnh mẽ.</p>
+                     <p class="mb-2"><strong class="text-yellow-400">Cơ hội:</strong> Có tiềm năng lớn để thu hút khách hàng doanh nghiệp và các ứng dụng tài chính phức tạp ưu tiên bảo mật và thời gian hoạt động.</p>
+                     <p class="mb-2"><strong class="text-red-400">Thách thức:</strong> Phải tạo ra sự khác biệt rõ ràng so với Sui và Solana để không bị lu mờ trong một thị trường đông đúc các Lớp 1 tốc độ cao, đa dụng.</p>
+                 </div>
+            </div>
+        </section>
+
+        <footer class="text-center mt-12 md:mt-16 pt-8 border-t border-gray-700">
+            <p class="text-gray-500 text-sm">Dữ liệu được lấy từ tài liệu chính thức của dự án và phân tích thị trường tính đến Quý 3 năm 2025.</p>
+            <p class="text-gray-500 text-sm">Infographic này chỉ nhằm mục đích cung cấp thông tin và không phải là lời khuyên tài chính.</p>
+        </footer>
+
+    </div>
+
+<script>
+    const tooltipTitleCallback = (tooltipItems) => {
+        const item = tooltipItems[0];
+        let label = item.chart.data.labels[item.dataIndex];
+        if (Array.isArray(label)) {
+            return label.join(' ');
+        }
+        return label;
+    };
+
+    const wrapLabel = (label) => {
+        const maxLength = 16;
+        if (label.length <= maxLength) return label;
+        const words = label.split(' ');
+        const lines = [];
+        let currentLine = '';
+        words.forEach(word => {
+            if ((currentLine + word).length > maxLength) {
+                lines.push(currentLine.trim());
+                currentLine = '';
+            }
+            currentLine += word + ' ';
+        });
+        lines.push(currentLine.trim());
+        return lines;
+    };
+
+    const tpsData = {
+        labels: ['Sei', 'Sui', 'Aptos'],
+        datasets: [{
+            label: 'TPS Đỉnh (Công bố)',
+            data: [22000, 120000, 160000],
+            backgroundColor: ['#FF4E50', '#FC913A', '#F9D423'],
+            borderColor: ['#FF4E50', '#FC913A', '#F9D423'],
+            borderWidth: 1
+        }]
+    };
+
+    const finalityData = {
+        labels: ['Sei', 'Sui', 'Aptos'],
+        datasets: [{
+            label: 'Thời Gian Hoàn Tất (s)',
+            data: [0.6, 2.5, 0.9],
+            backgroundColor: ['#FF4E50', '#FC913A', '#F9D423'],
+            borderColor: ['#FF4E50', '#FC913A', '#F9D423'],
+            borderWidth: 1
+        }]
+    };
+
+    const ecosystemData = {
+        datasets: [{
+            label: 'Aptos (Vốn Lớn, Hệ Sinh Thái Rộng)',
+            data: [{ x: 7, y: 7.5, r: 45 }],
+            backgroundColor: '#F9D423'
+        }, {
+            label: 'Sui (Vốn Lớn, Hệ Sinh Thái Rộng)',
+            data: [{ x: 4, y: 5, r: 40 }],
+            backgroundColor: '#FC913A'
+        }, {
+            label: 'Sei (Vốn Tập Trung, Hệ Sinh Thái Chuyên Biệt)',
+            data: [{ x: 5.5, y: 2.5, r: 25 }],
+            backgroundColor: '#FF4E50'
+        }],
+    };
+
+    window.onload = function() {
+        const tpsCtx = document.getElementById('tpsChart').getContext('2d');
+        new Chart(tpsCtx, {
+            type: 'bar',
+            data: tpsData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                indexAxis: 'y',
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                        ticks: { color: '#D1D5DB' }
+                    },
+                    y: {
+                        grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                        ticks: { color: '#D1D5DB' }
+                    }
+                },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { callbacks: { title: tooltipTitleCallback } }
+                }
+            }
+        });
+
+        const finalityCtx = document.getElementById('finalityChart').getContext('2d');
+        new Chart(finalityCtx, {
+            type: 'bar',
+            data: finalityData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                         grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                         ticks: { color: '#D1D5DB' }
+                    },
+                     x: {
+                         grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                         ticks: { color: '#D1D5DB' }
+                    }
+                },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { callbacks: { title: tooltipTitleCallback } }
+                }
+            }
+        });
+
+        const ecosystemCtx = document.getElementById('ecosystemChart').getContext('2d');
+        new Chart(ecosystemCtx, {
+            type: 'bubble',
+            data: ecosystemData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: { display: false },
+                    x: { display: false }
+                },
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                         labels: {
+                            color: '#D1D5DB',
+                            font: { size: 12 },
+                            usePointStyle: true,
+                         }
+                    },
+                    tooltip: {
+                         callbacks: {
+                            label: function(context) {
+                                return context.dataset.label;
+                            },
+                             title: function() {
+                                return '';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    };
+</script>
+    <div style="text-align: center; padding: 3rem 0;">
+        <a href="/" style="display: inline-block; background-color: #3498db; color: white; padding: 0.8rem 1.8rem; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: 2px solid transparent; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            Quay lại Trang Bài viết
+        </a>
+    </div>
+</body>
+</html>

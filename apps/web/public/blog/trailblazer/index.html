@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cập Nhật Chương Trình Taiko Trailblazers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Warm Neutrals -->
+    <!-- Application Structure Plan: Tôi đã thiết kế một SPA dạng trang tổng quan theo chủ đề để chuyển đổi thông báo tuyến tính thành một trải nghiệm tương tác. Cấu trúc bao gồm: 1) Một phần Hero giới thiệu; 2) Phần "Tại sao" so sánh trực quan quyền lợi 100% và 50% để nhấn mạnh giá trị; 3) Phần "Khi nào & Làm thế nào" với dòng thời gian và đồng hồ đếm ngược để tạo sự khẩn cấp và hướng dẫn hành động; 4) Phần "Tác động" sử dụng biểu đồ tròn để hiển thị quy mô phân phối token. Cấu trúc này được chọn vì nó chia nhỏ thông tin phức tạp thành các phần có mục tiêu rõ ràng (hiểu, hành động, thấy tác động), giúp người dùng tiêu thụ thông tin và đưa ra quyết định nhanh hơn so với đọc văn bản thuần túy. -->
+    <!-- Visualization & Content Choices: 
+        - So sánh Quyền lợi (100% vs 50%): Mục tiêu: So sánh. Phương pháp: Hai thẻ thông tin song song (HTML/Tailwind) với icon và màu sắc tương phản. Tương tác: Hiệu ứng hover nhẹ. Lý do: So sánh trực tiếp, rõ ràng hơn nhiều so với danh sách gạch đầu dòng.
+        - Dòng thời gian Mùa 4: Mục tiêu: Thông báo & Hướng dẫn. Phương pháp: Dòng thời gian ngang (HTML/Tailwind) và đồng hồ đếm ngược JS. Tương tác: CTA nổi bật. Lý do: Trực quan hóa tiến trình và tạo sự khẩn cấp.
+        - Phân phối Token (30M/80M): Mục tiêu: Hiển thị Tỷ lệ. Phương pháp: Biểu đồ tròn (Chart.js/Canvas). Tương tác: Tooltip khi hover. Lý do: Hiệu quả trong việc thể hiện một phần trong tổng thể, cho thấy cam kết của dự án.
+        - Tăng giới hạn điểm (+25%): Mục tiêu: Thông báo. Phương pháp: Thẻ chỉ số (HTML/Tailwind). Lý do: Làm nổi bật một con số quan trọng.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #F8F7F4;
+            color: #4C4A47;
+        }
+        .text-gradient {
+            background-image: linear-gradient(to right, #E85D04, #F48C06);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        .btn-primary {
+            background-color: #E85D04;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .btn-primary:hover {
+            background-color: #F48C06;
+            transform: translateY(-2px);
+        }
+        .card {
+            background-color: #FFFFFF;
+            border: 1px solid #EAE8E4;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -4px rgba(0, 0, 0, 0.07);
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: -20px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #FFFFFF;
+            border: 3px solid #F48C06;
+        }
+        .timeline-line {
+            position: absolute;
+            top: 15px;
+            left: -15px;
+            width: 2px;
+            height: calc(100% - 15px);
+            background-color: #EAE8E4;
+        }
+        .countdown-box {
+            background: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            border: 1px solid #EAE8E4;
+            min-width: 80px;
+        }
+    
+.back-to-blog-footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+}
+
+.back-to-blog-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.95rem 1.25rem;
+    border-radius: 14px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.back-to-blog-btn:hover {
+    background: var(--card-hover);
+    border-color: var(--border-hover);
+}
+
+</style>
+</head>
+<body class="antialiased">
+<div style="max-width:800px;margin:0 auto;padding:1rem 1.5rem;"><a href="/blog" style="display:inline-flex;align-items:center;gap:0.5rem;color:#71717a;text-decoration:none;font-size:0.9rem;font-family:sans-serif;">← Quay lại Bài viết</a></div>
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+
+        <header class="text-center mb-16">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">
+                🥁 Cập Nhật Chương Trình <span class="text-gradient">Trailblazers</span>
+            </h1>
+            <p class="max-w-3xl mx-auto text-lg md:text-xl text-gray-600">
+                Một trang tổng quan tương tác giúp bạn hiểu rõ những thay đổi, quyền lợi và các mốc thời gian quan trọng của chương trình Trailblazers (Người Tiên Phong) từ Taiko.
+            </p>
+        </header>
+
+        <main class="space-y-20">
+            
+            <section id="importance">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">Tại Sao Vai Trò Trailblazer Quan Trọng?</h2>
+                    <p class="mt-3 max-w-2xl mx-auto text-lg text-gray-600">Đây là sự khác biệt chính về quyền lợi nhận thưởng trong Mùa 4. Việc sở hữu vai trò sẽ quyết định phần thưởng bạn nhận được.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="card border-l-4 border-green-500">
+                        <h3 class="text-2xl font-bold mb-3 flex items-center">
+                            <span class="text-3xl mr-3">✅</span> Có Vai Trò Trailblazer
+                        </h3>
+                        <p class="text-gray-600 text-lg mb-4">Bạn sẽ nhận được toàn bộ phần thưởng xứng đáng với nỗ lực của mình.</p>
+                        <div class="text-5xl font-bold text-green-600">100%</div>
+                        <p class="text-gray-500 mt-1">Toàn bộ phần thưởng đã kiếm được.</p>
+                    </div>
+                    <div class="card border-l-4 border-red-500">
+                        <h3 class="text-2xl font-bold mb-3 flex items-center">
+                           <span class="text-3xl mr-3">❌</span> Không Có Vai Trò
+                        </h3>
+                        <p class="text-gray-600 text-lg mb-4">Bạn sẽ chỉ nhận được một nửa phần thưởng, dù đã bỏ ra công sức tương tự.</p>
+                        <div class="text-5xl font-bold text-red-600">50%</div>
+                        <p class="text-gray-500 mt-1">Phần thưởng đã kiếm được.</p>
+                    </div>
+                </div>
+                 <p class="text-center mt-8 text-gray-500 italic">Lưu ý: Việc kiểm tra Sybil (tài khoản gian lận) vẫn được áp dụng.</p>
+            </section>
+
+            <section id="how-to">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">Lộ Trình Mùa 4 & Cách Tham Gia</h2>
+                    <p class="mt-3 max-w-2xl mx-auto text-lg text-gray-600">Đừng bỏ lỡ các mốc thời gian quan trọng và hãy nhận vai trò của bạn trước khi quá hạn!</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="card">
+                        <h3 class="text-2xl font-bold mb-6">Các Mốc Thời Gian Chính</h3>
+                        <div class="relative pl-8">
+                            <div class="timeline-line"></div>
+                            <div class="relative mb-8 timeline-item">
+                                <p class="font-semibold text-lg">16 tháng 6, 2025</p>
+                                <p class="text-gray-600">Vai trò Trailblazer chính thức được mở trên Guild.</p>
+                            </div>
+                            <div class="relative mb-8 timeline-item">
+                                <p class="font-semibold text-lg">30 tháng 6, 2025</p>
+                                <p class="text-gray-600">Tăng 25% giới hạn điểm hàng ngày cho Giá trị & Số lượng Giao dịch.</p>
+                            </div>
+                            <div class="relative timeline-item">
+                                 <p class="font-semibold text-lg text-red-600">10 tháng 7, 2025</p>
+                                 <p class="text-gray-600 font-medium">Hạn chót để nhận vai trò Trailblazer. Sau ngày này, cổng nhận vai trò sẽ tạm đóng.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card text-center bg-orange-50 border-orange-200">
+                         <h3 class="text-2xl font-bold mb-4">Đừng Chần Chừ!</h3>
+                         <p class="text-gray-700 text-lg mb-6">Thời gian nhận vai trò sắp kết thúc. Hãy hành động ngay để đảm bảo 100% quyền lợi.</p>
+                         <div id="countdown" class="flex justify-center space-x-4 mb-8">
+                            <div class="countdown-box text-center">
+                                <span id="days" class="text-3xl font-bold">0</span>
+                                <span class="text-xs text-gray-500">Ngày</span>
+                            </div>
+                            <div class="countdown-box text-center">
+                                <span id="hours" class="text-3xl font-bold">0</span>
+                                <span class="text-xs text-gray-500">Giờ</span>
+                            </div>
+                            <div class="countdown-box text-center">
+                                <span id="minutes" class="text-3xl font-bold">0</span>
+                                <span class="text-xs text-gray-500">Phút</span>
+                            </div>
+                             <div class="countdown-box text-center">
+                                <span id="seconds" class="text-3xl font-bold">0</span>
+                                <span class="text-xs text-gray-500">Giây</span>
+                            </div>
+                         </div>
+                         <a href="https://guild.xyz/taiko" target="_blank" rel="noopener noreferrer" class="btn-primary text-white font-bold py-3 px-8 rounded-full text-lg inline-block w-full max-w-xs shadow-lg">
+                             Nhận Vai Trò Ngay
+                         </a>
+                         <p class="text-sm text-gray-500 mt-4">Bạn sẽ được chuyển đến trang Guild của Taiko.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="impact">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">Tác Động & Cam Kết Từ Taiko</h2>
+                    <p class="mt-3 max-w-2xl mx-auto text-lg text-gray-600">Chúng tôi cam kết mạnh mẽ trong việc hỗ trợ và xây dựng cộng đồng. Các con số đã nói lên điều đó.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-center">
+                     <div class="md:col-span-3 card">
+                        <h3 class="text-2xl font-bold mb-4 text-center">Phân Phối Token TAIKO Cho Cộng Đồng</h3>
+                        <div class="chart-container relative h-80 md:h-96 w-full max-w-lg mx-auto">
+                            <canvas id="tokenDistributionChart"></canvas>
+                        </div>
+                     </div>
+                     <div class="md:col-span-2 space-y-6">
+                        <div class="card text-center">
+                            <div class="text-5xl font-bold text-gradient">80M+</div>
+                            <p class="text-lg font-semibold mt-2">Tổng TAIKO</p>
+                            <p class="text-gray-600">Đã phân phối cho cộng đồng (tính cả Genesis Airdrop).</p>
+                        </div>
+                        <div class="card text-center">
+                            <div class="text-5xl font-bold text-gradient">+25%</div>
+                            <p class="text-lg font-semibold mt-2">Giới Hạn Điểm</p>
+                            <p class="text-gray-600">Tăng thêm cho các hoạt động giao dịch hàng ngày.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-20 pt-8 border-t border-gray-200">
+            <p class="text-2xl font-bold mb-4">Hãy Cùng Nhau Tiến Lên! 🥁</p>
+            <p class="text-gray-600">Kỷ nguyên "Based Preconfirmations" đang đến gần. Đây là thời điểm tốt nhất để tham gia tích cực hơn.</p>
+             <a href="https://guild.xyz/taiko" target="_blank" rel="noopener noreferrer" class="mt-6 btn-primary text-white font-bold py-3 px-8 rounded-full text-lg inline-block shadow-lg">
+                Gia Nhập Hàng Ngũ Tiên Phong
+            </a>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            
+            const countdownDate = new Date('2025-07-10T23:59:59').getTime();
+            const countdownElement = document.getElementById('countdown');
+
+            if (countdownElement) {
+                const interval = setInterval(function() {
+                    const now = new Date().getTime();
+                    const distance = countdownDate - now;
+
+                    if (distance < 0) {
+                        clearInterval(interval);
+                        document.getElementById('countdown').innerHTML = '<div class="text-xl font-bold text-red-600">ĐÃ HẾT HẠN</div>';
+                        return;
+                    }
+                    
+                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    document.getElementById('days').innerText = days;
+                    document.getElementById('hours').innerText = hours;
+                    document.getElementById('minutes').innerText = minutes;
+                    document.getElementById('seconds').innerText = seconds;
+
+                }, 1000);
+            }
+
+            const chartCtx = document.getElementById('tokenDistributionChart');
+            if (chartCtx) {
+                new Chart(chartCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Chương trình Trailblazers', 'Genesis Airdrop & Khác'],
+                        datasets: [{
+                            label: 'Phân Phối Token TAIKO',
+                            data: [30000000, 50000000], 
+                            backgroundColor: [
+                                '#F48C06',
+                                '#4C4A47'
+                            ],
+                            borderColor: '#F8F7F4',
+                            borderWidth: 4,
+                            hoverOffset: 8
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    font: {
+                                        family: "'Be Vietnam Pro', sans-serif",
+                                        size: 14
+                                    },
+                                    color: '#4C4A47',
+                                    padding: 20
+                                }
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        let label = context.label || '';
+                                        if (label) {
+                                            label += ': ';
+                                        }
+                                        if (context.parsed !== null) {
+                                            label += new Intl.NumberFormat('vi-VN').format(context.parsed) + ' TAIKO';
+                                        }
+                                        return label;
+                                    }
+                                },
+                                titleFont: { family: "'Be Vietnam Pro', sans-serif" },
+                                bodyFont: { family: "'Be Vietnam Pro', sans-serif" },
+                                padding: 12,
+                                cornerRadius: 8
+                            }
+                        },
+                        cutout: '65%'
+                    }
+                });
+            }
+        });
+    </script>
+    <div style="text-align: center; padding: 3rem 0;">
+        <a href="/" style="display: inline-block; background-color: #3498db; color: white; padding: 0.8rem 1.8rem; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: 2px solid transparent; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            Quay lại Trang Bài viết
+        </a>
+    </div>
+</body>
+</html>

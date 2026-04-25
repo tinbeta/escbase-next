@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Code 2.1.94: Đổi Defaults, Sửa Memory, Ép Agent Dùng Tool Khôn Hơn - Escbase</title>
+    <meta name="description" content="Claude Code 2.1.94 không phải bản update kiểu màu mè cho vui. Nó chỉnh đúng ba thứ ảnh hưởng trải nghiệm thật: effort mặc định lên high, memory bớt cư xử ngu khi bị ignore, và agent được đẩy sang dùng tool sớm hơn, thực dụng hơn.">
+    <meta property="og:title" content="Claude Code 2.1.94: Đổi Defaults, Sửa Memory, Ép Agent Dùng Tool Khôn Hơn">
+    <meta property="og:description" content="Một bản update nhìn thì kỹ thuật, nhưng lại đụng đúng phần xương sống của coding agent: default tốt hơn, memory bớt ngớ ngẩn hơn, orchestration khôn hơn.">
+    <meta property="og:image" content="https://escbase.xyz/images/claude-code-2-1-94-defaults-memory-tooling-thumb.png">
+    <meta property="og:url" content="https://escbase.xyz/blog/claude-code-2-1-94-defaults-memory-tooling">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/shared-article-footer.css">
+    <style>
+        :root{--bg:#09090b;--card-bg:#18181b;--border:#27272a;--text:#fafafa;--text-secondary:#a1a1aa;--text-muted:#71717a;--accent:#f7931a;--accent-green:#22c55e;--accent-red:#ef4444;--accent-blue:#3b82f6;--radius-md:16px;--radius-lg:24px}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased}.container{max-width:820px;margin:0 auto;padding:2rem 1.5rem}.article-header{margin-bottom:2.5rem}.hero-image{width:100%;max-width:680px;max-height:320px;object-fit:cover;border-radius:18px;border:1px solid rgba(255,255,255,.08);margin:1rem 0 1.5rem;display:block}.category-badge{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1rem;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.2);border-radius:100px;font-size:.85rem;font-weight:600;color:#60a5fa;margin-bottom:1.25rem}h1{font-size:2.25rem;font-weight:800;line-height:1.2;margin-bottom:1.25rem;letter-spacing:-.02em}.meta{display:flex;flex-wrap:wrap;gap:1.5rem;color:var(--text-muted);font-size:.9rem}.meta span{display:flex;align-items:center;gap:.5rem}.article-content{font-size:1.1rem;color:var(--text-secondary)}.article-content h2{font-size:1.5rem;font-weight:700;color:var(--text);margin-top:2.5rem;margin-bottom:1rem}.article-content h3{font-size:1.2rem;font-weight:700;color:var(--text);margin-top:2rem;margin-bottom:.75rem}.article-content p{margin-bottom:1.25rem}.article-content ul{margin-bottom:1.25rem;padding-left:1.5rem}.article-content li{margin-bottom:.5rem}.highlight-box{background:linear-gradient(135deg,rgba(59,130,246,.1) 0%,rgba(59,130,246,.05) 100%);border:1px solid rgba(59,130,246,.2);border-radius:var(--radius-md);padding:1.5rem;margin:2rem 0}.highlight-box h4{color:var(--accent-blue);font-size:1.1rem;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}.highlight-box-red{background:linear-gradient(135deg,rgba(239,68,68,.1) 0%,rgba(239,68,68,.05) 100%);border:1px solid rgba(239,68,68,.2);border-radius:var(--radius-md);padding:1.5rem;margin:2rem 0}.highlight-box-red h4{color:var(--accent-red);font-size:1.1rem;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}.highlight-box-green{background:linear-gradient(135deg,rgba(34,197,94,.1) 0%,rgba(34,197,94,.05) 100%);border:1px solid rgba(34,197,94,.2);border-radius:var(--radius-md);padding:1.5rem;margin:2rem 0}.highlight-box-green h4{color:var(--accent-green);font-size:1.1rem;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}.quote-block{border-left:4px solid var(--accent-blue);padding:1.25rem 1.5rem;margin:2rem 0;background:rgba(59,130,246,.05);border-radius:0 var(--radius-md) var(--radius-md) 0;font-style:italic;color:var(--text)}.tags{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}.tag{padding:.5rem 1rem;background:var(--card-bg);border:1px solid var(--border);border-radius:100px;font-size:.85rem;color:var(--text-secondary)}@media(max-width:768px){h1{font-size:1.75rem}.container{padding:1.5rem 1rem}.hero-image{max-height:180px;margin:.85rem 0 1.1rem;border-radius:14px}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <span class="category-badge"><i class="fas fa-terminal"></i> AI Coding Agents</span>
+                <h1>Claude Code 2.1.94: Đổi Defaults, Sửa Memory, Ép Agent Dùng Tool Khôn Hơn</h1>
+                <div class="meta">
+                    <span><i class="far fa-calendar"></i> 08/04/2026</span>
+                    <span><i class="far fa-clock"></i> 7 phút đọc</span>
+                    <span><i class="far fa-folder"></i> Agent UX, Memory & Orchestration</span>
+                </div>
+                <img class="hero-image" src="/images/claude-code-2-1-94-defaults-memory-tooling-thumb.png" alt="Claude Code 2.1.94 và các thay đổi về defaults, memory, tooling">
+            </header>
+
+            <div class="article-content">
+                <div class="highlight-box">
+                    <h4>✨ Tóm tắt nhanh</h4>
+                    <p style="margin-bottom:0">Claude Code 2.1.94 không phải bản update kiểu thêm vài nút lấp lánh cho vui. Nó chạm đúng ba cái xương sống của coding agent: <strong>default effort được đẩy lên high</strong>, <strong>ignore-memory bớt hành xử ngớ ngẩn</strong>, và <strong>agent được steer sang dùng tool sớm hơn thay vì ngồi triết lý lan man</strong>. Nhìn thì toàn chi tiết kỹ thuật, nhưng thật ra đây là kiểu thay đổi làm người dùng cảm thấy công cụ “đỡ ngu hơn” trong việc hằng ngày.</p>
+                </div>
+
+                <h2>Bản update đáng chú ý vì nó sửa phần nền, không chỉ tô giao diện</h2>
+                <p>Thị trường coding agent lúc này có một căn bệnh hơi buồn cười: ai cũng khoe model mạnh hơn, benchmark dài hơn, autonomous hơn. Nhưng thứ khiến người dùng bực mỗi ngày lại thường nằm ở mấy món rất đời thường như default ngu, memory cư xử khó hiểu, hay agent biết tool mà vẫn thích ngồi đoán mò.</p>
+                <p>Claude Code 2.1.94 đáng nói ở chỗ nó không cố bán giấc mơ quá to. Nó đi thẳng vào những điểm ma sát thật. Và nói thật, đó mới là nơi sản phẩm thắng thua.</p>
+
+                <div class="highlight-box-green">
+                    <h4>✅ 3 thay đổi đáng tiền nhất</h4>
+                    <ul style="margin-bottom:0">
+                        <li><strong>Default effort medium → high:</strong> đa số user không bao giờ đụng vào settings, nên đổi mặc định chính là cách nâng sàn chất lượng cho cả đám đông.</li>
+                        <li><strong>Ignore-memory bớt cực đoan:</strong> trước đó có cảm giác hễ bảo ignore là agent như bị lobotomy nhẹ, giờ cách xử lý thực tế hơn.</li>
+                        <li><strong>Tool-first behavior rõ hơn:</strong> agent được nhắc dùng Read/Grep/tool phù hợp sớm hơn, bớt kiểu nghĩ dài mà không đụng vào repo.</li>
+                    </ul>
+                </div>
+
+                <h2>Đổi default mới là đòn product khôn nhất</h2>
+                <p>Nhiều người hay đánh giá thấp chuyện đổi mặc định. Sai lầm đấy. Trong thực tế, phần lớn người dùng không tối ưu gì cả. Họ dùng cái sản phẩm đưa sẵn. Thành ra việc effort mặc định nhảy từ medium sang high không chỉ là chỉnh tham số — nó là quyết định sản phẩm.</p>
+                <p>Nó nói rằng team hiểu một sự thật đơn giản: <strong>nâng trần thì hay, nhưng nâng sàn mới tạo khác biệt đại trà</strong>. Người rành thì trước giờ đã tự bật high rồi. Người không rành mới là nhóm được cứu ở bản này.</p>
+
+                <div class="quote-block">
+                    Thay đổi mặc định luôn là đòn âm thầm nhưng sát thương cao: user không cần học gì mới, mà vẫn thấy kết quả khá hơn. Đó mới là UX ngon thật, không phải pháo hoa release note.
+                </div>
+
+                <h2>Memory handling được sửa theo hướng bớt “máy móc đến mức ngu”</h2>
+                <p>Điểm hay thứ hai là phần ignore-memory. Cái bug tư duy trước đây nằm ở chỗ: khi bảo agent “ignore memory”, hệ thống dễ cư xử như thể MEMORY.md hoàn toàn rỗng. Nghe thì có vẻ đúng luật, nhưng ngoài đời lại tạo cảm giác agent mất luôn sự ổn định của ngữ cảnh.</p>
+                <p>Bản 2.1.94 chuyển cách hiểu đó sang hướng hợp lý hơn: không áp dụng, không viện dẫn, không so sánh, không nhắc memory content — nhưng cũng không đóng vai vừa bị đập vào đầu quên sạch mọi thứ. Đây là thay đổi nhỏ về câu chữ, nhưng lớn về hành vi.</p>
+                <p>Nói nôm na: nó bớt robot hơn, và đó là tin tốt.</p>
+
+                <h2>Tiến bộ của coding agent giờ nằm ở orchestration quality nhiều hơn ở model thô</h2>
+                <p>Chi tiết thú vị nhất trong phản ứng cộng đồng không nằm ở feature list, mà ở cách người ta đọc ra pattern đằng sau nó. Bản update này củng cố một xu hướng ngày càng rõ: sản phẩm coding agent bây giờ không thắng chỉ bằng model to hơn. Nó thắng bằng việc <strong>điều phối tool đúng lúc, quản lý context bớt ngáo, và mặc định đủ khôn để người dùng khỏi babysit</strong>.</p>
+                <p>Nói trắng ra, một con model giỏi mà orchestration dở thì vẫn làm người ta phát điên. Trong khi một hệ thống biết chọn tool sớm, nhớ vừa đủ, và tránh mấy lỗi hành vi lặp đi lặp lại lại tạo cảm giác “đáng thuê” hơn nhiều.</p>
+
+                <div class="highlight-box-red">
+                    <h4>⚠️ Nhưng không phải không có sạn</h4>
+                    <ul style="margin-bottom:0">
+                        <li>Có cảnh báo Bedrock non-Mantle có thể dính lỗi 403 authorization ở bản này.</li>
+                        <li>Bản changelog khá dày fix lặt vặt, nghĩa là nền tảng vẫn đang di chuyển nhanh và còn nhiều chỗ phải vá.</li>
+                        <li>Khi effort mặc định tăng lên, chi phí và độ chậm ở một số workflow cũng có thể nhích theo — không có bữa trưa miễn phí.</li>
+                    </ul>
+                </div>
+
+                <h2>Điều đáng học ở đây là triết lý sản phẩm</h2>
+                <p>Nếu bóc hết tên riêng và phiên bản ra, bài học từ bản 2.1.94 khá rõ: muốn coding agent hữu ích hơn, đừng chỉ chăm chăm bơm IQ. Hãy sửa cái cách nó cư xử. Hãy dẹp bớt default tệ. Hãy làm memory bớt phản chủ. Hãy ép agent dùng công cụ đúng nghề thay vì đoán mò như thầy bói xem voi.</p>
+                <p>Đó là kiểu tiến bộ không sexy bằng demo benchmark, nhưng lại là thứ chuyển hóa trực tiếp thành trải nghiệm dùng được hay không dùng được.</p>
+
+                <h2>Kết luận</h2>
+                <p>Claude Code 2.1.94 là một bản update nhìn qua tưởng chỉ dành cho dân ngồi soi changelog, nhưng thật ra nó đụng đúng phần cốt lõi của cuộc chơi coding agents năm 2026. Không phải model nào mạnh hơn, mà là <strong>thằng nào cho user một hệ hành vi đỡ ngu hơn ngay từ mặc định</strong>.</p>
+                <p>Nếu xu hướng này tiếp tục, cuộc đua agent sắp tới sẽ bớt là cuộc thi cơ bắp model, và giống cuộc thi xây hệ thống biết làm việc tử tế hơn. Thành thật mà nói, như vậy còn đáng xem hơn nhiều.</p>
+
+                <div class="back-to-blog-footer">
+                    <a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+                </div>
+
+                <div class="article-cta-stack">
+                    <a href="/blog/ray-dalio-big-cycle-world-war" class="article-suggestion-card">
+                        <span class="article-suggestion-label"><i class="fas fa-book-open"></i> Đọc tiếp</span>
+                        <span class="article-suggestion-title">Ray Dalio Cảnh Báo “World War Kiểu Mới”: Crypto Có Thể Chưa Sập Vì Tin Xấu, Mà Vì Cả Hệ Thống Đang Đổi Pha</span>
+                    </a>
+                    <div class="article-cta-actions">
+                        <a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a>
+                    </div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">#ClaudeCode</span>
+                    <span class="tag">#AICodingAgents</span>
+                    <span class="tag">#Memory</span>
+                    <span class="tag">#AgentUX</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

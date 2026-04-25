@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading - Escbase</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #111111;
+            --bg-card: #161616;
+            --bg-hover: #1c1c1c;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0a0;
+            --text-muted: #666666;
+            --accent: #f7931a;
+            --accent-hover: #ffaa33;
+            --border: #2a2a2a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Header */
+        header {
+            padding: 3rem 0 2rem;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+
+        .header-text h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+
+        .header-text p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Navigation */
+        .nav-section {
+            margin-bottom: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            padding: 0.5rem 1rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: all 0.2s;
+        }
+
+        .nav-link:hover {
+            background: var(--bg-hover);
+            color: var(--text-primary);
+        }
+
+        .nav-link.active {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #000;
+        }
+
+        /* Section */
+        .section {
+            margin-bottom: 2.5rem;
+        }
+
+        .section-title {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Filter tabs */
+        .filter-tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-tab {
+            padding: 0.5rem 1rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .filter-tab:hover {
+            background: var(--bg-hover);
+            color: var(--text-primary);
+        }
+
+        .filter-tab.active {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #000;
+        }
+
+        /* Bento Grid */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .bento-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Cards */
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            transition: all 0.2s ease;
+        }
+
+        .card:hover {
+            background: var(--bg-hover);
+            border-color: #3a3a3a;
+            transform: translateY(-2px);
+        }
+
+        .card-link {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .card-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: rgba(247, 147, 26, 0.1);
+            border: 1px solid rgba(247, 147, 26, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent);
+            font-size: 1.1rem;
+        }
+
+        .card-title {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .card-desc {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+
+        .card-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* Category tag */
+        .category-tag {
+            display: inline-block;
+            background: rgba(247, 147, 26, 0.1);
+            color: var(--accent);
+            padding: 0.25rem 0.6rem;
+            border-radius: 6px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.75rem;
+        }
+
+        /* Count badge */
+        .count-badge {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        /* Footer */
+        footer {
+            padding: 3rem 0 4rem;
+            border-top: 1px solid var(--border);
+            margin-top: 2rem;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-left {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Hidden */
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <a href="/" class="header-content" style="text-decoration: none; color: inherit;">
+                <img src="/esclogo.png" alt="Escbase" class="logo">
+                <div class="header-text">
+                    <h1>Escbase</h1>
+                    <p>Reading Collection</p>
+                </div>
+            </a>
+        </header>
+
+        <!-- Navigation -->
+        <div class="nav-section">
+            <div class="nav-links">
+                <a href="/" class="nav-link">Trang chủ</a>
+                <a href="/crypto-reports" class="nav-link">Reports</a>
+                <a href="/blog/index" class="nav-link">Bài viết</a>
+                <a href="/" class="nav-link active">Reading</a>
+            </div>
+        </div>
+
+        <!-- Filter -->
+        <div class="filter-tabs">
+            <div class="filter-tab active" data-category="all">All</div>
+            <div class="filter-tab" data-category="trading">Trading</div>
+            <div class="filter-tab" data-category="strategy">Strategy</div>
+            <div class="filter-tab" data-category="tech">Tech</div>
+            <div class="filter-tab" data-category="other">Other</div>
+        </div>
+
+        <!-- Articles -->
+        <div class="section">
+            <div class="section-title">
+                <i class="fas fa-book-open"></i>
+                Articles <span class="count-badge" id="articleCount">13 articles</span>
+            </div>
+            <div class="bento-grid" id="articlesGrid">
+                <!-- Articles will be loaded by JS -->
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-left">
+                    © 2026 Escbase
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.youtube.com/@ESCBase" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://discord.gg/SMhy8RjDCf" target="_blank"><i class="fab fa-discord"></i></a>
+                    <a href="https://www.facebook.com/escbasexyz" target="_blank"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const articles = [
+            { file: '/footprint/', title: 'Giải mã Biểu đồ Footprint', category: 'trading', icon: 'fa-chart-bar', desc: 'Hiểu sâu về footprint chart và cách đọc dữ liệu order flow.' },
+            { file: '/foot_print_chart2/', title: 'Footprint Chart - Nâng cao', category: 'trading', icon: 'fa-chart-area', desc: 'Kỹ thuật phân tích footprint nâng cao cho trader.' },
+            { file: '/order_flow/', title: '5 Mẫu hình Order Flow', category: 'trading', icon: 'fa-stream', desc: 'Các mẫu hình order flow quan trọng cần biết.' },
+            { file: '/future_grid/', title: 'Binance Futures Grid', category: 'strategy', icon: 'fa-robot', desc: 'Hướng dẫn sử dụng bot grid trading trên Binance.' },
+            { file: '/futu_grid/', title: 'Future Grid Simulator', category: 'strategy', icon: 'fa-calculator', desc: 'Công cụ mô phỏng chiến lược grid trading.' },
+            { file: '/barbell/', title: 'Balanced Barbell Strategy', category: 'strategy', icon: 'fa-balance-scale', desc: 'Chiến lược đầu tư crypto cân bằng rủi ro.' },
+            { file: '/barbell_strategy/', title: 'Barbell Infographic', category: 'strategy', icon: 'fa-dumbbell', desc: 'Biểu đồ trực quan về chiến lược tạ đòn.' },
+            { file: '/vinfast/', title: 'VinFast Overview', category: 'tech', icon: 'fa-car', desc: 'Toàn cảnh xe điện VinFast và tham vọng toàn cầu.' },
+            { file: '/an_toan_xe_dien/', title: 'EV Safety', category: 'tech', icon: 'fa-shield-alt', desc: 'Phân tích an toàn của xe điện so với xe xăng.' },
+            { file: '/so_sanh_xe/', title: 'Vietnam EV Market', category: 'tech', icon: 'fa-tachometer-alt', desc: 'Cuộc đua công nghệ ô tô tại Việt Nam.' },
+            { file: '/med_house/', title: 'Smart Medicine Cabinet', category: 'other', icon: 'fa-medkit', desc: 'Tủ thuốc gia đình thông minh với AI.' },
+            { file: '/oppenheimer/', title: 'Oppenheimer Science', category: 'other', icon: 'fa-film', desc: 'Khoa học và lịch sử trong phim Oppenheimer.' },
+            { file: '/freelancer/', title: 'Freelancer Roadmap', category: 'other', icon: 'fa-laptop-code', desc: 'Lộ trình kiếm tiền cho freelancer hiệu quả.' }
+        ];
+
+        const categoryNames = {
+            'trading': 'Trading',
+            'strategy': 'Strategy',
+            'tech': 'Tech',
+            'other': 'Other'
+        };
+
+        function renderArticles(category = 'all') {
+            const grid = document.getElementById('articlesGrid');
+            const count = document.getElementById('articleCount');
+
+            const filtered = category === 'all' 
+                ? articles 
+                : articles.filter(a => a.category === category);
+
+            count.textContent = `${filtered.length} articles`;
+
+            grid.innerHTML = filtered.map(article => `
+                <a href="${article.file}" class="card-link">
+                    <div class="card">
+                        <span class="category-tag">${categoryNames[article.category]}</span>
+                        <div class="card-header">
+                            <div class="card-icon"><i class="fas ${article.icon}"></i></div>
+                            <div class="card-title">${article.title}</div>
+                        </div>
+                        <div class="card-desc">${article.desc}</div>
+                        <div class="card-meta">
+                            <span><i class="fas fa-clock"></i> 10 min read</span>
+                            <span><i class="fas fa-arrow-right"></i> Read</span>
+                        </div>
+                    </div>
+                </a>
+            `).join('');
+        }
+
+        // Filter tabs
+        document.querySelectorAll('.filter-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                renderArticles(tab.dataset.category);
+            });
+        });
+
+        // Initial render
+        renderArticles();
+    </script>
+</body>
+</html>

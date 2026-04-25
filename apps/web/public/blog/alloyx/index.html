@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlloyX: Kiến tạo một loại tài sản mới</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F9FA;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .flow-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #004AAD;
+            font-size: 2rem;
+            transform: rotate(90deg);
+        }
+        @media (min-width: 768px) {
+            .flow-arrow {
+                transform: rotate(0deg);
+            }
+        }
+    
+.back-to-blog-footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+}
+
+.back-to-blog-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.95rem 1.25rem;
+    border-radius: 14px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.back-to-blog-btn:hover {
+    background: var(--card-hover);
+    border-color: var(--border-hover);
+}
+
+</style>
+</head>
+<body class="text-gray-800">
+<div style="max-width:800px;margin:0 auto;padding:1rem 1.5rem;"><a href="/blog" style="display:inline-flex;align-items:center;gap:0.5rem;color:#71717a;text-decoration:none;font-size:0.9rem;font-family:sans-serif;">← Quay lại Bài viết</a></div>
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center my-12">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-[#004AAD]">AlloyX: Kiến tạo một loại tài sản mới</h1>
+            <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">Mở khóa thanh khoản chuỗi cung ứng toàn cầu cho các tập đoàn và tạo ra một biên giới đầu tư mới đầy tiềm năng cho vốn từ các định chế tài chính.</p>
+        </header>
+
+        <section class="text-center my-16">
+            <div class="bg-white rounded-lg shadow-xl p-8 inline-block border border-gray-200">
+                <p class="text-xl font-semibold text-gray-500">Tổng vốn đã huy động</p>
+                <p class="text-7xl md:text-8xl font-extrabold text-[#0A75F5] my-2">$350 triệu</p>
+                <p class="text-lg text-gray-600">Sự kết hợp mạnh mẽ giữa vốn chủ sở hữu và tài trợ nợ, thúc đẩy sự mở rộng của nền tảng.</p>
+            </div>
+        </section>
+
+        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="md:col-span-2 lg:col-span-3 bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-[#004AAD] mb-4">Thách thức: Giá trị bị mắc kẹt trong chuỗi cung ứng</h2>
+                <p class="text-gray-600 mb-6">Trên toàn cầu, hàng nghìn tỷ đô la bị kẹt trong chuỗi cung ứng của doanh nghiệp dưới dạng các khoản phải thu hoặc phải trả. Lượng vốn bị mắc kẹt này tạo ra sự thiếu hiệu quả đáng kể về vốn lưu động, hạn chế sự tăng trưởng và linh hoạt trong vận hành. Quy trình tài trợ truyền thống thường chậm chạp, cồng kềnh và khó tiếp cận đối với nhiều người.</p>
+                <div class="flex flex-col md:flex-row justify-around items-center space-y-4 md:space-y-0 md:space-x-4">
+                    <div class="text-center p-4 border-2 border-dashed border-red-300 rounded-lg bg-red-50 w-full md:w-1/3">
+                        <p class="text-5xl font-bold text-red-500">🐌</p>
+                        <h3 class="font-bold text-red-700 mt-2">Thanh khoản chậm</h3>
+                        <p class="text-sm text-red-600">Mất hàng tuần hoặc hàng tháng để được thanh toán</p>
+                    </div>
+                    <div class="text-center p-4 border-2 border-dashed border-yellow-400 rounded-lg bg-yellow-50 w-full md:w-1/3">
+                        <p class="text-5xl font-bold text-yellow-600">🧱</p>
+                        <h3 class="font-bold text-yellow-700 mt-2">Vốn không hiệu quả</h3>
+                        <p class="text-sm text-yellow-600">Tiền mặt bị kẹt trong hóa đơn</p>
+                    </div>
+                    <div class="text-center p-4 border-2 border-dashed border-gray-400 rounded-lg bg-gray-50 w-full md:w-1/3">
+                        <p class="text-5xl font-bold text-gray-500">🚧</p>
+                        <h3 class="font-bold text-gray-700 mt-2">Tiếp cận hạn chế</h3>
+                        <p class="text-sm text-gray-600">Tài trợ phức tạp, độc quyền</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-2 lg:col-span-3 bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-[#004AAD] mb-4">Giải pháp của AlloyX: Một thị trường được mã hóa</h2>
+                <p class="text-gray-600 mb-8">AlloyX chuyển đổi các tài sản chuỗi cung ứng đã được phê duyệt, như hóa đơn, thành các công cụ đầu tư được mã hóa. Điều này tạo ra một thị trường liền mạch kết nối bộ phận tài chính của các công ty đang tìm kiếm thanh khoản với các nhà đầu tư tổ chức đang tìm kiếm lợi suất ổn định, chất lượng cao.</p>
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-4 items-center">
+                    <div class="bg-[#D9E9FF] p-4 rounded-lg text-center">
+                        <p class="text-3xl">1️⃣</p>
+                        <h3 class="font-semibold text-[#004AAD]">Khởi tạo</h3>
+                        <p class="text-sm text-gray-700">Một tập đoàn khởi tạo một tài sản thương mại (ví dụ: hóa đơn đã được phê duyệt).</p>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="bg-[#89C0FF] p-4 rounded-lg text-center">
+                        <p class="text-3xl">2️⃣</p>
+                        <h3 class="font-semibold text-[#004AAD]">Mã hóa</h3>
+                        <p class="text-sm text-gray-700">Nền tảng AlloyX chuyển đổi tài sản thành một token kỹ thuật số an toàn.</p>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="bg-[#0A75F5] p-4 rounded-lg text-center text-white">
+                        <p class="text-3xl">3️⃣</p>
+                        <h3 class="font-semibold">Đầu tư</h3>
+                        <p class="text-sm">Các nhà đầu tư tổ chức mua token, tài trợ cho tài sản ngay lập tức.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-2 bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-2xl font-bold text-[#004AAD] mb-2">Cơ hội thị trường khổng lồ</h2>
+                 <p class="text-gray-600 mb-4">Thị trường tài trợ thương mại rất lớn, nhưng vẫn tồn tại một khoảng cách đáng kể giữa cung và cầu. Mã hóa sẵn sàng thu hẹp khoảng cách này, cách mạng hóa cách các tài sản được tài trợ và giao dịch.</p>
+                <div class="chart-container h-96">
+                    <canvas id="marketOpportunityChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-2xl font-bold text-[#004AAD] mb-2">Cơ cấu nguồn vốn</h2>
+                <p class="text-gray-600 mb-4">Khoản vốn 350 triệu đô la được cấu trúc một cách chiến lược để hỗ trợ cả sự phát triển của nền tảng (vốn chủ sở hữu) và tài trợ tài sản quy mô lớn (công cụ nợ).</p>
+                <div class="chart-container">
+                    <canvas id="fundingDonutChart"></canvas>
+                </div>
+            </div>
+
+            <div class="md:col-span-2 lg:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h2 class="text-2xl font-bold text-[#004AAD] mb-4">Lợi ích cho Doanh nghiệp</h2>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-green-500 font-bold text-xl mr-3">✔</span>
+                            <div>
+                                <h3 class="font-semibold">Thanh khoản tức thì</h3>
+                                <p class="text-gray-600 text-sm">Chuyển đổi các khoản phải thu thành tiền mặt trong vài ngày, không phải vài tháng, cải thiện dòng tiền.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                             <span class="text-green-500 font-bold text-xl mr-3">✔</span>
+                            <div>
+                                <h3 class="font-semibold">Tối ưu hóa vốn lưu động</h3>
+                                <p class="text-gray-600 text-sm">Giải phóng tiền mặt nội bộ cho tăng trưởng chiến lược, R&D hoặc hoạt động.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                             <span class="text-green-500 font-bold text-xl mr-3">✔</span>
+                            <div>
+                                <h3 class="font-semibold">Nguồn vốn đa dạng</h3>
+                                <p class="text-gray-600 text-sm">Tiếp cận một nguồn vốn mới, cạnh tranh bên ngoài hệ thống ngân hàng truyền thống.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h2 class="text-2xl font-bold text-[#004AAD] mb-4">Lợi ích cho Nhà đầu tư</h2>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-green-500 font-bold text-xl mr-3">✔</span>
+                            <div>
+                                <h3 class="font-semibold">Tiếp cận loại tài sản mới</h3>
+                                <p class="text-gray-600 text-sm">Đầu tư vào các tài sản tín dụng doanh nghiệp chất lượng cao, thời gian đáo hạn ngắn.</p>
+                            </div>
+                        </li>
+                         <li class="flex items-start">
+                            <span class="text-green-500 font-bold text-xl mr-3">✔</span>
+                            <div>
+                                <h3 class="font-semibold">Lợi nhuận ổn định, không tương quan</h3>
+                                <p class="text-gray-600 text-sm">Tạo ra lợi suất với độ tương quan thấp so với các thị trường đại chúng đầy biến động.</p>
+                            </div>
+                        </li>
+                         <li class="flex items-start">
+                            <span class="text-green-500 font-bold text-xl mr-3">✔</span>
+                            <div>
+                                <h3 class="font-semibold">Đa dạng hóa nâng cao</h3>
+                                <p class="text-gray-600 text-sm">Thêm một nguồn rủi ro và lợi nhuận độc đáo vào danh mục đầu tư của các tổ chức.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <footer class="text-center my-12">
+            <h2 class="text-3xl font-bold text-[#004AAD]">Tương lai là thanh khoản</h2>
+            <p class="mt-2 text-gray-600 max-w-2xl mx-auto">AlloyX không chỉ là một nền tảng; đó là nền tảng cho một hệ sinh thái tài chính toàn cầu hiệu quả, minh bạch và dễ tiếp cận hơn.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const brilliantBlues = {
+                dark: '#004AAD',
+                primary: '#0A75F5',
+                light: '#89C0FF',
+                lightest: '#D9E9FF'
+            };
+
+            const tooltipTitleCallback = {
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                  return label.join(' ');
+                                } else {
+                                  return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            };
+            
+            const marketCtx = document.getElementById('marketOpportunityChart')?.getContext('2d');
+            if (marketCtx) {
+                new Chart(marketCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Thị trường Tài trợ Thương mại Toàn cầu', 'Khoảng trống Tài trợ Thương mại Hàng năm', 'Tài sản Mã hóa Dự kiến vào năm 2030'],
+                        datasets: [{
+                            label: 'Giá trị (Nghìn tỷ USD)',
+                            data: [10, 1.7, 5],
+                            backgroundColor: [brilliantBlues.primary, brilliantBlues.dark, brilliantBlues.light],
+                            borderColor: '#ffffff',
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        ...tooltipTitleCallback,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Giá trị (Nghìn tỷ USD)'
+                                }
+                            }
+                        },
+                        plugins: {
+                             ...tooltipTitleCallback.plugins,
+                            legend: {
+                                display: false
+                            }
+                        }
+                    }
+                });
+            }
+
+            const fundingCtx = document.getElementById('fundingDonutChart')?.getContext('2d');
+            if (fundingCtx) {
+                new Chart(fundingCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Công cụ Nợ ($300 triệu)', 'Vốn chủ sở hữu ($50 triệu)'],
+                        datasets: [{
+                            data: [300, 50],
+                            backgroundColor: [brilliantBlues.dark, brilliantBlues.primary],
+                            hoverOffset: 4,
+                            borderColor: '#ffffff',
+                            borderWidth: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        ...tooltipTitleCallback,
+                        plugins: {
+                            ...tooltipTitleCallback.plugins,
+                            legend: {
+                                position: 'bottom',
+                            },
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+    <div style="text-align: center; padding: 3rem 0;">
+        <a href="/" style="display: inline-block; background-color: #3498db; color: white; padding: 0.8rem 1.8rem; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: 2px solid transparent; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            Quay lại Trang Bài viết
+        </a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng Dụng Tương Tác: Khám Phá QuantumRoot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Warm Neutral & Orange -->
+    <!-- Application Structure Plan: The SPA is designed as a narrative journey. It starts with a "Hook" (The Quantum Threat) to establish the problem. It then presents the "Solution" (QuantumRoot) with an interactive chart. The "How It Works" section uses a clear HTML/CSS process diagram. The "Trade-offs" section serves as the core interactive analysis hub, using a comparative bar chart and pro/con lists. Finally, a "Conclusion" summarizes the takeaway. A sticky navigation bar facilitates both linear scrolling and direct access to sections, making it ideal for both quick overviews and in-depth exploration. This structure enhances understanding by framing complex information within a clear, problem-solution-analysis flow. -->
+    <!-- Visualization & Content Choices: 
+        1. Quantum Threat Intro: Goal=Inform. Method=Large text stats & icons (Unicode) for high impact. Justification=Quickly establishes the core problem.
+        2. Solution Composition: Goal=Inform/Compare. Method=Chart.js Donut Chart. Justification=Visually shows the hybrid nature (Lamport vs. Schnorr) more effectively than a table. Interaction=Hover for details.
+        3. How it Works: Goal=Organize. Method=HTML/CSS Flexbox Diagram. Justification=Clearly illustrates the two-step process without complex libraries.
+        4. Trade-offs (Size Comparison): Goal=Compare. Method=Chart.js Bar Chart. Justification=Directly visualizes the significant size/cost difference, a key takeaway. Interaction=Hover for exact values.
+        5. Trade-offs (Pros/Cons): Goal=Compare. Method=Two-column HTML/CSS list. Justification=Presents qualitative data in a balanced, easily digestible format.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f5f4; /* stone-100 */
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 300px;
+                max-height: 350px;
+            }
+        }
+        .nav-link {
+            transition: color 0.3s, border-color 0.3s;
+        }
+        .nav-link.active {
+            color: #f97316; /* orange-500 */
+            border-bottom-color: #f97316; /* orange-500 */
+        }
+    
+.back-to-blog-footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+}
+
+.back-to-blog-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.95rem 1.25rem;
+    border-radius: 14px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.back-to-blog-btn:hover {
+    background: var(--card-hover);
+    border-color: var(--border-hover);
+}
+
+</style>
+</head>
+<body class="text-stone-800">
+<div style="max-width:800px;margin:0 auto;padding:1rem 1.5rem;"><a href="/blog" style="display:inline-flex;align-items:center;gap:0.5rem;color:#71717a;text-decoration:none;font-size:0.9rem;font-family:sans-serif;">← Quay lại Bài viết</a></div>
+
+    <header id="navbar" class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-xl font-bold text-stone-900">QuantumRoot</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#problem" class="nav-link text-stone-600 hover:text-orange-500 px-3 py-2 text-sm font-medium border-b-2 border-transparent">Mối Đe Dọa</a>
+                        <a href="#solution" class="nav-link text-stone-600 hover:text-orange-500 px-3 py-2 text-sm font-medium border-b-2 border-transparent">Giải Pháp</a>
+                        <a href="#how-it-works" class="nav-link text-stone-600 hover:text-orange-500 px-3 py-2 text-sm font-medium border-b-2 border-transparent">Cách Hoạt Động</a>
+                        <a href="#tradeoffs" class="nav-link text-stone-600 hover:text-orange-500 px-3 py-2 text-sm font-medium border-b-2 border-transparent">Đánh Đổi</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <section id="hero" class="text-center py-16 md:py-24">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-stone-900 tracking-tight">Lá Chắn Lượng Tử cho Bitcoin</h1>
+            <p class="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-stone-600">Một bản phân tích tương tác về QuantumRoot – giải pháp nâng cấp bảo mật cho Bitcoin trong kỷ nguyên máy tính lượng tử.</p>
+        </section>
+
+        <section id="problem" class="pt-16">
+            <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-6 md:p-10">
+                <div class="text-center">
+                    <span class="text-sm font-semibold uppercase text-orange-500 tracking-wider">Vấn đề</span>
+                    <h2 class="mt-2 text-3xl font-bold text-stone-900">Mối Đe Dọa Lượng Tử</h2>
+                    <p class="mt-4 text-lg text-stone-600">Sự phát triển của máy tính lượng tử đặt ra một mối đe dọa υπαρξιακός (hiện hữu) cho Bitcoin. Các thuật toán lượng tử như Shor có thể phá vỡ mật mã ECDSA hiện tại, vốn là nền tảng bảo mật cho mọi ví Bitcoin.</p>
+                </div>
+                <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+                    <div class="bg-stone-50 p-6 rounded-xl">
+                        <p class="text-6xl">🔓</p>
+                        <h3 class="mt-4 text-xl font-semibold text-stone-800">Lỗ Hổng Hiện Tại</h3>
+                        <p class="mt-2 text-stone-600">Chữ ký số ECDSA của Bitcoin an toàn với máy tính cổ điển, nhưng sẽ dễ dàng bị giải mã bởi một máy tính lượng tử đủ mạnh.</p>
+                    </div>
+                    <div class="bg-stone-50 p-6 rounded-xl">
+                        <p class="text-6xl">⏱️</p>
+                        <h3 class="mt-4 text-xl font-semibold text-stone-800">Cuộc Chạy Đua Thời Gian</h3>
+                        <p class="mt-2 text-stone-600">Việc nâng cấp hệ thống để chống lại mối đe dọa này là cần thiết trước khi máy tính lượng tử trở nên phổ biến và đủ khả năng tấn công.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="solution" class="pt-16">
+            <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-6 md:p-10">
+                <div class="text-center">
+                    <span class="text-sm font-semibold uppercase text-orange-500 tracking-wider">Giải pháp</span>
+                    <h2 class="mt-2 text-3xl font-bold text-stone-900">QuantumRoot: Lá Chắn Lai</h2>
+                    <p class="mt-4 text-lg text-stone-600">QuantumRoot không loại bỏ công nghệ hiện có. Thay vào đó, nó đề xuất một giải pháp "lai" thông minh: kết hợp chữ ký Schnorr nhỏ gọn của Taproot với chữ ký Lamport cồng kềnh nhưng kháng lượng tử.</p>
+                </div>
+                <div class="mt-10 md:grid md:grid-cols-2 md:gap-10 items-center">
+                    <div class="chart-container">
+                        <canvas id="compositionChart"></canvas>
+                    </div>
+                    <div class="mt-8 md:mt-0">
+                        <h3 class="text-xl font-semibold text-stone-800">Thành phần của một chữ ký QuantumRoot</h3>
+                        <p class="mt-2 text-stone-600">Biểu đồ này minh họa cách chữ ký Lamport chiếm phần lớn cấu trúc để đảm bảo khả năng kháng lượng tử, trong khi chữ ký Schnorr vẫn được giữ lại để tương thích và hiệu quả.</p>
+                        <ul class="mt-6 space-y-4">
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 w-6 h-6 rounded-full bg-[#a855f7] mt-1"></div>
+                                <div class="ml-4">
+                                    <p class="font-semibold text-stone-700">Chữ ký Lamport (Kháng lượng tử)</p>
+                                    <p class="text-stone-600 text-sm">Cung cấp lớp bảo vệ chính chống lại máy tính lượng tử, nhưng chỉ dùng được một lần và rất lớn.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 w-6 h-6 rounded-full bg-[#f97316] mt-1"></div>
+                                <div class="ml-4">
+                                    <p class="font-semibold text-stone-700">Chữ ký Schnorr (Tiêu chuẩn)</p>
+                                    <p class="text-stone-600 text-sm">Nhỏ gọn, hiệu quả và đã được triển khai trong bản nâng cấp Taproot, đảm bảo tương thích ngược.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="pt-16">
+            <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-6 md:p-10">
+                <div class="text-center">
+                    <span class="text-sm font-semibold uppercase text-orange-500 tracking-wider">Cơ chế</span>
+                    <h2 class="mt-2 text-3xl font-bold text-stone-900">Quy Trình Giao Dịch</h2>
+                    <p class="mt-4 text-lg text-stone-600">Một giao dịch QuantumRoot diễn ra theo một quy trình hai bước rõ ràng, đòi hỏi sự xác thực từ cả hai hệ thống mật mã để đảm bảo an toàn tuyệt đối.</p>
+                </div>
+                <div class="mt-10 flex flex-col md:flex-row items-center justify-center gap-8">
+                    <div class="text-center border-2 border-dashed border-stone-300 p-8 rounded-xl flex-1">
+                        <p class="text-5xl">📥</p>
+                        <h3 class="mt-4 text-xl font-semibold text-stone-800">Bước 1: Tạo địa chỉ</h3>
+                        <p class="mt-2 text-stone-600">Người dùng kết hợp khóa công khai Schnorr và khóa công khai Lamport để tạo ra một địa chỉ QuantumRoot duy nhất cho việc nhận tiền.</p>
+                    </div>
+                    <div class="text-5xl font-light text-orange-400 transform md:rotate-0 rotate-90">&rarr;</div>
+                    <div class="text-center border-2 border-dashed border-stone-300 p-8 rounded-xl flex-1">
+                        <p class="text-5xl">📤</p>
+                        <h3 class="mt-4 text-xl font-semibold text-stone-800">Bước 2: Chi tiêu</h3>
+                        <p class="mt-2 text-stone-600">Để gửi tiền đi, người dùng phải cung cấp cả hai chữ ký tương ứng. Mạng lưới sẽ xác thực cả hai trước khi phê duyệt giao dịch.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tradeoffs" class="pt-16">
+            <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-6 md:p-10">
+                <div class="text-center">
+                    <span class="text-sm font-semibold uppercase text-orange-500 tracking-wider">Phân tích</span>
+                    <h2 class="mt-2 text-3xl font-bold text-stone-900">Sự Đánh Đổi</h2>
+                    <p class="mt-4 text-lg text-stone-600">Bảo mật lượng tử không miễn phí. QuantumRoot mang đến một sự đánh đổi rõ ràng giữa an toàn tối đa và hiệu quả hoạt động.</p>
+                </div>
+
+                <div class="mt-10">
+                    <h3 class="text-xl font-semibold text-stone-800 text-center">So sánh Kích thước Giao dịch</h3>
+                    <p class="text-center text-stone-600 mt-2 mb-4">An toàn hơn đồng nghĩa với việc giao dịch lớn hơn, dẫn đến chi phí cao hơn. Biểu đồ dưới đây so sánh kích thước ước tính (tính bằng virtual bytes) của một giao dịch QuantumRoot so với giao dịch Taproot tiêu chuẩn.</p>
+                    <div class="chart-container h-[250px] max-h-[300px]">
+                        <canvas id="sizeComparisonChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold text-stone-800 flex items-center"><span class="text-green-500 mr-2">✅</span> Ưu điểm</h3>
+                        <ul class="mt-4 space-y-3 text-stone-600 list-disc list-inside">
+                            <li><strong>Bảo mật lượng tử:</strong> Cung cấp sự bảo vệ cao nhất cho tài sản trước các cuộc tấn công trong tương lai.</li>
+                            <li><strong>Tương thích ngược:</strong> Xây dựng trên nền tảng Taproot có sẵn, không yêu cầu thay đổi toàn bộ hệ thống (hard fork).</li>
+                            <li><strong>Tự nguyện tham gia:</strong> Người dùng có thể lựa chọn sử dụng tùy theo nhu cầu bảo mật của mình.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-stone-800 flex items-center"><span class="text-red-500 mr-2">❌</span> Nhược điểm</h3>
+                        <ul class="mt-4 space-y-3 text-stone-600 list-disc list-inside">
+                            <li><strong>Phí giao dịch cao:</strong> Kích thước giao dịch lớn hơn hàng chục lần, dẫn đến chi phí cao hơn đáng kể.</li>
+                            <li><strong>Phức tạp trong quản lý:</strong> Các khóa Lamport chỉ dùng một lần đòi hỏi phần mềm ví phải thông minh và cẩn trọng hơn.</li>
+                            <li><strong>Tăng gánh nặng dữ liệu:</strong> Giao dịch lớn hơn làm tăng kích thước của blockchain theo thời gian.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="text-center py-10 mt-16 border-t border-stone-200">
+        <p class="text-sm text-stone-500">&copy; 2025. Ứng dụng tương tác được tạo dựa trên tài liệu về QuantumRoot.</p>
+    </footer>
+
+    <script>
+        const chartJsTooltip = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                                return label.join(' ');
+                            } else {
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        };
+
+        const compositionCtx = document.getElementById('compositionChart').getContext('2d');
+        new Chart(compositionCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Chữ ký Lamport (Kháng lượng tử)', 'Chữ ký Schnorr (Tiêu chuẩn)'],
+                datasets: [{
+                    label: 'Thành phần chữ ký',
+                    data: [85, 15],
+                    backgroundColor: ['#a855f7', '#f97316'],
+                    borderColor: '#ffffff',
+                    borderWidth: 5,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: chartJsTooltip.plugins.tooltip
+                },
+                cutout: '75%'
+            }
+        });
+
+        const sizeComparisonCtx = document.getElementById('sizeComparisonChart').getContext('2d');
+        new Chart(sizeComparisonCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Giao dịch Taproot Tiêu chuẩn', 'Giao dịch QuantumRoot'],
+                datasets: [{
+                    label: 'Kích thước giao dịch (vBytes)',
+                    data: [300, 4500],
+                    backgroundColor: ['#f97316', '#a855f7'],
+                    borderRadius: 6,
+                    barPercentage: 0.6
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            color: '#e7e5e4'
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: chartJsTooltip.plugins.tooltip
+                }
+            }
+        });
+
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+    <div style="text-align: center; padding: 3rem 0;">
+        <a href="/" style="display: inline-block; background-color: #3498db; color: white; padding: 0.8rem 1.8rem; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: 2px solid transparent; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            Quay lại Trang Bài viết
+        </a>
+    </div>
+</body>
+</html>

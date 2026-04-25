@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citrea: Tương lai của việc mở rộng Bitcoin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .flow-chart-node {
+            border: 2px solid;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .flow-chart-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 0.5rem;
+        }
+    
+.back-to-blog-footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+}
+
+.back-to-blog-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.95rem 1.25rem;
+    border-radius: 14px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.back-to-blog-btn:hover {
+    background: var(--card-hover);
+    border-color: var(--border-hover);
+}
+
+</style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+<div style="max-width:800px;margin:0 auto;padding:1rem 1.5rem;"><a href="/blog" style="display:inline-flex;align-items:center;gap:0.5rem;color:#71717a;text-decoration:none;font-size:0.9rem;font-family:sans-serif;">← Quay lại Bài viết</a></div>
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-[#004E89]">Citrea: Mở rộng Bitcoin với Công nghệ Zero-Knowledge</h1>
+            <p class="text-xl mt-4 text-[#407899]">Mở khóa tiềm năng của Bitcoin cho DeFi và hơn thế nữa.</p>
+        </header>
+
+        <main class="space-y-12">
+            <section class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-[#004E89] mb-4">Citrea là gì?</h2>
+                <p class="text-lg text-[#407899]">Citrea là rollup đầu tiên giúp tăng cường khả năng của không gian khối Bitcoin bằng công nghệ không kiến thức, giúp mọi thứ có thể được xây dựng trên Bitcoin. Bằng cách tạo ra một môi trường thực thi có khả năng biểu đạt và mở rộng cao hơn, Citrea đặt mục tiêu thúc đẩy một làn sóng đổi mới trên blockchain an toàn nhất thế giới.</p>
+            </section>
+            
+            <section class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold text-[#004E89] mb-4">Các chỉ số hiệu suất chính</h3>
+                    <div class="chart-container">
+                        <canvas id="performanceChart"></canvas>
+                    </div>
+                     <p class="text-md mt-4 text-[#407899]">Citrea cải thiện đáng kể thông lượng giao dịch và giảm chi phí so với lớp cơ sở của Bitcoin, cho phép các ứng dụng trước đây không khả thi.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold text-[#004E89] mb-4">Tăng trưởng hệ sinh thái</h3>
+                    <div class="chart-container">
+                        <canvas id="ecosystemChart"></canvas>
+                    </div>
+                    <p class="text-md mt-4 text-[#407899]">Hệ sinh thái Citrea được dự báo sẽ phát triển nhanh chóng, thu hút các nhà phát triển và người dùng bằng các khả năng nâng cao và phí giao dịch thấp.</p>
+                </div>
+            </section>
+            
+            <section class="bg-white rounded-lg shadow-md p-6 md:col-span-2">
+                <h2 class="text-2xl font-bold text-[#004E89] mb-4">Cách Citrea hoạt động: Luồng đơn giản hóa</h2>
+                <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0">
+                    <div class="flow-chart-node border-[#004E89] text-[#004E89]">Người dùng bắt đầu một giao dịch trên Citrea</div>
+                    <div class="flow-chart-arrow text-[#407899]">&#10140;</div>
+                    <div class="flow-chart-node border-[#0077B6] text-[#0077B6]">Giao dịch được xử lý ngoài chuỗi trong rollup của Citrea</div>
+                    <div class="flow-chart-arrow text-[#407899]">&#10140;</div>
+                    <div class="flow-chart-node border-[#90E0EF] text-[#90E0EF]">Một bằng chứng không kiến thức của lô giao dịch được tạo ra</div>
+                    <div class="flow-chart-arrow text-[#407899]">&#10140;</div>
+                    <div class="flow-chart-node border-[#CAF0F8] text-[#CAF0F8]">Bằng chứng được gửi đến chuỗi khối Bitcoin để xác minh</div>
+                </div>
+                <p class="text-md mt-6 text-[#407899]">Quy trình này cho phép Citrea đạt được khả năng mở rộng cao trong khi vẫn kế thừa tính bảo mật của mạng Bitcoin. Bằng cách gộp hàng nghìn giao dịch vào một bằng chứng duy nhất, Citrea giảm đáng kể lượng dữ liệu cần được lưu trữ trên chuỗi khối Bitcoin.</p>
+            </section>
+
+            <section class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold text-[#004E89] mb-4">So sánh các trường hợp sử dụng</h3>
+                    <div class="chart-container">
+                        <canvas id="useCaseChart"></canvas>
+                    </div>
+                    <p class="text-md mt-4 text-[#407899]">Citrea mở ra một loạt các trường hợp sử dụng mới trên Bitcoin, từ các ứng dụng DeFi phức tạp đến trò chơi và mạng xã hội, những thứ không thực tế trên lớp cơ sở do phí cao và thời gian xác nhận chậm.</p>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold text-[#004E89] mb-4">Mô hình bảo mật</h3>
+                    <div class="chart-container">
+                        <canvas id="securityChart"></canvas>
+                    </div>
+                     <p class="text-md mt-4 text-[#407899]">Bảo mật của Citrea bắt nguồn sâu sắc từ mạng Bitcoin. Bằng cách tận dụng các bằng chứng không kiến thức, nó đảm bảo rằng tất cả các chuyển đổi trạng thái đều hợp lệ, cung cấp mức độ bảo mật cao cho tất cả các ứng dụng được xây dựng trên nền tảng.</p>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 text-[#407899]">
+            <p>Để biết thêm thông tin, hãy truy cập <a href="https://citrea.xyz" class="text-[#0077B6] hover:underline">citrea.xyz</a></p>
+            <p class="text-sm mt-2">Được tạo vào ngày 19 tháng 7 năm 2025</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const wrapLabel = (label) => {
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + ' ' + word).trim().length > 16) {
+                    lines.push(currentLine.trim());
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            });
+            if (currentLine) {
+                lines.push(currentLine.trim());
+            }
+            return lines;
+        };
+        
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+              return label.join(' ');
+            } else {
+              return label;
+            }
+        };
+
+        const performanceCtx = document.getElementById('performanceChart').getContext('2d');
+        new Chart(performanceCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Thông lượng giao dịch (TPS)', 'Chi phí giao dịch (USD)'],
+                datasets: [{
+                    label: 'Bitcoin',
+                    data: [7, 25],
+                    backgroundColor: '#CAF0F8',
+                }, {
+                    label: 'Citrea',
+                    data: [2000, 0.01],
+                    backgroundColor: '#0077B6',
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        type: 'logarithmic',
+                    }
+                },
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+
+        const ecosystemCtx = document.getElementById('ecosystemChart').getContext('2d');
+        new Chart(ecosystemCtx, {
+            type: 'line',
+            data: {
+                labels: ['Quý 3 2025', 'Quý 4 2025', 'Quý 1 2026', 'Quý 2 2026'],
+                datasets: [{
+                    label: 'Số lượng dự án',
+                    data: [10, 50, 150, 300],
+                    borderColor: '#0077B6',
+                    backgroundColor: 'rgba(0, 119, 182, 0.1)',
+                    fill: true,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                 plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+
+        const useCaseCtx = document.getElementById('useCaseChart').getContext('2d');
+        new Chart(useCaseCtx, {
+            type: 'radar',
+            data: {
+                labels: ['DeFi', 'NFT', 'Trò chơi', 'Mạng xã hội', 'Thanh toán'],
+                datasets: [{
+                    label: 'Bitcoin',
+                    data: [3, 5, 2, 1, 8],
+                    backgroundColor: 'rgba(202, 240, 248, 0.5)',
+                    borderColor: '#CAF0F8',
+                    pointBackgroundColor: '#CAF0F8',
+                }, {
+                    label: 'Citrea',
+                    data: [9, 8, 9, 7, 9],
+                    backgroundColor: 'rgba(0, 119, 182, 0.5)',
+                    borderColor: '#0077B6',
+                    pointBackgroundColor: '#0077B6',
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                 plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+
+        const securityCtx = document.getElementById('securityChart').getContext('2d');
+        new Chart(securityCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Kế thừa bảo mật Bitcoin', 'Bằng chứng hợp lệ ZK-Rollup', 'Tính sẵn có của dữ liệu trên Bitcoin'],
+                datasets: [{
+                    data: [50, 30, 20],
+                    backgroundColor: ['#004E89', '#0077B6', '#90E0EF'],
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                 plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+    <div style="text-align: center; padding: 3rem 0;">
+        <a href="/" style="display: inline-block; background-color: #3498db; color: white; padding: 0.8rem 1.8rem; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: 2px solid transparent; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            Quay lại Trang Bài viết
+        </a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài viết - Escbase</title>
+    <meta name="description" content="Tất cả bài viết phân tích thị trường Crypto, blockchain, AI và geopolitics trên Escbase.">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body data-page="blog">
+    <div class="app-container">
+        <header class="mobile-header">
+            <a href="/" class="mobile-logo">
+                <img src="/esclogo.png" alt="Escbase - Trang phân tích Crypto hàng ngày">
+                <span>Escbase</span>
+            </a>
+            <button class="hamburger" onclick="toggleMobileNav()" aria-label="Mở menu điều hướng">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </header>
+
+        <nav class="mobile-nav" id="mobileNav">
+            <a href="/" class="nav-item" onclick="toggleMobileNav()"><i class="fas fa-home"></i> Trang chủ</a>
+            <a href="/blog" class="nav-item active" onclick="toggleMobileNav()"><i class="fas fa-newspaper"></i> Bài viết</a>
+            <a href="/videos" class="nav-item" onclick="toggleMobileNav()"><i class="fas fa-play-circle"></i> Video</a>
+            <div class="social-links">
+                <a href="https://www.youtube.com/@ESCBase" target="_blank" class="social-btn" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://x.com/escbasexyz" target="_blank" class="social-btn" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </nav>
+
+        <aside class="sidebar">
+            <a href="/" class="brand">
+                <img src="/esclogo.png" alt="Escbase - Trang phân tích Crypto hàng ngày">
+                <div class="brand-info">
+                    <h1>Escbase</h1>
+                    <p>Crypto Intelligence</p>
+                </div>
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="/" class="nav-item"><i class="fas fa-home"></i> Trang chủ</a></li>
+                <li><a href="/blog" class="nav-item active"><i class="fas fa-newspaper"></i> Bài viết</a></li>
+                <li><a href="/videos" class="nav-item"><i class="fas fa-video"></i> Video</a></li>
+            </ul>
+            <div class="social-links">
+                <a href="https://www.youtube.com/@ESCBase" target="_blank" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://x.com/escbasexyz" target="_blank" class="social-btn" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <span class="page-label">Bài viết</span>
+                <h1>Tất cả bài viết trên Escbase</h1>
+                <p>Phân tích crypto, blockchain, AI và các chuyển động đáng chú ý của thị trường theo kiểu ngắn gọn, dễ đọc.</p>
+            </header>
+
+            <div class="bento-grid" id="postsGrid">
+                <!-- Auto-generated latest posts -->
+            </div>
+        </main>
+    </div>
+
+    <script src="/shared-layout.js"></script>
+    <script>
+        fetch('/blog.json')
+            .then(r => r.json())
+            .then(posts => {
+                const grid = document.getElementById('postsGrid');
+                grid.innerHTML = posts.map(post => `
+                    <a href="${post.url}" class="bento-item col-4">
+                        <div class="card-meta">
+                            <span class="card-tag" style="color:${post.tagColor};border-color:${post.tagColor}33;background:${post.tagColor}1a;">
+                                <i class="${post.tagIcon || 'fas fa-newspaper'}"></i> ${post.tag}
+                            </span>
+                            <span class="card-date">${post.date}</span>
+                        </div>
+                        <h3 class="card-title">${post.title}</h3>
+                        <p class="card-excerpt">${post.excerpt}</p>
+                        <div class="card-footer">
+                            <span class="read-time"><i class="far fa-clock"></i> ${post.readTime}</span>
+                        </div>
+                    </a>
+                `).join('');
+            })
+            .catch(err => {
+                console.error('Error loading posts:', err);
+                document.getElementById('postsGrid').innerHTML = '<p style="color: var(--text-muted);">Không thể tải bài viết.</p>';
+            });
+    </script>
+</body>
+
+</html>
