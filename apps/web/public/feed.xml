@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Sat, 25 Apr 2026 16:18:58 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 25 Apr 2026 16:47:14 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Google Maps Nâng Cấp Imagery Insights: Aerial, Satellite, Solar Và Street View LiDAR Tại Cloud Next 2026</title>
+      <link>https://escbase.xyz/blog/google-maps-imagery-insights-cloud-next-2026</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/google-maps-imagery-insights-cloud-next-2026</guid>
+      <pubDate>Sat, 25 Apr 2026 00:00:00 GMT</pubDate>
+      <description>Google Maps Platform công bố 4 nâng cấp lớn cho Imagery Insights tại Cloud Next 2026: Aerial &amp; Satellite Insights phân tích ảnh vệ tinh qua BigQuery, Solar Insights phủ 90% toà nhà Mỹ và EU, Street View LiDAR 280 tỷ ảnh, và Maps Imagery Grounding cho generative AI. Cộng đồng hào hứng nhưng lo ngại privacy và vendor lock-in.</description>
+      <category>Geospatial AI</category>
+      <enclosure url="https://escbase.xyz/images/google-maps-imagery-insights-thumb.svg" type="image/svg+xml" length="0" />
+    </item>
     <item>
       <title>Google Maps Ra Population Dynamics Insights: Biến Hành Vi Con Người Thành Embeddings Cho ML</title>
       <link>https://escbase.xyz/blog/google-maps-population-dynamics-insights</link>
@@ -447,15 +456,6 @@
       <description>MiniMax vừa ra mắt MMX-CLI để cho AI agent thêm 7 giác quan: image, video, speech, music, vision, search và conversation. Đây không chỉ là thêm tool, mà là cách biến agent thành giao diện đa phương thức thật sự.</description>
       <category>AI Agents</category>
       <enclosure url="https://escbase.xyz/images/minimax-mmx-cli-thumb.jpg" type="image/jpeg" length="0" />
-    </item>
-    <item>
-      <title>Shopify AI Toolkit: Shopify Muốn Biến Claude Code, Codex Và Cursor Thành Bảng Điều Khiển Cửa Hàng</title>
-      <link>https://escbase.xyz/blog/shopify-ai-toolkit</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/shopify-ai-toolkit</guid>
-      <pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate>
-      <description>Shopify vừa tung AI Toolkit để kết nối các AI coding agents như Claude Code, Codex, Cursor, Gemini CLI và VS Code trực tiếp với nền tảng Shopify. Đây là nước đi nghiêm túc để biến agent thành lớp điều khiển mới cho vận hành e-commerce.</description>
-      <category>Shopify &amp; AI</category>
-      <enclosure url="https://escbase.xyz/images/shopify-ai-toolkit-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>

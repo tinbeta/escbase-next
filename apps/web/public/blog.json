@@ -1,5 +1,17 @@
 [
     {
+        "url": "/blog/google-maps-imagery-insights-cloud-next-2026",
+        "title": "Google Maps Nâng Cấp Imagery Insights: Aerial, Satellite, Solar Và Street View LiDAR Tại Cloud Next 2026",
+        "excerpt": "Google Maps Platform công bố 4 nâng cấp lớn cho Imagery Insights tại Cloud Next 2026: Aerial & Satellite Insights phân tích ảnh vệ tinh qua BigQuery, Solar Insights phủ 90% toà nhà Mỹ và EU, Street View LiDAR 280 tỷ ảnh, và Maps Imagery Grounding cho generative AI. Cộng đồng hào hứng nhưng lo ngại privacy và vendor lock-in.",
+        "date": "Apr 25, 2026",
+        "tag": "Geospatial AI",
+        "tagIcon": "fas fa-satellite",
+        "tagColor": "#4285f4",
+        "readTime": "8 min read",
+        "featured": true,
+        "image": "/images/google-maps-imagery-insights-thumb.svg"
+    },
+    {
         "url": "/blog/google-maps-population-dynamics-insights",
         "title": "Google Maps Ra Population Dynamics Insights: Biến Hành Vi Con Người Thành Embeddings Cho ML",
         "excerpt": "Google Maps Platform vừa công bố PDI — bộ geospatial embeddings đầu tiên chưng cất tín hiệu từ Google Search, Maps, thời tiết và chất lượng không khí thành vector 330 chiều, giao thẳng vào BigQuery. Không cần feature engineering, hiện có ở 17 quốc gia, cập nhật hàng tháng.",

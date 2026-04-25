@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4285f4"/>
+      <stop offset="50%" style="stop-color:#34a853"/>
+      <stop offset="100%" style="stop-color:#fbbc05"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" fill="url(#bg)"/>
+  <!-- Grid pattern -->
+  <g opacity="0.08">
+    <line x1="0" y1="60" x2="800" y2="60" stroke="#60a5fa" stroke-width="0.5"/>
+    <line x1="0" y1="120" x2="800" y2="120" stroke="#60a5fa" stroke-width="0.5"/>
+    <line x1="0" y1="180" x2="800" y2="180" stroke="#60a5fa" stroke-width="0.5"/>
+    <line x1="0" y1="240" x2="800" y2="240" stroke="#60a5fa" stroke-width="0.5"/>
+    <line x1="0" y1="300" x2="800" y2="300" stroke="#60a5fa" stroke-width="0.5"/>
+    <line x1="0" y1="360" x2="800" y2="360" stroke="#60a5fa" stroke-width="0.5"/>
+    <line x1="100" y1="0" x2="100" y2="420" stroke="#60a5fa" stroke-width="0.5"/>
+    <line x1="200" y1="0" x2="200" y2="420" stroke="#60a5fa" stroke-width="0.5"/>
+    <line x1="300" y1="0" x2="300" y2="420" stroke="#60a5fa" stroke-width="0.5"/>
+    <line x1="400" y1="0" x2="400" y2="420" stroke="#60a5fa" stroke-width="0.5"/>
+    <line x1="500" y1="0" x2="500" y2="420" stroke="#60a5fa" stroke-width="0.5"/>
+    <line x1="600" y1="0" x2="600" y2="420" stroke="#60a5fa" stroke-width="0.5"/>
+    <line x1="700" y1="0" x2="700" y2="420" stroke="#60a5fa" stroke-width="0.5"/>
+  </g>
+  <!-- Satellite icon -->
+  <g transform="translate(80,80)" opacity="0.15">
+    <circle cx="40" cy="40" r="35" fill="none" stroke="#4285f4" stroke-width="2"/>
+    <circle cx="40" cy="40" r="20" fill="none" stroke="#4285f4" stroke-width="1.5"/>
+    <circle cx="40" cy="40" r="5" fill="#4285f4"/>
+    <line x1="40" y1="5" x2="40" y2="0" stroke="#4285f4" stroke-width="2"/>
+    <line x1="40" y1="75" x2="40" y2="80" stroke="#4285f4" stroke-width="2"/>
+    <line x1="5" y1="40" x2="0" y2="40" stroke="#4285f4" stroke-width="2"/>
+    <line x1="75" y1="40" x2="80" y2="40" stroke="#4285f4" stroke-width="2"/>
+  </g>
+  <!-- Sun/Solar icon -->
+  <g transform="translate(620,60)" opacity="0.12">
+    <circle cx="30" cy="30" r="15" fill="#fbbc05"/>
+    <g stroke="#fbbc05" stroke-width="2">
+      <line x1="30" y1="5" x2="30" y2="0"/>
+      <line x1="30" y1="55" x2="30" y2="60"/>
+      <line x1="5" y1="30" x2="0" y2="30"/>
+      <line x1="55" y1="30" x2="60" y2="30"/>
+      <line x1="12" y1="12" x2="8" y2="8"/>
+      <line x1="48" y1="48" x2="52" y2="52"/>
+      <line x1="48" y1="12" x2="52" y2="8"/>
+      <line x1="12" y1="48" x2="8" y2="52"/>
+    </g>
+  </g>
+  <!-- LiDAR waves -->
+  <g transform="translate(650,270)" opacity="0.12">
+    <path d="M0,40 Q30,-20 60,40" fill="none" stroke="#34a853" stroke-width="2"/>
+    <path d="M-10,40 Q30,-40 70,40" fill="none" stroke="#34a853" stroke-width="1.5"/>
+    <path d="M-20,40 Q30,-60 80,40" fill="none" stroke="#34a853" stroke-width="1"/>
+  </g>
+  <!-- Accent bar -->
+  <rect x="60" y="140" width="4" height="80" rx="2" fill="url(#accent)"/>
+  <!-- Title -->
+  <text x="80" y="170" font-family="Inter,system-ui,sans-serif" font-size="28" font-weight="800" fill="#f8fafc">
+    Google Maps Imagery Insights
+  </text>
+  <text x="80" y="205" font-family="Inter,system-ui,sans-serif" font-size="22" font-weight="600" fill="#94a3b8">
+    Aerial · Satellite · Solar · Street View LiDAR
+  </text>
+  <!-- Badges -->
+  <rect x="80" y="240" width="140" height="30" rx="15" fill="rgba(66,133,244,0.15)" stroke="rgba(66,133,244,0.3)" stroke-width="1"/>
+  <text x="150" y="260" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="600" fill="#60a5fa" text-anchor="middle">Cloud Next 2026</text>
+  <rect x="235" y="240" width="110" height="30" rx="15" fill="rgba(52,168,83,0.15)" stroke="rgba(52,168,83,0.3)" stroke-width="1"/>
+  <text x="290" y="260" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="600" fill="#34a853" text-anchor="middle">Earth AI</text>
+  <rect x="360" y="240" width="100" height="30" rx="15" fill="rgba(251,188,5,0.15)" stroke="rgba(251,188,5,0.3)" stroke-width="1"/>
+  <text x="410" y="260" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="600" fill="#fbbc05" text-anchor="middle">BigQuery</text>
+  <!-- Stats -->
+  <g transform="translate(80,300)">
+    <text font-family="Inter,system-ui,sans-serif" font-size="32" font-weight="800" fill="#60a5fa">280B+</text>
+    <text x="0" y="22" font-family="Inter,system-ui,sans-serif" font-size="11" fill="#64748b">Street View Images</text>
+  </g>
+  <g transform="translate(260,300)">
+    <text font-family="Inter,system-ui,sans-serif" font-size="32" font-weight="800" fill="#34a853">90%</text>
+    <text x="0" y="22" font-family="Inter,system-ui,sans-serif" font-size="11" fill="#64748b">US+EU Solar Coverage</text>
+  </g>
+  <g transform="translate(430,300)">
+    <text font-family="Inter,system-ui,sans-serif" font-size="32" font-weight="800" fill="#fbbc05">3D</text>
+    <text x="0" y="22" font-family="Inter,system-ui,sans-serif" font-size="11" fill="#64748b">LiDAR Measurements</text>
+  </g>
+  <!-- Footer -->
+  <text x="80" y="390" font-family="Inter,system-ui,sans-serif" font-size="11" fill="#475569">escbase.xyz</text>
+  <text x="720" y="390" font-family="Inter,system-ui,sans-serif" font-size="11" fill="#475569" text-anchor="end">Geospatial AI</text>
+</svg>
