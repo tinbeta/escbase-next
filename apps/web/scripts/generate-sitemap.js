@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync, existsSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -12,7 +12,17 @@ const staticPages = [
   { loc: '/', priority: '1.0', changefreq: 'daily' },
   { loc: '/blog', priority: '0.9', changefreq: 'daily' },
   { loc: '/videos', priority: '0.7', changefreq: 'daily' },
+  { loc: '/privacy', priority: '0.3' },
+  { loc: '/tos', priority: '0.3' },
 ];
+
+// Auto-discover report pages
+const reportsDir = resolve(publicDir, 'reports');
+const reportPages = existsSync(reportsDir)
+  ? readdirSync(reportsDir, { withFileTypes: true })
+      .filter((d) => d.isDirectory() && existsSync(resolve(reportsDir, d.name, 'index.html')))
+      .map((d) => ({ loc: `/reports/${d.name}`, priority: '0.6' }))
+  : [];
 
 function toISODate(dateStr) {
   if (!dateStr) return new Date().toISOString().split('T')[0];
@@ -24,9 +34,9 @@ function toISODate(dateStr) {
 }
 
 const urls = [
-  ...staticPages.map(
+  ...[...staticPages, ...reportPages].map(
     (p) =>
-      `  <url>\n    <loc>${SITE}${p.loc}</loc>\n    <changefreq>${p.changefreq}</changefreq>\n    <priority>${p.priority}</priority>\n  </url>`
+      `  <url>\n    <loc>${SITE}${p.loc}</loc>${p.changefreq ? `\n    <changefreq>${p.changefreq}</changefreq>` : ''}\n    <priority>${p.priority}</priority>\n  </url>`
   ),
   ...posts.map(
     (post) =>
@@ -41,4 +51,5 @@ ${urls.join('\n')}
 `;
 
 writeFileSync(resolve(publicDir, 'sitemap.xml'), sitemap, 'utf-8');
-console.log(`✓ sitemap.xml generated — ${posts.length} posts + ${staticPages.length} static pages`);
+const totalStatic = staticPages.length + reportPages.length;
+console.log(`✓ sitemap.xml generated — ${posts.length} posts + ${totalStatic} static pages (incl. ${reportPages.length} reports)`);

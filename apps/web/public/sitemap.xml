@@ -16,6 +16,50 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://escbase.xyz/privacy</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://escbase.xyz/tos</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://escbase.xyz/reports/report_2026_02_22</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://escbase.xyz/reports/report_2026_02_23</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://escbase.xyz/reports/report_2026_02_25</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://escbase.xyz/reports/report_2026_02_26</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://escbase.xyz/reports/report_2026_02_27</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://escbase.xyz/reports/report_2026_02_28</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://escbase.xyz/reports/report_2026_03_01</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://escbase.xyz/reports/report_2026_03_02</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://escbase.xyz/reports/report_2026_03_05</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://escbase.xyz/blog/google-maps-population-dynamics-insights</loc>
     <lastmod>2026-04-25</lastmod>
     <priority>0.8</priority>
