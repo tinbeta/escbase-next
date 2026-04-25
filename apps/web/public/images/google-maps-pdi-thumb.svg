@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4285f4"/>
+      <stop offset="100%" style="stop-color:#34a853"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1200" height="4" fill="url(#accent)"/>
+
+  <!-- Grid pattern -->
+  <g opacity="0.08">
+    <line x1="0" y1="100" x2="1200" y2="100" stroke="#60a5fa" stroke-width="0.5"/>
+    <line x1="0" y1="200" x2="1200" y2="200" stroke="#60a5fa" stroke-width="0.5"/>
+    <line x1="0" y1="300" x2="1200" y2="300" stroke="#60a5fa" stroke-width="0.5"/>
+    <line x1="0" y1="400" x2="1200" y2="400" stroke="#60a5fa" stroke-width="0.5"/>
+    <line x1="0" y1="500" x2="1200" y2="500" stroke="#60a5fa" stroke-width="0.5"/>
+    <line x1="200" y1="0" x2="200" y2="630" stroke="#60a5fa" stroke-width="0.5"/>
+    <line x1="400" y1="0" x2="400" y2="630" stroke="#60a5fa" stroke-width="0.5"/>
+    <line x1="600" y1="0" x2="600" y2="630" stroke="#60a5fa" stroke-width="0.5"/>
+    <line x1="800" y1="0" x2="800" y2="630" stroke="#60a5fa" stroke-width="0.5"/>
+    <line x1="1000" y1="0" x2="1000" y2="630" stroke="#60a5fa" stroke-width="0.5"/>
+  </g>
+
+  <!-- Data points -->
+  <g opacity="0.15">
+    <circle cx="150" cy="180" r="40" fill="#4285f4"/>
+    <circle cx="350" cy="280" r="25" fill="#34a853"/>
+    <circle cx="550" cy="150" r="35" fill="#fbbc04"/>
+    <circle cx="750" cy="350" r="30" fill="#ea4335"/>
+    <circle cx="950" cy="220" r="45" fill="#4285f4"/>
+    <circle cx="1050" cy="450" r="20" fill="#34a853"/>
+    <circle cx="250" cy="420" r="28" fill="#fbbc04"/>
+  </g>
+
+  <!-- Connection lines -->
+  <g opacity="0.1" stroke="#60a5fa" stroke-width="1">
+    <line x1="150" y1="180" x2="350" y2="280"/>
+    <line x1="350" y1="280" x2="550" y2="150"/>
+    <line x1="550" y1="150" x2="750" y2="350"/>
+    <line x1="750" y1="350" x2="950" y2="220"/>
+  </g>
+
+  <!-- Google colors bar -->
+  <rect x="80" y="80" width="60" height="4" rx="2" fill="#4285f4"/>
+  <rect x="145" y="80" width="60" height="4" rx="2" fill="#ea4335"/>
+  <rect x="210" y="80" width="60" height="4" rx="2" fill="#fbbc04"/>
+  <rect x="275" y="80" width="60" height="4" rx="2" fill="#34a853"/>
+
+  <!-- Badge -->
+  <rect x="80" y="100" width="220" height="32" rx="16" fill="rgba(66,133,244,0.15)" stroke="rgba(66,133,244,0.3)" stroke-width="1"/>
+  <text x="190" y="121" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#60a5fa" text-anchor="middle">Google Maps Platform</text>
+
+  <!-- Title -->
+  <text x="80" y="190" font-family="Inter, system-ui, sans-serif" font-size="42" font-weight="800" fill="#fafafa" letter-spacing="-0.02em">
+    <tspan x="80" dy="0">Population Dynamics</tspan>
+    <tspan x="80" dy="52">Insights</tspan>
+  </text>
+
+  <!-- Subtitle -->
+  <text x="80" y="310" font-family="Inter, system-ui, sans-serif" font-size="20" fill="#a1a1aa" letter-spacing="-0.01em">
+    <tspan x="80" dy="0">330-dim geospatial embeddings từ Search,</tspan>
+    <tspan x="80" dy="28">Maps, Weather &amp; Air Quality → BigQuery</tspan>
+  </text>
+
+  <!-- Feature chips -->
+  <rect x="80" y="390" width="140" height="36" rx="18" fill="rgba(66,133,244,0.12)" stroke="rgba(66,133,244,0.25)" stroke-width="1"/>
+  <text x="150" y="413" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#60a5fa" text-anchor="middle">Search Trends</text>
+
+  <rect x="235" y="390" width="110" height="36" rx="18" fill="rgba(52,168,83,0.12)" stroke="rgba(52,168,83,0.25)" stroke-width="1"/>
+  <text x="290" y="413" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#34a853" text-anchor="middle">Mobility</text>
+
+  <rect x="360" y="390" width="110" height="36" rx="18" fill="rgba(251,188,4,0.12)" stroke="rgba(251,188,4,0.25)" stroke-width="1"/>
+  <text x="415" y="413" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#fbbc04" text-anchor="middle">Weather</text>
+
+  <rect x="485" y="390" width="120" height="36" rx="18" fill="rgba(234,67,53,0.12)" stroke="rgba(234,67,53,0.25)" stroke-width="1"/>
+  <text x="545" y="413" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#ea4335" text-anchor="middle">Air Quality</text>
+
+  <rect x="620" y="390" width="90" height="36" rx="18" fill="rgba(66,133,244,0.12)" stroke="rgba(66,133,244,0.25)" stroke-width="1"/>
+  <text x="665" y="413" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#60a5fa" text-anchor="middle">Maps</text>
+
+  <!-- Stats -->
+  <text x="80" y="490" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#71717a">
+    <tspan fill="#4285f4">17 quốc gia</tspan>
+    <tspan fill="#3f3f46"> · </tspan>
+    <tspan fill="#34a853">S2 Level 12</tspan>
+    <tspan fill="#3f3f46"> · </tspan>
+    <tspan fill="#fbbc04">Cập nhật hàng tháng</tspan>
+    <tspan fill="#3f3f46"> · </tspan>
+    <tspan fill="#ea4335">Zero feature engineering</tspan>
+  </text>
+
+  <!-- Escbase branding -->
+  <text x="80" y="570" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="700" fill="#fafafa">escbase.xyz</text>
+  <text x="80" y="590" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#71717a">Phân tích Crypto &amp; AI hàng ngày</text>
+</svg>

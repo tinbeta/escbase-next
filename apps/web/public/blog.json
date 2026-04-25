@@ -1,5 +1,17 @@
 [
     {
+        "url": "/blog/google-maps-population-dynamics-insights",
+        "title": "Google Maps Ra Population Dynamics Insights: Biến Hành Vi Con Người Thành Embeddings Cho ML",
+        "excerpt": "Google Maps Platform vừa công bố PDI — bộ geospatial embeddings đầu tiên chưng cất tín hiệu từ Google Search, Maps, thời tiết và chất lượng không khí thành vector 330 chiều, giao thẳng vào BigQuery. Không cần feature engineering, hiện có ở 17 quốc gia, cập nhật hàng tháng.",
+        "date": "Apr 25, 2026",
+        "tag": "Geospatial AI",
+        "tagIcon": "fas fa-map-location-dot",
+        "tagColor": "#4285f4",
+        "readTime": "7 min read",
+        "featured": true,
+        "image": "/images/google-maps-pdi-thumb.svg"
+    },
+    {
         "url": "/blog/solo-founder-stack-2026-agents-distribution",
         "title": "Solo Founder Stack 2026: 5 Việc, 1 Người, Nhưng Moat Thật Vẫn Là Phân Phối",
         "excerpt": "Rohit vừa đẩy mạnh luận điểm one-person company với một stack gồm Claude Code, agent pipelines, Hermes/OpenClaw và Higgsfield. Điểm đáng chú ý không chỉ là chuyện một người làm 5 việc, mà là tranh cãi cộng đồng xoay quanh burnout, chi phí token, phân phối, oncall và việc AI có thật sự thay thế được một team hoàn chỉnh hay không.",
