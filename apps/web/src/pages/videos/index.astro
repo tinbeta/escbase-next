@@ -1,0 +1,149 @@
+---
+// pages/videos/index.astro - Videos page
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Video" 
+  description="Video mới nhất từ kênh Escbase trên YouTube."
+  ogUrl="https://escbase.xyz/videos"
+>
+  <style slot="head">
+    .page-header {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .page-label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+    .page-header h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    .page-header p {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+    .videos-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+    .video-card {
+      display: block;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s;
+    }
+    .video-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    }
+    .video-thumb {
+      aspect-ratio: 16/9;
+      overflow: hidden;
+      border-radius: 8px;
+      margin-bottom: 0.75rem;
+      background: #111;
+    }
+    .video-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .video-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .video-tag {
+      padding: 0.25rem 0.6rem;
+      border-radius: 99px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border: 1px solid;
+    }
+    .video-card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+    .video-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    
+    @media (max-width: 768px) {
+      .videos-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <header class="page-header">
+    <span class="page-label">Video</span>
+    <h1>Video mới nhất từ Escbase</h1>
+    <p>Các video phân tích thị trường, hướng dẫn và cập nhật tin tức crypto.</p>
+  </header>
+
+  <div class="videos-grid" id="videosGrid">
+    <div style="color: var(--text-muted); font-size: 0.9rem; grid-column: 1 / -1;">
+      Đang tải video...
+    </div>
+  </div>
+
+  <script is:inline>
+    fetch('/videos-feed.json')
+      .then(r => r.json())
+      .then(videos => {
+        const dedupe = (items) => {
+          const seen = new Set();
+          return items.filter(v => {
+            const n = (v.title || '').replace(/\s*-\s*full\s*$/i, '').trim().toLowerCase();
+            if (seen.has(n)) return false;
+            seen.add(n);
+            return true;
+          });
+        };
+        const shown = dedupe(videos);
+        const grid = document.getElementById('videosGrid');
+        grid.innerHTML = shown.map(video => `
+          <a class="video-card" href="${video.url}" target="_blank" rel="noreferrer">
+            <div class="video-thumb">
+              <img src="${video.thumb}" alt="${video.title}">
+            </div>
+            <div class="video-meta">
+              <span class="video-tag" style="background:rgba(239,68,68,0.12); color:#ef4444; border-color:rgba(239,68,68,0.24);">
+                <i class="fab fa-youtube"></i> YouTube
+              </span>
+              <span>${video.published || ''}</span>
+            </div>
+            <h3>${video.title}</h3>
+            <p>Video từ kênh Escbase trên YouTube.</p>
+          </a>
+        `).join('');
+      })
+      .catch(() => {
+        document.getElementById('videosGrid').innerHTML = '<p style="color:var(--text-muted);">Không thể tải video.</p>';
+      });
+  </script>
+</BaseLayout>
