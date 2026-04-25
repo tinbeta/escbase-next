@@ -1,4 +1,4 @@
-const CMC_API_KEY = process.env.CMC_API_KEY || '997a7d0976d842fcb2c3fd84f847f7ba';
+const CMC_API_KEY = process.env.CMC_API_KEY || '';
 const DEFAULT_SYMBOLS = ['BTC', 'ETH', 'SOL', 'BNB', 'XRP'];
 const COIN_META = {
   BTC: { icon: '₿', color: '#f7931a' },
