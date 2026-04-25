@@ -1,6 +1,18 @@
 [
     {
-        "url": "/blog/hermes-agent-creative-hackathon-26k-prize-pool",
+        "url": "/blog/solo-founder-stack-2026-agents-distribution",
+        "title": "Solo Founder Stack 2026: 5 Việc, 1 Người, Nhưng Moat Thật Vẫn Là Phân Phối",
+        "excerpt": "Rohit vừa đẩy mạnh luận điểm one-person company với một stack gồm Claude Code, agent pipelines, Hermes/OpenClaw và Higgsfield. Điểm đáng chú ý không chỉ là chuyện một người làm 5 việc, mà là tranh cãi cộng đồng xoay quanh burnout, chi phí token, phân phối, oncall và việc AI có thật sự thay thế được một team hoàn chỉnh hay không.",
+        "date": "Apr 25, 2026",
+        "tag": "Founder Stack",
+        "tagIcon": "fas fa-user-astronaut",
+        "tagColor": "#2563eb",
+        "readTime": "9 min read",
+        "featured": true,
+        "image": "/images/solo-founder-stack-2026-thumb.png"
+    },
+    {
+        "url": "/blog/hermes-agent-creative-hackathon-26k-prize-pool", 
         "title": "Hermes Agent Creative Hackathon: $26K",
         "excerpt": "Nous Research và Kimi tổ chức Hermes Agent Creative Hackathon với $26,000 tiền thưởng. 16 ngày, 2 hạng mục, tập trung vào video, hình ảnh, âm thanh, 3D và phần mềm sáng tạo. Nhưng cộng đồng đang tranh luận: 1000 ý tưởng từ agent có thực sự mới mẻ không?",
         "date": "Apr 25, 2026",
