@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Sun, 26 Apr 2026 13:58:52 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 26 Apr 2026 15:17:56 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cursor Ra /multitask: Async Subagents, Worktrees Mới Và Multi-Root Workspace Đẩy IDE Thành Hạ Tầng Workflow</title>
+      <link>https://escbase.xyz/blog/cursor-multitask-async-subagents-worktrees</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/cursor-multitask-async-subagents-worktrees</guid>
+      <pubDate>Sat, 25 Apr 2026 17:00:00 GMT</pubDate>
+      <description>Cursor vừa giới thiệu /multitask trong giao diện Cursor 3 mới: async subagents chạy song song thay vì xếp hàng, worktrees tốt hơn cho task nền theo branch riêng, và multi-root workspace để một agent session chạm nhiều repo cùng lúc. Đây là một bước đẩy rõ rệt từ coding assistant sang workflow infrastructure.</description>
+      <category>AI Coding</category>
+      <enclosure url="https://escbase.xyz/images/cursor-multitask-async-subagents-worktrees-thumb.svg" type="image/svg+xml" length="0" />
+    </item>
     <item>
       <title>DeepSeek Giảm 75% Giá V4-Pro API Tới 5/5: 1M Context, Cache Hit Chỉ $0.003625</title>
       <link>https://escbase.xyz/blog/deepseek-v4-pro-75-percent-off-api</link>
@@ -447,15 +456,6 @@
       <description>MiniMax vừa open source M2.7 với benchmark mạnh ở SWE-Pro, Terminal Bench 2 và office tasks. Điểm đáng nói không chỉ là benchmark, mà là cách họ định vị M2.7 như một model dành cho agent tự tiến hóa.</description>
       <category>Open Models &amp; Agents</category>
       <enclosure url="https://escbase.xyz/images/minimax-m27-open-source-thumb.jpg" type="image/jpeg" length="0" />
-    </item>
-    <item>
-      <title>GBrain Củа Garry Tan: Khi AI Agent Cần Một Bộ Não Riêng</title>
-      <link>https://escbase.xyz/blog/garry-tan-gbrain</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/garry-tan-gbrain</guid>
-      <pubDate>Sat, 11 Apr 2026 17:00:00 GMT</pubDate>
-      <description>GBrain là dự án mã nguồn mở của Garry Tan để xây dựng personal knowledge base cho AI agent. Agent đọc trước mỗi câu trả lởi và viết lại sau mỗi cuộc trò chuyện — biến trí nhớ từ thụ động thành chủ động.</description>
-      <category>AI &amp; Memory</category>
-      <enclosure url="https://escbase.xyz/images/garry-tan-gbrain-thumb.svg" type="image/svg+xml" length="0" />
     </item>
   </channel>
 </rss>

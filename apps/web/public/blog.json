@@ -1,6 +1,18 @@
 [
     {
-        "url": "/blog/deepseek-v4-pro-75-percent-off-api",
+        "url": "/blog/cursor-multitask-async-subagents-worktrees",
+        "title": "Cursor Ra /multitask: Async Subagents, Worktrees Mới Và Multi-Root Workspace Đẩy IDE Thành Hạ Tầng Workflow",
+        "excerpt": "Cursor vừa giới thiệu /multitask trong giao diện Cursor 3 mới: async subagents chạy song song thay vì xếp hàng, worktrees tốt hơn cho task nền theo branch riêng, và multi-root workspace để một agent session chạm nhiều repo cùng lúc. Đây là một bước đẩy rõ rệt từ coding assistant sang workflow infrastructure.",
+        "date": "Apr 26, 2026",
+        "tag": "AI Coding",
+        "tagIcon": "fas fa-code",
+        "tagColor": "#f59e0b",
+        "readTime": "8 min read",
+        "featured": true,
+        "image": "/images/cursor-multitask-async-subagents-worktrees-thumb.svg"
+    },
+    {
+        "url": "/blog/deepseek-v4-pro-75-percent-off-api", 
         "title": "DeepSeek Giảm 75% Giá V4-Pro API Tới 5/5: 1M Context, Cache Hit Chỉ $0.003625",
         "excerpt": "DeepSeek giảm 75% giá V4-Pro API tới 5/5/2026, kéo giá cache hit xuống $0.003625, cache miss còn $0.435 và output còn $0.87 mỗi 1 triệu token. Điểm đáng chú ý không chỉ là rẻ, mà là DeepSeek đang đóng gói V4-Pro như một model dành thẳng cho Claude Code, OpenCode và OpenClaw workflows.",
         "date": "Apr 26, 2026",
