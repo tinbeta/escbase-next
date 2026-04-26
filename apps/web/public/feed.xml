@@ -5,14 +5,14 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Sun, 26 Apr 2026 13:16:14 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 26 Apr 2026 13:24:08 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>DeepSeek Giảm 75% Giá V4-Pro API Tới 5/5: 1M Context, Cache Hit Chỉ $0.003625</title>
+      <title>DeepSeek Giảm 75% Giá V4-Pro API Tới 5/5: Cache Hit Chỉ $0.03625, 1M Context Cho Agent</title>
       <link>https://escbase.xyz/blog/deepseek-v4-pro-75-percent-off-api</link>
       <guid isPermaLink="true">https://escbase.xyz/blog/deepseek-v4-pro-75-percent-off-api</guid>
       <pubDate>Sat, 25 Apr 2026 17:00:00 GMT</pubDate>
-      <description>DeepSeek giảm 75% giá V4-Pro API tới 5/5/2026, kéo giá cache hit xuống $0.003625, cache miss còn $0.435 và output còn $0.87 mỗi 1 triệu token. Điểm đáng chú ý không chỉ là rẻ, mà là DeepSeek đang đóng gói V4-Pro như một model dành thẳng cho Claude Code, OpenCode và OpenClaw workflows.</description>
+      <description>DeepSeek giảm 75% giá V4-Pro API tới 5/5/2026, kéo giá cache hit xuống $0.03625, cache miss còn $0.435 và output còn $0.87 mỗi 1 triệu token. Điểm đáng chú ý không chỉ là rẻ, mà là DeepSeek đang đóng gói V4-Pro như một model dành thẳng cho Claude Code, OpenCode và OpenClaw workflows.</description>
       <category>AI Coding</category>
       <enclosure url="https://escbase.xyz/images/deepseek-v4-pro-75-percent-off-api-thumb.svg" type="image/svg+xml" length="0" />
     </item>
