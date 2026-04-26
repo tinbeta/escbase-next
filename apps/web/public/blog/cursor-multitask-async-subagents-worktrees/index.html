@@ -46,52 +46,79 @@
                     <p style="margin-bottom:0"><strong>Cursor vừa giới thiệu lệnh <code>/multitask</code> trong giao diện Cursor 3 mới</strong>, cho phép agent chạy <strong>async subagents song song</strong> thay vì xếp hàng chờ nhau. Cùng lúc, Cursor cũng đẩy thêm <strong>worktrees</strong> tốt hơn cho task nền theo từng branch riêng và <strong>multi-root workspace</strong> để một agent session xử lý nhiều repo/folder trong cùng workspace. Thông điệp lớn ở đây không còn là “AI viết code nhanh hơn”, mà là <strong>IDE đang biến thành bề mặt điều phối công việc giữa nhiều agent</strong>.</p>
                 </div>
 
-                <video class="inline-video" controls preload="metadata" playsinline>
-                    <source src="/images/cursor-multitask-demo.mp4" type="video/mp4">
-                </video>
-                <p style="font-size:.9rem;color:var(--text-muted);margin-top:-.75rem;margin-bottom:1.5rem;">Video demo từ tweet đầu tiên của Cursor, minh hoạ cách <code>/multitask</code> mở nhiều subagent chạy song song thay vì dồn request vào một hàng đợi.</p>
-
-                <h2>Cursor đang cố sửa một nút thắt rất thật của coding agents</h2>
-                <p>Điểm khó chịu nhất khi dùng coding agent trong IDE thời gian qua là mọi thứ thường bị kéo về mô hình <strong>một hàng đợi dài</strong>: gửi task, chờ agent chạy xong, rồi mới đến task tiếp theo. Điều đó ổn với các việc nhỏ, nhưng bắt đầu rất bí khi dev muốn vừa sửa bug, vừa nghiên cứu codebase, vừa tách một nhánh phụ để chuẩn bị refactor.</p>
-
-                <p><strong>/multitask</strong> là câu trả lời của Cursor cho đúng bài toán đó. Thay vì thêm request mới vào queue, agent giờ có thể spawn <strong>async subagents</strong> để chạy nhiều nhánh công việc cùng lúc. Với các message đã xếp hàng từ trước, user cũng có thể bảo Cursor chuyển chúng sang chế độ multitask thay vì ngồi chờ run hiện tại kết thúc.</p>
+                <h2>Thread này nên đọc đúng theo thứ tự 1 → 2 → 3</h2>
+                <p>Điểm hay của thread này là Cursor không tung ba feature rời rạc. Họ đang kể một workflow hoàn chỉnh theo đúng thứ tự: <strong>đầu tiên cho agent chạy song song</strong>, <strong>sau đó cô lập từng nhánh công việc bằng worktree</strong>, và cuối cùng <strong>mở phạm vi làm việc ra nhiều repo/folder cùng lúc</strong>. Nếu đọc lệch thứ tự, bài dễ thành một mớ feature list. Đọc đúng mạch thì nhìn ra ngay đây là câu chuyện về orchestration.</p>
 
                 <div class="feature-grid">
                     <div class="feature-card">
-                        <h4>/multitask</h4>
-                        <p>Chạy nhiều subagent song song thay vì nhốt tất cả vào một queue tuần tự.</p>
+                        <h4>1. /multitask</h4>
+                        <p>Mở nhiều subagent chạy song song thay vì bị kẹt trong một hàng đợi tuần tự.</p>
                     </div>
                     <div class="feature-card">
-                        <h4>Worktrees mới</h4>
-                        <p>Tách task nền vào các branch riêng để thử nghiệm độc lập và kéo về foreground khi cần test.</p>
+                        <h4>2. Worktrees</h4>
+                        <p>Tách từng task sang branch riêng để agent nền không giẫm thẳng lên workspace chính.</p>
                     </div>
                     <div class="feature-card">
-                        <h4>Multi-root workspace</h4>
-                        <p>Một session có thể chạm nhiều folder/repo trong cùng workspace, hợp với cross-repo changes.</p>
+                        <h4>3. Multi-root</h4>
+                        <p>Cho một session chạm nhiều folder/repo, hợp với các thay đổi cross-repo ngoài đời thật.</p>
                     </div>
                 </div>
 
-                <h2>Thread này không chỉ có /multitask</h2>
-                <p>Thread của Cursor thực ra có ba mảnh ghép đi chung với nhau.</p>
-                <ul>
-                    <li><strong>Tweet 1:</strong> <code>/multitask</code> cho async subagents chạy song song.</li>
-                    <li><strong>Tweet 2:</strong> worktrees mới trong agents window để chạy isolated task trên các branch khác nhau và kéo branch nào muốn test về local foreground chỉ bằng một cú click.</li>
-                    <li><strong>Tweet 3:</strong> multi-root workspace để một agent session làm cross-repo changes trên nhiều folder cùng lúc.</li>
-                </ul>
+                <h2>1) /multitask: Cursor đang đập vào nút thắt lớn nhất của coding agents</h2>
+                <video class="inline-video" controls preload="metadata" playsinline>
+                    <source src="/images/cursor-multitask-demo.mp4" type="video/mp4">
+                </video>
+                <p style="font-size:.9rem;color:var(--text-muted);margin-top:-.75rem;margin-bottom:1.5rem;">Video từ tweet đầu tiên: <code>/multitask</code> cho phép mở nhiều async subagent chạy song song thay vì dồn tất cả vào một queue.</p>
 
-                <p>Ba mảnh này ghép lại thành một thesis khá rõ: Cursor không chỉ muốn là editor có AI, mà muốn là <strong>trung tâm điều phối nhiều nhánh thực thi</strong> cùng lúc — theo task, theo branch và theo repo.</p>
+                <p>Điểm khó chịu nhất khi dùng coding agent trong IDE thời gian qua là mọi thứ thường bị kéo về mô hình <strong>một hàng đợi dài</strong>: gửi task, chờ agent chạy xong, rồi mới đến task tiếp theo. Điều đó ổn với việc nhỏ, nhưng rất bí khi dev muốn vừa sửa bug, vừa nghiên cứu codebase, vừa chuẩn bị refactor ở một nhánh khác.</p>
+
+                <p><strong>/multitask</strong> là câu trả lời trực diện cho đúng chỗ nghẽn đó. Thay vì thêm request mới vào queue, Cursor cho agent spawn <strong>async subagents</strong> để chạy nhiều nhánh công việc cùng lúc. Với các message đã xếp hàng từ trước, user cũng có thể chuyển chúng sang multitask thay vì ngồi chờ run hiện tại kết thúc.</p>
+
+                <p>Nói gọn: tweet đầu tiên giải quyết chuyện <strong>throughput</strong>. Nó không làm agent thông minh hơn, nhưng nó làm hệ thống bớt kiểu “một nhân viên nhận việc từng tờ phiếu một”.</p>
+
+                <div class="highlight-box-blue">
+                    <h4>💡 Giải thích nhanh</h4>
+                    <p style="margin-bottom:0"><strong>Async subagents</strong> có thể hiểu là các agent con được tách ra để xử lý từng việc nhỏ song song. Ví dụ: một agent dò bug, một agent đọc docs nội bộ, một agent chuẩn bị patch. Ý tưởng nghe rất đã, vì bottleneck lớn nhất của agent UX lâu nay chính là phải chờ từng việc nối đuôi nhau.</p>
+                </div>
+
+                <h2>2) Worktrees: phần chống tự đấm nhau khi đã cho agent chạy song song</h2>
+                <video class="inline-video" controls preload="metadata" playsinline>
+                    <source src="/images/cursor-worktrees-demo.mp4" type="video/mp4">
+                </video>
+                <p style="font-size:.9rem;color:var(--text-muted);margin-top:-.75rem;margin-bottom:1.5rem;">Video từ tweet thứ hai: worktrees mới trong agents window để chạy isolated task trên branch riêng, rồi kéo branch cần test về foreground.</p>
+
+                <p>Đây là đoạn nhiều người dễ lướt qua, nhưng thật ra nó mới là phần làm cho tweet 1 bớt mùi demo. Khi đã cho nhiều agent chạy song song, câu hỏi ngay lập tức là: <strong>chúng nó sửa vào đâu?</strong></p>
+
+                <p>Nếu nhiều agent cùng đụng một workspace và cùng sửa một component, bạn gần như đang tự mời merge conflict vào nhà. <strong>Worktrees</strong> là lớp cách ly để mỗi task nền có branch riêng, chạy độc lập, và khi muốn test hoặc đem một nhánh về local foreground thì làm ngay trong agents window.</p>
+
+                <p>Nói cách khác, nếu tweet 1 là cho phép song song hóa công việc, thì tweet 2 là dựng lan can để song song hóa đó đỡ biến thành đống hỗn loạn. Đây là phần rất “đời thực”, vì làm agent thật không khó ở demo — khó ở khâu tránh cho chúng nó đạp lên nhau.</p>
+
+                <div class="highlight-box-yellow">
+                    <h4>⚠️ Vì sao cái này quan trọng?</h4>
+                    <p style="margin-bottom:0">Parallelism mà không có branch isolation thì khá nguy hiểm. Worktree không giải quyết hết conflict, nhưng ít nhất nó chặn được kiểu tai nạn ngớ ngẩn nhất: nhiều agent cùng sửa trực tiếp vào một cây code đang mở.</p>
+                </div>
+
+                <h2>3) Multi-root workspace: đẩy agent ra khỏi khuôn một repo</h2>
+                <video class="inline-video" controls preload="metadata" playsinline>
+                    <source src="/images/cursor-multi-root-demo.mp4" type="video/mp4">
+                </video>
+                <p style="font-size:.9rem;color:var(--text-muted);margin-top:-.75rem;margin-bottom:1.5rem;">Video từ tweet thứ ba: multi-root workspace cho phép một agent session xử lý nhiều folder/repo trong cùng workspace.</p>
+
+                <p>Tweet 3 kéo câu chuyện đi xa hơn. Agent không chỉ sửa trong một repo đơn lẻ nữa, mà có thể chạm nhiều folder hoặc repo trong cùng workspace. Đây là loại feature nghe nhỏ nhưng lại rất hợp với công việc thật: sửa API ở backend rồi cập nhật luôn client ở frontend, hoặc chạm cả package shared lẫn app chính trong cùng một lần chạy.</p>
+
+                <p><strong>Multi-root workspace</strong> vì thế không chỉ là tiện. Nó là dấu hiệu cho thấy Cursor đang cố đưa agent từ mô hình “giúp tôi viết đoạn code này” sang mô hình “giúp tôi xử lý một thay đổi hệ thống có nhiều bề mặt liên quan”.</p>
+
+                <p>Nếu xếp ba tweet lại với nhau, logic rất rõ:</p>
+                <ul>
+                    <li><strong>/multitask</strong> tăng số luồng công việc,</li>
+                    <li><strong>worktrees</strong> cô lập từng luồng để đỡ đâm nhau,</li>
+                    <li><strong>multi-root workspace</strong> mở rộng phạm vi để mỗi luồng đụng được nhiều repo/folder khi cần.</li>
+                </ul>
 
                 <div class="highlight-box-blue">
                     <h4>💡 Ý chính của thread</h4>
-                    <p style="margin-bottom:0">Nếu trước đây “coding session” nghĩa là ngồi trong một luồng hội thoại với một agent, thì thread mới của Cursor đang cố biến “coding session” thành một <strong>mặt phẳng điều phối công việc</strong>, nơi delegation, execution và branch isolation cùng diễn ra ngay trong IDE.</p>
+                    <p style="margin-bottom:0">Nếu trước đây “coding session” nghĩa là ngồi trong một luồng hội thoại với một agent, thì thread mới của Cursor đang cố biến “coding session” thành một <strong>mặt phẳng điều phối công việc</strong>, nơi delegation, branch isolation và cross-repo execution cùng diễn ra ngay trong IDE.</p>
                 </div>
-
-                <h2>Vì sao worktrees và multi-root mới là phần đáng tiền?</h2>
-                <p><code>/multitask</code> là phần dễ viral nhất vì nhìn thấy ngay trong demo. Nhưng nếu đọc kỹ thread, hai phần còn lại mới là thứ làm feature này bớt màu “show hàng”.</p>
-
-                <p><strong>Worktrees</strong> giải quyết vấn đề cổ điển của parallel agent work: nếu nhiều agent cùng đụng một workspace và cùng sửa một component, bạn gần như đang tự mời merge conflict vào nhà. Khi mỗi task được đẩy sang branch/worktree riêng, ít nhất IDE có một lớp cách ly để các agent không giẫm lên file của nhau quá sớm.</p>
-
-                <p><strong>Multi-root workspace</strong> thì đẩy câu chuyện xa hơn: agent không chỉ sửa trong một repo đơn lẻ nữa, mà có thể chạm nhiều folder hoặc repo trong cùng workspace. Đây là loại feature nghe nhỏ nhưng rất hợp với các công việc thật như sửa API ở backend rồi cập nhật luôn client ở frontend.</p>
 
                 <h2>Cộng đồng đang phản ứng ra sao?</h2>
                 <p>Phản ứng dưới thread khá chia làm hai phe rõ rệt.</p>
