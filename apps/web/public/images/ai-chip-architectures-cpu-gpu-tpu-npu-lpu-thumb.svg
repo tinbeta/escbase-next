@@ -1,0 +1,46 @@
+<svg width="800" height="420" viewBox="0 0 800 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1020"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FDE68A"/>
+      <stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#60A5FA"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="purple" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#C4B5FD"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" rx="32" fill="url(#bg)"/>
+  <rect x="58" y="46" width="684" height="328" rx="28" fill="#0F172A" stroke="#334155"/>
+  <text x="84" y="102" fill="#F9FAFB" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="800">CPU vs GPU vs TPU</text>
+  <text x="84" y="146" fill="#FCD34D" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="800">vs NPU vs LPU</text>
+  <text x="84" y="188" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600">5 kiến trúc đang gánh AI hiện tại</text>
+  <g transform="translate(86 236)">
+    <rect x="0" y="0" width="84" height="54" rx="16" fill="#111827" stroke="#60A5FA"/>
+    <text x="42" y="34" text-anchor="middle" fill="#BFDBFE" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">CPU</text>
+    <rect x="98" y="0" width="84" height="54" rx="16" fill="#111827" stroke="#34D399"/>
+    <text x="140" y="34" text-anchor="middle" fill="#A7F3D0" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">GPU</text>
+    <rect x="196" y="0" width="84" height="54" rx="16" fill="#111827" stroke="#F59E0B"/>
+    <text x="238" y="34" text-anchor="middle" fill="#FDE68A" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">TPU</text>
+    <rect x="294" y="0" width="84" height="54" rx="16" fill="#111827" stroke="#A78BFA"/>
+    <text x="336" y="34" text-anchor="middle" fill="#DDD6FE" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">NPU</text>
+    <rect x="392" y="0" width="84" height="54" rx="16" fill="#111827" stroke="#FB7185"/>
+    <text x="434" y="34" text-anchor="middle" fill="#FBCFE8" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">LPU</text>
+  </g>
+  <g transform="translate(578 104)">
+    <rect x="0" y="0" width="110" height="110" rx="22" fill="#111827" stroke="#475569"/>
+    <rect x="18" y="18" width="74" height="74" rx="12" fill="url(#purple)" fill-opacity="0.18" stroke="#A78BFA"/>
+    <circle cx="34" cy="34" r="7" fill="#60A5FA"/>
+    <circle cx="76" cy="34" r="7" fill="#34D399"/>
+    <circle cx="34" cy="76" r="7" fill="#F59E0B"/>
+    <circle cx="76" cy="76" r="7" fill="#FB7185"/>
+    <text x="55" y="144" text-anchor="middle" fill="#E5E7EB" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">AI CHIP MAP</text>
+  </g>
+</svg>

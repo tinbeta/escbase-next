@@ -1,5 +1,17 @@
 [
     {
+        "url": "/blog/ai-chip-architectures-cpu-gpu-tpu-npu-lpu",
+        "title": "CPU, GPU, TPU, NPU, LPU Khác Nhau Ở Đâu: 5 Kiến Trúc Chip Đang Gánh AI Hiện Tại",
+        "excerpt": "Một thread đang được share khá mạnh trên X vừa tóm gọn 5 kiến trúc phần cứng gánh AI hiện tại: CPU, GPU, TPU, NPU và LPU. Điểm quan trọng không nằm ở chuyện nhớ tên chip, mà ở việc mỗi loại đánh đổi rất khác nhau giữa tính linh hoạt, mức độ song song và cách truy cập bộ nhớ.",
+        "date": "Apr 27, 2026",
+        "tag": "AI Infrastructure",
+        "tagIcon": "fas fa-microchip",
+        "tagColor": "#14b8a6",
+        "readTime": "9 min read",
+        "featured": true,
+        "image": "/images/ai-chip-architectures-cpu-gpu-tpu-npu-lpu-thumb.svg"
+    },
+    {
         "url": "/blog/cursor-multitask-async-subagents-worktrees",
         "title": "Cursor Ra /multitask: Async Subagents, Worktrees Mới Và Multi-Root Workspace Đẩy IDE Thành Hạ Tầng Workflow",
         "excerpt": "Cursor vừa giới thiệu /multitask trong giao diện Cursor 3 mới: async subagents chạy song song thay vì xếp hàng, worktrees tốt hơn cho task nền theo branch riêng, và multi-root workspace để một agent session chạm nhiều repo cùng lúc. Đây là một bước đẩy rõ rệt từ coding assistant sang workflow infrastructure.",

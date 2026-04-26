@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPU, GPU, TPU, NPU, LPU Khác Nhau Ở Đâu: 5 Kiến Trúc Chip Đang Gánh AI Hiện Tại - Escbase</title>
+    <meta name="description" content="Một thread đang được share mạnh trên X tóm gọn 5 kiến trúc phần cứng gánh AI hiện tại: CPU, GPU, TPU, NPU và LPU. Điểm đáng chú ý không chỉ là định nghĩa từng loại chip, mà là trade-off rất khác nhau giữa tính linh hoạt, mức độ song song và cách truy cập bộ nhớ.">
+    <meta property="og:title" content="CPU, GPU, TPU, NPU, LPU Khác Nhau Ở Đâu?">
+    <meta property="og:description" content="CPU lo logic tổng quát, GPU thắng ở song song, TPU đi sâu vào ma trận, NPU tối ưu suy luận tiết kiệm điện, còn LPU đẩy latency xuống cực thấp bằng SRAM on-chip và execution deterministic. Đây là cách 5 kiến trúc chip đang chia việc cho AI hiện tại.">
+    <meta property="og:image" content="https://escbase.xyz/images/ai-chip-architectures-cpu-gpu-tpu-npu-lpu-thumb.png">
+    <meta property="og:url" content="https://escbase.xyz/blog/ai-chip-architectures-cpu-gpu-tpu-npu-lpu/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/shared-article.css">
+    <link rel="stylesheet" href="/shared-article-footer.css">
+    <style>
+        .chip-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:.8rem; margin:1.3rem 0 2rem; }
+        .chip-card { background:var(--card-bg); border:1px solid var(--border); border-radius:var(--radius-md); padding:1rem; text-align:center; }
+        .chip-card h4 { margin:0 0 .35rem; color:var(--text); font-size:1rem; }
+        .chip-card p { margin:0; font-size:.88rem; }
+        .inline-video { width:100%; border-radius:var(--radius-md); border:1px solid var(--border); margin:1.5rem 0; background:#000; }
+        .compare-table { width:100%; border-collapse:collapse; margin:1.5rem 0; font-size:.95rem; }
+        .compare-table th, .compare-table td { padding:.8rem .9rem; text-align:left; border:1px solid var(--border); vertical-align:top; }
+        .compare-table th { background:var(--card-bg); color:var(--text); }
+        .compare-table td { color:var(--text-secondary); }
+        .table-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; margin:1.5rem 0; border-radius:var(--radius-md); }
+        .table-wrap .compare-table { min-width:760px; margin:0; }
+        @media (max-width:768px){ .chip-grid { grid-template-columns:1fr 1fr; } .compare-table { font-size:.85rem; } .compare-table th,.compare-table td{ padding:.6rem .65rem; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <span class="category-badge"><i class="fas fa-microchip"></i> AI Infrastructure</span>
+                <h1>CPU, GPU, TPU, NPU, LPU Khác Nhau Ở Đâu: 5 Kiến Trúc Chip Đang Gánh AI Hiện Tại</h1>
+                <div class="meta">
+                    <span><i class="far fa-calendar"></i> 27/04/2026</span>
+                    <span><i class="far fa-clock"></i> 9 phút đọc</span>
+                    <span><i class="far fa-folder"></i> AI Infrastructure, AI Hardware</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <div class="highlight-box">
+                    <h4>TL;DR</h4>
+                    <p style="margin-bottom:0"><strong>Một thread đang được share khá mạnh trên X vừa tóm gọn 5 kiến trúc phần cứng gánh AI hiện tại: CPU, GPU, TPU, NPU và LPU</strong>. Điểm quan trọng không nằm ở chuyện nhớ tên chip, mà ở việc <strong>mỗi loại đánh đổi rất khác nhau giữa tính linh hoạt, mức độ song song và cách truy cập bộ nhớ</strong>. Nếu đọc theo đúng thứ tự thread, đây gần như là một bản đồ tiến hóa của AI compute: từ general-purpose compute sang những cỗ máy ngày càng chuyên biệt cho từng kiểu workload.</p>
+                </div>
+
+                <video class="inline-video" controls preload="metadata" playsinline loop>
+                    <source src="/images/ai-chip-architectures-cpu-gpu-tpu-npu-lpu.mp4" type="video/mp4">
+                </video>
+                <p style="font-size:.9rem;color:var(--text-muted);margin-top:-.75rem;margin-bottom:1.5rem;">Visual từ tweet gốc của Akshay Pachaar, đặt 5 kiến trúc CPU, GPU, TPU, NPU và LPU cạnh nhau để nhìn rõ trade-off bên trong.</p>
+
+                <h2>Thread này nên đọc như một mạch tiến hóa, không phải list định nghĩa</h2>
+                <p>Điểm hay của thread là nó không chỉ liệt kê 5 cái tên nghe choáng đầu. Nó đi từ <strong>CPU</strong> — thứ linh hoạt và tổng quát nhất — sang <strong>LPU</strong> — thứ chuyên biệt và cực đoan nhất cho latency của AI serving. Đó cũng là cách thị trường AI compute đang vận động: mỗi bước tiến thường là <strong>bớt tổng quát đi một chút để đổi lấy hiệu suất cao hơn cho một kiểu bài toán cụ thể</strong>.</p>
+
+                <div class="chip-grid">
+                    <div class="chip-card"><h4>CPU</h4><p>Linh hoạt, giỏi logic</p></div>
+                    <div class="chip-card"><h4>GPU</h4><p>Song song cực mạnh</p></div>
+                    <div class="chip-card"><h4>TPU</h4><p>Chuyên cho ma trận</p></div>
+                    <div class="chip-card"><h4>NPU</h4><p>Inference ít điện</p></div>
+                    <div class="chip-card"><h4>LPU</h4><p>Độ trễ cực thấp</p></div>
+                </div>
+
+                <h2>1) CPU: vẫn là ông cầm trịch phần logic khó chịu nhất</h2>
+                <p>CPU là loại quen nhất vì nó sinh ra để làm <strong>general-purpose computing</strong>. Thay vì có hàng nghìn lõi nhỏ, CPU thường có ít lõi hơn nhưng mỗi lõi mạnh hơn, xử lý tốt các đoạn code nhiều rẽ nhánh, điều kiện, control flow và tác vụ hệ thống.</p>
+                <p>Trong thread, Akshay nhấn vào đúng điểm quan trọng: CPU có <strong>cache hierarchy sâu</strong> và dựa vào <strong>DRAM off-chip</strong>. Điều này làm nó cực hợp với operating system, database, scheduler, orchestration và các logic không đều tay. Nhưng đem CPU đi cày mấy khối nhân ma trận lặp đi lặp lại thì khá phí sức.</p>
+                <div class="highlight-box-blue">
+                    <h4>💡 Hiểu nhanh</h4>
+                    <p style="margin-bottom:0">Trong AI stack, CPU thường không phải “người gánh hết AI”, mà là <strong>người điều phối</strong>: chuẩn bị dữ liệu, gọi runtime, quản lý I/O, điều khiển job và xử lý phần logic không đều mà accelerator khác không thích.</p>
+                </div>
+
+                <h2>2) GPU: vì sao AI training gần như bị nó thống trị?</h2>
+                <p>Nếu CPU mạnh ở logic phức tạp, GPU mạnh ở chỗ ngược lại: <strong>làm cùng một kiểu phép tính trên rất nhiều phần dữ liệu cùng lúc</strong>. Đó là lý do thread mô tả GPU như một hệ hàng nghìn lõi nhỏ cùng thực thi một instruction trên các data khác nhau.</p>
+                <p>Neural network lại đúng là bài toán kiểu đó: nhân ma trận, cộng dồn, activation, lặp đi lặp lại với khối lượng cực lớn. Vì thế GPU gần như trở thành mặc định cho training hiện đại.</p>
+                <p>Nhưng GPU không phải không có điểm yếu. Nó vẫn dựa rất mạnh vào <strong>bộ nhớ ngoài băng thông cao như HBM</strong>, nên bottleneck memory movement vẫn là chuyện sống còn. Cũng vì vậy mà cả thế giới tối ưu AI training vẫn đang xoay quanh batching, locality và làm sao đỡ kéo dữ liệu qua lại quá nhiều.</p>
+
+                <h2>3) TPU: đẩy specialization lên mức phần cứng được sinh ra cho neural nets</h2>
+                <p>Nếu GPU là “cực giỏi một loại toán vì quá nhiều lõi song song”, thì TPU đi xa hơn: nó được thiết kế hẳn quanh kiểu dataflow của neural network. Thread mô tả phần cốt lõi của TPU là một <strong>lưới MAC units</strong> nơi weight đi từ một phía, activation đi từ phía kia, còn partial sum lan qua mảng theo dạng sóng.</p>
+                <p>Điểm đáng để ý là execution ở đây mang tính <strong>compiler-controlled</strong> nhiều hơn là để phần cứng tự scheduler như kiểu truyền thống. Nghĩa là bạn đã bắt đầu dịch từ “phần cứng đa dụng” sang “cỗ máy rất giỏi nếu workload khớp đúng món nó được sinh ra để làm”.</p>
+                <p>Nói dễ hiểu: TPU là bước cho thấy AI compute bắt đầu bẻ lái khỏi triết lý “một con chip làm mọi thứ” để sang triết lý “làm ít thứ hơn nhưng làm nhanh, đều và ít lãng phí hơn”.</p>
+
+                <h2>4) NPU: AI trên thiết bị nhỏ sống được nhờ kiểu chip này</h2>
+                <p>Thread gọi NPU là biến thể tối ưu cho edge, và mô tả này khá chuẩn. Về mặt tinh thần, NPU cũng xoay quanh neural compute engine, MAC arrays và SRAM on-chip. Nhưng thay vì hướng tới những cỗ máy ngốn điện hàng trăm watt, NPU sinh ra để chạy inference trong <strong>mức điện năng rất thấp</strong>.</p>
+                <p>Đó là lý do NPU cực hợp với điện thoại, wearables, laptop mỏng nhẹ, camera thông minh hay IoT devices. Bạn không cần throughput kiểu datacenter; bạn cần thứ gì đó <strong>đủ nhanh, đủ riêng tư, và không giết pin</strong>.</p>
+                <p>Comment trong thread cũng chạm đúng chỗ này: nhiều người dùng AI hằng ngày trên điện thoại mà không ý thức rằng phần lớn trải nghiệm đó chỉ tồn tại được vì có NPU/Neural Engine phía dưới.</p>
+                <div class="highlight-box-green">
+                    <h4>Điểm thực dụng nhất của NPU</h4>
+                    <p style="margin-bottom:0">NPU không cố thắng GPU ở training datacenter. Nó thắng ở chỗ khác: <strong>đưa AI xuống thiết bị cá nhân với chi phí điện và độ trễ chấp nhận được</strong>.</p>
+                </div>
+
+                <h2>5) LPU: cực đoan hóa inference latency bằng cách bóp chặt memory path</h2>
+                <p>LPU — Language Processing Unit — là phần mới nhất và cũng gây tò mò nhất trong thread. Ở đây, Groq đẩy triết lý chuyên biệt đi rất xa: <strong>đưa off-chip memory ra khỏi critical path</strong> và giữ toàn bộ weight storage trong <strong>SRAM on-chip</strong>.</p>
+                <p>Khi execution được compiler schedule hoàn toàn và dữ liệu không phải lang thang qua cache miss hay runtime scheduling overhead, lợi ích lớn nhất là <strong>độ trễ rất thấp và rất đều</strong>. Với các workload cần phản hồi siêu nhanh, đây là một lợi thế thật.</p>
+                <p>Đổi lại, cái giá phải trả cũng khá rõ: memory per chip bị giới hạn hơn nhiều. Nghĩa là để phục vụ model lớn, bạn phải ghép rất nhiều chip với nhau. Thread nói thẳng luôn: latency advantage là thật, nhưng không có bữa trưa miễn phí.</p>
+                <div class="highlight-box-yellow">
+                    <h4>⚠️ Chỗ dễ bị hype quá tay</h4>
+                    <p style="margin-bottom:0">LPU nghe rất sexy vì “zero cache miss”, “deterministic execution”, “siêu thấp latency”. Nhưng nếu workload của bạn không sống chết vì jitter/latency, hoặc economics scale-out không đẹp, thì GPU vẫn có thể là lựa chọn ROI tốt hơn.</p>
+                </div>
+
+                <h2>Nhìn 5 kiến trúc cạnh nhau thì thấy điều gì?</h2>
+                <div class="table-wrap">
+                    <table class="compare-table">
+                        <thead>
+                            <tr>
+                                <th>Kiến trúc</th>
+                                <th>Mạnh ở đâu</th>
+                                <th>Trade-off chính</th>
+                                <th>Workload hợp nhất</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>CPU</td>
+                                <td>Linh hoạt, logic, orchestration</td>
+                                <td>Không hợp toán lặp khối lớn</td>
+                                <td>OS, scheduler, data prep, control flow</td>
+                            </tr>
+                            <tr>
+                                <td>GPU</td>
+                                <td>Song song cực mạnh</td>
+                                <td>Lệ thuộc memory bandwidth lớn</td>
+                                <td>AI training, inference quy mô lớn</td>
+                            </tr>
+                            <tr>
+                                <td>TPU</td>
+                                <td>Dataflow ma trận chuyên biệt</td>
+                                <td>Kém tổng quát hơn GPU/CPU</td>
+                                <td>Neural network workloads tối ưu hoá cao</td>
+                            </tr>
+                            <tr>
+                                <td>NPU</td>
+                                <td>Inference tiết kiệm điện</td>
+                                <td>Không nhắm vào throughput datacenter</td>
+                                <td>Phone, laptop, edge AI, IoT</td>
+                            </tr>
+                            <tr>
+                                <td>LPU</td>
+                                <td>Latency thấp, execution deterministic</td>
+                                <td>Memory per chip hạn chế, phải scale-out</td>
+                                <td>Low-latency serving, real-time AI</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>Điều quan trọng nhất: AI compute không đi theo một “chip thống nhất”</h2>
+                <p>Nếu thread này gợi ra một ý lớn, thì đó là: AI không tiến tới chỗ một loại silicon ăn hết mọi thứ. Ngược lại, nó đang phân hoá mạnh hơn. Training, inference cloud, inference on-device, real-time serving, orchestration và system logic đang đòi các kiểu phần cứng khác nhau.</p>
+                <p>Nói thẳng một câu: cuộc chơi không còn là “ai mạnh nhất”, mà là <strong>workload nào thì xứng với loại silicon nào</strong>.</p>
+
+                <h2>Cộng đồng phản ứng ra sao?</h2>
+                <p>Replies dưới thread khá dễ đoán nhưng vẫn đáng chú ý:</p>
+                <ul>
+                    <li><strong>Phe thích tính ứng dụng:</strong> khen visual rõ, dễ hiểu, hiếm khi thấy một thread hardware mà người không chuyên vẫn đọc nổi.</li>
+                    <li><strong>Phe thực dụng:</strong> quay lại câu hỏi ROI, nhất là với LPU — nghe hay nhưng bill với deployment thực tế mới là thứ quyết định.</li>
+                    <li><strong>Phe edge/on-device:</strong> tập trung vào NPU, vì đúng là số đông đang dùng AI trên thiết bị mỗi ngày mà không để ý hạ tầng phía dưới.</li>
+                    <li><strong>Phe hệ thống/hybrid:</strong> có người đẩy thẳng sang idea chiplet và hệ heterogeneous, tức là thay vì chọn một kiến trúc thắng hết, hãy ghép nhiều loại lại để route đúng workload.</li>
+                </ul>
+
+                <p>Phần reply dài nhất trong thread thực ra cũng đẩy đúng hướng này: tương lai có thể không phải một “siêu chip vạn năng”, mà là các gói heterogeneous/chiplet nơi CPU, GPU, TPU-like, NPU và LPU-style blocks cùng tồn tại và được runtime phân việc thông minh.</p>
+
+                <div class="highlight-box-red">
+                    <h4>🚨 Chốt lại</h4>
+                    <p style="margin-bottom:0"><strong>CPU, GPU, TPU, NPU và LPU không phải 5 cái tên để nhớ cho vui</strong>. Chúng là 5 cách rất khác nhau để đánh đổi giữa tính linh hoạt, mức độ song song, điện năng và bộ nhớ. Nhìn chúng cạnh nhau sẽ thấy rõ AI compute đang đi từ general-purpose sang extreme specialization — và càng về sau, câu hỏi quan trọng nhất sẽ là <strong>workload của bạn nên nằm trên silicon nào</strong>, chứ không phải “chip nào đang hot nhất trên X”.</p>
+                </div>
+
+                <div class="source-links">
+                    <h4>Nguồn & tham khảo</h4>
+                    <ul>
+                        <li><a href="https://x.com/akshay_pachaar/status/2048379111153045663" target="_blank">Akshay Pachaar on X — CPU vs GPU vs TPU vs NPU vs LPU, explained visually</a></li>
+                    </ul>
+                </div>
+
+                <div class="back-to-blog-footer">
+                    <a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+                </div>
+
+                <div class="article-cta-stack">
+                    <a href="/blog/cursor-multitask-async-subagents-worktrees" class="article-suggestion-card">
+                        <span class="article-suggestion-label"><i class="fas fa-book-open"></i> Đọc tiếp</span>
+                        <span class="article-suggestion-title">Cursor Ra /multitask: Async Subagents, Worktrees Mới Và Multi-Root Workspace Đẩy IDE Thành Hạ Tầng Workflow</span>
+                    </a>
+                    <div class="article-cta-actions">
+                        <a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a>
+                    </div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">CPU</span>
+                    <span class="tag">GPU</span>
+                    <span class="tag">TPU</span>
+                    <span class="tag">NPU</span>
+                    <span class="tag">LPU</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>
