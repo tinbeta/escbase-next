@@ -24,7 +24,7 @@
   <text x="84" y="252" fill="#93C5FD" font-family="Inter, Arial, sans-serif" font-size="35" font-weight="800">1M CONTEXT + CODING AGENTS</text>
   <rect x="84" y="286" width="188" height="52" rx="18" fill="url(#accent)"/>
   <text x="178" y="309" text-anchor="middle" fill="#FEF2F2" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">CACHE HIT</text>
-  <text x="178" y="329" text-anchor="middle" fill="white" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="800">$0.03625 / 1M</text>
+  <text x="178" y="329" text-anchor="middle" fill="white" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="800">$0.003625 / 1M</text>
   <rect x="292" y="286" width="120" height="52" rx="18" fill="url(#green)"/>
   <text x="352" y="309" text-anchor="middle" fill="#DCFCE7" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">TỚI</text>
   <text x="352" y="329" text-anchor="middle" fill="white" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="800">05/05</text>
