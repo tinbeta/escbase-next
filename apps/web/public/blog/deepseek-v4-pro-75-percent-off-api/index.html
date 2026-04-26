@@ -83,6 +83,21 @@
 
                 <p>Điểm dễ bị bỏ qua nhất nằm ở giá <strong>cache hit</strong>. Theo docs chính thức, nếu prompt/context của bạn được tái sử dụng đúng cách, giá input chỉ còn <strong>$0.003625/1M token</strong>. Đây là mức gần như đẩy long-context agent loops sang một bài toán tối ưu kiến trúc nhiều hơn là tối ưu budget.</p>
 
+                <h2>Mấy thuật ngữ này thực ra nghĩa là gì?</h2>
+                <p>Nếu không quen đọc bảng giá API model, bài post của DeepSeek khá dễ gây rối vì nó nhét nhiều khái niệm kỹ thuật trong một ảnh nhỏ. Tách ra thì chúng khá đơn giản:</p>
+                <ul>
+                    <li><strong>Input token:</strong> phần dữ liệu bạn gửi vào model, ví dụ system prompt, user prompt, codebase, tài liệu RAG hoặc lịch sử chat.</li>
+                    <li><strong>Output token:</strong> phần model trả ngược lại, ví dụ câu trả lời, code sinh ra, reasoning hoặc tool call arguments.</li>
+                    <li><strong>Cache hit:</strong> phần input đã được model/provider nhận diện là trùng hoặc tái sử dụng từ lần trước, nên tính giá rẻ hơn rất nhiều.</li>
+                    <li><strong>Cache miss:</strong> phần input mới hoàn toàn, chưa có gì để tái sử dụng, nên bị tính theo giá đầy đủ hơn.</li>
+                    <li><strong>1M context:</strong> model có thể nhận tối đa khoảng 1 triệu token trong một cửa sổ ngữ cảnh — tức là nhét được codebase, logs, docs hoặc lịch sử rất dài vào cùng một phiên xử lý.</li>
+                </ul>
+
+                <div class="highlight-box-blue">
+                    <h4>🧠 Hiểu nhanh bằng ví dụ</h4>
+                    <p style="margin-bottom:0">Nếu bạn chạy một coding agent với cùng system prompt, cùng rules repo và cùng một đống docs lặp đi lặp lại mỗi lần, phần đó có cơ hội trở thành <strong>cache hit</strong>. Còn đoạn task mới, file mới hoặc câu hỏi mới mà agent vừa nhận sẽ là <strong>cache miss</strong>. Vì vậy cùng là “1 triệu token input”, chi phí thực tế có thể khác nhau rất xa tùy cách bạn thiết kế workflow.</p>
+                </div>
+
                 <h2>Không chỉ giảm giá, DeepSeek còn đóng gói thẳng cho hệ coding agents</h2>
                 <p>Tweet của DeepSeek không chỉ ghi giá mới, mà còn ghi rất rõ các điểm tích hợp:</p>
                 <ul>
@@ -142,6 +157,16 @@
 
                 <p>Nói đơn giản: <strong>V4-Flash</strong> vẫn là lựa chọn rẻ nhất để iterate nhanh. Nhưng khi V4-Pro bị kéo giá xuống mức này, khoảng cách cost cho những workload cần reasoning nặng, code review dài hoặc agent loops nhiều tool bắt đầu dễ chấp nhận hơn hẳn.</p>
 
+                <h2>Trong chính thread này có gì đáng chú ý?</h2>
+                <p>Điểm hay là thread của DeepSeek rất ngắn, nhưng replies bên dưới lại cho thấy cộng đồng đang hiểu post này theo vài lớp khác nhau.</p>
+                <ul>
+                    <li><strong>Lớp thứ nhất:</strong> nhiều người tập trung gần như hoàn toàn vào giá cache hit, vì đây mới là con số chạm trực tiếp vào economics của agent workflows.</li>
+                    <li><strong>Lớp thứ hai:</strong> khá nhiều dev hỏi cách gắn model này vào Claude Code, OpenCode, Visual Studio hay các stack agent sẵn có. Tức là nhu cầu không còn là “test model cho vui”, mà là “nhét nó vào toolchain đang chạy thế nào”.</li>
+                    <li><strong>Lớp thứ ba:</strong> một số reply xem đây là dấu hiệu cuộc chiến giá giữa các model đang tăng tốc, đặc biệt ở mảng long-context và coding workloads.</li>
+                </ul>
+
+                <p>Cũng có một nuance đáng chú ý: không phải ai cũng bàn về benchmark. Nhiều người nói thẳng họ quan tâm hơn đến việc model này có <strong>đủ tốt trên workload thật</strong> hay không, và liệu chi phí rẻ như vậy có biến nó thành lựa chọn mặc định cho các agent chạy hằng ngày hay không.</p>
+
                 <h2>Cộng đồng đang đọc tín hiệu gì từ đợt giảm giá này?</h2>
                 <p>Phản ứng cộng đồng dưới post khá thú vị, và phần lớn xoay quanh ba ý lớn.</p>
 
@@ -153,6 +178,8 @@
 
                 <h3>3. Giá model đang bị kéo vào cuộc đua xuống đáy</h3>
                 <p>Một nhóm khác xem đây là dấu hiệu cho thấy lớp model đang bị hàng hóa hóa rất nhanh. Khi model có thể thay nhau bằng một config file, lợi thế thật dần chuyển sang kiến trúc agent, verification loop và sản phẩm bao quanh model hơn là bản thân model riêng lẻ.</p>
+
+                <p>Có cả những câu hỏi hoài nghi cũng đáng giữ lại: DeepSeek có giữ được economics này lâu dài không, giá promo sẽ áp dụng theo ngày mua hay theo ngày sử dụng, và 1M context có thật sự giảm được khối lượng verify/fix ở các coding agents hay chỉ làm cửa sổ ngữ cảnh to hơn trên giấy. Đây là các câu hỏi khá hợp lý, vì model rẻ hơn chưa tự động đồng nghĩa workflow rẻ hơn nếu output kém ổn định hoặc cần nhiều vòng sửa.</p>
 
                 <div class="highlight-box-yellow">
                     <h4>⚠️ Điều nên nhìn tỉnh</h4>
