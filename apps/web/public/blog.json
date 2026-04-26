@@ -1,6 +1,18 @@
 [
     {
-        "url": "/blog/openclaw-2026-4-24-release",
+        "url": "/blog/meta-cuts-10-percent-workforce-ai-push",
+        "title": "Meta Cắt 10% Nhân Sự Để Dồn Lực Cho AI: 8.000 Người Ra Đi, 6.000 Vị Trí Mở Bị Huỷ",
+        "excerpt": "Meta sẽ cắt khoảng 10% lực lượng lao động, tương đương 8.000 người, đồng thời huỷ kế hoạch tuyển 6.000 vị trí mở để dồn nguồn lực cho AI. Động thái này cho thấy cuộc đua AI đang buộc Big Tech phải tái cấu trúc mạnh tay hơn cả một đợt tiết kiệm chi phí thông thường.",
+        "date": "Apr 26, 2026",
+        "tag": "Market Structure",
+        "tagIcon": "fas fa-chart-line",
+        "tagColor": "#10b981",
+        "readTime": "6 min read",
+        "featured": true,
+        "image": "/images/meta-cuts-10-percent-workforce-ai-push-thumb.svg"
+    },
+    {
+        "url": "/blog/openclaw-2026-4-24-release", 
         "title": "OpenClaw 2026.4.24: Voice Calls, DeepSeek V4, Browser Automation, Và Google Meet",
         "excerpt": "OpenClaw 2026.4.24 ra mắt với hơn 80 thay đổi: voice calls kết nối full agent, DeepSeek V4 Flash trở thành model mặc định, browser automation thêm coordinate clicks, và Google Meet lần đầu tích hợp. Cộng đồng hào hứng nhưng nhiều user gặp lỗi gateway và plugin sau update.",
         "date": "Apr 25, 2026",
