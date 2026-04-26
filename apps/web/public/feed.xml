@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Sun, 26 Apr 2026 01:10:10 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 26 Apr 2026 01:24:57 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenClaw 2026.4.24: Voice Calls, DeepSeek V4, Browser Automation, Và Google Meet</title>
+      <link>https://escbase.xyz/blog/openclaw-2026-4-24-release</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/openclaw-2026-4-24-release</guid>
+      <pubDate>Sat, 25 Apr 2026 00:00:00 GMT</pubDate>
+      <description>OpenClaw 2026.4.24 ra mắt với hơn 80 thay đổi: voice calls kết nối full agent, DeepSeek V4 Flash trở thành model mặc định, browser automation thêm coordinate clicks, và Google Meet lần đầu tích hợp. Cộng đồng hào hứng nhưng nhiều user gặp lỗi gateway và plugin sau update.</description>
+      <category>AI Agent</category>
+      <enclosure url="https://escbase.xyz/images/openclaw-2026-4-24-thumb.svg" type="image/svg+xml" length="0" />
+    </item>
     <item>
       <title>Devin AI Là Gì? Hướng Dẫn Toàn Diện Cho Người Mới: Use Cases, Pricing, Và Cách Dùng Hiệu Quả</title>
       <link>https://escbase.xyz/blog/devin-ai-engineer-guide</link>
@@ -447,15 +456,6 @@
       <description>OpenClaw 2026.4.10 ra mắt Active Memory plugin, local MLX Talk mode trên macOS, Codex app-server harness và hàng loạt bản vá bảo mật. Bản release cho thấy họ đang chuyển từ thử nghiệm sang nền tảng agent nghiêm túc.</description>
       <category>OpenClaw AI</category>
       <enclosure url="https://escbase.xyz/images/openclaw-2026-4-10-release-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>OKX Ventures Rót Vào CAEX: Việt Nam Đang Ép Crypto Đi Vào Sân Chơi Có Giấy Phép</title>
-      <link>https://escbase.xyz/blog/okx-ventures-caex-viet-nam</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/okx-ventures-caex-viet-nam</guid>
-      <pubDate>Sat, 11 Apr 2026 00:00:00 GMT</pubDate>
-      <description>OKX Ventures đầu tư chiến lược vào CAEX để hỗ trợ sàn này tham gia chương trình thí điểm giao dịch crypto có quản lý tại Việt Nam. Đây không chỉ là một deal vốn, mà là tín hiệu dòng tiền đang nghiêng về các nền tảng compliant.</description>
-      <category>Pháp lý Crypto Việt Nam</category>
-      <enclosure url="https://escbase.xyz/images/okx-ventures-caex-thumb.jpg" type="image/jpeg" length="0" />
     </item>
   </channel>
 </rss>

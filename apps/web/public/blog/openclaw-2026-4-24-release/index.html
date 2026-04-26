@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw 2026.4.24: Voice Calls, DeepSeek V4, Browser Automation, Và Google Meet — Bản Cập Nhật Lớn Nhất Từ Trước Đến Nay - Escbase</title>
+    <meta name="description" content="OpenClaw 2026.4.24 ra mắt với voice calls tích hợp full agent, DeepSeek V4 Flash + Pro, browser automation coordinate clicks, Google Meet plugin, và hơn 80 thay đổi. Phân tích chi tiết release notes và phản hồi cộng đồng.">
+    <meta property="og:title" content="OpenClaw 2026.4.24: Voice Calls, DeepSeek V4, Browser Automation, Và Google Meet">
+    <meta property="og:description" content="Bản cập nhật lớn nhất của OpenClaw: voice calls reach full agent, DeepSeek V4 Flash/Pro, coordinate clicks, Google Meet plugin. Phân tích release notes + phản hồi cộng đồng.">
+    <meta property="og:image" content="https://escbase.xyz/images/openclaw-2026-4-24-thumb.png">
+    <meta property="og:url" content="https://escbase.xyz/blog/openclaw-2026-4-24-release/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/shared-article.css">
+    <link rel="stylesheet" href="/shared-article-footer.css">
+    <style>
+        .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+        .feature-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.25rem; }
+        .feature-card h4 { color: var(--text); margin-bottom: .5rem; font-size: 1rem; }
+        .feature-card .icon { font-size: 1.5rem; margin-bottom: .75rem; }
+        .feature-card p { font-size: .9rem; margin-bottom: 0; }
+        @media (max-width: 768px) { .feature-grid { grid-template-columns: 1fr; } }
+        .community-quote { border-left: 3px solid var(--accent); padding: .75rem 1rem; margin: 1rem 0; background: rgba(99,102,241,.05); border-radius: 0 var(--radius-md) var(--radius-md) 0; }
+        .community-quote .author { color: var(--accent); font-weight: 600; font-size: .85rem; }
+        .community-quote p { margin-bottom: .25rem; font-size: .95rem; }
+        .community-quote.negative { border-left-color: var(--accent-red); background: rgba(239,68,68,.05); }
+        .community-quote.negative .author { color: var(--accent-red); }
+        .community-quote.positive { border-left-color: var(--accent-green); background: rgba(34,197,94,.05); }
+        .community-quote.positive .author { color: var(--accent-green); }
+        .stats-row { display: flex; gap: 1.5rem; flex-wrap: wrap; margin: 1.5rem 0; }
+        .stat-item { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1rem 1.25rem; text-align: center; flex: 1; min-width: 120px; }
+        .stat-item .number { font-size: 1.5rem; font-weight: 800; color: var(--accent); }
+        .stat-item .label { font-size: .8rem; color: var(--text-secondary); margin-top: .25rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <span class="category-badge"><i class="fas fa-robot"></i> AI Agent</span>
+                <h1>OpenClaw 2026.4.24: Voice Calls, DeepSeek V4, Browser Automation, Và Google Meet — Bản Cập Nhật Lớn Nhất Từ Trước Đến Nay</h1>
+                <div class="meta">
+                    <span><i class="far fa-calendar"></i> 25/04/2026</span>
+                    <span><i class="far fa-clock"></i> 9 phút đọc</span>
+                    <span><i class="far fa-folder"></i> AI Agent, Open Source</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <div class="highlight-box">
+                    <h4>TL;DR</h4>
+                    <p style="margin-bottom:0"><strong>OpenClaw 2026.4.24</strong> là bản cập nhật với hơn <strong>80 thay đổi</strong>: voice calls giờ kết nối được full agent, <strong>DeepSeek V4 Flash</strong> trở thành model mặc định (kèm V4 Pro), browser automation thêm <strong>coordinate clicks</strong>, và <strong>Google Meet</strong> lần đầu tích hợp như bundled plugin. Tuy nhiên, cộng đồng phản ánh nhiều vấn đề sau update — gateway timeout, plugin dependencies lỗi, và Telegram bị ảnh hưởng.</p>
+                </div>
+
+                <h2>OpenClaw là gì?</h2>
+                <p><strong>OpenClaw</strong> là nền tảng AI agent <strong>mã nguồn mở</strong> phổ biến nhất hiện tại với hơn <strong>364K stars trên GitHub</strong>. Được tạo bởi <a href="https://x.com/steipete" target="_blank">Peter Steinberger</a> (steipete), OpenClaw cho phép bạn chạy AI agent trên máy riêng — kết nối với nhiều model (GPT, Claude, DeepSeek, Gemini), nhiều kênh giao tiếp (Telegram, Slack, Discord, WhatsApp, Voice Call), và hàng trăm plugin/tools.</p>
+                <p>Khác với các AI agent cloud-based, OpenClaw chạy <strong>self-hosted</strong> — bạn kiểm soát hoàn toàn dữ liệu, model, và chi phí.</p>
+
+                <h2>5 điểm nhấn của bản 2026.4.24</h2>
+
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="icon">📞</div>
+                        <h4>Voice Calls → Full Agent</h4>
+                        <p>Cuộc gọi thoại giờ có thể chuyển tiếp câu hỏi phức tạp đến full OpenClaw agent. Trước đây voice chỉ xử lý đơn giản — giờ có thể gọi tools, truy cập browser, tìm kiếm web ngay trong cuộc gọi. Tính năng <code>openclaw_agent_consult</code> cho phép realtime voice handoff.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">🧠</div>
+                        <h4>DeepSeek V4 Flash + Pro</h4>
+                        <p><strong>DeepSeek V4 Flash</strong> trở thành model onboarding mặc định — nhanh và tiết kiệm hơn. <strong>V4 Pro</strong> có trong catalog cho heavy tasks. Fix thinking/replay cho follow-up tool-call turns — giải quyết lỗi 400 khi switch model giữa session.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">🖱️</div>
+                        <h4>Browser Coordinate Clicks</h4>
+                        <p>Agent giờ click được bằng toạ độ viewport thay vì chỉ dùng CSS selector. Thêm per-profile headless overrides, stable tab reuse, stale-lock recovery, và <strong>action budget tăng lên 60 giây</strong> mặc định — không còn timeout sớm khi trang load chậm.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">📹</div>
+                        <h4>Google Meet Plugin</h4>
+                        <p>Lần đầu tiên: Google Meet trở thành <strong>bundled participant plugin</strong>. Agent tham gia cuộc họp với personal Google auth, hỗ trợ Chrome + Twilio realtime, xuất transcript/recordings/attendance, và doctor/recovery flows tự động.</p>
+                    </div>
+                </div>
+
+                <div class="highlight-box-green">
+                    <h4>Điểm 5: Infrastructure gọn hơn</h4>
+                    <p style="margin-bottom:0">Plugin và model infrastructure được tối ưu: <strong>static model catalogs</strong> thay vì load runtime, manifest-backed model rows, lazy provider dependencies, và sửa runtime dependency cho packaged installs. Khởi động nhanh hơn, nhẹ hơn. Command <code>gateway status</code> bỏ qua plugin loading, chạy nhanh hơn đáng kể.</p>
+                </div>
+
+                <h2>Phân tích chi tiết từ Release Notes</h2>
+
+                <h3>Voice & Realtime</h3>
+                <p>Đây là thay đổi lớn nhất về kiến trúc. OpenClaw giờ có:</p>
+                <ul>
+                    <li><strong>Browser WebRTC realtime voice sessions</strong> — backed bởi OpenAI Realtime API, với Gateway-minted ephemeral client secrets</li>
+                    <li><strong>Gemini Live realtime voice provider</strong> — cho backend Voice Call và Google Meet audio bridges, hỗ trợ bidirectional audio + function-call</li>
+                    <li><strong>Voice Call setup & smoke test</strong> — <code>voicecall setup</code> và <code>voicecall smoke</code> (dry-run) để kiểm tra Twilio readiness trước khi gọi thật</li>
+                    <li><strong>Talk và Voice Call consult full agent</strong> — realtime voice loop có thể hỏi agent backend khi cần tool-backed answers</li>
+                </ul>
+
+                <h3>Browser Automation</h3>
+                <p>Một loạt cải thiện thực tế:</p>
+                <ul>
+                    <li><strong>Coordinate clicks:</strong> <code>openclaw browser click-coords</code> cho CLI, viewport coordinate clicks cho managed + existing sessions</li>
+                    <li><strong>Action timeout 60s mặc định:</strong> Không còn lỗi timeout khi trang load lâu — trước đây mặc định ngắn hơn nhiều</li>
+                    <li><strong>Per-profile headless:</strong> Một profile chạy headless mà không ảnh hưởng profile khác</li>
+                    <li><strong>Stale lock recovery:</strong> Tự dọn Chromium <code>Singleton*</code> locks sau crash, retry launch 1 lần</li>
+                    <li><strong>Deduplicate lazy-start:</strong> Fix race condition gây duplicate Chrome launches</li>
+                </ul>
+
+                <h3>Model & Provider</h3>
+                <ul>
+                    <li>DeepSeek V4 Flash + Pro vào bundled catalog, V4 Flash = onboarding default</li>
+                    <li>Fix <code>reasoning_content</code> placeholders cho replayed assistant tool-call turns — giải quyết lỗi 400 khi switch sang DeepSeek V4 mid-session</li>
+                    <li>Gemini: retry reasoning-only, empty, và planning-only turns thay vì stall silent</li>
+                    <li><code>/models add</code> bị deprecate — khuyến khích dùng catalog thay vì config thủ công</li>
+                </ul>
+
+                <h3>Fixes quan trọng</h3>
+                <ul>
+                    <li><strong>MCP:</strong> Retire one-shot embedded MCP runtimes, skip bundle-MCP startup khi tool allowlist không reach, thêm idle eviction — fix 4 issues liên quan memory leak</li>
+                    <li><strong>Heartbeat:</strong> Fix crash loop khi <code>every</code> value vượt Node timeout cap, stop inject heartbeat prompt vào non-heartbeat runs</li>
+                    <li><strong>Telegram:</strong> Suppress phantom "Agent couldn't generate a response" fallback sau khi reply đã committed</li>
+                    <li><strong>WhatsApp TTS:</strong> Preserve <code>audioAsVoice</code> cho voice-note intent</li>
+                    <li><strong>Sessions/subagents:</strong> Fix stale ended runs reappearing, recover child sessions sau transport failures</li>
+                </ul>
+
+                <h3>Breaking Change</h3>
+                <div class="highlight-box-red">
+                    <h4>Plugin SDK: registerEmbeddedExtensionFactory bị xoá</h4>
+                    <p style="margin-bottom:0">Path compatibility <code>api.registerEmbeddedExtensionFactory(...)</code> chỉ dành cho Pi đã bị loại bỏ. Plugins phải chuyển sang <code>api.registerAgentToolResultMiddleware(...)</code> với <code>contracts.agentToolResultMiddleware</code>. Đây là thay đổi duy nhất có thể break plugins cũ.</p>
+                </div>
+
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <div class="number">80+</div>
+                        <div class="label">Changes</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">40+</div>
+                        <div class="label">Bug Fixes</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">50+</div>
+                        <div class="label">Contributors</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">364K</div>
+                        <div class="label">GitHub Stars</div>
+                    </div>
+                </div>
+
+                <h2>Cộng đồng nói gì?</h2>
+                <p>Thread công bố trên X thu hút phản hồi sôi nổi — cả tích cực lẫn tiêu cực. Dưới đây là tổng hợp:</p>
+
+                <h3>Hào hứng & ấn tượng</h3>
+
+                <div class="community-quote positive">
+                    <p>"Voice + browser automation + MCP in one release makes OpenClaw feel more like a <strong>real execution layer</strong> than just another agent tool."</p>
+                    <span class="author">— @ashutosh_270497 (Ashutosh Tiwari)</span>
+                </div>
+
+                <div class="community-quote positive">
+                    <p>"Voice is the sleeper feature here. Once the agent can talk, browse, and take action in the same loop, <strong>it stops feeling like software</strong>."</p>
+                    <span class="author">— @micahrmiller13 (Micah Miller)</span>
+                </div>
+
+                <div class="community-quote positive">
+                    <p>"Very strong release. Once agent workflows start crossing channels and tools, the hard part is no longer just model quality, it's <strong>orchestration reliability</strong>."</p>
+                    <span class="author">— @puppyone_ai (puppyone)</span>
+                </div>
+
+                <div class="community-quote positive">
+                    <p>"Coordinate clicks in the browser is the kind of thing you <strong>suffer through silently for months</strong> before someone ships it."</p>
+                    <span class="author">— @mktpavlenko (Mykyta Pavlenko)</span>
+                </div>
+
+                <div class="community-quote positive">
+                    <p>"I can now call my OpenClaw to find me flight deals with LetsFG. Sweet, <strong>2 hours back in my pocket</strong>, and I never have to check Skyscanner again."</p>
+                    <span class="author">— @amjaworsky (Adam Jaworski)</span>
+                </div>
+
+                <h3>Vấn đề sau update</h3>
+                <p>Nhiều user báo lỗi ngay sau khi update — pattern quen thuộc với các release lớn của OpenClaw:</p>
+
+                <div class="community-quote negative">
+                    <p>"Everything stopped working after this update. I get a huge list of <strong>plugin runtime deps missing</strong>... cannot find module cacheable for WhatsApp and Telegram is dead."</p>
+                    <span class="author">— @xOMG_ro (xOMG.ro)</span>
+                </div>
+
+                <div class="community-quote negative">
+                    <p>"Did update through terminal and <strong>gateway health check failed... timeout after 10000ms</strong>."</p>
+                    <span class="author">— @Heath_A_Miller (Heath A Miller)</span>
+                </div>
+
+                <div class="community-quote negative">
+                    <p>"Broken gateway. Why? That is the point to release update that <strong>stresses me out on Saturday night</strong>?"</p>
+                    <span class="author">— @ArgentMorrin (Argent Morrin)</span>
+                </div>
+
+                <div class="community-quote negative">
+                    <p>"We really have to stop releasing updates that <strong>break everything</strong>. We have come too far for this to still be happening."</p>
+                    <span class="author">— @ifexy911 (The Prize)</span>
+                </div>
+
+                <div class="community-quote negative">
+                    <p>"Somebody please ping me when there's an update that <strong>doesn't break my 12 Telegram topic sessions</strong>. Keep going though team! Thank you so much for this innovation."</p>
+                    <span class="author">— @ReinventingAI (Mark Fulton)</span>
+                </div>
+
+                <h3>Ý kiến phân tích</h3>
+
+                <div class="community-quote">
+                    <p>"Agents that can call are table stakes. It's the agents that can <strong>sell</strong> that will be worth the compute. OpenClaw is gonna need <strong>HubSpot integration</strong> or it's just another demo."</p>
+                    <span class="author">— @tejalogs (Teja)</span>
+                </div>
+
+                <h2>Đánh giá tổng thể</h2>
+
+                <div class="highlight-box-yellow">
+                    <h4>Release lớn, nhưng update với cẩn thận</h4>
+                    <p>Đây là bản cập nhật <strong>tham vọng nhất</strong> của OpenClaw trong thời gian gần đây — voice calls reach full agent, Google Meet integration, DeepSeek V4 làm default, browser automation mạnh hơn. Tuy nhiên, pattern "update rồi fix" lặp lại: nhiều user gặp lỗi gateway, plugin deps, và Telegram ngay sau update.</p>
+                    <p style="margin-bottom:0"><strong>Khuyến nghị:</strong> Nếu đang chạy production workloads, chờ 1-2 ngày cho hotfix trước khi update. Nếu đang dev/test, update ngay để trải nghiệm voice calls và DeepSeek V4 Flash. Backup config trước khi update: <code>cp -r ~/.openclaw ~/.openclaw-backup</code>.</p>
+                </div>
+
+                <h2>Cách update</h2>
+                <p>Nếu đã cài OpenClaw qua npm:</p>
+                <pre style="background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius-md);padding:1rem;overflow-x:auto;color:var(--text);font-size:.9rem"><code># Backup trước
+cp -r ~/.openclaw ~/.openclaw-backup
+
+# Update
+npm update -g openclaw
+
+# Hoặc pull latest từ GitHub
+git pull origin main && npm install
+
+# Verify
+openclaw --version
+# Expected: 2026.4.24</code></pre>
+
+                <div class="source-links">
+                    <h4>Nguồn & tham khảo</h4>
+                    <ul>
+                        <li><a href="https://github.com/openclaw/openclaw/releases/tag/v2026.4.24" target="_blank">OpenClaw v2026.4.24 Release Notes — GitHub</a></li>
+                        <li><a href="https://x.com/openclaw/status/2048124737918751035" target="_blank">Thread công bố trên X — @openclaw</a></li>
+                    </ul>
+                </div>
+
+                <div class="back-to-blog-footer">
+                    <a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+                </div>
+
+                <div class="article-cta-stack">
+                    <a href="/blog/devin-ai-engineer-guide" class="article-suggestion-card">
+                        <span class="article-suggestion-label"><i class="fas fa-book-open"></i> Đọc tiếp</span>
+                        <span class="article-suggestion-title">Devin AI Là Gì? Hướng Dẫn Toàn Diện Cho Người Mới: Use Cases, Pricing, Và Cách Dùng Hiệu Quả</span>
+                    </a>
+                    <div class="article-cta-actions">
+                        <a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a>
+                    </div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">OpenClaw</span>
+                    <span class="tag">AI Agent</span>
+                    <span class="tag">Open Source</span>
+                    <span class="tag">Voice AI</span>
+                    <span class="tag">DeepSeek V4</span>
+                    <span class="tag">Browser Automation</span>
+                    <span class="tag">Google Meet</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

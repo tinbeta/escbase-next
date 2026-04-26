@@ -1,5 +1,17 @@
 [
     {
+        "url": "/blog/openclaw-2026-4-24-release",
+        "title": "OpenClaw 2026.4.24: Voice Calls, DeepSeek V4, Browser Automation, Và Google Meet",
+        "excerpt": "OpenClaw 2026.4.24 ra mắt với hơn 80 thay đổi: voice calls kết nối full agent, DeepSeek V4 Flash trở thành model mặc định, browser automation thêm coordinate clicks, và Google Meet lần đầu tích hợp. Cộng đồng hào hứng nhưng nhiều user gặp lỗi gateway và plugin sau update.",
+        "date": "Apr 25, 2026",
+        "tag": "AI Agent",
+        "tagIcon": "fas fa-robot",
+        "tagColor": "#ef4444",
+        "readTime": "9 min read",
+        "featured": true,
+        "image": "/images/openclaw-2026-4-24-thumb.svg"
+    },
+    {
         "url": "/blog/devin-ai-engineer-guide",
         "title": "Devin AI Là Gì? Hướng Dẫn Toàn Diện Cho Người Mới: Use Cases, Pricing, Và Cách Dùng Hiệu Quả",
         "excerpt": "Devin là AI software engineer đầu tiên, xây dựng bởi Cognition AI. Có máy ảo riêng, tự viết code, chạy test, tạo PR. Bài viết giải thích Devin là gì, so sánh với Copilot/Cursor/Claude Code, bảng giá 2026 (Free → $200/tháng), use cases thực tế, và tips dùng hiệu quả.",
