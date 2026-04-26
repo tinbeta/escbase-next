@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f1a"/>
+      <stop offset="100%" style="stop-color:#1a0f2e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ef4444"/>
+      <stop offset="100%" style="stop-color:#f97316"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" style="stop-color:#ef4444;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#ef4444;stop-opacity:0"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" fill="url(#bg)"/>
+  <!-- Grid -->
+  <g opacity="0.05">
+    <line x1="0" y1="60" x2="800" y2="60" stroke="#ef4444" stroke-width="0.5"/>
+    <line x1="0" y1="120" x2="800" y2="120" stroke="#ef4444" stroke-width="0.5"/>
+    <line x1="0" y1="180" x2="800" y2="180" stroke="#ef4444" stroke-width="0.5"/>
+    <line x1="0" y1="240" x2="800" y2="240" stroke="#ef4444" stroke-width="0.5"/>
+    <line x1="0" y1="300" x2="800" y2="300" stroke="#ef4444" stroke-width="0.5"/>
+    <line x1="0" y1="360" x2="800" y2="360" stroke="#ef4444" stroke-width="0.5"/>
+    <line x1="100" y1="0" x2="100" y2="420" stroke="#ef4444" stroke-width="0.5"/>
+    <line x1="200" y1="0" x2="200" y2="420" stroke="#ef4444" stroke-width="0.5"/>
+    <line x1="300" y1="0" x2="300" y2="420" stroke="#ef4444" stroke-width="0.5"/>
+    <line x1="400" y1="0" x2="400" y2="420" stroke="#ef4444" stroke-width="0.5"/>
+    <line x1="500" y1="0" x2="500" y2="420" stroke="#ef4444" stroke-width="0.5"/>
+    <line x1="600" y1="0" x2="600" y2="420" stroke="#ef4444" stroke-width="0.5"/>
+    <line x1="700" y1="0" x2="700" y2="420" stroke="#ef4444" stroke-width="0.5"/>
+  </g>
+  <!-- Glow -->
+  <ellipse cx="400" cy="160" rx="280" ry="110" fill="url(#glow)"/>
+  <!-- Lobster icon (simplified) -->
+  <g transform="translate(620,40)" opacity="0.15">
+    <text font-size="70">🦞</text>
+  </g>
+  <!-- Accent bar -->
+  <rect x="60" y="90" width="4" height="80" rx="2" fill="url(#accent)"/>
+  <!-- Title -->
+  <text x="80" y="120" font-family="Inter,system-ui,sans-serif" font-size="28" font-weight="800" fill="#f8fafc">
+    OpenClaw 2026.4.24
+  </text>
+  <text x="80" y="155" font-family="Inter,system-ui,sans-serif" font-size="16" font-weight="500" fill="#94a3b8">
+    Bản cập nhật lớn nhất từ trước đến nay
+  </text>
+  <!-- Feature pills -->
+  <rect x="80" y="180" width="100" height="26" rx="13" fill="rgba(239,68,68,.15)" stroke="rgba(239,68,68,.3)" stroke-width="1"/>
+  <text x="130" y="197" font-family="Inter,system-ui,sans-serif" font-size="11" font-weight="600" fill="#f87171" text-anchor="middle">Voice Calls</text>
+  <rect x="195" y="180" width="110" height="26" rx="13" fill="rgba(249,115,22,.15)" stroke="rgba(249,115,22,.3)" stroke-width="1"/>
+  <text x="250" y="197" font-family="Inter,system-ui,sans-serif" font-size="11" font-weight="600" fill="#fb923c" text-anchor="middle">DeepSeek V4</text>
+  <rect x="320" y="180" width="130" height="26" rx="13" fill="rgba(234,179,8,.15)" stroke="rgba(234,179,8,.3)" stroke-width="1"/>
+  <text x="385" y="197" font-family="Inter,system-ui,sans-serif" font-size="11" font-weight="600" fill="#facc15" text-anchor="middle">Browser Clicks</text>
+  <rect x="465" y="180" width="120" height="26" rx="13" fill="rgba(168,85,247,.15)" stroke="rgba(168,85,247,.3)" stroke-width="1"/>
+  <text x="525" y="197" font-family="Inter,system-ui,sans-serif" font-size="11" font-weight="600" fill="#c084fc" text-anchor="middle">Google Meet</text>
+  <!-- Stats -->
+  <g transform="translate(80,230)">
+    <rect x="0" y="0" width="130" height="55" rx="8" fill="rgba(239,68,68,.08)" stroke="rgba(239,68,68,.15)" stroke-width="1"/>
+    <text x="65" y="25" font-family="Inter,system-ui,sans-serif" font-size="18" font-weight="800" fill="#f87171" text-anchor="middle">80+</text>
+    <text x="65" y="42" font-family="Inter,system-ui,sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Changes</text>
+  </g>
+  <g transform="translate(225,230)">
+    <rect x="0" y="0" width="130" height="55" rx="8" fill="rgba(249,115,22,.08)" stroke="rgba(249,115,22,.15)" stroke-width="1"/>
+    <text x="65" y="25" font-family="Inter,system-ui,sans-serif" font-size="18" font-weight="800" fill="#fb923c" text-anchor="middle">40+</text>
+    <text x="65" y="42" font-family="Inter,system-ui,sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Bug Fixes</text>
+  </g>
+  <g transform="translate(370,230)">
+    <rect x="0" y="0" width="130" height="55" rx="8" fill="rgba(168,85,247,.08)" stroke="rgba(168,85,247,.15)" stroke-width="1"/>
+    <text x="65" y="25" font-family="Inter,system-ui,sans-serif" font-size="18" font-weight="800" fill="#c084fc" text-anchor="middle">364K</text>
+    <text x="65" y="42" font-family="Inter,system-ui,sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">GitHub Stars</text>
+  </g>
+  <!-- Key features list -->
+  <g transform="translate(80,310)">
+    <circle cx="6" cy="6" r="4" fill="#ef4444"/>
+    <text x="16" y="10" font-family="Inter,system-ui,sans-serif" font-size="12" fill="#94a3b8">Voice calls reach full agent + tools</text>
+  </g>
+  <g transform="translate(80,333)">
+    <circle cx="6" cy="6" r="4" fill="#f97316"/>
+    <text x="16" y="10" font-family="Inter,system-ui,sans-serif" font-size="12" fill="#94a3b8">DeepSeek V4 Flash = new default model</text>
+  </g>
+  <g transform="translate(80,356)">
+    <circle cx="6" cy="6" r="4" fill="#eab308"/>
+    <text x="16" y="10" font-family="Inter,system-ui,sans-serif" font-size="12" fill="#94a3b8">Coordinate clicks + stale-lock recovery</text>
+  </g>
+  <g transform="translate(420,310)">
+    <circle cx="6" cy="6" r="4" fill="#a855f7"/>
+    <text x="16" y="10" font-family="Inter,system-ui,sans-serif" font-size="12" fill="#94a3b8">Google Meet bundled plugin</text>
+  </g>
+  <g transform="translate(420,333)">
+    <circle cx="6" cy="6" r="4" fill="#ef4444"/>
+    <text x="16" y="10" font-family="Inter,system-ui,sans-serif" font-size="12" fill="#94a3b8">Gemini Live voice provider</text>
+  </g>
+  <g transform="translate(420,356)">
+    <circle cx="6" cy="6" r="4" fill="#f97316"/>
+    <text x="16" y="10" font-family="Inter,system-ui,sans-serif" font-size="12" fill="#94a3b8">Static model catalogs, faster startup</text>
+  </g>
+  <!-- Footer -->
+  <text x="80" y="400" font-family="Inter,system-ui,sans-serif" font-size="11" fill="#475569">escbase.xyz</text>
+  <text x="720" y="400" font-family="Inter,system-ui,sans-serif" font-size="11" fill="#475569" text-anchor="end">AI Agent</text>
+</svg>
