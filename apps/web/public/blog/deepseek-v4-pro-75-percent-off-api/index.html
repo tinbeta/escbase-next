@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepSeek Giảm 75% Giá V4-Pro API Tới 5/5: 1M Context, Cache Hit Chỉ $0.003625 - Escbase</title>
+    <meta name="description" content="DeepSeek giảm 75% giá V4-Pro API tới 5/5/2026, kéo giá cache hit xuống $0.003625, cache miss còn $0.435 và output còn $0.87 mỗi 1 triệu token. Điểm đáng chú ý không chỉ là rẻ, mà là DeepSeek đang đóng gói V4-Pro như một model dành thẳng cho Claude Code, OpenCode và OpenClaw workflows.">
+    <meta property="og:title" content="DeepSeek Giảm 75% Giá V4-Pro API Tới 5/5">
+    <meta property="og:description" content="DeepSeek tung giảm giá 75% cho V4-Pro API tới 5/5, đồng thời đẩy mạnh tích hợp với Claude Code, OpenCode và OpenClaw. Đây không chỉ là khuyến mãi ngắn hạn, mà là cú đẩy mạnh để giành developer mindshare ở mảng coding agents và long-context workflows.">
+    <meta property="og:image" content="https://escbase.xyz/images/deepseek-v4-pro-75-percent-off-api-thumb.png">
+    <meta property="og:url" content="https://escbase.xyz/blog/deepseek-v4-pro-75-percent-off-api/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/shared-article.css">
+    <link rel="stylesheet" href="/shared-article-footer.css">
+    <style>
+        .pricing-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin:1.5rem 0 2rem; }
+        .pricing-card { background:var(--card-bg); border:1px solid var(--border); border-radius:var(--radius-md); padding:1.2rem; }
+        .pricing-card .label { color:var(--text-muted); font-size:.85rem; margin-bottom:.45rem; }
+        .pricing-card .value { color:var(--text); font-size:1.6rem; font-weight:800; line-height:1.1; }
+        .pricing-card .sub { color:var(--text-secondary); font-size:.92rem; margin-top:.45rem; }
+        .compare-table { width:100%; border-collapse:collapse; margin:1.5rem 0; font-size:.95rem; }
+        .compare-table th, .compare-table td { padding:.8rem .9rem; text-align:left; border:1px solid var(--border); }
+        .compare-table th { background:var(--card-bg); color:var(--text); }
+        .compare-table td { color:var(--text-secondary); }
+        .table-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; margin:1.5rem 0; border-radius:var(--radius-md); }
+        .table-wrap .compare-table { min-width:620px; margin:0; }
+        .promo-image { max-width:100%; border-radius:var(--radius-md); border:1px solid var(--border); margin:1.5rem 0; }
+        @media (max-width:768px) {
+            .pricing-grid { grid-template-columns:1fr; }
+            .pricing-card .value { font-size:1.4rem; }
+            .compare-table { font-size:.85rem; }
+            .compare-table th, .compare-table td { padding:.6rem .65rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <span class="category-badge"><i class="fas fa-code"></i> AI Coding</span>
+                <h1>DeepSeek Giảm 75% Giá V4-Pro API Tới 5/5: 1M Context, Cache Hit Chỉ $0.003625</h1>
+                <div class="meta">
+                    <span><i class="far fa-calendar"></i> 26/04/2026</span>
+                    <span><i class="far fa-clock"></i> 8 phút đọc</span>
+                    <span><i class="far fa-folder"></i> AI Coding, API Pricing</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <div class="highlight-box">
+                    <h4>TL;DR</h4>
+                    <p style="margin-bottom:0"><strong>DeepSeek đang giảm 75% giá cho V4-Pro API tới 15:59 UTC ngày 5/5/2026</strong>, kéo giá xuống còn <strong>$0.003625 cho 1 triệu input token cache hit</strong>, <strong>$0.435 cho cache miss</strong> và <strong>$0.87 cho output</strong>. Điểm quan trọng hơn chuyện rẻ là DeepSeek đang đóng gói V4-Pro như một model dành thẳng cho các workflow coding agents: <strong>Claude Code</strong>, <strong>OpenCode</strong> và <strong>OpenClaw</strong>, kèm hỗ trợ <strong>1M context</strong> qua biến thể <code>deepseek-v4-pro[1m]</code>.</p>
+                </div>
+
+                <img src="/images/deepseek-v4-pro-75-percent-off-api-cover.jpg" alt="Promo giảm giá 75% cho DeepSeek V4 Pro API" class="promo-image" />
+                <p style="font-size:.9rem;color:var(--text-muted);margin-top:-.75rem;margin-bottom:1.5rem;">Ảnh promo DeepSeek công bố mức giảm giá 75% cho V4-Pro API cùng mốc thời gian kết thúc ưu đãi.</p>
+
+                <h2>Đợt giảm giá này mạnh ở đúng chỗ dev quan tâm nhất</h2>
+                <p>DeepSeek vừa công bố một đợt giảm giá khá hung cho <strong>V4-Pro API</strong>: giảm <strong>75%</strong> đến <strong>15:59 UTC ngày 5/5/2026</strong>. Nếu chỉ nhìn headline thì đây giống một chiến dịch kéo user thử model. Nhưng đọc kỹ pricing và phần integration notes, câu chuyện lớn hơn là DeepSeek đang cố biến V4-Pro thành lựa chọn mặc định cho nhóm dev chạy agent, code review dài và workflow nhiều context.</p>
+
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <div class="label">Input token — cache hit</div>
+                        <div class="value">$0.003625</div>
+                        <div class="sub">mỗi 1M token, rẻ hơn giá gốc 4 lần sau khi giảm 75%</div>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="label">Input token — cache miss</div>
+                        <div class="value">$0.435</div>
+                        <div class="sub">mỗi 1M token cho input mới hoàn toàn</div>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="label">Output token</div>
+                        <div class="value">$0.87</div>
+                        <div class="sub">mỗi 1M token output của V4-Pro trong thời gian ưu đãi</div>
+                    </div>
+                </div>
+
+                <p>Điểm dễ bị bỏ qua nhất nằm ở giá <strong>cache hit</strong>. Theo docs chính thức, nếu prompt/context của bạn được tái sử dụng đúng cách, giá input chỉ còn <strong>$0.003625/1M token</strong>. Đây là mức gần như đẩy long-context agent loops sang một bài toán tối ưu kiến trúc nhiều hơn là tối ưu budget.</p>
+
+                <h2>Không chỉ giảm giá, DeepSeek còn đóng gói thẳng cho hệ coding agents</h2>
+                <p>Tweet của DeepSeek không chỉ ghi giá mới, mà còn ghi rất rõ các điểm tích hợp:</p>
+                <ul>
+                    <li><strong>Claude Code:</strong> đổi model sang <code>deepseek-v4-pro[1m]</code> để mở 1M context.</li>
+                    <li><strong>OpenCode:</strong> cần bản <code>v1.14.24+</code>.</li>
+                    <li><strong>OpenClaw:</strong> cần <code>v2026.4.24+</code>.</li>
+                </ul>
+
+                <p>Đây là chi tiết quan trọng hơn bề ngoài của nó. DeepSeek không còn bán V4-Pro như một model API chung chung. Họ đang bán nó như một <strong>hạ tầng thay model cho coding agent stack</strong>. Khi setup chỉ còn là đổi model string hoặc update version tool, câu hỏi không còn là “dùng được không”, mà là “route workload nào sang đây để tối ưu cost nhất”.</p>
+
+                <div class="highlight-box-blue">
+                    <h4>💡 Tín hiệu đáng để ý</h4>
+                    <p style="margin-bottom:0">Việc DeepSeek ghi tên thẳng <strong>Claude Code</strong>, <strong>OpenCode</strong> và <strong>OpenClaw</strong> trong post quảng bá cho thấy họ đang nhắm trực tiếp vào nhóm dev chạy agent workflows, chứ không chỉ săn người gọi API thuần. Đây là cách giành developer mindshare nhanh hơn nhiều so với chỉ khoe benchmark.</p>
+                </div>
+
+                <h2>V4-Pro đang được đặt cạnh V4-Flash như thế nào?</h2>
+                <p>Theo docs pricing chính thức, cả <strong>deepseek-v4-flash</strong> lẫn <strong>deepseek-v4-pro</strong> đều hỗ trợ <strong>1M context</strong>, tối đa <strong>384K output</strong>, JSON Output, Tool Calls, Prefix Completion và FIM Completion ở non-thinking mode. Sự khác biệt nằm ở giá và định vị workload.</p>
+
+                <div class="table-wrap">
+                    <table class="compare-table">
+                        <thead>
+                            <tr>
+                                <th>Hạng mục</th>
+                                <th>V4-Flash</th>
+                                <th>V4-Pro (đang giảm)</th>
+                                <th>V4-Pro giá gốc</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Input cache hit / 1M</td>
+                                <td>$0.0028</td>
+                                <td>$0.003625</td>
+                                <td>$0.0145</td>
+                            </tr>
+                            <tr>
+                                <td>Input cache miss / 1M</td>
+                                <td>$0.14</td>
+                                <td>$0.435</td>
+                                <td>$1.74</td>
+                            </tr>
+                            <tr>
+                                <td>Output / 1M</td>
+                                <td>$0.28</td>
+                                <td>$0.87</td>
+                                <td>$3.48</td>
+                            </tr>
+                            <tr>
+                                <td>Context length</td>
+                                <td>1M</td>
+                                <td>1M</td>
+                                <td>1M</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>Nói đơn giản: <strong>V4-Flash</strong> vẫn là lựa chọn rẻ nhất để iterate nhanh. Nhưng khi V4-Pro bị kéo giá xuống mức này, khoảng cách cost cho những workload cần reasoning nặng, code review dài hoặc agent loops nhiều tool bắt đầu dễ chấp nhận hơn hẳn.</p>
+
+                <h2>Cộng đồng đang đọc tín hiệu gì từ đợt giảm giá này?</h2>
+                <p>Phản ứng cộng đồng dưới post khá thú vị, và phần lớn xoay quanh ba ý lớn.</p>
+
+                <h3>1. Thứ mọi người chú ý nhất là cache hit price</h3>
+                <p>Nhiều reply không quan tâm headline “75% off” bằng con số <strong>$0.003625/1M input token cache hit</strong>. Lý do đơn giản: với những hệ dùng prompt lặp, long-lived system prompt hoặc RAG/document header tái sử dụng, đó mới là nơi tổng chi phí thật sự tụt mạnh nhất.</p>
+
+                <h3>2. 1M context đang được nhìn như vũ khí cho agent workflows</h3>
+                <p>Một số dev nói thẳng họ để ý nhất là biến thể <code>deepseek-v4-pro[1m]</code>, vì nó đổi bài toán cho các tác vụ như đọc codebase lớn, review repository vài trăm nghìn token hay orchestration nhiều subagent. Tức là cộng đồng không chỉ nhìn đây là “model rẻ”, mà là <strong>model rẻ đúng loại workload đang hot</strong>.</p>
+
+                <h3>3. Giá model đang bị kéo vào cuộc đua xuống đáy</h3>
+                <p>Một nhóm khác xem đây là dấu hiệu cho thấy lớp model đang bị hàng hóa hóa rất nhanh. Khi model có thể thay nhau bằng một config file, lợi thế thật dần chuyển sang kiến trúc agent, verification loop và sản phẩm bao quanh model hơn là bản thân model riêng lẻ.</p>
+
+                <div class="highlight-box-yellow">
+                    <h4>⚠️ Điều nên nhìn tỉnh</h4>
+                    <p style="margin-bottom:0">Giảm giá 75% rất hấp dẫn, nhưng đây vẫn là ưu đãi có hạn tới <strong>5/5/2026</strong>. Nếu ai build economics dài hạn dựa thẳng trên giá promo này mà không chuẩn bị cho giá gốc quay lại, rất dễ ảo tưởng unit economics. Điểm bền hơn của post này là DeepSeek đang giành chỗ đứng trong stack tooling của dev, không chỉ giành vài ngày traffic thử model.</p>
+                </div>
+
+                <h2>Điều đáng chú ý nhất không phải “rẻ”, mà là “rẻ đúng chỗ”</h2>
+                <p>Nếu chỉ xét mức giá, V4-Pro sau giảm đã đủ gây ồn ào. Nhưng điểm mạnh hơn nằm ở cách DeepSeek đóng gói thông điệp:</p>
+                <ul>
+                    <li>nêu thẳng tên các công cụ dev đang dùng,</li>
+                    <li>đẩy biến thể 1M context ra trước mặt,</li>
+                    <li>và nhấn vào context caching như một đòn hạ cost thực chiến.</li>
+                </ul>
+
+                <p>Nói cách khác, đây là một cú đánh vào <strong>developer workflow</strong>, không chỉ vào bảng giá.</p>
+
+                <div class="highlight-box-red">
+                    <h4>🚨 Chốt lại</h4>
+                    <p style="margin-bottom:0"><strong>DeepSeek đang làm hai việc cùng lúc:</strong> dùng giảm giá 75% để kéo developer thử V4-Pro ngay bây giờ, và dùng integration với Claude Code / OpenCode / OpenClaw để chen thẳng model này vào những stack agent đang tăng trưởng nhanh nhất. Nếu đợt này thành công, thứ DeepSeek mua được không chỉ là doanh thu ngắn hạn, mà là vị trí mặc định trong các workflow code-heavy và long-context của dev.</p>
+                </div>
+
+                <div class="source-links">
+                    <h4>Nguồn & tham khảo</h4>
+                    <ul>
+                        <li><a href="https://x.com/deepseek_ai/status/2048062777357750316" target="_blank">DeepSeek on X — V4-Pro API 75% OFF + integration updates</a></li>
+                        <li><a href="https://api-docs.deepseek.com/quick_start/pricing/" target="_blank">DeepSeek API Docs — Models & Pricing</a></li>
+                    </ul>
+                </div>
+
+                <div class="back-to-blog-footer">
+                    <a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+                </div>
+
+                <div class="article-cta-stack">
+                    <a href="/blog/openclaw-2026-4-24-release" class="article-suggestion-card">
+                        <span class="article-suggestion-label"><i class="fas fa-book-open"></i> Đọc tiếp</span>
+                        <span class="article-suggestion-title">OpenClaw 2026.4.24: Voice Calls, DeepSeek V4, Browser Automation, Và Google Meet</span>
+                    </a>
+                    <div class="article-cta-actions">
+                        <a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a>
+                    </div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">DeepSeek</span>
+                    <span class="tag">API Pricing</span>
+                    <span class="tag">Claude Code</span>
+                    <span class="tag">OpenClaw</span>
+                    <span class="tag">AI Coding</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>
