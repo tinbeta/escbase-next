@@ -43,7 +43,17 @@
         .comparison-col.bad h4 { color: var(--accent-red); }
         .comparison-col ul { margin-bottom: 0; padding-left: 1.25rem; }
         .comparison-col li { margin-bottom: .4rem; font-size: .9rem; }
-        @media (max-width: 768px) { .comparison-box { grid-template-columns: 1fr; } }
+        .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 1.5rem 0; border-radius: var(--radius-md); }
+        .table-scroll .pricing-table { margin: 0; min-width: 520px; }
+        @media (max-width: 768px) {
+            .comparison-box { grid-template-columns: 1fr; }
+            .pricing-table { font-size: .82rem; }
+            .pricing-table th, .pricing-table td { padding: .5rem .6rem; }
+            .use-case-card { padding: 1rem; }
+            .use-case-card h4 { font-size: .95rem; }
+            .workflow-step { gap: .75rem; }
+            .comparison-col { padding: 1rem; }
+        }
     </style>
 </head>
 <body>
@@ -169,6 +179,7 @@
 
                 <h2>Devin có gì đặc biệt so với Copilot, Cursor, Claude Code?</h2>
 
+                <div class="table-scroll">
                 <table class="pricing-table">
                     <thead>
                         <tr>
@@ -231,12 +242,14 @@
                         </tr>
                     </tbody>
                 </table>
+                </div>
 
                 <p><strong>Tóm lại:</strong> Copilot và Cursor giúp bạn code nhanh hơn khi đang ngồi trước IDE. Devin làm việc <em>thay bạn</em> — bạn giao task rồi đi làm việc khác. Claude Code ở giữa: chạy trên terminal local, mạnh nhưng cần bạn supervise nhiều hơn.</p>
 
                 <h2>Bảng giá Devin 2026</h2>
                 <p>Cognition vừa cập nhật pricing tháng 4/2026 với 5 gói mới:</p>
 
+                <div class="table-scroll">
                 <table class="pricing-table">
                     <thead>
                         <tr>
@@ -279,6 +292,7 @@
                         </tr>
                     </tbody>
                 </table>
+                </div>
 
                 <p><strong>Lưu ý:</strong> Nếu vượt quota trong gói, bạn trả thêm theo usage. Ask Devin, DeepWiki, và Devin Review giờ cũng tính phí (trước đây miễn phí). ACU (Agent Compute Unit) đo lường khối lượng công việc — phụ thuộc vào số lượng actions, độ phức tạp task, và thời gian VM chạy.</p>
 
