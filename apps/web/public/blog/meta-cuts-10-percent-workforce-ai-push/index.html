@@ -27,9 +27,20 @@
         .timeline-item { background:linear-gradient(135deg, rgba(96,165,250,.08) 0%, rgba(34,197,94,.04) 100%); border:1px solid rgba(96,165,250,.14); border-radius:var(--radius-md); padding:1.1rem 1.2rem; }
         .timeline-item h4 { color:var(--text); margin-bottom:.4rem; font-size:1rem; }
         .timeline-item p { margin-bottom:0; font-size:.96rem; }
+        .community-section { margin:2.5rem 0; }
+        .community-section h2 { margin-bottom:1.2rem; }
+        .community-quote { background:var(--card-bg); border:1px solid var(--border); border-radius:var(--radius-md); padding:1.1rem 1.3rem; margin-bottom:.85rem; }
+        .community-quote.negative { border-left:3px solid var(--accent-red); }
+        .community-quote.neutral { border-left:3px solid var(--accent-blue); }
+        .community-quote.positive { border-left:3px solid var(--accent-green); }
+        .community-quote p { margin-bottom:.4rem; font-size:.97rem; line-height:1.6; }
+        .community-quote .author { color:var(--text-muted); font-size:.85rem; }
+        .community-quote .author a { color:var(--accent-blue); text-decoration:none; }
+        .community-quote .author a:hover { text-decoration:underline; }
         @media (max-width: 768px) {
             .numbers-grid { grid-template-columns:1fr; }
             .number-card .value { font-size:1.45rem; }
+            .community-quote { padding:.9rem 1rem; }
         }
     </style>
 </head>
@@ -41,7 +52,7 @@
                 <h1>Meta Cắt 10% Nhân Sự Để Dồn Lực Cho AI: 8.000 Người Ra Đi, 6.000 Vị Trí Mở Bị Huỷ</h1>
                 <div class="meta">
                     <span><i class="far fa-calendar"></i> 26/04/2026</span>
-                    <span><i class="far fa-clock"></i> 6 phút đọc</span>
+                    <span><i class="far fa-clock"></i> 8 phút đọc</span>
                     <span><i class="far fa-folder"></i> AI, Big Tech</span>
                 </div>
             </header>
@@ -127,6 +138,40 @@
                 <div class="highlight-box-red">
                     <h4>🚨 Chốt lại</h4>
                     <p style="margin-bottom:0"><strong>Meta đang gửi một tín hiệu rất rõ cho thị trường:</strong> trong giai đoạn này, công ty sẵn sàng giảm người, giảm tuyển dụng và tái thiết cách vận hành để không bị hụt hơi trong cuộc đua AI. Với Big Tech, AI không còn là một team mới cần thêm ngân sách — nó đang trở thành lý do để viết lại cả sơ đồ tổ chức.</p>
+                </div>
+
+                <div class="community-section">
+                    <h2>Cộng đồng nói gì</h2>
+
+                    <div class="community-quote neutral">
+                        <p>"Cùng tuần: Meta cắt 8.000 vị trí. Microsoft mở chương trình nghỉ hưu tự nguyện lần đầu trong lịch sử. KPMG cắt 10% audit partners. Nike cắt 1.400 người, chủ yếu ở tech/operations. Đây không đơn thuần là layoffs. Đây là sơ đồ tổ chức mới của kỷ nguyên AI."</p>
+                        <span class="author">— <a href="https://x.com/ai_daily_gr/status/2048311527891955842" target="_blank">@ai_daily_gr</a> (AI Daily)</span>
+                    </div>
+
+                    <div class="community-quote neutral">
+                        <p>"Microsoft: buyout cho 7% nhân sự. Meta: layoffs cho 10% 'khi đầu tư AI tăng vọt'. Đây là thương vụ mà Big Tech đang công bố bây giờ."</p>
+                        <span class="author">— <a href="https://x.com/yourkaisensei/status/2048078114115223878" target="_blank">@yourkaisensei</a></span>
+                    </div>
+
+                    <div class="community-quote neutral">
+                        <p>"Đợt cắt giảm 10% nhân sự của Meta báo hiệu hồi kết của AI giá rẻ."</p>
+                        <span class="author">— <a href="https://x.com/theotherfeedapp/status/2048085544236880027" target="_blank">@theotherfeedapp</a> (TheOtherFeed)</span>
+                    </div>
+
+                    <div class="community-quote negative">
+                        <p>"Meta Platforms định cắt 8.000 người, tức 10% workforce. Meta là công ty trị giá 1,84 nghìn tỷ đô, nhưng liên tục sa thải nhân viên mỗi năm, kể cả khi họ đang làm tốt. Đây là chủ nghĩa tư bản — chỉ có tiền mới quan trọng. Nhân viên chỉ là thứ hàng hóa có thể thay thế."</p>
+                        <span class="author">— <a href="https://x.com/kagu1990/status/2045490208586535063" target="_blank">@kagu1990</a></span>
+                    </div>
+
+                    <div class="community-quote neutral">
+                        <p>"Mọi đợt layoffs lớn ở Big Tech đều sẽ bị đổ lỗi cho AI. Hai năm trước, họ bảo do tuyển quá nhiều. Trước đó, do hiệu quả. Trước nữa, do quá nhiều tầng quản lý. Layoffs vẫn y nguyên — chỉ có câu chuyện kể đi kèm là thay đổi. [...] AI đang nén lại lượng lao động cần cho một số chức năng. Và chi tiêu AI đang tạo áp lực chi phí khiến việc cắt headcount trở thành điều cần thiết bất kể năng suất có tăng hay không. Cả hai điều đều đúng cùng lúc."</p>
+                        <span class="author">— <a href="https://x.com/buildsellagain/status/2039078948257083677" target="_blank">@buildsellagain</a> (Build And Sell)</span>
+                    </div>
+
+                    <div class="community-quote negative">
+                        <p>"META cắt 8.000 việc cho AI. Công ty cắt 10% workforce, huỷ luôn 6.000 vị trí chưa tuyển để dồn tiền cho khoản đầu tư $135 tỷ vào hạ tầng AI."</p>
+                        <span class="author">— <a href="https://x.com/The_Ref_io/status/2047414210901241875" target="_blank">@The_Ref_io</a> (REF)</span>
+                    </div>
                 </div>
 
                 <div class="source-links">
