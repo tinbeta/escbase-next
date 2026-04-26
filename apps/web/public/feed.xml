@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Sat, 25 Apr 2026 16:47:14 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 26 Apr 2026 01:10:10 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Devin AI Là Gì? Hướng Dẫn Toàn Diện Cho Người Mới: Use Cases, Pricing, Và Cách Dùng Hiệu Quả</title>
+      <link>https://escbase.xyz/blog/devin-ai-engineer-guide</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/devin-ai-engineer-guide</guid>
+      <pubDate>Sat, 25 Apr 2026 00:00:00 GMT</pubDate>
+      <description>Devin là AI software engineer đầu tiên, xây dựng bởi Cognition AI. Có máy ảo riêng, tự viết code, chạy test, tạo PR. Bài viết giải thích Devin là gì, so sánh với Copilot/Cursor/Claude Code, bảng giá 2026 (Free → $200/tháng), use cases thực tế, và tips dùng hiệu quả.</description>
+      <category>AI Tools</category>
+      <enclosure url="https://escbase.xyz/images/devin-ai-guide-thumb.svg" type="image/svg+xml" length="0" />
+    </item>
     <item>
       <title>Google Maps Nâng Cấp Imagery Insights: Aerial, Satellite, Solar Và Street View LiDAR Tại Cloud Next 2026</title>
       <link>https://escbase.xyz/blog/google-maps-imagery-insights-cloud-next-2026</link>
@@ -447,15 +456,6 @@
       <description>OKX Ventures đầu tư chiến lược vào CAEX để hỗ trợ sàn này tham gia chương trình thí điểm giao dịch crypto có quản lý tại Việt Nam. Đây không chỉ là một deal vốn, mà là tín hiệu dòng tiền đang nghiêng về các nền tảng compliant.</description>
       <category>Pháp lý Crypto Việt Nam</category>
       <enclosure url="https://escbase.xyz/images/okx-ventures-caex-thumb.jpg" type="image/jpeg" length="0" />
-    </item>
-    <item>
-      <title>MiniMax MMX-CLI: Khi AI Agent Không Còn Chỉ Biết Gõ Chữ</title>
-      <link>https://escbase.xyz/blog/minimax-mmx-cli</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/minimax-mmx-cli</guid>
-      <pubDate>Sat, 11 Apr 2026 00:00:00 GMT</pubDate>
-      <description>MiniMax vừa ra mắt MMX-CLI để cho AI agent thêm 7 giác quan: image, video, speech, music, vision, search và conversation. Đây không chỉ là thêm tool, mà là cách biến agent thành giao diện đa phương thức thật sự.</description>
-      <category>AI Agents</category>
-      <enclosure url="https://escbase.xyz/images/minimax-mmx-cli-thumb.jpg" type="image/jpeg" length="0" />
     </item>
   </channel>
 </rss>
