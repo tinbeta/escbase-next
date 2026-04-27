@@ -69,7 +69,7 @@
                 </div>
 
                 <h2>1) Paper số 1: DeepSeek V4 vẫn là cái tên lớn nhất của tuần</h2>
-                <p>Việc DAIR.AI đặt <strong>DeepSeek V4</strong> lên đầu không có gì bất ngờ. Đây vẫn là release gây tiếng vang lớn nhất trong tuần, không chỉ vì benchmark mà vì cách nó được thiết kế <strong>ngay từ đầu cho million-token context</strong> thay vì gắn thêm như một tính năng phụ.</p>
+                <p>Việc DAIR.AI đặt <strong>DeepSeek V4</strong> lên đầu không có gì bất ngờ. Đây vẫn là release gây tiếng vang lớn nhất trong tuần, không chỉ vì benchmark mà vì cách nó được thiết kế <strong>ngay từ đầu cho million-token context</strong> thay vì gắn thêm như một tính năng phụ. <a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/blob/main/DeepSeek_V4.pdf" target="_blank">Paper tại đây</a>.</p>
                 <p>Bài roundup nhấn vào 4 điểm chính:</p>
                 <ul class="paper-list">
                     <li><strong>Hybrid attention với CSA và HCA</strong> để giữ mô hình khả thi ở 1M context.</li>
@@ -83,15 +83,15 @@
                 <p>Phần giữa của roundup có một motif lặp đi lặp lại: <strong>self-improvement</strong>. Đây mới là thứ đáng để ý nhất nếu nhìn cả cụm paper thay vì từng cái lẻ.</p>
 
                 <h3>Autogenesis</h3>
-                <p>Autogenesis mô tả một protocol nơi agent tự tìm ra capability gap, tự đề xuất cải tiến, tự test, rồi commit thứ gì hoạt động ngược trở lại framework của chính nó. Không retrain, không cần người vá tay liên tục.</p>
+                <p>Autogenesis mô tả một protocol nơi agent tự tìm ra capability gap, tự đề xuất cải tiến, tự test, rồi commit thứ gì hoạt động ngược trở lại framework của chính nó. Không retrain, không cần người vá tay liên tục. <a href="https://arxiv.org/abs/2604.15034" target="_blank">Paper tại đây</a>.</p>
                 <p>Điểm đáng tiền ở paper này không phải chuyện “agent tự tiến hóa” nghe sci-fi, mà là việc nó cố dựng <strong>lineage, audit và rollback</strong> cho mỗi lần tự sửa. Tức là biến self-modification thành thứ đủ có kỷ luật để deploy.</p>
 
                 <h3>Self-Generated World Knowledge</h3>
-                <p>Paper này đẩy xa hơn ở chỗ dùng reward dựa trên <strong>task success</strong> để đánh giá liệu world knowledge do agent tự sinh ra có thực sự hữu ích hay không. Đó là một cách rất khác với kiểu nhồi thêm knowledge rồi tin rằng model sẽ tự biết dùng.</p>
+                <p>Paper này đẩy xa hơn ở chỗ dùng reward dựa trên <strong>task success</strong> để đánh giá liệu world knowledge do agent tự sinh ra có thực sự hữu ích hay không. Đó là một cách rất khác với kiểu nhồi thêm knowledge rồi tin rằng model sẽ tự biết dùng. <a href="https://arxiv.org/abs/2604.18131" target="_blank">Paper tại đây</a>.</p>
                 <p>Nếu hướng này thắng, bottleneck của agent systems sẽ chuyển từ “gắn thêm dữ liệu” sang “thiết kế environment đủ tốt để agent học ra cái đáng giữ”.</p>
 
                 <h3>Self-Evolving Logic Synthesis</h3>
-                <p>Đây là case thú vị nhất vì nó không chỉ chỉnh prompt. NVIDIA dùng multi-agent LLM system để đọc, sửa và tối ưu trực tiếp codebase của <strong>ABC</strong>, một tool logic synthesis đã được hand-tune hàng chục năm trong EDA. Nếu đúng như paper nói, đây là bước tiến từ “agent tự sửa workflow” sang “agent tự sửa hạ tầng code thật”.</p>
+                <p>Đây là case thú vị nhất vì nó không chỉ chỉnh prompt. NVIDIA dùng multi-agent LLM system để đọc, sửa và tối ưu trực tiếp codebase của <strong>ABC</strong>, một tool logic synthesis đã được hand-tune hàng chục năm trong EDA. Nếu đúng như paper nói, đây là bước tiến từ “agent tự sửa workflow” sang “agent tự sửa hạ tầng code thật”. <a href="https://arxiv.org/abs/2604.15082" target="_blank">Paper tại đây</a>.</p>
 
                 <div class="highlight-box-blue">
                     <h4>💡 Ý nghĩa lớn hơn</h4>
@@ -102,15 +102,15 @@
                 <p>Nếu chỉ đuổi theo capability paper, người ta rất dễ bỏ qua nhóm paper “plumbing”. Nhưng chính DAIR.AI cũng gài vào list tuần này vài cái rất đáng chú ý ở tầng hạ tầng.</p>
 
                 <h3>Skill-RAG</h3>
-                <p>Paper này đánh đúng điểm đau lớn của RAG hiện tại: nhiều hệ thống retrieve gần như mọi query, dù model có thể biết sẵn câu trả lời hoặc dù loại retrieval đang dùng không hợp với failure mode gặp phải. Skill-RAG biến retrieval thành thứ có điều kiện và có chuyên môn hóa theo từng kiểu failure.</p>
+                <p>Paper này đánh đúng điểm đau lớn của RAG hiện tại: nhiều hệ thống retrieve gần như mọi query, dù model có thể biết sẵn câu trả lời hoặc dù loại retrieval đang dùng không hợp với failure mode gặp phải. Skill-RAG biến retrieval thành thứ có điều kiện và có chuyên môn hóa theo từng kiểu failure. <a href="https://arxiv.org/abs/2604.15771" target="_blank">Paper tại đây</a>.</p>
                 <p>Điểm hay nằm ở chỗ nó hỏi hai câu thay vì một: <strong>có cần retrieve không?</strong> và <strong>nếu có thì retrieve theo kiểu nào?</strong>. Đây mới là hướng RAG đáng để theo lâu dài.</p>
 
                 <h3>Stateless Decision Memory</h3>
-                <p>Đây là sleeper pick của list, và phản hồi dưới tweet cũng chỉ thẳng vào chỗ đó. Paper đề xuất bỏ active memory kiểu stateful agent, thay bằng <strong>immutable decision logs</strong> theo tinh thần event-sourcing. Mỗi quyết định, tool call, observation đều append vào log; bất kỳ instance nào cũng có thể replay để dựng context khi cần.</p>
+                <p>Đây là sleeper pick của list, và phản hồi dưới tweet cũng chỉ thẳng vào chỗ đó. Paper đề xuất bỏ active memory kiểu stateful agent, thay bằng <strong>immutable decision logs</strong> theo tinh thần event-sourcing. Mỗi quyết định, tool call, observation đều append vào log; bất kỳ instance nào cũng có thể replay để dựng context khi cần. <a href="https://arxiv.org/abs/2604.20158" target="_blank">Paper tại đây</a>.</p>
                 <p>Nghe hơi khô, nhưng đây là kiểu ý tưởng rất enterprise: audit trail, replay, provenance, multi-tenant isolation, horizontal scaling. Nếu bạn cần hàng nghìn agent instances chạy qua container thật, đây là thứ quan trọng hơn cả việc model biết lý luận thêm 2 điểm benchmark.</p>
 
                 <h3>MASS-RAG & Diversity Collapse</h3>
-                <p><strong>MASS-RAG</strong> tiếp tục nhắc lại cùng một lesson: retrieval ngoài đời không chỉ là tìm tài liệu “liên quan kỹ thuật”, mà là phải tìm thứ <strong>thực sự đóng góp vào câu trả lời</strong>. Còn <strong>Diversity Collapse in Multi-Agent LLMs</strong> thì là cú tạt nước lạnh: đừng mặc định nhiều agent sẽ sinh ra nhiều góc nhìn khác nhau. Nếu context, feedback và task framing bị ghép quá chặt, chúng sẽ hội tụ về cùng một attractor.</p>
+                <p><strong>MASS-RAG</strong> tiếp tục nhắc lại cùng một lesson: retrieval ngoài đời không chỉ là tìm tài liệu “liên quan kỹ thuật”, mà là phải tìm thứ <strong>thực sự đóng góp vào câu trả lời</strong>. <a href="https://arxiv.org/abs/2604.18509" target="_blank">Paper MASS-RAG</a>. Còn <strong>Diversity Collapse in Multi-Agent LLMs</strong> thì là cú tạt nước lạnh: đừng mặc định nhiều agent sẽ sinh ra nhiều góc nhìn khác nhau. Nếu context, feedback và task framing bị ghép quá chặt, chúng sẽ hội tụ về cùng một attractor.</p>
                 <p>Đây là paper rất đáng giữ lại vì nó chọc đúng chỗ hype của multi-agent systems: nhiều agent không tự động đồng nghĩa với nhiều ý tưởng độc lập.</p>
 
                 <div class="highlight-box-yellow">
@@ -121,8 +121,8 @@
                 <h2>4) Những paper còn lại đang lấp đầy phần “quiet infrastructure”</h2>
                 <p>Bên cạnh các cái tên nổi bật hơn, list còn có vài paper đáng chú ý vì vai trò nền:</p>
                 <ul class="paper-list">
-                    <li><strong>Attention to Mamba:</strong> chỉ ra một con đường rẻ hơn để chuyển từ Transformer sang SSM mà không phải train lại từ đầu.</li>
-                    <li><strong>There Will Be a Scientific Theory of Deep Learning:</strong> một paper vị thế, cố hợp thức hóa “learning mechanics” như phần của lý thuyết khoa học về deep learning.</li>
+                    <li><strong>Attention to Mamba:</strong> chỉ ra một con đường rẻ hơn để chuyển từ Transformer sang SSM mà không phải train lại từ đầu. <a href="https://arxiv.org/abs/2604.14191" target="_blank">Paper</a>.</li>
+                    <li><strong>There Will Be a Scientific Theory of Deep Learning:</strong> một paper vị thế, cố hợp thức hóa “learning mechanics” như phần của lý thuyết khoa học về deep learning. <a href="https://arxiv.org/abs/2604.21691" target="_blank">Paper</a>.</li>
                 </ul>
                 <p>Đây là loại paper không chắc gây bão trên mạng xã hội, nhưng thường để lại ảnh hưởng dài hạn hơn vì chúng thay đổi cách người ta nghĩ về lớp nền của hệ thống, chứ không chỉ thêm một trick benchmark.</p>
 
