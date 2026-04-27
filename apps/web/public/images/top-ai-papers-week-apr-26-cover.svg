@@ -1,0 +1,32 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="675" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A0F1C"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FDE68A"/>
+      <stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" rx="36" fill="url(#bg)"/>
+  <rect x="84" y="72" width="1032" height="531" rx="32" fill="#0F172A" stroke="#334155"/>
+  <text x="126" y="150" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="800">TOP AI PAPERS OF THE WEEK</text>
+  <text x="126" y="204" fill="#FCD34D" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">April 19 – April 26 · DAIR.AI</text>
+  <text x="126" y="276" fill="#E5E7EB" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700">1. DeepSeek V4</text>
+  <text x="126" y="320" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="600">2. Autogenesis</text>
+  <text x="126" y="364" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="600">3. Attention to Mamba</text>
+  <text x="126" y="408" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="600">4. Skill-RAG</text>
+  <text x="126" y="452" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="600">5. Self-Generated World Knowledge</text>
+  <text x="126" y="520" fill="#93C5FD" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700">+ Self-Evolving Logic Synthesis · Stateless Memory · MASS-RAG</text>
+  <g transform="translate(882 180)">
+    <rect x="0" y="0" width="164" height="210" rx="24" fill="#111827" stroke="#475569"/>
+    <rect x="22" y="24" width="120" height="20" rx="8" fill="url(#gold)"/>
+    <rect x="22" y="60" width="120" height="12" rx="6" fill="#475569"/>
+    <rect x="22" y="84" width="120" height="12" rx="6" fill="#475569"/>
+    <rect x="22" y="108" width="120" height="12" rx="6" fill="#475569"/>
+    <rect x="22" y="132" width="120" height="12" rx="6" fill="#475569"/>
+    <rect x="22" y="156" width="84" height="12" rx="6" fill="#475569"/>
+    <text x="82" y="194" text-anchor="middle" fill="#E5E7EB" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">WEEKLY ROUNDUP</text>
+  </g>
+</svg>
