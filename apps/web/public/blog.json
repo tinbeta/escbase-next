@@ -1,6 +1,18 @@
 [
     {
-        "url": "/blog/top-ai-papers-week-apr-26",
+        "url": "/blog/deepseek-v4-serious-threat",
+        "title": "Matthew Berman: DeepSeek V4 Là Mối Đe Doạ Thật Sự Với Labs Mỹ",
+        "excerpt": "Matthew Berman vừa đăng một thread khá thẳng về DeepSeek V4: đây không chỉ là một model open-weight mạnh và rẻ, mà là mối đe doạ thật sự với economics của OpenAI, Anthropic và cả chiến lược AI của Mỹ. Điểm đáng bàn không chỉ là benchmark, mà là khi model 'đủ tốt' ở mức giá quá thấp, enterprise math sẽ bắt đầu đổi chiều.",
+        "date": "Apr 27, 2026",
+        "tag": "Market Structure",
+        "tagIcon": "fas fa-chart-line",
+        "tagColor": "#10b981",
+        "readTime": "9 min read",
+        "featured": true,
+        "image": "/images/deepseek-v4-serious-threat-thumb.svg"
+    },
+    {
+        "url": "/blog/top-ai-papers-week-apr-26", 
         "title": "Top AI Papers Của Tuần (19-26/4): DeepSeek V4, Autogenesis, Skill-RAG, Stateless Memory",
         "excerpt": "DAIR.AI vừa đăng round-up Top AI Papers of the Week với 10 paper nổi bật, từ DeepSeek V4, Autogenesis, Skill-RAG cho tới Stateless Decision Memory và Diversity Collapse. Điểm đáng chú ý không chỉ là từng paper riêng lẻ, mà là cả list này đang vẽ ra 3 hướng lớn của AI hiện tại: long-context open models, agent self-improvement, và hạ tầng để agent thực sự scale trong thế giới thật.",
         "date": "Apr 27, 2026",
