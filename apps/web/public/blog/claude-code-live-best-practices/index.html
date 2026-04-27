@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop 30 Phút Của Anthropic Chỉ Ra Cách Dùng Claude Code Cho Đúng - Escbase</title>
+    <meta name="description" content="Jouhatsu vừa chia sẻ một workshop 30 phút của Anthropic về Claude Code và gọi nó là thứ đáng bookmark hơn cả mấy khóa học AI 500 đô. Điểm hay là video này không bán hype chung chung, mà đi thẳng vào cách team tạo ra Claude Code thật sự dùng agent này: origin story, live demo, best practices, slash commands, subagents, hooks, và cách đưa Claude Code vào workflow codebase thật.">
+    <meta property="og:title" content="Workshop 30 Phút Của Anthropic Chỉ Ra Cách Dùng Claude Code Cho Đúng">
+    <meta property="og:description" content="Một workshop ngắn nhưng nhiều thịt từ chính team tạo ra Claude Code. Thứ đáng lấy ra không phải chỉ là mẹo terminal, mà là cách Anthropic nhìn Claude Code như một collaborator: giao việc rõ, chia context đúng, dùng subagents, hooks và biến agent thành một phần của workflow kỹ thuật thật.">
+    <meta property="og:image" content="https://escbase.xyz/images/claude-code-live-best-practices-thumb.png">
+    <meta property="og:url" content="https://escbase.xyz/blog/claude-code-live-best-practices/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/shared-article.css">
+    <link rel="stylesheet" href="/shared-article-footer.css">
+    <style>
+        .tips-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin:1.5rem 0 2rem; }
+        .tips-card { background:var(--card-bg); border:1px solid var(--border); border-radius:var(--radius-md); padding:1.1rem; }
+        .tips-card h4 { margin:0 0 .45rem; font-size:1rem; color:var(--text); }
+        .tips-card p { margin:0; font-size:.9rem; }
+        @media (max-width:768px){ .tips-grid{ grid-template-columns:1fr; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <span class="category-badge"><i class="fas fa-terminal"></i> Dev Tools</span>
+                <h1>Workshop 30 Phút Của Anthropic Chỉ Ra Cách Dùng Claude Code Cho Đúng</h1>
+                <div class="meta">
+                    <span><i class="far fa-calendar"></i> 27/04/2026</span>
+                    <span><i class="far fa-clock"></i> 9 phút đọc</span>
+                    <span><i class="far fa-folder"></i> Dev Tools, Claude Code</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <div class="highlight-box">
+                    <h4>TL;DR</h4>
+                    <p style="margin-bottom:0"><strong>Jouhatsu vừa share một workshop 30 phút của Anthropic về Claude Code và gọi nó là thứ đáng bookmark hơn cả mấy khóa học AI 500 đô</strong>. Nói quá thì có chút câu view, nhưng phần lõi thì đúng: video này không bán hype chung chung, mà đi thẳng vào <strong>cách team tạo ra Claude Code thật sự dùng agent này</strong> — từ origin story, live demo, best practices, slash commands, subagents, hooks cho tới cách đưa Claude Code vào workflow codebase thật.</p>
+                </div>
+
+                <h2>Post của Jouhatsu ngắn, nhưng trúng đúng pain point</h2>
+                <p>Post gốc của <strong>Jouhatsu</strong> bằng tiếng Pháp khá đơn giản: team Anthropic vừa chỉ cách dùng Claude Code cho đúng, video dài khoảng 30 phút, miễn phí, được trình bày bởi chính người tạo ra sản phẩm. Kèm theo đó là câu chốt rất social-media nhưng không sai hẳn: <strong>nó đáng hơn nhiều khóa học AI đắt tiền mà người ta suýt mua</strong>.</p>
+                <p>Điểm thú vị là replies bên dưới cũng xác nhận đúng nhu cầu thật của cộng đồng: rất nhiều người không hỏi “tool này có mạnh không?”, mà hỏi <strong>“có bản tiếng Pháp không?”</strong>. Tức là cái họ thiếu không còn là awareness, mà là <strong>khả năng hấp thụ workflow đúng</strong>.</p>
+
+                <h2>Workshop này đáng xem vì nó không dạy mẹo lặt vặt, mà dạy mental model</h2>
+                <p>Theo mô tả từ Anthropic cho buổi <strong>Claude Code Live: Origin story, live demos, and best practices</strong>, workshop này được dựng xoay quanh ba thứ:</p>
+                <ul>
+                    <li><strong>origin story</strong> — Claude Code ra đời như thế nào, team build nó để giải vấn đề gì;</li>
+                    <li><strong>live demos</strong> — cách agent hoạt động trên codebase thật, không phải ví dụ đồ chơi;</li>
+                    <li><strong>best practices</strong> — những pattern dùng Claude Code hiệu quả trong workflow kỹ thuật thực tế.</li>
+                </ul>
+                <p>Đây là khác biệt rất lớn so với phần lớn content kiểu “10 prompt để code nhanh hơn”. Workshop này không bán trick. Nó cố truyền cho người xem một <strong>mô hình cộng tác với coding agent</strong>.</p>
+
+                <div class="tips-grid">
+                    <div class="tips-card">
+                        <h4>1. Giao việc như cho cộng sự</h4>
+                        <p>Claude Code mạnh hơn khi được giao objective, context và tiêu chí done rõ ràng, không phải một câu prompt mơ hồ.</p>
+                    </div>
+                    <div class="tips-card">
+                        <h4>2. Tách việc và chia context</h4>
+                        <p>Subagents, slash commands và workflow chia nhỏ giúp agent đỡ lạc hơn trong codebase lớn.</p>
+                    </div>
+                    <div class="tips-card">
+                        <h4>3. Dùng guardrails thật</h4>
+                        <p>Hooks, tests và quy tắc dừng là cách biến output của agent thành thứ an toàn hơn để ship.</p>
+                    </div>
+                </div>
+
+                <h2>Điểm đầu tiên đáng lấy ra: Claude Code không được dùng như autocomplete nâng cấp</h2>
+                <p>Một trong những ý quan trọng nhất từ các creator và từ phần recap của Every là: <strong>Claude Code không nên được dùng như một autocomplete biết nói nhiều hơn</strong>. Nó hiệu quả nhất khi được xem như một agent hoặc cộng sự trong terminal.</p>
+                <p>Tức là thay vì chỉ ném một function rồi bảo “viết tiếp”, người dùng giỏi sẽ:</p>
+                <ul>
+                    <li>đưa goal rõ ràng,</li>
+                    <li>chỉ ra file hoặc khu vực code liên quan,</li>
+                    <li>nói rõ constraint, style, yêu cầu test,</li>
+                    <li>và quan trọng nhất là xác định <strong>thế nào mới được coi là done</strong>.</li>
+                </ul>
+                <p>Nghe hiển nhiên, nhưng đây chính là điểm nhiều người dùng agent code dở nhất: họ ra lệnh như nói chuyện với chatbot, rồi ngạc nhiên vì output không ổn.</p>
+
+                <h2>Điểm thứ hai: subagents không phải trò màu mè, mà là cách scale tư duy</h2>
+                <p>Một ý được nhắc nhiều quanh workshop này là cách team Anthropic dùng <strong>subagents</strong>. Không phải vì nó ngầu, mà vì một agent đơn lẻ rất dễ bị quá tải context khi phải vừa đọc codebase, vừa suy luận, vừa sửa, vừa tự review.</p>
+                <p>Subagents giải bài toán đó bằng cách tách vai:</p>
+                <ul>
+                    <li>một agent tìm hiểu codebase,</li>
+                    <li>một agent đề xuất hướng sửa,</li>
+                    <li>một agent khác review hoặc soi bug,</li>
+                    <li>thậm chí có thể cho các agent “đấu nhau” để bắt lỗi lập luận của nhau.</li>
+                </ul>
+                <p>Nghe hơi điên, nhưng thật ra rất hợp lý: nếu một engineer giỏi cũng thường tách research, implementation và review thành các pha khác nhau, thì agent cũng nên được tổ chức tương tự.</p>
+
+                <div class="highlight-box-blue">
+                    <h4>💡 Ý đáng nhớ nhất</h4>
+                    <p style="margin-bottom:0">Giá trị của Claude Code không nằm ở việc nó “biết code”, mà ở chỗ bạn có thể <strong>thiết kế một quy trình làm việc quanh nó</strong>. Khi có subagents, slash commands, hooks và test gates, agent không còn là một hộp chat trả lời thông minh — nó bắt đầu giống một thành viên trong pipeline kỹ thuật.</p>
+                </div>
+
+                <h2>Điểm thứ ba: slash commands và hooks mới là nơi workflow trở nên nghiêm túc</h2>
+                <p>Nếu chỉ xem Claude Code như chỗ để gõ prompt, bạn mới dùng lớp trên cùng. Workshop này đáng xem vì nó kéo người dùng xuống lớp workflow hơn: <strong>slash commands</strong>, <strong>hooks</strong>, và cách chuẩn hóa những tác vụ lặp đi lặp lại.</p>
+                <p>Về bản chất, đó là cách chuyển từ “mỗi lần nhờ agent lại phải viết lại từ đầu” sang “đóng gói quy trình tốt thành shortcut và rule có thể tái dùng”. Ví dụ:</p>
+                <ul>
+                    <li>một command để lên plan trước khi sửa lớn,</li>
+                    <li>một command để review diff,</li>
+                    <li>một hook không cho agent dừng nếu test chưa pass,</li>
+                    <li>một workflow bắt agent phải chạy qua checklist trước khi kết luận xong.</li>
+                </ul>
+                <p>Đây là chỗ nhiều team sẽ tiết kiệm nhiều nhất, vì năng suất không đến từ một prompt xuất thần. Nó đến từ việc <strong>biến những thói quen tốt thành mặc định</strong>.</p>
+
+                <h2>Điểm thứ tư: Claude Code mạnh nhất khi gắn với codebase thật, không phải playground</h2>
+                <p>Một reason khác khiến workshop này đáng xem là nó bám vào <strong>real codebase workflows</strong>. Đây là khác biệt quan trọng. Dùng AI trên demo sạch sẽ luôn dễ. Cái khó là dùng trong repo lộn xộn, có lịch sử, có convention, có test, có nợ kỹ thuật, có thứ không được phép làm bừa.</p>
+                <p>Thông điệp ngầm ở đây là: Claude Code không phải công cụ thay thế kỹ năng phần mềm cơ bản. Nó là đòn bẩy cho người đã biết hoặc sẵn sàng học cách quản trị codebase, context và chất lượng output.</p>
+
+                <h2>Vì sao Jouhatsu nói nó hơn nhiều khóa học 500 đô?</h2>
+                <p>Mình nghĩ câu này đúng ở một nửa.</p>
+                <p><strong>Đúng</strong>, vì rất nhiều khóa học AI ngoài kia bán một lớp sơn hào nhoáng: prompt templates, “secret workflows”, checklist nghe oách nhưng thiếu trải nghiệm thực chiến. Trong khi ở đây, người xem được nghe trực tiếp từ chính team tạo ra tool, và thứ họ chia sẻ là <strong>pattern dùng trong nội bộ</strong>.</p>
+                <p><strong>Nhưng cũng không nên thần thánh hóa</strong>. Xem workshop không tự biến ai thành power user. Nó chỉ đưa cho bạn mental model tốt hơn. Phần còn lại vẫn là tự dùng, tự vấp, tự đóng gói workflow phù hợp với repo và nhịp làm việc của mình.</p>
+
+                <div class="highlight-box-yellow">
+                    <h4>⚠️ Điều nhiều người sẽ hiểu sai</h4>
+                    <p style="margin-bottom:0">Workshop kiểu này không phải “xem xong là biết dùng Claude Code”. Giá trị thật của nó là giúp bạn bỏ được cách dùng ngây thơ: quăng prompt mơ hồ, dồn hết việc vào một agent, không guardrail, không test gate, không chia context. Nói thẳng: nếu dùng sai kiểu, tool mạnh mấy cũng thành phá repo.</p>
+                </div>
+
+                <h2>Replies về bản dịch tiếng Pháp còn nói ra một chuyện khác</h2>
+                <p>Phần thread của Jouhatsu cũng có một tín hiệu khá hay: nhiều người xin bản tiếng Pháp, và Jouhatsu liên tục trả lời là sẽ gửi qua DM. Điều đó cho thấy nhu cầu học workflow cho coding agents đang rất thật, nhưng vẫn bị chặn bởi rào cản ngôn ngữ.</p>
+                <p>Nói rộng hơn, giai đoạn tới có lẽ không chỉ là cuộc đua model, mà còn là cuộc đua <strong>dịch workflow AI sang ngôn ngữ đời thường cho nhiều cộng đồng hơn</strong>. Tool tốt chưa đủ. Người ta cần được chỉ cách dùng nó trong đúng ngữ cảnh của họ.</p>
+
+                <h2>Chốt lại: workshop này đáng xem vì nó nói về cách làm việc, không chỉ về tool</h2>
+                <p>Thứ quan trọng nhất mình lấy ra từ post này không phải là “Claude Code xịn”. Cái đó ai cũng đoán rồi. Thứ đáng giá hơn là workshop này đẩy người xem sang một level khác: nghĩ về agent như một collaborator có thể được tổ chức, kiểm soát và lồng vào workflow kỹ thuật thật.</p>
+
+                <div class="highlight-box-red">
+                    <h4>🚨 Chốt một câu</h4>
+                    <p style="margin-bottom:0"><strong>Workshop 30 phút này đáng xem không phải vì nó dạy vài mẹo terminal, mà vì nó chỉ ra cách team tạo ra Claude Code thật sự cộng tác với coding agent:</strong> giao việc rõ, chia context đúng, dùng subagents, slash commands, hooks và test gates để biến AI từ một cái chatbox biết code thành một phần của quy trình ship phần mềm.</p>
+                </div>
+
+                <div class="source-links">
+                    <h4>Nguồn & tham khảo</h4>
+                    <ul>
+                        <li><a href="https://x.com/jouhatsu_ai/status/2048422458965836030?s=46" target="_blank">Jouhatsu on X</a></li>
+                        <li><a href="https://www.anthropic.com/webinars/claude-code-live" target="_blank">Anthropic — Claude Code Live: Origin story, live demos, and best practices</a></li>
+                        <li><a href="https://every.to/podcast/how-to-use-claude-code-like-the-people-who-built-it" target="_blank">Every — How to Use Claude Code Like the People Who Built It</a></li>
+                    </ul>
+                </div>
+
+                <div class="back-to-blog-footer">
+                    <a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+                </div>
+
+                <div class="article-cta-stack">
+                    <a href="/blog/sam-altman-post-agi-work-codex" class="article-suggestion-card">
+                        <span class="article-suggestion-label"><i class="fas fa-book-open"></i> Đọc tiếp</span>
+                        <span class="article-suggestion-title">Sam Altman Nói Gì Về Post-AGI Và GPT-5.5 Codex: AI Có Thể Không Giết Việc, Mà Tăng Cường Cơn Nghiện Làm</span>
+                    </a>
+                    <div class="article-cta-actions">
+                        <a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a>
+                    </div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">Claude Code</span>
+                    <span class="tag">Anthropic</span>
+                    <span class="tag">Subagents</span>
+                    <span class="tag">Developer Workflow</span>
+                    <span class="tag">AI Coding</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

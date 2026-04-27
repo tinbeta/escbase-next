@@ -1,6 +1,18 @@
 [
     {
-        "url": "/blog/sam-altman-post-agi-work-codex",
+        "url": "/blog/claude-code-live-best-practices",
+        "title": "Workshop 30 Phút Của Anthropic Chỉ Ra Cách Dùng Claude Code Cho Đúng",
+        "excerpt": "Jouhatsu vừa chia sẻ một workshop 30 phút của Anthropic về Claude Code và gọi nó là thứ đáng bookmark hơn cả mấy khóa học AI 500 đô. Điểm hay là video này không bán hype chung chung, mà đi thẳng vào cách team tạo ra Claude Code thật sự dùng agent này: origin story, live demo, best practices, slash commands, subagents, hooks, và cách đưa Claude Code vào workflow codebase thật.",
+        "date": "Apr 27, 2026",
+        "tag": "Dev Tools",
+        "tagIcon": "fas fa-terminal",
+        "tagColor": "#f59e0b",
+        "readTime": "9 min read",
+        "featured": true,
+        "image": "/images/claude-code-live-best-practices-thumb.svg"
+    },
+    {
+        "url": "/blog/sam-altman-post-agi-work-codex", 
         "title": "Sam Altman Nói Gì Về Post-AGI Và GPT-5.5 Codex: AI Có Thể Không Giết Việc, Mà Tăng Cường Cơn Nghiện Làm",
         "excerpt": "Một tweet ngắn của Sam Altman vừa chạm đúng nghịch lý lớn nhất của AI thời điểm này: người ta vừa lo post-AGI sẽ khiến không ai phải làm việc nữa, vừa hưng phấn đến mức muốn cắt bớt giấc ngủ vì GPT-5.5 trong Codex quá tốt. Điểm đáng bàn là AI có thể không xóa lao động theo cách nhiều người tưởng, mà nén thời gian, tăng tốc độ ship và đẩy những người nhiều agency vào vòng làm việc dữ hơn.",
         "date": "Apr 27, 2026",

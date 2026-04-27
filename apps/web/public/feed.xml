@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Mon, 27 Apr 2026 06:13:04 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 27 Apr 2026 12:23:07 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Workshop 30 Phút Của Anthropic Chỉ Ra Cách Dùng Claude Code Cho Đúng</title>
+      <link>https://escbase.xyz/blog/claude-code-live-best-practices</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/claude-code-live-best-practices</guid>
+      <pubDate>Sun, 26 Apr 2026 17:00:00 GMT</pubDate>
+      <description>Jouhatsu vừa chia sẻ một workshop 30 phút của Anthropic về Claude Code và gọi nó là thứ đáng bookmark hơn cả mấy khóa học AI 500 đô. Điểm hay là video này không bán hype chung chung, mà đi thẳng vào cách team tạo ra Claude Code thật sự dùng agent này: origin story, live demo, best practices, slash commands, subagents, hooks, và cách đưa Claude Code vào workflow codebase thật.</description>
+      <category>Dev Tools</category>
+      <enclosure url="https://escbase.xyz/images/claude-code-live-best-practices-thumb.svg" type="image/svg+xml" length="0" />
+    </item>
     <item>
       <title>Sam Altman Nói Gì Về Post-AGI Và GPT-5.5 Codex: AI Có Thể Không Giết Việc, Mà Tăng Cường Cơn Nghiện Làm</title>
       <link>https://escbase.xyz/blog/sam-altman-post-agi-work-codex</link>
@@ -447,15 +456,6 @@
       <description>Google vừa đưa Gemini 3.1 Flash TTS vào preview với thứ đáng chú ý không chỉ là giọng tự nhiên hơn, mà là khả năng điều khiển cách nói bằng audio tags, multi-speaker dialogue và workflow kiểu đạo diễn ngay trong AI Studio.</description>
       <category>AI Voice</category>
       <enclosure url="https://escbase.xyz/images/gemini-3-1-flash-tts-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>Google Đưa “Skills” Vào Chrome: Khi Prompt Không Còn Chỉ Là Một Ô Chat Dùng Rồi Quên</title>
-      <link>https://escbase.xyz/blog/google-chrome-skills</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/google-chrome-skills</guid>
-      <pubDate>Tue, 14 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Google vừa thêm Skills vào Gemini in Chrome, cho phép lưu prompt hay dùng thành workflow một chạm chạy trực tiếp trên tab web đang mở. Đây không chỉ là tiện hơn — mà là bước kéo AI từ chỗ hỏi-đáp sang chỗ hành động lặp lại hằng ngày.</description>
-      <category>AI Browser Tools</category>
-      <enclosure url="https://escbase.xyz/images/google-chrome-skills-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>
