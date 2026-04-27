@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12 Prompt NotebookLM Để Đọc Sách Xong Không Quên Sạch: Từ Tóm Ý Tới Action Plan - Escbase</title>
+    <meta name="description" content="Một thread đang được share khá mạnh trên X vừa gom 12 prompt NotebookLM để biến một cuốn sách thành action plan, permanent notes, recall test và insight dùng được. Điểm hay là nó không chỉ tóm tắt sách, mà cố kéo người đọc từ tiêu thụ thụ động sang ghi nhớ, phản biện và hành động.">
+    <meta property="og:title" content="12 Prompt NotebookLM Để Đọc Sách Xong Không Quên Sạch">
+    <meta property="og:description" content="Thread của Alex Moore gom 12 prompt NotebookLM để biến sách thành usable insights: core argument, chapter distiller, action plan, memory notes, blind spot finder, recall test và nhiều hơn nữa. Cách hay nhất để đọc bài này là không xem nó như list prompt, mà như một workflow học và nhớ tốt hơn.">
+    <meta property="og:image" content="https://escbase.xyz/images/notebooklm-book-prompts-thumb.png">
+    <meta property="og:url" content="https://escbase.xyz/blog/notebooklm-book-prompts/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/shared-article.css">
+    <link rel="stylesheet" href="/shared-article-footer.css">
+    <style>
+        .prompt-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin:1.5rem 0 2rem; }
+        .prompt-card { background:var(--card-bg); border:1px solid var(--border); border-radius:var(--radius-md); padding:1.1rem; }
+        .prompt-card h4 { margin:0 0 .45rem; color:var(--text); font-size:1rem; }
+        .prompt-card p { margin:0; font-size:.9rem; }
+        .cover-image { max-width:100%; border-radius:var(--radius-md); border:1px solid var(--border); margin:1.5rem 0; }
+        @media (max-width:768px){ .prompt-grid { grid-template-columns:1fr; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <span class="category-badge"><i class="fas fa-book-open"></i> AI Learning</span>
+                <h1>12 Prompt NotebookLM Để Đọc Sách Xong Không Quên Sạch: Từ Tóm Ý Tới Action Plan</h1>
+                <div class="meta">
+                    <span><i class="far fa-calendar"></i> 27/04/2026</span>
+                    <span><i class="far fa-clock"></i> 9 phút đọc</span>
+                    <span><i class="far fa-folder"></i> AI Learning, NotebookLM</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <div class="highlight-box">
+                    <h4>TL;DR</h4>
+                    <p style="margin-bottom:0"><strong>Một thread đang được share khá mạnh trên X vừa gom 12 prompt NotebookLM để biến một cuốn sách thành action plan, permanent notes, recall test và insight dùng được</strong>. Điểm hay là nó không chỉ dừng ở chuyện tóm tắt sách, mà cố kéo người đọc từ <strong>tiêu thụ thụ động</strong> sang <strong>ghi nhớ, phản biện và hành động</strong>. Nếu đọc đúng mạch, đây không phải list prompt lẻ tẻ mà là một workflow học tốt hơn bằng AI.</p>
+                </div>
+
+                <img src="https://pbs.twimg.com/media/HGzi-96a4AAB6us.jpg" alt="Ảnh minh hoạ thread 12 prompt NotebookLM của Alex Moore" class="cover-image" />
+                <p style="font-size:.9rem;color:var(--text-muted);margin-top:-.75rem;margin-bottom:1.5rem;">Ảnh cover từ tweet gốc của Alex Moore về 12 prompt NotebookLM dành cho việc đọc sách và ghi nhớ tốt hơn.</p>
+
+                <h2>Thread này không chỉ nói “dùng NotebookLM để tóm tắt sách”</h2>
+                <p>Câu hook của Alex Moore khá trúng tâm lý: <strong>“If you read books and forget everything, this is for you.”</strong> Thật ra phần lớn người đọc sách không thiếu nội dung. Họ thiếu một cách biến nội dung đó thành thứ còn sống sau khi gập sách lại.</p>
+                <p>Điểm hay của thread là nó không bán NotebookLM như công cụ “đọc hộ”. Nó bán nó như một <strong>lớp xử lý sau khi đọc</strong>: bóc ý chính, chưng cất chương, đổi thành hành động, ép người đọc nhớ lại, tìm blind spot và nối sách đó với những gì mình đang làm.</p>
+
+                <div class="prompt-grid">
+                    <div class="prompt-card"><h4>Hiểu lõi cuốn sách</h4><p>Core argument extractor, chapter distiller, teacher mode.</p></div>
+                    <div class="prompt-card"><h4>Biến thành hành động</h4><p>Action plan builder, personal relevance filter, 1-year impact prompt.</p></div>
+                    <div class="prompt-card"><h4>Ghi nhớ & phản biện</h4><p>Memory notes, blind spot finder, debate prompt, recall test.</p></div>
+                </div>
+
+                <h2>Nên đọc 12 prompt này theo thứ tự nào?</h2>
+                <p>Thread gốc liệt kê đủ 12 prompt theo thứ tự, và thứ tự đó khá hợp lý. Mình thấy có thể gom chúng thành 4 lớp lớn để dễ hiểu hơn:</p>
+                <ol>
+                    <li><strong>Bóc lõi cuốn sách:</strong> nó đang nói gì, chương nào đáng nhớ.</li>
+                    <li><strong>Kéo nó vào đời thật:</strong> tôi phải làm gì với những ý này.</li>
+                    <li><strong>Biến nó thành trí nhớ dài hạn:</strong> notes, recall, connections.</li>
+                    <li><strong>Kiểm tra độ bền của ý tưởng:</strong> blind spots, critic, debate.</li>
+                </ol>
+                <p>Đây là điểm làm thread này hơn mấy bài “100 prompt ChatGPT” thường thấy: nó có logic học tập thật, không chỉ có danh sách câu lệnh nghe ngầu.</p>
+
+                <h2>Nhóm 1: Bóc lõi cuốn sách thật nhanh nhưng không hời hợt</h2>
+                <p>Ba prompt mở đầu của thread đánh vào đúng chỗ nhiều người đọc sách hay lạc nhất.</p>
+                <ul>
+                    <li><strong>1. The Core Argument Extractor:</strong> ép NotebookLM trả lời cuốn sách này thực ra có một luận điểm trung tâm là gì, rồi liệt kê 5 ý đỡ mạnh nhất.</li>
+                    <li><strong>2. The Chapter Distiller:</strong> rút mỗi chương về một ý đáng nhớ sau 1 năm, cắt bớt filler.</li>
+                    <li><strong>8. The Teacher Mode Prompt:</strong> buộc hệ thống giải thích như dạy một người 15 tuổi thông minh — tức là kiểm tra xem ý đó có thực sự hiểu được bằng ngôn ngữ đơn giản hay không.</li>
+                </ul>
+                <p>Ba prompt này giải quyết một chuyện rất thật: nhiều người đọc xong một cuốn sách nhưng không thể nói trong 2 câu nó lập luận điều gì. Nếu không nói được lõi sách một cách rõ ràng, gần như chắc chắn bạn chưa học được bao nhiêu.</p>
+
+                <div class="highlight-box-blue">
+                    <h4>💡 Điểm đáng giữ</h4>
+                    <p style="margin-bottom:0">Prompt tốt nhất ở đây không hẳn là prompt dài nhất. Thứ đáng giá nhất là <strong>Core Argument Extractor</strong>, vì nó ép bạn tách “ý chính” ra khỏi cảm giác mơ hồ kiểu “cuốn này hay phết”.</p>
+                </div>
+
+                <h2>Nhóm 2: Chuyển từ hiểu sang làm</h2>
+                <p>Đây là phần thread bắt đầu hay thật, vì Alex không dừng ở tóm tắt.</p>
+                <ul>
+                    <li><strong>3. The Action Plan Builder:</strong> biến toàn bộ sách thành 10 hành động cụ thể trong 30 ngày tới.</li>
+                    <li><strong>6. The Personal Relevance Filter:</strong> đặt mục tiêu hiện tại của bạn vào trước, rồi hỏi ý nào trong sách đáng dùng nhất lúc này.</li>
+                    <li><strong>12. The 1-Year Impact Prompt:</strong> nếu chỉ được chọn 3 ý áp dụng trong 1 năm, đâu là 3 ý tạo ra thay đổi lớn nhất.</li>
+                </ul>
+                <p>Đây là nơi thread chạm đúng một vấn đề ngứa nghề: <strong>đọc nhiều nhưng đời không đổi</strong>. Nếu một cuốn sách chỉ làm bạn thấy “hay” mà không biến thành hành vi, thì giá trị thực nhận được có thể rất thấp. NotebookLM ở đây đóng vai trò như một bộ chuyển đổi từ insight sang execution.</p>
+
+                <h2>Nhóm 3: Biến kiến thức thành trí nhớ dài hạn</h2>
+                <p>Nửa sau của thread tập trung khá nhiều vào chuyện “đừng để sách bay mất sau 2 ngày”.</p>
+                <ul>
+                    <li><strong>4. The Memory Notes Prompt:</strong> tạo 10 permanent notes bằng chính ngôn ngữ của người đọc.</li>
+                    <li><strong>10. The Cross-Book Connector:</strong> nối ý trong sách này sang tâm lý học, kinh doanh, lịch sử, triết học.</li>
+                    <li><strong>11. The Recall Test:</strong> biến nội dung thành quiz tăng dần độ khó để ép retrieval.</li>
+                </ul>
+                <p>Đây là phần mình thích nhất trong thread, vì nó đánh trúng nguyên nhân thật của việc “đọc xong quên sạch”: người ta thường <strong>đọc lại</strong> thay vì <strong>gọi lại từ trí nhớ</strong>. Mà rereading chủ yếu tạo cảm giác quen mặt, chứ không chắc tạo ra recall.</p>
+
+                <div class="highlight-box-green">
+                    <h4>Điểm rất đúng của thread</h4>
+                    <p style="margin-bottom:0"><strong>Retrieval builds memory. Rereading builds comfort.</strong> Câu này đáng tiền hơn nửa bài. Nó chạm đúng khác biệt giữa cảm giác “mình từng thấy cái này rồi” và khả năng thực sự nhớ để dùng lại.</p>
+                </div>
+
+                <h2>Nhóm 4: Đừng chỉ nuốt sách, hãy phản biện nó</h2>
+                <p>Thread không dừng ở productivity. Nó còn cố kéo người đọc sang trạng thái phản biện hơn:</p>
+                <ul>
+                    <li><strong>5. The Blind Spot Finder:</strong> tác giả đang giả định điều gì có thể sai, yếu hoặc lỗi thời?</li>
+                    <li><strong>7. The Quote Converter:</strong> biến quote hay thành nguyên tắc có thể áp dụng.</li>
+                    <li><strong>9. The Debate Prompt:</strong> một critic tử tế sẽ phản bác luận điểm chính của sách ra sao?</li>
+                </ul>
+                <p>Đây là phần giúp NotebookLM không biến người đọc thành máy xay summary. Nếu không có bước phản biện, AI rất dễ đẩy bạn vào cảm giác “mình vừa hiểu sâu”, trong khi thực tế chỉ là vừa được tóm hộ rất gọn.</p>
+
+                <h2>Điểm mạnh thật của thread: nó tạo ra một workflow sau khi đọc</h2>
+                <p>Alex chốt thread bằng một ý khá chuẩn: chạy các prompt này sau mỗi cuốn sách thì một file PDF có thể biến thành:</p>
+                <ul>
+                    <li>ý rõ ràng hơn,</li>
+                    <li>action steps,</li>
+                    <li>long-term notes,</li>
+                    <li>khả năng nhớ tốt hơn,</li>
+                    <li>và cuối cùng là thay đổi hành vi thật.</li>
+                </ul>
+                <p>Nói cách khác, thread này đáng đọc vì nó không dùng AI để thay bạn đọc sách. Nó dùng AI để <strong>giảm khoảng cách giữa đọc, hiểu, nhớ và làm</strong>.</p>
+
+                <h2>Nhưng cũng đừng thần thánh hóa NotebookLM</h2>
+                <p>Điểm yếu của các workflow kiểu này là chúng rất dễ làm người đọc ảo giác rằng mình đã “tiêu hóa” cuốn sách chỉ vì đã có một bộ note gọn gàng. Nếu source upload vào đã là bản tóm tắt dở, hoặc prompt được chạy quá cơ học, output cũng rất dễ thành một tầng tóm tắt đẹp nhưng rỗng.</p>
+                <p>Vì thế, cách dùng khôn nhất không phải là “ném sách vào rồi lấy answer”, mà là:</p>
+                <ul>
+                    <li>đọc thật trước ít nhất một lượt,</li>
+                    <li>dùng NotebookLM để ép mình cấu trúc lại hiểu biết,</li>
+                    <li>và nhất là kiểm tra bằng recall / hành động / phản biện.</li>
+                </ul>
+
+                <div class="highlight-box-yellow">
+                    <h4>⚠️ Chỗ nên tỉnh táo</h4>
+                    <p style="margin-bottom:0">NotebookLM giúp xử lý kiến thức rất tốt, nhưng nó không thể thay phần lao động nhận thức quan trọng nhất: <strong>đọc, suy nghĩ, tự diễn đạt lại, rồi thử áp dụng</strong>. Nếu bỏ qua đoạn đó, prompt hay đến mấy cũng chỉ biến sách thành một lớp summary bóng bẩy hơn thôi.</p>
+                </div>
+
+                <h2>Chốt lại</h2>
+                <p>Thread của Alex Moore có lý do để được share nhiều: nó chạm đúng nỗi đau phổ biến của người đọc sách — <strong>đọc xong thấy hay, rồi quên gần hết</strong>. 12 prompt này đáng giá ở chỗ chúng không chỉ hỏi “cuốn sách nói gì”, mà còn hỏi “mình nên làm gì với nó”, “mình nhớ được gì”, và “ý nào thật sự đáng giữ lâu”.</p>
+
+                <div class="highlight-box-red">
+                    <h4>🚨 Chốt một câu</h4>
+                    <p style="margin-bottom:0"><strong>Giá trị thật của NotebookLM trong thread này không nằm ở việc tóm tắt sách nhanh hơn</strong>, mà ở việc biến một cuốn sách thành <strong>workflow học tập có đầu ra</strong>: hiểu rõ hơn, nhớ lâu hơn, phản biện tốt hơn và hành động cụ thể hơn. Nếu dùng đúng, nó không giúp bạn “đọc ít đi” — nó giúp bạn <strong>để lại nhiều hơn sau khi đọc</strong>.</p>
+                </div>
+
+                <div class="source-links">
+                    <h4>Nguồn & tham khảo</h4>
+                    <ul>
+                        <li><a href="https://x.com/heyalexmoore/status/2048261504479486143" target="_blank">Alex Moore on X — 12 NotebookLM prompts for books</a></li>
+                    </ul>
+                </div>
+
+                <div class="back-to-blog-footer">
+                    <a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+                </div>
+
+                <div class="article-cta-stack">
+                    <a href="/blog/openai-our-principles" class="article-suggestion-card">
+                        <span class="article-suggestion-label"><i class="fas fa-book-open"></i> Đọc tiếp</span>
+                        <span class="article-suggestion-title">Sam Altman Nêu 5 Nguyên Tắc Của OpenAI: Democratization, Empowerment, Prosperity, Resilience, Adaptability</span>
+                    </a>
+                    <div class="article-cta-actions">
+                        <a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a>
+                    </div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">NotebookLM</span>
+                    <span class="tag">Prompting</span>
+                    <span class="tag">Learning</span>
+                    <span class="tag">Reading</span>
+                    <span class="tag">Knowledge Management</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

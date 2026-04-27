@@ -1,6 +1,18 @@
 [
     {
-        "url": "/blog/openai-our-principles",
+        "url": "/blog/notebooklm-book-prompts",
+        "title": "12 Prompt NotebookLM Để Đọc Sách Xong Không Quên Sạch: Từ Tóm Ý Tới Action Plan",
+        "excerpt": "Một thread đang được share khá mạnh trên X vừa gom 12 prompt NotebookLM để biến một cuốn sách thành action plan, permanent notes, recall test và insight dùng được. Điểm hay là nó không chỉ dừng ở chuyện tóm tắt sách, mà cố kéo người đọc từ tiêu thụ thụ động sang ghi nhớ, phản biện và hành động.",
+        "date": "Apr 27, 2026",
+        "tag": "AI Learning",
+        "tagIcon": "fas fa-book-open",
+        "tagColor": "#3b82f6",
+        "readTime": "9 min read",
+        "featured": true,
+        "image": "/images/notebooklm-book-prompts-thumb.svg"
+    },
+    {
+        "url": "/blog/openai-our-principles", 
         "title": "Sam Altman Nêu 5 Nguyên Tắc Của OpenAI: Democratization, Empowerment, Prosperity, Resilience, Adaptability",
         "excerpt": "Sam Altman vừa đăng một post rất ngắn trên X, nhưng link đính kèm lại là một tuyên ngôn khá rõ của OpenAI về 5 nguyên tắc định hướng: democratization, empowerment, universal prosperity, resilience và adaptability. Điểm đáng chú ý không chỉ là những từ nghe đẹp, mà là việc OpenAI đang công khai tự mô tả các trade-off giữa mở rộng truy cập, an toàn, hạ tầng compute, chi phí và quyền lực.",
         "date": "Apr 27, 2026",

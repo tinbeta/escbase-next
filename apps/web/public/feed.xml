@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Mon, 27 Apr 2026 03:05:56 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 27 Apr 2026 03:16:01 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>12 Prompt NotebookLM Để Đọc Sách Xong Không Quên Sạch: Từ Tóm Ý Tới Action Plan</title>
+      <link>https://escbase.xyz/blog/notebooklm-book-prompts</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/notebooklm-book-prompts</guid>
+      <pubDate>Sun, 26 Apr 2026 17:00:00 GMT</pubDate>
+      <description>Một thread đang được share khá mạnh trên X vừa gom 12 prompt NotebookLM để biến một cuốn sách thành action plan, permanent notes, recall test và insight dùng được. Điểm hay là nó không chỉ dừng ở chuyện tóm tắt sách, mà cố kéo người đọc từ tiêu thụ thụ động sang ghi nhớ, phản biện và hành động.</description>
+      <category>AI Learning</category>
+      <enclosure url="https://escbase.xyz/images/notebooklm-book-prompts-thumb.svg" type="image/svg+xml" length="0" />
+    </item>
     <item>
       <title>Sam Altman Nêu 5 Nguyên Tắc Của OpenAI: Democratization, Empowerment, Prosperity, Resilience, Adaptability</title>
       <link>https://escbase.xyz/blog/openai-our-principles</link>
@@ -447,15 +456,6 @@
       <description>Một exploit trên Hyperbridge gateway cho phép hacker mint 1 tỷ DOT trên Ethereum và bán ra lấy khoảng 237.000 USD. Điểm quan trọng: đây là bridged DOT trên Ethereum, không phải native DOT trên Polkadot bị hack trực tiếp.</description>
       <category>Bridge Exploit</category>
       <enclosure url="https://escbase.xyz/images/polkadot-dot-hack-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>Justin Sun Tố WLFI Cài Blacklist Backdoor: Một Dự Án Tự Xưng DeFi Có Thể Đóng Băng Holder?</title>
-      <link>https://escbase.xyz/blog/justin-sun-wlfi-blacklist</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/justin-sun-wlfi-blacklist</guid>
-      <pubDate>Sat, 11 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Justin Sun công khai cáo buộc World Liberty Financial cài blacklist backdoor trong token WLFI, cho phép đóng băng hoặc tước quyền tài sản của holder. Đây không chỉ là drama cá nhân, mà là cú đánh thẳng vào narrative DeFi của dự án.</description>
-      <category>Crypto Drama</category>
-      <enclosure url="https://escbase.xyz/images/justin-sun-tron-ipo-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>
