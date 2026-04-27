@@ -1,0 +1,23 @@
+<svg width="800" height="420" viewBox="0 0 800 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1020"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#86EFAC"/>
+      <stop offset="1" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" rx="32" fill="url(#bg)"/>
+  <rect x="58" y="46" width="684" height="328" rx="28" fill="#0F172A" stroke="#334155"/>
+  <text x="84" y="96" fill="#F9FAFB" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">POST-AGI:</text>
+  <text x="84" y="138" fill="#FCA5A5" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">KHÔNG AI LÀM VIỆC?</text>
+  <text x="84" y="198" fill="#E5E7EB" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">CŨNG SAM:</text>
+  <text x="84" y="236" fill="#86EFAC" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800">GPT-5.5 CODEx TỐT QUÁ</text>
+  <text x="84" y="272" fill="#86EFAC" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800">NÊN PHẢI NGỦ ÍT ĐI</text>
+  <g transform="translate(84 304)">
+    <rect x="0" y="0" width="152" height="38" rx="14" fill="url(#green)"/>
+    <text x="76" y="25" text-anchor="middle" fill="#052E1A" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800">SAM ALTMAN</text>
+  </g>
+</svg>
