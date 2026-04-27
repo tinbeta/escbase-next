@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top AI Papers Của Tuần (19-26/4): DeepSeek V4, Autogenesis, Skill-RAG, Stateless Memory - Escbase</title>
+    <meta name="description" content="DAIR.AI vừa đăng round-up Top AI Papers of the Week với 10 paper nổi bật, từ DeepSeek V4, Autogenesis, Skill-RAG cho tới Stateless Decision Memory và Diversity Collapse. Điểm đáng chú ý không chỉ là từng paper riêng lẻ, mà là cả list này đang vẽ ra 3 hướng lớn của AI hiện tại: long-context open models, agent self-improvement, và hạ tầng để agent thực sự scale trong thế giới thật.">
+    <meta property="og:title" content="Top AI Papers Của Tuần: DeepSeek V4, Autogenesis, Skill-RAG...">
+    <meta property="og:description" content="Round-up mới của DAIR.AI gom 10 paper đáng chú ý nhất tuần 19-26/4. Nếu nhìn cả cụm, sẽ thấy rõ 3 hướng lớn của field hiện tại: đua long-context open models, chuyển agent từ dùng tool sang tự sửa chính mình, và xây hạ tầng memory/RAG đủ thực dụng để scale deployment thật.">
+    <meta property="og:image" content="https://escbase.xyz/images/top-ai-papers-week-apr-26-thumb.png">
+    <meta property="og:url" content="https://escbase.xyz/blog/top-ai-papers-week-apr-26/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/shared-article.css">
+    <link rel="stylesheet" href="/shared-article-footer.css">
+    <style>
+        .theme-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin:1.5rem 0 2rem; }
+        .theme-card { background:var(--card-bg); border:1px solid var(--border); border-radius:var(--radius-md); padding:1.15rem; }
+        .theme-card h4 { margin:0 0 .45rem; color:var(--text); font-size:1rem; }
+        .theme-card p { margin:0; font-size:.9rem; }
+        .paper-list li { margin-bottom:.75rem; }
+        @media (max-width:768px){ .theme-grid{ grid-template-columns:1fr; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <span class="category-badge"><i class="fas fa-flask"></i> AI Research</span>
+                <h1>Top AI Papers Của Tuần (19-26/4): DeepSeek V4, Autogenesis, Skill-RAG, Stateless Memory</h1>
+                <div class="meta">
+                    <span><i class="far fa-calendar"></i> 27/04/2026</span>
+                    <span><i class="far fa-clock"></i> 10 phút đọc</span>
+                    <span><i class="far fa-folder"></i> AI Research, AI Papers</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <div class="highlight-box">
+                    <h4>TL;DR</h4>
+                    <p style="margin-bottom:0"><strong>DAIR.AI vừa đăng round-up Top AI Papers of the Week với 10 paper nổi bật</strong>, từ <strong>DeepSeek V4</strong>, <strong>Autogenesis</strong>, <strong>Attention to Mamba</strong>, <strong>Skill-RAG</strong> cho tới <strong>Stateless Decision Memory</strong> và <strong>Diversity Collapse in Multi-Agent LLMs</strong>. Điểm đáng chú ý không chỉ là từng paper riêng lẻ, mà là cả list này đang vẽ ra khá rõ <strong>3 hướng lớn của AI hiện tại</strong>: long-context open models đang tiến rất nhanh, agent đang chuyển từ “dùng tool” sang “tự sửa chính mình”, và lớp hạ tầng memory/RAG/deployment mới là thứ quyết định hệ agent có sống được ngoài đời thật hay không.</p>
+                </div>
+
+                <h2>Đây không phải chỉ là một danh sách paper hay</h2>
+                <p>Round-up kiểu này rất dễ bị đọc lướt như newsletter tổng hợp: 10 paper, mỗi paper vài ý, đọc xong thấy “nhiều thứ ghê”. Nhưng list tuần này của DAIR.AI thật ra có cấu trúc khá rõ nếu nhìn kỹ. Nó không chỉ gom những thứ hot, mà vô tình phác ra bản đồ ưu tiên hiện tại của field.</p>
+                <p>Có ít nhất 3 trục nổi bật chạy xuyên suốt cả list:</p>
+
+                <div class="theme-grid">
+                    <div class="theme-card">
+                        <h4>1. Long-context & open models</h4>
+                        <p>DeepSeek V4, Attention to Mamba cho thấy cuộc đua hiệu quả dài context vẫn đang nóng.</p>
+                    </div>
+                    <div class="theme-card">
+                        <h4>2. Self-improving agents</h4>
+                        <p>Autogenesis, Self-Generated World Knowledge, Self-Evolving Logic Synthesis đều xoay quanh agent tự sửa và tự tiến hóa.</p>
+                    </div>
+                    <div class="theme-card">
+                        <h4>3. Deployment plumbing</h4>
+                        <p>Skill-RAG, Stateless Decision Memory, MASS-RAG và Diversity Collapse đụng thẳng vào chuyện build agent thật sao cho đỡ vỡ.</p>
+                    </div>
+                </div>
+
+                <h2>1) Paper số 1: DeepSeek V4 vẫn là cái tên lớn nhất của tuần</h2>
+                <p>Việc DAIR.AI đặt <strong>DeepSeek V4</strong> lên đầu không có gì bất ngờ. Đây vẫn là release gây tiếng vang lớn nhất trong tuần, không chỉ vì benchmark mà vì cách nó được thiết kế <strong>ngay từ đầu cho million-token context</strong> thay vì gắn thêm như một tính năng phụ.</p>
+                <p>Bài roundup nhấn vào 4 điểm chính:</p>
+                <ul class="paper-list">
+                    <li><strong>Hybrid attention với CSA và HCA</strong> để giữ mô hình khả thi ở 1M context.</li>
+                    <li><strong>Training stability</strong> ở quy mô trillion-parameter với Anticipatory Routing và SwiGLU Clamping.</li>
+                    <li><strong>Domain-specialist post-training</strong> thay vì một pha RL trộn hết vào nhau.</li>
+                    <li><strong>Frontier-adjacent performance</strong> với chi phí open-source dễ chạm hơn nhiều so với closed frontier.</li>
+                </ul>
+                <p>Ý lớn ở đây rất rõ: open-weight models đang không còn chỉ là “bản rẻ hơn, yếu hơn”. Chúng bắt đầu tiến tới vùng mà closed frontier buộc phải coi là cạnh tranh nghiêm túc, đặc biệt ở những workload dài context và nhạy về economics.</p>
+
+                <h2>2) Trục thứ hai của cả list: agent không chỉ dùng tool nữa, mà bắt đầu tự sửa chính mình</h2>
+                <p>Phần giữa của roundup có một motif lặp đi lặp lại: <strong>self-improvement</strong>. Đây mới là thứ đáng để ý nhất nếu nhìn cả cụm paper thay vì từng cái lẻ.</p>
+
+                <h3>Autogenesis</h3>
+                <p>Autogenesis mô tả một protocol nơi agent tự tìm ra capability gap, tự đề xuất cải tiến, tự test, rồi commit thứ gì hoạt động ngược trở lại framework của chính nó. Không retrain, không cần người vá tay liên tục.</p>
+                <p>Điểm đáng tiền ở paper này không phải chuyện “agent tự tiến hóa” nghe sci-fi, mà là việc nó cố dựng <strong>lineage, audit và rollback</strong> cho mỗi lần tự sửa. Tức là biến self-modification thành thứ đủ có kỷ luật để deploy.</p>
+
+                <h3>Self-Generated World Knowledge</h3>
+                <p>Paper này đẩy xa hơn ở chỗ dùng reward dựa trên <strong>task success</strong> để đánh giá liệu world knowledge do agent tự sinh ra có thực sự hữu ích hay không. Đó là một cách rất khác với kiểu nhồi thêm knowledge rồi tin rằng model sẽ tự biết dùng.</p>
+                <p>Nếu hướng này thắng, bottleneck của agent systems sẽ chuyển từ “gắn thêm dữ liệu” sang “thiết kế environment đủ tốt để agent học ra cái đáng giữ”.</p>
+
+                <h3>Self-Evolving Logic Synthesis</h3>
+                <p>Đây là case thú vị nhất vì nó không chỉ chỉnh prompt. NVIDIA dùng multi-agent LLM system để đọc, sửa và tối ưu trực tiếp codebase của <strong>ABC</strong>, một tool logic synthesis đã được hand-tune hàng chục năm trong EDA. Nếu đúng như paper nói, đây là bước tiến từ “agent tự sửa workflow” sang “agent tự sửa hạ tầng code thật”.</p>
+
+                <div class="highlight-box-blue">
+                    <h4>💡 Ý nghĩa lớn hơn</h4>
+                    <p style="margin-bottom:0">Ba paper này ghép lại cho thấy field đang chuyển từ <strong>agents that use tools</strong> sang <strong>agents that edit their own tooling, routines và knowledge</strong>. Đó là bước chuyển rất lớn, và cũng là chỗ rủi ro bắt đầu tăng vọt nếu không có audit/rollback đủ tốt.</p>
+                </div>
+
+                <h2>3) Hạ tầng deployment mới là phần ít sexy nhưng có thể sống lâu nhất</h2>
+                <p>Nếu chỉ đuổi theo capability paper, người ta rất dễ bỏ qua nhóm paper “plumbing”. Nhưng chính DAIR.AI cũng gài vào list tuần này vài cái rất đáng chú ý ở tầng hạ tầng.</p>
+
+                <h3>Skill-RAG</h3>
+                <p>Paper này đánh đúng điểm đau lớn của RAG hiện tại: nhiều hệ thống retrieve gần như mọi query, dù model có thể biết sẵn câu trả lời hoặc dù loại retrieval đang dùng không hợp với failure mode gặp phải. Skill-RAG biến retrieval thành thứ có điều kiện và có chuyên môn hóa theo từng kiểu failure.</p>
+                <p>Điểm hay nằm ở chỗ nó hỏi hai câu thay vì một: <strong>có cần retrieve không?</strong> và <strong>nếu có thì retrieve theo kiểu nào?</strong>. Đây mới là hướng RAG đáng để theo lâu dài.</p>
+
+                <h3>Stateless Decision Memory</h3>
+                <p>Đây là sleeper pick của list, và phản hồi dưới tweet cũng chỉ thẳng vào chỗ đó. Paper đề xuất bỏ active memory kiểu stateful agent, thay bằng <strong>immutable decision logs</strong> theo tinh thần event-sourcing. Mỗi quyết định, tool call, observation đều append vào log; bất kỳ instance nào cũng có thể replay để dựng context khi cần.</p>
+                <p>Nghe hơi khô, nhưng đây là kiểu ý tưởng rất enterprise: audit trail, replay, provenance, multi-tenant isolation, horizontal scaling. Nếu bạn cần hàng nghìn agent instances chạy qua container thật, đây là thứ quan trọng hơn cả việc model biết lý luận thêm 2 điểm benchmark.</p>
+
+                <h3>MASS-RAG & Diversity Collapse</h3>
+                <p><strong>MASS-RAG</strong> tiếp tục nhắc lại cùng một lesson: retrieval ngoài đời không chỉ là tìm tài liệu “liên quan kỹ thuật”, mà là phải tìm thứ <strong>thực sự đóng góp vào câu trả lời</strong>. Còn <strong>Diversity Collapse in Multi-Agent LLMs</strong> thì là cú tạt nước lạnh: đừng mặc định nhiều agent sẽ sinh ra nhiều góc nhìn khác nhau. Nếu context, feedback và task framing bị ghép quá chặt, chúng sẽ hội tụ về cùng một attractor.</p>
+                <p>Đây là paper rất đáng giữ lại vì nó chọc đúng chỗ hype của multi-agent systems: nhiều agent không tự động đồng nghĩa với nhiều ý tưởng độc lập.</p>
+
+                <div class="highlight-box-yellow">
+                    <h4>⚠️ Bài học quan trọng</h4>
+                    <p style="margin-bottom:0">List tuần này cho thấy một điều hơi phũ: AI agent muốn ra đời thật thì không chỉ cần model giỏi hơn. Nó cần <strong>retrieval biết chọn lúc</strong>, <strong>memory audit được</strong>, <strong>agent đủ tách biệt để không collapse về một ý</strong>, và <strong>infrastructure đủ kỷ luật để replay / rollback / scale</strong>.</p>
+                </div>
+
+                <h2>4) Những paper còn lại đang lấp đầy phần “quiet infrastructure”</h2>
+                <p>Bên cạnh các cái tên nổi bật hơn, list còn có vài paper đáng chú ý vì vai trò nền:</p>
+                <ul class="paper-list">
+                    <li><strong>Attention to Mamba:</strong> chỉ ra một con đường rẻ hơn để chuyển từ Transformer sang SSM mà không phải train lại từ đầu.</li>
+                    <li><strong>There Will Be a Scientific Theory of Deep Learning:</strong> một paper vị thế, cố hợp thức hóa “learning mechanics” như phần của lý thuyết khoa học về deep learning.</li>
+                </ul>
+                <p>Đây là loại paper không chắc gây bão trên mạng xã hội, nhưng thường để lại ảnh hưởng dài hạn hơn vì chúng thay đổi cách người ta nghĩ về lớp nền của hệ thống, chứ không chỉ thêm một trick benchmark.</p>
+
+                <h2>Nếu phải rút 3 tín hiệu lớn từ cả roundup này</h2>
+                <ol>
+                    <li><strong>Open models đang tiến rất sát closed frontier ở vài mặt trận quan trọng</strong>, đặc biệt long context và serving economics.</li>
+                    <li><strong>Agent research đang dịch trọng tâm từ task solving sang self-improvement + operational discipline</strong>.</li>
+                    <li><strong>Lớp hệ thống quanh model mới là nơi nhiều vấn đề thực tế đang nằm</strong>: RAG routing, memory architecture, deployment scaling, auditability, diversity giữa nhiều agent.</li>
+                </ol>
+
+                <p>Vì vậy, roundup này đáng đọc không chỉ để bookmark vài arXiv link. Nó đáng đọc vì nó cho thấy nơi field đang dồn lực: không chỉ đua capability, mà đua cả <strong>kiến trúc để capability đó sống nổi ngoài đời</strong>.</p>
+
+                <div class="highlight-box-red">
+                    <h4>🚨 Chốt một câu</h4>
+                    <p style="margin-bottom:0"><strong>Top AI Papers tuần này của DAIR.AI không chỉ là một list paper hay</strong>. Nó là snapshot rất rõ của AI năm 2026: <strong>open models đuổi frontier</strong>, <strong>agents học cách tự sửa mình</strong>, và <strong>hệ thống memory/RAG/deployment đang trở thành chiến trường thật</strong>. Nếu chỉ nhìn benchmark mà bỏ qua lớp plumbing, rất dễ hiểu sai nơi giá trị dài hạn đang tích tụ.</p>
+                </div>
+
+                <div class="source-links">
+                    <h4>Nguồn & tham khảo</h4>
+                    <ul>
+                        <li><a href="https://x.com/dair_ai/status/2048428649288712206" target="_blank">DAIR.AI on X — Top AI Papers of the Week (April 19 - April 26)</a></li>
+                        <li><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/blob/main/DeepSeek_V4.pdf" target="_blank">DeepSeek V4 paper</a></li>
+                        <li><a href="https://arxiv.org/abs/2604.15034" target="_blank">Autogenesis</a></li>
+                        <li><a href="https://arxiv.org/abs/2604.15771" target="_blank">Skill-RAG</a></li>
+                        <li><a href="https://arxiv.org/abs/2604.20158" target="_blank">Stateless Decision Memory</a></li>
+                    </ul>
+                </div>
+
+                <div class="back-to-blog-footer">
+                    <a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+                </div>
+
+                <div class="article-cta-stack">
+                    <a href="/blog/notebooklm-book-prompts" class="article-suggestion-card">
+                        <span class="article-suggestion-label"><i class="fas fa-book-open"></i> Đọc tiếp</span>
+                        <span class="article-suggestion-title">12 Prompt NotebookLM Để Đọc Sách Xong Không Quên Sạch: Từ Tóm Ý Tới Action Plan</span>
+                    </a>
+                    <div class="article-cta-actions">
+                        <a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a>
+                    </div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">AI Papers</span>
+                    <span class="tag">DeepSeek V4</span>
+                    <span class="tag">Autogenesis</span>
+                    <span class="tag">RAG</span>
+                    <span class="tag">AI Agents</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

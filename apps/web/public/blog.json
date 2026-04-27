@@ -1,6 +1,18 @@
 [
     {
-        "url": "/blog/notebooklm-book-prompts",
+        "url": "/blog/top-ai-papers-week-apr-26",
+        "title": "Top AI Papers Của Tuần (19-26/4): DeepSeek V4, Autogenesis, Skill-RAG, Stateless Memory",
+        "excerpt": "DAIR.AI vừa đăng round-up Top AI Papers of the Week với 10 paper nổi bật, từ DeepSeek V4, Autogenesis, Skill-RAG cho tới Stateless Decision Memory và Diversity Collapse. Điểm đáng chú ý không chỉ là từng paper riêng lẻ, mà là cả list này đang vẽ ra 3 hướng lớn của AI hiện tại: long-context open models, agent self-improvement, và hạ tầng để agent thực sự scale trong thế giới thật.",
+        "date": "Apr 27, 2026",
+        "tag": "AI Research",
+        "tagIcon": "fas fa-flask",
+        "tagColor": "#ec4899",
+        "readTime": "10 min read",
+        "featured": true,
+        "image": "/images/top-ai-papers-week-apr-26-thumb.svg"
+    },
+    {
+        "url": "/blog/notebooklm-book-prompts", 
         "title": "12 Prompt NotebookLM Để Đọc Sách Xong Không Quên Sạch: Từ Tóm Ý Tới Action Plan",
         "excerpt": "Một thread đang được share khá mạnh trên X vừa gom 12 prompt NotebookLM để biến một cuốn sách thành action plan, permanent notes, recall test và insight dùng được. Điểm hay là nó không chỉ dừng ở chuyện tóm tắt sách, mà cố kéo người đọc từ tiêu thụ thụ động sang ghi nhớ, phản biện và hành động.",
         "date": "Apr 27, 2026",

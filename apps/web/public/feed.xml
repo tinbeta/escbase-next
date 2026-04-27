@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Mon, 27 Apr 2026 03:16:01 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 27 Apr 2026 03:39:53 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Top AI Papers Của Tuần (19-26/4): DeepSeek V4, Autogenesis, Skill-RAG, Stateless Memory</title>
+      <link>https://escbase.xyz/blog/top-ai-papers-week-apr-26</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/top-ai-papers-week-apr-26</guid>
+      <pubDate>Sun, 26 Apr 2026 17:00:00 GMT</pubDate>
+      <description>DAIR.AI vừa đăng round-up Top AI Papers of the Week với 10 paper nổi bật, từ DeepSeek V4, Autogenesis, Skill-RAG cho tới Stateless Decision Memory và Diversity Collapse. Điểm đáng chú ý không chỉ là từng paper riêng lẻ, mà là cả list này đang vẽ ra 3 hướng lớn của AI hiện tại: long-context open models, agent self-improvement, và hạ tầng để agent thực sự scale trong thế giới thật.</description>
+      <category>AI Research</category>
+      <enclosure url="https://escbase.xyz/images/top-ai-papers-week-apr-26-thumb.svg" type="image/svg+xml" length="0" />
+    </item>
     <item>
       <title>12 Prompt NotebookLM Để Đọc Sách Xong Không Quên Sạch: Từ Tóm Ý Tới Action Plan</title>
       <link>https://escbase.xyz/blog/notebooklm-book-prompts</link>
@@ -447,15 +456,6 @@
       <description>OpenClaw 2026.4.12 thêm Active Memory, LM Studio provider, bundled Codex path, exec-policy tiện hơn, plugin loading chặt hơn và một đợt vá production rất dày cho gateway, memory, dreaming và chat integrations.</description>
       <category>OpenClaw AI</category>
       <enclosure url="https://escbase.xyz/images/openclaw-2026-4-12-release-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>1 Tỷ DOT Bị Mint Trái Phép Trên Ethereum: Hyperbridge Bị Exploit, Nhưng Polkadot Mainnet Không Sập</title>
-      <link>https://escbase.xyz/blog/polkadot-dot-hack</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/polkadot-dot-hack</guid>
-      <pubDate>Sun, 12 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Một exploit trên Hyperbridge gateway cho phép hacker mint 1 tỷ DOT trên Ethereum và bán ra lấy khoảng 237.000 USD. Điểm quan trọng: đây là bridged DOT trên Ethereum, không phải native DOT trên Polkadot bị hack trực tiếp.</description>
-      <category>Bridge Exploit</category>
-      <enclosure url="https://escbase.xyz/images/polkadot-dot-hack-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>
