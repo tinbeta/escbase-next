@@ -60,6 +60,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://escbase.xyz/blog/openai-our-principles</loc>
+    <lastmod>2026-04-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://escbase.xyz/blog/ai-chip-architectures-cpu-gpu-tpu-npu-lpu</loc>
     <lastmod>2026-04-26</lastmod>
     <priority>0.8</priority>

@@ -1,6 +1,18 @@
 [
     {
-        "url": "/blog/ai-chip-architectures-cpu-gpu-tpu-npu-lpu",
+        "url": "/blog/openai-our-principles",
+        "title": "Sam Altman Nêu 5 Nguyên Tắc Của OpenAI: Democratization, Empowerment, Prosperity, Resilience, Adaptability",
+        "excerpt": "Sam Altman vừa đăng một post rất ngắn trên X, nhưng link đính kèm lại là một tuyên ngôn khá rõ của OpenAI về 5 nguyên tắc định hướng: democratization, empowerment, universal prosperity, resilience và adaptability. Điểm đáng chú ý không chỉ là những từ nghe đẹp, mà là việc OpenAI đang công khai tự mô tả các trade-off giữa mở rộng truy cập, an toàn, hạ tầng compute, chi phí và quyền lực.",
+        "date": "Apr 27, 2026",
+        "tag": "AI Policy",
+        "tagIcon": "fas fa-landmark",
+        "tagColor": "#8b5cf6",
+        "readTime": "9 min read",
+        "featured": true,
+        "image": "/images/openai-our-principles-thumb.svg"
+    },
+    {
+        "url": "/blog/ai-chip-architectures-cpu-gpu-tpu-npu-lpu", 
         "title": "CPU, GPU, TPU, NPU, LPU Khác Nhau Ở Đâu: 5 Kiến Trúc Chip Đang Gánh AI Hiện Tại",
         "excerpt": "Một thread đang được share khá mạnh trên X vừa tóm gọn 5 kiến trúc phần cứng gánh AI hiện tại: CPU, GPU, TPU, NPU và LPU. Điểm quan trọng không nằm ở chuyện nhớ tên chip, mà ở việc mỗi loại đánh đổi rất khác nhau giữa tính linh hoạt, mức độ song song và cách truy cập bộ nhớ.",
         "date": "Apr 27, 2026",

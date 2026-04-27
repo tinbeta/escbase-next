@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Sun, 26 Apr 2026 23:56:55 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 27 Apr 2026 03:05:56 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sam Altman Nêu 5 Nguyên Tắc Của OpenAI: Democratization, Empowerment, Prosperity, Resilience, Adaptability</title>
+      <link>https://escbase.xyz/blog/openai-our-principles</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/openai-our-principles</guid>
+      <pubDate>Sun, 26 Apr 2026 17:00:00 GMT</pubDate>
+      <description>Sam Altman vừa đăng một post rất ngắn trên X, nhưng link đính kèm lại là một tuyên ngôn khá rõ của OpenAI về 5 nguyên tắc định hướng: democratization, empowerment, universal prosperity, resilience và adaptability. Điểm đáng chú ý không chỉ là những từ nghe đẹp, mà là việc OpenAI đang công khai tự mô tả các trade-off giữa mở rộng truy cập, an toàn, hạ tầng compute, chi phí và quyền lực.</description>
+      <category>AI Policy</category>
+      <enclosure url="https://escbase.xyz/images/openai-our-principles-thumb.svg" type="image/svg+xml" length="0" />
+    </item>
     <item>
       <title>CPU, GPU, TPU, NPU, LPU Khác Nhau Ở Đâu: 5 Kiến Trúc Chip Đang Gánh AI Hiện Tại</title>
       <link>https://escbase.xyz/blog/ai-chip-architectures-cpu-gpu-tpu-npu-lpu</link>
@@ -447,15 +456,6 @@
       <description>Justin Sun công khai cáo buộc World Liberty Financial cài blacklist backdoor trong token WLFI, cho phép đóng băng hoặc tước quyền tài sản của holder. Đây không chỉ là drama cá nhân, mà là cú đánh thẳng vào narrative DeFi của dự án.</description>
       <category>Crypto Drama</category>
       <enclosure url="https://escbase.xyz/images/justin-sun-tron-ipo-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>OpenClaw 2026.4.11: Không Còn Test Agent Bằng Cảm Giác, Giờ Có Parity Gate GPT-5.4 vs Opus 4.6</title>
-      <link>https://escbase.xyz/blog/openclaw-2026-4-11-release</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/openclaw-2026-4-11-release</guid>
-      <pubDate>Sat, 11 Apr 2026 17:00:00 GMT</pubDate>
-      <description>OpenClaw 2026.4.11 là một bản polish release thiên về stability, nhưng điểm đáng chú ý nhất là parity gate GPT-5.4 vs Opus 4.6 cùng hàng loạt bản vá routing, subagents, OAuth và chat integrations.</description>
-      <category>OpenClaw AI</category>
-      <enclosure url="https://escbase.xyz/images/openclaw-2026-4-11-release-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>

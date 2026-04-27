@@ -1,0 +1,28 @@
+<svg width="800" height="420" viewBox="0 0 800 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A0F1C"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#6EE7B7"/>
+      <stop offset="1" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" rx="32" fill="url(#bg)"/>
+  <rect x="58" y="46" width="684" height="328" rx="28" fill="#0F172A" stroke="#334155"/>
+  <text x="84" y="102" fill="#F9FAFB" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="800">OPENAI NÊU</text>
+  <text x="84" y="148" fill="#A7F3D0" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="800">5 NGUYÊN TẮC</text>
+  <text x="84" y="190" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600">democratization · empowerment · prosperity</text>
+  <text x="84" y="222" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600">resilience · adaptability</text>
+  <g transform="translate(84 266)">
+    <rect x="0" y="0" width="152" height="40" rx="14" fill="url(#green)"/>
+    <text x="76" y="26" text-anchor="middle" fill="#062B1F" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800">SAM ALTMAN</text>
+  </g>
+  <g transform="translate(570 98)">
+    <circle cx="58" cy="58" r="52" fill="#0B1220" stroke="#475569"/>
+    <path d="M58 26C40.327 26 26 40.327 26 58C26 75.673 40.327 90 58 90C75.673 90 90 75.673 90 58C90 40.327 75.673 26 58 26Z" stroke="#A7F3D0" stroke-width="8"/>
+    <path d="M58 38L66 52L82 54L70 66L73 82L58 74L43 82L46 66L34 54L50 52L58 38Z" fill="#10B981"/>
+    <text x="58" y="135" text-anchor="middle" fill="#E5E7EB" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">OPENAI PRINCIPLES</text>
+  </g>
+</svg>
