@@ -47,6 +47,10 @@
                 <h2>Thread này không chỉ là hướng dẫn cài đặt</h2>
                 <p>Bề mặt thì Arkham đang làm một việc rất dễ hiểu: hướng dẫn người dùng nối <strong>Claude Desktop</strong> với <strong>Arkham API</strong> mà không phải tự ngồi viết cả đống mã từ đầu. Thread đi theo kiểu từng bước một: lấy khóa API, để Claude tạo file máy chủ MCP, cài phụ thuộc, nối vào Claude Desktop, thêm tài liệu API vào phần kiến thức dự án, rồi bắt đầu hỏi dữ liệu thật.</p>
                 <p>Nhưng nếu chỉ đọc nó như một bài “how-to”, sẽ bỏ lỡ điều quan trọng hơn. Arkham không chỉ đang dạy cách nối một công cụ vào Claude. Họ đang thử biến dữ liệu blockchain thành một lớp dịch vụ mà <strong>agent có thể gọi thay người dùng</strong>.</p>
+                <figure>
+                    <img src="/images/arkham-api-claude/step-0-thread-overview.jpg" alt="Tổng quan thread hướng dẫn dùng Arkham API với AI Agents" loading="lazy">
+                    <figcaption>Ảnh tổng quan từ thread gốc: Arkham đóng gói toàn bộ quy trình thành 6 bước khá rõ ràng.</figcaption>
+                </figure>
 
                 <div class="step-grid">
                     <div class="step-card">
@@ -77,7 +81,23 @@
 
                 <h2>Cái hay nhất ở đây là “không cần tự code” không còn là câu quảng cáo rỗng</h2>
                 <p>Arkham nhấn rất rõ rằng người dùng có thể kết nối Claude trực tiếp với lớp tình báo on-chain của họ mà <strong>không cần tự viết một dòng mã</strong>. Câu này thường nghe hơi quảng cáo quá tay, nhưng trong case này nó có phần đúng hơn bình thường.</p>
+                <figure>
+                    <img src="/images/arkham-api-claude/step-1-download-tools.jpg" alt="Bước 1 lấy Claude Desktop và Arkham API key" loading="lazy">
+                    <figcaption>Bước 1 trong thread: tải Claude Desktop và tạo khóa Arkham API.</figcaption>
+                </figure>
                 <p>Lý do là Arkham không bắt người dùng dựng một ứng dụng từ đầu. Họ để Claude tự làm phần khá vất vả: tạo file máy chủ MCP, hướng dẫn chỗ lưu, và sau đó chỉ cần vài bước để nối nó vào Claude Desktop. Khi đã nối xong, người dùng có thể đặt câu hỏi kiểu:</p>
+                <figure>
+                    <img src="/images/arkham-api-claude/step-2-build-mcp.jpg" alt="Bước 2 để Claude tự tạo file máy chủ MCP" loading="lazy">
+                    <figcaption>Bước 2: để chính Claude tạo file máy chủ MCP thay cho việc người dùng phải tự dựng từ đầu.</figcaption>
+                </figure>
+                <figure>
+                    <img src="/images/arkham-api-claude/step-3-install-deps.jpg" alt="Bước 3 cài phụ thuộc cho MCP server" loading="lazy">
+                    <figcaption>Bước 3a: cài phụ thuộc cần thiết như <code>mcp</code> và <code>requests</code>.</figcaption>
+                </figure>
+                <figure>
+                    <img src="/images/arkham-api-claude/step-3-config-json.jpg" alt="Bước 3 thêm cấu hình JSON để nối vào Claude Desktop" loading="lazy">
+                    <figcaption>Bước 3b: thêm cấu hình JSON để nối máy chủ mới vào Claude Desktop.</figcaption>
+                </figure>
                 <ul>
                     <li>top đối tác giao dịch của ví nóng Binance trên Ethereum trong 7 ngày qua là ai,</li>
                     <li>địa chỉ này đang tương tác với những thực thể nào,</li>
@@ -93,8 +113,17 @@
 
                 <h2>Tài liệu “đọc được bởi máy” mới là mảnh ghép đáng chú ý</h2>
                 <p>Một chi tiết rất đáng tiền trong thread là Arkham nói toàn bộ tài liệu API của họ có sẵn dưới dạng một tệp <strong>đọc được bởi máy</strong>, cụ thể là <strong>llms.txt</strong>. Họ còn bảo thẳng rằng có thể đưa URL đó cho Claude, Cursor, Copilot hay các agent khác để có ngữ cảnh ngay lập tức.</p>
+                <figure>
+                    <img src="/images/arkham-api-claude/step-4-project-knowledge.jpg" alt="Bước 4 thêm tài liệu Arkham vào Project Knowledge của Claude" loading="lazy">
+                    <figcaption>Bước 4: đưa tài liệu Arkham vào phần kiến thức dự án để Claude luôn có ngữ cảnh API mới nhất.</figcaption>
+                </figure>
                 <p>Chi tiết này nghe nhỏ nhưng thật ra rất quan trọng. Nó cho thấy Arkham hiểu một điều mà nhiều công ty API khác vẫn còn chậm: từ giờ trở đi, tài liệu không chỉ dành cho con người đọc. Nó còn phải đủ gọn, đủ sạch và đủ có cấu trúc để agent có thể nạp vào làm ngữ cảnh vận hành.</p>
                 <p>Nói cách khác, Arkham không chỉ tối ưu cho lập trình viên. Họ đang tối ưu cho <strong>lập trình viên cộng với agent</strong>.</p>
+
+                <figure>
+                    <img src="/images/arkham-api-claude/step-5-query-example.jpg" alt="Ví dụ truy vấn đối tác giao dịch của ví Binance bằng Claude" loading="lazy">
+                    <figcaption>Bước 5: sau khi nối xong, người dùng chỉ cần đặt câu hỏi kiểu tự nhiên và để Claude gọi điểm cuối phù hợp.</figcaption>
+                </figure>
 
                 <h2>Arkham đang muốn trở thành lớp “nhận diện thực thể” cho agent crypto</h2>
                 <p>Trang API của Arkham mô tả khá rõ họ đang bán cái gì: một lớp dữ liệu on-chain có thể gắn địa chỉ blockchain với <strong>thực thể ngoài đời thật</strong>, cộng thêm nhãn, luồng tài sản, theo dõi ví và nhiều chuỗi khác nhau. Họ gọi động cơ lõi này là <strong>Ultra</strong>, công cụ ghép địa chỉ với thực thể ngoài đời.</p>
@@ -122,6 +151,11 @@
                     <h4>⚠️ Chỗ cần để ý</h4>
                     <p style="margin-bottom:0">Khi nối dữ liệu on-chain với agent, rào cản kỹ thuật giảm rất mạnh. Nhưng đổi lại, rủi ro cũng đổi hình: người dùng có thể giao quá nhiều niềm tin cho một lớp hỏi đáp tưởng như đơn giản, trong khi dữ liệu, nhãn thực thể và suy diễn vẫn luôn có xác suất sai. Dễ dùng hơn không đồng nghĩa với không cần kiểm chứng.</p>
                 </div>
+
+                <figure>
+                    <img src="/images/arkham-api-claude/step-6-llms-doc.jpg" alt="Tài liệu llms.txt của Arkham cho các agent AI" loading="lazy">
+                    <figcaption>Mảnh ghép đáng tiền nhất: Arkham có sẵn tài liệu <code>llms.txt</code> để agent nạp ngữ cảnh trực tiếp.</figcaption>
+                </figure>
 
                 <h2>Ý nghĩa lớn hơn: dữ liệu blockchain đang được đóng gói lại cho thời agent</h2>
                 <p>Nếu phải đọc thread này ở mức chiến lược hơn, thì Arkham đang làm một việc rất đúng thời điểm: <strong>đóng gói dữ liệu blockchain cho thời đại AI agent</strong>.</p>
