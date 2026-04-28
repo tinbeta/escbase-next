@@ -5,14 +5,14 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Mon, 27 Apr 2026 12:23:07 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 28 Apr 2026 00:26:26 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Workshop 30 Phút Của Anthropic Chỉ Ra Cách Dùng Claude Code Cho Đúng</title>
       <link>https://escbase.xyz/blog/claude-code-live-best-practices</link>
       <guid isPermaLink="true">https://escbase.xyz/blog/claude-code-live-best-practices</guid>
-      <pubDate>Sun, 26 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Jouhatsu vừa chia sẻ một workshop 30 phút của Anthropic về Claude Code và gọi nó là thứ đáng bookmark hơn cả mấy khóa học AI 500 đô. Điểm hay là video này không bán hype chung chung, mà đi thẳng vào cách team tạo ra Claude Code thật sự dùng agent này: origin story, live demo, best practices, slash commands, subagents, hooks, và cách đưa Claude Code vào workflow codebase thật.</description>
+      <pubDate>Mon, 27 Apr 2026 17:00:00 GMT</pubDate>
+      <description>Jouhatsu vừa chia sẻ một workshop 30 phút của Anthropic về Claude Code và gọi nó là thứ đáng bookmark hơn cả mấy khóa học AI 500 đô. Sau khi bóc kỹ nội dung video, điểm đáng giá nhất là workshop này rất cụ thể: bắt đầu từ codebase Q&amp;A, luôn plan trước khi sửa lớn, dùng CLAUDE.md để nhồi context, dùng Puppeteer và test làm vòng phản hồi, và biến Claude Code thành một phần của workflow ship code thật.</description>
       <category>Dev Tools</category>
       <enclosure url="https://escbase.xyz/images/claude-code-live-best-practices-thumb.svg" type="image/svg+xml" length="0" />
     </item>
