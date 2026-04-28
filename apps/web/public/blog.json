@@ -1,6 +1,18 @@
 [
     {
-        "url": "/blog/claude-code-live-best-practices",
+        "url": "/blog/vu-kien-elon-openai",
+        "title": "Vụ kiện Elon - OpenAI thực chất là gì?",
+        "excerpt": "Vụ Elon Musk kiện OpenAI không chỉ là màn đấu khẩu giữa hai ông lớn AI. Gốc rễ của nó là một câu hỏi khó hơn nhiều: một tổ chức sinh ra với danh nghĩa vì lợi ích chung có thể biến phần lớn giá trị tạo ra thành lợi ích tư nhân đến mức nào, nhất là khi cuộc đua AI đòi hỏi lượng vốn khổng lồ?",
+        "date": "Apr 28, 2026",
+        "tag": "AI & Pháp lý",
+        "tagIcon": "fas fa-scale-balanced",
+        "tagColor": "#ef4444",
+        "readTime": "10 min read",
+        "featured": true,
+        "image": "/images/elon-openai-vu-kien-thumb.svg"
+    },
+    {
+        "url": "/blog/claude-code-live-best-practices", 
         "title": "Workshop 30 Phút Của Anthropic Chỉ Ra Cách Dùng Claude Code Cho Đúng",
         "excerpt": "Jouhatsu vừa chia sẻ một workshop 30 phút của Anthropic về Claude Code và gọi nó là thứ đáng bookmark hơn cả mấy khóa học AI 500 đô. Sau khi bóc kỹ nội dung video, điểm đáng giá nhất là workshop này rất cụ thể: bắt đầu từ codebase Q&A, luôn plan trước khi sửa lớn, dùng CLAUDE.md để nhồi context, dùng Puppeteer và test làm vòng phản hồi, và biến Claude Code thành một phần của workflow ship code thật.",
         "date": "Apr 28, 2026",

@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Tue, 28 Apr 2026 00:26:26 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 28 Apr 2026 03:58:46 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vụ kiện Elon - OpenAI thực chất là gì?</title>
+      <link>https://escbase.xyz/blog/vu-kien-elon-openai</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/vu-kien-elon-openai</guid>
+      <pubDate>Mon, 27 Apr 2026 17:00:00 GMT</pubDate>
+      <description>Vụ Elon Musk kiện OpenAI không chỉ là màn đấu khẩu giữa hai ông lớn AI. Gốc rễ của nó là một câu hỏi khó hơn nhiều: một tổ chức sinh ra với danh nghĩa vì lợi ích chung có thể biến phần lớn giá trị tạo ra thành lợi ích tư nhân đến mức nào, nhất là khi cuộc đua AI đòi hỏi lượng vốn khổng lồ?</description>
+      <category>AI &amp; Pháp lý</category>
+      <enclosure url="https://escbase.xyz/images/elon-openai-vu-kien-thumb.svg" type="image/svg+xml" length="0" />
+    </item>
     <item>
       <title>Workshop 30 Phút Của Anthropic Chỉ Ra Cách Dùng Claude Code Cho Đúng</title>
       <link>https://escbase.xyz/blog/claude-code-live-best-practices</link>
@@ -447,15 +456,6 @@
       <description>Alibaba Qwen vừa open source Qwen3.6-35B-A3B dưới giấy phép Apache 2.0. Điểm đáng chú ý không chỉ là 35B total, 3B active, mà là benchmark blog gốc cho thấy nó vượt xa Qwen3.5-35B-A3B, cạnh tranh với Qwen3.5-27B và Gemma 4 31B ở coding, đồng thời bám rất sát Claude Sonnet 4.5 ở mảng vision-language.</description>
       <category>Open Models &amp; Agents</category>
       <enclosure url="https://escbase.xyz/images/qwen-3-6-35b-a3b-open-source-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>Gemini 3.1 Flash TTS: Google Đang Biến Text-to-Speech Thành Một Công Cụ Có Cảm Xúc Và Có Điều Khiển</title>
-      <link>https://escbase.xyz/blog/gemini-3-1-flash-tts</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/gemini-3-1-flash-tts</guid>
-      <pubDate>Wed, 15 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Google vừa đưa Gemini 3.1 Flash TTS vào preview với thứ đáng chú ý không chỉ là giọng tự nhiên hơn, mà là khả năng điều khiển cách nói bằng audio tags, multi-speaker dialogue và workflow kiểu đạo diễn ngay trong AI Studio.</description>
-      <category>AI Voice</category>
-      <enclosure url="https://escbase.xyz/images/gemini-3-1-flash-tts-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>
