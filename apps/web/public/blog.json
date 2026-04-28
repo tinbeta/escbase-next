@@ -1,6 +1,18 @@
 [
     {
-        "url": "/blog/openclaw-2026-4-25",
+        "url": "/blog/arkham-api-claude",
+        "title": "Arkham đang muốn biến Claude thành cửa vào dữ liệu on-chain",
+        "excerpt": "Arkham vừa đăng một thread khá rõ ràng về cách nối Claude với Arkham API chỉ trong 6 bước. Điểm đáng chú ý không nằm ở vài lệnh cài đặt, mà ở chỗ Arkham đang cố biến dữ liệu on-chain thành thứ có thể hỏi bằng ngôn ngữ tự nhiên, để agent gọi API, đọc kết quả và trả lại ngay trong chat.",
+        "date": "Apr 28, 2026",
+        "tag": "On-chain Tools",
+        "tagIcon": "fas fa-link",
+        "tagColor": "#f59e0b",
+        "readTime": "8 min read",
+        "featured": true,
+        "image": "/images/arkham-api-claude-thumb.svg"
+    },
+    {
+        "url": "/blog/openclaw-2026-4-25", 
         "title": "OpenClaw 2026.4.25 có gì đáng chú ý?",
         "excerpt": "OpenClaw 2026.4.25 không phải kiểu bản cập nhật chỉ thêm vài tính năng cho đẹp bảng tin. Lõi của nó nằm ở chỗ khác: giọng nói được nâng cấp mạnh hơn, plugin khởi động nhanh hơn, hệ thống theo dõi lỗi và luồng chạy sâu hơn, và phần cài đặt - cập nhật - trình duyệt được vá để bớt chết vặt.",
         "date": "Apr 28, 2026",
