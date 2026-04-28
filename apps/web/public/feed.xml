@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Tue, 28 Apr 2026 03:58:46 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 28 Apr 2026 08:37:47 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenClaw 2026.4.25 có gì đáng chú ý?</title>
+      <link>https://escbase.xyz/blog/openclaw-2026-4-25</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/openclaw-2026-4-25</guid>
+      <pubDate>Mon, 27 Apr 2026 17:00:00 GMT</pubDate>
+      <description>OpenClaw 2026.4.25 không phải kiểu bản cập nhật chỉ thêm vài tính năng cho đẹp bảng tin. Lõi của nó nằm ở chỗ khác: giọng nói được nâng cấp mạnh hơn, plugin khởi động nhanh hơn, hệ thống theo dõi lỗi và luồng chạy sâu hơn, và phần cài đặt - cập nhật - trình duyệt được vá để bớt chết vặt.</description>
+      <category>Agent Tools</category>
+      <enclosure url="https://escbase.xyz/images/openclaw-2026-4-25-thumb.svg" type="image/svg+xml" length="0" />
+    </item>
     <item>
       <title>Vụ kiện Elon - OpenAI thực chất là gì?</title>
       <link>https://escbase.xyz/blog/vu-kien-elon-openai</link>
@@ -447,15 +456,6 @@
       <description>Anthropic vừa giới thiệu Claude Opus 4.7 với trọng tâm không chỉ là mạnh hơn, mà là xử lý long-running tasks kỹ hơn, vision tốt hơn, reasoning control chi tiết hơn và đủ lì để nhận việc khó với ít supervision hơn.</description>
       <category>AI Models &amp; Agents</category>
       <enclosure url="https://escbase.xyz/images/claude-opus-4-7-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>Qwen3.6-35B-A3B Open Source: Một Model 3B Active Nhưng Dám Đấu Qwen3.5-27B, Gemma 4 31B Và Cả Claude Sonnet 4.5</title>
-      <link>https://escbase.xyz/blog/qwen-3-6-35b-a3b-open-source</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/qwen-3-6-35b-a3b-open-source</guid>
-      <pubDate>Wed, 15 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Alibaba Qwen vừa open source Qwen3.6-35B-A3B dưới giấy phép Apache 2.0. Điểm đáng chú ý không chỉ là 35B total, 3B active, mà là benchmark blog gốc cho thấy nó vượt xa Qwen3.5-35B-A3B, cạnh tranh với Qwen3.5-27B và Gemma 4 31B ở coding, đồng thời bám rất sát Claude Sonnet 4.5 ở mảng vision-language.</description>
-      <category>Open Models &amp; Agents</category>
-      <enclosure url="https://escbase.xyz/images/qwen-3-6-35b-a3b-open-source-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>

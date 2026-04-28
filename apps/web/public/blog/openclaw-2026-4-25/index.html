@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw 2026.4.25 có gì đáng chú ý? - Escbase</title>
+    <meta name="description" content="OpenClaw 2026.4.25 không phải kiểu bản cập nhật chỉ thêm vài tính năng cho đẹp bảng tin. Lõi của nó nằm ở chỗ khác: giọng nói được nâng cấp mạnh hơn, plugin khởi động nhanh hơn, hệ thống theo dõi lỗi và luồng chạy sâu hơn, và phần cài đặt - cập nhật - trình duyệt được vá để bớt chết vặt. Đây là kiểu nâng cấp làm một trợ lý chạy thường trực bớt giống đồ chơi và gần hơn với một hệ thống có thể tin dùng.">
+    <meta property="og:title" content="OpenClaw 2026.4.25 có gì đáng chú ý?">
+    <meta property="og:description" content="Bản 2026.4.25 của OpenClaw không chỉ thêm tính năng. Nó đẩy mạnh giọng nói, rút ngắn thời gian mở plugin, mở rộng khả năng quan sát hệ thống qua OTEL, và vá các điểm hay làm người dùng bực như cài đặt, cập nhật và điều khiển trình duyệt. Lõi của bản này là làm trợ lý bớt bí ẩn và dễ sửa hơn khi có lỗi.">
+    <meta property="og:image" content="https://escbase.xyz/images/openclaw-2026-4-25-thumb.png">
+    <meta property="og:url" content="https://escbase.xyz/blog/openclaw-2026-4-25/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/shared-article.css">
+    <link rel="stylesheet" href="/shared-article-footer.css">
+    <style>
+        .feature-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; margin:1.5rem 0 2rem; }
+        .feature-card { background:var(--card-bg); border:1px solid var(--border); border-radius:var(--radius-md); padding:1.05rem; }
+        .feature-card h4 { margin:0 0 .45rem; font-size:1rem; color:var(--text); }
+        .feature-card p { margin:0; font-size:.88rem; }
+        @media (max-width:768px){ .feature-grid{ grid-template-columns:1fr; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <span class="category-badge"><i class="fas fa-screwdriver-wrench"></i> Agent Tools</span>
+                <h1>OpenClaw 2026.4.25 có gì đáng chú ý?</h1>
+                <div class="meta">
+                    <span><i class="far fa-calendar"></i> 28/04/2026</span>
+                    <span><i class="far fa-clock"></i> 9 phút đọc</span>
+                    <span><i class="far fa-folder"></i> Agent Tools, AI Infra</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <div class="highlight-box">
+                    <h4>TL;DR</h4>
+                    <p style="margin-bottom:0"><strong>OpenClaw 2026.4.25 không phải kiểu bản cập nhật chỉ thêm vài tính năng cho đẹp bảng tin</strong>. Lõi của nó nằm ở chỗ khác: <strong>giọng nói được nâng cấp mạnh hơn, plugin khởi động nhanh hơn, hệ thống theo dõi lỗi và luồng chạy sâu hơn, và phần cài đặt - cập nhật - trình duyệt được vá để bớt chết vặt</strong>. Đây là kiểu nâng cấp làm một trợ lý chạy thường trực bớt giống đồ chơi và gần hơn với một hệ thống có thể tin dùng.</p>
+                </div>
+
+                <h2>Thread của OpenClaw ngắn, nhưng bắn đúng 4 chỗ đau</h2>
+                <p>Post gốc của OpenClaw tóm bản <strong>2026.4.25</strong> bằng bốn ý khá gọn:</p>
+                <ul>
+                    <li>giọng nói mạnh hơn,</li>
+                    <li>plugin khởi động nhanh hơn,</li>
+                    <li>OTEL nhìn thấy nhiều thứ kỳ quặc hơn,</li>
+                    <li>và các lỗi ở trình duyệt, cài đặt, cập nhật được vá thêm.</li>
+                </ul>
+                <p>Nghe qua thì như changelog rút gọn, nhưng nếu mở thread ra và đối chiếu với trang phát hành, có thể thấy đây là một bản cập nhật có hướng rất rõ: <strong>giảm độ bí ẩn khi agent chạy lỗi, và giảm ma sát khi biến nó thành thứ để người dùng bật cả ngày</strong>.</p>
+
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Giọng nói</h4>
+                        <p>TTS không còn là phần phụ. Nó được mở rộng rõ rệt cả về nhà cung cấp lẫn cách điều khiển.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Plugin</h4>
+                        <p>Khởi động nhanh hơn nhờ cách tra cứu lạnh và lưu sẵn dữ liệu đăng ký.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Quan sát hệ thống</h4>
+                        <p>OTEL đi sâu hơn vào model calls, tool loops, exec, context và sức ép bộ nhớ.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Độ bền</h4>
+                        <p>Cài đặt, cập nhật và điều khiển trình duyệt được vá để bớt kẹt ở những lỗi khó chịu.</p>
+                    </div>
+                </div>
+
+                <h2>1) Giọng nói không còn là món phụ</h2>
+                <p>Điểm lớn nhất của bản này là phần <strong>TTS</strong>. Theo thread, OpenClaw giờ có tới <strong>13 nhà cung cấp giọng nói</strong>, thêm khái niệm <strong>persona</strong>, cho phép đặt mức ghi đè theo agent, theo kênh, theo tài khoản, và thêm các lệnh như <code>/tts latest</code>, <code>/tts chat</code> cùng chẩn đoán dự phòng khi giọng bị lỗi.</p>
+                <p>Nếu nhìn kỹ thì đây không chỉ là chuyện “thêm nhiều giọng hơn”. Nó cho thấy một thay đổi lớn hơn: giọng nói đang được xem là <strong>một lớp tương tác chính</strong>, không phải tính năng cho vui.</p>
+                <p>Khi một trợ lý AI chuyển từ trả lời bằng chữ sang đọc, gọi, tham gia cuộc họp, hoặc phản hồi theo thời gian thực, phần giọng nói không thể còn làm kiểu vá víu. Nó cần có:</p>
+                <ul>
+                    <li>nhiều nhà cung cấp để dự phòng,</li>
+                    <li>cách chọn giọng theo ngữ cảnh,</li>
+                    <li>và quan trọng nhất là khả năng đoán vì sao nó lỗi.</li>
+                </ul>
+                <p>Nói ngắn: OpenClaw đang đối xử với giọng nói như một hệ thống vận hành thật, chứ không phải hiệu ứng trình diễn.</p>
+
+                <h2>2) Plugin mở nhanh hơn nghe nhỏ, nhưng lại rất quan trọng</h2>
+                <p>Một ý khác trong thread là phần khởi động plugin giờ dựa nhiều hơn vào <strong>bảng tra cứu lạnh</strong> và <strong>dữ liệu đăng ký đã lưu sẵn</strong>. Điều này nghe rất kỹ thuật, nhưng tác động của nó lại khá đời thường: <strong>mở lên nhanh hơn, đỡ phải nạp lại linh tinh, và ít phải tải cả đống thứ chỉ để biết plugin nào thuộc về ai hay cần khởi động ra sao</strong>.</p>
+                <p>Với một hệ thống agent luôn chạy nền, vài giây chờ mỗi lần mở không phải chuyện nhỏ. Nó quyết định cảm giác sản phẩm là “mượt và sẵn sàng” hay “lại đứng đơ rồi”.</p>
+                <p>Đây cũng là điểm được nhiều người trong replies chạm tới. Có người nói bản cập nhật này chỉ thật sự đáng giá nếu tốc độ plugin cải thiện thấy được. Có người khác lại bảo phần này mới là thứ biến một trợ lý chạy cả ngày từ mức thử nghiệm thành thứ có thể để đó mà sống cùng.</p>
+
+                <div class="highlight-box-blue">
+                    <h4>💡 Chỗ hay của bản này</h4>
+                    <p style="margin-bottom:0">Nâng tốc plugin, vá cập nhật, và tăng khả năng quan sát hệ thống nghe không hào nhoáng bằng model mới. Nhưng chính những thứ này mới quyết định một agent có dùng hằng ngày được hay không. Hào nhoáng kéo người ta đến, còn độ ổn định mới giữ người ta lại.</p>
+                </div>
+
+                <h2>3) OTEL mới là phần âm thầm nhưng đáng tiền nhất</h2>
+                <p>Thread mô tả khá rõ: xuất dữ liệu <strong>OTEL</strong> giờ phủ được cả model calls, token và chi phí, vòng lặp công cụ, lệnh thực thi, lần chạy của harness, cách ghép ngữ cảnh, và cả sức ép bộ nhớ — trong khi mặc định không đẩy nguyên nội dung prompt thô.</p>
+                <p>Đây là một nâng cấp có vẻ dành cho dân hạ tầng hơn là người dùng phổ thông, nhưng thật ra nó là phần rất quan trọng nếu muốn agent đi vào môi trường nghiêm túc. Một hệ thống AI chỉ “trả lời được” thì chưa đủ. Sớm muộn gì người ta cũng sẽ hỏi:</p>
+                <ul>
+                    <li>nó đã gọi model nào,</li>
+                    <li>đã đốt bao nhiêu token,</li>
+                    <li>đã dùng công cụ gì,</li>
+                    <li>kẹt ở bước nào,</li>
+                    <li>và lúc lỗi thì lỗi vì thiếu ngữ cảnh, vì vòng lặp công cụ, hay vì bộ nhớ sắp nổ?</li>
+                </ul>
+                <p>Thread của Sam Ward trong replies nói rất đúng: với các môi trường cần tuân thủ, điều quan trọng không chỉ là agent làm được việc, mà là <strong>có thể lần ngược lại xem nó đã làm gì, khi nào, và trên dữ liệu của ai</strong>.</p>
+                <p>Nói thẳng: khi agent bắt đầu đi vào công việc có trách nhiệm thật, <strong>khả năng quan sát không còn là phần phụ của đội hỗ trợ</strong>. Nó trở thành một phần của chính sản phẩm.</p>
+
+                <h2>4) Phần trình duyệt và cập nhật được vá để bớt “chết lãng”</h2>
+                <p>OpenClaw cũng nhấn mạnh một loạt vá ở phần điều khiển trình duyệt: mã tab an toàn hơn, snapshot có thêm URL, khởi động headless kiểu một lần, chỉnh nhịp sẵn sàng của CDP, và tăng chất lượng của các bước kiểm tra trong doctor.</p>
+                <p>Song song với đó là một mảng khác ít sexy hơn nhưng rất đáng tiền: <strong>cài đặt và cập nhật được làm khó kẹt hơn</strong>. Có thêm tầng phụ thuộc tạm cho plugin, cảnh báo thiếu dung lượng đĩa, kiểm tra gói cài, và đường sửa chữa sạch hơn khi update dở chứng.</p>
+                <p>Nghe buồn cười, nhưng những lỗi kiểu cập nhật nửa vời, gateway treo, hay trình duyệt không lên đúng lúc thường là thứ làm người dùng bỏ cuộc nhanh nhất. Không ai quan tâm bạn có bao nhiêu tính năng nếu cứ mỗi lần update là lại phải mò log như thám tử.</p>
+
+                <h2>5) Điều thú vị là chính replies cũng cho thấy đây là bản cập nhật “vì độ bền”</h2>
+                <p>Đọc replies của thread này sẽ thấy một bức tranh khá thật. Một số người khen rõ rằng phần OTEL và sửa quy trình cập nhật mới là cái đáng giá. Có người báo auto-update chạy trọn vẹn, khỏe hơn trước. Có người nói plugin mở nhanh hơn trên máy SSD. Nhưng cũng có người báo chậm hơn, có regression, thậm chí chửi thẳng gateway và Bonjour.</p>
+                <p>Đây không phải chi tiết xấu. Ngược lại, nó làm lộ đúng bản chất của những bản cập nhật kiểu hạ tầng: <strong>bạn đang vá vào các bộ phận sâu, nên cảm nhận ngoài đời sẽ không đồng đều ngay lập tức</strong>. Có máy hưởng lợi rõ. Có máy lại lộ thêm góc lỗi chưa triệt.</p>
+                <p>Chính vì vậy, câu “Less mystery, more machinery” của OpenClaw khá khôn. Nó không hứa “mượt tuyệt đối”. Nó hứa một thứ thực tế hơn: <strong>khi có chuyện kỳ quặc xảy ra, hệ thống sẽ bớt mù hơn, bớt khó sửa hơn</strong>.</p>
+
+                <div class="highlight-box-yellow">
+                    <h4>⚠️ Chỗ cần nhìn tỉnh</h4>
+                    <p style="margin-bottom:0">Đây không phải bản cập nhật có thể đánh giá chỉ bằng lời quảng cáo của chủ dự án. Thread replies cho thấy vẫn có người gặp chậm, lỗi gateway, hoặc cảm giác bị regression. Vì vậy, take hợp lý nhất không phải “bản này quá ngon” hay “bản này quá dở”, mà là: <strong>OpenClaw đang ưu tiên đẩy mạnh khả năng vận hành và sửa lỗi, nhưng cái giá của việc chạm sâu vào hạ tầng là trải nghiệm ngoài đời sẽ còn lồi lõm một thời gian</strong>.</p>
+                </div>
+
+                <h2>6) Gốc của bản 2026.4.25 là chuyển từ biểu diễn sang vận hành</h2>
+                <p>Nếu phải gom toàn bộ bản cập nhật này về một ý, thì nó là thế này: <strong>OpenClaw đang chuyển trọng tâm từ việc chứng minh agent làm được nhiều trò sang việc làm cho agent trở thành một hệ thống bớt khó sống chung</strong>.</p>
+                <p>Giọng nói mạnh hơn để giao tiếp tự nhiên hơn. Plugin mở nhanh hơn để đỡ chờ. OTEL sâu hơn để biết nó đang đổ vỡ ở đâu. Cập nhật và cài đặt bớt chết vặt hơn để người dùng không sợ đụng vào. Trình duyệt an toàn và rõ ràng hơn để tự động hóa đỡ mong manh.</p>
+                <p>Đây là kiểu nâng cấp ít gây sốc, nhưng lại có giá trị tích lũy lớn hơn nhiều so với việc thêm một model mới vào danh sách.</p>
+
+                <div class="highlight-box-red">
+                    <h4>🚨 Chốt một câu</h4>
+                    <p style="margin-bottom:0"><strong>Điểm đáng chú ý nhất của OpenClaw 2026.4.25 không nằm ở một tính năng đơn lẻ, mà ở hướng đi của cả bản cập nhật:</strong> làm cho agent bớt bí ẩn, dễ quan sát hơn, dễ sửa hơn và đỡ chết vặt hơn. Nói cách khác, đây là bước dịch chuyển từ “đồ chơi biết làm nhiều thứ” sang “một hệ thống có thể để chạy lâu dài”.</p>
+                </div>
+
+                <div class="source-links">
+                    <h4>Nguồn & tham khảo</h4>
+                    <ul>
+                        <li><a href="https://x.com/openclaw/status/2048745795776557337" target="_blank">OpenClaw on X — 2026.4.25 thread</a></li>
+                        <li><a href="https://github.com/openclaw/openclaw/releases" target="_blank">OpenClaw releases on GitHub</a></li>
+                    </ul>
+                </div>
+
+                <div class="back-to-blog-footer">
+                    <a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+                </div>
+
+                <div class="article-cta-stack">
+                    <a href="/blog/vu-kien-elon-openai" class="article-suggestion-card">
+                        <span class="article-suggestion-label"><i class="fas fa-book-open"></i> Đọc tiếp</span>
+                        <span class="article-suggestion-title">Vụ kiện Elon - OpenAI thực chất là gì?</span>
+                    </a>
+                    <div class="article-cta-actions">
+                        <a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a>
+                    </div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">OpenClaw</span>
+                    <span class="tag">TTS</span>
+                    <span class="tag">OTEL</span>
+                    <span class="tag">Plugin</span>
+                    <span class="tag">AI Infra</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

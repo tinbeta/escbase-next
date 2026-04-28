@@ -1,6 +1,18 @@
 [
     {
-        "url": "/blog/vu-kien-elon-openai",
+        "url": "/blog/openclaw-2026-4-25",
+        "title": "OpenClaw 2026.4.25 có gì đáng chú ý?",
+        "excerpt": "OpenClaw 2026.4.25 không phải kiểu bản cập nhật chỉ thêm vài tính năng cho đẹp bảng tin. Lõi của nó nằm ở chỗ khác: giọng nói được nâng cấp mạnh hơn, plugin khởi động nhanh hơn, hệ thống theo dõi lỗi và luồng chạy sâu hơn, và phần cài đặt - cập nhật - trình duyệt được vá để bớt chết vặt.",
+        "date": "Apr 28, 2026",
+        "tag": "Agent Tools",
+        "tagIcon": "fas fa-screwdriver-wrench",
+        "tagColor": "#14b8a6",
+        "readTime": "9 min read",
+        "featured": true,
+        "image": "/images/openclaw-2026-4-25-thumb.svg"
+    },
+    {
+        "url": "/blog/vu-kien-elon-openai", 
         "title": "Vụ kiện Elon - OpenAI thực chất là gì?",
         "excerpt": "Vụ Elon Musk kiện OpenAI không chỉ là màn đấu khẩu giữa hai ông lớn AI. Gốc rễ của nó là một câu hỏi khó hơn nhiều: một tổ chức sinh ra với danh nghĩa vì lợi ích chung có thể biến phần lớn giá trị tạo ra thành lợi ích tư nhân đến mức nào, nhất là khi cuộc đua AI đòi hỏi lượng vốn khổng lồ?",
         "date": "Apr 28, 2026",
