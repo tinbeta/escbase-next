@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/the-new-stack-for-global-finance-stablecoins-edition/",
+    "title": "Hạ Tầng Tài Chính Toàn Cầu Mới — Bản Đồ Stablecoin Stack Theo a16z",
+    "excerpt": "Stablecoins không còn là công cụ giao dịch crypto — chúng đang trở thành nền tảng hạ tầng tài chính mới. a16z phân tích 5 lớp của global finance stack và dự báo credit là cuộc chơi lớn tiếp theo.",
+    "date": "Apr 29, 2026",
+    "tag": "Stablecoins",
+    "tagIcon": "fas fa-coins",
+    "tagColor": "#f7931a",
+    "readTime": "18 min read",
+    "featured": false,
+    "image": "/images/the-new-stack-for-global-finance-stablecoins-edition.png"
+  },
+  {
     "url": "/blog/openclaw-2026-4-26-release/",
     "title": "OpenClaw 2026.4.26: Browser Talk, Cerebras, UI Diff Panel và Hơn Nữa",
     "excerpt": "Bản nâng cấp mới nhất của OpenClaw mang lại tính năng browser realtime talk, provider Cerebras, memory enhancements, UI polish và nhiều cải tiến quan trọng cho AI agent workflows.",
