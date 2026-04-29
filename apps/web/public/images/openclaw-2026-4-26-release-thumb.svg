@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f1a"/>
+      <stop offset="100%" style="stop-color:#1a0f2e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#60a5fa"/>
+      <stop offset="100%" style="stop-color:#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:rgba(99,102,241,0.3)"/>
+      <stop offset="100%" style="stop-color:rgba(167,139,250,0.2)"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="800" height="420" fill="url(#bg)"/>
+  <!-- Subtle grid pattern -->
+  <g opacity="0.04" stroke="#ffffff" stroke-width="1">
+    <line x1="0" y1="70" x2="800" y2="70"/>
+    <line x1="0" y1="140" x2="800" y2="140"/>
+    <line x1="0" y1="210" x2="800" y2="210"/>
+    <line x1="0" y1="280" x2="800" y2="280"/>
+    <line x1="0" y1="350" x2="800" y2="350"/>
+    <line x1="140" y1="0" x2="140" y2="420"/>
+    <line x1="280" y1="0" x2="280" y2="420"/>
+    <line x1="420" y1="0" x2="420" y2="420"/>
+    <line x1="560" y1="0" x2="560" y2="420"/>
+    <line x1="700" y1="0" x2="700" y2="420"/>
+  </g>
+  <!-- Glow ellipse -->
+  <ellipse cx="400" cy="140" rx="300" ry="90" fill="url(#glow)"/>
+  <!-- Accent bar -->
+  <rect x="60" y="90" width="4" height="80" rx="2" fill="url(#accent)"/>
+  <!-- Title -->
+  <text x="80" y="120" font-family="Inter,system-ui,sans-serif" font-size="32" font-weight="800" fill="#f8fafc">
+    OpenClaw 2026.4.26
+  </text>
+  <!-- Subtitle -->
+  <text x="80" y="160" font-family="Inter,system-ui,sans-serif" font-size="16" font-weight="500" fill="#94a3b8">
+    Browser Talk • Cerebras • UI Diff • Claude Importer
+  </text>
+  <!-- Feature pills -->
+  <g transform="translate(80, 200)">
+    <rect x="0" y="0" width="140" height="28" rx="14" fill="rgba(99,102,241,0.2)" stroke="rgba(99,102,241,0.4)" stroke-width="1"/>
+    <text x="70" y="18" font-family="Inter,sans-serif" font-size="12" font-weight="600" fill="#a5b4fc" text-anchor="middle">🧠 Browser Talk</text>
+  </g>
+  <g transform="translate(240, 200)">
+    <rect x="0" y="0" width="130" height="28" rx="14" fill="rgba(167,139,250,0.2)" stroke="rgba(167,139,250,0.4)" stroke-width="1"/>
+    <text x="65" y="18" font-family="Inter,sans-serif" font-size="12" font-weight="600" fill="#c4b5fd" text-anchor="middle">🔌 Cerebras</text>
+  </g>
+  <g transform="translate(80, 240)">
+    <rect x="0" y="0" width="150" height="28" rx="14" fill="rgba(34,197,94,0.2)" stroke="rgba(34,197,94,0.4)" stroke-width="1"/>
+    <text x="75" y="18" font-family="Inter,sans-serif" font-size="12" font-weight="600" fill="#4ade80" text-anchor="middle">⚡ Memory Enhance</text>
+  </g>
+  <g transform="translate(250, 240)">
+    <rect x="0" y="0" width="140" height="28" rx="14" fill="rgba(245,158,11,0.2)" stroke="rgba(245,158,11,0.4)" stroke-width="1"/>
+    <text x="70" y="18" font-family="Inter,sans-serif" font-size="12" font-weight="600" fill="#fbbf24" text-anchor="middle">🎛️ UI Diff Panel</text>
+  </g>
+  <!-- Escbase branding -->
+  <text x="80" y="390" font-family="Inter,system-ui,sans-serif" font-size="13" font-weight="700" fill="#64748b">
+    escbase.xyz
+  </text>
+</svg>

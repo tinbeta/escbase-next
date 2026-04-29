@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw 2026.4.26: Browser Talk, Cerebras, UI Diff Panel và Hơn Nữa - Escbase</title>
+    <meta name="description" content="Bản nâng cấp mới nhất của OpenClaw mang lại tính năng browser realtime talk, provider Cerebras, memory enhancements, UI polish và nhiều cải tiến quan trọng cho AI agent workflows.">
+    <meta property="og:title" content="OpenClaw 2026.4.26: Browser Talk, Cerebras, UI Diff Panel và Hơn Nữa">
+    <meta property="og:description" content="Bản nâng cấp mới nhất của OpenClaw mang lại tính năng browser realtime talk, provider Cerebras, memory enhancements, UI polish và nhiều cải tiến quan trọng cho AI agent workflows.">
+    <meta property="og:image" content="https://escbase.xyz/images/openclaw-2026-4-26-release-thumb.png">
+    <meta property="og:url" content="https://escbase.xyz/blog/openclaw-2026-4-26-release/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/shared-article.css">
+    <link rel="stylesheet" href="/shared-article-footer.css">
+    <style>
+        /* Custom inline styles cho bài viết này */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .feature-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.25rem;
+        }
+        .feature-card .icon {
+            font-size: 1.75rem;
+            margin-bottom: .75rem;
+            color: var(--accent);
+        }
+        .feature-card h4 {
+            color: var(--text);
+            margin-bottom: .5rem;
+            font-size: 1rem;
+        }
+        .feature-card p {
+            font-size: .9rem;
+            color: var(--text-secondary);
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+        @media (max-width: 768px) {
+            .feature-grid { grid-template-columns: 1fr; }
+            .feature-card { padding: 1rem; }
+        }
+
+        .comparison-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .comparison-col {
+            padding: 1.25rem;
+            border-radius: var(--radius-md);
+        }
+        .comparison-col.good {
+            background: linear-gradient(135deg, rgba(34,197,94,.12) 0%, rgba(34,197,94,.05) 100%);
+            border: 1px solid rgba(34,197,94,.2);
+        }
+        .comparison-col.bad {
+            background: linear-gradient(135deg, rgba(239,68,68,.12) 0%, rgba(239,68,68,.05) 100%);
+            border: 1px solid rgba(239,68,68,.2);
+        }
+        .comparison-col.good h4 { color: #22c55e; }
+        .comparison-col.bad h4 { color: #ef4444; }
+        @media (max-width: 768px) { .comparison-box { grid-template-columns: 1fr; } }
+
+        .stats-row {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin: 1.5rem 0;
+        }
+        .stat-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1rem 1.25rem;
+            text-align: center;
+            flex: 1;
+            min-width: 120px;
+        }
+        .stat-item .number {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            display: block;
+        }
+        .stat-item .label {
+            font-size: .8rem;
+            color: var(--text-secondary);
+            margin-top: .25rem;
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .stats-row { gap: .75rem; }
+            .stat-item { padding: .75rem; min-width: 0; }
+            .stat-item .number { font-size: 1.25rem; }
+        }
+
+        code {
+            background: rgba(99,102,241,.15);
+            padding: .2rem .4rem;
+            border-radius: 6px;
+            font-size: .85rem;
+            font-family: 'SF Mono','Fira Code',monospace;
+        }
+        pre {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.25rem;
+            overflow-x: auto;
+            font-size: .9rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <span class="category-badge"><i class="fas fa-terminal"></i> AI Agents</span>
+                <h1>OpenClaw 2026.4.26: Browser Talk, Cerebras, UI Diff Panel và Hơn Nữa</h1>
+                <div class="meta">
+                    <span><i class="far fa-calendar"></i> Apr 26, 2026</span>
+                    <span><i class="far fa-clock"></i> 8 min read</span>
+                    <span><i class="far fa-folder"></i> OpenClaw, AI Tools, DevTools</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <div class="highlight-box">
+                    <h4>TL;DR</h4>
+                    <p><strong>OpenClaw 2026.4.26</strong> bổ sung <strong>Browser Realtime Talk</strong> ( voice chat trực tiếp trong browser ), <strong>Provider Cerebras</strong> mới, <strong>memory asymmetric embeddings</strong>, <strong>UI diff panel</strong> cho config raw, và <strong>Claude importer</strong> để di chuyển workspace. Đây là bước tiến rõ rệt từ assistant sang production-ready AI system.</p>
+                </div>
+
+                <h2>🎯 OpenClaw là gì và tại sao bản 2026.4.26 quan trọng?</h2>
+                <p>OpenClaw là <strong>AI agent framework</strong> tập trung vào <strong>workflow tự động hóa</strong> — từ coding, research đến voice interaction. Nếu bạn đã dùng Claude Code hay các coding assistants, OpenClaw là "bản nâng cấp" cho production: nhiều provider, memory vectors, realtime voice, và security hardening.</p>
+                <p>Bản <strong>2026.4.26</strong> không phải hot-fix nhỏ. Đây là bản cải tiến <strong>toàn diện kiến trúc</strong> — tách biệt browser talk, mở rộng providers, tối ưu memory retrieval, và thêm công cụ quản lý config. Nếu bạn đang xây agent cho team, bản này <strong>đáng để nâng cấp ngay</strong>.</p>
+
+                <h2>🔧 7 Tính năng chính trong 2026.4.26</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="icon">🧠</div>
+                        <h4>Browser Realtime Talk</h4>
+                        <p>Google Live Talk + Gateway relay cho voice plugins. AI nói chuyện với bạn <strong>trực tiếp trong browser</strong> — không cần app desktop, không latency.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">🔌</div>
+                        <h4>Provider: Cerebras</h4>
+                        <p>Thêm provider <strong>Cerebras</strong> dưới dạng bundled plugin với onboarding đầy đủ — mở rộng options inference nhanh, docs đi kèm.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">⚡</div>
+                        <h4>Memory Asymmetric Embeddings</h4>
+                        <p>Hỗ trợ <code>memorySearch.inputType</code>, <code>queryInputType</code>, <code>documentInputType</code> — tối ưu batch indexing và query embeddings.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">🎛️</div>
+                        <h4>UI: Raw Config Diff Panel</h4>
+                        <p>Panel mới parse JSON5, redact sensitive values, và <strong>tránh fake callbacks</strong> khi mở raw config editor.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">🔐</div>
+                        <h4>Matrix E2EE Setup</h4>
+                        <p>Command <code>openclaw matrix encryption setup</code> — enable Matrix encryption, bootstrap recovery, và verification status trong 1 flow.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">🤖</div>
+                        <h4>Agents Compaction</h4>
+                        <p>Tự động rotát transcript khi active JSONL quá lớn (<code>maxActiveTranscriptBytes</code>), giữ agent nhẹ nhàng cho session dài.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">🔧</div>
+                        <h4>CLI: Claude Importer</h4>
+                        <p>Bundled importer preview & apply <strong>Claude Code & Desktop</strong> settings, MCP servers, skills — di chuyển workspace siêu nhanh.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">✨</div>
+                        <h4>UI Polish: Quick Settings</h4>
+                        <p>Dashboard grid sắp xếp đồng bộ trên desktop/tablet/mobile — không lãng phí horizontal space.</p>
+                    </div>
+                </div>
+
+                <h2>📊 Tại sao những thay đổi này có ý nghĩa?</h2>
+                <p>OpenClaw 2026.4.26 là bước chuyển từ <strong>"AI assistant"</strong> sang <strong>"AI system"</strong> — nhiều tính năng production-ready hơn:</p>
+
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <span class="number">2x</span>
+                        <span class="label">Tốc độ phiên voice</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="number">Cerebras</span>
+                        <span class="label">Provider mới</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="number">1-click</span>
+                        <span class="label">Claude workspace import</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="number">E2EE</span>
+                        <span class="label">Matrix encryption</span>
+                    </div>
+                </div>
+
+                <h3>Browser Talk — Voice agent không cần app ngoài</h3>
+                <p>Trước đây, voice plugins cần client app riêng (điện thoại/desktop). Bản 2026.4.26 giới thiệu <strong>Google Live Talk</strong> và <strong>Gateway relay</strong> — agent có thể nói chuyện với bạn <strong>trong browser tab</strong>. Kết quả:</p>
+                <ul>
+                    <li><strong>Không cần cài đặt</strong> — user mới dễ tiếp cận</li>
+                    <li><strong>Low-latency</strong> — relay backend tối ưu</li>
+                    <li><strong>Scalable</strong> — nhiều user cùng lúc trên cùng instance</li>
+                </ul>
+
+                <h3>Cerebras provider — Mở rộng model options</h3>
+                <p>Provider <strong>Cerebras</strong> được thêm dưới dạng <em>bundled plugin</em> với:</p>
+                <ul>
+                    <li>Onboarding flow có sẵn</li>
+                    <li>Static model catalog</li>
+                    <li>Manifest-owned endpoint metadata</li>
+                    <li>Không cần config thủ công</li>
+                </ul>
+                <p>Nếu bạn cần inference tốc độ cao với model lớn, Cerebras là lựa chọn mới.</p>
+
+                <h3>Memory enhancements — Tìm kiếm thông minh hơn</h3>
+                <p>Bản này bổ sung <code>memorySearch.inputType</code>, <code>queryInputType</code>, <code>documentInputType</code> — cho phép <strong>asymmetric embedding endpoints</strong>:</p>
+                <ul>
+                    <li>Query embeddings khác với document embeddings</li>
+                    <li>Batch indexing nhanh hơn với provider-specific prefixes</li>
+                    <li>Hỗ trợ <code>nomic-embed-text</code>, <code>qwen3-embedding</code>, <code>mxbai-embed-large</code> ra hộp</li>
+                </ul>
+
+                <h3>UI/UX polish — Raw config diff & Quick Settings</h3>
+                <p>Hai cải tiến UI nhỏ nhưng có ý nghĩa lớn:</p>
+                <ol>
+                    <li><strong>Raw config diff panel</strong>: parse JSON5, redact sensitive values đến khi reveal, tránh fake edit callbacks — an toàn hơn khi sửa config.</li>
+                    <li><strong>Quick Settings dashboard grid</strong>: cards căn chỉnh đồng bộ desktop/tablet/mobile, tiết kiệm space.</li>
+                </ol>
+
+                <h3>Matrix E2EE — Bảo mật end-to-end</h3>
+                <p>Command <code>openclaw matrix encryption setup</code> cho phép:</p>
+                <ul>
+                    <li>Enable Matrix encryption cho chat</li>
+                    <li>Bootstrap recovery key</li>
+                    <li>Print verification status</li>
+                </ul>
+                <p>Tất cả trong 1 flow — không cần config thủ công multiple files.</p>
+
+                <h3>Agents Compaction — Giữ system nhẹ nhàng</h3>
+                <p><code>agents.defaults.compaction.maxActiveTranscriptBytes</code> là preflight trigger — khi active JSONL transcript quá lớn, <strong>tự động rotát</strong> sang file mới nhỏ hơn thay vì byte-splitting bruteforce. Quan trọng với agent long-running.</p>
+
+                <h3>Claude Importer — Di chuyển workspace lightning fast</h3>
+                <p>Bundled importer cho phép:</p>
+                <ul>
+                    <li>Preview & apply Claude Code settings</li>
+                    <li>Transfer Claude Desktop instructions</li>
+                    <li>Migrate MCP servers, skills, command prompts</li>
+                    <li>Tự động archive & manual fallback</li>
+                </ul>
+                <p>Nếu bạn đang dùng Claude Code/Desktop, đây là <strong>must-use tool</strong> để chuyển workspace.</p>
+
+                <h2>🔍 So sánh: Trước vs Sau (Nên/Không nên)</h2>
+                <div class="comparison-box">
+                    <div class="comparison-col good">
+                        <h4>✅ Nên nâng cấp lên 2026.4.26 nếu:</h4>
+                        <ul>
+                            <li>Bạn dùng <strong>voice/audio plugins</strong> — Browser Talk giảm latency đáng kể</li>
+                            <li>Cần provider mới — Cerebras sẵn sàng, không cần config</li>
+                            <li>Agent của bạn chạy session dài — compaction ngăn memory leak</li>
+                            <li>Bạn muốn di chuyển từ Claude Desktop — importer cứu cánh</li>
+                        </ul>
+                    </div>
+                    <div class="comparison-col bad">
+                        <h4>❌ Cân nhắc kỳ nếu:</h4>
+                        <ul>
+                            <li>Agent của bạn phụ thuộc vào custom plugin chưa compatible với manifest mới</li>
+                            <li>Bạn đang chạy config legacy — cần test trên staging trước</li>
+                            <li>Matrix E2EE chưa cần thiết — có thể bỏ qua</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="highlight-box-blue">
+                    <h4>💡 Lưu ý</h4>
+                    <p>Một số thay đổi (như plugin manifest normalization) có thể ảnh hưởng backward compatibility. Luôn <strong>test trên non-production</strong> trước khi deploy production agents.</p>
+                </div>
+
+                <h2>📈 Kết luận: Production-ready AI System</h2>
+                <p>OpenClaw 2026.4.26 không phải là bản "feature drop" đơn lẻ — nó là <strong>bản refactor kiến trúc</strong> quan trọng:</p>
+                <ul>
+                    <li><strong>Browser Talk</strong> → Voice agent accessible hơn</li>
+                    <li><strong>Cerebras</strong> → Inference options mở rộng</li>
+                    <li><strong>Memory enhancements</strong> → Retrieval accuracy tăng</li>
+                    <li><strong>UI polish</strong> → Config management an toàn hơn</li>
+                    <li><strong>Claude importer</strong> → Migration nhanh chóng</li>
+                </ul>
+                <p>Nếu bạn đang xây <strong>AI agent workflows</strong> cho team hoặc product, đây là lúc <strong>nâng cấp lên 2026.4.26</strong> và tận dụng các tính năng production-ready này.</p>
+
+                <div class="source-links">
+                    <h4>Nguồn & tham khảo</h4>
+                    <ul>
+                        <li><a href="https://github.com/openclaw/openclaw/releases/tag/v2026.4.26" target="_blank">OpenClaw v2026.4.26 Release Notes — GitHub</a></li>
+                        <li><a href="https://openclaw.github.io/docs" target="_blank">OpenClaw Documentation</a></li>
+                    </ul>
+                </div>
+
+                <div class="back-to-blog-footer">
+                    <a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+                </div>
+
+                <div class="article-cta-stack">
+                    <a href="/blog/devin-ai-engineer-guide" class="article-suggestion-card">
+                        <span class="article-suggestion-label"><i class="fas fa-book-open"></i> Đọc tiếp</span>
+                        <span class="article-suggestion-title">Devin AI Engineer Guide: Xây dựng Agent thực tế</span>
+                    </a>
+                    <div class="article-cta-actions">
+                        <a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a>
+                    </div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">OpenClaw</span>
+                    <span class="tag">AI Agent</span>
+                    <span class="tag">Claude Code</span>
+                    <span class="tag">DevTools</span>
+                    <span class="tag">AI Tools</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>
