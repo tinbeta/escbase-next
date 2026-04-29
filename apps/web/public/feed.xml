@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Wed, 29 Apr 2026 11:44:30 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 29 Apr 2026 12:37:45 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hạ Tầng Tài Chính Toàn Cầu Mới — Bản Đồ Stablecoin Stack Theo a16z</title>
+      <link>https://escbase.xyz/blog/the-new-stack-for-global-finance-stablecoins-edition/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/the-new-stack-for-global-finance-stablecoins-edition/</guid>
+      <pubDate>Tue, 28 Apr 2026 17:00:00 GMT</pubDate>
+      <description>Stablecoins không còn là công cụ giao dịch crypto — chúng đang trở thành nền tảng hạ tầng tài chính mới. a16z phân tích 5 lớp của global finance stack và dự báo credit là cuộc chơi lớn tiếp theo.</description>
+      <category>Stablecoins</category>
+      <enclosure url="https://escbase.xyz/images/the-new-stack-for-global-finance-stablecoins-edition.png" type="image/png" length="0" />
+    </item>
     <item>
       <title>OpenClaw 2026.4.26: Browser Talk, Cerebras, UI Diff Panel và Hơn Nữa</title>
       <link>https://escbase.xyz/blog/openclaw-2026-4-26-release/</link>
@@ -447,15 +456,6 @@
       <description>Lyra 2.0 của NVIDIA không chỉ sinh video đẹp từ một ảnh. Nó cố tạo ra thế giới 3D có thể khám phá, giữ nhất quán khi camera đi xa, quay lại cảnh cũ và xuất tiếp sang 3DGS, mesh hay mô phỏng robot.</description>
       <category>AI 3D Worlds</category>
       <enclosure url="https://escbase.xyz/images/nvidia-lyra-2-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>Claude Design: Anthropic Đang Kéo Claude Từ Chỗ Viết Ý Tưởng Sang Chỗ Làm Thẳng Prototype, Slide Và One-Pager</title>
-      <link>https://escbase.xyz/blog/claude-design</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/claude-design</guid>
-      <pubDate>Fri, 17 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Anthropic Labs vừa giới thiệu Claude Design ở dạng research preview, cho phép tạo prototype, slide và one-pager bằng hội thoại, rồi chỉnh tiếp qua comment trực tiếp, slider tùy biến và design system của cả team.</description>
-      <category>AI Design Tools</category>
-      <enclosure url="https://escbase.xyz/images/claude-design/claude-design-hero.jpg" type="image/jpeg" length="0" />
     </item>
   </channel>
 </rss>
