@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/adobe-claude-creative-cloud/",
+    "title": "Adobe Hợp Tác Claude — 50 Công Cụ Sáng Tạo Trong Một Câu Lệnh",
+    "excerpt": "Adobe tích hợp 50+ Creative Cloud tools vào Claude. Người dùng chỉ cần mô tả kết quả muốn có, AI tự động điều phối workflow và trả về sản phẩm hoàn chỉnh.",
+    "date": "Apr 30, 2026",
+    "tag": "AI Tools",
+    "tagIcon": "fas fa-robot",
+    "tagColor": "#6366f1",
+    "readTime": "7 min read",
+    "featured": true,
+    "image": "/images/adobe-claude-creative-cloud-thumb.svg"
+  },
+  {
     "url": "/blog/openclaw-2026-4-27-release/",
     "title": "OpenClaw 2026.4.27 — 6 Nâng Cấp Đáng Chú Ý",
     "excerpt": "OpenClaw vừa ra mắt bản 2026.4.27 với DeepInfra provider mới, cải thiện xử lý file, proxy routing cho operator, Matrix approvals nâng cấp, model selection chặt chẽ hơn và reliability được cải thiện đáng kể.",

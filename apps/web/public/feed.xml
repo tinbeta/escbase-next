@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Thu, 30 Apr 2026 02:41:32 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 02:52:54 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Adobe Hợp Tác Claude — 50 Công Cụ Sáng Tạo Trong Một Câu Lệnh</title>
+      <link>https://escbase.xyz/blog/adobe-claude-creative-cloud/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/adobe-claude-creative-cloud/</guid>
+      <pubDate>Wed, 29 Apr 2026 17:00:00 GMT</pubDate>
+      <description>Adobe tích hợp 50+ Creative Cloud tools vào Claude. Người dùng chỉ cần mô tả kết quả muốn có, AI tự động điều phối workflow và trả về sản phẩm hoàn chỉnh.</description>
+      <category>AI Tools</category>
+      <enclosure url="https://escbase.xyz/images/adobe-claude-creative-cloud-thumb.svg" type="image/svg+xml" length="0" />
+    </item>
     <item>
       <title>OpenClaw 2026.4.27 — 6 Nâng Cấp Đáng Chú Ý</title>
       <link>https://escbase.xyz/blog/openclaw-2026-4-27-release/</link>
@@ -447,15 +456,6 @@
       <description>LayerZero nói vụ KelpDAO mất khoảng $290M không phải lỗi protocol mà là hậu quả của cấu hình 1-of-1 DVN, kết hợp một đòn RPC poisoning rất tinh vi nhắm vào hạ tầng downstream. Nhưng bài học lớn hơn là: từ giờ, threat model của bridge và cross-chain app không thể chỉ dừng ở smart contract nữa.</description>
       <category>Bridge Security</category>
       <enclosure url="https://escbase.xyz/images/layerzero-kelpdao-rpc-poisoning-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>Autogenesis: Giao Thức Mới Cho Agent Tự Tiến Hóa</title>
-      <link>https://escbase.xyz/blog/autogenesis-self-evolving-agent-protocol</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/autogenesis-self-evolving-agent-protocol</guid>
-      <pubDate>Sat, 18 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Paper Autogenesis: A Self-Evolving Agent Protocol không chỉ nói về agent tự tiến hóa. Nó muốn chuẩn hóa chuyện đó thành một protocol có versioning, lifecycle, rollback và vòng lặp tự cải thiện an toàn — tức một bước chuyển từ prompt engineering sang protocol engineering cho AI agents.</description>
-      <category>Agent Protocols</category>
-      <enclosure url="https://escbase.xyz/images/autogenesis-self-evolving-agent-protocol-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>
