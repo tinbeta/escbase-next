@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw 2026.4.27 — 6 Nâng Cấp Đáng Chú Ý - Escbase</title>
+    <meta name="description" content="OpenClaw vừa ra mắt bản 2026.4.27 với DeepInfra provider, cải thiện xử lý file, proxy routing, và nhiều nâng cấp đáng chú ý khác.">
+    <meta property="og:title" content="OpenClaw 2026.4.27 — 6 Nâng Cấp Đáng Chú Ý">
+    <meta property="og:description" content="DeepInfra provider, file upload tốt hơn, proxy routing — và lời hứa 'Ships more than it brags'.">
+    <meta property="og:image" content="https://escbase.xyz/images/openclaw-2026-4-27-release-thumb.png">
+    <meta property="og:url" content="https://escbase.xyz/blog/openclaw-2026-4-27-release/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/shared-article.css">
+    <link rel="stylesheet" href="/shared-article-footer.css">
+    <style>
+        .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+        .feature-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.25rem; }
+        .feature-card h4 { color: var(--text); margin-bottom: .5rem; font-size: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+        .feature-card p { font-size: .9rem; color: var(--text-secondary); margin-bottom: 0; }
+        .stats-row { display: flex; gap: 1.5rem; flex-wrap: wrap; margin: 1.5rem 0; }
+        .stat-item { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1rem 1.25rem; text-align: center; flex: 1; min-width: 120px; }
+        .stat-item .number { font-size: 1.5rem; font-weight: 800; color: var(--accent); }
+        .stat-item .label { font-size: .8rem; color: var(--text-secondary); margin-top: .25rem; }
+        @media (max-width: 768px) {
+            .feature-grid { grid-template-columns: 1fr; }
+            .feature-card { padding: 1rem; }
+            .stats-row { gap: .75rem; }
+            .stat-item { padding: .75rem; min-width: 0; }
+            .stat-item .number { font-size: 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <span class="category-badge"><i class="fas fa-terminal"></i> AI Agents</span>
+                <h1>OpenClaw 2026.4.27 — 6 Nâng Cấp Đáng Chú Ý</h1>
+                <div class="meta">
+                    <span><i class="far fa-calendar"></i> 30/04/2026</span>
+                    <span><i class="far fa-clock"></i> 7 phút đọc</span>
+                    <span><i class="far fa-folder"></i> OpenClaw, AI Agents</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <div class="highlight-box">
+                    <h4>TL;DR</h4>
+                    <p style="margin-bottom:0">OpenClaw vừa ra mắt <strong>bản 2026.4.27</strong> với 6 nhóm cải tiến chính: <strong>DeepInfra provider</strong> mới, <strong>xử lý file tốt hơn</strong>, <strong>proxy routing</strong> cho operator, <strong>Matrix approvals</strong> nâng cấp, <strong>model selection</strong> chặt chẽ hơn, và <strong>reliability</strong> được cải thiện đáng kể. Bản release này tiếp tục chứng minh triết lý <em>"Ships more than it brags"</em>.</p>
+                </div>
+
+                <h2>🦞 Mở Đầu — "Ships More Than It Brags"</h2>
+                <p>Trên tài khoản X chính thức, OpenClaw đăng tải thông báo ngắn gọn về bản 2026.4.27 với dòng kết <em>"Ships more than it brags"</em> — một triết lý mà team đã duy trì từ đầu: <strong>ít nói, nhiều làm</strong>.</p>
+
+                <div class="stats-row">
+                    <div class="stat-item"><div class="number">32.2K</div><div class="label">Views</div></div>
+                    <div class="stat-item"><div class="number">519</div><div class="label">Likes</div></div>
+                    <div class="stat-item"><div class="number">78</div><div class="label">Reposts</div></div>
+                    <div class="stat-item"><div class="number">83</div><div class="label">Bookmarks</div></div>
+                </div>
+
+                <p>Con số 83 bookmarks cho thấy cộng đồng không chỉ đọc qua loa — họ <strong>lưu lại để tham khảo sau</strong>. Đây là tín hiệu tốt cho một bản release kỹ thuật.</p>
+
+                <h2>🧠 1. DeepInfra Provider — Một Provider, Mọi Tính Năng</h2>
+                <p>Tính năng nổi bật nhất của bản này là <strong>DeepInfra</strong> trở thành bundled provider. Điều này có nghĩa là gì?</p>
+
+                <p>DeepInfra là nền tảng cung cấp API cho nhiều mô hình AI khác nhau. Giờ đây, OpenClaw tích hợp DeepInfra ngay từ đầu, cho phép người dùng truy cập <strong>model discovery động</strong>, <strong>tạo ảnh</strong>, <strong>hiểu media</strong>, <strong>TTS</strong>, <strong>text-to-video</strong>, và <strong>embeddings</strong> — tất cả chỉ với một API key.</p>
+
+                <div class="community-quote positive">
+                    <p>"Dynamic model discovery là điểm mấu chốt. Không cần cấu hình thủ công từng model nữa — hệ thống tự tìm và kết nối."</p>
+                    <span class="author">— Phản hồi từ cộng đồng X</span>
+                </div>
+
+                <h2>📎 2. File Attachments — Không Còn "Chỉ Ảnh"</h2>
+                <p>Trước đây, việc gửi file không phải ảnh qua OpenClaw khá hạn chế. Bản 2026.4.27 thay đổi điều này:</p>
+
+                <ul>
+                    <li><strong>chat.send</strong> giờ có thể gửi file đính kèm không phải ảnh cho agents</li>
+                    <li><strong>WebChat và Control UI</strong> hỗ trợ upload file không phải video mà không làm hỏng trạng thái chat</li>
+                </ul>
+
+                <p>Đây là bước tiến quan trọng cho các <strong>workflow liên quan đến tài liệu</strong> — báo cáo, PDF, văn bản pháp lý, v.v.</p>
+
+                <h2>🛡️ 3. Operator-Managed Proxy Routing — Kiểm Soát Mạng Tốt Hơn</h2>
+                <p>Đối với các tổ chức triển khai OpenClaw trong môi trường doanh nghiệp, tính năng này rất đáng giá:</p>
+
+                <ul>
+                    <li>Operator có thể <strong>định tuyến HTTP/WebSocket traffic</strong> qua forward proxy rõ ràng</li>
+                    <li><strong>Validation nghiêm ngặt</strong> cho http:// URLs</li>
+                    <li><strong>Loopback Gateway bypass</strong> để tránh vòng lặp không cần thiết</li>
+                </ul>
+
+                <p>Tính năng này giúp các team IT <strong>kiểm soát traffic</strong> dễ dàng hơn trong môi trường có firewall hoặc proxy công ty.</p>
+
+                <h2>🧭 4. Stricter Model Selection — Không Còn "Im Lặng Fail"</h2>
+                <p>Một vấn đề phổ biến với các hệ thống AI là <strong>model selection thất bại một cách âm thầm</strong>. OpenClaw 2026.4.27 giải quyết điều này:</p>
+
+                <ul>
+                    <li>Lựa chọn <strong>/model rõ ràng</strong> và picker selections giờ <strong>fail visibly</strong> (hiển thị lỗi rõ ràng) thay vì silently fall through</li>
+                    <li><strong>Ollama probes</strong> được tối ưu, gọn nhẹ hơn</li>
+                    <li><strong>Thinking metadata</strong> được tôn trọng đúng cách</li>
+                </ul>
+
+                <div class="community-quote positive">
+                    <p>"Fail visibly thay vì silently fall through là một thay đổi lớn. Không còn đoán mò tại sao model không phản hồi như mong đợi."</p>
+                    <span class="author">— Người dùng OpenClaw</span>
+                </div>
+
+                <h2>🔧 5. Reliability — "Boring-On-Purpose"</h2>
+                <p>OpenClaw tự mô tả nhóm cải tiến này là <em>"boring-on-purpose reliability"</em> — đáng tin cậy một cách có chủ đích, không cần flashy:</p>
+
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4><i class="fas fa-bolt" style="color:#f59e0b"></i> Khởi động nhanh hơn</h4>
+                        <p>Gateway và channel startup được tối ưu, giảm thời gian chờ.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><i class="fas fa-user-shield" style="color:#22c55e"></i> Redaction an toàn hơn</h4>
+                        <p>Xử lý dữ liệu nhạy cảm được cải thiện, giảm rủi ro lộ thông tin.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><i class="fas fa-broom" style="color:#60a5fa"></i> Dọn dẹp session</h4>
+                        <p>Session cleanup tốt hơn, giảm memory leak và tài nguyên treo.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><i class="fas fa-download" style="color:#a78bfa"></i> Cập nhật chặt chẽ</h4>
+                        <p>Tight update/install behavior, giảm lỗi trong quá trình nâng cấp.</p>
+                    </div>
+                </div>
+
+                <p>Những cải tiến này không gây chú ý trên timeline, nhưng lại là <strong>yếu tố quyết định</strong> cho việc chạy production ổn định.</p>
+
+                <h2>💬 Cộng Đồng Phản Ứng Thế Nào?</h2>
+                <p>Với 42 replies, thread nhận được sự quan tâm đáng kể. Đa số phản hồi tích cực, nhưng cũng có vấn đề thực tế được nêu ra:</p>
+
+                <div class="community-quote positive">
+                    <p>"Bản này đáng bookmark. Proxy routing và file attachments là hai tính năng tôi chờ đợi từ lâu."</p>
+                    <span class="author">— Phản hồi từ cộng đồng</span>
+                </div>
+
+                <div class="community-quote negative">
+                    <p>"anybody facing polling stall for telegram channel? Polling stall detected (active getUpdates stuck for 158.6s); forcing restart."</p>
+                    <span class="author">— @akashgohil10, user report thực tế</span>
+                </div>
+
+                <p>Report từ @akashgohil10 cho thấy <strong>Telegram channel vẫn gặp vấn đề polling stall</strong> — một lỗi đã tồn tại từ các bản trước. Điều này nhắc nhở rằng dù có nhiều cải tiến, <strong>stability ở một số channel vẫn cần theo dõi</strong>.</p>
+
+                <h2>🎯 Phân Tích — Có Gì Đáng Chú Ý?</h2>
+                <p><strong>1. Chiến lược provider mở rộng:</strong> Việc thêm DeepInfra cho thấy OpenClaw đang mở rộng hệ sinh thái provider, giảm phụ thuộc vào các nền tảng lớn như OpenAI hay Anthropic.</p>
+
+                <p><strong>2. Tập trung vào production readiness:</strong> Proxy routing, file handling, và reliability improvements đều hướng tới việc OpenClaw sẵn sàng cho <strong>môi trường doanh nghiệp</strong>.</p>
+
+                <p><strong>3. Developer experience:</strong> Stricter model selection và better error visibility giúp developers <strong>debug nhanh hơn</strong>, giảm thời gian mò mẫm.</p>
+
+                <div class="highlight-box-yellow">
+                    <h4>⚠️ Chỗ Cần Tỉnh Táo</h4>
+                    <p style="margin-bottom:0">Bản release này <strong>không có breaking changes</strong> lớn, nhưng việc thay đổi model selection behavior có thể ảnh hưởng tới các workflow hiện tại dựa vào silent fallback. Nên <strong>test kỹ</strong> trước khi cập nhật production.</p>
+                </div>
+
+                <h2>🚀 Chốt Một Câu</h2>
+                <p>OpenClaw 2026.4.27 tiếp tục chứng minh rằng <strong>cải tiến thầm lặng, đều đặn</strong> đánh bại marketing ồn ào — và trong thế giới AI agents đang chạy đua, sự ổn định có thể là lợi thế lớn nhất.</p>
+
+                <div class="source-links">
+                    <h4>Nguồn & tham khảo</h4>
+                    <ul>
+                        <li><a href="https://x.com/openclaw/status/2049635263685537920" target="_blank">OpenClaw (@openclaw) — Announcement trên X</a></li>
+                        <li><a href="https://github.com/openclaw/openclaw/releases/tag/v2026.4.27" target="_blank">Release Notes chính thức — GitHub</a></li>
+                        <li><a href="https://openclaw.ai/providers/deep" target="_blank">DeepInfra Provider Docs</a></li>
+                        <li><a href="https://openclaw.ai/web/webchat" target="_blank">WebChat File Upload Docs</a></li>
+                    </ul>
+                </div>
+
+                <div class="back-to-blog-footer">
+                    <a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+                </div>
+
+                <div class="article-cta-stack">
+                    <a href="/blog/openclaw-2026-4-26-release/" class="article-suggestion-card">
+                        <span class="article-suggestion-label"><i class="fas fa-book-open"></i> Đọc tiếp</span>
+                        <span class="article-suggestion-title">OpenClaw 2026.4.26 — Browser Talk và Cerebras</span>
+                    </a>
+                    <div class="article-cta-actions">
+                        <a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a>
+                    </div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">OpenClaw</span>
+                    <span class="tag">AI Agents</span>
+                    <span class="tag">DeepInfra</span>
+                    <span class="tag">Release Notes</span>
+                    <span class="tag">Proxy</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>
