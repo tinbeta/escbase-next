@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/stripe-meta-tempo-stablecoin-payouts/",
+    "title": "Stripe Hợp Tác Meta và Tempo — Creator Nhận Stablecoin Qua Link Wallet",
+    "excerpt": "Stripe, Meta và Tempo hợp tác cho phép creator nhận stablecoin trực tiếp vào Link wallet. Giải pháp rút ngắn quy trình thanh toán xuyên biên giới cho người sáng tạo nội dung toàn cầu.",
+    "date": "Apr 30, 2026",
+    "tag": "Stablecoins",
+    "tagIcon": "fas fa-coins",
+    "tagColor": "#f7931a",
+    "readTime": "6 min read",
+    "featured": true,
+    "image": "/images/stripe-meta-tempo-stablecoin-payouts-thumb.svg"
+  },
+  {
     "url": "/blog/stripe-treasury-launch/",
     "title": "Stripe Ra Mắt Treasury — Ngân Hàng Tích Hợp AI Cho Doanh Nghiệp",
     "excerpt": "Stripe Treasury cho phép doanh nghiệp giữ tiền đa loại tiền tệ và stablecoin, chuyển khoản miễn phí, chi tiêu bằng thẻ 2% cashback, và điều khiển bằng AI qua Stripe MCP.",

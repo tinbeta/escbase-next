@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Thu, 30 Apr 2026 03:04:58 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 03:18:33 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stripe Hợp Tác Meta và Tempo — Creator Nhận Stablecoin Qua Link Wallet</title>
+      <link>https://escbase.xyz/blog/stripe-meta-tempo-stablecoin-payouts/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/stripe-meta-tempo-stablecoin-payouts/</guid>
+      <pubDate>Wed, 29 Apr 2026 17:00:00 GMT</pubDate>
+      <description>Stripe, Meta và Tempo hợp tác cho phép creator nhận stablecoin trực tiếp vào Link wallet. Giải pháp rút ngắn quy trình thanh toán xuyên biên giới cho người sáng tạo nội dung toàn cầu.</description>
+      <category>Stablecoins</category>
+      <enclosure url="https://escbase.xyz/images/stripe-meta-tempo-stablecoin-payouts-thumb.svg" type="image/svg+xml" length="0" />
+    </item>
     <item>
       <title>Stripe Ra Mắt Treasury — Ngân Hàng Tích Hợp AI Cho Doanh Nghiệp</title>
       <link>https://escbase.xyz/blog/stripe-treasury-launch/</link>
@@ -447,15 +456,6 @@
       <description>Một repo chỉ xoay quanh file CLAUDE.md đang leo top GitHub trending với hơn 44.000 star trong tuần. Điều đáng chú ý không phải file markdown đó thần thánh cỡ nào, mà là việc nút thắt mới của AI coding giờ nằm ở behavior, context và execution discipline — không chỉ ở model.</description>
       <category>AI Coding</category>
       <enclosure url="https://escbase.xyz/images/claude-md-trending-github-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>Arkham Theo Dấu Dòng Tiền Sau Vụ KelpDAO: Từ rsETH Sang ETH</title>
-      <link>https://escbase.xyz/blog/arkham-kelpdao-funds-flow</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/arkham-kelpdao-funds-flow</guid>
-      <pubDate>Sun, 19 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Arkham vừa theo dấu dòng tiền sau vụ KelpDAO bị exploit gần $294M. Điều đáng chú ý không chỉ là số tiền bị rút, mà là cách attacker dùng Aave, Compound, KyberSwap, Euler Finance và Wintermute để dần biến rsETH thành ETH.</description>
-      <category>Onchain Forensics</category>
-      <enclosure url="https://escbase.xyz/images/arkham-kelpdao-funds-flow-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>
