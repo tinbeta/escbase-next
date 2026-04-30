@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursor Ra Mắt SDK — Xây Dựng AI Agents Với Cùng Runtime và Models Như Cursor - Escbase</title>
+    <meta name="description" content="Cursor vừa ra mắt SDK cho phép xây dựng AI agents với cùng runtime, harness và models. Rippling, Notion, C3 AI và Faire đã đang tích hợp. Phân tích ý nghĩa và lo ngại từ cộng đồng.">
+    <meta property="og:title" content="Cursor Ra Mắt SDK — Xây Dựng AI Agents Với Cùng Runtime và Models Như Cursor">
+    <meta property="og:description" content="Cursor SDK cho phép chạy agents từ CI/CD, tạo automation, hoặc nhúng vào sản phẩm. Nhưng cộng đồng đang lo lắng về safety và vendor lock-in.">
+    <meta property="og:image" content="https://escbase.xyz/images/cursor-sdk-ai-agents-thumb.svg">
+    <meta property="og:url" content="https://escbase.xyz/blog/cursor-sdk-ai-agents/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/shared-article.css">
+    <link rel="stylesheet" href="/shared-article-footer.css">
+    <style>
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            margin: 1.5rem auto;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+            border: 1px solid var(--border);
+        }
+        .video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .video-caption {
+            text-align: center;
+            font-size: .85rem;
+            color: var(--text-muted);
+            margin-top: .5rem;
+            margin-bottom: 1.5rem;
+        }
+        .stats-row {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 1.5rem 0;
+            justify-content: center;
+        }
+        .stat-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1rem 1.25rem;
+            text-align: center;
+            flex: 1;
+            min-width: 100px;
+        }
+        .stat-item .number {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--accent);
+        }
+        .stat-item .label {
+            font-size: .8rem;
+            color: var(--text-secondary);
+            margin-top: .25rem;
+        }
+        .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+        .feature-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.25rem; }
+        .feature-card h4 { color: var(--text); margin-bottom: .5rem; font-size: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+        .feature-card p { font-size: .9rem; color: var(--text-secondary); margin-bottom: 0; }
+        @media (max-width: 768px) {
+            .stats-row { gap: .75rem; }
+            .stat-item { padding: .75rem; min-width: 80px; }
+            .stat-item .number { font-size: 1.25rem; }
+            .video-container { max-width: 100%; }
+            .feature-grid { grid-template-columns: 1fr; }
+            .feature-card { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <span class="category-badge"><i class="fas fa-code"></i> AI Coding</span>
+                <h1>Cursor Ra Mắt SDK — Xây Dựng AI Agents Với Cùng Runtime và Models Như Cursor</h1>
+                <div class="meta">
+                    <span><i class="far fa-calendar"></i> 30/04/2026</span>
+                    <span><i class="far fa-clock"></i> 7 phút đọc</span>
+                    <span><i class="far fa-folder"></i> Cursor, AI Agents, Developer Tools</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <div class="highlight-box">
+                    <h4>TL;DR</h4>
+                    <p style="margin-bottom:0">Cursor vừa ra mắt <strong>SDK chính thức</strong> cho phép xây dựng AI agents với <strong>cùng runtime, harness và models</strong> đang chạy Cursor. Agents có thể chạy từ <strong>CI/CD pipelines</strong>, tạo <strong>automation cho end-to-end workflows</strong>, hoặc <strong>nhúng trực tiếp vào sản phẩm</strong>. Rippling, Notion, C3 AI và Faire đã đang tích hợp. Tuy nhiên, cộng đồng đang lo ngại về <strong>safety</strong> và <strong>vendor lock-in</strong>.</p>
+                </div>
+
+                <h2>🎬 Video Chính Thức</h2>
+                <p>Video giới thiệu Cursor SDK:</p>
+
+                <div class="video-container">
+                    <video controls poster="/blog/cursor-sdk-ai-agents/poster.jpg" preload="metadata">
+                        <source src="/blog/cursor-sdk-ai-agents/demo.mp4" type="video/mp4">
+                        Trình duyệt của bạn không hỗ trợ video HTML5.
+                    </video>
+                </div>
+                <p class="video-caption">Video chính thức từ Cursor — Cursor SDK (1920×1080, 35 giây)</p>
+
+                <h2>📊 Phản Ứng Cộng Đồng</h2>
+                <p>Thread đạt <strong>2M views</strong> với tỷ lệ bookmark cao cho thấy sự quan tâm lớn:</p>
+
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <div class="number">2M</div>
+                        <div class="label">Views</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">7.3K</div>
+                        <div class="label">Likes</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">1K</div>
+                        <div class="label">Reposts</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">4.1K</div>
+                        <div class="label">Bookmarks</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">329</div>
+                        <div class="label">Replies</div>
+                    </div>
+                </div>
+
+                <p>Với <strong>4.1K bookmarks trên 2M views</strong> (~0.2%), tỷ lệ không quá cao nhưng cho thấy đây là thông tin <strong>developer đang săn đón</strong> để nghiên cứu kỹ.</p>
+
+                <h2>🚀 Cursor SDK Là Gì?</h2>
+                <p>Trên X chính thức, Cursor giới thiệu SDK như một <strong>nền tảng để xây dựng agents</strong>:</p>
+
+                <div class="tweet-quote">
+                    <div class="tweet-header">
+                        <div class="tweet-avatar">C</div>
+                        <div>
+                            <div class="tweet-author">Cursor <i class="fas fa-check-circle" style="color:#1d9bf0;font-size:.8rem"></i></div>
+                            <div class="tweet-handle">@cursor_ai · 9:43 PM · Apr 29, 2026</div>
+                        </div>
+                    </div>
+                    <div class="tweet-text">
+                        We're introducing the Cursor SDK so you can build agents with the same runtime, harness, and models that power Cursor. Run agents from CI/CD pipelines, create automations for end-to-end workflows, or embed agents directly inside your products.
+                    </div>
+                    <div class="tweet-meta">
+                        <span><i class="far fa-comment"></i> 329</span>
+                        <span><i class="fas fa-retweet"></i> 1K</span>
+                        <span><i class="far fa-heart"></i> 7.3K</span>
+                        <span><i class="far fa-bookmark"></i> 4.1K</span>
+                        <span><i class="far fa-eye"></i> 2M Views</span>
+                    </div>
+                </div>
+
+                <h2>💡 3 Starter Projects Đã Open-Source</h2>
+                <p>Cursor công bố 3 project mẫu để developer bắt đầu:</p>
+
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4><i class="fas fa-terminal" style="color:#22c55e"></i> CLI Agent</h4>
+                        <p>Công cụ command line để chạy <strong>coding agent</strong> trực tiếp từ terminal.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><i class="fas fa-flask" style="color:#f59e0b"></i> Prototyping Tool</h4>
+                        <p>Công cụ <strong>iterate nhanh</strong> trên agent workflows trước khi deploy.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><i class="fas fa-columns" style="color:#6366f1"></i> Kanban Agent</h4>
+                        <p>Bảng Kanban <strong>điều khiển bằng agent</strong> cho quản lý dự án phần mềm.</p>
+                    </div>
+                </div>
+
+                <h2>🏢 Ai Đang Dùng?</h2>
+                <p>Các công ty lớn đã tích hợp Cursor Agents vào workflow:</p>
+
+                <ul>
+                    <li><strong>Rippling</strong> — chạy end-to-end background tasks tự động</li>
+                    <li><strong>Notion</strong> — chuyển bug reports thành PRs tự động</li>
+                    <li><strong>C3 AI</strong> — xây dựng self-healing codebases</li>
+                    <li><strong>Faire</strong> — codebase tự phát hiện và sửa lỗi</li>
+                </ul>
+
+                <div class="community-quote positive">
+                    <p>"Cursor is positioning itself as the AWS of AI coding."</p>
+                    <span class="author">— @MysticClark</span>
+                </div>
+
+                <h2>⚠️ Lo Ngại Lớn Nhất: Safety và Lock-in</h2>
+                <p>Với 329 replies, <strong>phân nửa là lo ngại</strong> về việc để agent tự chạy trong production:</p>
+
+                <div class="community-quote negative">
+                    <p>"We wiped out our production DB with an agent. It actually might have been a good thing because our agent also generated all the code to recover it and make the whole system more resilient. It also generated a PR. So now I'm not sure if that means that it was safe enough to run against production DB after all or that it was too dangerous and we just got lucky."</p>
+                    <span class="author">— @alex_kosh</span>
+                </div>
+
+                <div class="community-quote negative">
+                    <p>"The moment you let an agent run CI/CD unsupervised is the moment you let a toddler run a power plant."</p>
+                    <span class="author">— @rayam_dunham</span>
+                </div>
+
+                <div class="community-quote">
+                    <p>"For the love of all that is good, please don't run this in production without proper guardrails."</p>
+                    <span class="author">— @0xTimX</span>
+                </div>
+
+                <div class="community-quote">
+                    <p>"Locked ecosystem + expensive pricing + closed source = a ticking time bomb."</p>
+                    <span class="author">— @thazaisvip</span>
+                </div>
+
+                <h2>🔍 Phân Tích — Cursor Đang Định Vị Ở Đâu?</h2>
+                <p><strong>1. Từ tool sang platform:</strong> Cursor không chỉ là IDE nữa — SDK biến nó thành <strong>infrastructure để xây dựng agents</strong>, tương tự cách AWS từ hosting trở thành nền tảng cloud.</p>
+
+                <p><strong>2. Lock-in concern:</strong> Cộng đồng lo lắng về việc phải dùng <strong>Cursor models và cloud</strong> — không hỗ trợ BYOK (bring your own key) hay self-hosted runtime. @Build_LLM nhận xét: "OpenAI and Anthropic need to be careful. Cursor is becoming the platform, not just the tool."</p>
+
+                <p><strong>3. Safety gap:</strong> Demo đẹp là một chuyện, nhưng <strong>agent tự động xóa production DB</strong> rồi tự sửa chỉ là may mắn. Cần guardrails, sandbox, và human-in-the-loop trước khi deploy agents vào CI/CD thực sự.</p>
+
+                <div class="highlight-box-yellow">
+                    <h4>⚠️ Chỗ Cần Tỉnh Táo</h4>
+                    <p style="margin-bottom:0">Cursor SDK chưa công bố <strong>pricing</strong>, <strong>license mở</strong> hay <strong>hỗ trợ self-hosted</strong>. Nếu agents bị lock vào Cursor cloud và models riêng, đây là <strong>walled garden</strong> — không phải open infrastructure. Chờ đợi thêm thông tin trước khi đầu tư nghiêm túc vào stack này.</p>
+                </div>
+
+                <h2>🚀 Chốt Một Câu</h2>
+                <p>Cursor SDK là <strong>bước tiến lớn</strong> để biến AI coding assistants thành <strong>autonomous agents</strong> có thể chạy độc lập. Nhưng giữa demo ấn tượng và <strong>production-ready</strong> vẫn là một khoảng cách lớn — cần nhiều thử nghiệm, guardrails, và câu trả lời về vendor lock-in trước khi đây trở thành tiêu chuẩn mới.</p>
+
+                <div class="source-links">
+                    <h4>Nguồn & tham khảo</h4>
+                    <ul>
+                        <li><a href="https://x.com/cursor_ai/status/2049499866217185492" target="_blank">Cursor (@cursor_ai) — Announcement trên X</a></li>
+                        <li><a href="https://x.com/cursor_ai/status/2049499871980200082" target="_blank">Cursor (@cursor_ai) — SDK details trên X</a></li>
+                    </ul>
+                </div>
+
+                <div class="article-tags">
+                    <h4>Tags</h4>
+                    <div class="tag-list">
+                        <span class="tag-item" style="background:rgba(245,158,11,0.15);color:#f59e0b;border-color:rgba(245,158,11,0.3)"><i class="fas fa-code"></i> AI Coding</span>
+                        <span class="tag-item" style="background:rgba(239,68,68,0.15);color:#ef4444;border-color:rgba(239,68,68,0.3)"><i class="fas fa-robot"></i> AI Agents</span>
+                        <span class="tag-item" style="background:rgba(99,102,241,0.15);color:#818cf8;border-color:rgba(99,102,241,0.3)"><i class="fas fa-terminal"></i> Developer Tools</span>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <div class="article-cta-stack">
+            <div class="cta-row">
+                <a href="https://x.com/escbasexyz" target="_blank" class="cta-btn-x">
+                    <i class="fab fa-x-twitter"></i> Theo dõi Escbase trên X
+                </a>
+                <a href="https://www.youtube.com/@ESCBase" target="_blank" class="cta-btn-youtube">
+                    <i class="fab fa-youtube"></i> Xem video trên YouTube
+                </a>
+            </div>
+        </div>
+
+        <div class="back-to-blog-footer">
+            <a href="/blog/" class="back-btn"><i class="fas fa-arrow-left"></i> Quay lại Blog</a>
+            <a href="/videos/" class="back-btn"><i class="fas fa-video"></i> Xem Video</a>
+        </div>
+    </div>
+    <script src="/shared-article.js"></script>
+</body>
+</html>

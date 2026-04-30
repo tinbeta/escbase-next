@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Thu, 30 Apr 2026 03:36:58 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 09:20:37 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cursor Ra Mắt SDK — Xây Dựng AI Agents Với Cùng Runtime và Models Như Cursor</title>
+      <link>https://escbase.xyz/blog/cursor-sdk-ai-agents/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/cursor-sdk-ai-agents/</guid>
+      <pubDate>Wed, 29 Apr 2026 17:00:00 GMT</pubDate>
+      <description>Cursor giới thiệu SDK cho phép xây dựng AI agents với cùng runtime, harness và models. Rippling, Notion, C3 AI và Faire đã đang tích hợp. Phân tích ý nghĩa và lo ngại từ cộng đồng.</description>
+      <category>AI Coding</category>
+      <enclosure url="https://escbase.xyz/images/cursor-sdk-ai-agents-thumb.svg" type="image/svg+xml" length="0" />
+    </item>
     <item>
       <title>Stripe Console — AI Agent Hiểu Sâu Dữ Liệu Kinh Doanh Của Bạn</title>
       <link>https://escbase.xyz/blog/stripe-console-ai-agent/</link>
@@ -447,15 +456,6 @@
       <description>0xJeff vừa chia sẻ 3 skill Hermes anh thấy hữu ích nhất: đọc insight từ X, bóc tách bookmarks và reflection từ memory dài hạn. Nhưng phần đáng tiền hơn lại là các lỗi anh đã đụng: Bird CLI có quyền post, Browser Harness quá nhạy, Hindsight nối sai model có thể đốt hàng chục USD token chỉ trong một ngày.</description>
       <category>AI Agents</category>
       <enclosure url="https://escbase.xyz/images/0xjeff-hermes-skills-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>Justin Sun Muốn “Nói Chuyện” Với Hacker Vụ KelpDAO</title>
-      <link>https://escbase.xyz/blog/justin-sun-kelpdao-hacker-talk</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/justin-sun-kelpdao-hacker-talk</guid>
-      <pubDate>Sun, 19 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Justin Sun vừa công khai kêu gọi hacker vụ KelpDAO ngồi xuống nói chuyện, với lập luận rằng không đáng để kéo cả Aave lẫn KelpDAO đi xuống vì cú hack gần $300M. Nghe hơi kịch tính, nhưng phản ứng cộng đồng cho thấy thị trường đang thật sự lo về rủi ro lan sang Aave.</description>
-      <category>Crypto Drama</category>
-      <enclosure url="https://escbase.xyz/images/justin-sun-kelpdao-hacker-talk-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>

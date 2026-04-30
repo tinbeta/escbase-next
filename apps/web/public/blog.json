@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/cursor-sdk-ai-agents/",
+    "title": "Cursor Ra Mắt SDK — Xây Dựng AI Agents Với Cùng Runtime và Models Như Cursor",
+    "excerpt": "Cursor giới thiệu SDK cho phép xây dựng AI agents với cùng runtime, harness và models. Rippling, Notion, C3 AI và Faire đã đang tích hợp. Phân tích ý nghĩa và lo ngại từ cộng đồng.",
+    "date": "Apr 30, 2026",
+    "tag": "AI Coding",
+    "tagIcon": "fas fa-code",
+    "tagColor": "#f59e0b",
+    "readTime": "7 min read",
+    "featured": true,
+    "image": "/images/cursor-sdk-ai-agents-thumb.svg"
+  },
+  {
     "url": "/blog/stripe-console-ai-agent/",
     "title": "Stripe Console — AI Agent Hiểu Sâu Dữ Liệu Kinh Doanh Của Bạn",
     "excerpt": "Stripe sắp ra mắt Console, một AI agent tổng quát có ngữ cảnh sâu về dữ liệu riêng, insight từ mạng lưới Stripe và kiến thức sản phẩm để hỗ trợ vận hành doanh nghiệp.",
