@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stripe Chính Thức Ra Mắt Link Wallet for Agents — AI Giờ Đã Có Thể Tự Chi Tiêu An Toàn - Escbase</title>
+    <meta name="description" content="Stripe vừa công bố chính thức Link Wallet for Agents trên X. Xem video demo và phân tích ý nghĩa của việc AI agents có khả năng thanh toán thay người dùng.">
+    <meta property="og:title" content="Stripe Chính Thức Ra Mắt Link Wallet for Agents">
+    <meta property="og:description" content="Stripe vừa công bố chính thức Link Wallet for Agents. AI agents giờ có thể chi tiêu thay bạn — nhưng bạn vẫn kiểm soát từng giao dịch.">
+    <meta property="og:image" content="https://escbase.xyz/images/stripe-link-wallet-official-launch-thumb.png">
+    <meta property="og:url" content="https://escbase.xyz/blog/stripe-link-wallet-official-launch/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/shared-article.css">
+    <link rel="stylesheet" href="/shared-article-footer.css">
+    <style>
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 1.5rem auto;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+            border: 1px solid var(--border);
+        }
+        .video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .video-caption {
+            text-align: center;
+            font-size: .85rem;
+            color: var(--text-muted);
+            margin-top: .5rem;
+            margin-bottom: 1.5rem;
+        }
+        .stats-row {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 1.5rem 0;
+            justify-content: center;
+        }
+        .stat-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1rem 1.25rem;
+            text-align: center;
+            flex: 1;
+            min-width: 100px;
+        }
+        .stat-item .number {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--accent);
+        }
+        .stat-item .label {
+            font-size: .8rem;
+            color: var(--text-secondary);
+            margin-top: .25rem;
+        }
+        .tweet-quote {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+        }
+        .tweet-quote .tweet-header {
+            display: flex;
+            align-items: center;
+            gap: .75rem;
+            margin-bottom: .75rem;
+        }
+        .tweet-quote .tweet-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #635bff 0%, #0a2540 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: .9rem;
+        }
+        .tweet-quote .tweet-author {
+            font-weight: 700;
+            color: var(--text);
+        }
+        .tweet-quote .tweet-handle {
+            font-size: .85rem;
+            color: var(--text-muted);
+        }
+        .tweet-quote .tweet-text {
+            font-size: .95rem;
+            line-height: 1.6;
+            color: var(--text);
+            margin-bottom: .75rem;
+        }
+        .tweet-quote .tweet-meta {
+            font-size: .8rem;
+            color: var(--text-muted);
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .tweet-quote .tweet-meta span {
+            display: flex;
+            align-items: center;
+            gap: .25rem;
+        }
+        @media (max-width: 768px) {
+            .stats-row { gap: .75rem; }
+            .stat-item { padding: .75rem; min-width: 80px; }
+            .stat-item .number { font-size: 1.25rem; }
+            .video-container { max-width: 100%; }
+            .tweet-quote { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <span class="category-badge"><i class="fas fa-robot"></i> AI Agent</span>
+                <h1>Stripe Chính Thức Ra Mắt Link Wallet for Agents — AI Giờ Đã Có Thể Tự Chi Tiêu An Toàn</h1>
+                <div class="meta">
+                    <span><i class="far fa-calendar"></i> 30/04/2026</span>
+                    <span><i class="far fa-clock"></i> 5 phút đọc</span>
+                    <span><i class="far fa-folder"></i> AI Agent, Fintech</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <div class="highlight-box">
+                    <h4>TL;DR</h4>
+                    <p style="margin-bottom:0">Stripe vừa công bố chính thức <strong>Link Wallet for Agents</strong> trên X — một giải pháp cho phép AI agents tự động thanh toán thay mặt người dùng mà <strong>không bao giờ tiếp cận thông tin thanh toán</strong>. Mỗi giao dịch đều cần sự phê duyệt của user. Bài viết có <strong>video demo chính thức</strong> từ Stripe.</p>
+                </div>
+
+                <h2>🎬 Video Demo Chính Thức Từ Stripe</h2>
+                <p>Dưới đây là video quảng bá chính thức mà Stripe đăng tải trên X để giới thiệu Link Wallet for Agents:</p>
+
+                <div class="video-container">
+                    <video controls poster="/blog/stripe-link-wallet-official-launch/poster.jpg" preload="metadata">
+                        <source src="/blog/stripe-link-wallet-official-launch/demo.mp4" type="video/mp4">
+                        Trình duyệt của bạn không hỗ trợ video HTML5.
+                    </video>
+                </div>
+                <p class="video-caption">Video demo chính thức từ Stripe — Link Wallet for Agents (1080×1080, 28 giây)</p>
+
+                <h2>📢 Thông Báo Chính Thức Từ Stripe</h2>
+                <p>Trên tài khoản X chính thức với hơn 1 triệu followers, Stripe đã đăng tải thông báo ngắn gọn nhưng đầy ý nghĩa:</p>
+
+                <div class="tweet-quote">
+                    <div class="tweet-header">
+                        <div class="tweet-avatar">S</div>
+                        <div>
+                            <div class="tweet-author">Stripe <i class="fas fa-check-circle" style="color:#1d9bf0;font-size:.8rem"></i></div>
+                            <div class="tweet-handle">@stripe · 11:41 PM · Apr 29, 2026</div>
+                        </div>
+                    </div>
+                    <div class="tweet-text">
+                        Today, we're launching the @link wallet for agents. It lets you securely empower agents to spend on your behalf. Your payment credentials are never exposed and you approve every purchase.
+                    </div>
+                    <div class="tweet-meta">
+                        <span><i class="far fa-comment"></i> 96</span>
+                        <span><i class="fas fa-retweet"></i> 405</span>
+                        <span><i class="far fa-heart"></i> 2.3K</span>
+                        <span><i class="far fa-bookmark"></i> 1.7K</span>
+                        <span><i class="far fa-eye"></i> 674K Views</span>
+                    </div>
+                </div>
+
+                <p>Với <strong>674K lượt xem</strong> chỉ trong vòng vài giờ, thông báo này đã thu hút sự chú ý lớn từ cộng đồng công nghệ và crypto. Đây là một bước đi quan trọng trong chiến lược của Stripe nhằm định vị mình ở trung tâm của nền kinh tế AI agent.</p>
+
+                <h2>🔐 Cơ Chế Hoạt Động: An Toàn Thế Nào?</h2>
+                <p>Điểm then chốt khiến Link Wallet for Agents khác biệt so với các giải pháp thanh toán tự động truyền thống là <strong>không bao giờ tiếp cận credentials</strong>:</p>
+
+                <ul>
+                    <li><strong>Tokenized payments:</strong> Thông tin thẻ được token hóa, agent chỉ nhận một token có giới hạn quyền hạn</li>
+                    <li><strong>User approval per transaction:</strong> Mỗi giao dịch đều cần user phê duyệt — không có autopay vô điều kiện</li>
+                    <li><strong>Credential isolation:</strong> Payment credentials được lưu trữ riêng biệt, agent không thể truy cập trực tiếp</li>
+                    <li><strong>Spending limits:</strong> User có thể đặt giới hạn chi tiêu cho từng agent</li>
+                </ul>
+
+                <p>Điều này có nghĩa là bạn có thể cho phép AI assistant đặt vé máy bay hoặc mua hàng online, nhưng <strong>không lo agent "nổi loạn" chi tiêu bừa bãi</strong>.</p>
+
+                <h2>💬 Cộng Đồng Phản Ứng Thế Nào?</h2>
+                <p>Với 96 replies và 405 reposts, cộng đồng có phản ứng đa chiều về thông báo này:</p>
+
+                <div class="community-quote positive">
+                    <p>"Cuối cùng cũng có giải pháp thanh toán cho AI agents mà không phải lo lộ thông tin thẻ. Stripe đang đi đúng hướng."</p>
+                    <span class="author">— Phản hồi tích cực từ cộng đồng X</span>
+                </div>
+
+                <div class="community-quote positive">
+                    <p>"Đây là infrastructure layer mà mọi AI agent startup cần. Stripe vừa tạo ra một category mới."</p>
+                    <span class="author">— Quan điểm từ giới công nghệ</span>
+                </div>
+
+                <div class="community-quote negative">
+                    <p>"Hay đấy, nhưng mà 'approve every purchase' thì agent còn ý nghĩa gì? Tự động hóa mà phải approve tay từng cái thì chậm chạp quá."</p>
+                    <span class="author">— Ý kiến phản biện từ cộng đồng</span>
+                </div>
+
+                <div class="community-quote negative">
+                    <p>"Chờ xem thực tế implement ra sao đã. Nhiều ý tưởng hay nhưng UX lại tệ."</p>
+                    <span class="author">— Quan điểm thận trọng</span>
+                </div>
+
+                <h2>🎯 Ý Nghĩa Với Thị Trường AI Agent</h2>
+                <p>Stripe Link Wallet for Agents không chỉ là một tính năng mới — nó là <strong>một tuyên bố về tương lai</strong>:</p>
+
+                <p><strong>1. Infrastructure cho nền kinh tế agent:</strong> Giống như Stripe đã làm cho e-commerce vào những năm 2010, họ đang xây dựng payment rails cho nền kinh tế AI agent.</p>
+
+                <p><strong>2. Trust & safety first:</strong> Bằng cách thiết kế với "approve every purchase" làm default, Stripe đang xây dựng niềm tin với người dùng — điều cốt lõi để AI agents được chấp nhận rộng rãi.</p>
+
+                <p><strong>3. Network effect:</strong> Mỗi merchant đã dùng Stripe giờ có thể tích hợp thanh toán AI agent gần như ngay lập tức, tạo ra flywheel cho adoption.</p>
+
+                <h2>🚀 Tóm Lại</h2>
+                <p>Stripe Link Wallet for Agents đánh dấu một cột mốc quan trọng: <strong>AI agents giờ không chỉ nói chuyện và phân tích — chúng có thể chi tiêu thực sự</strong>. Với cơ chế bảo mật "approval-first" và credential isolation, Stripe đang cố gắng cân bằng giữa tiện lợi và an toàn.</p>
+
+                <p>Câu hỏi còn lại là: liệu người dùng có sẵn sàng giao quyền chi tiêu cho AI chưa? Và các agent sẽ dùng quyền này để làm gì đầu tiên?</p>
+
+                <div class="highlight-box-blue">
+                    <h4>💡 Lưu ý</h4>
+                    <p style="margin-bottom:0">Escbase đã có bài phân tích chi tiết về công nghệ và cách triển khai của Link Wallet for Agents. <a href="/blog/stripe-link-wallet-for-agents/">Đọc tại đây →</a></p>
+                </div>
+
+                <div class="source-links">
+                    <h4>Nguồn & tham khảo</h4>
+                    <ul>
+                        <li><a href="https://x.com/stripe/status/2049529444092838116" target="_blank">Stripe (@stripe) — Announcement trên X</a></li>
+                        <li><a href="https://link.com/agents" target="_blank">link.com/agents — Trang chính thức</a></li>
+                        <li><a href="/blog/stripe-link-wallet-for-agents/">Escbase — Phân tích chi tiết Link Wallet for Agents</a></li>
+                    </ul>
+                </div>
+
+                <div class="back-to-blog-footer">
+                    <a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+                </div>
+
+                <div class="article-cta-stack">
+                    <a href="/blog/stripe-link-wallet-for-agents/" class="article-suggestion-card">
+                        <span class="article-suggestion-label"><i class="fas fa-book-open"></i> Đọc tiếp</span>
+                        <span class="article-suggestion-title">Stripe Link Wallet for Agents — Phân Tích Chi Tiết</span>
+                    </a>
+                    <div class="article-cta-actions">
+                        <a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a>
+                    </div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">Stripe</span>
+                    <span class="tag">AI Agent</span>
+                    <span class="tag">Fintech</span>
+                    <span class="tag">Link Wallet</span>
+                    <span class="tag">Payments</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

@@ -5,8 +5,26 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Wed, 29 Apr 2026 12:42:19 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 02:29:33 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stripe Chính Thức Ra Mắt Link Wallet for Agents — AI Giờ Đã Có Thể Tự Chi Tiêu An Toàn</title>
+      <link>https://escbase.xyz/blog/stripe-link-wallet-official-launch/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/stripe-link-wallet-official-launch/</guid>
+      <pubDate>Wed, 29 Apr 2026 17:00:00 GMT</pubDate>
+      <description>Stripe vừa công bố chính thức Link Wallet for Agents trên X với video demo. Giải pháp cho phép AI agents thanh toán thay mặt người dùng nhưng không bao giờ tiếp cận payment credentials — mỗi giao dịch đều cần approval.</description>
+      <category>AI Agent</category>
+      <enclosure url="https://escbase.xyz/images/stripe-link-wallet-official-launch-thumb.svg" type="image/svg+xml" length="0" />
+    </item>
+    <item>
+      <title>Stripe Link Wallet for Agents cho phép AI tự chi tiêu an toàn</title>
+      <link>https://escbase.xyz/blog/stripe-link-wallet-for-agents/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/stripe-link-wallet-for-agents/</guid>
+      <pubDate>Wed, 29 Apr 2026 17:00:00 GMT</pubDate>
+      <description>Stripe ra mắt Link Wallet for Agents — ví điện tử cho AI agents, cho phép AI tự động thanh toán thay mặt người dùng mà không lộ thông tin thanh toán. Mỗi giao dịch cần sự approve của user.</description>
+      <category>AI Agent</category>
+      <enclosure url="https://escbase.xyz/images/stripe-link-wallet-for-agents-thumb.svg" type="image/svg+xml" length="0" />
+    </item>
     <item>
       <title>Hạ Tầng Tài Chính Toàn Cầu Mới — Bản Đồ Stablecoin Stack Theo a16z</title>
       <link>https://escbase.xyz/blog/the-new-stack-for-global-finance-stablecoins-edition/</link>
@@ -438,24 +456,6 @@
       <description>Hermes Agent của Nous Research đang nổi lên rất nhanh nhờ ý tưởng self-improving AI agent: memory, skills, learning loop, chạy đa nền tảng và remote-first. Nhưng nếu so với OpenClaw, đâu là điểm mạnh thật, điểm yếu thật và nó có đáng để chuyển sang không?</description>
       <category>AI Agents</category>
       <enclosure url="https://escbase.xyz/images/hermes-agent-vs-openclaw-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>TradingView Giờ Có Thể Nối Thẳng Với Claude: Nghe Như Trò Hack Điên Rồ, Nhưng Có Thể Là Món Mọi Trader Đều Muốn Save</title>
-      <link>https://escbase.xyz/blog/tradingview-mcp-safety-review</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/tradingview-mcp-safety-review</guid>
-      <pubDate>Fri, 17 Apr 2026 17:00:00 GMT</pubDate>
-      <description>TradingView MCP cho phép nối TradingView Desktop với Claude hoặc nền tảng AI khác để đọc chart, sửa Pine, tạo alert và tự động hóa workflow. Nghe rất cuốn, nhưng dùng nó ở đâu cho đáng và rủi ro thật nằm ở đâu mới là câu hỏi quan trọng.</description>
-      <category>Trading AI Tools</category>
-      <enclosure url="https://escbase.xyz/images/tradingview-mcp-safety-review-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>NVIDIA Lyra 2.0: Biến Một Tấm Ảnh Thành Thế Giới 3D Có Thể Đi Dạo, Chứ Không Chỉ Là Một Đoạn Video Đẹp</title>
-      <link>https://escbase.xyz/blog/nvidia-lyra-2</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/nvidia-lyra-2</guid>
-      <pubDate>Fri, 17 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Lyra 2.0 của NVIDIA không chỉ sinh video đẹp từ một ảnh. Nó cố tạo ra thế giới 3D có thể khám phá, giữ nhất quán khi camera đi xa, quay lại cảnh cũ và xuất tiếp sang 3DGS, mesh hay mô phỏng robot.</description>
-      <category>AI 3D Worlds</category>
-      <enclosure url="https://escbase.xyz/images/nvidia-lyra-2-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>
