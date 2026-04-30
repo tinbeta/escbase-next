@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stripe Link Wallet for Agents cho phép AI tự chi tiêu an toàn - Escbase</title>
+    <meta name="description" content="Stripe ra mắt Link Wallet for Agents — ví điện tử cho AI agents, cho phép AI tự động thanh toán thay mặt người dùng mà không lộ thông tin thanh toán. Mỗi giao dịch cần sự approve.">
+    <meta property="og:title" content="Stripe Link Wallet for Agents cho phép AI tự chi tiêu an toàn">
+    <meta property="og:description" content="Giải pháp ví mới của Stripe cho phép AI agents thực hiện thanh toán mà không bao giờ tiếp cận payment credentials. Mỗi giao dịch đều cần sự phê duyệt của user.">
+    <meta property="og:image" content="https://escbase.xyz/images/stripe-link-wallet-for-agents-thumb.png">
+    <meta property="og:url" content="https://escbase.xyz/blog/stripe-link-wallet-for-agents/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/shared-article.css">
+    <link rel="stylesheet" href="/shared-article-footer.css">
+    <style>
+        .video-demo {
+            width: 100%;
+            border-radius: var(--radius-md);
+            margin: 1.5rem 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .feature-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.25rem;
+        }
+        .feature-card h4 {
+            color: var(--text);
+            margin-bottom: .5rem;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .feature-card p {
+            font-size: .9rem;
+            color: var(--text-secondary);
+            margin-bottom: 0;
+        }
+        @media (max-width: 768px) {
+            .feature-grid { grid-template-columns: 1fr; }
+            .feature-card { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <span class="category-badge"><i class="fas fa-robot"></i> AI Agent</span>
+                <h1>Stripe Link Wallet for Agents cho phép AI tự chi tiêu an toàn</h1>
+                <div class="meta">
+                    <span><i class="far fa-calendar"></i> 30/04/2026</span>
+                    <span><i class="far fa-clock"></i> 6 phút đọc</span>
+                    <span><i class="far fa-folder"></i> AI Agent, Fintech</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <!-- TL;DR -->
+                <div class="highlight-box">
+                    <h4>TL;DR</h4>
+                    <p><strong>Stripe vừa ra mắt Link Wallet for Agents</strong> — một giải pháp ví điện tử cho phép AI agents thực hiện thanh toán thay mặt người dùng <strong>mà không bao giờ tiếp cận thông tin thanh toán thực</strong>. Mỗi giao dịch đều cần sự phê duyệt thủ công từ user, đảm bảo bảo mật tối đa.</p>
+                </div>
+
+                <!-- Mở bài -->
+                <h2>AI Agents có thể tự mua sắm — nhưng làm sao đảm bảo an toàn?</h2>
+                <p>Khi bạn giao tiếp với một trợ lý AI (Claude, ChatGPT, hay bất kỳ agent nào), đôi lúc bạn muốn nó <em>đặt mua hàng, đặt dịch vụ, hoặc thanh toán</em> hộ bạn. Nhưng việc giao trực tiếp thông tin thẻ/tài khoản cho AI là cực kỳ rủi ro: credentials có thể bị lộ nếu AI bị compromise, và bạn hoàn toàn mất kiểm soát spending.</p>
+                <p>Hôm nay (29/04/2026), <strong>Stripe</strong> công bố <strong>Link Wallet for Agents</strong> — một ví điện tử chuyên biệt dành cho AI agents, cho phép chúng thực hiện thanh toán <em>thay bạn</em> mà <strong>không bao giờ</strong> biết đến số thẻ, routing number, hay bất kỳ secret nào của bạn.</p>
+
+                <!-- Video demo -->
+                <h2>Demo thực tế: Link Wallet for Agents in action</h2>
+                <p>Stripe chia sẻ video 28 giây minh họa trải nghiệm end-to-end — từ khi agent gửi request mua hàng đến khi user approve trên điện thoại và giao dịch hoàn tất:</p>
+                <video class="video-demo" controls preload="metadata" poster="/blog/stripe-link-wallet-for-agents/poster.jpg">
+                    <source src="/blog/stripe-link-wallet-for-agents/demo.mp4" type="video/mp4">
+                    Trình duyệt của bạn không hỗ trợ video.
+                </video>
+                <p><em>Video demo: Agent gửi payment request → User approve trên điện thoại → Thanh toán hoàn tất.</em></p>
+
+                <!-- How it works -->
+                <h2>Cách thức hoạt động — 4 bước bảo mật</h2>
+                <p>Kiến trúc Link Wallet for Agents được thiết kế theo mô hình <strong>zero-trust</strong> — không tin tưởng agent bất kỳ thông tin nhạy cảm nào:</p>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4><i class="fas fa-wallet" style="color:#f7931a"></i> 1. Wallet riêng biệt</h4>
+                        <p>Bạn tạo một <strong>Link wallet</strong> riêng cho agents. Wallet này chỉ chứa số dư giới hạn hoặc liên kết đến funding source, <em>không chứa</em> số thẻ gốc.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><i class="fas fa-key" style="color:#6366f1"></i> 2. Token single-use</h4>
+                        <p>Khi agent cần thanh toán, nó gửi request → Link tạo <strong>payment token tạm thời</strong> (single-use) để hoàn tất giao dịch. Token có thời hạn và giới hạn amount.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><i class="fas fa-check-circle" style="color:#22c55e"></i> 3. User approval mỗi lần</h4>
+                        <p>Mỗi lần agent muốn chi tiêu, <strong>bạn phải approve</strong> qua notification/email. Không có auto-spend vô tận.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><i class="fas fa-shield-alt" style="color:#ef4444"></i> 4. Credentials không bao giờ lộ</h4>
+                        <p>Thông tin thẻ, routing number, secret key <strong>không bao giờ</strong> được truyền cho agent — chỉ có token giới hạn.</p>
+                    </div>
+                </div>
+
+                <!-- Use cases -->
+                <h2>Use cases thực tế</h2>
+                <p>Link Wallet for Agents mở ra khả năng <strong>AI-driven commerce</strong> thực sự:</p>
+                <ul>
+                    <li><strong>Shopping assistant:</strong> "Mua cho tôi sách <em>The Pragmatic Programmer</em> từ Amazon" — Agent tìm sách, thêm vào giỏ, tạo payment request, bạn approve → sách được đặt.</li>
+                    <li><strong>Travel planner:</strong> "Đặt vé máy bay SFO→NYC ngày 15/05, giá tốt nhất" — Agent search, chọn chuyến, request payment token, bạn approve → vé được đặt.</li>
+                    <li><strong>Subscription manager:</strong> "Gia hạn Netflix và Adobe Creative Cloud" — AI nhận diện subscription hết hạn, tạo payment request, bạn approve một lần.</li>
+                    <li><strong>Procurement bot:</strong> "Mua 10 laptop Dell XPS cho team engineering" — Agent lấy quote, tạo payment request, bạn duyệt từng đơn hoặc bulk.</li>
+                </ul>
+
+                <!-- Comparison -->
+                <h2>So sánh: Link Wallet for Agents vs. Truyền thống</h2>
+                <div class="table-scroll">
+                    <table class="pricing-table">
+                        <thead>
+                            <tr><th>Tiêu chí</th><th>Truyền thống (giveness thẻ trực tiếp)</th><th>Link Wallet for Agents</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Bảo mật</strong></td><td>Thẻ bị lộ nếu AI bị compromise</td><td style="color:#22c55e;font-weight:600">✓ Credentials không bao giờ rời Wallet</td></tr>
+                            <tr><td><strong>Kiểm soát spending</strong></td><td>Khó giới hạn, theo dõi</td><td style="color:#22c55e;font-weight:600">✓ Spending limit daily/monthly, audit trail</td></tr>
+                            <tr><td><strong>Approval flow</strong></td><td>Không có — AI tự do spend</td><td style="color:#22c55e;font-weight:600">✓ Mỗi giao dịch cần user approval</td></tr>
+                            <tr><td><strong>Revoke access</strong></td><td>Phải hủy thẻ, cấp mới</td><td style="color:#22c55e;font-weight:600">✓ Tắt wallet instantly, token auto-expire</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Nhận định / caution -->
+                <div class="highlight-box-yellow">
+                    <h4>⚠️ Một số điểm cần tỉnh táo</h4>
+                    <p>Link Wallet for Agents vẫn còn một số câu hỏi mở: workflow approval có thể<b>chậm trễ</b> so với thanh toán tự động; user có thể <b>mệt mỏi</b> nếu phải approve quá nhiều giao dịch nhỏ; và <b>lapsing agents</b> (agent bị disable giữa chừng) có thể khiến các giao dịch dang dở. Đây là bước đi đúng hướng, nhưng UX approval cần được tối ưu thêm.</p>
+                </div>
+
+                <!-- Kết luận -->
+                <h2>Kết luận</h2>
+                <p>Link Wallet for Agents <strong>giải quyết chính xác pain point</strong> khi kết hợp AI với thanh toán: <strong>bảo mật + convenience</strong>. Đây không chỉ là một tính năng — mà là <strong>lớp infrastructure</strong> cho tương lai khi AI agents trở nên phổ biến trong mua sắm, đặt dịch vụ và quản lý tài chính cá nhân.</p>
+                <p>Bạn đã sẵn sàng cho AI assistant của mình tự mua sách/đặt vé chưa? 🛒🤖</p>
+
+                <!-- Nguồn -->
+                <div class="source-links">
+                    <h4>Nguồn & tham khảo</h4>
+                    <ul>
+                        <li><a href="https://x.com/stripe/status/2049529444092838116" target="_blank">Stripe Twitter — Link Wallet for Agents announcement</a></li>
+                        <li><a href="https://link.com/agents" target="_blank">Link Wallet for Agents — Official Page</a></li>
+                        <li><a href="https://stripe.com" target="_blank">Stripe — Payment Infrastructure</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer navigation -->
+                <div class="back-to-blog-footer">
+                    <a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+                </div>
+
+                <div class="article-cta-stack">
+                    <a href="/blog/ai-agent-security-best-practices" class="article-suggestion-card">
+                        <span class="article-suggestion-label"><i class="fas fa-book-open"></i> Đọc tiếp</span>
+                        <span class="article-suggestion-title">Bảo mật AI Agents: Best Practices 2026</span>
+                    </a>
+                    <div class="article-cta-actions">
+                        <a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a>
+                    </div>
+                </div>
+
+                <!-- Tags -->
+                <div class="tags">
+                    <span class="tag">AI Agent</span>
+                    <span class="tag">Stripe</span>
+                    <span class="tag">Link Wallet</span>
+                    <span class="tag">Fintech</span>
+                    <span class="tag">AI Payments</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>
