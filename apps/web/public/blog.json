@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/stripe-treasury-launch/",
+    "title": "Stripe Ra Mắt Treasury — Ngân Hàng Tích Hợp AI Cho Doanh Nghiệp",
+    "excerpt": "Stripe Treasury cho phép doanh nghiệp giữ tiền đa loại tiền tệ và stablecoin, chuyển khoản miễn phí, chi tiêu bằng thẻ 2% cashback, và điều khiển bằng AI qua Stripe MCP.",
+    "date": "Apr 30, 2026",
+    "tag": "Fintech",
+    "tagIcon": "fas fa-coins",
+    "tagColor": "#f7931a",
+    "readTime": "7 min read",
+    "featured": true,
+    "image": "/images/stripe-treasury-launch-thumb.svg"
+  },
+  {
     "url": "/blog/adobe-claude-creative-cloud/",
     "title": "Adobe Hợp Tác Claude — 50 Công Cụ Sáng Tạo Trong Một Câu Lệnh",
     "excerpt": "Adobe tích hợp 50+ Creative Cloud tools vào Claude. Người dùng chỉ cần mô tả kết quả muốn có, AI tự động điều phối workflow và trả về sản phẩm hoàn chỉnh.",

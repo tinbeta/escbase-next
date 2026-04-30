@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stripe Ra Mắt Treasury — Ngân Hàng Tích Hợp AI Cho Doanh Nghiệp - Escbase</title>
+    <meta name="description" content="Stripe Treasury cho phép doanh nghiệp giữ tiền đa loại tiền tệ và stablecoin, chuyển khoản miễn phí, chi tiêu bằng thẻ, và tích hợp AI qua Stripe MCP.">
+    <meta property="og:title" content="Stripe Ra Mắt Treasury — Ngân Hàng Tích Hợp AI Cho Doanh Nghiệp">
+    <meta property="og:description" content="Giữ stablecoin, chuyển khoản miễn phí, thẻ 2% cashback, và điều khiển bằng AI — tất cả trong Stripe Treasury.">
+    <meta property="og:image" content="https://escbase.xyz/images/stripe-treasury-launch-thumb.png">
+    <meta property="og:url" content="https://escbase.xyz/blog/stripe-treasury-launch/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/shared-article.css">
+    <link rel="stylesheet" href="/shared-article-footer.css">
+    <style>
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            margin: 1.5rem auto;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+            border: 1px solid var(--border);
+        }
+        .video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .video-caption {
+            text-align: center;
+            font-size: .85rem;
+            color: var(--text-muted);
+            margin-top: .5rem;
+            margin-bottom: 1.5rem;
+        }
+        .stats-row {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 1.5rem 0;
+            justify-content: center;
+        }
+        .stat-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1rem 1.25rem;
+            text-align: center;
+            flex: 1;
+            min-width: 100px;
+        }
+        .stat-item .number {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--accent);
+        }
+        .stat-item .label {
+            font-size: .8rem;
+            color: var(--text-secondary);
+            margin-top: .25rem;
+        }
+        .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+        .feature-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.25rem; }
+        .feature-card h4 { color: var(--text); margin-bottom: .5rem; font-size: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+        .feature-card p { font-size: .9rem; color: var(--text-secondary); margin-bottom: 0; }
+        @media (max-width: 768px) {
+            .stats-row { gap: .75rem; }
+            .stat-item { padding: .75rem; min-width: 80px; }
+            .stat-item .number { font-size: 1.25rem; }
+            .video-container { max-width: 100%; }
+            .feature-grid { grid-template-columns: 1fr; }
+            .feature-card { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <span class="category-badge"><i class="fas fa-coins"></i> Stablecoins</span>
+                <h1>Stripe Ra Mắt Treasury — Ngân Hàng Tích Hợp AI Cho Doanh Nghiệp</h1>
+                <div class="meta">
+                    <span><i class="far fa-calendar"></i> 30/04/2026</span>
+                    <span><i class="far fa-clock"></i> 7 phút đọc</span>
+                    <span><i class="far fa-folder"></i> Stripe, Fintech</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <div class="highlight-box">
+                    <h4>TL;DR</h4>
+                    <p style="margin-bottom:0">Stripe vừa ra mắt <strong>Treasury</strong> — nền tảng tài chính cho phép doanh nghiệp <strong>giữ tiền đa loại tiền tệ và stablecoin</strong>, <strong>chuyển khoản miễn phí</strong> trong hệ sinh thái Stripe, <strong>chi tiêu bằng thẻ với 2% hoàn tiền</strong>, và — điểm nhấn quan trọng — <strong>điều khiển hoàn toàn bằng AI qua Stripe MCP</strong>.</p>
+                </div>
+
+                <h2>🎬 Video Demo Chính Thức</h2>
+                <p>Video giới thiệu Treasury từ Stripe:</p>
+
+                <div class="video-container">
+                    <video controls poster="/blog/stripe-treasury-launch/poster.jpg" preload="metadata">
+                        <source src="/blog/stripe-treasury-launch/demo.mp4" type="video/mp4">
+                        Trình duyệt của bạn không hỗ trợ video HTML5.
+                    </video>
+                </div>
+                <p class="video-caption">Video chính thức từ Stripe — Stripe Treasury (1920×1080, 37 giây)</p>
+
+                <h2>🏦 Stripe Treasury Là Gì?</h2>
+                <p>Trên tài khoản X chính thức, Stripe giới thiệu Treasury như một <strong>giải pháp tài chính toàn diện</strong> cho doanh nghiệp:</p>
+
+                <div class="tweet-quote">
+                    <div class="tweet-header">
+                        <div class="tweet-avatar">S</div>
+                        <div>
+                            <div class="tweet-author">Stripe <i class="fas fa-check-circle" style="color:#1d9bf0;font-size:.8rem"></i></div>
+                            <div class="tweet-handle">@stripe · 5:47 AM · Apr 30, 2026</div>
+                        </div>
+                    </div>
+                    <div class="tweet-text">
+                        Introducing the new Stripe Treasury: • Hold funds in multiple currencies and stablecoins. • Instantly transfer money to US businesses on Stripe for free. • Pay anyone in 160 countries with just their email address. • Earn credits on balances to apply towards Stripe fees. • Spend funds with a Stripe card. • Get 2% cash back on card purchases. • View balances in the Stripe mobile app. • Use Treasury from any AI app with the Stripe MCP.
+                    </div>
+                    <div class="tweet-meta">
+                        <span><i class="far fa-comment"></i> 58</span>
+                        <span><i class="fas fa-retweet"></i> 147</span>
+                        <span><i class="far fa-heart"></i> 1.3K</span>
+                        <span><i class="far fa-bookmark"></i> 666</span>
+                        <span><i class="far fa-eye"></i> 165K Views</span>
+                    </div>
+                </div>
+
+                <p>Với <strong>666 bookmarks</strong> trên chỉ 165K views, tỷ lệ bookmark cao cho thấy đây là thông tin <strong>doanh nghiệp đang săn đón</strong> — không chỉ đọc qua loa mà muốn lưu lại để nghiên cứu kỹ.</p>
+
+                <h2>💎 8 Tính Năng Chính CủA Treasury</h2>
+                <p>Stripe liệt kê 8 tính năng, mỗi tính năng đều nhắm vào một điểm đau của doanh nghiệp:</p>
+
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4><i class="fas fa-wallet" style="color:#635bff"></i> Đa loại tiền tệ</h4>
+                        <p>Giữ tiền nhiều loại tiền tệ và <strong>stablecoin</strong> — lựa chọn chiến lược trong thờì biến động tỷ giá.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><i class="fas fa-paper-plane" style="color:#22c55e"></i> Chuyển khoản miễn phí</h4>
+                        <p>Chuyển tiền <strong>tức thì và miễn phí</strong> cho doanh nghiệp US trên Stripe — tiết kiệm phí ngân hàng.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><i class="fas fa-globe" style="color:#60a5fa"></i> 160 quốc gia</h4>
+                        <p>Thanh toán cho bất kỳ ai ở <strong>160 quốc gia</strong> chỉ bằng email — không cần thông tin ngân hàng phức tạp.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><i class="fas fa-piggy-bank" style="color:#f59e0b"></i> Credits kiếm được</h4>
+                        <p>Nhận <strong>credits từ số dư</strong> để áp dụng vào phí Stripe — biến tiền nhàn rỗi thành lợi ích.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><i class="fas fa-credit-card" style="color:#ef4444"></i> Thẻ Stripe</h4>
+                        <p>Chi tiêu trực tiếp từ số dư Treasury bằng <strong>thẻ Stripe</strong>.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><i class="fas fa-percent" style="color:#a78bfa"></i> 2% hoàn tiền</h4>
+                        <p><strong>2% cash back</strong> trên mọi giao dịch thẻ — tốt hơn hầu hết thẻ doanh nghiệp hiện tại.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><i class="fas fa-mobile-alt" style="color:#10b981"></i> Mobile app</h4>
+                        <p>Quản lý số dư ngay trên <strong>ứng dụng Stripe mobile</strong>.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><i class="fas fa-robot" style="color:#6366f1"></i> Tích hợp AI</h4>
+                        <p>Điều khiển Treasury từ <strong>bất kỳ ứng dụng AI nào</strong> qua Stripe MCP — đây là điểm khác biệt lớn.</p>
+                    </div>
+                </div>
+
+                <h2>🤖 Điểm Nhấn: AI Integration Qua MCP</h2>
+                <p>Tính năng cuối cùng trong danh sách lại là <strong>quan trọng nhất</strong> — "Use Treasury from any AI app with the Stripe MCP".</p>
+
+                <p>MCP (Model Context Protocol) là chuẩn kết nối AI agents với các dịch vụ bên ngoài. Việc Stripe hỗ trợ MCP có nghĩa là:</p>
+
+                <ul>
+                    <li><strong>AI agents</strong> có thể tự động kiểm tra số dư, thực hiện thanh toán, và quản lý dòng tiền</li>
+                    <li><strong>Không cần con ngườì</strong> click từng nút — AI đọc context và hành động</li>
+                    <li><strong>Tích hợp vào workflow</strong> tự động hóa rộng hơn (ví dụ: AI agent tự động thanh toán hóa đơn khi đến hạn)</li>
+                </ul>
+
+                <div class="community-quote positive">
+                    <p>"Tích hợp MCP là nước đi thông minh. AI agents giờ không chỉ nói về tiền — chúng có thể thực sự quản lý tiền."</p>
+                    <span class="author">— Nhận định từ cộng đồng fintech</span>
+                </div>
+
+                <h2>💬 Cộng Đồng Hỏi Gì?</h2>
+                <p>Với 58 replies, các câu hỏi nổi bật cho thấy điểm quan tâm của thị trường:</p>
+
+                <div class="community-quote">
+                    <p>"does this work in st Kitts and Nevis ?"</p>
+                    <span class="author">— @praisefmnevis (Caribbean)</span>
+                </div>
+
+                <div class="community-quote">
+                    <p>"Do funds earn interest?"</p>
+                    <span class="author">— @sagivo</span>
+                </div>
+
+                <div class="community-quote">
+                    <p>"Now is it available in india for accepting payment??"</p>
+                    <span class="author">— @AakashGourX (India)</span>
+                </div>
+
+                <p>Các câu hỏi tập trung vào <strong>availability địa lý</strong> (St. Kitts, India) và <strong>lãi suất</strong> — hai yếu tố quyết định đối với doanh nghiệp quốc tế.</p>
+
+                <h2>🔍 Phân Tích — Treasury Định Vị Ở Đâu?</h2>
+                <p><strong>1. So với Brex, Mercury:</strong> Treasury cạnh tranh trực tiếp với các neobank doanh nghiệp, nhưng có lợi thế <strong>tích hợp sẵn vào hệ sinh thái Stripe</strong> — nơi doanh nghiệp đã xử lý thanh toán.</p>
+
+                <p><strong>2. So với ngân hàng truyền thống:</strong> Không có phí chuyển khoản nội bộ, không cần chi nhánh vật lý, và <strong>API-first</strong> — điều ngân hàng truyền thống khó làm được.</p>
+
+                <p><strong>3. Điểm độc đáo:</strong> <strong>Stablecoin support</strong> và <strong>AI integration</strong> đặt Treasury vào vị trí tiên phong — không chỉ là ngân hàng, mà là <strong>infrastructure tài chính cho nền kinh tế AI</strong>.</p>
+
+                <div class="highlight-box-yellow">
+                    <h4>⚠️ Chỗ Cần Tỉnh Táo</h4>
+                    <p style="margin-bottom:0">Stripe chưa công bố <strong>phí duy trì tài khoản</strong> và <strong>availability tại các thị trường như Ấn Độ hay Caribbean</strong>. "Pay anyone in 160 countries" nghe hay, nhưng không đồng nghĩa với "mở tài khoản từ 160 countries". Doanh nghiệp cần xác nhận kỹ trước khi chuyển dòng tiền chính sang Treasury.</p>
+                </div>
+
+                <h2>🚀 Chốt Một Câu</h2>
+                <p>Stripe Treasury không chỉ là một tài khoản ngân hàng mới — nó là <strong>bước đi chiến lược</strong> để Stripe trở thành <strong>hệ điều hành tài chính</strong> cho doanh nghiệp thờì AI, nơi con ngườì và AI agents có thể quản lý tiền bằng cùng một giao diện.</p>
+
+                <div class="source-links">
+                    <h4>Nguồn & tham khảo</h4>
+                    <ul>
+                        <li><a href="https://x.com/stripe/status/2049621560743608481" target="_blank">Stripe (@stripe) — Announcement trên X</a></li>
+                        <li><a href="https://stripe.com/treasury" target="_blank">stripe.com/treasury — Trang chính thức</a></li>
+                        <li><a href="https://stripe.com/blog/everything-we-announced-at-stripe-sessions" target="_blank">Everything announced at Stripe Sessions</a></li>
+                    </ul>
+                </div>
+
+                <div class="back-to-blog-footer">
+                    <a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+                </div>
+
+                <div class="article-cta-stack">
+                    <a href="/blog/stripe-link-wallet-official-launch/" class="article-suggestion-card">
+                        <span class="article-suggestion-label"><i class="fas fa-book-open"></i> Đọc tiếp</span>
+                        <span class="article-suggestion-title">Stripe Chính Thức Ra Mắt Link Wallet for Agents</span>
+                    </a>
+                    <div class="article-cta-actions">
+                        <a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a>
+                    </div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">Stripe</span>
+                    <span class="tag">Fintech</span>
+                    <span class="tag">Treasury</span>
+                    <span class="tag">Stablecoins</span>
+                    <span class="tag">AI</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

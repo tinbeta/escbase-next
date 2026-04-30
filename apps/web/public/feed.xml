@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Thu, 30 Apr 2026 02:52:54 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 03:04:58 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stripe Ra Mắt Treasury — Ngân Hàng Tích Hợp AI Cho Doanh Nghiệp</title>
+      <link>https://escbase.xyz/blog/stripe-treasury-launch/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/stripe-treasury-launch/</guid>
+      <pubDate>Wed, 29 Apr 2026 17:00:00 GMT</pubDate>
+      <description>Stripe Treasury cho phép doanh nghiệp giữ tiền đa loại tiền tệ và stablecoin, chuyển khoản miễn phí, chi tiêu bằng thẻ 2% cashback, và điều khiển bằng AI qua Stripe MCP.</description>
+      <category>Fintech</category>
+      <enclosure url="https://escbase.xyz/images/stripe-treasury-launch-thumb.svg" type="image/svg+xml" length="0" />
+    </item>
     <item>
       <title>Adobe Hợp Tác Claude — 50 Công Cụ Sáng Tạo Trong Một Câu Lệnh</title>
       <link>https://escbase.xyz/blog/adobe-claude-creative-cloud/</link>
@@ -447,15 +456,6 @@
       <description>Arkham vừa theo dấu dòng tiền sau vụ KelpDAO bị exploit gần $294M. Điều đáng chú ý không chỉ là số tiền bị rút, mà là cách attacker dùng Aave, Compound, KyberSwap, Euler Finance và Wintermute để dần biến rsETH thành ETH.</description>
       <category>Onchain Forensics</category>
       <enclosure url="https://escbase.xyz/images/arkham-kelpdao-funds-flow-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>Vụ KelpDAO Mất $290M Đang Buộc Cả Đám Cross-Chain Nhìn Lại Một Sự Thật Khó Chịu: Audit Contract Là Chưa Đủ</title>
-      <link>https://escbase.xyz/blog/layerzero-kelpdao-rpc-poisoning</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/layerzero-kelpdao-rpc-poisoning</guid>
-      <pubDate>Sun, 19 Apr 2026 17:00:00 GMT</pubDate>
-      <description>LayerZero nói vụ KelpDAO mất khoảng $290M không phải lỗi protocol mà là hậu quả của cấu hình 1-of-1 DVN, kết hợp một đòn RPC poisoning rất tinh vi nhắm vào hạ tầng downstream. Nhưng bài học lớn hơn là: từ giờ, threat model của bridge và cross-chain app không thể chỉ dừng ở smart contract nữa.</description>
-      <category>Bridge Security</category>
-      <enclosure url="https://escbase.xyz/images/layerzero-kelpdao-rpc-poisoning-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>
