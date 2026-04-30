@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Thu, 30 Apr 2026 03:18:33 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 03:36:58 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stripe Console — AI Agent Hiểu Sâu Dữ Liệu Kinh Doanh Của Bạn</title>
+      <link>https://escbase.xyz/blog/stripe-console-ai-agent/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/stripe-console-ai-agent/</guid>
+      <pubDate>Wed, 29 Apr 2026 17:00:00 GMT</pubDate>
+      <description>Stripe sắp ra mắt Console, một AI agent tổng quát có ngữ cảnh sâu về dữ liệu riêng, insight từ mạng lưới Stripe và kiến thức sản phẩm để hỗ trợ vận hành doanh nghiệp.</description>
+      <category>AI Tools</category>
+      <enclosure url="https://escbase.xyz/images/stripe-console-ai-agent-thumb.svg" type="image/svg+xml" length="0" />
+    </item>
     <item>
       <title>Stripe Hợp Tác Meta và Tempo — Creator Nhận Stablecoin Qua Link Wallet</title>
       <link>https://escbase.xyz/blog/stripe-meta-tempo-stablecoin-payouts/</link>
@@ -447,15 +456,6 @@
       <description>Justin Sun vừa công khai kêu gọi hacker vụ KelpDAO ngồi xuống nói chuyện, với lập luận rằng không đáng để kéo cả Aave lẫn KelpDAO đi xuống vì cú hack gần $300M. Nghe hơi kịch tính, nhưng phản ứng cộng đồng cho thấy thị trường đang thật sự lo về rủi ro lan sang Aave.</description>
       <category>Crypto Drama</category>
       <enclosure url="https://escbase.xyz/images/justin-sun-kelpdao-hacker-talk-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>Vì Sao Một File CLAUDE.md Lại Leo Top GitHub Trending?</title>
-      <link>https://escbase.xyz/blog/claude-md-trending-github</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/claude-md-trending-github</guid>
-      <pubDate>Sun, 19 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Một repo chỉ xoay quanh file CLAUDE.md đang leo top GitHub trending với hơn 44.000 star trong tuần. Điều đáng chú ý không phải file markdown đó thần thánh cỡ nào, mà là việc nút thắt mới của AI coding giờ nằm ở behavior, context và execution discipline — không chỉ ở model.</description>
-      <category>AI Coding</category>
-      <enclosure url="https://escbase.xyz/images/claude-md-trending-github-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>
