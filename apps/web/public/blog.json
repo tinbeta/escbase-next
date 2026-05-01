@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/openclaw-2026-4-29-release/",
+    "title": "OpenClaw 2026.4.29 — Group Chat Bớt Giả, Agent Bớt Khờ",
+    "excerpt": "OpenClaw 2026.4.29 tập trung vào group chat agent-native hơn, follow-up commitments, memory people wiki, NVIDIA provider và loạt nâng cấp an toàn vận hành.",
+    "date": "May 01, 2026",
+    "tag": "AI Agents",
+    "tagIcon": "fas fa-terminal",
+    "tagColor": "#a78bfa",
+    "readTime": "8 min read",
+    "featured": true,
+    "image": "/images/openclaw-2026-4-29-release-thumb.svg"
+  },
+  {
     "url": "/blog/cursor-sdk-ai-agents/",
     "title": "Cursor Ra Mắt SDK — Xây Dựng AI Agents Với Cùng Runtime và Models Như Cursor",
     "excerpt": "Cursor giới thiệu SDK cho phép xây dựng AI agents với cùng runtime, harness và models. Rippling, Notion, C3 AI và Faire đã đang tích hợp. Phân tích ý nghĩa và lo ngại từ cộng đồng.",

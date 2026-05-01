@@ -1,0 +1,51 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#08111f"/>
+      <stop offset="0.55" stop-color="#0b1730"/>
+      <stop offset="1" stop-color="#101a3a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="130" y1="118" x2="560" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#34d399"/>
+      <stop offset="1" stop-color="#60a5fa"/>
+    </linearGradient>
+    <linearGradient id="chip" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#1f2937"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="28" fill="url(#bg)"/>
+  <circle cx="958" cy="149" r="205" fill="#22c55e" opacity="0.08"/>
+  <circle cx="1042" cy="493" r="194" fill="#3b82f6" opacity="0.08"/>
+  <rect x="72" y="72" width="220" height="40" rx="20" fill="#111827" stroke="#1f2937"/>
+  <text x="108" y="98" fill="#86efac" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">ESC BASE</text>
+  <circle cx="92" cy="92" r="7" fill="#22c55e"/>
+
+  <text x="72" y="194" fill="white" font-family="Inter, Arial, sans-serif" font-size="64" font-weight="800">OpenClaw 2026.4.29</text>
+  <text x="72" y="268" fill="url(#accent)" font-family="Inter, Arial, sans-serif" font-size="50" font-weight="800">Group chat bớt giả</text>
+  <text x="72" y="330" fill="url(#accent)" font-family="Inter, Arial, sans-serif" font-size="50" font-weight="800">agent bớt khờ</text>
+
+  <text x="72" y="392" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="500">Follow-up commitments - Memory wiki - NVIDIA catalogs</text>
+
+  <rect x="72" y="442" width="176" height="52" rx="14" fill="#0f172a" stroke="#1d4ed8"/>
+  <text x="104" y="475" fill="#93c5fd" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">AI Agents</text>
+
+  <g opacity="0.98">
+    <rect x="764" y="114" width="348" height="384" rx="28" fill="#0b1224" stroke="#1e293b"/>
+    <rect x="792" y="146" width="292" height="58" rx="16" fill="#111827" stroke="#1f2937"/>
+    <circle cx="826" cy="175" r="10" fill="#22c55e"/>
+    <text x="852" y="183" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="700">agent-native group chat</text>
+
+    <rect x="792" y="228" width="292" height="64" rx="18" fill="#0f172a" stroke="#1d4ed8"/>
+    <text x="822" y="253" fill="#93c5fd" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="700">📌 follow-up commitments</text>
+    <text x="822" y="278" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="17">nhắc đúng việc đã hứa</text>
+
+    <rect x="792" y="308" width="292" height="64" rx="18" fill="#0f172a" stroke="#16a34a"/>
+    <text x="822" y="333" fill="#86efac" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="700">🧠 people-aware memory</text>
+    <text x="822" y="358" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="17">person cards + provenance</text>
+
+    <rect x="792" y="388" width="292" height="64" rx="18" fill="#0f172a" stroke="#06b6d4"/>
+    <text x="822" y="413" fill="#67e8f9" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="700">🟩 NVIDIA catalogs</text>
+    <text x="822" y="438" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="17">thêm provider, bớt cấu hình tay</text>
+  </g>
+</svg>

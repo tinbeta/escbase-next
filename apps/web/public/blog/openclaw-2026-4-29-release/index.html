@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw 2026.4.29 — Group Chat Bớt Giả, Agent Bớt Khờ - Escbase</title>
+    <meta name="description" content="OpenClaw 2026.4.29 đẩy mạnh group chat, follow-up commitments, NVIDIA provider, memory wiki và loạt vá an toàn vận hành. Đây là bản nâng cấp thiên về trải nghiệm dùng thật.">
+    <meta property="og:title" content="OpenClaw 2026.4.29 — Group Chat Bớt Giả, Agent Bớt Khờ">
+    <meta property="og:description" content="Từ group chat agent-native tới NVIDIA catalog và memory people wiki — đây là bản release tập trung vào trải nghiệm dùng thật.">
+    <meta property="og:image" content="https://escbase.xyz/images/openclaw-2026-4-29-release-thumb.png">
+    <meta property="og:url" content="https://escbase.xyz/blog/openclaw-2026-4-29-release/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/shared-article.css">
+    <link rel="stylesheet" href="/shared-article-footer.css">
+    <style>
+        .feature-grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin:1.5rem 0; }
+        .feature-card { background:var(--card-bg); border:1px solid var(--border); border-radius:var(--radius-md); padding:1.2rem; }
+        .feature-card h4 { margin-bottom:.55rem; font-size:1rem; display:flex; gap:.5rem; align-items:center; }
+        .feature-card p { margin-bottom:0; color:var(--text-secondary); font-size:.92rem; }
+        .stats-row { display:flex; gap:1rem; flex-wrap:wrap; margin:1.5rem 0; }
+        .stat-item { flex:1; min-width:120px; background:var(--card-bg); border:1px solid var(--border); border-radius:var(--radius-md); padding:1rem 1.2rem; text-align:center; }
+        .stat-item .number { font-size:1.45rem; font-weight:800; color:var(--accent); }
+        .stat-item .label { font-size:.8rem; margin-top:.25rem; color:var(--text-secondary); }
+        .mini-list li { margin-bottom:.55rem; }
+        @media (max-width: 768px) {
+            .feature-grid { grid-template-columns:1fr; }
+            .stat-item { min-width:unset; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <span class="category-badge"><i class="fas fa-terminal"></i> AI Agents</span>
+                <h1>OpenClaw 2026.4.29 — Group Chat Bớt Giả, Agent Bớt Khờ</h1>
+                <div class="meta">
+                    <span><i class="far fa-calendar"></i> 01/05/2026</span>
+                    <span><i class="far fa-clock"></i> 8 phút đọc</span>
+                    <span><i class="far fa-folder"></i> OpenClaw, AI Agents</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <div class="highlight-box">
+                    <h4>TL;DR</h4>
+                    <p style="margin-bottom:0">OpenClaw vừa ra mắt <strong>bản 2026.4.29</strong> với trọng tâm rất rõ: <strong>group chat bớt máy móc hơn</strong>, agent biết <strong>theo tiếp các cam kết từ ngữ cảnh</strong>, phần <strong>an toàn exec/pairing</strong> được siết lại, thêm <strong>NVIDIA provider + model catalogs</strong>, và nâng cấp mạnh phần <strong>memory/wiki theo con người</strong>. Đây không phải bản khoe benchmark. Đây là bản sửa những thứ khiến agent dùng hằng ngày đỡ ngu hơn.</p>
+                </div>
+
+                <h2>🦞 Mở đầu: OpenClaw đang sửa đúng chỗ đau</h2>
+                <p>Tweet launch của OpenClaw khá gọn: <strong>group chat tốt hơn</strong>, <strong>follow-up commitments</strong>, <strong>safer exec</strong>, <strong>NVIDIA catalogs</strong>, và <strong>startup/plugin fixes</strong>. Câu chốt là <em>"Group chat finally feels agent-native"</em>. Phần phân tích bên dưới bám chủ yếu vào release notes chính thức vì môi trường hiện tại không đọc được thread đầy đủ qua bird.</p>
+                <p>Nói thẳng: đây là một claim lớn. Rất nhiều AI agent nhìn ngon trong demo 1-1, nhưng ném vào group chat là lộ ngay độ ngáo — chen ngang, quên ngữ cảnh, hoặc im lặng lúc cần nói. Bản 2026.4.29 cho thấy OpenClaw đang dồn lực xử lý đúng chỗ đau đó.</p>
+
+                <div class="stats-row">
+                    <div class="stat-item"><div class="number">64K</div><div class="label">Views</div></div>
+                    <div class="stat-item"><div class="number">5</div><div class="label">Điểm nhấn trong tweet</div></div>
+                    <div class="stat-item"><div class="number">2</div><div class="label">Trục lớn: chat + hạ tầng</div></div>
+                </div>
+
+                <h2>💬 1. Group chat cuối cùng cũng được đối xử như group chat</h2>
+                <p>Theo release notes chính thức trên GitHub, điểm nổi nhất của bản này là loạt thay đổi quanh <strong>messaging và automation</strong>: active-run steering mặc định, visible-reply enforcement, spawned subagent routing metadata, và follow-up commitments có thể bật theo nhu cầu.</p>
+                <p>Dịch ra tiếng người: agent trong group giờ đỡ kiểu <em>“một con bot nói chuyện trong chân không”</em> hơn. Nó có cơ chế để phản hồi đúng luồng hơn, bị ép minh bạch hơn ở các reply cần hiển thị, và biết theo dõi những việc đã hứa thay vì coi mỗi turn như mất trí nhớ tạm thời.</p>
+
+                <div class="community-quote positive">
+                    <p>"Group chat finally feels agent-native."</p>
+                    <span class="author">— OpenClaw, tweet launch</span>
+                </div>
+
+                <p>Nếu claim này đứng vững, đây là khác biệt thật. Vì tương lai của agent không nằm ở việc chat riêng với một người mãi mãi, mà là chen vào các workflow hỗn loạn ngoài đời: nhóm làm việc, cộng đồng, support, hoặc các room bán tự động.</p>
+
+                <h2>📌 2. Follow-up commitments: agent không chỉ trả lời, mà còn phải nhớ lời hứa</h2>
+                <p>Một thay đổi rất đáng tiền trong release notes là <strong>opt-in inferred follow-up commitments</strong>. Hệ thống có thể rút ra các việc cần follow-up từ ngữ cảnh, gom lại, giới hạn theo ngày, và giao qua heartbeat-delivered reminders.</p>
+                <p>Đây là kiểu tính năng nghe nhỏ nhưng cực thực dụng. Một agent tốt không chỉ là con bot trả lời nhanh. Nó phải biết: <strong>“À, chuyện này chưa xong. Mình đã hứa quay lại.”</strong></p>
+
+                <ul class="mini-list">
+                    <li>Có cấu hình bật/tắt rõ ràng: <code>commitments.enabled</code></li>
+                    <li>Có giới hạn tần suất: <code>commitments.maxPerDay</code></li>
+                    <li>Có cơ chế clamp theo heartbeat để tránh nhắc ngay lập tức một cách ngớ ngẩn</li>
+                </ul>
+
+                <p>Nói cách khác, OpenClaw đang cố biến lời hứa trong chat thành <strong>một primitive của hệ thống</strong>, không phải trò phụ thuộc vào “hy vọng model nhớ”.</p>
+
+                <h2>🧠 3. Memory không còn chỉ là search hộp đen</h2>
+                <p>Ở bản này, memory được đẩy sang một hướng thú vị hơn nhiều: <strong>people-aware wiki</strong>. Release notes nhắc tới person cards, canonical aliases, relationship graphs, privacy/provenance reports, evidence-kind drilldown, và search modes riêng cho lookup, routing câu hỏi, source evidence, raw claims.</p>
+                <p>Đây là bước chuyển quan trọng. Trước giờ nhiều hệ thống “memory” chỉ là semantic search trá hình. Tìm được đoạn text gần đúng là xong. Nhưng đời thật không chỉ là đoạn text — nó là <strong>người nào, quan hệ gì, bằng chứng từ đâu, có nên nhớ trong chat này không</strong>.</p>
+
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4><i class="fas fa-id-card" style="color:#60a5fa"></i> Person cards</h4>
+                        <p>Gom thông tin xoay quanh từng người thay vì vứt thành mớ ghi chú rời rạc.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><i class="fas fa-project-diagram" style="color:#22c55e"></i> Relationship graphs</h4>
+                        <p>Giúp agent hiểu ai liên quan tới ai, thay vì chỉ match keyword.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><i class="fas fa-user-shield" style="color:#f59e0b"></i> Privacy & provenance</h4>
+                        <p>Biết dữ liệu đến từ đâu và có nên dùng ở cuộc trò chuyện này không.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><i class="fas fa-filter" style="color:#a78bfa"></i> Active Memory filters</h4>
+                        <p>Cho phép recall theo allowedChatIds/deniedChatIds để tránh nhớ bừa.</p>
+                    </div>
+                </div>
+
+                <p>Với ai build agent nghiêm túc, đây là hướng đúng. Memory mà không có provenance và boundary thì sớm muộn cũng thành mìn.</p>
+
+                <h2>🟩 4. NVIDIA provider + model catalogs: thêm lựa chọn, bớt cấu hình tay</h2>
+                <p>Một điểm sáng khác là OpenClaw thêm <strong>NVIDIA provider</strong> với API-key onboarding, static catalog metadata, và literal model-ref picker support. Ngoài ra còn có các cải tiến quanh manifest-backed model/auth paths và parity tốt hơn với một số provider khác.</p>
+                <p>Ý nghĩa thực tế là gì? Đơn giản: người dùng có thêm đường để gọi model mà không phải sống chết với vài cái tên cũ. Với hệ sinh thái agent đang bị phân mảnh bởi provider, catalog rõ ràng và picker dùng được là thứ nghe bình dân nhưng tiết kiệm rất nhiều ma sát.</p>
+                <p>Đây cũng là dấu hiệu OpenClaw đang nghiêm túc với chuyện <strong>multi-provider thật sự</strong>, không chỉ treo logo cho đẹp.</p>
+
+                <h2>🔐 5. An toàn và vận hành: bớt những kiểu fail ngu người</h2>
+                <p>Tweet launch có nhấn vào <strong>safer exec, pairing, and owner controls</strong>. Release notes chi tiết hơn: GHSA triage sắc hơn, OpenGrep scanning, xử lý owner-scope chặt hơn, outbound sanitization, timing-safe credential checks, và hàng loạt fix để giảm restart loops, stale sessions, plugin-runtime-deps crash, hay startup bind lỗi.</p>
+                <p>Đây là phần ít sexy nhất, nhưng cũng là phần quyết định agent có sống nổi ngoài môi trường thật hay không.</p>
+
+                <div class="highlight-box-blue">
+                    <h4>💡 Điểm đáng để ý</h4>
+                    <p style="margin-bottom:0">OpenClaw đang sửa rất nhiều lỗi kiểu <strong>"không ai demo nhưng ai vận hành cũng chửi"</strong>: restart loop, polling treo, startup chậm, runtime dependency vỡ, model selection lỗi, session orphan recovery. Đó là tín hiệu của một dự án đang trưởng thành.</p>
+                </div>
+
+                <h2>⚡ 6. Startup nhanh hơn, plugin/channel đỡ lằng nhằng hơn</h2>
+                <p>Release notes còn dành hẳn một cụm lớn cho <strong>gateway và packaged-plugin reliability</strong>: slow-host startup, model catalogs tái sử dụng, diagnostics timeline, stale-session recovery, version-scoped update caches, và cả một rừng channel fixes cho Slack, Telegram, Discord, WhatsApp, Teams, Matrix, Feishu...</p>
+                <p>Nói ngắn gọn: OpenClaw không chỉ thêm tính năng. Nó còn đang <strong>làm nền móng bớt ọp ẹp</strong>. Đây là thứ rất quan trọng nếu muốn agent hoạt động trên nhiều bề mặt chat khác nhau mà không biến mỗi channel thành một đống exception riêng.</p>
+
+                <h2>🤔 Chỗ cần tỉnh táo</h2>
+                <p>Bản 2026.4.29 rất dày, nhưng cũng có một rủi ro rõ ràng: <strong>nó chạm vào quá nhiều lớp cùng lúc</strong> — messaging, memory, providers, gateway, channels, security. Những bản kiểu này thường tốt cho roadmap dài hạn, nhưng cũng dễ tạo ra edge case mới ở chỗ khó đoán.</p>
+                <p>Ngoài ra, câu <em>"group chat finally feels agent-native"</em> là một lời hứa lớn. Muốn chứng minh điều đó, OpenClaw không chỉ cần tính năng đúng — nó cần <strong>hành vi đúng trong hàng trăm tình huống nhỏ, lộn xộn, đời thường</strong>. Cái này changelog chưa thể chứng minh thay cho thời gian.</p>
+
+                <div class="highlight-box-yellow">
+                    <h4>⚠️ Chốt phần phản biện</h4>
+                    <p style="margin-bottom:0">Nếu bạn đang chạy OpenClaw ở môi trường thật, đây là bản đáng thử. Nhưng vì nó đụng sâu vào messaging và runtime behavior, nên <strong>đừng update production kiểu nhắm mắt Enter</strong>. Test lại group chat, visible replies, steering, memory recall và các provider đang dùng là nước đi khôn hơn.</p>
+                </div>
+
+                <h2>🚀 Chốt một câu</h2>
+                <p>OpenClaw 2026.4.29 không thắng bằng màn pháo hoa. Nó thắng ở chỗ rất đời: <strong>agent biết giữ lời hơn, nói chuyện trong group bớt vô duyên hơn, và hạ tầng đỡ tự bắn vào chân hơn</strong>. Với agent tooling, thế đã là một bước tiến lớn rồi.</p>
+
+                <div class="source-links">
+                    <h4>Nguồn & tham khảo</h4>
+                    <ul>
+                        <li><a href="https://x.com/openclaw/status/2049986075221692678" target="_blank">OpenClaw (@openclaw) — Announcement trên X</a></li>
+                        <li><a href="https://github.com/openclaw/openclaw/releases/tag/v2026.4.29" target="_blank">Release Notes chính thức — GitHub</a></li>
+                    </ul>
+                </div>
+
+                <div class="back-to-blog-footer">
+                    <a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+                </div>
+
+                <div class="article-cta-stack">
+                    <a href="/blog/openclaw-2026-4-27-release/" class="article-suggestion-card">
+                        <span class="article-suggestion-label"><i class="fas fa-book-open"></i> Đọc tiếp</span>
+                        <span class="article-suggestion-title">OpenClaw 2026.4.27 — 6 Nâng Cấp Đáng Chú Ý</span>
+                    </a>
+                    <div class="article-cta-actions">
+                        <a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a>
+                    </div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">OpenClaw</span>
+                    <span class="tag">AI Agents</span>
+                    <span class="tag">Group Chat</span>
+                    <span class="tag">Memory</span>
+                    <span class="tag">NVIDIA</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>
