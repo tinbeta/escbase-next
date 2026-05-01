@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/openai-codex-everyday-work/",
+    "title": "OpenAI Biến Codex Thành Trợ Lý Văn Phòng, Không Chỉ Coding",
+    "excerpt": "OpenAI mở rộng Codex cho công việc hằng ngày: chọn vai trò, kết nối Slack, Google Workspace, Microsoft 365, rồi tạo docs, slides, spreadsheets và theo dõi tiến độ trong cùng một thread.",
+    "date": "May 01, 2026",
+    "tag": "AI Tools",
+    "tagIcon": "fas fa-robot",
+    "tagColor": "#10a37f",
+    "readTime": "8 min read",
+    "featured": true,
+    "image": "/images/openai-codex-everyday-work-thumb.svg"
+  },
+  {
     "url": "/blog/openclaw-2026-4-29-release/",
     "title": "OpenClaw 2026.4.29 — Group Chat Bớt Giả, Agent Bớt Khờ",
     "excerpt": "OpenClaw 2026.4.29 nâng group chat, follow-up commitments, memory wiki và NVIDIA provider. Full thread cho thấy cộng đồng hào hứng nhưng vẫn còn bug report gateway, Discord và local models.",

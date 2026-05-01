@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Fri, 01 May 2026 01:54:48 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2026 02:51:16 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAI Biến Codex Thành Trợ Lý Văn Phòng, Không Chỉ Coding</title>
+      <link>https://escbase.xyz/blog/openai-codex-everyday-work/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/openai-codex-everyday-work/</guid>
+      <pubDate>Thu, 30 Apr 2026 17:00:00 GMT</pubDate>
+      <description>OpenAI mở rộng Codex cho công việc hằng ngày: chọn vai trò, kết nối Slack, Google Workspace, Microsoft 365, rồi tạo docs, slides, spreadsheets và theo dõi tiến độ trong cùng một thread.</description>
+      <category>AI Tools</category>
+      <enclosure url="https://escbase.xyz/images/openai-codex-everyday-work-thumb.svg" type="image/svg+xml" length="0" />
+    </item>
     <item>
       <title>OpenClaw 2026.4.29 — Group Chat Bớt Giả, Agent Bớt Khờ</title>
       <link>https://escbase.xyz/blog/openclaw-2026-4-29-release/</link>
@@ -447,15 +456,6 @@
       <description>Moonshot vừa open-source Kimi K2.6, model mới nhắm thẳng vào coding agent, long-horizon execution và agent swarm. Điểm đáng chú ý không chỉ là benchmark, mà là các demo 12 đến 13 giờ liên tục, 4.000+ tool calls và việc Kimi gọi thẳng tên OpenClaw, Hermes Agent trong use case proactive agents.</description>
       <category>AI Models</category>
       <enclosure url="https://escbase.xyz/images/kimi-k2-6-open-source-coding-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>Hermes Agent: Nhìn Tận Mắt Nó Làm Việc Thì Mới Thấy Agent Tốt Không Chỉ Là Chatbot Biết Gọi Tool</title>
-      <link>https://escbase.xyz/blog/hermes-agent-see-it-in-action</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/hermes-agent-see-it-in-action</guid>
-      <pubDate>Sun, 19 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Nhìn các screenshot Hermes Agent đang xử lý PR, sửa lỗi, chạy test và truy lại kiến thức cũ cho thấy một điều khá rõ: agent hữu ích không phải vì nó trả lời thông minh, mà vì nó bắt đầu làm việc như một cộng sự kỹ thuật có trí nhớ và có quy trình.</description>
-      <category>AI Agents</category>
-      <enclosure url="https://escbase.xyz/images/hermes-agent-see-it-in-action-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>

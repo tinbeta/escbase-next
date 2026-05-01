@@ -1,0 +1,35 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#050816"/><stop offset="0.55" stop-color="#0f172a"/><stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="green" x1="120" y1="160" x2="620" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#10a37f"/><stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="28" fill="url(#bg)"/>
+  <circle cx="955" cy="160" r="220" fill="#10a37f" opacity="0.11"/>
+  <circle cx="1030" cy="500" r="190" fill="#22d3ee" opacity="0.08"/>
+  <rect x="72" y="72" width="220" height="40" rx="20" fill="#111827" stroke="#1f2937"/>
+  <circle cx="92" cy="92" r="7" fill="#10a37f"/>
+  <text x="108" y="98" fill="#86efac" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800">ESC BASE</text>
+  <text x="72" y="188" fill="white" font-family="Inter, Arial, sans-serif" font-size="66" font-weight="850">OpenAI Codex</text>
+  <text x="72" y="262" fill="url(#green)" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="850">Không chỉ coding</text>
+  <text x="72" y="326" fill="url(#green)" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="850">mà là office agent</text>
+  <text x="72" y="392" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="500">Slack · Google Workspace · Microsoft 365 · Docs · Slides</text>
+  <rect x="72" y="444" width="166" height="52" rx="14" fill="#0f172a" stroke="#10a37f"/>
+  <text x="103" y="477" fill="#86efac" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">AI Agent</text>
+  <g transform="translate(770 118)">
+    <rect width="350" height="386" rx="30" fill="#0b1220" stroke="#253044"/>
+    <rect x="30" y="34" width="290" height="64" rx="18" fill="#111827" stroke="#1f2937"/>
+    <text x="58" y="74" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="800">Choose your role</text>
+    <rect x="30" y="122" width="290" height="64" rx="18" fill="#0f172a" stroke="#10a37f"/>
+    <text x="58" y="148" fill="#86efac" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="800">Connect apps</text>
+    <text x="58" y="174" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="17">Slack · Google · Microsoft</text>
+    <rect x="30" y="210" width="290" height="64" rx="18" fill="#0f172a" stroke="#22d3ee"/>
+    <text x="58" y="236" fill="#67e8f9" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="800">Research + planning</text>
+    <text x="58" y="262" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="17">docs, slides, spreadsheets</text>
+    <rect x="30" y="298" width="290" height="54" rx="18" fill="#111827" stroke="#334155"/>
+    <text x="58" y="333" fill="#fbbf24" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="800">Review in one thread</text>
+  </g>
+</svg>

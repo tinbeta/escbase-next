@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenAI Biến Codex Thành Trợ Lý Văn Phòng, Không Chỉ Coding - Escbase</title>
+    <meta name="description" content="OpenAI giới thiệu Codex cho công việc hằng ngày: chọn vai trò, kết nối Slack, Google Workspace, Microsoft 365, tạo docs, slides, spreadsheets và theo dõi tiến độ trong cùng một thread.">
+    <meta property="og:title" content="OpenAI Biến Codex Thành Trợ Lý Văn Phòng, Không Chỉ Coding">
+    <meta property="og:description" content="Codex đang rời khỏi ngách dev-tool để bước vào workflow văn phòng: role-based setup, app context, docs, slides, spreadsheets và review trong cùng một thread.">
+    <meta property="og:image" content="https://escbase.xyz/images/openai-codex-everyday-work-thumb.png">
+    <meta property="og:url" content="https://escbase.xyz/blog/openai-codex-everyday-work/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/shared-article.css">
+    <link rel="stylesheet" href="/shared-article-footer.css">
+    <style>
+        .video-container { position: relative; width: 100%; max-width: 760px; margin: 1.35rem auto .45rem; border-radius: var(--radius-md); overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,.4); border: 1px solid var(--border); background:#050505; }
+        .video-container video { width: 100%; height: auto; display: block; }
+        .video-caption { text-align: center; font-size: .85rem; color: var(--text-muted); margin-top: .45rem; margin-bottom: 1.6rem; }
+        .feature-grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin:1.5rem 0; }
+        .feature-card { background:var(--card-bg); border:1px solid var(--border); border-radius:var(--radius-md); padding:1.25rem; }
+        .feature-card h4 { margin-bottom:.5rem; font-size:1rem; display:flex; align-items:center; gap:.5rem; line-height:1.45; }
+        .feature-card p { font-size:.92rem; color:var(--text-secondary); margin-bottom:0; }
+        .workflow-step { display:flex; gap:1rem; margin:1rem 0; align-items:flex-start; }
+        .workflow-step .step-number { background:var(--accent); color:#fff; width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:.85rem; flex-shrink:0; }
+        .workflow-step .step-content h4 { margin-bottom:.25rem; color:var(--text); }
+        .workflow-step .step-content p { margin-bottom:0; font-size:.95rem; color:var(--text-secondary); }
+        .community-quote { border-left:3px solid var(--accent); padding:.75rem 1rem; margin:1rem 0; background:rgba(99,102,241,.05); border-radius:0 var(--radius-md) var(--radius-md) 0; }
+        .community-quote .author { color:var(--accent); font-weight:600; font-size:.85rem; }
+        .community-quote p { margin-bottom:.25rem; font-size:.95rem; }
+        .community-quote.positive { border-left-color:var(--accent-green); background:rgba(34,197,94,.05); }
+        .community-quote.positive .author { color:var(--accent-green); }
+        .community-quote.negative { border-left-color:var(--accent-red); background:rgba(239,68,68,.05); }
+        .community-quote.negative .author { color:var(--accent-red); }
+        .video-grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin:1.4rem 0; }
+        .video-grid .video-container { margin:0; max-width:100%; }
+        @media (max-width: 768px) {
+            .feature-grid, .video-grid { grid-template-columns:1fr; }
+            .feature-card { padding:1rem; }
+            .community-quote { padding:.65rem .85rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <span class="category-badge"><i class="fas fa-robot"></i> AI Tools</span>
+                <h1>OpenAI Biến Codex Thành Trợ Lý Văn Phòng, Không Chỉ Coding</h1>
+                <div class="meta">
+                    <span><i class="far fa-calendar"></i> 01/05/2026</span>
+                    <span><i class="far fa-clock"></i> 8 phút đọc</span>
+                    <span><i class="far fa-folder"></i> OpenAI, Codex, AI Agent</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <div class="highlight-box">
+                    <h4>TL;DR</h4>
+                    <p style="margin-bottom:0">OpenAI đang mở rộng <strong>Codex</strong> từ công cụ coding sang <strong>trợ lý công việc hằng ngày</strong>: chọn vai trò, kết nối Slack, Google Workspace, Microsoft 365, nhận prompt gợi ý, rồi để Codex làm research, planning, docs, slides, spreadsheets và theo dõi tiến độ trong cùng một thread. Đây là cú pivot rất rõ: Codex không muốn chỉ là “Claude Code đối đầu”, mà muốn thành <strong>lớp làm việc bên trên bộ công cụ văn phòng</strong>.</p>
+                </div>
+
+                <h2>🎬 Video 1: Codex giờ không chỉ dành cho developer</h2>
+                <p>Tweet mở đầu của OpenAI nói thẳng: “It’s never been easier to do everyday work with Codex.” Điểm đáng chú ý là các ví dụ không còn xoay quanh code nữa, mà là nghiên cứu, lập kế hoạch, tài liệu, slide và bảng tính.</p>
+                <div class="video-container">
+                    <video controls preload="metadata" poster="https://pbs.twimg.com/amplify_video_thumb/2049927743765409792/img/b0Vs-qCWwcURDudc.jpg">
+                        <source src="/blog/openai-codex-everyday-work/codex-demo-1.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <p class="video-caption">Demo 1 — chọn vai trò, kết nối app, thử prompt gợi ý để dùng Codex cho công việc thường ngày.</p>
+
+                <h2>Codex đang rời khỏi “dev-tool aisle”</h2>
+                <p>Ngày trước nghe tới Codex là nghĩ tới code. Nhưng thread này cho thấy OpenAI đang cố đổi định vị: Codex không chỉ là engine viết code, mà là một <strong>AI workspace operator</strong> — một lớp điều phối công việc nằm trên các ứng dụng bạn đang dùng mỗi ngày.</p>
+                <p>Đây là điểm làm thread đáng viết. Nếu một coding agent bắt đầu pitch docs, slides và spreadsheets, nó đã rời khỏi quầy “tool cho lập trình viên”. Nó đang mặc hoodie bước vào văn phòng.</p>
+
+                <div class="feature-grid">
+                    <div class="feature-card"><h4><i class="fas fa-user-tag" style="color:#60a5fa"></i> Role-based setup</h4><p>Người dùng chọn vai trò trước, rồi Codex gợi ý plugin và prompt hợp với công việc đó.</p></div>
+                    <div class="feature-card"><h4><i class="fas fa-plug" style="color:#22c55e"></i> App context</h4><p>Kết nối Slack, Google Workspace, Microsoft 365 và các app thường dùng để agent có ngữ cảnh thật.</p></div>
+                    <div class="feature-card"><h4><i class="fas fa-list-check" style="color:#f59e0b"></i> Task visibility</h4><p>Trong lúc chạy, người dùng thấy tiến độ, file, tool đã dùng và bước tiếp theo.</p></div>
+                    <div class="feature-card"><h4><i class="fas fa-file-pen" style="color:#a78bfa"></i> Review in thread</h4><p>Mở file, yêu cầu sửa, rồi tiếp tục tweak trong cùng một thread thay vì nhảy app liên tục.</p></div>
+                </div>
+
+                <h2>🎬 Video 2: Setup theo vai trò, rồi cắm app vào</h2>
+                <p>Ở video thứ hai, Codex gợi ý plugin theo role và hướng dẫn kết nối các ứng dụng như Slack, Google Workspace, Microsoft 365. Đây là khác biệt giữa “chatbot trống” và “agent có quyền truy cập vào nơi công việc thật đang nằm”.</p>
+                <div class="video-container">
+                    <video controls preload="metadata" poster="https://pbs.twimg.com/amplify_video_thumb/2049928014939750400/img/22_chuOtahzbN77a.jpg">
+                        <source src="/blog/openai-codex-everyday-work/codex-demo-2.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <p class="video-caption">Demo 2 — Codex recommend plugin theo vai trò và hướng dẫn kết nối app công việc.</p>
+
+                <h2>Thứ đáng tiền không phải “suggested prompts”</h2>
+                <p>Suggested prompts nhìn thì tiện, nhưng chưa phải lõi. Lõi nằm ở combo <strong>role + app context + permission</strong>. Khi agent biết bạn là ai trong workflow, được phép đọc một số nguồn dữ liệu, và hiểu app nào liên quan, nó mới bắt đầu bớt giống một ô chat trắng.</p>
+                <p>Một reply trong thread nói khá trúng: “The interesting bit is not suggested prompts. It is role plus app context.” Tôi đồng ý. Prompt gợi ý chỉ là bề mặt; ngữ cảnh và quyền truy cập mới là thứ biến AI thành công cụ vận hành.</p>
+
+                <h2>🎬 Video 3: Personal assistant cho research, plan, docs</h2>
+                <p>OpenAI gọi đây là “personal assistant for everyone”. Codex có thể tóm tắt dữ liệu từ app và docs, lập next steps, draft nội dung, tổ chức nghiên cứu hoặc tạo project plan.</p>
+                <div class="video-container">
+                    <video controls preload="metadata" poster="https://pbs.twimg.com/amplify_video_thumb/2049928085714477056/img/fgyQJkv2QbgkCF5s.jpg">
+                        <source src="/blog/openai-codex-everyday-work/codex-demo-3.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <p class="video-caption">Demo 3 — Codex xử lý các việc knowledge work: research, planning, draft, project plan.</p>
+
+                <h2>Luồng làm việc mới: giao việc, quan sát, sửa tiếp</h2>
+                <p>Thread có 5 demo ngắn, nhưng ghép lại thì thành một workflow khá rõ:</p>
+                <div class="workflow-step"><div class="step-number">1</div><div class="step-content"><h4>Chọn vai trò</h4><p>Codex bắt đầu bằng role, không phải một khung chat vô danh.</p></div></div>
+                <div class="workflow-step"><div class="step-number">2</div><div class="step-content"><h4>Kết nối app</h4><p>Slack, Google Workspace, Microsoft 365 và các công cụ quen thuộc trở thành nguồn ngữ cảnh.</p></div></div>
+                <div class="workflow-step"><div class="step-number">3</div><div class="step-content"><h4>Chạy task</h4><p>Agent làm research, draft, tạo plan, xử lý docs/slides/spreadsheets.</p></div></div>
+                <div class="workflow-step"><div class="step-number">4</div><div class="step-content"><h4>Theo dõi tiến độ</h4><p>Người dùng thấy Codex dùng tool nào, file nào, và bước tiếp theo là gì.</p></div></div>
+                <div class="workflow-step"><div class="step-number">5</div><div class="step-content"><h4>Review và sửa tiếp</h4><p>Mở file, yêu cầu thay đổi, rồi tiếp tục chỉnh trong cùng thread.</p></div></div>
+
+                <h2>🎬 Video 4 & 5: tiến độ rõ ràng, review ngay trong Codex</h2>
+                <p>Hai video cuối là phần quan trọng nhất với người dùng thật: biết agent đang làm gì, dùng file/tool nào, và có thể review output khi nó còn đang thành hình.</p>
+                <div class="video-grid">
+                    <div>
+                        <div class="video-container"><video controls preload="metadata" poster="https://pbs.twimg.com/amplify_video_thumb/2049928162260480000/img/pqu80kwY_qLzFgp8.jpg"><source src="/blog/openai-codex-everyday-work/codex-demo-4.mp4" type="video/mp4"></video></div>
+                        <p class="video-caption">Demo 4 — theo dõi progress, file, tool đã dùng và bước tiếp theo.</p>
+                    </div>
+                    <div>
+                        <div class="video-container"><video controls preload="metadata" poster="https://pbs.twimg.com/amplify_video_thumb/2049928209073086464/img/uYsW3hzffz-LmCk4.jpg"><source src="/blog/openai-codex-everyday-work/codex-demo-5.mp4" type="video/mp4"></video></div>
+                        <p class="video-caption">Demo 5 — từ draft tới deck, mở file và yêu cầu chỉnh trong cùng thread.</p>
+                    </div>
+                </div>
+
+                <h2>💬 Cộng đồng: vừa hào hứng, vừa nghi ngờ đúng chỗ</h2>
+                <div class="community-quote positive"><p>“Role-based agents &gt; generic chatbots. OpenAI cooking with this one.”</p><span class="author">— @DivyamKrPandey</span></div>
+                <div class="community-quote positive"><p>“When AI plugs directly into your daily tools, it stops being optional and starts being essential.”</p><span class="author">— @Nafees_Ai</span></div>
+                <div class="community-quote"><p>“Integration is the easy part. Adoption is where the gap shows up.”</p><span class="author">— @MoveDecisions</span></div>
+                <div class="community-quote negative"><p>“Every AI product eventually becomes ‘for everything’ because specialization limits the addressable market.”</p><span class="author">— @Unpopular_Tech</span></div>
+                <div class="community-quote"><p>“If your coding agent is pitching docs, slides, and spreadsheets, it has left the dev-tool aisle. It wants to be office software, with a hoodie on.”</p><span class="author">— @0xrlh88</span></div>
+
+                <p>Phản ứng cộng đồng khá thú vị: người thích thì nhìn thấy một bước tiến của agentic workflows; người nghi ngờ thì hỏi đúng câu đau: liệu đây là sản phẩm thật sự tốt hơn, hay chỉ là đổi positioning để mở rộng thị trường?</p>
+
+                <h2>Chỗ cần tỉnh táo: tích hợp dễ, adoption mới khó</h2>
+                <p>Tôi không nghĩ Codex thắng chỉ vì nó nối được Slack và Google Workspace. Rất nhiều productivity layer từng pitch y chang: “connect the apps you use every day”. Vấn đề là khi agent đọc được dữ liệu rồi, output có khớp cách team thật sự làm việc không?</p>
+                <p>Ví dụ: một project plan nhìn đẹp trong demo có thể vẫn sai priority, sai chính trị nội bộ, sai format team quen dùng, hoặc thiếu quyết định mà chỉ con người mới dám chốt. Nếu Codex không có cơ chế handoff rõ khi gặp quyết định mơ hồ, nó sẽ hoặc làm bừa, hoặc dừng giữa đường.</p>
+
+                <div class="highlight-box-yellow"><h4>⚠️ Câu hỏi lớn</h4><p style="margin-bottom:0">Codex đang tiến gần “office software có agent bên trong”. Nhưng để thành thói quen thật, OpenAI phải giải quyết 3 thứ: quyền truy cập dữ liệu an toàn, handoff khi agent kẹt quyết định, và output đủ khớp workflow từng team. Demo đẹp là vé vào cửa, không phải chiến thắng.</p></div>
+
+                <h2>🚀 Chốt một câu</h2>
+                <p>OpenAI đang dùng Codex để đánh vào tầng việc văn phòng rộng hơn coding: research, planning, docs, slides, spreadsheets. Nếu làm tốt, đây là bước kéo agent từ “tool cho dev” thành <strong>trợ lý vận hành công việc hằng ngày</strong>. Nếu làm dở, nó sẽ chỉ là thêm một ô chat biết mở nhiều app hơn.</p>
+
+                <div class="source-links">
+                    <h4>Nguồn & tham khảo</h4>
+                    <ul>
+                        <li><a href="https://x.com/openai/status/2049928776147230886" target="_blank">OpenAI (@OpenAI) — Full thread Codex everyday work trên X</a></li>
+                        <li><a href="https://x.com/OpenAI/status/2049928777480974606" target="_blank">OpenAI — Codex setup và app connections</a></li>
+                        <li><a href="https://x.com/OpenAI/status/2049928779083219105" target="_blank">OpenAI — Personal assistant demo</a></li>
+                        <li><a href="https://x.com/OpenAI/status/2049928780588966270" target="_blank">OpenAI — Task progress demo</a></li>
+                        <li><a href="https://x.com/OpenAI/status/2049928782019256561" target="_blank">OpenAI — Draft to deck review demo</a></li>
+                    </ul>
+                </div>
+
+                <div class="back-to-blog-footer"><a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a></div>
+                <div class="article-cta-stack">
+                    <a href="/blog/cursor-sdk-ai-agents/" class="article-suggestion-card"><span class="article-suggestion-label"><i class="fas fa-book-open"></i> Đọc tiếp</span><span class="article-suggestion-title">Cursor Ra Mắt SDK — Xây Dựng AI Agents Với Cùng Runtime và Models Như Cursor</span></a>
+                    <div class="article-cta-actions"><a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a></div>
+                </div>
+                <div class="tags"><span class="tag">OpenAI</span><span class="tag">Codex</span><span class="tag">AI Agent</span><span class="tag">Productivity</span><span class="tag">Workflows</span></div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>
