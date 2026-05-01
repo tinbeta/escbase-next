@@ -2,12 +2,12 @@
   {
     "url": "/blog/openclaw-2026-4-29-release/",
     "title": "OpenClaw 2026.4.29 — Group Chat Bớt Giả, Agent Bớt Khờ",
-    "excerpt": "OpenClaw 2026.4.29 tập trung vào group chat agent-native hơn, follow-up commitments, memory people wiki, NVIDIA provider và loạt nâng cấp an toàn vận hành.",
+    "excerpt": "OpenClaw 2026.4.29 nâng group chat, follow-up commitments, memory wiki và NVIDIA provider. Full thread cho thấy cộng đồng hào hứng nhưng vẫn còn bug report gateway, Discord và local models.",
     "date": "May 01, 2026",
     "tag": "AI Agents",
     "tagIcon": "fas fa-terminal",
     "tagColor": "#a78bfa",
-    "readTime": "8 min read",
+    "readTime": "9 min read",
     "featured": true,
     "image": "/images/openclaw-2026-4-29-release-thumb.svg"
   },

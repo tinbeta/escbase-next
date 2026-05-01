@@ -53,7 +53,7 @@
                 </div>
 
                 <h2>🦞 Mở đầu: OpenClaw đang sửa đúng chỗ đau</h2>
-                <p>Tweet launch của OpenClaw khá gọn: <strong>group chat tốt hơn</strong>, <strong>follow-up commitments</strong>, <strong>safer exec</strong>, <strong>NVIDIA catalogs</strong>, và <strong>startup/plugin fixes</strong>. Câu chốt là <em>"Group chat finally feels agent-native"</em>. Phần phân tích bên dưới bám chủ yếu vào release notes chính thức vì môi trường hiện tại không đọc được thread đầy đủ qua bird.</p>
+                <p>Tweet launch của OpenClaw khá gọn: <strong>group chat tốt hơn</strong>, <strong>follow-up commitments</strong>, <strong>safer exec</strong>, <strong>NVIDIA catalogs</strong>, và <strong>startup/plugin fixes</strong>. Câu chốt là <em>"Group chat finally feels agent-native"</em>. Phần phân tích bên dưới bám trên full thread X, replies đáng chú ý và release notes chính thức trên GitHub.</p>
                 <p>Nói thẳng: đây là một claim lớn. Rất nhiều AI agent nhìn ngon trong demo 1-1, nhưng ném vào group chat là lộ ngay độ ngáo — chen ngang, quên ngữ cảnh, hoặc im lặng lúc cần nói. Bản 2026.4.29 cho thấy OpenClaw đang dồn lực xử lý đúng chỗ đau đó.</p>
 
                 <div class="stats-row">
@@ -72,6 +72,12 @@
                 </div>
 
                 <p>Nếu claim này đứng vững, đây là khác biệt thật. Vì tương lai của agent không nằm ở việc chat riêng với một người mãi mãi, mà là chen vào các workflow hỗn loạn ngoài đời: nhóm làm việc, cộng đồng, support, hoặc các room bán tự động.</p>
+
+                <div class="highlight-box-blue">
+                    <h4>Thread nói rõ hơn tweet gốc</h4>
+                    <p>Trong tweet con, OpenClaw giải thích group chat tự nhiên hơn vì agent có thể <strong>nghĩ, dùng tool, rồi chủ động gửi hoặc sửa visible message</strong>, thay vì để vòng chat tự động post final assistant text. Đây là chi tiết quan trọng: agent không chỉ “trả lời trong group”, mà có thêm quyền kiểm soát lớp hiển thị.</p>
+                    <p style="margin-bottom:0">Một tweet khác nói busy chats cũng bình tĩnh hơn: follow-up có thể <strong>steer active run ở model boundary kế tiếp</strong>, thay vì đẻ thêm việc trùng lặp hoặc ngồi chờ loop cũ kết thúc.</p>
+                </div>
 
                 <h2>📌 2. Follow-up commitments: agent không chỉ trả lời, mà còn phải nhớ lời hứa</h2>
                 <p>Một thay đổi rất đáng tiền trong release notes là <strong>opt-in inferred follow-up commitments</strong>. Hệ thống có thể rút ra các việc cần follow-up từ ngữ cảnh, gom lại, giới hạn theo ngày, và giao qua heartbeat-delivered reminders.</p>
@@ -128,6 +134,36 @@
                 <p>Release notes còn dành hẳn một cụm lớn cho <strong>gateway và packaged-plugin reliability</strong>: slow-host startup, model catalogs tái sử dụng, diagnostics timeline, stale-session recovery, version-scoped update caches, và cả một rừng channel fixes cho Slack, Telegram, Discord, WhatsApp, Teams, Matrix, Feishu...</p>
                 <p>Nói ngắn gọn: OpenClaw không chỉ thêm tính năng. Nó còn đang <strong>làm nền móng bớt ọp ẹp</strong>. Đây là thứ rất quan trọng nếu muốn agent hoạt động trên nhiều bề mặt chat khác nhau mà không biến mỗi channel thành một đống exception riêng.</p>
 
+                <h2>💬 Cộng đồng: hứng thú, nhưng bug report vẫn khá thật</h2>
+                <p>Điểm hay của thread này là replies không chỉ toàn “congrats”. Có người nhìn thấy hướng đi lớn hơn, nhưng cũng có nhiều phản hồi rất đời về gateway, Discord, local models và Telegram polling.</p>
+
+                <div class="community-quote positive">
+                    <p>"That's awesome, multi-agent work only matters if the group chat can actually carry the work. This update is huge!"</p>
+                    <span class="author">— @JohnGregQuantum</span>
+                </div>
+
+                <div class="community-quote positive">
+                    <p>"Multi-provider as a structural choice (NVIDIA provider + group chat agent-native) is the moat Claude Code can't match without breaking their own subscription lock."</p>
+                    <span class="author">— @leewaytor</span>
+                </div>
+
+                <div class="community-quote negative">
+                    <p>"rolled back for 2026.4.23 already. They got to do something about this: Local models from .8b to 9B fail..."</p>
+                    <span class="author">— @GaskinBryon</span>
+                </div>
+
+                <div class="community-quote negative">
+                    <p>"Updated and it broke the gateway again. Doctor won't fix. Since .23, everything has been broken for me."</p>
+                    <span class="author">— @drstankbooty</span>
+                </div>
+
+                <div class="community-quote negative">
+                    <p>"Discord chat is broken V10 module is missing"</p>
+                    <span class="author">— @AvinashAila</span>
+                </div>
+
+                <p>OpenClaw cũng có trả lời một case gateway/plugin bằng câu ngắn: <em>"We fixed a lot around plugins, yes."</em> Với người dùng máy yếu hoặc local models nhỏ, một reply khác gợi ý cấu hình <code>agents.defaults.experimental.localModelLean: true</code>. Nói cách khác, bản này có cải thiện thật, nhưng vẫn là một release vận hành nhiều cạnh sắc.</p>
+
                 <h2>🤔 Chỗ cần tỉnh táo</h2>
                 <p>Bản 2026.4.29 rất dày, nhưng cũng có một rủi ro rõ ràng: <strong>nó chạm vào quá nhiều lớp cùng lúc</strong> — messaging, memory, providers, gateway, channels, security. Những bản kiểu này thường tốt cho roadmap dài hạn, nhưng cũng dễ tạo ra edge case mới ở chỗ khó đoán.</p>
                 <p>Ngoài ra, câu <em>"group chat finally feels agent-native"</em> là một lời hứa lớn. Muốn chứng minh điều đó, OpenClaw không chỉ cần tính năng đúng — nó cần <strong>hành vi đúng trong hàng trăm tình huống nhỏ, lộn xộn, đời thường</strong>. Cái này changelog chưa thể chứng minh thay cho thời gian.</p>
@@ -143,7 +179,7 @@
                 <div class="source-links">
                     <h4>Nguồn & tham khảo</h4>
                     <ul>
-                        <li><a href="https://x.com/openclaw/status/2049986075221692678" target="_blank">OpenClaw (@openclaw) — Announcement trên X</a></li>
+                        <li><a href="https://x.com/openclaw/status/2049986075221692678" target="_blank">OpenClaw (@openclaw) — Full thread announcement trên X</a></li>
                         <li><a href="https://github.com/openclaw/openclaw/releases/tag/v2026.4.29" target="_blank">Release Notes chính thức — GitHub</a></li>
                     </ul>
                 </div>
