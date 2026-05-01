@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/image-to-code-frontend-workflow/",
+    "title": "Image-to-Code: Cách Làm Frontend AI Bớt Củ Chuối",
+    "excerpt": "Leon Lin đề xuất workflow image-to-code: tạo ảnh thiết kế trước, chọn hướng visual, tách asset, rồi đưa cho coding agent build từng section và refine bằng screenshot.",
+    "date": "May 01, 2026",
+    "tag": "AI Design",
+    "tagIcon": "fas fa-wand-magic-sparkles",
+    "tagColor": "#a78bfa",
+    "readTime": "8 min read",
+    "featured": true,
+    "image": "/images/image-to-code-frontend-workflow-thumb.svg"
+  },
+  {
     "url": "/blog/claude-security-public-beta/",
     "title": "Claude Security Public Beta: Anthropic Đưa AI Săn Lỗ Hổng Vào Enterprise",
     "excerpt": "Anthropic mở public beta Claude Security cho Enterprise: AI quét codebase, xác thực finding để giảm false positive, gắn severity/confidence và đề xuất patch để team review.",

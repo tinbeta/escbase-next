@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image-to-Code: Cách Làm Frontend AI Bớt Củ Chuối - Escbase</title>
+  <meta name="description" content="Leon Lin đề xuất workflow image-to-code: tạo thiết kế bằng ảnh trước, tách asset, rồi đưa cho coding agent build từng section để frontend AI bớt generic.">
+  <meta property="og:title" content="Image-to-Code: Cách Làm Frontend AI Bớt Củ Chuối">
+  <meta property="og:description" content="Thay vì bảo agent ‘làm modern’, hãy tạo visual target trước rồi code từng section. Đây là workflow image-to-code cho frontend AI.">
+  <meta property="og:image" content="https://escbase.xyz/images/image-to-code-frontend-workflow-thumb.svg">
+  <meta property="og:url" content="https://escbase.xyz/blog/image-to-code-frontend-workflow/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/shared-article.css">
+  <link rel="stylesheet" href="/shared-article-footer.css">
+  <style>.step-card{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius-md);padding:1.15rem;margin:1rem 0}.step-card h4{margin-bottom:.45rem;display:flex;gap:.55rem;align-items:center}.quote-box{border-left:3px solid var(--accent);background:rgba(99,102,241,.06);border-radius:0 var(--radius-md) var(--radius-md) 0;padding:1rem 1.1rem;margin:1.3rem 0}.workflow-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.4rem 0}.workflow-grid .step-card{margin:0}.source-note{font-size:.9rem;color:var(--text-muted)}@media(max-width:768px){.workflow-grid{grid-template-columns:1fr}}</style>
+</head>
+<body>
+  <div class="container">
+    <article>
+      <header class="article-header">
+        <span class="category-badge"><i class="fas fa-wand-magic-sparkles"></i> AI Design</span>
+        <h1>Image-to-Code: Cách Làm Frontend AI Bớt Củ Chuối</h1>
+        <div class="meta"><span><i class="far fa-calendar"></i> 01/05/2026</span><span><i class="far fa-clock"></i> 8 phút đọc</span><span><i class="far fa-folder"></i> AI Frontend, Design Workflow</span></div>
+      </header>
+      <div class="article-content">
+        <div class="highlight-box"><h4>TL;DR</h4><p style="margin-bottom:0">Leon Lin đưa ra một workflow rất thực dụng: đừng bắt coding agent vừa nghĩ taste, vừa thiết kế, vừa code trong một cú prompt. Hãy tạo ảnh thiết kế trước, chọn hướng đẹp, tách asset, rồi đưa từng section cho agent code và refine bằng screenshot. Nói ngắn: <strong>image first, code second</strong>.</p></div>
+
+        <p>Hầu hết website do AI tạo ra nhìn vẫn hơi “AI”. Không phải vì model dở hoàn toàn, mà vì workflow thường sai từ đầu. Người dùng gõ “make it modern”, “make it premium”, “make it clean”, rồi mong agent tự sinh ra gu thiết kế tốt, layout tốt, spacing tốt, asset tốt và code tốt trong cùng một lần.</p>
+        <p>Kết quả quen thuộc: hero căn giữa, gradient blob, vài card lơ lửng, spacing hơi ngẫu nhiên, nhìn qua thì ổn nhưng không có chất. Leon Lin gọi đúng bệnh: nhiều người đang bắt coding agent phát minh cả visual design lẫn implementation cùng lúc.</p>
+
+        <h2>Vấn đề không nằm ở code, mà nằm ở target</h2>
+        <p>Frontend là thứ thị giác trước khi là thứ kỹ thuật. Một trang tốt phụ thuộc vào hierarchy, khoảng trắng, typography, màu sắc, bố cục, ảnh, icon, nhịp giữa các section và hàng chục quyết định nhỏ. Nếu không có visual target rõ ràng, coding agent sẽ lấp chỗ trống bằng pattern quen thuộc nhất.</p>
+        <p>Đó là lý do image-to-code hấp dẫn. Thay vì nói “hãy làm đẹp”, bạn cho agent một đích đến cụ thể: ảnh hero này, section này, asset này, spacing kiểu này. Agent không cần đoán taste nữa; nó có thứ để bám.</p>
+
+        <div class="quote-box"><p>“Instead of asking the model to invent taste, layout, assets, responsiveness, and implementation at once, you give it a visual target.”</p><p class="source-note">— Leon Lin</p></div>
+
+        <h2>Workflow image-to-code hoạt động thế nào?</h2>
+        <div class="workflow-grid">
+          <div class="step-card"><h4><i class="fas fa-image" style="color:#60a5fa"></i> 1. Tạo ảnh trước</h4><p>Generate các màn hình hoặc section website bằng image model, thay vì nhảy thẳng vào code.</p></div>
+          <div class="step-card"><h4><i class="fas fa-compass-drafting" style="color:#a78bfa"></i> 2. Chọn hướng visual</h4><p>So nhiều phiên bản, lấy hero tốt ở bản này, CTA tốt ở bản khác, rồi chốt art direction.</p></div>
+          <div class="step-card"><h4><i class="fas fa-cubes" style="color:#22c55e"></i> 3. Tách asset</h4><p>Dùng image generation để tạo lại object, icon, texture, mockup ở dạng sạch và có thể dùng trong web.</p></div>
+          <div class="step-card"><h4><i class="fas fa-code" style="color:#f59e0b"></i> 4. Code từng section</h4><p>Đưa ảnh + asset + chỉ dẫn rõ ràng cho coding agent, build từng phần rồi screenshot để refine.</p></div>
+        </div>
+
+        <h2>Đừng generate một ảnh full page khổng lồ</h2>
+        <p>Một điểm rất đáng nhớ trong thread: không nên tạo một screenshot toàn trang quá dài. Ảnh kiểu đó thường mất chi tiết, bố cục yếu hơn và rất khó recreate chính xác. Cách tốt hơn là tạo từng section: hero, about, product showcase, services, testimonials, CTA, footer.</p>
+        <p>Điều này nghe nhỏ nhưng ảnh hưởng lớn. Khi mỗi section có đủ không gian, image model có thể xử lý composition tốt hơn. Coding agent cũng dễ copy hơn vì scope nhỏ, ít mơ hồ, ít đoán mò.</p>
+
+        <h2>Prompt thiết kế phải có gu, không chỉ có chữ “modern”</h2>
+        <p>Leon Lin nói thẳng: “modern” gần như vô nghĩa. Muốn ra thiết kế tốt, prompt phải mô tả được mood và constraints: minimal, editorial, calm, high-end, warm, natural; hoặc playful, structured, student-friendly. Quan trọng hơn, phải nói rõ thứ cần tránh: generic SaaS visuals, fake dashboard cards, gradient blobs, overdesigned AI aesthetics.</p>
+        <p>Ở đây có một nuance hay: “be creative” trong prompt code thường dễ làm layout rối, nhưng trong prompt ảnh lại có thể hữu ích nếu đi kèm ràng buộc. Ví dụ: sáng tạo hơn, nhưng vẫn realistic, premium, clean và dễ implement.</p>
+
+        <h2>Asset mới là thứ kéo chất lượng lên</h2>
+        <p>Một website đẹp thường không chỉ đẹp vì CSS. Nó đẹp vì có asset đúng: ảnh sản phẩm, 3D object, illustration, texture, icon hoặc device mockup. Nếu asset yếu, frontend sẽ yếu dù layout có gọn.</p>
+        <p>Workflow được đề xuất là: upload ảnh section, yêu cầu model “generate and extract” asset cần dùng, không chỉ crop. Sau đó xử lý background nếu cần transparency, convert sang WebP, rồi đưa vào project. Đây là chỗ nhiều người bỏ qua, nên trang AI-built nhìn vẫn rẻ tiền.</p>
+
+        <h2>Khi code: kiên nhẫn, từng section một</h2>
+        <p>Đừng đưa cả website cho agent rồi bảo “copy exactly”. Cách đó thường sinh ra HTML/CSS dài, lệch spacing và khó sửa. Hãy bắt đầu từ hero: đưa ảnh hero, asset, tên file, tech stack, project structure và yêu cầu recreate layout.</p>
+        <p>Sau lần đầu, chụp screenshot kết quả, so với reference, rồi feedback cụ thể: hero image quá nhỏ, headline thấp hơn reference, grid spacing rộng quá, button chưa đúng. Nếu cần, vẽ trực tiếp lên screenshot. Đây là loop quan trọng: reference image → code attempt → screenshot → visual feedback → refine.</p>
+
+        <h2>Phản ứng cộng đồng: nhiều người thấy đây là framework thực dụng</h2>
+        <p>Thread nhận phản ứng khá tích cực vì nó không bán mộng “AI tự làm web đẹp trong một prompt”. Nó mô tả đúng kiểu làm hơi tốn công nhưng ra kết quả tốt hơn. Một reply nói sẽ dùng nó như framework làm frontend; một reply khác xin thêm bản cho marketing screenshot. Điều đó cho thấy nhu cầu thật: ai cũng muốn dùng AI nhanh hơn, nhưng không muốn sản phẩm nhìn như template rẻ.</p>
+        <p>Cũng có người nói họ đã làm tương tự từ khi GPT image mới mạnh lên: dùng text-to-image để iterate app design, chọn phần tốt, rồi dùng ảnh làm reference để code. Tức đây không chỉ là mẹo cá nhân, mà là một pattern đang hình thành trong cộng đồng builder.</p>
+
+        <h2>Nhận định: đây là “design brief” cho thời agentic coding</h2>
+        <p>Điểm hay nhất của image-to-code là nó kéo bước design brief trở lại. Khi dùng agent, nhiều người bỏ qua design brief vì tưởng model sẽ tự hiểu. Nhưng agent càng mạnh, brief càng quan trọng. Nếu brief mơ hồ, model sẽ tạo ra thứ trung bình nhanh hơn. Nếu brief có visual target, model có cơ hội tạo ra thứ đáng dùng.</p>
+        <p>Dĩ nhiên, workflow này không thay thế taste. Bạn vẫn phải biết chọn ảnh nào tốt, section nào dùng được, asset nào quá giả, spacing nào lệch. AI giúp tăng tốc exploration và implementation, nhưng gu thẩm mỹ vẫn là lớp kiểm duyệt cuối.</p>
+
+        <div class="highlight-box"><h4>Chốt một câu</h4><p style="margin-bottom:0">Muốn frontend AI bớt generic, đừng bắt agent tưởng tượng giao diện từ chữ “modern”. Hãy cho nó một hình ảnh đủ tốt để bám vào, rồi code từng section và refine bằng screenshot.</p></div>
+
+        <div class="source-links"><h4>Nguồn & tham khảo</h4><ul><li><a href="https://x.com/LexnLin/status/2048791596137632126" target="_blank" rel="noopener noreferrer">Thread gốc của Leon Lin trên X</a></li><li><a href="https://github.com/Leonxlnx/taste-skill" target="_blank" rel="noopener noreferrer">Repo taste-skill / imagegen skills</a></li><li><a href="https://express.adobe.com/home/tools/remove-background" target="_blank" rel="noopener noreferrer">Adobe Express Remove Background</a></li><li><a href="https://cxnvert.vercel.app/" target="_blank" rel="noopener noreferrer">cxnvert — image filetype converter</a></li></ul></div>
+
+        <div class="back-to-blog-footer"><a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a></div>
+        <div class="tags"><span class="tag">#AIFrontend</span><span class="tag">#ImageToCode</span><span class="tag">#AIDesign</span><span class="tag">#CodingAgents</span></div>
+      </div>
+    </article>
+  </div>
+</body>
+</html>

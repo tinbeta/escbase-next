@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Fri, 01 May 2026 06:42:02 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2026 06:50:10 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Image-to-Code: Cách Làm Frontend AI Bớt Củ Chuối</title>
+      <link>https://escbase.xyz/blog/image-to-code-frontend-workflow/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/image-to-code-frontend-workflow/</guid>
+      <pubDate>Thu, 30 Apr 2026 17:00:00 GMT</pubDate>
+      <description>Leon Lin đề xuất workflow image-to-code: tạo ảnh thiết kế trước, chọn hướng visual, tách asset, rồi đưa cho coding agent build từng section và refine bằng screenshot.</description>
+      <category>AI Design</category>
+      <enclosure url="https://escbase.xyz/images/image-to-code-frontend-workflow-thumb.svg" type="image/svg+xml" length="0" />
+    </item>
     <item>
       <title>Claude Security Public Beta: Anthropic Đưa AI Săn Lỗ Hổng Vào Enterprise</title>
       <link>https://escbase.xyz/blog/claude-security-public-beta/</link>
@@ -447,15 +456,6 @@
       <description>a16z crypto vừa đưa ra thesis khá rõ: AI agents đang tiến từ copilots sang economic actors, nhưng hạ tầng xung quanh vẫn thiếu identity, governance, payments, verification và user control. Theo họ, blockchain có thể lấp đúng 5 lỗ hổng này. Điểm đáng chú ý là đây không chỉ là bài nói về stablecoin, mà là một cách định vị crypto như trust layer cho agent economy.</description>
       <category>AI x Crypto</category>
       <enclosure url="https://escbase.xyz/images/a16z-agent-blockchain-infrastructure-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>Arbitrum Đóng Băng 30,766 ETH Từ Vụ KelpDAO, Cứu Tiền Xong Thì Drama “Phi Tập Trung” Bùng Lên</title>
-      <link>https://escbase.xyz/blog/arbitrum-freezes-kelpdao-funds</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/arbitrum-freezes-kelpdao-funds</guid>
-      <pubDate>Mon, 20 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Arbitrum Security Council đã dùng quyền khẩn cấp để đóng băng 30,766 ETH liên quan vụ hack KelpDAO và chuyển số tiền này vào ví frozen trung gian. Về mặt cứu tài sản, đây là tin tốt. Nhưng về mặt hình ảnh, Arbitrum vừa tự đẩy mình vào đúng câu hỏi khó nhất của crypto: nếu một hội đồng có thể can thiệp và đóng băng tiền khi cần, thì phi tập trung còn được hiểu tới đâu?</description>
-      <category>Layer 2</category>
-      <enclosure url="https://escbase.xyz/images/arbitrum-freezes-kelpdao-funds-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>
