@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/claude-security-public-beta/",
+    "title": "Claude Security Public Beta: Anthropic Đưa AI Săn Lỗ Hổng Vào Enterprise",
+    "excerpt": "Anthropic mở public beta Claude Security cho Enterprise: AI quét codebase, xác thực finding để giảm false positive, gắn severity/confidence và đề xuất patch để team review.",
+    "date": "May 01, 2026",
+    "tag": "AI Security",
+    "tagIcon": "fas fa-shield-halved",
+    "tagColor": "#38bdf8",
+    "readTime": "7 min read",
+    "featured": true,
+    "image": "/images/claude-security-public-beta-thumb.svg"
+  },
+  {
     "url": "/blog/openai-codex-everyday-work/",
     "title": "OpenAI Biến Codex Thành Trợ Lý Văn Phòng, Không Chỉ Coding",
     "excerpt": "OpenAI mở rộng Codex cho công việc hằng ngày: chọn vai trò, kết nối Slack, Google Workspace, Microsoft 365, rồi tạo docs, slides, spreadsheets và theo dõi tiến độ trong cùng một thread.",
