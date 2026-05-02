@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/openclaw-chatgpt-login-pivot",
+    "title": "OpenClaw Pivot: Dùng ChatGPT Plus Login Thay Thế Claude API Sau Khi Bị Anthropic Cấm",
+    "excerpt": "Anthropic cấm OpenClaw dùng Claude Pro/Max subscriptions từ 4/4/2026. OpenClaw pivot sang ChatGPT Plus login để truy cập Codex với near-unlimited, không cần API key. OpenAI ủng hộ openness, Anthropic lock-down.",
+    "date": "May 02, 2026",
+    "tag": "AI Agent",
+    "tagIcon": "fas fa-robot",
+    "tagColor": "#ef4444",
+    "readTime": "6 min read",
+    "featured": true,
+    "image": "/images/openclaw-chatgpt-login-pivot-thumb.svg"
+  },
+  {
     "url": "/blog/image-to-code-frontend-workflow/",
     "title": "Image-to-Code: Cách Làm Frontend AI Bớt Củ Chuối",
     "excerpt": "Leon Lin đề xuất workflow image-to-code: tạo ảnh thiết kế trước, chọn hướng visual, tách asset, rồi đưa cho coding agent build từng section và refine bằng screenshot.",
