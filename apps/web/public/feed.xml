@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Fri, 01 May 2026 06:50:10 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 02 May 2026 12:39:20 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenClaw Pivot: Dùng ChatGPT Plus Login Thay Thế Claude API Sau Khi Bị Anthropic Cấm</title>
+      <link>https://escbase.xyz/blog/openclaw-chatgpt-login-pivot</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/openclaw-chatgpt-login-pivot</guid>
+      <pubDate>Fri, 01 May 2026 17:00:00 GMT</pubDate>
+      <description>Anthropic cấm OpenClaw dùng Claude Pro/Max subscriptions từ 4/4/2026. OpenClaw pivot sang ChatGPT Plus login để truy cập Codex với near-unlimited, không cần API key. OpenAI ủng hộ openness, Anthropic lock-down.</description>
+      <category>AI Agent</category>
+      <enclosure url="https://escbase.xyz/images/openclaw-chatgpt-login-pivot-thumb.svg" type="image/svg+xml" length="0" />
+    </item>
     <item>
       <title>Image-to-Code: Cách Làm Frontend AI Bớt Củ Chuối</title>
       <link>https://escbase.xyz/blog/image-to-code-frontend-workflow/</link>
@@ -447,15 +456,6 @@
       <description>Alex Finn đang đẩy một luận điểm rất rõ sau màn ra mắt Kimi K2.6: open-weight models đã mạnh tới mức bài toán không còn chỉ là model nào tốt hơn, mà là ai sở hữu đủ phần cứng để chạy local, riêng tư và 24/7. Nhưng cùng lúc đó, cộng đồng cũng phản pháo mạnh bằng những câu hỏi rất thực tế về benchmark, RAM 700GB, capex phần cứng và ROI so với cloud.</description>
       <category>Local AI</category>
       <enclosure url="https://escbase.xyz/images/alex-finn-local-ai-hardware-bottleneck-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>a16z: Blockchains Là Hạ Tầng Còn Thiếu Cho AI Agents, Không Chỉ Là Chỗ Thanh Toán</title>
-      <link>https://escbase.xyz/blog/a16z-agent-blockchain-infrastructure</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/a16z-agent-blockchain-infrastructure</guid>
-      <pubDate>Mon, 20 Apr 2026 17:00:00 GMT</pubDate>
-      <description>a16z crypto vừa đưa ra thesis khá rõ: AI agents đang tiến từ copilots sang economic actors, nhưng hạ tầng xung quanh vẫn thiếu identity, governance, payments, verification và user control. Theo họ, blockchain có thể lấp đúng 5 lỗ hổng này. Điểm đáng chú ý là đây không chỉ là bài nói về stablecoin, mà là một cách định vị crypto như trust layer cho agent economy.</description>
-      <category>AI x Crypto</category>
-      <enclosure url="https://escbase.xyz/images/a16z-agent-blockchain-infrastructure-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>
