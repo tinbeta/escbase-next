@@ -1,5 +1,15 @@
 [
   {
+    "url": "/blog/grok-4-3-cost-efficiency-pareto-frontier/",
+    "title": "Grok 4.3: Giảm Chi Phí 40-60%, Cải Thiện Điểm Số và Pareto Frontier Mới",
+    "excerpt": "xAI ra mắt Grok 4.3 với AI Index 53, chi phí giảm 40% input / 60% output, ngồi trên Pareto frontier. Model vượt Claude Sonnet 4.6, Gemini 3.1 Pro nhưng kém GPT-5.5. Cộng đồng phản ứng trái chiều về tính thực tế của benchmark.",
+    "date": "30 Apr 2026",
+    "tag": "AI Models & Agents",
+    "tagIcon": "fas fa-brain",
+    "tagColor": "#f97316",
+    "readTime": "8 min read"
+  },
+  {
     "url": "/blog/openclaw-chatgpt-login-pivot",
     "title": "OpenClaw Pivot: Dùng ChatGPT Plus Login Thay Thế Claude API Sau Khi Bị Anthropic Cấm",
     "excerpt": "Anthropic cấm OpenClaw dùng Claude Pro/Max subscriptions từ 4/4/2026. OpenClaw pivot sang ChatGPT Plus login để truy cập Codex với near-unlimited, không cần API key. OpenAI ủng hộ openness, Anthropic lock-down.",
