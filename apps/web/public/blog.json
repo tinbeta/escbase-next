@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/open-slide-agent-framework/",
+    "title": "open-slide: Framework Làm Slide Dành Riêng Cho AI Agents (Claude, Cursor, Codex)",
+    "excerpt": "open-slide là slide framework cho agents: prompt → polished deck. Mỗi slide là React component 1920×1080. Có /create-slide, /apply-comments (in-browser feedback), presenter mode, export PDF/HTML, deploy Vercel. Hoạt động với Claude Code, Cursor, Codex.",
+    "date": "May 03, 2026",
+    "tag": "AI Tools",
+    "tagIcon": "fas fa-desktop",
+    "tagColor": "#6366f1",
+    "readTime": "8 phút đọc",
+    "featured": true,
+    "image": "/images/open-slide-agent-framework-thumb.svg"
+  },
+  {
     "url": "/blog/elevenlabs-agents-5-startup-ideas/",
     "title": "5 Startup Ideas Dùng ElevenLabs Agents Thay Thế Nhân Sự, Chi Phí Chỉ $0.08/phút",
     "excerpt": "5 ý tưởng startup có thể build và resell chỉ với ElevenLabs Agents: AI Receptionist, Multilingual Support, AI SDR, Restaurant Order Agent, Real Estate Scheduler. Chi phí $0.08/phút, thay thế $2-5k/tháng nhân sự.",

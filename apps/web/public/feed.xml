@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Sun, 03 May 2026 10:32:48 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 03 May 2026 11:13:13 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>open-slide: Framework Làm Slide Dành Riêng Cho AI Agents (Claude, Cursor, Codex)</title>
+      <link>https://escbase.xyz/blog/open-slide-agent-framework/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/open-slide-agent-framework/</guid>
+      <pubDate>Sat, 02 May 2026 17:00:00 GMT</pubDate>
+      <description>open-slide là slide framework cho agents: prompt → polished deck. Mỗi slide là React component 1920×1080. Có /create-slide, /apply-comments (in-browser feedback), presenter mode, export PDF/HTML, deploy Vercel. Hoạt động với Claude Code, Cursor, Codex.</description>
+      <category>AI Tools</category>
+      <enclosure url="https://escbase.xyz/images/open-slide-agent-framework-thumb.svg" type="image/svg+xml" length="0" />
+    </item>
     <item>
       <title>5 Startup Ideas Dùng ElevenLabs Agents Thay Thế Nhân Sự, Chi Phí Chỉ $0.08/phút</title>
       <link>https://escbase.xyz/blog/elevenlabs-agents-5-startup-ideas/</link>
@@ -447,15 +456,6 @@
       <description>Google vừa đưa Deep Research và Deep Research Max lên Gemini API với Gemini 3.1 Pro, hỗ trợ MCP, chart/infographic native, collaborative planning, streaming và grounding từ cả web lẫn file riêng. Điểm đáng chú ý không chỉ là nghiên cứu sâu hơn, mà là Google đang biến research agent thành một hạ tầng workflow thực thụ.</description>
       <category>AI Research</category>
       <enclosure url="https://escbase.xyz/images/google-deep-research-max-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>Bud Tự Gọi Mình Là “AI Human Emulator”: Đây Là Agent Có Máy Tính Thật Hay Chỉ Là Một Cách Đặt Tên Khôn?</title>
-      <link>https://escbase.xyz/blog/bud-ai-human-emulator-worker-computer</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/bud-ai-human-emulator-worker-computer</guid>
-      <pubDate>Wed, 22 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Bud vừa launch với claim rất kêu: &apos;the first AI Human Emulator&apos;. Sản phẩm này cho agent một máy tính, browser, memory, số điện thoại, Telegram và khả năng dùng tool như một người thật. Điều đáng bàn không phải chỉ là nó làm được gì, mà là cách Bud đang reframe AI agent thành &apos;AI worker&apos; có hạ tầng làm việc riêng.</description>
-      <category>AI Agents</category>
-      <enclosure url="https://escbase.xyz/images/bud-ai-human-emulator-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>

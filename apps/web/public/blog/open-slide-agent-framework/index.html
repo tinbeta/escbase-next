@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>open-slide: Framework Làm Slide Dành Riêng Cho AI Agents (Claude, Cursor, Codex) | Escbase</title>
+    <meta name="description" content="open-slide là slide framework được build cho agents: prompt agent → nhận polished deck. Mỗi slide là React component trên canvas 1920×1080. Có /create-slide, /apply-comments (in-browser feedback), presenter mode, export PDF/HTML, deploy Vercel/Netlify. Hoạt động với Claude Code, Cursor, Codex.">
+    <meta property="og:title" content="open-slide: Slide Framework Dành Cho AI Agents">
+    <meta property="og:description" content="Prompt agent → polished deck. open-slide là missing runtime giữa 'make me slides' và deck chuyên nghiệp. Hỗ trợ in-browser inspector, apply comments 1-click.">
+    <meta property="og:image" content="https://escbase.xyz/images/open-slide-agent-framework-thumb.png">
+    <meta property="og:url" content="https://escbase.xyz/blog/open-slide-agent-framework/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/shared-article.css">
+    <link rel="stylesheet" href="/shared-article-footer.css">
+    <style>
+        .video-container { margin: 2rem 0; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border); }
+        .video-container video { width: 100%; display: block; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+        .feature-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.25rem; }
+        .feature-card h4 { color: var(--text); margin-bottom: .5rem; font-size: 1.05rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <span class="category-badge"><i class="fas fa-desktop"></i> AI Tools</span>
+                <h1>open-slide: Framework Làm Slide Dành Riêng Cho AI Agents (Claude, Cursor, Codex)</h1>
+                <div class="meta">
+                    <span><i class="far fa-calendar"></i> 03/05/2026</span>
+                    <span><i class="far fa-clock"></i> 8 phút đọc</span>
+                    <span><i class="far fa-folder"></i> AI Tools, Presentation, Agents</span>
+                </div>
+                <img src="/images/open-slide-agent-framework-thumb.png" alt="open-slide agent framework" class="inline-image" style="margin-top:1rem;">
+            </header>
+
+            <div class="article-content">
+                <div class="highlight-box">
+                    <h4>TL;DR</h4>
+                    <p style="margin-bottom:0"><strong>open-slide</strong> là slide framework được xây dựng dành riêng cho AI agents: chỉ cần prompt agent, nhận polished deck. Mỗi slide là React component trên canvas 1920×1080. Có sẵn agent skills như <code>/create-slide</code> (tạo deck từ 1 dòng prompt), <code>/apply-comments</code> (áp dụng feedback in-browser chỉ 1 click). Hỗ trợ presenter mode, export PDF/HTML, deploy Vercel/Netlify. Hoạt động tốt với Claude Code, Cursor, Codex.</p>
+                </div>
+
+                <div class="video-container">
+                    <video controls poster="/images/open-slide-demo-video.jpg">
+                        <source src="/images/open-slide-demo-video.mp4" type="video/mp4">
+                        Trình duyệt của bạn không hỗ trợ video.
+                    </video>
+                    <p style="text-align:center; font-size:0.85rem; color:var(--text-muted); margin-top:0.5rem;">Demo video từ thread @1weiho — open-slide trong thực tế với agent.</p>
+                </div>
+
+                <h2>Vấn đề open-slide giải quyết</h2>
+                <p>Nhiều người dùng agent để "make me slides about X" nhưng kết quả thường là output thô, thiếu polish, và phải copy-paste feedback nhiều vòng. open-slide đóng vai trò <strong>missing runtime</strong> giữa prompt và deck chuyên nghiệp.</p>
+
+                <h2>Các tính năng nổi bật</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>🎨 Mỗi slide = React component</h4>
+                        <p style="font-size:0.9rem">1920×1080 canvas, dễ customize và version control.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>💬 In-browser inspector</h4>
+                        <p style="font-size:0.9rem">Click element → comment "make this red" → /apply-comments → agent áp dụng hết.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🎤 Presenter mode</h4>
+                        <p style="font-size:0.9rem">Speaker notes + timer sẵn có.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>📦 Export & Deploy</h4>
+                        <p style="font-size:0.9rem">Static HTML, PDF, 1-click Vercel/Netlify/Cloudflare.</p>
+                    </div>
+                </div>
+
+                <h2>Agent skills tích hợp sẵn</h2>
+                <ul>
+                    <li><strong>/create-slide</strong> — Draft full deck từ 1 dòng prompt</li>
+                    <li><strong>/apply-comments</strong> — Áp dụng toàn bộ feedback in-browser chỉ 1 lần chạy</li>
+                </ul>
+                <p>Không còn phải copy-paste feedback vào chat. Agent có thể tự đọc comment và update slide ngay.</p>
+
+                <h2>Hoạt động với agent nào?</h2>
+                <p>open-slide được thiết kế để tương thích với hầu hết coding agents hiện tại:</p>
+                <div style="margin:1rem 0; display:flex; flex-wrap:wrap; gap:0.5rem;">
+                    <span class="platform-pill">Claude Code</span>
+                    <span class="platform-pill">Cursor</span>
+                    <span class="platform-pill">Codex</span>
+                    <span class="platform-pill">Any coding agent</span>
+                </div>
+
+                <h2>Chốt một câu</h2>
+                <p>open-slide không phải là công cụ thay thế PowerPoint/Keynote, mà là <strong>bridge</strong> giữa AI agent và presentation chuyên nghiệp. Nó giải quyết pain point thực tế: agent giỏi sinh nội dung, nhưng thiếu runtime để biến output thành deck đẹp, có cấu trúc, dễ chỉnh sửa và deploy. Với open-slide, workflow "prompt → polished deck" trở nên thực tế hơn bao giờ hết.</p>
+
+                <div class="source-links">
+                    <h4>Nguồn & tham khảo</h4>
+                    <ul>
+                        <li><a href="https://x.com/1weiho/status/2050602481953181968" target="_blank">Thread gốc từ @1weiho trên X</a></li>
+                        <li><a href="https://open-slide.dev/" target="_blank">open-slide Official Site</a></li>
+                    </ul>
+                </div>
+
+                <div class="back-to-blog-footer">
+                    <a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+                </div>
+
+                <div class="article-cta-stack">
+                    <div class="article-cta-actions">
+                        <a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a>
+                    </div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">open-slide</span>
+                    <span class="tag">AI Agents</span>
+                    <span class="tag">Presentation</span>
+                    <span class="tag">React</span>
+                    <span class="tag">Claude</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>
