@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/codex-gpt55-app-development-workflow/",
+    "title": "Codex + GPT-5.5: Workflow Xây App iOS/macOS Thực Tế Từ Paul Solt",
+    "excerpt": "Paul Solt chia sẻ workflow thực tế với Codex app + GPT-5.5: 'Just talk to it', agents tạo Xcode project, DocSetQuery giảm hallucination, và cách anh hồi sinh app 9 năm tuổi từ 0.5% lên 7.1% conversion.",
+    "date": "May 03, 2026",
+    "tag": "AI Coding",
+    "tagIcon": "fas fa-code",
+    "tagColor": "#3b82f6",
+    "readTime": "9 phút đọc",
+    "featured": true,
+    "image": "/images/codex-gpt55-app-development-workflow-thumb.svg"
+  },
+  {
     "url": "/blog/codex-hyperframes-video-generation/",
     "title": "Codex + HyperFrames: Viết Code Tạo Video MP4 Chuyên Nghiệp, Nhanh Gấp 10 Lần",
     "excerpt": "Thay vì cắt ghép thủ công trong CapCut, dùng Codex + HyperFrames plugin để viết code HTML sinh ra video MP4 chuyên nghiệp. Batch 10x nhanh, một người vận hành MCN.",

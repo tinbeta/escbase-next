@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codex + GPT-5.5: Workflow Xây App iOS/macOS Thực Tế Từ Paul Solt | Escbase</title>
+    <meta name="description" content="Paul Solt chia sẻ workflow thực tế với Codex app + GPT-5.5: 'Just talk to it', agents tạo Xcode project, DocSetQuery giảm hallucination, và cách anh ấy hồi sinh app 9 năm tuổi từ 0.5% lên 7.1% conversion.">
+    <meta property="og:title" content="Codex + GPT-5.5: Workflow Xây App iOS Thực Tế">
+    <meta property="og:description" content="Không còn prompt ceremony. GPT-5.5 + Codex app cho phép 'just talk' và agents tạo Xcode project hoàn chỉnh. Case study từ Paul Solt.">
+    <meta property="og:image" content="https://escbase.xyz/images/codex-gpt55-app-development-workflow-thumb.png">
+    <meta property="og:url" content="https://escbase.xyz/blog/codex-gpt55-app-development-workflow/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/shared-article.css">
+    <link rel="stylesheet" href="/shared-article-footer.css">
+</head>
+<body>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <span class="category-badge"><i class="fas fa-code"></i> AI Coding</span>
+                <h1>Codex + GPT-5.5: Workflow Xây App iOS/macOS Thực Tế Từ Paul Solt</h1>
+                <div class="meta">
+                    <span><i class="far fa-calendar"></i> 03/05/2026</span>
+                    <span><i class="far fa-clock"></i> 9 phút đọc</span>
+                    <span><i class="far fa-folder"></i> AI Coding, Codex, GPT-5.5</span>
+                </div>
+                <img src="/images/codex-gpt55-app-development-workflow-thumb.png" alt="Codex GPT-5.5 workflow" class="inline-image" style="margin-top:1rem;">
+            </header>
+
+            <div class="article-content">
+                <div class="highlight-box">
+                    <h4>TL;DR</h4>
+                    <p style="margin-bottom:0">Paul Solt (iOS developer với 9+ năm kinh nghiệm) chia sẻ workflow thực tế với <strong>Codex app + GPT-5.5</strong>: không cần prompt ceremony phức tạp, chỉ cần "talk to it". Anh ấy đã hồi sinh app 9 năm tuổi (Super Easy Timer) từ 0.5% lên <strong>7.1% conversion rate</strong>. Điểm nổi bật: agents có thể tạo Xcode project hoàn chỉnh + build/test loop, và dùng DocSetQuery để giảm hallucination khi làm việc với Core ML/AVFoundation.</p>
+                </div>
+
+                <h2>Từ GPT-5.4 đến GPT-5.5: Khác biệt lớn</h2>
+                <p>Paul Solt cho biết workflow của anh thay đổi hoàn toàn chỉ sau một cuối tuần với GPT-5.5. Model mới thông minh hơn, Codex app nhanh hơn, và cuối cùng anh cảm thấy như có một "coding partner" thực thụ — không chỉ viết code mà còn hỗ trợ toàn bộ quá trình phát triển app.</p>
+
+                <h2>Codex App thay vì chỉ dùng CLI</h2>
+                <p>Paul thích dùng <strong>Codex app</strong> hơn CLI vì:</p>
+                <ul>
+                    <li>Image previews trực quan</li>
+                    <li>Diff tools dễ theo dõi thay đổi</li>
+                    <li>Workspace tốt hơn cho các vấn đề lớn</li>
+                    <li>Medium reasoning cực nhanh — "working code in seconds"</li>
+                </ul>
+                <p>Anh ấy vừa dùng Codex để revive app <strong>Super Easy Timer</strong> (9 năm tuổi, gần như chết), đẩy conversion rate từ 0.5% lên 7.1%.</p>
+
+                <h2>"Just Talk to It" — Không cần prompt ceremony</h2>
+                <p>Đây là thay đổi lớn nhất:</p>
+                <blockquote class="quote-block">
+                    "The model is smart enough now that you just describe what you want. No prompt ceremony. No plan files. Tell GPT-5.5 in Codex what you want, then let it run."
+                </blockquote>
+                <p>Với GPT-5.4, nếu yêu cầu quá nhiều cùng lúc nó dễ "đi lạc". Với 5.5, Paul chỉ cần mô tả và lái xe theo thời gian thực (interactive steering). Model tự fill gaps mà không cần anh hỏi chi tiết.</p>
+
+                <h2>Agents Tạo Xcode Project + Build/Test Loop</h2>
+                <p>Một trong những điểm Paul nhấn mạnh nhất là <strong>App Creator skill</strong> (anh ấy tự tạo để giải quyết vấn đề của mình):</p>
+                <ol>
+                    <li>Khó khởi tạo project iOS/macOS mới</li>
+                    <li>Agents hay báo "success" khi code vẫn broken</li>
+                </ol>
+                <p>App Creator skill cho phép agent tạo Xcode project mà không cần mở Xcode, và quan trọng hơn: <strong>luôn verify build + test trước khi trả lại</strong>.</p>
+                <p>OpenAI sau đó cũng release "Build iOS Apps" và "Build macOS Apps" plugins, hoạt động tốt trên nền tảng này.</p>
+
+                <h2>DocSetQuery: Giảm Hallucination Với Apple Docs Thực</h2>
+                <p>Agents có hiểu biết "fuzzy" về code. Khi làm việc với Core ML hoặc AVFoundation, dễ bịa API. Paul tạo <strong>DocSetQuery</strong> (open source trên GitHub) để:</p>
+                <ul>
+                    <li>Pull local Apple DocSet thành Markdown sạch</li>
+                    <li>Cho agent search tài liệu thật</li>
+                    <li>Giảm đáng kể hallucinated APIs</li>
+                </ul>
+
+                <h2>Market Research Cùng Agent</h2>
+                <p>Paul nhấn mạnh: một partner thực thụ không chỉ giúp viết app, mà còn giúp <strong>quyết định nên xây app nào</strong>. Shipping app là kỹ năng đa ngành, và GPT-5.5 + Codex đang hỗ trợ cả phần research thị trường.</p>
+
+                <h2>Chốt một câu</h2>
+                <p>Paul Solt đang cho thấy một mô hình workflow rất thực tế: Codex app + GPT-5.5 không phải là "magic", nhưng nó đủ thông minh để giảm friction xuống mức mà một developer có thể làm việc gần như solo với tốc độ cao hơn nhiều. "Just talk to it" không còn là hype — nó đang thành hiện thực.</p>
+
+                <div class="source-links">
+                    <h4>Nguồn & tham khảo</h4>
+                    <ul>
+                        <li><a href="https://x.com/PaulSolt/status/2048226299290828936" target="_blank">Thread gốc từ Paul Solt trên X</a></li>
+                        <li><a href="https://developers.openai.com/codex/app" target="_blank">Codex App - OpenAI</a></li>
+                        <li><a href="https://github.com/PaulSolt/DocSetQuery" target="_blank">DocSetQuery - Paul Solt</a></li>
+                        <li><a href="https://super-easy-apps.kit.com/app-creator" target="_blank">App Creator Skill</a></li>
+                    </ul>
+                </div>
+
+                <div class="back-to-blog-footer">
+                    <a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+                </div>
+
+                <div class="article-cta-stack">
+                    <div class="article-cta-actions">
+                        <a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a>
+                    </div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">Codex</span>
+                    <span class="tag">GPT-5.5</span>
+                    <span class="tag">iOS Development</span>
+                    <span class="tag">AI Agent</span>
+                    <span class="tag">Workflow</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

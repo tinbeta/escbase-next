@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Sun, 03 May 2026 09:24:35 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 03 May 2026 09:29:54 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Codex + GPT-5.5: Workflow Xây App iOS/macOS Thực Tế Từ Paul Solt</title>
+      <link>https://escbase.xyz/blog/codex-gpt55-app-development-workflow/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/codex-gpt55-app-development-workflow/</guid>
+      <pubDate>Sat, 02 May 2026 17:00:00 GMT</pubDate>
+      <description>Paul Solt chia sẻ workflow thực tế với Codex app + GPT-5.5: &apos;Just talk to it&apos;, agents tạo Xcode project, DocSetQuery giảm hallucination, và cách anh hồi sinh app 9 năm tuổi từ 0.5% lên 7.1% conversion.</description>
+      <category>AI Coding</category>
+      <enclosure url="https://escbase.xyz/images/codex-gpt55-app-development-workflow-thumb.svg" type="image/svg+xml" length="0" />
+    </item>
     <item>
       <title>Codex + HyperFrames: Viết Code Tạo Video MP4 Chuyên Nghiệp, Nhanh Gấp 10 Lần</title>
       <link>https://escbase.xyz/blog/codex-hyperframes-video-generation/</link>
@@ -447,15 +456,6 @@
       <description>OpenAI vừa ra ChatGPT for Clinicians miễn phí cho clinician đã xác minh tại Mỹ, đi kèm HealthBench Professional — benchmark mới cho các cuộc chat y khoa thực tế. Đây không chỉ là thêm một vertical AI, mà là cú đánh thẳng vào workflow, độ tin cậy và phân phối trong healthcare.</description>
       <category>AI Healthcare</category>
       <enclosure url="https://escbase.xyz/images/chatgpt-for-clinicians-healthbench-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>Kimi K2.6 Agent Swarm: Khi Agent Không Còn Trả Lời Trong Chat Mà Bắt Đầu Xuất Ra Cả Đống File Thật</title>
-      <link>https://escbase.xyz/blog/kimi-k26-agent-swarm-real-files</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/kimi-k26-agent-swarm-real-files</guid>
-      <pubDate>Wed, 22 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Kimi vừa giới thiệu K2.6 Agent Swarm với 300 parallel sub-agents, 4.000 steps mỗi run và một angle rất rõ: agent không còn chỉ trả lời trong chat, mà phải tạo ra artifact thật như file, report, dataset, chart và slide. Đây là cách Kimi đẩy AI từ giao diện chat sang giao diện sản xuất kết quả.</description>
-      <category>AI Agents</category>
-      <enclosure url="https://escbase.xyz/images/kimi-k26-agent-swarm-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>
