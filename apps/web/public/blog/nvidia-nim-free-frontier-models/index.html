@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NVIDIA Đang Cho Bạn Dùng Miễn Phí Hàng Loạt Model Frontier: MiniMax, DeepSeek, GLM | Escbase</title>
+    <meta name="description" content="NVIDIA NIM cho phép developer truy cập miễn phí MiniMax M2.7 (230B MoE), DeepSeek V3.2, GLM-5.1 và hơn 100 model khác qua API OpenAI-compatible. 1000 credits miễn phí, không cần thẻ tín dụng. Phân tích chiến lược và cách setup.">
+    <meta property="og:title" content="NVIDIA Đang Cho Bạn Dùng Miễn Phí Hàng Loạt Model Frontier">
+    <meta property="og:description" content="MiniMax M2.7, DeepSeek V3.2, GLM-5.1... NVIDIA đang cho developer dùng miễn phí qua NIM API. Đây là chiến lược top-of-funnel hay nhất ngành AI hiện nay.">
+    <meta property="og:image" content="https://escbase.xyz/images/nvidia-nim-free-frontier-models-thumb.png">
+    <meta property="og:url" content="https://escbase.xyz/blog/nvidia-nim-free-frontier-models/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/shared-article.css">
+    <link rel="stylesheet" href="/shared-article-footer.css">
+    <style>
+        .model-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+        .model-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.25rem; }
+        .model-card h4 { color: var(--text); margin-bottom: .5rem; font-size: 1.05rem; }
+        .model-card .meta { font-size: .85rem; color: var(--text-muted); }
+        .model-card .tag { display: inline-block; background: rgba(99,102,241,.1); color: #6366f1; padding: .1rem .5rem; border-radius: 4px; font-size: .75rem; margin-top: .5rem; }
+        @media (max-width: 768px) {
+            .model-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <span class="category-badge"><i class="fas fa-robot"></i> AI Tools</span>
+                <h1>NVIDIA Đang Cho Bạn Dùng Miễn Phí Hàng Loạt Model Frontier: MiniMax, DeepSeek, GLM</h1>
+                <div class="meta">
+                    <span><i class="far fa-calendar"></i> 03/05/2026</span>
+                    <span><i class="far fa-clock"></i> 8 phút đọc</span>
+                    <span><i class="far fa-folder"></i> AI Models, NVIDIA, Free Tier</span>
+                </div>
+                <img src="/images/nvidia-nim-free-frontier-models-thumb.png" alt="NVIDIA NIM free AI models" class="inline-image" style="margin-top:1rem;">
+            </header>
+
+            <div class="article-content">
+                <div class="highlight-box">
+                    <h4>TL;DR</h4>
+                    <p style="margin-bottom:0">NVIDIA đang cho developer dùng <strong>miễn phí</strong> hơn 100 model frontier (MiniMax M2.7 230B MoE, DeepSeek V3.2, GLM-5.1, Llama 4, Qwen3-Coder...) qua API OpenAI-compatible. 1000 credits miễn phí, không cần thẻ tín dụng, rate limit 40 RPM. Đây là chiến lược top-of-funnel cực kỳ thông minh: cho bạn dùng miễn phí để bạn quen với NVIDIA ecosystem, sau đó bán enterprise khi bạn cần scale.</p>
+                </div>
+
+                <h2>NVIDIA NIM: Free tier thực sự mạnh</h2>
+                <p>Trong khi hầu hết các lab AI Trung Quốc và Mỹ đều đẩy model mạnh ra sau paywall, NVIDIA lại làm ngược lại. Họ mở toàn bộ catalog NIM (NVIDIA Inference Microservices) cho public dùng miễn phí, với API key thật, không expiry, không credit card.</p>
+                <p>Thread từ @iam_elias1 trên X đã viral với hơn 31.000 reposts chỉ trong 48 giờ, và câu hỏi phổ biến nhất là: <strong>"Tại sao không ai nói về cái này?"</strong></p>
+
+                <h2>Các model đáng chú ý nhất</h2>
+                <div class="model-grid">
+                    <div class="model-card">
+                        <h4>MiniMax M2.7</h4>
+                        <div class="meta">230B parameters • MoE 256 experts • Context 204k</div>
+                        <span class="tag">Coding & Reasoning</span>
+                        <p style="margin-top:.75rem; font-size:.9rem">Model 230 tỷ tham số với kiến trúc Sparse MoE, 8 experts active mỗi token. Đang được nhiều công ty Trung Quốc trả tiền để dùng qua API MiniMax.</p>
+                    </div>
+                    <div class="model-card">
+                        <h4>DeepSeek V3.2</h4>
+                        <div class="meta">Model gây sốc thị trường 1/2025</div>
+                        <span class="tag">Cost Efficiency</span>
+                        <p style="margin-top:.75rem; font-size:.9rem">Model từng khiến thị trường toàn cầu hoảng loạn khi chứng minh AI Trung Quốc có thể sánh ngang Mỹ với chi phí chỉ bằng một phần nhỏ.</p>
+                    </div>
+                    <div class="model-card">
+                        <h4>GLM-5.1 / GLM-4.7</h4>
+                        <div class="meta">Agentic workflows & Coding</div>
+                        <span class="tag">Multilingual</span>
+                        <p style="margin-top:.75rem; font-size:.9rem">Flagship model cho agentic tasks, tool use, UI generation và long-horizon reasoning. Hỗ trợ đa ngôn ngữ tốt.</p>
+                    </div>
+                </div>
+
+                <h2>Cách setup trong 60 giây</h2>
+                <p>Vì endpoint tương thích OpenAI SDK, bạn chỉ cần đổi 2 thứ:</p>
+                <ol>
+                    <li><strong>Base URL:</strong> <code>https://integrate.api.nvidia.com/v1</code></li>
+                    <li><strong>API Key:</strong> Lấy tại <a href="https://build.nvidia.com/" target="_blank">build.nvidia.com</a> (bắt đầu bằng <code>nvapi-</code>)</li>
+                </ol>
+                <p>Model ID ví dụ: <code>minimaxai/minimax-m2.7</code>, <code>deepseek-ai/deepseek-v3.2</code>, <code>meta/llama-4-maverick</code>...</p>
+                <p>Cursor, Zed, OpenCode, Hermes agent, Claude Code đều hoạt động ngay mà không cần thay đổi code.</p>
+
+                <h2>Chiến lược kinh doanh cực kỳ thông minh</h2>
+                <p>Nhiều người nghĩ NVIDIA đang "cho không biếu không". Thực ra đây là một trong những chiến lược customer acquisition hay nhất ngành enterprise AI hiện nay.</p>
+                <p>Quy trình họ thiết kế:</p>
+                <div class="workflow-step"><div class="step-number">1</div><div class="step-content"><strong>Prototype miễn phí</strong> — Developer thử nghiệm model mạnh mà không tốn tiền.</div></div>
+                <div class="workflow-step"><div class="step-number">2</div><div class="step-content"><strong>Quen với ecosystem</strong> — Làm quen với NVIDIA API conventions, tooling, và deployment patterns.</div></div>
+                <div class="workflow-step"><div class="step-number">3</div><div class="step-content"><strong>Scale lên production</strong> — Khi cần chạy thực tế, developer đã biết dùng NVIDIA hardware và NIM containers.</div></div>
+                <div class="workflow-step"><div class="step-number">4</div><div class="step-content"><strong>Bán enterprise</strong> — Bán NVIDIA AI Enterprise license + self-hosted NIM + GPU cluster.</div></div>
+
+                <p>Free tier không phải sản phẩm. Nó là cái bẫy (theo nghĩa tích cực) để đưa developer vào hệ sinh thái NVIDIA.</p>
+
+                <h2>Hạn chế thực tế</h2>
+                <ul>
+                    <li>Chỉ <strong>1000 inference credits</strong> khi đăng ký (đủ cho prototyping, không đủ cho production).</li>
+                    <li>Rate limit <strong>40 requests/phút</strong> — phù hợp dev, không phù hợp app thật.</li>
+                    <li>Các model lớn "ăn" credits rất nhanh.</li>
+                    <li>Không có SLA, không có priority support.</li>
+                </ul>
+                <p>Nhưng với mục đích học tập, thử nghiệm, side project và đánh giá model trước khi commit ngân sách, thì đây là deal cực tốt.</p>
+
+                <h2>Cộng đồng phản ứng ra sao?</h2>
+                <p>Thread viral nhanh vì nhiều developer đang đau đầu với chi phí API. Phản ứng chủ yếu là ngạc nhiên và hoài nghi (kiểu "có bắt buộc không?").</p>
+
+                <div class="community-quote positive">
+                    <p>"Giving access to models like DeepSeek V3.2 and MiniMax M2.7 under one unified API is a strong move toward platform consolidation."</p>
+                    <span class="author">— @jackcoder0</span>
+                </div>
+
+                <div class="community-quote">
+                    <p>"Smart funnel design: prototype → experiment → dependency → scale → enterprise contract. Clean, predictable, and effective."</p>
+                    <span class="author">— @Oliviacoder1</span>
+                </div>
+
+                <h2>Chốt một câu</h2>
+                <p>NVIDIA không cho bạn dùng model miễn phí vì họ tốt bụng. Họ cho bạn dùng miễn phí vì họ biết: một khi bạn đã quen với stack của họ, bạn sẽ khó rời đi khi cần scale. Đây là cách chơi dài hạn và cực kỳ hiệu quả.</p>
+
+                <div class="source-links">
+                    <h4>Nguồn & tham khảo</h4>
+                    <ul>
+                        <li><a href="https://x.com/iam_elias1/status/2050545769787371710" target="_blank">Thread gốc từ @iam_elias1 trên X</a></li>
+                        <li><a href="https://build.nvidia.com/" target="_blank">NVIDIA Build - Free Inference Endpoints</a></li>
+                        <li><a href="https://www.nvidia.com/en-us/ai-data-science/nim/" target="_blank">NVIDIA NIM Official Page</a></li>
+                    </ul>
+                </div>
+
+                <div class="back-to-blog-footer">
+                    <a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+                </div>
+
+                <div class="article-cta-stack">
+                    <div class="article-cta-actions">
+                        <a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a>
+                    </div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">NVIDIA</span>
+                    <span class="tag">AI Models</span>
+                    <span class="tag">Free Tier</span>
+                    <span class="tag">API</span>
+                    <span class="tag">DeepSeek</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

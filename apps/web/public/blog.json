@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/nvidia-nim-free-frontier-models/",
+    "title": "NVIDIA Đang Cho Bạn Dùng Miễn Phí Hàng Loạt Model Frontier: MiniMax, DeepSeek, GLM",
+    "excerpt": "NVIDIA NIM cho developer truy cập miễn phí MiniMax M2.7 (230B), DeepSeek V3.2, GLM-5.1 và 100+ model khác qua API OpenAI-compatible. 1000 credits miễn phí, không cần thẻ tín dụng.",
+    "date": "May 03, 2026",
+    "tag": "AI Tools",
+    "tagIcon": "fas fa-robot",
+    "tagColor": "#6366f1",
+    "readTime": "8 phút đọc",
+    "featured": true,
+    "image": "/images/nvidia-nim-free-frontier-models-thumb.svg"
+  },
+  {
     "url": "/blog/openclaw-2026-5-2-stable-grok4-3/",
     "title": "OpenClaw 2026.5.2: Bớt Drama, Chạy Ổn Hơn",
     "excerpt": "OpenClaw 2026.5.2 tập trung vào Grok 4.3 mặc định, plugin ổn định hơn, gateway nhanh hơn, và nhiều fix thật cho Discord, Slack, Telegram, WhatsApp, web search, TTS và voice calls.",

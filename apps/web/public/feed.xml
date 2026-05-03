@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Sun, 03 May 2026 09:13:25 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 03 May 2026 09:18:21 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NVIDIA Đang Cho Bạn Dùng Miễn Phí Hàng Loạt Model Frontier: MiniMax, DeepSeek, GLM</title>
+      <link>https://escbase.xyz/blog/nvidia-nim-free-frontier-models/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/nvidia-nim-free-frontier-models/</guid>
+      <pubDate>Sat, 02 May 2026 17:00:00 GMT</pubDate>
+      <description>NVIDIA NIM cho developer truy cập miễn phí MiniMax M2.7 (230B), DeepSeek V3.2, GLM-5.1 và 100+ model khác qua API OpenAI-compatible. 1000 credits miễn phí, không cần thẻ tín dụng.</description>
+      <category>AI Tools</category>
+      <enclosure url="https://escbase.xyz/images/nvidia-nim-free-frontier-models-thumb.svg" type="image/svg+xml" length="0" />
+    </item>
     <item>
       <title>OpenClaw 2026.5.2: Bớt Drama, Chạy Ổn Hơn</title>
       <link>https://escbase.xyz/blog/openclaw-2026-5-2-stable-grok4-3/</link>
@@ -447,15 +456,6 @@
       <description>OpenAI vừa giới thiệu workspace agents trong ChatGPT, cho phép tạo agent dùng chung cho cả team, chạy workflow dài hơi qua docs, email, chat, code và các hệ thống nội bộ. Điểm đáng chú ý là ChatGPT đang được kéo từ một trợ lý cá nhân sang hạ tầng workflow có memory, approvals, analytics và admin controls.</description>
       <category>AI for Teams</category>
       <enclosure url="https://escbase.xyz/images/openai-workspace-agents-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>Claude Code /ultrareview: Anthropic Đang Biến Code Review Thành Một Đội Săn Bug Chạy Trên Cloud</title>
-      <link>https://escbase.xyz/blog/claude-code-ultrareview</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/claude-code-ultrareview</guid>
-      <pubDate>Wed, 22 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Anthropic vừa đưa /ultrareview vào Claude Code ở dạng research preview. Điểm đáng chú ý không chỉ là thêm một lệnh review mới, mà là việc code review đang bị đẩy từ một lượt đọc thủ công sang một fleet bug-hunting agents chạy trên cloud, tự verify findings trước khi trả về CLI.</description>
-      <category>AI Coding</category>
-      <enclosure url="https://escbase.xyz/images/claude-code-ultrareview-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>
