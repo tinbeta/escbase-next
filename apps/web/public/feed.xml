@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Sat, 02 May 2026 13:35:05 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 03 May 2026 01:51:11 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenClaw 2026.5.2: Ổn Định Hơn, Grok 4.3 Là Mặc Định</title>
+      <link>https://escbase.xyz/blog/openclaw-2026-5-2-stable-grok4-3/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/openclaw-2026-5-2-stable-grok4-3/</guid>
+      <pubDate>Sat, 02 May 2026 17:00:00 GMT</pubDate>
+      <description>OpenClaw 2026.5.2: Grok 4.3 mặc định, plugin ổn định hơn (npm-first install, doctor repair), gateway tối ưu, và hàng loạt fix Discord/Slack/Telegram/WhatsApp. Bản &apos;less drama, more uptime&apos; sau pivot ChatGPT Plus.</description>
+      <category>AI Agents</category>
+      <enclosure url="https://escbase.xyz/images/openclaw-2026-5-2-stable-grok4-3-thumb.svg" type="image/svg+xml" length="0" />
+    </item>
     <item>
       <title>Grok 4.3: Giảm Chi Phí 40-60%, Cải Thiện Điểm Số và Pareto Frontier Mới</title>
       <link>https://escbase.xyz/blog/grok-4-3-cost-efficiency-pareto-frontier/</link>
@@ -446,15 +455,6 @@
       <description>Xiaomi vừa tung MiMo-V2.5 và MiMo-V2.5-Pro với một thesis rất rõ: open-source agent muốn đáng dùng thì không chỉ cần benchmark đẹp, mà còn phải chạy dài hơi, dùng ít token và đủ rẻ để triển khai thật. Điểm đáng chú ý là Xiaomi đang đặt MiMo vào cùng khung với Claude Opus 4.6, GPT-5.4 và Gemini 3.1 Pro, rồi cố thắng ở performance-per-token.</description>
       <category>AI Models &amp; Agents</category>
       <enclosure url="https://escbase.xyz/images/xiaomi-mimo-v25-open-source-agents-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>QClaw Ra Mắt: Không Bán Model Mới, Mà Bán Cách Dùng AI Agent Kiểu Người Thường</title>
-      <link>https://escbase.xyz/blog/qclaw-agent-ux-for-everyone</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/qclaw-agent-ux-for-everyone</guid>
-      <pubDate>Mon, 20 Apr 2026 17:00:00 GMT</pubDate>
-      <description>QClaw vừa ra mắt với một thesis rất rõ: nút thắt của AI agents không còn chỉ là model, mà là trải nghiệm sử dụng. Không terminal, không setup, chỉ cần nhắn WhatsApp hay Telegram là máy tự làm việc. Đây là cách QClaw cố biến agent từ đồ chơi của power users thành sản phẩm cho người thường.</description>
-      <category>AI Agents</category>
-      <enclosure url="https://escbase.xyz/images/qclaw-agent-ux-for-everyone-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>
