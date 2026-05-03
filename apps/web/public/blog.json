@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/gpt-image2-seedance2-video-workflow/",
+    "title": "GPT-Image 2 + Seedance 2.0: Tạo Video Từ Storyboard Chỉ Bằng 1 Câu Lệnh",
+    "excerpt": "GPT-Image 2 sinh storyboard chi tiết (vận镜, hành động, thoại, âm thanh) → Seedance 2.0 render video ngay. Workflow đang thay đổi cách creator Trung Quốc sản xuất short video hàng loạt.",
+    "date": "May 03, 2026",
+    "tag": "AI Video",
+    "tagIcon": "fas fa-video",
+    "tagColor": "#f43f5e",
+    "readTime": "8 phút đọc",
+    "featured": true,
+    "image": "/images/gpt-image2-seedance2-video-workflow-thumb.svg"
+  },
+  {
     "url": "/blog/codex-gpt55-app-development-workflow/",
     "title": "Codex + GPT-5.5: Workflow Xây App iOS/macOS Thực Tế Từ Paul Solt",
     "excerpt": "Paul Solt chia sẻ workflow thực tế với Codex app + GPT-5.5: 'Just talk to it', agents tạo Xcode project, DocSetQuery giảm hallucination, và cách anh hồi sinh app 9 năm tuổi từ 0.5% lên 7.1% conversion.",

@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Sun, 03 May 2026 09:29:54 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 03 May 2026 10:09:17 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GPT-Image 2 + Seedance 2.0: Tạo Video Từ Storyboard Chỉ Bằng 1 Câu Lệnh</title>
+      <link>https://escbase.xyz/blog/gpt-image2-seedance2-video-workflow/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/gpt-image2-seedance2-video-workflow/</guid>
+      <pubDate>Sat, 02 May 2026 17:00:00 GMT</pubDate>
+      <description>GPT-Image 2 sinh storyboard chi tiết (vận镜, hành động, thoại, âm thanh) → Seedance 2.0 render video ngay. Workflow đang thay đổi cách creator Trung Quốc sản xuất short video hàng loạt.</description>
+      <category>AI Video</category>
+      <enclosure url="https://escbase.xyz/images/gpt-image2-seedance2-video-workflow-thumb.svg" type="image/svg+xml" length="0" />
+    </item>
     <item>
       <title>Codex + GPT-5.5: Workflow Xây App iOS/macOS Thực Tế Từ Paul Solt</title>
       <link>https://escbase.xyz/blog/codex-gpt55-app-development-workflow/</link>
@@ -447,15 +456,6 @@
       <description>Justin Sun nói đã kiện World Liberty Financial vì token WLFI bị freeze, mất quyền vote và có nguy cơ bị burn. Đằng sau drama cá nhân là một câu hỏi lớn hơn: khi quyền token có thể bị khóa và sửa bằng proposal, governance trong crypto thực ra đang phi tập trung tới đâu?</description>
       <category>Governance</category>
       <enclosure url="https://escbase.xyz/images/justin-sun-wlfi-lawsuit-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>OpenAI Ra ChatGPT for Clinicians Và HealthBench Professional: Đang Đánh Thẳng Vào Workflow Thật Của Bác Sĩ</title>
-      <link>https://escbase.xyz/blog/chatgpt-for-clinicians-healthbench</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/chatgpt-for-clinicians-healthbench</guid>
-      <pubDate>Wed, 22 Apr 2026 17:00:00 GMT</pubDate>
-      <description>OpenAI vừa ra ChatGPT for Clinicians miễn phí cho clinician đã xác minh tại Mỹ, đi kèm HealthBench Professional — benchmark mới cho các cuộc chat y khoa thực tế. Đây không chỉ là thêm một vertical AI, mà là cú đánh thẳng vào workflow, độ tin cậy và phân phối trong healthcare.</description>
-      <category>AI Healthcare</category>
-      <enclosure url="https://escbase.xyz/images/chatgpt-for-clinicians-healthbench-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>

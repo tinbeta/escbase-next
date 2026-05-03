@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT-Image 2 + Seedance 2.0: Tạo Video Từ Storyboard Chỉ Bằng 1 Câu Lệnh | Escbase</title>
+    <meta name="description" content="Dùng GPT-Image 2 tạo storyboard chi tiết (cảnh, vận镜, hành động, thoại, âm thanh), rồi đưa thẳng vào Seedance 2.0 để sinh video. Không cần prompt phức tạp, giữ nhân vật nhất quán dễ dàng. Workflow mới đang thay đổi cách làm short video.">
+    <meta property="og:title" content="GPT-Image 2 + Seedance 2.0: Storyboard Thành Video Chỉ 1 Câu">
+    <meta property="og:description" content="GPT-Image 2 sinh storyboard đầy đủ chi tiết → Seedance 2.0 render video ngay. Workflow đang được creator Trung Quốc dùng để sản xuất hàng loạt short video nhanh chóng.">
+    <meta property="og:image" content="https://escbase.xyz/images/gpt-image2-seedance2-video-workflow-thumb.png">
+    <meta property="og:url" content="https://escbase.xyz/blog/gpt-image2-seedance2-video-workflow/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/shared-article.css">
+    <link rel="stylesheet" href="/shared-article-footer.css">
+    <style>
+        .video-container { margin: 2rem 0; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border); }
+        .video-container video { width: 100%; display: block; }
+        .platform-pill { display: inline-block; background: var(--card-bg); border: 1px solid var(--border); padding: .25rem .75rem; border-radius: 999px; font-size: .85rem; margin: .25rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <span class="category-badge"><i class="fas fa-video"></i> AI Video</span>
+                <h1>GPT-Image 2 + Seedance 2.0: Tạo Video Từ Storyboard Chỉ Bằng 1 Câu Lệnh</h1>
+                <div class="meta">
+                    <span><i class="far fa-calendar"></i> 03/05/2026</span>
+                    <span><i class="far fa-clock"></i> 8 phút đọc</span>
+                    <span><i class="far fa-folder"></i> AI Video, Storyboard, Seedance</span>
+                </div>
+                <img src="/images/gpt-image2-seedance2-video-workflow-thumb.png" alt="GPT-Image 2 + Seedance 2.0 workflow" class="inline-image" style="margin-top:1rem;">
+            </header>
+
+            <div class="article-content">
+                <div class="highlight-box">
+                    <h4>TL;DR</h4>
+                    <p style="margin-bottom:0">Creator Trung Quốc đang dùng combo <strong>GPT-Image 2 + Seedance 2.0</strong> để sản xuất video cực nhanh: GPT-Image 2 sinh storyboard chi tiết (cảnh quay, vận镜, hành động, thoại, âm thanh, nhạc), sau đó đưa thẳng vào Seedance 2.0 là có video ngay — không cần prompt phức tạp. Nhân vật nhất quán bằng cách upload reference card. Workflow này đang hạ thấp rào cản làm short video xuống mức một người cũng có thể batch sản xuất hàng loạt.</p>
+                </div>
+
+                <h2>Workflow mới: Storyboard → Video chỉ 1 bước</h2>
+                <p>Theo thread từ @johnAGI168, quy trình cực kỳ đơn giản:</p>
+                <ol>
+                    <li><strong>GPT-Image 2</strong> sinh storyboard phân cảnh đầy đủ: góc máy, vận镜, hành động nhân vật, thoại, âm thanh, nhạc nền.</li>
+                    <li><strong>Seedance 2.0</strong> nhận storyboard → render video luôn.</li>
+                </ol>
+
+                <div class="video-container">
+                    <video controls poster="/images/gpt-image2-seedance2-video.jpg">
+                        <source src="/images/gpt-image2-seedance2-video.mp4" type="video/mp4">
+                        Trình duyệt của bạn không hỗ trợ video.
+                    </video>
+                </div>
+                <p style="text-align:center; font-size:0.85rem; color:var(--text-muted);">Video demo từ thread @johnAGI168 — storyboard do GPT-Image 2 sinh, video do Seedance 2.0 render.</p>
+
+                <h2>Tại sao combo này mạnh?</h2>
+                <ul>
+                    <li><strong>Storyboard chi tiết tự động</strong>: GPT-Image 2 không chỉ vẽ hình, mà còn ghi rõ vận镜 (pan, zoom, dolly...), hành động, thoại, sound design ngay trong ảnh.</li>
+                    <li><strong>Seedance 2.0 hiểu storyboard</strong>: Không cần viết prompt dài dòng. Chỉ cần nói “dựa vào storyboard này sinh video” là đủ.</li>
+                    <li><strong>Giữ nhân vật nhất quán</strong>: Upload character reference card (hoặc ảnh nhân vật) vào Seedance → nhân vật giữ nguyên qua các cảnh.</li>
+                    <li><strong>Cả storyboard tay cũng được</strong>: Dù bạn vẽ tay hay dùng GPT, Seedance vẫn hiểu.</li>
+                </ul>
+
+                <h2>Các nền tảng hỗ trợ Seedance 2.0</h2>
+                <div style="margin: 1rem 0;">
+                    <span class="platform-pill">即梦 (Jidream) — Official</span>
+                    <span class="platform-pill">Higgsfield</span>
+                    <span class="platform-pill">Lovart</span>
+                    <span class="platform-pill">Open Art</span>
+                </div>
+
+                <h2>Phản ứng cộng đồng</h2>
+                <p>Thread nhận được nhiều tương tác tích cực từ creator Trung Quốc:</p>
+                <div class="community-quote positive">
+                    <p>"GPT的故事版确实遵循度挺好的" (Storyboard của GPT thực sự tuân thủ rất tốt)</p>
+                    <span class="author">— @tngqingtng15022</span>
+                </div>
+                <div class="community-quote">
+                    <p>"测下来我觉得，15秒的视频，给的资料最好维持在6个不超过8个镜头为最好。" (Test thực tế: video 15s tốt nhất 6-8 cảnh)</p>
+                    <span class="author">— @df_reno</span>
+                </div>
+
+                <h2>Chốt một câu</h2>
+                <p>GPT-Image 2 + Seedance 2.0 đang tạo ra một pipeline sản xuất video mới: từ ý tưởng → storyboard chi tiết → video hoàn chỉnh chỉ trong vài phút. Đây là bước tiến lớn so với cách làm thủ công hoặc prompt engineering phức tạp trước đây. Creator solo hoặc team nhỏ giờ có công cụ để batch sản xuất nội dung chất lượng cao với tốc độ chưa từng có.</p>
+
+                <div class="source-links">
+                    <h4>Nguồn & tham khảo</h4>
+                    <ul>
+                        <li><a href="https://x.com/johnAGI168/status/2050569545614553248" target="_blank">Thread gốc từ @johnAGI168 trên X</a></li>
+                        <li><a href="https://x.com/johnAGI168/status/2050582306327281853" target="_blank">Xác nhận độ chính xác giữa storyboard và video</a></li>
+                    </ul>
+                </div>
+
+                <div class="back-to-blog-footer">
+                    <a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+                </div>
+
+                <div class="article-cta-stack">
+                    <div class="article-cta-actions">
+                        <a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a>
+                    </div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">GPT-Image 2</span>
+                    <span class="tag">Seedance 2.0</span>
+                    <span class="tag">AI Video</span>
+                    <span class="tag">Storyboard</span>
+                    <span class="tag">Short Video</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>
