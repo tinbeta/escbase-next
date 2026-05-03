@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Sun, 03 May 2026 01:51:11 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 03 May 2026 01:55:02 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blockchain Không Chỉ Là Bitcoin: Binance Academy Nhắc Lại Điều Cũ Nhưng Vẫn Đau</title>
+      <link>https://escbase.xyz/blog/blockchain-khong-chi-la-bitcoin-binance-academy/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/blockchain-khong-chi-la-bitcoin-binance-academy/</guid>
+      <pubDate>Sun, 03 May 2026 00:00:00 GMT</pubDate>
+      <description>Binance Academy nhắc lại blockchain không chỉ là Bitcoin. Nhưng phản biện từ cộng đồng cũng rất thật: sau 15 năm, use case có traction lớn nhất vẫn quanh tài chính.</description>
+      <category>Blockchain</category>
+      <enclosure url="https://escbase.xyz/images/blockchain-khong-chi-la-bitcoin-binance-academy-thumb.png" type="image/png" length="0" />
+    </item>
     <item>
       <title>OpenClaw 2026.5.2: Ổn Định Hơn, Grok 4.3 Là Mặc Định</title>
       <link>https://escbase.xyz/blog/openclaw-2026-5-2-stable-grok4-3/</link>
@@ -446,15 +455,6 @@
       <description>Anthropic vừa đưa /ultrareview vào Claude Code ở dạng research preview. Điểm đáng chú ý không chỉ là thêm một lệnh review mới, mà là việc code review đang bị đẩy từ một lượt đọc thủ công sang một fleet bug-hunting agents chạy trên cloud, tự verify findings trước khi trả về CLI.</description>
       <category>AI Coding</category>
       <enclosure url="https://escbase.xyz/images/claude-code-ultrareview-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>Xiaomi MiMo-V2.5: Open-Source Agent Áp Sát Claude Opus, GPT-5.4 Nhưng Ăn Ít Token Hơn</title>
-      <link>https://escbase.xyz/blog/xiaomi-mimo-v25-open-source-agents</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/xiaomi-mimo-v25-open-source-agents</guid>
-      <pubDate>Wed, 22 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Xiaomi vừa tung MiMo-V2.5 và MiMo-V2.5-Pro với một thesis rất rõ: open-source agent muốn đáng dùng thì không chỉ cần benchmark đẹp, mà còn phải chạy dài hơi, dùng ít token và đủ rẻ để triển khai thật. Điểm đáng chú ý là Xiaomi đang đặt MiMo vào cùng khung với Claude Opus 4.6, GPT-5.4 và Gemini 3.1 Pro, rồi cố thắng ở performance-per-token.</description>
-      <category>AI Models &amp; Agents</category>
-      <enclosure url="https://escbase.xyz/images/xiaomi-mimo-v25-open-source-agents-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>

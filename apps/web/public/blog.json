@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/blockchain-khong-chi-la-bitcoin-binance-academy/",
+    "title": "Blockchain Không Chỉ Là Bitcoin: Binance Academy Nhắc Lại Điều Cũ Nhưng Vẫn Đau",
+    "excerpt": "Binance Academy nhắc lại blockchain không chỉ là Bitcoin. Nhưng phản biện từ cộng đồng cũng rất thật: sau 15 năm, use case có traction lớn nhất vẫn quanh tài chính.",
+    "date": "2026-05-03",
+    "tag": "Blockchain",
+    "tagIcon": "fas fa-link",
+    "tagColor": "#f3ba2f",
+    "readTime": "7 phút đọc",
+    "featured": true,
+    "image": "/images/blockchain-khong-chi-la-bitcoin-binance-academy-thumb.png"
+  },
+  {
     "url": "/blog/openclaw-2026-5-2-stable-grok4-3/",
     "title": "OpenClaw 2026.5.2: Ổn Định Hơn, Grok 4.3 Là Mặc Định",
     "excerpt": "OpenClaw 2026.5.2: Grok 4.3 mặc định, plugin ổn định hơn (npm-first install, doctor repair), gateway tối ưu, và hàng loạt fix Discord/Slack/Telegram/WhatsApp. Bản 'less drama, more uptime' sau pivot ChatGPT Plus.",
