@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/codex-hyperframes-video-generation/",
+    "title": "Codex + HyperFrames: Viết Code Tạo Video MP4 Chuyên Nghiệp, Nhanh Gấp 10 Lần",
+    "excerpt": "Thay vì cắt ghép thủ công trong CapCut, dùng Codex + HyperFrames plugin để viết code HTML sinh ra video MP4 chuyên nghiệp. Batch 10x nhanh, một người vận hành MCN.",
+    "date": "May 03, 2026",
+    "tag": "AI Tools",
+    "tagIcon": "fas fa-video",
+    "tagColor": "#6366f1",
+    "readTime": "7 phút đọc",
+    "featured": true,
+    "image": "/images/codex-hyperframes-video-generation-thumb.svg"
+  },
+  {
     "url": "/blog/nvidia-nim-free-frontier-models/",
     "title": "NVIDIA Đang Cho Bạn Dùng Miễn Phí Hàng Loạt Model Frontier: MiniMax, DeepSeek, GLM",
     "excerpt": "NVIDIA NIM cho developer truy cập miễn phí MiniMax M2.7 (230B), DeepSeek V3.2, GLM-5.1 và 100+ model khác qua API OpenAI-compatible. 1000 credits miễn phí, không cần thẻ tín dụng.",

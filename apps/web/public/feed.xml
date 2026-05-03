@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Sun, 03 May 2026 09:18:21 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 03 May 2026 09:24:35 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Codex + HyperFrames: Viết Code Tạo Video MP4 Chuyên Nghiệp, Nhanh Gấp 10 Lần</title>
+      <link>https://escbase.xyz/blog/codex-hyperframes-video-generation/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/codex-hyperframes-video-generation/</guid>
+      <pubDate>Sat, 02 May 2026 17:00:00 GMT</pubDate>
+      <description>Thay vì cắt ghép thủ công trong CapCut, dùng Codex + HyperFrames plugin để viết code HTML sinh ra video MP4 chuyên nghiệp. Batch 10x nhanh, một người vận hành MCN.</description>
+      <category>AI Tools</category>
+      <enclosure url="https://escbase.xyz/images/codex-hyperframes-video-generation-thumb.svg" type="image/svg+xml" length="0" />
+    </item>
     <item>
       <title>NVIDIA Đang Cho Bạn Dùng Miễn Phí Hàng Loạt Model Frontier: MiniMax, DeepSeek, GLM</title>
       <link>https://escbase.xyz/blog/nvidia-nim-free-frontier-models/</link>
@@ -447,15 +456,6 @@
       <description>Kimi vừa giới thiệu K2.6 Agent Swarm với 300 parallel sub-agents, 4.000 steps mỗi run và một angle rất rõ: agent không còn chỉ trả lời trong chat, mà phải tạo ra artifact thật như file, report, dataset, chart và slide. Đây là cách Kimi đẩy AI từ giao diện chat sang giao diện sản xuất kết quả.</description>
       <category>AI Agents</category>
       <enclosure url="https://escbase.xyz/images/kimi-k26-agent-swarm-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>OpenAI Ra Mắt Workspace Agents: ChatGPT Đang Bỏ Vai Trợ Lý Cá Nhân Để Thành Hạ Tầng Workflow Cho Cả Team</title>
-      <link>https://escbase.xyz/blog/openai-workspace-agents</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/openai-workspace-agents</guid>
-      <pubDate>Wed, 22 Apr 2026 17:00:00 GMT</pubDate>
-      <description>OpenAI vừa giới thiệu workspace agents trong ChatGPT, cho phép tạo agent dùng chung cho cả team, chạy workflow dài hơi qua docs, email, chat, code và các hệ thống nội bộ. Điểm đáng chú ý là ChatGPT đang được kéo từ một trợ lý cá nhân sang hạ tầng workflow có memory, approvals, analytics và admin controls.</description>
-      <category>AI for Teams</category>
-      <enclosure url="https://escbase.xyz/images/openai-workspace-agents-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>
