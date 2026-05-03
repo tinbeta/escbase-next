@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/openclaw-2026-5-2-stable-grok4-3/",
+    "title": "OpenClaw 2026.5.2: Ổn Định Hơn, Grok 4.3 Là Mặc Định",
+    "excerpt": "OpenClaw 2026.5.2: Grok 4.3 mặc định, plugin ổn định hơn (npm-first install, doctor repair), gateway tối ưu, và hàng loạt fix Discord/Slack/Telegram/WhatsApp. Bản 'less drama, more uptime' sau pivot ChatGPT Plus.",
+    "date": "03 May 2026",
+    "tag": "AI Agents",
+    "tagIcon": "fas fa-terminal",
+    "tagColor": "#a78bfa",
+    "readTime": "8 min read",
+    "featured": true,
+    "image": "/images/openclaw-2026-5-2-stable-grok4-3-thumb.svg"
+  },
+  {
     "url": "/blog/grok-4-3-cost-efficiency-pareto-frontier/",
     "title": "Grok 4.3: Giảm Chi Phí 40-60%, Cải Thiện Điểm Số và Pareto Frontier Mới",
     "excerpt": "xAI ra mắt Grok 4.3 với AI Index 53, chi phí giảm 40% input / 60% output, ngồi trên Pareto frontier. Model vượt Claude Sonnet 4.6, Gemini 3.1 Pro nhưng kém GPT-5.5. Cộng đồng phản ứng trái chiều về tính thực tế của benchmark.",

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f1a"/>
+      <stop offset="100%" style="stop-color:#1a0f2e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f97316"/>
+      <stop offset="100%" style="stop-color:#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="800" height="420" fill="url(#bg)"/>
+  <!-- Accent bar (vertical left) -->
+  <rect x="50" y="80" width="6" height="120" rx="3" fill="url(#accent)"/>
+  <!-- Title -->
+  <text x="75" y="120" font-family="Inter, system-ui, sans-serif" font-size="42" font-weight="800" fill="#fafafa">OpenClaw 2026.5.2</text>
+  <!-- Subtitle -->
+  <text x="75" y="165" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="500" fill="#94a3b8">Grok 4.3 mặc định • Plugin ổn định • Less drama, more uptime</text>
+  <!-- Feature pills row -->
+  <g transform="translate(75, 210)" font-family="Inter, system-ui, sans-serif">
+    <rect x="0" y="0" width="200" height="36" rx="18" fill="rgba(249,115,22,0.15)" stroke="rgba(249,115,22,0.4)" stroke-width="2"/>
+    <text x="100" y="23" font-size="14" font-weight="600" fill="#fdba74" text-anchor="middle">🧠 Grok 4.3 Default</text>
+  </g>
+  <g transform="translate(300, 210)" font-family="Inter, system-ui, sans-serif">
+    <rect x="0" y="0" width="200" height="36" rx="18" fill="rgba(34,197,94,0.12)" stroke="rgba(34,197,94,0.35)" stroke-width="2"/>
+    <text x="100" y="23" font-size="14" font-weight="600" fill="#4ade80" text-anchor="middle">🔌 Plugin Stability</text>
+  </g>
+  <g transform="translate(525, 210)" font-family="Inter, system-ui, sans-serif">
+    <rect x="0" y="0" width="220" height="36" rx="18" fill="rgba(96,165,250,0.12)" stroke="rgba(96,165,250,0.35)" stroke-width="2"/>
+    <text x="110" y="23" font-size="14" font-weight="600" fill="#93c5fd" text-anchor="middle">⚡ Leaner Hot Paths</text>
+  </g>
+  <!-- Description -->
+  <text x="75" y="290" font-family="Inter, system-ui, sans-serif" font-size="17" font-weight="400" fill="#e2e8f0" width="650" line-height="1.5">
+    <tspan x="75" dy="0">Bản cập nhật ổn định sau pivot ChatGPT Plus — Grok 4.3 làm default,</tspan>
+    <tspan x="75" dy="28">plugin installs sturdier, gateway tối ưu, và hàng loạt fix Discord/Slack.</tspan>
+  </text>
+  <!-- Escbase branding -->
+  <text x="75" y="390" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700" fill="#64748b">escbase.xyz</text>
+</svg>
