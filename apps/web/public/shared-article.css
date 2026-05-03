@@ -236,11 +236,23 @@ h1 {
 .source-links li { margin-bottom: .35rem; }
 
 /* Images */
-.article-content img {
+.article-header img,
+.article-content img,
+.inline-image {
+  display: block;
+  width: 100%;
   max-width: 100%;
+  height: auto;
   border-radius: var(--radius-md);
   border: 1px solid var(--border);
-  margin: 1.5rem 0;
+  margin: 1.5rem auto;
+}
+
+.article-header img,
+.article-header .inline-image {
+  max-height: 420px;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* Inline code */
@@ -303,6 +315,17 @@ h1 {
   .highlight-box-red h4 { font-size: 1rem; }
   .quote-block { padding: 1rem 1.15rem; margin: 1.5rem 0; }
   .source-links { padding: 1.15rem; }
+  .article-header img,
+  .article-header .inline-image {
+    max-height: 220px !important;
+    margin-top: .9rem !important;
+  }
+  .article-content img,
+  .inline-image {
+    max-height: 260px;
+    object-fit: cover;
+    object-position: center;
+  }
   .tags { gap: .5rem; margin-top: 2rem; padding-top: 1.5rem; }
   .tag { padding: .4rem .85rem; font-size: .8rem; }
 }
