@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/elevenlabs-agents-5-startup-ideas/",
+    "title": "5 Startup Ideas Dùng ElevenLabs Agents Thay Thế Nhân Sự, Chi Phí Chỉ $0.08/phút",
+    "excerpt": "5 ý tưởng startup có thể build và resell chỉ với ElevenLabs Agents: AI Receptionist, Multilingual Support, AI SDR, Restaurant Order Agent, Real Estate Scheduler. Chi phí $0.08/phút, thay thế $2-5k/tháng nhân sự.",
+    "date": "May 03, 2026",
+    "tag": "AI Agents",
+    "tagIcon": "fas fa-robot",
+    "tagColor": "#a78bfa",
+    "readTime": "9 phút đọc",
+    "featured": true,
+    "image": "/images/elevenlabs-agents-5-startup-ideas-thumb.svg"
+  },
+  {
     "url": "/blog/gpt-image2-seedance2-video-workflow/",
     "title": "GPT-Image 2 + Seedance 2.0: Tạo Video Từ Storyboard Chỉ Bằng 1 Câu Lệnh",
     "excerpt": "GPT-Image 2 sinh storyboard chi tiết (vận镜, hành động, thoại, âm thanh) → Seedance 2.0 render video ngay. Workflow đang thay đổi cách creator Trung Quốc sản xuất short video hàng loạt.",
