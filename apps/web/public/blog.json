@@ -27,11 +27,12 @@
     "url": "/blog/grok-4-3-cost-efficiency-pareto-frontier/",
     "title": "Grok 4.3: Giảm Chi Phí 40-60%, Cải Thiện Điểm Số và Pareto Frontier Mới",
     "excerpt": "xAI ra mắt Grok 4.3 với AI Index 53, chi phí giảm 40% input / 60% output, ngồi trên Pareto frontier. Model vượt Claude Sonnet 4.6, Gemini 3.1 Pro nhưng kém GPT-5.5. Cộng đồng phản ứng trái chiều về tính thực tế của benchmark.",
-    "date": "30 Apr 2026",
+    "date": "2026-05-03",
     "tag": "AI Models & Agents",
     "tagIcon": "fas fa-brain",
     "tagColor": "#f97316",
-    "readTime": "8 min read"
+    "readTime": "8 phút đọc",
+    "image": "/images/grok-4-3-cost-efficiency-pareto-frontier-thumb.png"
   },
   {
     "url": "/blog/openclaw-chatgpt-login-pivot",
