@@ -12,7 +12,7 @@
   <circle cx="1030" cy="500" r="190" fill="#22d3ee" opacity="0.08"/>
   <rect x="72" y="72" width="220" height="40" rx="20" fill="#111827" stroke="#1f2937"/>
   <circle cx="92" cy="92" r="7" fill="#10a37f"/>
-  <text x="108" y="98" fill="#86efac" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800">ESC BASE</text>
+  <text x="108" y="98" fill="#86efac" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800">Escbase</text>
   <text x="72" y="188" fill="white" font-family="Inter, Arial, sans-serif" font-size="66" font-weight="850">OpenAI Codex</text>
   <text x="72" y="262" fill="url(#green)" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="850">Không chỉ coding</text>
   <text x="72" y="326" fill="url(#green)" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="850">mà là office agent</text>
