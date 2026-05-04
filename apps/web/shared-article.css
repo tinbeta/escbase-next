@@ -1,0 +1,21 @@
+
+/* Video aspect ratio fix - prevent stretching */
+.video-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background: #000;
+}
+.video-container video,
+article video,
+.inline-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  object-fit: contain;
+  background: #000;
+}
