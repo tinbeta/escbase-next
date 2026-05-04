@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/codex-hyperframe-video-editing/",
+    "title": "Codex + HyperFrame/Remotion: Dùng Code Thay Thế Phần Mềm Dựng Video",
+    "excerpt": "Creator Trung Quốc dùng Codex + HyperFrame/Remotion tạo video hoàn toàn bằng code. Claude official get 10M+ views. Video editor mới làm clip trong <1h.",
+    "date": "May 04, 2026",
+    "tag": "AI Video",
+    "tagIcon": "fas fa-video",
+    "tagColor": "#f43f5e",
+    "readTime": "7 phút đọc",
+    "featured": true,
+    "image": "/images/codex-hyperframe-video-editing-thumb.svg"
+  },
+  {
     "url": "/blog/anthropic-claude-code-company-blueprint/",
     "title": "Anthropic Blueprint: Dùng Claude Code Xây Công Ty Với Nhân Viên Là AI, CEO Ngủ",
     "excerpt": "Anthropic công bố blueprint xây công ty với Claude Code: 1 người điều hành + nhiều AI agent làm việc tự động. Agent Stack (ADK + Vertex AI + MCP + A2A) giải quyết 3 vấn đề lớn khi deploy AI vào production.",

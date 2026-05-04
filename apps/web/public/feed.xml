@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Mon, 04 May 2026 14:37:30 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 04 May 2026 14:53:07 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Codex + HyperFrame/Remotion: Dùng Code Thay Thế Phần Mềm Dựng Video</title>
+      <link>https://escbase.xyz/blog/codex-hyperframe-video-editing/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/codex-hyperframe-video-editing/</guid>
+      <pubDate>Sun, 03 May 2026 17:00:00 GMT</pubDate>
+      <description>Creator Trung Quốc dùng Codex + HyperFrame/Remotion tạo video hoàn toàn bằng code. Claude official get 10M+ views. Video editor mới làm clip trong &lt;1h.</description>
+      <category>AI Video</category>
+      <enclosure url="https://escbase.xyz/images/codex-hyperframe-video-editing-thumb.svg" type="image/svg+xml" length="0" />
+    </item>
     <item>
       <title>Anthropic Blueprint: Dùng Claude Code Xây Công Ty Với Nhân Viên Là AI, CEO Ngủ</title>
       <link>https://escbase.xyz/blog/anthropic-claude-code-company-blueprint/</link>
@@ -447,15 +456,6 @@
       <description>Nous Research vừa ra Hermes Agent v0.11.0 với tên gọi The Interface Release. Điểm đáng chú ý không phải chỉ là thêm model hay provider mới, mà là một tín hiệu sản phẩm rất rõ: khi model dần bị commoditize, lớp interface, orchestration và execution layer mới là nơi agent tạo ra khác biệt thật.</description>
       <category>Nous Research</category>
       <enclosure url="https://escbase.xyz/images/nous-hermes-interface-release-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>OpenAI Ra GPT-5.5: Đang Biến “Làm Việc Trên Máy Tính” Thành Một Primitive Mới Của Model</title>
-      <link>https://escbase.xyz/blog/openai-gpt-5-5-real-work-agents</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/openai-gpt-5-5-real-work-agents</guid>
-      <pubDate>Thu, 23 Apr 2026 17:00:00 GMT</pubDate>
-      <description>OpenAI vừa ra GPT-5.5 với thông điệp rất rõ: model này không chỉ thông minh hơn, mà được tối ưu cho real work và agent workflows. Nó giỏi hơn ở coding, research, computer use, knowledge work và early scientific research, nhưng vẫn giữ latency ngang GPT-5.4. Đây có thể là lúc OpenAI đang biến &apos;computer work&apos; thành một primitive sản phẩm mới.</description>
-      <category>OpenAI</category>
-      <enclosure url="https://escbase.xyz/images/openai-gpt-5-5-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>
