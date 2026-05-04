@@ -329,3 +329,18 @@ h1 {
   .tags { gap: .5rem; margin-top: 2rem; padding-top: 1.5rem; }
   .tag { padding: .4rem .85rem; font-size: .8rem; }
 }
+
+/* Video: tap to play/pause, hide default controls */
+.video-container,
+article video,
+.inline-video {
+  position: relative;
+  cursor: pointer;
+}
+.video-container video,
+.inline-video {
+  width: 100%;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  display: block;
+}

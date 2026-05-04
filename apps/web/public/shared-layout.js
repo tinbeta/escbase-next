@@ -127,3 +127,26 @@
     renderFooter();
   });
 })();
+
+  // Video: tap to play/pause, hide native controls
+  function initVideoTap() {
+    document.querySelectorAll('video').forEach(function(video) {
+      // Remove controls attribute so native controls don't show
+      video.removeAttribute('controls');
+      video.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (video.paused) {
+          // Pause all other videos first
+          document.querySelectorAll('video').forEach(function(v) {
+            if (v !== video) v.pause();
+          });
+          video.play().catch(function() {});
+        } else {
+          video.pause();
+        }
+      });
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', initVideoTap);
+  if (document.readyState !== 'loading') initVideoTap();
