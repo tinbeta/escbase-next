@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthropic Blueprint: Dùng Claude Code Xây Công Ty Với Nhân Viên Là AI, CEO Ngủ | Escbase</title>
+    <meta name="description" content="Anthropic chính thức công bố blueprint xây công ty với Claude Code: 1 người điều hành + nhiều AI agent làm việc tự động. Agent Stack (ADK + Vertex AI + MCP + A2A) giải quyết 3 vấn đề lớn khi deploy AI vào production.">
+    <meta property="og:title" content="Anthropic Blueprint: Công Ty AI, CEO Ngủ">
+    <meta property="og:description" content="Anthropic công bố blueprint: 1 người + nhiều AI agent. ADK + Vertex AI + MCP + A2A = công ty tự vận hành. Bài tóm tắt chi tiết.">
+    <meta property="og:image" content="https://escbase.xyz/images/anthropic-claude-code-blueprint-thumb.png">
+    <meta property="og:url" content="https://escbase.xyz/blog/anthropic-claude-code-company-blueprint/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/shared-article.css">
+    <link rel="stylesheet" href="/shared-article-footer.css">
+    <style>
+        .video-container { margin: 2rem 0; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border); }
+        .video-container video { width: 100%; display: block; }
+        .concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+        .concept-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.25rem; }
+        .concept-card h4 { color: var(--text); margin-bottom: .5rem; font-size: 1rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <span class="category-badge"><i class="fas fa-robot"></i> AI Agents</span>
+                <h1>Anthropic Blueprint: Dùng Claude Code Xây Công Ty Với Nhân Viên Là AI, CEO Ngủ</h1>
+                <div class="meta">
+                    <span><i class="far fa-calendar"></i> 04/05/2026</span>
+                    <span><i class="far fa-clock"></i> 10 phút đọc</span>
+                    <span><i class="far fa-folder"></i> AI Agents, Anthropic, Claude Code</span>
+                </div>
+                <img src="/images/anthropic-claude-code-blueprint-thumb.png" alt="Anthropic Claude Code company blueprint" class="inline-image" style="margin-top:1rem;">
+            </header>
+
+            <div class="article-content">
+                <div class="highlight-box">
+                    <h4>TL;DR</h4>
+                    <p style="margin-bottom:0">Anthropic vừa công bố blueprint chính thức để xây công ty với Claude Code: <strong>1 CEO người (có thể ngủ) + nhiều AI agent làm việc tự động</strong>. Agent Stack (ADK + Vertex AI + MCP + A2A) giải quyết 3 vấn đề lớn: quá nhiều framework không tương thích, agent không giao tiếp được với nhau, và quản lý production cực khó. Cấu trúc công ty AI đang dần thành hiện thực.</p>
+                </div>
+
+                <div class="video-container">
+                    <video controls poster="/images/anthropic-claude-code-blueprint-video-poster.jpg">
+                        <source src="/images/anthropic-claude-code-blueprint-video.mp4" type="video/mp4">
+                        Trình duyệt không hỗ trợ video.
+                    </video>
+                    <p style="text-align:center; font-size:0.85rem; color:var(--text-muted); margin-top:0.5rem;">Video tóm tắt từ @Jouhatsu_ai — Anthropic blueprint chi tiết.</p>
+                </div>
+
+                <h2>Bối cảnh: 3 vấn đề chết người khi deploy AI vào production</h2>
+                <p>Jouhatsu_ai, người đã tóm tắt guide này, chỉ ra rằng trước khi có Agent Stack, có 3 vấn đề lớn:</p>
+                <ol>
+                    <li><strong>Quá nhiều framework khác nhau</strong> → tích hợp thành ác mộng</li>
+                    <li><strong>Agent từ framework khác nhau không giao tiếp được</strong> với nhau</li>
+                    <li><strong>Quản lý production</strong> (monitoring, logs, governance) là địa ngục</li>
+                </ol>
+
+                <h2>Agent Stack: 4 thành phần, 1 kiến trúc</h2>
+                <div class="concept-grid">
+                    <div class="concept-card">
+                        <h4>① ADK (Agent Development Kit)</h4>
+                        <p style="font-size:0.9rem">Bộ công cụ để tạo agents. Open source, code-first.</p>
+                    </div>
+                    <div class="concept-card">
+                        <h4>② MCP (Model Context Protocol)</h4>
+                        <p style="font-size:0.9rem">Standard kết nối agent với tools bên ngoài.</p>
+                    </div>
+                    <div class="concept-card">
+                        <h4>③ Vertex AI Agent Engine</h4>
+                        <p style="font-size:0.9rem">Nền tảng deploy production tự động (managed).</p>
+                    </div>
+                    <div class="concept-card">
+                        <h4>④ A2A (Agent-to-Agent)</h4>
+                        <p style="font-size:0.9rem">Giao thức cho phép agent từ framework khác nói chuyện.</p>
+                    </div>
+                </div>
+                <p>Tất cả đặt trên nền tảng Claude models.</p>
+
+                <h2>ADK: Cần chỉ 3 file để tạo agent đầu tiên</h2>
+                <p>Theo guide, chỉ cần:</p>
+                <ul>
+                    <li><code>agent.py</code> — logic của agent</li>
+                    <li><code>.env</code> — biến môi trường (API keys, configs)</li>
+                    <li><code>__init__.py</code> — file chuẩn Python</li>
+                </ul>
+                <p>Ví dụ agent cơ bản:</p>
+                <pre style="background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius-md);padding:1rem;overflow-x:auto;font-size:.85rem"><code>LLMAgent(
+  name="birthday_planner",
+  model=Claude("claude-sonnet-4-5"),
+  description="Planifie des fêtes",
+  instruction="Gère la liste d'invités et propose des idées"
+)</code></pre>
+                <p>Chạy <code>adk run birthday</code> → agent chạy ngay từ terminal.</p>
+
+                <h2>4 concepts cốt lõi trong ADK</h2>
+                <ol>
+                    <li><strong>Agent</strong> = bộ não chạy trên LLM</li>
+                    <li><strong>Tool</strong> = các kỹ năng/capabilities cho agent</li>
+                    <li><strong>Runner</strong> = điều phối agent, quản lý sessions</li>
+                    <li><strong>Session</strong> = bộ nhớ hội thoại (nhớ context)</li>
+                </ol>
+
+                <h2>4 patterns workflow để orchestration agent</h2>
+                <ul>
+                    <li><strong>LLM Agent</strong> — 1 LLM tự quyết định (max flexibility)</li>
+                    <li><strong>Sequential Agent</strong> — nhiều agent chạy nối tiếp A → B → C</li>
+                    <li><strong>Parallel Agent</strong> — nhiều agent chạy song song (tiết kiệm thời gian)</li>
+                    <li><strong>Loop Agent</strong> — lặp đến khi điều kiện được thỏa (retry tự động)</li>
+                </ul>
+
+                <h2>Pre-built tools: Google Search, Vertex AI Search, Code Execution</h2>
+                <p>ADK cung cấp sẵn tools mạnh:</p>
+                <ul>
+                    <li><strong>Google Search</strong> — tìm kiếm web thời gian thực</li>
+                    <li><strong>Vertex AI Search</strong> — tìm trong dữ liệu nội bộ (docs, database)</li>
+                    <li><strong>Code Execution</strong> — chạy Python (tính toán, chart, transform)</li>
+                    <li><strong>Built-in Agent Tools</strong> — gọi các agent ADK khác như tool</li>
+                </ul>
+
+                <h2>MCP: Kết nối tools bên ngoài chỉ 2 dòng code</h2>
+                <p>MCP là standard giúp agent kết nối bất kỳ tool nào:</p>
+                <pre style="background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius-md);padding:1rem;overflow-x:auto;font-size:.85rem"><code>MCPToolset.from_server(...)</code></pre>
+                <p>Tất cả servers MCP trên thị trường đều trở thành tools của bạn.</p>
+
+                <h2>Multi-agent: Cấu trúc công ty thu nhỏ trong code</h2>
+                <p>Ví dụ: Birthday Planner trở thành:</p>
+                <ul>
+                    <li>Agent "Creativity & Ideas"</li>
+                    <li>Agent "Reservation & Calendar"</li>
+                </ul>
+                <p>Orchestrator agent tự đọc câu hỏi → quyết định ai competent → delegate tự động. Đây là cấu trúc công ty được dịch sang code.</p>
+
+                <h2>Debug với Web UI: adk web</h2>
+                <p>Command <code>adk web</code> mở dashboard trong trình duyệt, thấy:</p>
+                <ul>
+                    <li>Agent nào được activate và tại sao</li>
+                    <li>Quá trình suy nghĩ hoàn chỉnh</li>
+                    <li>Mỗi tool call theo thứ tự</li>
+                    <li>Luồng giữa các agents trong architecture multi-agent</li>
+                </ul>
+
+                <h2>Deploy production: agent_engine.create()</h2>
+                <p>Thay vì phải setup server web, Docker, infra cloud, monitoring — chỉ cần:</p>
+                <pre style="background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius-md);padding:1rem;overflow-x:auto;font-size:.85rem"><code>agent_engine.create()</code></pre>
+                <p>Monitoring, logs, auto-scaling → tất cả được managed. Deploy agent như push file.</p>
+
+                <h2>A2A Protocol: LangGraph, LangChain, CrewAI nói chuyện được với nhau</h2>
+                <p>Ba framework kia mỗi cái có dialect riêng. A2A là ngôn ngữ chung kết nối tất cả.</p>
+
+                <h2>Chốt một câu</h2>
+                <p>Anthropic không chỉ build model, họ đang xây infrastructure cho "công ty AI" thực sự. ADK + Vertex AI + MCP + A2A = stack hoàn chỉnh để 1 người điều hành hệ thống nhiều agent tự vận hành. "Công việc đang chết dần" nghe dramatic, nhưng blueprint này đang biến nó thành thực tế kỹ thuật có thể triển khai được.</p>
+
+                <div class="source-links">
+                    <h4>Nguồn & tham khảo</h4>
+                    <ul>
+                        <li><a href="https://x.com/jouhatsu_ai/status/2050939998115930192" target="_blank">Thread gốc từ @Jouhatsu_ai trên X</a></li>
+                        <li><a href="https://github.com/anthropics/anthropic-adk-tools" target="_blank">Anthropic ADK GitHub</a></li>
+                    </ul>
+                </div>
+
+                <div class="back-to-blog-footer">
+                    <a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+                </div>
+
+                <div class="article-cta-stack">
+                    <div class="article-cta-actions">
+                        <a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a>
+                    </div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">Anthropic</span>
+                    <span class="tag">Claude Code</span>
+                    <span class="tag">ADK</span>
+                    <span class="tag">AI Agents</span>
+                    <span class="tag">Vertex AI</span>
+                    <span class="tag">MCP</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

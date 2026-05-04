@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/anthropic-claude-code-company-blueprint/",
+    "title": "Anthropic Blueprint: Dùng Claude Code Xây Công Ty Với Nhân Viên Là AI, CEO Ngủ",
+    "excerpt": "Anthropic công bố blueprint xây công ty với Claude Code: 1 người điều hành + nhiều AI agent làm việc tự động. Agent Stack (ADK + Vertex AI + MCP + A2A) giải quyết 3 vấn đề lớn khi deploy AI vào production.",
+    "date": "May 04, 2026",
+    "tag": "AI Agents",
+    "tagIcon": "fas fa-robot",
+    "tagColor": "#ef4444",
+    "readTime": "10 phút đọc",
+    "featured": true,
+    "image": "/images/anthropic-claude-code-company-blueprint-thumb.svg"
+  },
+  {
     "url": "/blog/open-slide-agent-framework/",
     "title": "open-slide: Framework Làm Slide Dành Riêng Cho AI Agents (Claude, Cursor, Codex)",
     "excerpt": "open-slide là slide framework cho agents: prompt → polished deck. Mỗi slide là React component 1920×1080. Có /create-slide, /apply-comments (in-browser feedback), presenter mode, export PDF/HTML, deploy Vercel. Hoạt động với Claude Code, Cursor, Codex.",
