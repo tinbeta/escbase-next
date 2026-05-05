@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Tue, 05 May 2026 15:32:37 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 05 May 2026 15:43:12 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Brian Armstrong Lay Off ~14% Coinbase, Tái Cấu Trúc Thành AI-Native: Non-Technical Teams Đang Ship Production Code</title>
+      <link>https://escbase.xyz/blog/coinbase-layoffs-ai-native/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/coinbase-layoffs-ai-native/</guid>
+      <pubDate>Mon, 04 May 2026 17:00:00 GMT</pubDate>
+      <description>Brian Armstrong gửi email toàn công ty: cắt ~14% nhân sự. Lý do: thị trường crypto down + AI thay đổi cách làm việc. Non-technical teams giờ tự ship production code.</description>
+      <category>Crypto</category>
+      <enclosure url="https://escbase.xyz/images/coinbase-layoffs-ai-native-thumb.svg" type="image/svg+xml" length="0" />
+    </item>
     <item>
       <title>Codex /goal: Advancement Lớn Nhất Năm về AI Coding — Secret Weapon Là Meta Prompting</title>
       <link>https://escbase.xyz/blog/codex-goal-meta-prompting/</link>
@@ -447,15 +456,6 @@
       <description>OpenClaw 2026.4.22 thêm Grok image/voice tools, Tencent Hy3, local embedded TUI, /models add, auto-install plugin và diagnostics export, kèm một khối fix dày cho sessions, Codex, security, channels và runtime. Đây là bản update mở rộng biên dùng thật chứ không chỉ thêm headline mới.</description>
       <category>OpenClaw</category>
       <enclosure url="https://escbase.xyz/images/openclaw-2026-4-22-release-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>DeepSeek V4 Preview Mở Màn Bằng Cú So Với Gemini 3.1 Pro Và Closed Models</title>
-      <link>https://escbase.xyz/blog/deepseek-v4-preview-open-vs-closed</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/deepseek-v4-preview-open-vs-closed</guid>
-      <pubDate>Thu, 23 Apr 2026 17:00:00 GMT</pubDate>
-      <description>DeepSeek vừa ra DeepSeek-V4 Preview theo đúng kiểu không lòng vòng: tự đặt mình cạnh Gemini 3.1 Pro, tuyên bố vượt mọi open model hiện tại ở nhiều mảng và rival top closed-source models. Điểm đáng chú ý không chỉ là benchmark, mà là cách DeepSeek gói open-source, 1M context, agentic coding và API rollout thành một cú launch có thể kéo người dùng vào thử ngay.</description>
-      <category>DeepSeek</category>
-      <enclosure url="https://escbase.xyz/images/deepseek-v4-preview-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>

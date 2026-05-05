@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/coinbase-layoffs-ai-native/",
+    "title": "Brian Armstrong Lay Off ~14% Coinbase, Tái Cấu Trúc Thành AI-Native: Non-Technical Teams Đang Ship Production Code",
+    "excerpt": "Brian Armstrong gửi email toàn công ty: cắt ~14% nhân sự. Lý do: thị trường crypto down + AI thay đổi cách làm việc. Non-technical teams giờ tự ship production code.",
+    "date": "May 05, 2026",
+    "tag": "Crypto",
+    "tagIcon": "fas fa-building",
+    "tagColor": "#f59e0b",
+    "readTime": "8 phút đọc",
+    "featured": true,
+    "image": "/images/coinbase-layoffs-ai-native-thumb.svg"
+  },
+  {
     "url": "/blog/codex-goal-meta-prompting/",
     "title": "Codex /goal: Advancement Lớn Nhất Năm về AI Coding — Secret Weapon Là Meta Prompting",
     "excerpt": "Alex Finn gọi /goal của Codex là advancement lớn nhất năm về AI coding: agent làm việc liên tục nhiều ngày. Secret là meta prompting - dùng AI viết prompt cho AI.",
