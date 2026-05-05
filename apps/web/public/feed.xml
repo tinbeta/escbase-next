@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Mon, 04 May 2026 15:39:50 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 05 May 2026 15:32:37 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Codex /goal: Advancement Lớn Nhất Năm về AI Coding — Secret Weapon Là Meta Prompting</title>
+      <link>https://escbase.xyz/blog/codex-goal-meta-prompting/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/codex-goal-meta-prompting/</guid>
+      <pubDate>Mon, 04 May 2026 17:00:00 GMT</pubDate>
+      <description>Alex Finn gọi /goal của Codex là advancement lớn nhất năm về AI coding: agent làm việc liên tục nhiều ngày. Secret là meta prompting - dùng AI viết prompt cho AI.</description>
+      <category>AI Coding</category>
+      <enclosure url="https://escbase.xyz/images/codex-goal-meta-prompting-thumb.svg" type="image/svg+xml" length="0" />
+    </item>
     <item>
       <title>Codex + HyperFrame/Remotion: Dùng Code Thay Thế Phần Mềm Dựng Video</title>
       <link>https://escbase.xyz/blog/codex-hyperframe-video-editing/</link>
@@ -447,15 +456,6 @@
       <description>DeepSeek vừa ra DeepSeek-V4 Preview theo đúng kiểu không lòng vòng: tự đặt mình cạnh Gemini 3.1 Pro, tuyên bố vượt mọi open model hiện tại ở nhiều mảng và rival top closed-source models. Điểm đáng chú ý không chỉ là benchmark, mà là cách DeepSeek gói open-source, 1M context, agentic coding và API rollout thành một cú launch có thể kéo người dùng vào thử ngay.</description>
       <category>DeepSeek</category>
       <enclosure url="https://escbase.xyz/images/deepseek-v4-preview-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>Nous Ra Hermes Agent “The Interface Release”: Cuộc Chiến Agent Đang Chuyển Từ Model Sang Giao Diện</title>
-      <link>https://escbase.xyz/blog/nous-hermes-interface-release-agent-ui</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/nous-hermes-interface-release-agent-ui</guid>
-      <pubDate>Thu, 23 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Nous Research vừa ra Hermes Agent v0.11.0 với tên gọi The Interface Release. Điểm đáng chú ý không phải chỉ là thêm model hay provider mới, mà là một tín hiệu sản phẩm rất rõ: khi model dần bị commoditize, lớp interface, orchestration và execution layer mới là nơi agent tạo ra khác biệt thật.</description>
-      <category>Nous Research</category>
-      <enclosure url="https://escbase.xyz/images/nous-hermes-interface-release-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>

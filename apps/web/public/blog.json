@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/codex-goal-meta-prompting/",
+    "title": "Codex /goal: Advancement Lớn Nhất Năm về AI Coding — Secret Weapon Là Meta Prompting",
+    "excerpt": "Alex Finn gọi /goal của Codex là advancement lớn nhất năm về AI coding: agent làm việc liên tục nhiều ngày. Secret là meta prompting - dùng AI viết prompt cho AI.",
+    "date": "May 05, 2026",
+    "tag": "AI Coding",
+    "tagIcon": "fas fa-code",
+    "tagColor": "#22c55e",
+    "readTime": "7 phút đọc",
+    "featured": true,
+    "image": "/images/codex-goal-meta-prompting-thumb.svg"
+  },
+  {
     "url": "/blog/codex-hyperframe-video-editing/",
     "title": "Codex + HyperFrame/Remotion: Dùng Code Thay Thế Phần Mềm Dựng Video",
     "excerpt": "Creator Trung Quốc dùng Codex + HyperFrame/Remotion tạo video hoàn toàn bằng code. Claude official get 10M+ views. Video editor mới làm clip trong <1h.",
