@@ -344,3 +344,18 @@ article video,
   border: 1px solid var(--border);
   display: block;
 }
+
+/* Video play overlay - show when paused */
+.video-container,
+article .video-container {
+  position: relative;
+}
+.video-container video {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+}
+.video-container:has(video:not([paused]))::after,
+.video-container video:not([paused]) ~ * {
+  /* play state */
+}

@@ -128,22 +128,38 @@
   });
 })();
 
-  // Video: tap to play/pause, hide native controls
+  // Video: tap to play/pause, toggle playing class for CSS
   function initVideoTap() {
     document.querySelectorAll('video').forEach(function(video) {
-      // Remove controls attribute so native controls don't show
+      // Remove controls attribute
       video.removeAttribute('controls');
       video.addEventListener('click', function(e) {
         e.preventDefault();
+        var container = video.closest('.video-container');
         if (video.paused) {
           // Pause all other videos first
           document.querySelectorAll('video').forEach(function(v) {
-            if (v !== video) v.pause();
+            if (v !== video) {
+              v.pause();
+              var c = v.closest('.video-container');
+              if (c) c.classList.remove('playing');
+            }
           });
           video.play().catch(function() {});
+          if (container) container.classList.add('playing');
         } else {
           video.pause();
+          if (container) container.classList.remove('playing');
         }
+      });
+      // Also handle play/pause events
+      video.addEventListener('play', function() {
+        var c = video.closest('.video-container');
+        if (c) c.classList.add('playing');
+      });
+      video.addEventListener('pause', function() {
+        var c = video.closest('.video-container');
+        if (c) c.classList.remove('playing');
       });
     });
   }
