@@ -128,41 +128,31 @@
   });
 })();
 
-  // Video: tap to play/pause, toggle playing class for CSS
-  function initVideoTap() {
-    document.querySelectorAll('video').forEach(function(video) {
-      // Remove controls attribute
+  // Video: tap to play/pause
+  document.addEventListener('DOMContentLoaded', function() {
+    var videos = document.querySelectorAll('video');
+    videos.forEach(function(video) {
       video.removeAttribute('controls');
-      video.addEventListener('click', function(e) {
-        e.preventDefault();
-        var container = video.closest('.video-container');
-        if (video.paused) {
-          // Pause all other videos first
-          document.querySelectorAll('video').forEach(function(v) {
-            if (v !== video) {
-              v.pause();
-              var c = v.closest('.video-container');
-              if (c) c.classList.remove('playing');
-            }
-          });
-          video.play().catch(function() {});
-          if (container) container.classList.add('playing');
-        } else {
-          video.pause();
-          if (container) container.classList.remove('playing');
-        }
-      });
-      // Also handle play/pause events
-      video.addEventListener('play', function() {
-        var c = video.closest('.video-container');
-        if (c) c.classList.add('playing');
-      });
-      video.addEventListener('pause', function() {
-        var c = video.closest('.video-container');
-        if (c) c.classList.remove('playing');
-      });
     });
-  }
-
-  document.addEventListener('DOMContentLoaded', initVideoTap);
-  if (document.readyState !== 'loading') initVideoTap();
+    document.addEventListener('click', function(e) {
+      var video = e.target.closest('.video-container') ? e.target.closest('.video-container').querySelector('video') : null;
+      if (!video) {
+        var target = e.target;
+        while (target && target !== document) {
+          if (target.tagName === 'VIDEO') {
+            video = target;
+            break;
+          }
+          target = target.parentElement;
+        }
+      }
+      if (!video || video.tagName !== 'VIDEO') return;
+      e.preventDefault();
+      if (video.paused || video.currentTime === 0) {
+        document.querySelectorAll('video').forEach(function(v) { if (v !== video) v.pause(); });
+        video.play().catch(function() {});
+      } else {
+        video.pause();
+      }
+    });
+  });
