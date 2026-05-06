@@ -127,37 +127,3 @@
     renderFooter();
   });
 })();
-
-  // Video: tap to play/pause
-  document.addEventListener('DOMContentLoaded', function() {
-    var videos = document.querySelectorAll('video');
-    videos.forEach(function(video) {
-      video.removeAttribute('controls');
-    });
-    document.addEventListener('click', function(e) {
-      var video = e.target.closest('.video-container') ? e.target.closest('.video-container').querySelector('video') : null;
-      if (!video) {
-        var target = e.target;
-        // Allow clicking on play button or overlay
-        if (target.classList.contains('play-btn') || target.classList.contains('play-btn-overlay') || target.closest('.play-btn-overlay') || target.closest('.play-btn')) {
-          var container = target.closest('.video-container');
-          if (container) target = container.querySelector('video') || target;
-        }
-        while (target && target !== document) {
-          if (target.tagName === 'VIDEO') {
-            video = target;
-            break;
-          }
-          target = target.parentElement;
-        }
-      }
-      if (!video || video.tagName !== 'VIDEO') return;
-      e.preventDefault();
-      if (video.paused || video.currentTime === 0) {
-        document.querySelectorAll('video').forEach(function(v) { if (v !== video) v.pause(); });
-        video.play().catch(function() {});
-      } else {
-        video.pause();
-      }
-    });
-  });
