@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/openclaw-2026-5-4-performance-reliability/",
+    "title": "OpenClaw 2026.5.4: Gateway Nhanh Hơn, Plugin Bớt Lằng Nhằng, Doctor Sửa Lỗi Khôn Hơn",
+    "excerpt": "OpenClaw 2026.5.4 tập trung vào những thứ ít hào nhoáng nhưng cực đáng giá: plugin install/update sạch hơn, Gateway startup nhanh hơn, doctor/repair hints tốt hơn, Windows và Discord ổn định hơn.",
+    "date": "May 06, 2026",
+    "tag": "AI Tools",
+    "tagIcon": "fas fa-rocket",
+    "tagColor": "#38bdf8",
+    "readTime": "6 phút đọc",
+    "featured": true,
+    "image": "/images/openclaw-2026-5-4-performance-thumb.png"
+  },
+  {
     "url": "/blog/gemini-api-webhooks/",
     "title": "Gemini API Ra Mắt Webhooks: Thay Polling Bằng Push Notification Cho Long-Running Jobs",
     "excerpt": "Google ra mắt event-driven Webhooks trong Gemini API — push notification thay thế polling cho long-running jobs. Hỗ trợ Deep Research, video generation, Batch API. Signed requests + at-least-once delivery.",

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420">
+  <defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#09090b"/><stop offset="1" stop-color="#172554"/></linearGradient><linearGradient id="a" x1="0" x2="1"><stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#a78bfa"/></linearGradient></defs>
+  <rect width="800" height="420" fill="url(#bg)"/>
+  <circle cx="660" cy="90" r="150" fill="#38bdf8" opacity=".12"/>
+  <circle cx="110" cy="360" r="170" fill="#a78bfa" opacity=".14"/>
+  <rect x="62" y="86" width="5" height="96" rx="2" fill="url(#a)"/>
+  <text x="86" y="118" font-family="Inter,Arial,sans-serif" font-size="24" font-weight="800" fill="#f8fafc">OpenClaw 2026.5.4</text>
+  <text x="86" y="150" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="600" fill="#bae6fd">The release where boring got fast</text>
+  <text x="86" y="190" font-family="Inter,Arial,sans-serif" font-size="13" fill="#94a3b8">Cleaner plugins • Faster Gateway • Better doctor hints</text>
+  <text x="86" y="222" font-family="Inter,Arial,sans-serif" font-size="13" fill="#64748b">Windows + Discord reliability fixes</text>
+  <text x="86" y="380" font-family="Inter,Arial,sans-serif" font-size="12" font-weight="700" fill="#64748b">news.escbase.xyz</text>
+</svg>

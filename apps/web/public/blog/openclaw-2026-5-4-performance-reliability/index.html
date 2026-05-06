@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw 2026.5.4: Gateway nhanh hơn, plugin bớt lằng nhằng, doctor sửa lỗi khôn hơn | Escbase</title>
+    <meta name="description" content="OpenClaw 2026.5.4 tập trung vào những thứ ít hào nhoáng nhưng cực đáng giá: plugin install/update sạch hơn, Gateway startup nhanh hơn, doctor/repair hints tốt hơn, Windows và Discord ổn định hơn.">
+    <meta property="og:title" content="OpenClaw 2026.5.4: Boring Got Fast">
+    <meta property="og:description" content="Plugin installs sạch hơn, Gateway startup nhanh hơn, doctor hints tốt hơn, Windows + Discord reliability fixes.">
+    <meta property="og:image" content="https://news.escbase.xyz/images/openclaw-2026-5-4-performance-thumb.png">
+    <meta property="og:url" content="https://news.escbase.xyz/blog/openclaw-2026-5-4-performance-reliability/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/shared-article.css">
+    <link rel="stylesheet" href="/shared-article-footer.css">
+</head>
+<body>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <span class="category-badge"><i class="fas fa-rocket"></i> AI Tools</span>
+                <h1>OpenClaw 2026.5.4: Gateway Nhanh Hơn, Plugin Bớt Lằng Nhằng, Doctor Sửa Lỗi Khôn Hơn</h1>
+                <div class="meta">
+                    <span><i class="far fa-calendar"></i> 06/05/2026</span>
+                    <span><i class="far fa-clock"></i> 6 phút đọc</span>
+                    <span><i class="far fa-folder"></i> OpenClaw, AI Agents, Developer Tools</span>
+                </div>
+                <img src="/images/openclaw-2026-5-4-performance-thumb.png" alt="OpenClaw 2026.5.4 release" class="inline-image" style="margin-top:1rem;">
+            </header>
+
+            <div class="article-content">
+                <div class="highlight-box">
+                    <h4>TL;DR</h4>
+                    <p style="margin-bottom:0">OpenClaw 2026.5.4 là release kiểu “boring got fast”: không phải feature hào nhoáng, mà là dọn những điểm đau khi chạy hệ thống thật. Plugin installs/updates sạch hơn, Gateway startup nhanh hơn, doctor/repair hints khôn hơn, Windows + Discord ổn định hơn, và model auth dễ inspect hơn.</p>
+                </div>
+
+                <h2>Plugin installs bớt khó chịu</h2>
+                <p>OpenClaw nói official packages giờ recover sạch hơn giữa npm và ClawHub. Beta-channel updates cũng behave tốt hơn, còn doctor biết chỉ đúng stale config về install bạn thật sự cần.</p>
+                <p>Nghe nhỏ, nhưng đây là loại fix cực đáng giá với người dùng agent hàng ngày. Plugin mà lỗi install/update là workflow đứng hình ngay.</p>
+
+                <h2>Gateway startup nhanh và dễ debug hơn</h2>
+                <p>Gateway startup và hot control-plane paths được làm nhẹ hơn: ít cold plugin scans, ít lazy-load churn, và diagnostics theo phase rõ hơn khi startup vẫn chậm.</p>
+                <p>Community phản ứng khá đúng trọng tâm. @AryamanIyer3 nói đang chạy 7 agents và chỉ riêng Gateway startup nhanh hơn đã đáng update — vì cold scans từng là lý do khiến họ ngại restart.</p>
+
+                <h2>Doctor/repair hints thực dụng hơn</h2>
+                <p>Doctor tiếp tục được sharpen: SecretRefs survive cleanup, stale plugin config được repair thay vì misread, và update failures có xu hướng nói đúng “next command” hơn.</p>
+                <p>Đây là chi tiết quan trọng: tool tốt không chỉ chạy đúng khi mọi thứ sạch sẽ, mà phải nói chuyện tử tế khi mọi thứ bể.</p>
+
+                <h2>Windows + Discord reliability fixes</h2>
+                <p>Windows có localhost story bình tĩnh hơn: loopback binds tránh bẫy <code>::1/libuv</code>, temp/media writes đúng chỗ hơn, Discord startup/status report degraded transport thật hơn thay vì giả vờ ổn.</p>
+                <p>Chat channels cũng được vá nhiều paper cuts: Slack threads giữ thread đúng, Telegram previews clean hơn, WhatsApp Newsletter targets explicit hơn, và Discord final-send failures không còn pretend success.</p>
+
+                <h2>Meet, phone calls và model auth</h2>
+                <p>Twilio dial-ins giờ có thể nói qua realtime Gemini voice bridge với paced audio, bounded queues và barge-in clearing — nghe rất niche nhưng quan trọng cho voice agents.</p>
+                <p>Model auth cũng dễ inspect hơn: <code>openclaw models auth list</code> hiển thị saved per-agent profiles mà không dump secrets hoặc ép gọi provider live.</p>
+
+                <h2>Community vibe: update nhanh quá, nhưng đúng chỗ đau</h2>
+                <p>Nhiều reply kiểu “stop delivering, I can barely keep up” hoặc hỏi có stable tree không. Đó là phản ứng hợp lý: release cadence nhanh dễ làm người dùng production hơi rén.</p>
+                <p>Nhưng 2026.5.4 là dạng update đáng chú ý vì nó chạm vào reliability — thứ quyết định bạn có dám để agent chạy dài, restart Gateway, update plugin, hay debug production lúc nửa đêm không.</p>
+
+                <h2>Chốt một câu</h2>
+                <p>OpenClaw 2026.5.4 không phải release “wow demo”, mà là release làm nền móng chắc hơn. Agent platform muốn sống lâu phải thắng ở boring infrastructure: startup nhanh, plugin update sạch, doctor nói thật, chat delivery không giả success. Boring mà nhanh — đúng kiểu boring mình thích.</p>
+
+                <div class="source-links">
+                    <h4>Nguồn & tham khảo</h4>
+                    <ul>
+                        <li><a href="https://x.com/openclaw/status/2051582130417721696" target="_blank">Thread gốc từ @openclaw trên X</a></li>
+                    </ul>
+                </div>
+
+                <div class="back-to-blog-footer">
+                    <a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+                </div>
+
+                <div class="article-cta-stack">
+                    <div class="article-cta-actions">
+                        <a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a>
+                    </div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">OpenClaw</span>
+                    <span class="tag">AI Agents</span>
+                    <span class="tag">Gateway</span>
+                    <span class="tag">Developer Tools</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

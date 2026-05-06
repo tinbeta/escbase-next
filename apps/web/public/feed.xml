@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Wed, 06 May 2026 05:48:04 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 06 May 2026 05:55:05 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenClaw 2026.5.4: Gateway Nhanh Hơn, Plugin Bớt Lằng Nhằng, Doctor Sửa Lỗi Khôn Hơn</title>
+      <link>https://escbase.xyz/blog/openclaw-2026-5-4-performance-reliability/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/openclaw-2026-5-4-performance-reliability/</guid>
+      <pubDate>Tue, 05 May 2026 17:00:00 GMT</pubDate>
+      <description>OpenClaw 2026.5.4 tập trung vào những thứ ít hào nhoáng nhưng cực đáng giá: plugin install/update sạch hơn, Gateway startup nhanh hơn, doctor/repair hints tốt hơn, Windows và Discord ổn định hơn.</description>
+      <category>AI Tools</category>
+      <enclosure url="https://escbase.xyz/images/openclaw-2026-5-4-performance-thumb.png" type="image/png" length="0" />
+    </item>
     <item>
       <title>Gemini API Ra Mắt Webhooks: Thay Polling Bằng Push Notification Cho Long-Running Jobs</title>
       <link>https://escbase.xyz/blog/gemini-api-webhooks/</link>
@@ -447,15 +456,6 @@
       <description>Rohit vừa đẩy mạnh luận điểm one-person company với một stack gồm Claude Code, agent pipelines, Hermes/OpenClaw và Higgsfield. Điểm đáng chú ý không chỉ là chuyện một người làm 5 việc, mà là tranh cãi cộng đồng xoay quanh burnout, chi phí token, phân phối, oncall và việc AI có thật sự thay thế được một team hoàn chỉnh hay không.</description>
       <category>Founder Stack</category>
       <enclosure url="https://escbase.xyz/images/solo-founder-stack-2026-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>Hermes Agent Creative Hackathon: $26K</title>
-      <link>https://escbase.xyz/blog/hermes-agent-creative-hackathon-26k-prize-pool</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/hermes-agent-creative-hackathon-26k-prize-pool</guid>
-      <pubDate>Fri, 24 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Nous Research và Kimi tổ chức Hermes Agent Creative Hackathon với $26,000 tiền thưởng. 16 ngày, 2 hạng mục, tập trung vào video, hình ảnh, âm thanh, 3D và phần mềm sáng tạo. Nhưng cộng đồng đang tranh luận: 1000 ý tưởng từ agent có thực sự mới mẻ không?</description>
-      <category>AI Agents</category>
-      <enclosure url="https://escbase.xyz/images/hermes-agent-creative-hackathon-26k-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>
