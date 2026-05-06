@@ -330,9 +330,6 @@ h1 {
   .tag { padding: .4rem .85rem; font-size: .8rem; }
 }
 
-/* Video: tap to play/pause, hide default controls */
-.video-container,
-article video,
 .inline-video {
   position: relative;
   cursor: pointer;
@@ -345,9 +342,6 @@ article video,
   display: block;
 }
 
-/* Video play overlay - show when paused */
-.video-container,
-article .video-container {
   position: relative;
 }
 .video-container video {
@@ -359,3 +353,35 @@ article .video-container {
 .video-container video:not([paused]) ~ * {
   /* play state */
 }
+
+/* Video player */
+.video-container {
+  position: relative;
+  cursor: pointer;
+  background: #000;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.video-container video {
+  width: 100%;
+  display: block;
+}
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #111;
+  pointer-events: none;
+  z-index: 2;
+}
+.video-container.playing .play-btn { display: none; }
