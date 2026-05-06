@@ -138,8 +138,8 @@
       var video = e.target.closest('.video-container') ? e.target.closest('.video-container').querySelector('video') : null;
       if (!video) {
         var target = e.target;
-        // Allow clicking on play button too
-        if (target.classList.contains('play-btn') || target.closest('.play-btn')) {
+        // Allow clicking on play button or overlay
+        if (target.classList.contains('play-btn') || target.classList.contains('play-btn-overlay') || target.closest('.play-btn-overlay') || target.closest('.play-btn')) {
           var container = target.closest('.video-container');
           if (container) target = container.querySelector('video') || target;
         }
