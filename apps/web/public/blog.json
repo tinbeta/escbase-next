@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/claude-finance-agents/",
+    "title": "Anthropic Ra Mắt Claude Agent Templates Cho Financial Services: Build Pitches, Valuation Reviews, Closing Books",
+    "excerpt": "Anthropic ra mắt Claude agent templates cho financial services. Templates có sẵn connectors, skills, subagents cần thiết. Dùng trong Cowrite và Claude Code như plugins, hoặc chạy production với Managed Agents.",
+    "date": "May 06, 2026",
+    "tag": "AI Agents",
+    "tagIcon": "fas fa-chart-line",
+    "tagColor": "#22c55e",
+    "readTime": "6 phút đọc",
+    "featured": true,
+    "image": "/images/claude-finance-agents-thumb.png"
+  },
+  {
     "url": "/blog/coinbase-layoffs-ai-native/",
     "title": "Brian Armstrong Lay Off ~14% Coinbase, Tái Cấu Trúc Thành AI-Native: Non-Technical Teams Đang Ship Production Code",
     "excerpt": "Brian Armstrong gửi email toàn công ty: cắt ~14% nhân sự. Lý do: thị trường crypto down + AI thay đổi cách làm việc. Non-technical teams giờ tự ship production code.",

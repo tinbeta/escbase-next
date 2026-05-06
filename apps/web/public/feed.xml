@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Tue, 05 May 2026 15:54:51 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 06 May 2026 00:08:21 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Anthropic Ra Mắt Claude Agent Templates Cho Financial Services: Build Pitches, Valuation Reviews, Closing Books</title>
+      <link>https://escbase.xyz/blog/claude-finance-agents/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/claude-finance-agents/</guid>
+      <pubDate>Tue, 05 May 2026 17:00:00 GMT</pubDate>
+      <description>Anthropic ra mắt Claude agent templates cho financial services. Templates có sẵn connectors, skills, subagents cần thiết. Dùng trong Cowrite và Claude Code như plugins, hoặc chạy production với Managed Agents.</description>
+      <category>AI Agents</category>
+      <enclosure url="https://escbase.xyz/images/claude-finance-agents-thumb.png" type="image/png" length="0" />
+    </item>
     <item>
       <title>Brian Armstrong Lay Off ~14% Coinbase, Tái Cấu Trúc Thành AI-Native: Non-Technical Teams Đang Ship Production Code</title>
       <link>https://escbase.xyz/blog/coinbase-layoffs-ai-native/</link>
@@ -447,15 +456,6 @@
       <description>xAI vừa ra Grok Voice Think Fast 1.0 và điểm đáng chú ý không chỉ là voice model mới. Họ đang bán một voice agent cho customer support, sales, booking và enterprise workflows với tool calling, read-back dữ liệu, 25+ ngôn ngữ, benchmark τ-voice dẫn đầu và case study Starlink khá nặng ký.</description>
       <category>Voice AI</category>
       <enclosure url="https://escbase.xyz/images/xai-grok-voice-think-fast-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>OpenClaw 2026.4.22: Grok Image, Tencent Hy3, Local TUI Và Một Bản Mở Rộng Biên Dùng Thật</title>
-      <link>https://escbase.xyz/blog/openclaw-2026-4-22-release</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/openclaw-2026-4-22-release</guid>
-      <pubDate>Thu, 23 Apr 2026 17:00:00 GMT</pubDate>
-      <description>OpenClaw 2026.4.22 thêm Grok image/voice tools, Tencent Hy3, local embedded TUI, /models add, auto-install plugin và diagnostics export, kèm một khối fix dày cho sessions, Codex, security, channels và runtime. Đây là bản update mở rộng biên dùng thật chứ không chỉ thêm headline mới.</description>
-      <category>OpenClaw</category>
-      <enclosure url="https://escbase.xyz/images/openclaw-2026-4-22-release-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>
