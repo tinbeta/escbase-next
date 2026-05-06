@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Wed, 06 May 2026 05:55:05 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 06 May 2026 06:56:06 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GPT-5.5 Instant Bắt Đầu Rollout Trong ChatGPT: Thông Minh Hơn, Ngắn Gọn Hơn, Cá Nhân Hóa Mạnh Hơn</title>
+      <link>https://escbase.xyz/blog/gpt55-instant-chatgpt-memory-personalization/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/gpt55-instant-chatgpt-memory-personalization/</guid>
+      <pubDate>Tue, 05 May 2026 17:00:00 GMT</pubDate>
+      <description>OpenAI bắt đầu rollout GPT-5.5 Instant trong ChatGPT: câu trả lời thông minh, rõ ràng, tự nhiên và ngắn gọn hơn; cải thiện factuality, memory, personalization, image/STEM/web-search awareness.</description>
+      <category>OpenAI</category>
+      <enclosure url="https://escbase.xyz/images/gpt55-instant-chatgpt-thumb.png" type="image/png" length="0" />
+    </item>
     <item>
       <title>OpenClaw 2026.5.4: Gateway Nhanh Hơn, Plugin Bớt Lằng Nhằng, Doctor Sửa Lỗi Khôn Hơn</title>
       <link>https://escbase.xyz/blog/openclaw-2026-5-4-performance-reliability/</link>
@@ -447,15 +456,6 @@
       <description>Google Maps Platform vừa công bố PDI — bộ geospatial embeddings đầu tiên chưng cất tín hiệu từ Google Search, Maps, thời tiết và chất lượng không khí thành vector 330 chiều, giao thẳng vào BigQuery. Không cần feature engineering, hiện có ở 17 quốc gia, cập nhật hàng tháng.</description>
       <category>Geospatial AI</category>
       <enclosure url="https://escbase.xyz/images/google-maps-pdi-thumb.svg" type="image/svg+xml" length="0" />
-    </item>
-    <item>
-      <title>Solo Founder Stack 2026: 5 Việc, 1 Người, Nhưng Moat Thật Vẫn Là Phân Phối</title>
-      <link>https://escbase.xyz/blog/solo-founder-stack-2026-agents-distribution</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/solo-founder-stack-2026-agents-distribution</guid>
-      <pubDate>Fri, 24 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Rohit vừa đẩy mạnh luận điểm one-person company với một stack gồm Claude Code, agent pipelines, Hermes/OpenClaw và Higgsfield. Điểm đáng chú ý không chỉ là chuyện một người làm 5 việc, mà là tranh cãi cộng đồng xoay quanh burnout, chi phí token, phân phối, oncall và việc AI có thật sự thay thế được một team hoàn chỉnh hay không.</description>
-      <category>Founder Stack</category>
-      <enclosure url="https://escbase.xyz/images/solo-founder-stack-2026-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>

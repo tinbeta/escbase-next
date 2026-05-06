@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/gpt55-instant-chatgpt-memory-personalization/",
+    "title": "GPT-5.5 Instant Bắt Đầu Rollout Trong ChatGPT: Thông Minh Hơn, Ngắn Gọn Hơn, Cá Nhân Hóa Mạnh Hơn",
+    "excerpt": "OpenAI bắt đầu rollout GPT-5.5 Instant trong ChatGPT: câu trả lời thông minh, rõ ràng, tự nhiên và ngắn gọn hơn; cải thiện factuality, memory, personalization, image/STEM/web-search awareness.",
+    "date": "May 06, 2026",
+    "tag": "OpenAI",
+    "tagIcon": "fas fa-robot",
+    "tagColor": "#10a37f",
+    "readTime": "7 phút đọc",
+    "featured": true,
+    "image": "/images/gpt55-instant-chatgpt-thumb.png"
+  },
+  {
     "url": "/blog/openclaw-2026-5-4-performance-reliability/",
     "title": "OpenClaw 2026.5.4: Gateway Nhanh Hơn, Plugin Bớt Lằng Nhằng, Doctor Sửa Lỗi Khôn Hơn",
     "excerpt": "OpenClaw 2026.5.4 tập trung vào những thứ ít hào nhoáng nhưng cực đáng giá: plugin install/update sạch hơn, Gateway startup nhanh hơn, doctor/repair hints tốt hơn, Windows và Discord ổn định hơn.",
