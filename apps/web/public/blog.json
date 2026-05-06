@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/chatgpt-excel-google-sheets-addon-gpt55/",
+    "title": "ChatGPT Vào Excel Và Google Sheets: GPT-5.5 Bắt Đầu Sống Ngay Trong Bảng Tính",
+    "excerpt": "ChatGPT hiện có add-on cho Excel và Google Sheets, giúp phân tích dữ liệu lộn xộn, viết công thức, cập nhật spreadsheet và giải thích từng bước ngay trong bảng tính.",
+    "date": "May 06, 2026",
+    "tag": "AI Tools",
+    "tagIcon": "fas fa-table",
+    "tagColor": "#10a37f",
+    "readTime": "6 phút đọc",
+    "featured": true,
+    "image": "/images/chatgpt-excel-google-sheets-addon-thumb.png"
+  },
+  {
     "url": "/blog/gpt55-instant-chatgpt-memory-personalization/",
     "title": "GPT-5.5 Instant Bắt Đầu Rollout Trong ChatGPT: Thông Minh Hơn, Ngắn Gọn Hơn, Cá Nhân Hóa Mạnh Hơn",
     "excerpt": "OpenAI bắt đầu rollout GPT-5.5 Instant trong ChatGPT: câu trả lời thông minh, rõ ràng, tự nhiên và ngắn gọn hơn; cải thiện factuality, memory, personalization, image/STEM/web-search awareness.",

@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Wed, 06 May 2026 11:37:09 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 06 May 2026 11:48:34 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ChatGPT Vào Excel Và Google Sheets: GPT-5.5 Bắt Đầu Sống Ngay Trong Bảng Tính</title>
+      <link>https://escbase.xyz/blog/chatgpt-excel-google-sheets-addon-gpt55/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/chatgpt-excel-google-sheets-addon-gpt55/</guid>
+      <pubDate>Tue, 05 May 2026 17:00:00 GMT</pubDate>
+      <description>ChatGPT hiện có add-on cho Excel và Google Sheets, giúp phân tích dữ liệu lộn xộn, viết công thức, cập nhật spreadsheet và giải thích từng bước ngay trong bảng tính.</description>
+      <category>AI Tools</category>
+      <enclosure url="https://escbase.xyz/images/chatgpt-excel-google-sheets-addon-thumb.png" type="image/png" length="0" />
+    </item>
     <item>
       <title>GPT-5.5 Instant Bắt Đầu Rollout Trong ChatGPT: Thông Minh Hơn, Ngắn Gọn Hơn, Cá Nhân Hóa Mạnh Hơn</title>
       <link>https://escbase.xyz/blog/gpt55-instant-chatgpt-memory-personalization/</link>
@@ -447,15 +456,6 @@
       <description>Google Maps Platform công bố 4 nâng cấp lớn cho Imagery Insights tại Cloud Next 2026: Aerial &amp; Satellite Insights phân tích ảnh vệ tinh qua BigQuery, Solar Insights phủ 90% toà nhà Mỹ và EU, Street View LiDAR 280 tỷ ảnh, và Maps Imagery Grounding cho generative AI. Cộng đồng hào hứng nhưng lo ngại privacy và vendor lock-in.</description>
       <category>Geospatial AI</category>
       <enclosure url="https://escbase.xyz/images/google-maps-imagery-insights-thumb.svg" type="image/svg+xml" length="0" />
-    </item>
-    <item>
-      <title>Google Maps Ra Population Dynamics Insights: Biến Hành Vi Con Người Thành Embeddings Cho ML</title>
-      <link>https://escbase.xyz/blog/google-maps-population-dynamics-insights</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/google-maps-population-dynamics-insights</guid>
-      <pubDate>Fri, 24 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Google Maps Platform vừa công bố PDI — bộ geospatial embeddings đầu tiên chưng cất tín hiệu từ Google Search, Maps, thời tiết và chất lượng không khí thành vector 330 chiều, giao thẳng vào BigQuery. Không cần feature engineering, hiện có ở 17 quốc gia, cập nhật hàng tháng.</description>
-      <category>Geospatial AI</category>
-      <enclosure url="https://escbase.xyz/images/google-maps-pdi-thumb.svg" type="image/svg+xml" length="0" />
     </item>
   </channel>
 </rss>
