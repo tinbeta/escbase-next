@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini API ra mắt Webhooks: thay polling bằng push notification cho long-running jobs | Escbase</title>
+    <meta name="description" content="Google ra mắt event-driven Webhooks trong Gemini API — push notification thay thế polling cho long-running jobs. Hỗ trợ Deep Research, video generation, Batch API. Signed requests + at-least-once delivery.">
+    <meta property="og:title" content="Gemini API Webhooks: Thay Polling Bằng Push Notifications">
+    <meta property="og:description" content="Gemini API Webhooks push real-time HTTP POST khi job hoàn thành. Không cần polling. Hỗ trợ agentic workflows, Deep Research, Batch API.">
+    <meta property="og:image" content="https://news.escbase.xyz/images/gemini-api-webhooks-thumb.png">
+    <meta property="og:url" content="https://news.escbase.xyz/blog/gemini-api-webhooks/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css-all.min.css">
+    <link rel="stylesheet" href="/shared-article.css">
+    <link rel="stylesheet" href="/shared-article-footer.css">
+    <style>
+        .code-block { background: #0d1117; border: 1px solid #30363d; border-radius: var(--radius-md); padding: 1rem; margin: 1.5rem 0; overflow-x: auto; }
+        .code-block pre { margin: 0; font-family: 'Fira Code', 'Monaco', monospace; font-size: 0.85rem; color: #c9d1d9; }
+        .code-block code { color: #c9d1d9; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <span class="category-badge"><i class="fas fa-bolt"></i> Gemini API</span>
+                <h1>Gemini API Ra Mắt Webhooks: Thay Polling Bằng Push Notification Cho Long-Running Jobs</h1>
+                <div class="meta">
+                    <span><i class="far fa-calendar"></i> 06/05/2026</span>
+                    <span><i class="far fa-clock"></i> 6 phút đọc</span>
+                    <span><i class="far fa-folder"></i> Gemini, Google, API, Developer Tools</span>
+                </div>
+                <img src="/images/gemini-api-webhooks-thumb.png" alt="Gemini API Webhooks" class="inline-image" style="margin-top:1rem;">
+            </header>
+
+            <div class="article-content">
+                <div class="highlight-box">
+                    <h4>TL;DR</h4>
+                    <p style="margin-bottom:0">Google ra mắt <strong>event-driven Webhooks</strong> trong Gemini API — thay thế polling không hiệu quả bằng push notifications real-time. Khi long-running jobs hoàn thành (Deep Research, video generation, Batch API), Gemini push HTTP POST thẳng đến server của bạn. Signed requests + at-least-once delivery với auto retries 24h.</p>
+                </div>
+
+                <h2>Tại sao Webhooks thay đổi cuộc chơi</h2>
+                <p>Trước đây, developers phải dùng <strong>polling</strong> — liên tục gọi GET operations để kiểm tra job xong chưa. Cách này:</p>
+                <ul>
+                    <li><strong>Tốn resource</strong> — gọi API liên tục dù job chưa xong</li>
+                    <li><strong>Latency cao</strong> — phải chờ interval để check lần tiếp theo</li>
+                    <li><strong>Không scalable</strong> — hàng nghìn jobs = hàng nghìn polling requests</li>
+                </ul>
+                <p>Giờ đây, Gemini push notification tức thì khi task kết thúc — không cần hỏi liên tục, không delay.</p>
+
+                <h2>Use cases phù hợp</h2>
+                <ul>
+                    <li><strong>Deep Research</strong> — nghiên cứu sâu mất nhiều phút</li>
+                    <li><strong>Long video generation</strong> — tạo video dài</li>
+                    <li><strong>Batch API</strong> — xử lý hàng nghìn prompts cùng lúc</li>
+                </ul>
+
+                <h2>Security & reliability</h2>
+                <p>Google build Webhooks này với security và reliability trong tâm:</p>
+                <ul>
+                    <li><strong>Standard Webhooks spec</strong> — tuân thủ specification chuẩn ngành</li>
+                    <li><strong>Signed requests</strong> — mỗi request có webhook-signature, webhook-id, webhook-timestamp headers để verify</li>
+                    <li><strong>Idempotency</strong> — ngăn replay attacks</li>
+                    <li><strong>At-least-once delivery</strong> — guarantee delivery với automatic retries trong 24h</li>
+                </ul>
+
+                <h2>Cách config</h2>
+                <p>Hai cách setup:</p>
+                <ul>
+                    <li><strong>Project level (HMAC)</strong> — config global cho tất cả jobs trong project</li>
+                    <li><strong>Per-request (JWKS)</strong> — override dynamically để route specific jobs đến endpoints khác nhau</li>
+                </ul>
+                
+                <div class="code-block">
+                    <pre><code>from google import genai
+from google.genai import types
+
+client = genai.Client()
+
+file_batch_job = client.batches.create(
+    model="gemini-3-flash-preview",
+    src=inline_requests,
+    config={
+        "display_name": "My Setup",
+        "webhook_config": {
+            "uris": ["https://my-api.com/gemini-webhook-dynamic"],
+            "user_metadata": {"job_group": "nightly-eval", "priority": "high"},
+        },
+    },
+)
+
+print(f"Created batch job: {file_batch_job.name}")</code></pre>
+                </div>
+
+                <h2>Cộng đồng phản ứng</h2>
+                <p><strong>@AI_Andrew</strong>: "This is nice, no more rigging a web of alerts, one less thing I have to bolt on. Big win for the DX!" — developers đánh giá cao việc đơn giản hóa workflow.</p>
+                <p><strong>@InsiderPresider</strong>: "I have to wonder is this actually better than what we had before" — một số người còn hoài nghi về implementation.</p>
+
+                <h2>Chốt một câu</h2>
+                <p>Gemini API Webhooks giải quyết đúng pain point của developers làm việc với agentic workflows: long-running jobs không cần polling nữa. Push notifications real-time với security và reliability từ Google — đây là bước tiến tự nhiên khi Gemini shift sang agentic era. Batch processing hàng nghìn prompts với notification khi xong — đó mới là cách scalable để làm việc với AI.</p>
+
+                <div class="source-links">
+                    <h4>Nguồn & tham khảo</h4>
+                    <ul>
+                        <li><a href="https://x.com/googleaistudio/status/2051421109506228656" target="_blank">Thread gốc từ @GoogleAIStudio trên X</a></li>
+                        <li><a href="https://ai.google.dev/gemini-api/docs/webhooks" target="_blank">Webhooks Documentation</a></li>
+                        <li><a href="https://github.com/google-gemini/cookbook/blob/main/quickstarts/Webhooks.ipynb" target="_blank">Cookbook trên GitHub</a></li>
+                    </ul>
+                </div>
+
+                <div class="back-to-blog-footer">
+                    <a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+                </div>
+
+                <div class="article-cta-stack">
+                    <div class="article-cta-actions">
+                        <a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a>
+                    </div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">Gemini</span>
+                    <span class="tag">Google</span>
+                    <span class="tag">API</span>
+                    <span class="tag">Webhooks</span>
+                    <span class="tag">Developer</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

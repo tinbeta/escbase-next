@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Wed, 06 May 2026 00:10:44 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 06 May 2026 00:12:09 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gemini API Ra Mắt Webhooks: Thay Polling Bằng Push Notification Cho Long-Running Jobs</title>
+      <link>https://escbase.xyz/blog/gemini-api-webhooks/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/gemini-api-webhooks/</guid>
+      <pubDate>Tue, 05 May 2026 17:00:00 GMT</pubDate>
+      <description>Google ra mắt event-driven Webhooks trong Gemini API — push notification thay thế polling cho long-running jobs. Hỗ trợ Deep Research, video generation, Batch API. Signed requests + at-least-once delivery.</description>
+      <category>Gemini API</category>
+      <enclosure url="https://escbase.xyz/images/gemini-api-webhooks-thumb.png" type="image/png" length="0" />
+    </item>
     <item>
       <title>Gemma 4 Chạy Hoàn Toàn On-Device Trong React Native — Mobile Developers Sắp Có Công Cụ Mới</title>
       <link>https://escbase.xyz/blog/gemma4-react-native-ondevice/</link>
@@ -447,15 +456,6 @@
       <description>Nous Research và Kimi tổ chức Hermes Agent Creative Hackathon với $26,000 tiền thưởng. 16 ngày, 2 hạng mục, tập trung vào video, hình ảnh, âm thanh, 3D và phần mềm sáng tạo. Nhưng cộng đồng đang tranh luận: 1000 ý tưởng từ agent có thực sự mới mẻ không?</description>
       <category>AI Agents</category>
       <enclosure url="https://escbase.xyz/images/hermes-agent-creative-hackathon-26k-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>Vals AI: DeepSeek V4 Là Open-Weight Model Số 1 Trên Vibe Code Bench, Hơn Kimi K2.6 Tới 12 Điểm</title>
-      <link>https://escbase.xyz/blog/valsai-deepseek-v4-vibe-code-benchmark</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/valsai-deepseek-v4-vibe-code-benchmark</guid>
-      <pubDate>Thu, 23 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Vals AI vừa đưa DeepSeek V4 lên vị trí #1 open-weight model trên Vibe Code Bench v1.1 với 49.93%, bỏ xa Kimi K2.6 ở vị trí #2 với khoảng cách 12.04 điểm. Điều đáng nói không chỉ là top 1 open model, mà là benchmark này đo khả năng xây web app từ đầu với pipeline đánh giá tự động khá nặng tay.</description>
-      <category>AI Coding</category>
-      <enclosure url="https://escbase.xyz/images/valsai-deepseek-v4-vibe-code-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>

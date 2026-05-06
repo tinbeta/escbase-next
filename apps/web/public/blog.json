@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/gemini-api-webhooks/",
+    "title": "Gemini API Ra Mắt Webhooks: Thay Polling Bằng Push Notification Cho Long-Running Jobs",
+    "excerpt": "Google ra mắt event-driven Webhooks trong Gemini API — push notification thay thế polling cho long-running jobs. Hỗ trợ Deep Research, video generation, Batch API. Signed requests + at-least-once delivery.",
+    "date": "May 06, 2026",
+    "tag": "Gemini API",
+    "tagIcon": "fas fa-bolt",
+    "tagColor": "#4285f4",
+    "readTime": "6 phút đọc",
+    "featured": true,
+    "image": "/images/gemini-api-webhooks-thumb.png"
+  },
+  {
     "url": "/blog/gemma4-react-native-ondevice/",
     "title": "Gemma 4 Chạy Hoàn Toàn On-Device Trong React Native — Mobile Developers Sắp Có Công Cụ Mới",
     "excerpt": "Google Gemma hợp tác với SWMansion tích hợp Gemma 4 on-device trong React Native. Sắp có trong thư viện react-native-executorch. Không cần server, model chạy hoàn toàn trên thiết bị di động.",
