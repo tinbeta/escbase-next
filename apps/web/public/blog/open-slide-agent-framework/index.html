@@ -45,7 +45,13 @@
                     <p style="margin-bottom:0"><strong>open-slide</strong> là slide framework được xây dựng dành riêng cho AI agents: chỉ cần prompt agent, nhận polished deck. Mỗi slide là React component trên canvas 1920×1080. Có sẵn agent skills như <code>/create-slide</code> (tạo deck từ 1 dòng prompt), <code>/apply-comments</code> (áp dụng feedback in-browser chỉ 1 click). Hỗ trợ presenter mode, export PDF/HTML, deploy Vercel/Netlify. Hoạt động tốt với Claude Code, Cursor, Codex.</p>
                 </div>
 
-                <div class="video-container"><video controls playsinline></video>
+                <div class="video-container">
+                    <video controls playsinline preload="metadata" poster="/images/open-slide-demo-video.jpg">
+                        <source src="/images/open-slide-demo-video.mp4" type="video/mp4">
+                        Trình duyệt của bạn không hỗ trợ video.
+                    </video>
+                    <p style="text-align:center; font-size:0.85rem; color:var(--text-muted); margin-top:0.5rem;">Demo video từ thread @1weiho — open-slide trong thực tế với agent.</p>
+                </div>
 
                 <h2>Vấn đề open-slide giải quyết</h2>
                 <p>Nhiều người dùng agent để "make me slides about X" nhưng kết quả thường là output thô, thiếu polish, và phải copy-paste feedback nhiều vòng. open-slide đóng vai trò <strong>missing runtime</strong> giữa prompt và deck chuyên nghiệp.</p>
