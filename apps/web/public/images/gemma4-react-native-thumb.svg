@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0f"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4285f4"/>
+      <stop offset="100%" style="stop-color:#34a853"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" fill="url(#bg)"/>
+  <rect x="60" y="90" width="5" height="80" rx="2" fill="url(#accent)"/>
+  <text x="85" y="120" font-family="Inter,system-ui,sans-serif" font-size="22" font-weight="800" fill="#f8fafc">Gemma 4 + React Native</text>
+  <text x="85" y="150" font-family="Inter,system-ui,sans-serif" font-size="14" font-weight="500" fill="#94a3b8">On-Device AI Trên Di Động</text>
+  <text x="85" y="185" font-family="Inter,system-ui,sans-serif" font-size="12" fill="#64748b">react-native-executorch • Privacy First • No Cloud</text>
+  <text x="85" y="380" font-family="Inter,system-ui,sans-serif" font-size="12" font-weight="600" fill="#475569">news.escbase.xyz</text>
+</svg>

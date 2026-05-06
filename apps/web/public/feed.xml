@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Wed, 06 May 2026 00:08:21 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 06 May 2026 00:10:44 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gemma 4 Chạy Hoàn Toàn On-Device Trong React Native — Mobile Developers Sắp Có Công Cụ Mới</title>
+      <link>https://escbase.xyz/blog/gemma4-react-native-ondevice/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/gemma4-react-native-ondevice/</guid>
+      <pubDate>Tue, 05 May 2026 17:00:00 GMT</pubDate>
+      <description>Google Gemma hợp tác với SWMansion tích hợp Gemma 4 on-device trong React Native. Sắp có trong thư viện react-native-executorch. Không cần server, model chạy hoàn toàn trên thiết bị di động.</description>
+      <category>Mobile AI</category>
+      <enclosure url="https://escbase.xyz/images/gemma4-react-native-ondevice-thumb.png" type="image/png" length="0" />
+    </item>
     <item>
       <title>Anthropic Ra Mắt Claude Agent Templates Cho Financial Services: Build Pitches, Valuation Reviews, Closing Books</title>
       <link>https://escbase.xyz/blog/claude-finance-agents/</link>
@@ -447,15 +456,6 @@
       <description>Vals AI vừa đưa DeepSeek V4 lên vị trí #1 open-weight model trên Vibe Code Bench v1.1 với 49.93%, bỏ xa Kimi K2.6 ở vị trí #2 với khoảng cách 12.04 điểm. Điều đáng nói không chỉ là top 1 open model, mà là benchmark này đo khả năng xây web app từ đầu với pipeline đánh giá tự động khá nặng tay.</description>
       <category>AI Coding</category>
       <enclosure url="https://escbase.xyz/images/valsai-deepseek-v4-vibe-code-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>xAI Ra Grok Voice Think Fast 1.0: Đang Bán Voice Agent Cho Workflow Doanh Nghiệp Chứ Không Chỉ Bán Giọng Nói</title>
-      <link>https://escbase.xyz/blog/xai-grok-voice-think-fast-enterprise-voice-agent</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/xai-grok-voice-think-fast-enterprise-voice-agent</guid>
-      <pubDate>Thu, 23 Apr 2026 17:00:00 GMT</pubDate>
-      <description>xAI vừa ra Grok Voice Think Fast 1.0 và điểm đáng chú ý không chỉ là voice model mới. Họ đang bán một voice agent cho customer support, sales, booking và enterprise workflows với tool calling, read-back dữ liệu, 25+ ngôn ngữ, benchmark τ-voice dẫn đầu và case study Starlink khá nặng ký.</description>
-      <category>Voice AI</category>
-      <enclosure url="https://escbase.xyz/images/xai-grok-voice-think-fast-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>

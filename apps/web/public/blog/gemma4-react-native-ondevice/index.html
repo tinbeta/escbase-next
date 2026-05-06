@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemma 4 chạy hoàn toàn on-device trong React Native nhờ react-native-executorch | Escbase</title>
+    <meta name="description" content="Google Gemma hợp tác với SWMansion tích hợp Gemma 4 on-device trong React Native. Sắp có trong thư viện react-native-executorch. Không cần server, model chạy hoàn toàn trên thiết bị di động.">
+    <meta property="og:title" content="Gemma 4 + React Native: On-Device AI Trên Di Động">
+    <meta property="og:description" content="Gemma 4 chạy hoàn toàn on-device trong React Native. Mobile developers sắp có công cụ mới cực kỳ mạnh mẽ.">
+    <meta property="og:image" content="https://news.escbase.xyz/images/gemma4-react-native-thumb.png">
+    <meta property="og:url" content="https://news.escbase.xyz/blog/gemma4-react-native-ondevice/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css-all.min.css">
+    <link rel="stylesheet" href="/shared-article.css">
+    <link rel="stylesheet" href="/shared-article-footer.css">
+</head>
+<body>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <span class="category-badge"><i class="fas fa-mobile-alt"></i> Mobile AI</span>
+                <h1>Gemma 4 Chạy Hoàn Toàn On-Device Trong React Native — Mobile Developers Sắp Có Công Cụ Mới</h1>
+                <div class="meta">
+                    <span><i class="far fa-calendar"></i> 06/05/2026</span>
+                    <span><i class="far fa-clock"></i> 6 phút đọc</span>
+                    <span><i class="far fa-folder"></i> Gemma, Google, React Native, On-Device AI</span>
+                </div>
+                <img src="/images/gemma4-react-native-thumb.png" alt="Gemma 4 React Native" class="inline-image" style="margin-top:1rem;">
+            </header>
+
+            <div class="article-content">
+                <div class="highlight-box">
+                    <h4>TL;DR</h4>
+                    <p style="margin-bottom:0">Google Gemma hợp tác với <strong>SWMansion</strong> để tích hợp Gemma 4 chạy hoàn toàn on-device trong React Native thông qua thư viện <strong>react-native-executorch</strong>. Không cần server, model chạy trực tiếp trên thiết bị di động. Tính năng sắp ra mắt trong thư viện.</p>
+                </div>
+
+                <h2>Tại sao đây là tin lớn cho mobile developers</h2>
+                <p>Việc Gemma 4 chạy được hoàn toàn trên device — không qua server, không qua cloud — mang lại nhiều lợi ích:</p>
+                <ul>
+                    <li><strong>Privacy</strong> — data không bao giờ rời khỏi thiết bị của user</li>
+                    <li><strong>Offline capable</strong> — hoạt động không cần internet</li>
+                    <li><strong>Low latency</strong> — không có network round-trip</li>
+                    <li><strong>Không tốn chi phí cloud</strong> — không phải trả tiền cho API calls</li>
+                </ul>
+                <p>@dishant_ic chia sẻ: "on-device mobile use is where this starts feeling real" — đây là nơi AI on-device thực sự trở nên có ý nghĩa với người dùng thông thường.</p>
+
+                <h2>SWMansion và react-native-executorch</h2>
+                <p>SWMansion — đội phát triển đằng sau thư viện — đã implement tích hợp Gemma 4 on-device trong React Native. Họ gọi đây là "incredible work" từ phía Google.</p>
+                <p>Thư viện <strong>react-native-executorch</strong> là nền tảng cho phép chạy PyTorch models trên React Native. Việc Gemma 4 — model mạnh từ Google — chạy được trên nền tảng này mở ra nhiều use cases mới cho mobile developers.</p>
+
+                <h2>Ứng dụng thực tế đã có</h2>
+                <p>@aaryan_kakad giới thiệu app <strong>Zaya</strong>: cho phép index tất cả data trên iPhone và query bằng local LLMs như Gemma 4 e2b. Data không bao giờ rời device. Đây là ví dụ thực tế cho thấy on-device AI không chỉ là concept mà đã có sản phẩm người dùng có thể tải ngay.</p>
+                <p>@docjais chia sẻ đã dùng Gemma 4 vision capabilities trong Hermes agent — cho thấy model không chỉ mạnh về text mà còn vision đã được tích hợp vào workflow.</p>
+                <p>@talhauxd mô tả trải nghiệm: "Local Gemma running like native in a React Native chat is pure magic" — cho thấy UX đã smooth như native app thật sự.</p>
+
+                <h2>Cộng đồng phản ứng</h2>
+                <p>Phản ứng khá tích cực — nhiều developers quan tâm đến demo và thời điểm có thể sử dụng. Một số câu hỏi được đặt ra:</p>
+                <ul>
+                    <li>Khi nào chính thức ra thư viện?</li>
+                    <li>Dung lượng app tăng bao nhiêu khi tích hợp Gemma 4?</li>
+                    <li>Performance trên các thiết bị cấu hình thấp như thế nào?</li>
+                </ul>
+
+                <h2>Chốt một câu</h2>
+                <p>Gemma 4 + React Native là bước tiến quan trọng cho on-device AI trên di động. Không chỉ Google — cả hệ sinh thái mobile dev đang hướng tới việc đưa AI models mạnh mẽ chạy hoàn toàn trên device. Privacy-first, offline-capable, no cloud costs — đây là trend mà sắp tới sẽ thấy nhiều hơn trên thị trường mobile.</p>
+
+                <div class="source-links">
+                    <h4>Nguồn & tham khảo</h4>
+                    <ul>
+                        <li><a href="https://x.com/googlegemma/status/2051350655135297564" target="_blank">Thread gốc từ @googlegemma trên X</a></li>
+                        <li><a href="https://github.com/swmansion/react-native-executorch" target="_blank">react-native-executorch trên GitHub</a></li>
+                    </ul>
+                </div>
+
+                <div class="back-to-blog-footer">
+                    <a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+                </div>
+
+                <div class="article-cta-stack">
+                    <div class="article-cta-actions">
+                        <a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a>
+                    </div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">Gemma</span>
+                    <span class="tag">Google</span>
+                    <span class="tag">React Native</span>
+                    <span class="tag">On-Device AI</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

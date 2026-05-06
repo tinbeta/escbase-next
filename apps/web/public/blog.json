@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/gemma4-react-native-ondevice/",
+    "title": "Gemma 4 Chạy Hoàn Toàn On-Device Trong React Native — Mobile Developers Sắp Có Công Cụ Mới",
+    "excerpt": "Google Gemma hợp tác với SWMansion tích hợp Gemma 4 on-device trong React Native. Sắp có trong thư viện react-native-executorch. Không cần server, model chạy hoàn toàn trên thiết bị di động.",
+    "date": "May 06, 2026",
+    "tag": "Mobile AI",
+    "tagIcon": "fas fa-mobile-alt",
+    "tagColor": "#4285f4",
+    "readTime": "6 phút đọc",
+    "featured": true,
+    "image": "/images/gemma4-react-native-ondevice-thumb.png"
+  },
+  {
     "url": "/blog/claude-finance-agents/",
     "title": "Anthropic Ra Mắt Claude Agent Templates Cho Financial Services: Build Pitches, Valuation Reviews, Closing Books",
     "excerpt": "Anthropic ra mắt Claude agent templates cho financial services. Templates có sẵn connectors, skills, subagents cần thiết. Dùng trong Cowrite và Claude Code như plugins, hoặc chạy production với Managed Agents.",
