@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/openclaw-2026-5-7-security-hardening/",
+    "title": "OpenClaw 2026.5.7: Bảo Mật Thắt Chặt, Telegram Và Plugin Được Củng Cố",
+    "excerpt": "OpenClaw 2026.5.7 tập trung vào các bản vá bảo mật: native command auth, Telegram access groups, cron JSON cleanup và plugin install/update hardening.",
+    "date": "May 08, 2026",
+    "tag": "AI Tools",
+    "tagIcon": "fas fa-shield-halved",
+    "tagColor": "#22c55e",
+    "readTime": "5 phút đọc",
+    "featured": true,
+    "image": "/images/openclaw-2026-5-7-security-hardening-thumb.png"
+  },
+  {
     "url": "/blog/chatgpt-excel-google-sheets-addon-gpt55/",
     "title": "ChatGPT Vào Excel Và Google Sheets: GPT-5.5 Bắt Đầu Sống Ngay Trong Bảng Tính",
     "excerpt": "ChatGPT hiện có add-on cho Excel và Google Sheets, giúp phân tích dữ liệu lộn xộn, viết công thức, cập nhật spreadsheet và giải thích từng bước ngay trong bảng tính.",

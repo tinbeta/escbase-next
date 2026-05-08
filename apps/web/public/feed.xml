@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Wed, 06 May 2026 11:48:34 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 08 May 2026 06:26:41 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenClaw 2026.5.7: Bảo Mật Thắt Chặt, Telegram Và Plugin Được Củng Cố</title>
+      <link>https://escbase.xyz/blog/openclaw-2026-5-7-security-hardening/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/openclaw-2026-5-7-security-hardening/</guid>
+      <pubDate>Thu, 07 May 2026 17:00:00 GMT</pubDate>
+      <description>OpenClaw 2026.5.7 tập trung vào các bản vá bảo mật: native command auth, Telegram access groups, cron JSON cleanup và plugin install/update hardening.</description>
+      <category>AI Tools</category>
+      <enclosure url="https://escbase.xyz/images/openclaw-2026-5-7-security-hardening-thumb.png" type="image/png" length="0" />
+    </item>
     <item>
       <title>ChatGPT Vào Excel Và Google Sheets: GPT-5.5 Bắt Đầu Sống Ngay Trong Bảng Tính</title>
       <link>https://escbase.xyz/blog/chatgpt-excel-google-sheets-addon-gpt55/</link>
@@ -447,15 +456,6 @@
       <description>Devin là AI software engineer đầu tiên, xây dựng bởi Cognition AI. Có máy ảo riêng, tự viết code, chạy test, tạo PR. Bài viết giải thích Devin là gì, so sánh với Copilot/Cursor/Claude Code, bảng giá 2026 (Free → $200/tháng), use cases thực tế, và tips dùng hiệu quả.</description>
       <category>AI Tools</category>
       <enclosure url="https://escbase.xyz/images/devin-ai-guide-thumb.svg" type="image/svg+xml" length="0" />
-    </item>
-    <item>
-      <title>Google Maps Nâng Cấp Imagery Insights: Aerial, Satellite, Solar Và Street View LiDAR Tại Cloud Next 2026</title>
-      <link>https://escbase.xyz/blog/google-maps-imagery-insights-cloud-next-2026</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/google-maps-imagery-insights-cloud-next-2026</guid>
-      <pubDate>Fri, 24 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Google Maps Platform công bố 4 nâng cấp lớn cho Imagery Insights tại Cloud Next 2026: Aerial &amp; Satellite Insights phân tích ảnh vệ tinh qua BigQuery, Solar Insights phủ 90% toà nhà Mỹ và EU, Street View LiDAR 280 tỷ ảnh, và Maps Imagery Grounding cho generative AI. Cộng đồng hào hứng nhưng lo ngại privacy và vendor lock-in.</description>
-      <category>Geospatial AI</category>
-      <enclosure url="https://escbase.xyz/images/google-maps-imagery-insights-thumb.svg" type="image/svg+xml" length="0" />
     </item>
   </channel>
 </rss>
