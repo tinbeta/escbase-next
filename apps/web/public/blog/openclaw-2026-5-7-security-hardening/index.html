@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenClaw 2026.5.7: Bảo Mật Thắt Chặt, Telegram Và Plugin Được Củng Cố | Escbase</title>
+  <meta name="description" content="OpenClaw 2026.5.7 tập trung vào các bản vá bảo mật: native command auth, Telegram access groups, cron JSON cleanup và plugin install/update hardening.">
+  <meta property="og:title" content="OpenClaw 2026.5.7: Bảo Mật Thắt Chặt, Telegram Và Plugin Được Củng Cố">
+  <meta property="og:description" content="OpenClaw 2026.5.7 tập trung vào các bản vá bảo mật: native command auth, Telegram access groups, cron JSON cleanup và plugin install/update hardening.">
+  <meta property="og:image" content="https://news.escbase.xyz/images/openclaw-2026-5-7-security-hardening-thumb.png">
+  <meta property="og:url" content="https://news.escbase.xyz/blog/openclaw-2026-5-7-security-hardening/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://news.escbase.xyz/images/openclaw-2026-5-7-security-hardening-thumb.png">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/shared-article.css">
+  <link rel="stylesheet" href="/shared-article-footer.css">
+</head>
+<body>
+  <div class="container">
+    <article>
+      <header class="article-header">
+        <span class="category-badge"><i class="fas fa-shield-halved"></i> AI Tools</span>
+        <h1>OpenClaw 2026.5.7: Bảo Mật Thắt Chặt, Telegram Và Plugin Được Củng Cố</h1>
+        <div class="meta">
+          <span><i class="far fa-calendar"></i> 08/05/2026</span>
+          <span><i class="far fa-clock"></i> 5 phút đọc</span>
+          <span><i class="far fa-folder"></i> OpenClaw, Security, Telegram, Plugin</span>
+        </div>
+        <img src="/images/openclaw-2026-5-7-security-hardening-thumb.png" alt="OpenClaw 2026.5.7" class="inline-image" style="margin-top:1rem;">
+      </header>
+
+      <div class="article-content">
+        <div class="highlight-box">
+          <h4>TL;DR</h4>
+          <p style="margin-bottom:0">OpenClaw 2026.5.7 là bản release tập trung vào bảo mật và độ tin cậy: native command auth thắt chặt, Telegram access groups được củng cố, cron JSON cleanup và plugin install/update hardening. Không có feature mới nổi bật, nhưng những bản vá này giúp hệ thống ít bị "spooky action at a distance" hơn.</p>
+        </div>
+
+        <h2>🔐 Native Command + Active Memory Auth Tightened</h2>
+        <p>Owner enforcement giờ áp dụng cho native command handlers. Global Active Memory toggles yêu cầu admin scope. Điều này nghe kỹ thuật, nhưng thực ra rất quan trọng: trước đây có thể có tình huống lệnh native chạy sai ngữ cảnh hoặc memory bị toggle bởi ai đó không có quyền. Giờ thì không.</p>
+
+        <h2>📣 Telegram Access Groups Fixed</h2>
+        <p><code>accessGroup:*</code> allowlists giờ apply across DMs, groups, native commands, và callbacks trước khi check numeric sender. Điều này giúp shared bot ops dễ quản lý hơn mà không cần config spaghetti. Nếu bạn dùng Telegram với OpenClaw trong nhóm, đây là bản cập nhật đáng chú ý.</p>
+
+        <h2>🧰 Channels List + Cron JSON Cleaned Up</h2>
+        <p><code>openclaw channels list</code> giờ là channel-only, với <code>--all</code> cho bundled/catalog channels và rõ ràng installed/configured/enabled state. Cron JSON cũng được computed status, nên scripts không còn phải guess.</p>
+
+        <h2>🔌 Plugin Install/Update Repairs Hardened</h2>
+        <p>Managed npm mutations giờ dùng stable lifecycle shell giống package updates. Rollback/repair paths hoạt động predict hơn. Như chính team nói: "The best plugin bug is the one you never meet."</p>
+
+        <h2>Phản ứng cộng đồng</h2>
+        <p>Thread có vài phản hồi đáng chú ý. @popeyesbiscuits nói đây là "updates that save you from yelling at your computer later". @LastHuman67 thì lo ngại hơn, nói mỗi lần update lại thấy "tightened and cleaned up" nhưng khi update xong lại bị lỗi. @animret666 báo matrix plugin vẫn broken sau 5 update liên tiếp.</p>
+
+        <h2>Chốt một câu</h2>
+        <p>OpenClaw 2026.5.7 không phải bản release sexy. Nhưng đây là loại update giúp bạn không phải hét vào máy tính lúc 2 giờ sáng. Boring fixes, useful boring.</p>
+
+        <div class="source-links">
+          <h4>Nguồn & tham khảo</h4>
+          <ul>
+            <li><a href="https://x.com/openclaw/status/2052508303687651717" target="_blank">Post gốc từ @openclaw trên X</a></li>
+          </ul>
+        </div>
+
+        <div class="back-to-blog-footer"><a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a></div>
+        <div class="article-cta-stack"><div class="article-cta-actions"><a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a></div></div>
+        <div class="tags"><span class="tag">OpenClaw</span><span class="tag">Security</span><span class="tag">Telegram</span><span class="tag">Plugin</span><span class="tag">AI Tools</span></div>
+      </div>
+    </article>
+  </div>
+</body>
+</html>
