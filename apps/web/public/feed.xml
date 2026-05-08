@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Fri, 08 May 2026 07:12:44 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 08 May 2026 07:18:16 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Next.js 16.2.6 Và 15.5.18: Bản Vá Bảo Mật Khẩn Cấp</title>
+      <link>https://escbase.xyz/blog/nextjs-16-2-6-15-5-18-security-fixes/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/nextjs-16-2-6-15-5-18-security-fixes/</guid>
+      <pubDate>Thu, 07 May 2026 17:00:00 GMT</pubDate>
+      <description>Next.js vừa phát hành 16.2.6 và 15.5.18 với các bản vá bảo mật quan trọng, bao gồm lỗ hổng upstream từ React. Nâng cấp ngay.</description>
+      <category>Dev</category>
+      <enclosure url="https://escbase.xyz/images/nextjs-16-2-6-security-thumb.png" type="image/png" length="0" />
+    </item>
     <item>
       <title>OpenClaw 2026.5.7: Bảo Mật Thắt Chặt, Telegram Và Plugin Được Củng Cố</title>
       <link>https://escbase.xyz/blog/openclaw-2026-5-7-security-hardening/</link>
@@ -447,15 +456,6 @@
       <description>OpenClaw 2026.4.24 ra mắt với hơn 80 thay đổi: voice calls kết nối full agent, DeepSeek V4 Flash trở thành model mặc định, browser automation thêm coordinate clicks, và Google Meet lần đầu tích hợp. Cộng đồng hào hứng nhưng nhiều user gặp lỗi gateway và plugin sau update.</description>
       <category>AI Agent</category>
       <enclosure url="https://escbase.xyz/images/openclaw-2026-4-24-thumb.svg" type="image/svg+xml" length="0" />
-    </item>
-    <item>
-      <title>Devin AI Là Gì? Hướng Dẫn Toàn Diện Cho Người Mới: Use Cases, Pricing, Và Cách Dùng Hiệu Quả</title>
-      <link>https://escbase.xyz/blog/devin-ai-engineer-guide</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/devin-ai-engineer-guide</guid>
-      <pubDate>Fri, 24 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Devin là AI software engineer đầu tiên, xây dựng bởi Cognition AI. Có máy ảo riêng, tự viết code, chạy test, tạo PR. Bài viết giải thích Devin là gì, so sánh với Copilot/Cursor/Claude Code, bảng giá 2026 (Free → $200/tháng), use cases thực tế, và tips dùng hiệu quả.</description>
-      <category>AI Tools</category>
-      <enclosure url="https://escbase.xyz/images/devin-ai-guide-thumb.svg" type="image/svg+xml" length="0" />
     </item>
   </channel>
 </rss>

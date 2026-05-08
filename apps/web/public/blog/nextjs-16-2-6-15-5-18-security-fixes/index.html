@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Next.js 16.2.6 Và 15.5.18: Bản Vá Bảo Mật Khẩn Cấp | Escbase</title>
+  <meta name="description" content="Next.js vừa phát hành 16.2.6 và 15.5.18 với các bản vá bảo mật quan trọng, bao gồm lỗ hổng upstream từ React. Nâng cấp ngay.">
+  <meta property="og:title" content="Next.js 16.2.6 Và 15.5.18: Bản Vá Bảo Mật Khẩn Cấp">
+  <meta property="og:description" content="Next.js vừa phát hành 16.2.6 và 15.5.18 với các bản vá bảo mật quan trọng, bao gồm lỗ hổng upstream từ React.">
+  <meta property="og:image" content="https://news.escbase.xyz/images/nextjs-16-2-6-security-thumb.png">
+  <meta property="og:url" content="https://news.escbase.xyz/blog/nextjs-16-2-6-15-5-18-security-fixes/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://news.escbase.xyz/images/nextjs-16-2-6-security-thumb.png">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/shared-article.css">
+  <link rel="stylesheet" href="/shared-article-footer.css">
+</head>
+<body>
+  <div class="container">
+    <article>
+      <header class="article-header">
+        <span class="category-badge"><i class="fas fa-shield-halved"></i> Dev</span>
+        <h1>Next.js 16.2.6 Và 15.5.18: Bản Vá Bảo Mật Khẩn Cấp</h1>
+        <div class="meta">
+          <span><i class="far fa-calendar"></i> 08/05/2026</span>
+          <span><i class="far fa-clock"></i> 4 phút đọc</span>
+          <span><i class="far fa-folder"></i> Next.js, Security, React</span>
+        </div>
+        <img src="/images/nextjs-16-2-6-security-thumb.png" alt="Next.js 16.2.6 và 15.5.18" class="inline-image" style="margin-top:1rem;">
+      </header>
+
+      <div class="article-content">
+        <div class="highlight-box">
+          <h4>TL;DR</h4>
+          <p style="margin-bottom:0">Next.js vừa phát hành <strong>16.2.6</strong> và <strong>15.5.18</strong> với các bản vá bảo mật quan trọng, bao gồm một lỗ hổng upstream từ React. Team khuyến cáo nâng cấp ngay lập tức. Cộng đồng phản ứng từ "cảm ơn" đến "mệt mỏi vì update liên tục".</p>
+        </div>
+
+        <h2>🚨 Nâng cấp ngay — không chỉ là khuyến nghị</h2>
+        <p>Next.js team dùng từ "strongly recommend upgrading as soon as possible" — trong ngôn ngữ dev, đây là cách nói lịch sự của "update ngay hoặc hối hận sau". Các lỗ hổng này cover nhiều mức độ nghiêm trọng: high, moderate và low, bao gồm cả một issue upstream từ React.</p>
+
+        <h2>📦 Có gì trong bản vá?</h2>
+        <p>Thông tin chi tiết chưa được công bố đầy đủ (để tránh khai thác trước khi mọi người update), nhưng từ release notes có thể thấy:</p>
+        <ul>
+          <li>Multiple vulnerabilities across severity levels</li>
+          <li>One upstream React issue — nghĩa là lỗ hổng này ảnh hưởng cả React ecosystem</li>
+          <li>Backport cho cả v15 và v16 — nên dù bạn đang dùng version nào cũng cần update</li>
+        </ul>
+
+        <h2>💬 Cộng đồng phản ứng sao?</h2>
+        <p>@Hershal0_0 nói thẳng: "'strongly recommend' là dev speak cho: update now or regret it later lol". @lautyxgr đồng tình: "lol the 'we strongly recommend upgrading asap' should tell you everything".</p>
+        <p>Nhưng cũng có người mệt mỏi. @TwitchGlobalBan than: "i cant be fucking arsed anymore, it's like we have to do updates every week". @cmhy8pmun000004 thì nói "Beginning to feel like a chore using nextjs. Genuinely a liability framework".</p>
+        <p>@JamesD3V thậm chí đã đưa việc update Next.js vào package.json như một routine. @Deep_Star_Six thì muốn automatic updates vì client chán phải build version mới liên tục.</p>
+
+        <h2>🔍 Có breaking changes không?</h2>
+        <p>@travasites hỏi về breaking changes khi upgrade từ 15.5.17. @kajtszy thắc mắc tại sao v16.2.5 hôm qua cũng fix cùng vulnerabilities mà hôm nay lại có 16.2.6. Câu trả lời: đây là patch release, thường không có breaking changes, nhưng nếu bạn dùng workarounds tạm cho lỗ hổng cũ, cần test lại.</p>
+
+        <h2>Chốt một câu</h2>
+        <p>Next.js đang ở vị thế framework phổ biến nhất React ecosystem. Mỗi lần có security patch là cả triệu app cần update. Việc này tốt cho bảo mật, nhưng cũng tạo áp lực lên dev teams. Nếu bạn chưa update, làm ngay hôm nay — không phải vì FOMO, mà vì lỗ hổng thật sự đang tồn tại.</p>
+
+        <div class="source-links">
+          <h4>Nguồn & tham khảo</h4>
+          <ul>
+            <li><a href="https://x.com/nextjs/status/2052489312944759202" target="_blank">Post gốc từ @nextjs trên X</a></li>
+            <li><a href="https://github.com/vercel/next.js/releases/tag/v16.2.6" target="_blank">Next.js 16.2.6 Release Notes</a></li>
+            <li><a href="https://github.com/vercel/next.js/releases/tag/v15.5.18" target="_blank">Next.js 15.5.18 Release Notes</a></li>
+          </ul>
+        </div>
+
+        <div class="back-to-blog-footer"><a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a></div>
+        <div class="article-cta-stack"><div class="article-cta-actions"><a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a></div></div>
+        <div class="tags"><span class="tag">Next.js</span><span class="tag">Security</span><span class="tag">React</span><span class="tag">Dev</span></div>
+      </div>
+    </article>
+  </div>
+</body>
+</html>

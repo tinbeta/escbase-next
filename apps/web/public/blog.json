@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/nextjs-16-2-6-15-5-18-security-fixes/",
+    "title": "Next.js 16.2.6 Và 15.5.18: Bản Vá Bảo Mật Khẩn Cấp",
+    "excerpt": "Next.js vừa phát hành 16.2.6 và 15.5.18 với các bản vá bảo mật quan trọng, bao gồm lỗ hổng upstream từ React. Nâng cấp ngay.",
+    "date": "May 08, 2026",
+    "tag": "Dev",
+    "tagIcon": "fas fa-shield-halved",
+    "tagColor": "#22c55e",
+    "readTime": "4 phút đọc",
+    "featured": true,
+    "image": "/images/nextjs-16-2-6-security-thumb.png"
+  },
+  {
     "url": "/blog/openclaw-2026-5-7-security-hardening/",
     "title": "OpenClaw 2026.5.7: Bảo Mật Thắt Chặt, Telegram Và Plugin Được Củng Cố",
     "excerpt": "OpenClaw 2026.5.7 tập trung vào các bản vá bảo mật: native command auth, Telegram access groups, cron JSON cleanup và plugin install/update hardening.",

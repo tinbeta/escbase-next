@@ -60,6 +60,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://escbase.xyz/blog/nextjs-16-2-6-15-5-18-security-fixes/</loc>
+    <lastmod>2026-05-07</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://escbase.xyz/blog/openclaw-2026-5-7-security-hardening/</loc>
     <lastmod>2026-05-07</lastmod>
     <priority>0.8</priority>
