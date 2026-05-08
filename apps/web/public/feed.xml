@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Fri, 08 May 2026 07:55:19 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 08 May 2026 16:17:55 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Supabase Server Public Beta: Auth Và Client Tự Động Cho Edge Functions</title>
+      <link>https://escbase.xyz/blog/supabase-server-public-beta/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/supabase-server-public-beta/</guid>
+      <pubDate>Thu, 07 May 2026 17:00:00 GMT</pubDate>
+      <description>Supabase vừa phát hành @supabase/server public beta — gói xử lý auth verification, client setup, request context và boilerplate server-side cho Edge Functions, Workers, Hono, Bun.</description>
+      <category>Dev</category>
+      <enclosure url="https://escbase.xyz/images/supabase-server-thumb.png" type="image/png" length="0" />
+    </item>
     <item>
       <title>Anthropic NLAs: Dịch Suy Nghĩ Của Claude Sang Tiếng Người</title>
       <link>https://escbase.xyz/blog/anthropic-natural-language-autoencoders/</link>
@@ -447,15 +456,6 @@
       <description>DeepSeek giảm 75% giá V4-Pro API tới 5/5/2026, kéo giá cache hit xuống $0.003625, cache miss còn $0.435 và output còn $0.87 mỗi 1 triệu token. Điểm đáng chú ý không chỉ là rẻ, mà là DeepSeek đang đóng gói V4-Pro như một model dành thẳng cho Claude Code, OpenCode và OpenClaw workflows.</description>
       <category>AI Coding</category>
       <enclosure url="https://escbase.xyz/images/deepseek-v4-pro-75-percent-off-api-thumb.svg" type="image/svg+xml" length="0" />
-    </item>
-    <item>
-      <title>Meta Cắt 10% Nhân Sự Để Dồn Lực Cho AI: 8.000 Người Ra Đi, 6.000 Vị Trí Mở Bị Huỷ</title>
-      <link>https://escbase.xyz/blog/meta-cuts-10-percent-workforce-ai-push</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/meta-cuts-10-percent-workforce-ai-push</guid>
-      <pubDate>Sat, 25 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Meta sẽ cắt khoảng 10% lực lượng lao động, tương đương 8.000 người, đồng thời huỷ kế hoạch tuyển 6.000 vị trí mở để dồn nguồn lực cho AI. Động thái này cho thấy cuộc đua AI đang buộc Big Tech phải tái cấu trúc mạnh tay hơn cả một đợt tiết kiệm chi phí thông thường.</description>
-      <category>Market Structure</category>
-      <enclosure url="https://escbase.xyz/images/meta-cuts-10-percent-workforce-ai-push-thumb.svg" type="image/svg+xml" length="0" />
     </item>
   </channel>
 </rss>

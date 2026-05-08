@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/supabase-server-public-beta/",
+    "title": "Supabase Server Public Beta: Auth Và Client Tự Động Cho Edge Functions",
+    "excerpt": "Supabase vừa phát hành @supabase/server public beta — gói xử lý auth verification, client setup, request context và boilerplate server-side cho Edge Functions, Workers, Hono, Bun.",
+    "date": "May 08, 2026",
+    "tag": "Dev",
+    "tagIcon": "fas fa-server",
+    "tagColor": "#3ecf8e",
+    "readTime": "5 phút đọc",
+    "featured": true,
+    "image": "/images/supabase-server-thumb.png"
+  },
+  {
     "url": "/blog/anthropic-natural-language-autoencoders/",
     "title": "Anthropic NLAs: Dịch Suy Nghĩ Của Claude Sang Tiếng Người",
     "excerpt": "Anthropic vừa công bố Natural Language Autoencoders — công nghệ giúp dịch activations của Claude thành văn bản người đọc được, mở ra khả năng hiểu AI đang nghĩ gì.",

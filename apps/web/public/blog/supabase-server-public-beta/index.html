@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Supabase Server Public Beta: Auth Và Client Tự Động Cho Edge Functions | Escbase</title>
+  <meta name="description" content="Supabase vừa phát hành @supabase/server public beta — gói xử lý auth verification, client setup, request context và boilerplate server-side cho Edge Functions, Workers, Hono, Bun.">
+  <meta property="og:title" content="Supabase Server Public Beta: Auth Và Client Tự Động Cho Edge Functions">
+  <meta property="og:description" content="Supabase vừa phát hành @supabase/server public beta — gói xử lý auth verification, client setup, request context và boilerplate server-side.">
+  <meta property="og:image" content="https://news.escbase.xyz/images/supabase-server-thumb.png">
+  <meta property="og:url" content="https://news.escbase.xyz/blog/supabase-server-public-beta/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://news.escbase.xyz/images/supabase-server-thumb.png">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/shared-article.css">
+  <link rel="stylesheet" href="/shared-article-footer.css">
+</head>
+<body>
+  <div class="container">
+    <article>
+      <header class="article-header">
+        <span class="category-badge"><i class="fas fa-server"></i> Dev</span>
+        <h1>Supabase Server Public Beta: Auth Và Client Tự Động Cho Edge Functions</h1>
+        <div class="meta">
+          <span><i class="far fa-calendar"></i> 08/05/2026</span>
+          <span><i class="far fa-clock"></i> 5 phút đọc</span>
+          <span><i class="far fa-folder"></i> Supabase, Edge Functions, Auth</span>
+        </div>
+        <img src="/images/supabase-server-thumb.png" alt="Supabase Server" class="inline-image" style="margin-top:1rem;">
+      </header>
+
+      <div class="article-content">
+        <div class="highlight-box">
+          <h4>TL;DR</h4>
+          <p style="margin-bottom:0">Supabase vừa phát hành <strong>@supabase/server</strong> public beta — gói xử lý auth verification, client setup, request context và boilerplate server-side cho bạn. Hoạt động trên Edge Functions, Vercel Functions, Cloudflare Workers, Hono và Bun. Không còn copy/paste <code>_shared/*.ts</code> giữa các functions.</p>
+        </div>
+
+        <h2>📰 Vấn đề: 25.000 Edge Functions đều giống nhau</h2>
+        <p>Supabase phân tích 25.000 Edge Functions đã deploy và thấy cùng một pattern: dev đang rebuild cùng đoạn setup code đi đi lại lại chỉ để đến business logic thực sự.</p>
+        <p>Đa số functions cần:</p>
+        <ul>
+          <li>Tạo Supabase client với <code>SUPABASE_ANON_KEY</code></li>
+          <li>Tạo admin client với <code>SUPABASE_SERVICE_ROLE_KEY</code> để bypass RLS</li>
+          <li>Verify JWT</li>
+          <li>Parse claims</li>
+          <li>Handle CORS</li>
+          <li>Wire up auth context</li>
+          <li>Copy/paste <code>_shared/*.ts</code> giữa các functions</li>
+        </ul>
+
+        <h2>🚀 Giải pháp: @supabase/server</h2>
+        <p>Với <code>@supabase/server</code>, bạn chỉ cần khai báo ai có thể gọi endpoint và nhận về context đã khởi tạo đầy đủ:</p>
+        <pre><code>import { withSupabase } from 'npm:@supabase/server'
+
+export default {
+  fetch: withSupabase({ auth: 'user' }, async (req, ctx) => {
+    const { data } = await ctx.supabase.from('todos').select()
+    return Response.json(data)
+  }),
+}</code></pre>
+
+        <h2>🔧 Hoạt động thế nào?</h2>
+        <p>Core của <code>@supabase/server</code> là <strong>SupabaseContext</strong> — request context bao gồm mọi thứ Edge Functions cần, đã config sẵn:</p>
+        <ul>
+          <li>User-scoped Supabase client (tự động respect RLS policies)</li>
+          <li>Admin client với service role access</li>
+          <li>Verified user identity</li>
+          <li>JWT claims</li>
+          <li>Auth metadata</li>
+          <li>Built-in request/auth helpers</li>
+        </ul>
+
+        <h2>🎛️ Linh hoạt khi cần control</h2>
+        <p>Nếu cần control error handling và responses, dùng <code>createSupabaseContext</code> trực tiếp:</p>
+        <pre><code>import { createSupabaseContext } from 'npm:@supabase/server'
+
+export default {
+  fetch: async (req) => {
+    const { data: ctx, error } = await createSupabaseContext(req, { auth: 'user' })
+    if (error) return Response.json({ error: error.message }, { status: error.status })
+
+    const { data } = await ctx.supabase.from('todos').select()
+    return Response.json(data)
+  },
+}</code></pre>
+
+        <h2>🌍 Cross-platform</h2>
+        <p><code>export default { fetch }</code> tương đương <code>Deno.serve(...)</code> — đều define request handler. Dùng <code>export default</code> vì nó work across Edge Functions, Workers và Bun. Nếu thích <code>Deno.serve</code>, vẫn dùng được.</p>
+
+        <h2>Chốt một câu</h2>
+        <p>@supabase/server không phải feature sexy, nhưng giải quyết đúng pain point: setup code lặp đi lặp lại trong Edge Functions. Khi bạn viết function thứ 10, thứ 20, sự khác biệt giữa "có server package" và "không có" sẽ rõ ràng. Đây là loại công cụ giúp bạn focus vào business logic thay vì boilerplate.</p>
+
+        <div class="source-links">
+          <h4>Nguồn & tham khảo</h4>
+          <ul>
+            <li><a href="https://x.com/supabase/status/2052392264627007585" target="_blank">Post gốc từ @supabase trên X</a></li>
+            <li><a href="https://supabase.com/blog/supabase-server-public-beta" target="_blank">Supabase Blog: Server Public Beta</a></li>
+          </ul>
+        </div>
+
+        <div class="back-to-blog-footer"><a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a></div>
+        <div class="article-cta-stack"><div class="article-cta-actions"><a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a></div></div>
+        <div class="tags"><span class="tag">Supabase</span><span class="tag">Edge Functions</span><span class="tag">Auth</span><span class="tag">Dev</span></div>
+      </div>
+    </article>
+  </div>
+</body>
+</html>
