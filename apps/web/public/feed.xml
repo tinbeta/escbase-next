@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Fri, 08 May 2026 07:18:16 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 08 May 2026 07:55:19 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Anthropic NLAs: Dịch Suy Nghĩ Của Claude Sang Tiếng Người</title>
+      <link>https://escbase.xyz/blog/anthropic-natural-language-autoencoders/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/anthropic-natural-language-autoencoders/</guid>
+      <pubDate>Thu, 07 May 2026 17:00:00 GMT</pubDate>
+      <description>Anthropic vừa công bố Natural Language Autoencoders — công nghệ giúp dịch activations của Claude thành văn bản người đọc được, mở ra khả năng hiểu AI đang nghĩ gì.</description>
+      <category>AI Research</category>
+      <enclosure url="https://escbase.xyz/images/anthropic-nla-thumb.png" type="image/png" length="0" />
+    </item>
     <item>
       <title>Next.js 16.2.6 Và 15.5.18: Bản Vá Bảo Mật Khẩn Cấp</title>
       <link>https://escbase.xyz/blog/nextjs-16-2-6-15-5-18-security-fixes/</link>
@@ -447,15 +456,6 @@
       <description>Meta sẽ cắt khoảng 10% lực lượng lao động, tương đương 8.000 người, đồng thời huỷ kế hoạch tuyển 6.000 vị trí mở để dồn nguồn lực cho AI. Động thái này cho thấy cuộc đua AI đang buộc Big Tech phải tái cấu trúc mạnh tay hơn cả một đợt tiết kiệm chi phí thông thường.</description>
       <category>Market Structure</category>
       <enclosure url="https://escbase.xyz/images/meta-cuts-10-percent-workforce-ai-push-thumb.svg" type="image/svg+xml" length="0" />
-    </item>
-    <item>
-      <title>OpenClaw 2026.4.24: Voice Calls, DeepSeek V4, Browser Automation, Và Google Meet</title>
-      <link>https://escbase.xyz/blog/openclaw-2026-4-24-release</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/openclaw-2026-4-24-release</guid>
-      <pubDate>Fri, 24 Apr 2026 17:00:00 GMT</pubDate>
-      <description>OpenClaw 2026.4.24 ra mắt với hơn 80 thay đổi: voice calls kết nối full agent, DeepSeek V4 Flash trở thành model mặc định, browser automation thêm coordinate clicks, và Google Meet lần đầu tích hợp. Cộng đồng hào hứng nhưng nhiều user gặp lỗi gateway và plugin sau update.</description>
-      <category>AI Agent</category>
-      <enclosure url="https://escbase.xyz/images/openclaw-2026-4-24-thumb.svg" type="image/svg+xml" length="0" />
     </item>
   </channel>
 </rss>

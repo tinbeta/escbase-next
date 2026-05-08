@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/anthropic-natural-language-autoencoders/",
+    "title": "Anthropic NLAs: Dịch Suy Nghĩ Của Claude Sang Tiếng Người",
+    "excerpt": "Anthropic vừa công bố Natural Language Autoencoders — công nghệ giúp dịch activations của Claude thành văn bản người đọc được, mở ra khả năng hiểu AI đang nghĩ gì.",
+    "date": "May 08, 2026",
+    "tag": "AI Research",
+    "tagIcon": "fas fa-brain",
+    "tagColor": "#d97706",
+    "readTime": "6 phút đọc",
+    "featured": true,
+    "image": "/images/anthropic-nla-thumb.png"
+  },
+  {
     "url": "/blog/nextjs-16-2-6-15-5-18-security-fixes/",
     "title": "Next.js 16.2.6 Và 15.5.18: Bản Vá Bảo Mật Khẩn Cấp",
     "excerpt": "Next.js vừa phát hành 16.2.6 và 15.5.18 với các bản vá bảo mật quan trọng, bao gồm lỗ hổng upstream từ React. Nâng cấp ngay.",
