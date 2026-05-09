@@ -49,6 +49,8 @@ const items = posts.slice(0, 50).map((post) => {
     </item>`;
 });
 
+const lastBuildDate = posts.length ? toRFC822(posts[0].date) : new Date().toUTCString();
+
 const feed = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
@@ -56,7 +58,7 @@ const feed = `<?xml version="1.0" encoding="UTF-8"?>
     <link>${SITE}</link>
     <description>${escapeXml(FEED_DESC)}</description>
     <language>vi</language>
-    <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
+    <lastBuildDate>${lastBuildDate}</lastBuildDate>
     <atom:link href="${SITE}/feed.xml" rel="self" type="application/rss+xml" />
 ${items.join('\n')}
   </channel>

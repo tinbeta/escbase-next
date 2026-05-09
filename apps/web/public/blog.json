@@ -141,7 +141,7 @@
     "tagColor": "#4285f4",
     "readTime": "6 phút đọc",
     "featured": true,
-    "image": "/images/gemma4-react-native-ondevice-thumb.png"
+    "image": "/images/gemma4-react-native-thumb.svg"
   },
   {
     "url": "/blog/claude-finance-agents/",
@@ -201,7 +201,7 @@
     "tagColor": "#ef4444",
     "readTime": "10 phút đọc",
     "featured": true,
-    "image": "/images/anthropic-claude-code-company-blueprint-thumb.svg"
+    "image": "/images/anthropic-claude-code-blueprint-thumb.svg"
   },
   {
     "url": "/blog/open-slide-agent-framework/",
@@ -225,7 +225,7 @@
     "tagColor": "#a78bfa",
     "readTime": "9 phút đọc",
     "featured": true,
-    "image": "/images/elevenlabs-agents-5-startup-ideas-thumb.svg"
+    "image": "/images/elevenlabs-agents-startup-ideas-thumb.png"
   },
   {
     "url": "/blog/gpt-image2-seedance2-video-workflow/",

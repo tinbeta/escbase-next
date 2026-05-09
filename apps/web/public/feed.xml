@@ -5,7 +5,7 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Sat, 09 May 2026 06:41:07 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 08 May 2026 17:00:00 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Codex 0.130.0: Remote Control, Plugin Hooks Và Bedrock Auth</title>
@@ -113,7 +113,7 @@
       <pubDate>Tue, 05 May 2026 17:00:00 GMT</pubDate>
       <description>Google Gemma hợp tác với SWMansion tích hợp Gemma 4 on-device trong React Native. Sắp có trong thư viện react-native-executorch. Không cần server, model chạy hoàn toàn trên thiết bị di động.</description>
       <category>Mobile AI</category>
-      <enclosure url="https://escbase.xyz/images/gemma4-react-native-ondevice-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://escbase.xyz/images/gemma4-react-native-thumb.svg" type="image/svg+xml" length="0" />
     </item>
     <item>
       <title>Anthropic Ra Mắt Claude Agent Templates Cho Financial Services: Build Pitches, Valuation Reviews, Closing Books</title>
@@ -158,7 +158,7 @@
       <pubDate>Sun, 03 May 2026 17:00:00 GMT</pubDate>
       <description>Anthropic công bố blueprint xây công ty với Claude Code: 1 người điều hành + nhiều AI agent làm việc tự động. Agent Stack (ADK + Vertex AI + MCP + A2A) giải quyết 3 vấn đề lớn khi deploy AI vào production.</description>
       <category>AI Agents</category>
-      <enclosure url="https://escbase.xyz/images/anthropic-claude-code-company-blueprint-thumb.svg" type="image/svg+xml" length="0" />
+      <enclosure url="https://escbase.xyz/images/anthropic-claude-code-blueprint-thumb.svg" type="image/svg+xml" length="0" />
     </item>
     <item>
       <title>open-slide: Framework Làm Slide Dành Riêng Cho AI Agents (Claude, Cursor, Codex)</title>
@@ -176,7 +176,7 @@
       <pubDate>Sat, 02 May 2026 17:00:00 GMT</pubDate>
       <description>5 ý tưởng startup có thể build và resell chỉ với ElevenLabs Agents: AI Receptionist, Multilingual Support, AI SDR, Restaurant Order Agent, Real Estate Scheduler. Chi phí $0.08/phút, thay thế $2-5k/tháng nhân sự.</description>
       <category>AI Agents</category>
-      <enclosure url="https://escbase.xyz/images/elevenlabs-agents-5-startup-ideas-thumb.svg" type="image/svg+xml" length="0" />
+      <enclosure url="https://escbase.xyz/images/elevenlabs-agents-startup-ideas-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>GPT-Image 2 + Seedance 2.0: Tạo Video Từ Storyboard Chỉ Bằng 1 Câu Lệnh</title>
