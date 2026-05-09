@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/codex-0-130-0-release/",
+    "title": "Codex 0.130.0: Remote Control, Plugin Hooks Và Bedrock Auth",
+    "excerpt": "Codex 0.130.0 vừa ra mắt với codex remote-control, plugin hooks, Bedrock AWS auth và nhiều cải tiến app-server.",
+    "date": "May 09, 2026",
+    "tag": "Dev",
+    "tagIcon": "fas fa-terminal",
+    "tagColor": "#f59e0b",
+    "readTime": "4 phút đọc",
+    "featured": true,
+    "image": "/images/codex-0-130-0-thumb.png"
+  },
+  {
     "url": "/blog/chrome-skills-available/",
     "title": "Chrome Skills: Lưu Và Tùy Chỉnh Prompt Yêu Thích Trong Trình Duyệt",
     "excerpt": "Chrome vừa ra mắt Skills — tính năng cho phép lưu và tùy chỉnh prompt yêu thích ngay trong trình duyệt, biến Chrome thành agent runtime.",

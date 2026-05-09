@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codex 0.130.0: Remote Control, Plugin Hooks Và Bedrock Auth | Escbase</title>
+  <meta name="description" content="Codex 0.130.0 vừa ra mắt với codex remote-control, plugin hooks, Bedrock AWS auth và nhiều cải tiến app-server.">
+  <meta property="og:title" content="Codex 0.130.0: Remote Control, Plugin Hooks Và Bedrock Auth">
+  <meta property="og:description" content="Codex 0.130.0 vừa ra mắt với codex remote-control, plugin hooks, Bedrock AWS auth và nhiều cải tiến app-server.">
+  <meta property="og:image" content="https://news.escbase.xyz/images/codex-0-130-0-thumb.png">
+  <meta property="og:url" content="https://news.escbase.xyz/blog/codex-0-130-0-release/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://news.escbase.xyz/images/codex-0-130-0-thumb.png">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/shared-article.css">
+  <link rel="stylesheet" href="/shared-article-footer.css">
+</head>
+<body>
+  <div class="container">
+    <article>
+      <header class="article-header">
+        <span class="category-badge"><i class="fas fa-terminal"></i> Dev</span>
+        <h1>Codex 0.130.0: Remote Control, Plugin Hooks Và Bedrock Auth</h1>
+        <div class="meta">
+          <span><i class="far fa-calendar"></i> 09/05/2026</span>
+          <span><i class="far fa-clock"></i> 4 phút đọc</span>
+          <span><i class="far fa-folder"></i> Codex, CLI, AWS, Plugin</span>
+        </div>
+        <img src="/images/codex-0-130-0-thumb.png" alt="Codex 0.130.0" class="inline-image" style="margin-top:1rem;">
+      </header>
+
+      <div class="article-content">
+        <div class="highlight-box">
+          <h4>TL;DR</h4>
+          <p style="margin-bottom:0">Codex 0.130.0 vừa ra mắt với <strong>codex remote-control</strong> — entrypoint đơn giản cho headless remotely controllable app-server, <strong>plugin hooks</strong> hiển thị trong plugin details, và <strong>Bedrock auth</strong> hỗ trợ AWS console-login credentials. Nhiều fix cho app-server threads và Windows sandbox.</p>
+        </div>
+
+        <h2>🚀 codex remote-control</h2>
+        <p>Command mới <code>codex remote-control</code> là top-level entrypoint để khởi động headless, remotely controllable app-server. Điều này đơn giản hóa việc setup server có thể điều khiển từ xa — không cần config phức tạp.</p>
+        <p>@morganlinton phản ứng: "Remote control 👀" — đúng, đây là feature đáng chú ý cho ai cần điều khiển Codex từ xa.</p>
+
+        <h2>🔌 Plugin Hooks Và Sharing</h2>
+        <p>Plugin details giờ hiển thị <strong>bundled hooks</strong> — bạn có thể thấy chính xác plugin đang hook vào đâu. Plugin sharing cũng expose <strong>link metadata</strong> và <strong>discoverability controls</strong>, giúp quản lý plugin dễ hơn.</p>
+
+        <h2>☁️ Bedrock Auth Với AWS Console Credentials</h2>
+        <p>Bedrock auth giờ có thể dùng <strong>AWS console-login credentials</strong> từ aws login profiles. Điều này đơn giản hóa việc authenticate với AWS Bedrock — không cần setup API keys riêng nếu bạn đã có AWS CLI profile.</p>
+        <p><code>view_image</code> cũng được cải thiện: resolve files qua selected environment cho multi-environment sessions.</p>
+
+        <h2>🛠️ App-Server Improvements</h2>
+        <ul>
+          <li><strong>Live config changes:</strong> App-server threads giờ pick up config changes mà không cần restart</li>
+          <li><strong>Accurate turn diffs:</strong> Turn diffs stay accurate across apply-patch operations, kể cả partial failures vẫn mutated files</li>
+          <li><strong>Remote compaction:</strong> Emits <code>response.processed</code> cho v2 streams, omit <code>service_tier</code> trên API-key compact requests</li>
+          <li><strong>Windows sandbox:</strong> Grant sandbox users access to desktop runtime binary cache</li>
+        </ul>
+
+        <h2>🎯 App-Server Clients</h2>
+        <p>Clients có thể <strong>page large threads</strong> với unloaded, summary, hoặc full turn item views. Điều này cải thiện performance khi làm việc với threads dài — không cần load toàn bộ history.</p>
+
+        <h2>Chốt một câu</h2>
+        <p>Codex 0.130.0 không phải bản release lớn với feature sexy, nhưng tập trung vào độ tin cậy và integration. Remote control đơn giản hóa deployment, plugin hooks tăng transparency, Bedrock auth giảm friction với AWS. Đây là loại update giúp Codex trở thành công cụ production-ready hơn.</p>
+
+        <div class="source-links">
+          <h4>Nguồn & tham khảo</h4>
+          <ul>
+            <li><a href="https://x.com/CodexReleases/status/2052901321230151996" target="_blank">Post gốc từ @CodexReleases trên X</a></li>
+            <li><a href="https://github.com/openai/codex/releases/tag/v0.130.0" target="_blank">Codex 0.130.0 Release Notes</a></li>
+          </ul>
+        </div>
+
+        <div class="back-to-blog-footer"><a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a></div>
+        <div class="article-cta-stack"><div class="article-cta-actions"><a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a></div></div>
+        <div class="tags"><span class="tag">Codex</span><span class="tag">CLI</span><span class="tag">AWS</span><span class="tag">Plugin</span><span class="tag">Dev</span></div>
+      </div>
+    </article>
+  </div>
+</body>
+</html>

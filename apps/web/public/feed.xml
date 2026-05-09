@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Sat, 09 May 2026 04:51:37 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 09 May 2026 06:41:07 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Codex 0.130.0: Remote Control, Plugin Hooks Và Bedrock Auth</title>
+      <link>https://escbase.xyz/blog/codex-0-130-0-release/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/codex-0-130-0-release/</guid>
+      <pubDate>Fri, 08 May 2026 17:00:00 GMT</pubDate>
+      <description>Codex 0.130.0 vừa ra mắt với codex remote-control, plugin hooks, Bedrock AWS auth và nhiều cải tiến app-server.</description>
+      <category>Dev</category>
+      <enclosure url="https://escbase.xyz/images/codex-0-130-0-thumb.png" type="image/png" length="0" />
+    </item>
     <item>
       <title>Chrome Skills: Lưu Và Tùy Chỉnh Prompt Yêu Thích Trong Trình Duyệt</title>
       <link>https://escbase.xyz/blog/chrome-skills-available/</link>
@@ -447,15 +456,6 @@
       <description>Sam Altman vừa đăng một post rất ngắn trên X, nhưng link đính kèm lại là một tuyên ngôn khá rõ của OpenAI về 5 nguyên tắc định hướng: democratization, empowerment, universal prosperity, resilience và adaptability. Điểm đáng chú ý không chỉ là những từ nghe đẹp, mà là việc OpenAI đang công khai tự mô tả các trade-off giữa mở rộng truy cập, an toàn, hạ tầng compute, chi phí và quyền lực.</description>
       <category>AI Policy</category>
       <enclosure url="https://escbase.xyz/images/openai-our-principles-thumb.svg" type="image/svg+xml" length="0" />
-    </item>
-    <item>
-      <title>CPU, GPU, TPU, NPU, LPU Khác Nhau Ở Đâu: 5 Kiến Trúc Chip Đang Gánh AI Hiện Tại</title>
-      <link>https://escbase.xyz/blog/ai-chip-architectures-cpu-gpu-tpu-npu-lpu</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/ai-chip-architectures-cpu-gpu-tpu-npu-lpu</guid>
-      <pubDate>Sun, 26 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Một thread đang được share khá mạnh trên X vừa tóm gọn 5 kiến trúc phần cứng gánh AI hiện tại: CPU, GPU, TPU, NPU và LPU. Điểm quan trọng không nằm ở chuyện nhớ tên chip, mà ở việc mỗi loại đánh đổi rất khác nhau giữa tính linh hoạt, mức độ song song và cách truy cập bộ nhớ.</description>
-      <category>AI Infrastructure</category>
-      <enclosure url="https://escbase.xyz/images/ai-chip-architectures-cpu-gpu-tpu-npu-lpu-thumb.svg" type="image/svg+xml" length="0" />
     </item>
   </channel>
 </rss>
