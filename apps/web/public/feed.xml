@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Sat, 09 May 2026 04:45:40 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 09 May 2026 04:51:37 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chrome Skills: Lưu Và Tùy Chỉnh Prompt Yêu Thích Trong Trình Duyệt</title>
+      <link>https://escbase.xyz/blog/chrome-skills-available/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/chrome-skills-available/</guid>
+      <pubDate>Fri, 08 May 2026 17:00:00 GMT</pubDate>
+      <description>Chrome vừa ra mắt Skills — tính năng cho phép lưu và tùy chỉnh prompt yêu thích ngay trong trình duyệt, biến Chrome thành agent runtime.</description>
+      <category>Browser</category>
+      <enclosure url="https://escbase.xyz/images/chrome-skills-thumb.png" type="image/png" length="0" />
+    </item>
     <item>
       <title>Claude Code: Tại Sao HTML Hiệu Quả Hơn Markdown</title>
       <link>https://escbase.xyz/blog/claude-code-html-over-markdown/</link>
@@ -447,15 +456,6 @@
       <description>Một thread đang được share khá mạnh trên X vừa tóm gọn 5 kiến trúc phần cứng gánh AI hiện tại: CPU, GPU, TPU, NPU và LPU. Điểm quan trọng không nằm ở chuyện nhớ tên chip, mà ở việc mỗi loại đánh đổi rất khác nhau giữa tính linh hoạt, mức độ song song và cách truy cập bộ nhớ.</description>
       <category>AI Infrastructure</category>
       <enclosure url="https://escbase.xyz/images/ai-chip-architectures-cpu-gpu-tpu-npu-lpu-thumb.svg" type="image/svg+xml" length="0" />
-    </item>
-    <item>
-      <title>Cursor Ra /multitask: Async Subagents, Worktrees Mới Và Multi-Root Workspace Đẩy IDE Thành Hạ Tầng Workflow</title>
-      <link>https://escbase.xyz/blog/cursor-multitask-async-subagents-worktrees</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/cursor-multitask-async-subagents-worktrees</guid>
-      <pubDate>Sat, 25 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Cursor vừa giới thiệu /multitask trong giao diện Cursor 3 mới: async subagents chạy song song thay vì xếp hàng, worktrees tốt hơn cho task nền theo branch riêng, và multi-root workspace để một agent session chạm nhiều repo cùng lúc. Đây là một bước đẩy rõ rệt từ coding assistant sang workflow infrastructure.</description>
-      <category>AI Coding</category>
-      <enclosure url="https://escbase.xyz/images/cursor-multitask-async-subagents-worktrees-thumb.svg" type="image/svg+xml" length="0" />
     </item>
   </channel>
 </rss>

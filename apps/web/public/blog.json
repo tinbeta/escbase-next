@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/chrome-skills-available/",
+    "title": "Chrome Skills: Lưu Và Tùy Chỉnh Prompt Yêu Thích Trong Trình Duyệt",
+    "excerpt": "Chrome vừa ra mắt Skills — tính năng cho phép lưu và tùy chỉnh prompt yêu thích ngay trong trình duyệt, biến Chrome thành agent runtime.",
+    "date": "May 09, 2026",
+    "tag": "Browser",
+    "tagIcon": "fas fa-globe",
+    "tagColor": "#4285f4",
+    "readTime": "4 phút đọc",
+    "featured": true,
+    "image": "/images/chrome-skills-thumb.png"
+  },
+  {
     "url": "/blog/claude-code-html-over-markdown/",
     "title": "Claude Code: Tại Sao HTML Hiệu Quả Hơn Markdown",
     "excerpt": "Thariq từ Anthropic chia sẻ lý do tại sao HTML là output format tốt hơn Markdown cho Claude Code — rich visualization, interactive, và dễ chia sẻ.",
