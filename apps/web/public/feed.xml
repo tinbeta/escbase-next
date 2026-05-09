@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Fri, 08 May 2026 16:17:55 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 09 May 2026 04:45:40 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Claude Code: Tại Sao HTML Hiệu Quả Hơn Markdown</title>
+      <link>https://escbase.xyz/blog/claude-code-html-over-markdown/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/claude-code-html-over-markdown/</guid>
+      <pubDate>Fri, 08 May 2026 17:00:00 GMT</pubDate>
+      <description>Thariq từ Anthropic chia sẻ lý do tại sao HTML là output format tốt hơn Markdown cho Claude Code — rich visualization, interactive, và dễ chia sẻ.</description>
+      <category>Dev</category>
+      <enclosure url="https://escbase.xyz/images/claude-code-html-markdown-thumb.png" type="image/png" length="0" />
+    </item>
     <item>
       <title>Supabase Server Public Beta: Auth Và Client Tự Động Cho Edge Functions</title>
       <link>https://escbase.xyz/blog/supabase-server-public-beta/</link>
@@ -447,15 +456,6 @@
       <description>Cursor vừa giới thiệu /multitask trong giao diện Cursor 3 mới: async subagents chạy song song thay vì xếp hàng, worktrees tốt hơn cho task nền theo branch riêng, và multi-root workspace để một agent session chạm nhiều repo cùng lúc. Đây là một bước đẩy rõ rệt từ coding assistant sang workflow infrastructure.</description>
       <category>AI Coding</category>
       <enclosure url="https://escbase.xyz/images/cursor-multitask-async-subagents-worktrees-thumb.svg" type="image/svg+xml" length="0" />
-    </item>
-    <item>
-      <title>DeepSeek Giảm 75% Giá V4-Pro API Tới 5/5: 1M Context, Cache Hit Chỉ $0.003625</title>
-      <link>https://escbase.xyz/blog/deepseek-v4-pro-75-percent-off-api</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/deepseek-v4-pro-75-percent-off-api</guid>
-      <pubDate>Sat, 25 Apr 2026 17:00:00 GMT</pubDate>
-      <description>DeepSeek giảm 75% giá V4-Pro API tới 5/5/2026, kéo giá cache hit xuống $0.003625, cache miss còn $0.435 và output còn $0.87 mỗi 1 triệu token. Điểm đáng chú ý không chỉ là rẻ, mà là DeepSeek đang đóng gói V4-Pro như một model dành thẳng cho Claude Code, OpenCode và OpenClaw workflows.</description>
-      <category>AI Coding</category>
-      <enclosure url="https://escbase.xyz/images/deepseek-v4-pro-75-percent-off-api-thumb.svg" type="image/svg+xml" length="0" />
     </item>
   </channel>
 </rss>

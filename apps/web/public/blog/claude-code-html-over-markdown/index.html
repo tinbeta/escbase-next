@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude Code: Tại Sao HTML Hiệu Quả Hơn Markdown | Escbase</title>
+  <meta name="description" content="Thariq từ Anthropic chia sẻ lý do tại sao HTML là output format tốt hơn Markdown cho Claude Code — rich visualization, interactive, và dễ chia sẻ.">
+  <meta property="og:title" content="Claude Code: Tại Sao HTML Hiệu Quả Hơn Markdown">
+  <meta property="og:description" content="Thariq từ Anthropic chia sẻ lý do tại sao HTML là output format tốt hơn Markdown cho Claude Code.">
+  <meta property="og:image" content="https://news.escbase.xyz/images/claude-code-html-markdown-thumb.png">
+  <meta property="og:url" content="https://news.escbase.xyz/blog/claude-code-html-over-markdown/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://news.escbase.xyz/images/claude-code-html-markdown-thumb.png">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/shared-article.css">
+  <link rel="stylesheet" href="/shared-article-footer.css">
+</head>
+<body>
+  <div class="container">
+    <article>
+      <header class="article-header">
+        <span class="category-badge"><i class="fas fa-code"></i> Dev</span>
+        <h1>Claude Code: Tại Sao HTML Hiệu Quả Hơn Markdown</h1>
+        <div class="meta">
+          <span><i class="far fa-calendar"></i> 09/05/2026</span>
+          <span><i class="far fa-clock"></i> 5 phút đọc</span>
+          <span><i class="far fa-folder"></i> Claude Code, HTML, Markdown</span>
+        </div>
+        <img src="/images/claude-code-html-markdown-thumb.png" alt="Claude Code HTML vs Markdown" class="inline-image" style="margin-top:1rem;">
+      </header>
+
+      <div class="article-content">
+        <div class="highlight-box">
+          <h4>TL;DR</h4>
+          <p style="margin-bottom:0">Thariq từ Anthropic chia sẻ lý do tại sao <strong>HTML</strong> là output format tốt hơn <strong>Markdown</strong> cho Claude Code. HTML cho phép rich visualization, interactive elements, và dễ chia sẻ hơn — trong khi Markdown đang trở thành giới hạn khi agents ngày càng mạnh.</p>
+        </div>
+
+        <h2>📰 Vấn đề: Markdown đang trở thành giới hạn</h2>
+        <p>Markdown đã trở thành format chính để agents giao tiếp với con người. Nó đơn giản, portable, có khả năng rich text cơ bản và dễ edit. Claude thậm chí còn giỏi dùng ASCII để vẽ diagram trong markdown.</p>
+        <p>Nhưng khi agents ngày càng mạnh, Thariq cảm thấy Markdown đang trở thành format hạn chế. File markdown >100 dòng rất khó đọc. Anh muốn richer visualizations, màu sắc, diagram — và khả năng chia sẻ dễ dàng.</p>
+
+        <h2>🚀 Tại sao HTML?</h2>
+        <h3>Information Density</h3>
+        <p>HTML có thể truyền tải thông tin phong phú hơn Markdown:</p>
+        <ul>
+          <li>Tabular data với tables</li>
+          <li>Design data với CSS</li>
+          <li>Illustrations với SVG</li>
+          <li>Code snippets với script tags</li>
+          <li>Interactions với JavaScript + CSS</li>
+          <li>Workflows với SVG và HTML</li>
+          <li>Spatial data với absolute positions và canvases</li>
+          <li>Images với image tags</li>
+        </ul>
+        <p>Thariq nói: "Gần như không có tập thông tin nào Claude đọc được mà bạn không thể represent hiệu quả với HTML."</p>
+
+        <h3>Visual Clarity & Ease of Reading</h3>
+        <p>HTML documents dễ đọc hơn. Claude có thể organize structure visually với tabs, illustrations, links — thậm chí mobile responsive. Khả năng ai đó đọc spec, report hay PR writeup của bạn cao hơn rất nhiều nếu nó ở dạng HTML.</p>
+
+        <h3>Ease of Sharing</h3>
+        <p>Markdown khó share vì hầu hết browsers không render chúng natively. HTML thì upload lên S3 là có link share ngay — colleagues mở ở bất kỳ đâu.</p>
+
+        <h3>Two-way Interaction</h3>
+        <p>HTML cho phép tương tác: sliders, knobs để adjust design, tweak options trong algorithm để xem kết quả. Bạn cũng có thể copy changes vào prompt để paste lại Claude Code.</p>
+
+        <h2>🎯 Use Cases cụ thể</h2>
+        <h3>Specs, Planning & Exploration</h3>
+        <p>Thay vì markdown plan đơn giản, Thariq tạo một web của HTML files. Ví dụ prompt:</p>
+        <blockquote>"I'm not sure what direction to take the onboarding screen. Generate 6 distinctly different approaches — vary layout, tone, and density — and lay them out as a single HTML file in a grid so I can compare them side by side."</blockquote>
+
+        <h3>Code Review & Understanding</h3>
+        <p>HTML có thể render diffs, annotations, flowcharts, modules. Thariq attach HTML code explainer vào mọi PR.</p>
+        <blockquote>"Help me review this PR by creating an HTML artifact. I'm not very familiar with the streaming/backpressure logic so focus on that. Render the actual diff with inline margin annotations, color-code findings by severity."</blockquote>
+
+        <h3>Design & Prototypes</h3>
+        <p>HTML là rich canvas cho Claude để explore visual designs, mockups, và interactive prototypes.</p>
+
+        <h2>🔧 Cách bắt đầu</h2>
+        <p>Thariq nhấn mạnh: bạn không cần skill phức tạp. Chỉ cần prompt Claude: <strong>"make a HTML file"</strong> hoặc <strong>"make a HTML artifact"</strong>. Trick là biết bạn muốn artifact làm gì và cách dùng nó.</p>
+
+        <h2>Chốt một câu</h2>
+        <p>Markdown vẫn có vị trí cho quick notes và simple docs. Nhưng khi bạn cần rich visualization, interactive elements, và khả năng chia sẻ — HTML là lựa chọn tự nhiên. Đặc biệt khi bạn ngày càng ít edit file bằng tay mà dùng chúng như specs, reference, brainstorming outputs. HTML không phải thay thế Markdown, mà là nâng cấp khi cần nhiều hơn text.</p>
+
+        <div class="source-links">
+          <h4>Nguồn & tham khảo</h4>
+          <ul>
+            <li><a href="https://x.com/trq212/status/2052809885763747935" target="_blank">Post gốc từ @trq212 trên X</a></li>
+            <li><a href="https://thariqs.github.io/html-effectiveness/" target="_blank">HTML Effectiveness Examples</a></li>
+          </ul>
+        </div>
+
+        <div class="back-to-blog-footer"><a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a></div>
+        <div class="article-cta-stack"><div class="article-cta-actions"><a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a></div></div>
+        <div class="tags"><span class="tag">Claude Code</span><span class="tag">HTML</span><span class="tag">Markdown</span><span class="tag">Dev</span></div>
+      </div>
+    </article>
+  </div>
+</body>
+</html>

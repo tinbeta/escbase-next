@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/claude-code-html-over-markdown/",
+    "title": "Claude Code: Tại Sao HTML Hiệu Quả Hơn Markdown",
+    "excerpt": "Thariq từ Anthropic chia sẻ lý do tại sao HTML là output format tốt hơn Markdown cho Claude Code — rich visualization, interactive, và dễ chia sẻ.",
+    "date": "May 09, 2026",
+    "tag": "Dev",
+    "tagIcon": "fas fa-code",
+    "tagColor": "#d97706",
+    "readTime": "5 phút đọc",
+    "featured": true,
+    "image": "/images/claude-code-html-markdown-thumb.png"
+  },
+  {
     "url": "/blog/supabase-server-public-beta/",
     "title": "Supabase Server Public Beta: Auth Và Client Tự Động Cho Edge Functions",
     "excerpt": "Supabase vừa phát hành @supabase/server public beta — gói xử lý auth verification, client setup, request context và boilerplate server-side cho Edge Functions, Workers, Hono, Bun.",
