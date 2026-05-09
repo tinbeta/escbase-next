@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/goalcraft-codex-goal-skill/",
+    "title": "Goalcraft: Codex Skill Giúp Viết /goal Không Thể Lươn",
+    "excerpt": "Goalcraft là Codex skill giúp biến ý tưởng mơ hồ thành /goal rõ scope, có evidence, verification và stop rules để agent không fake done.",
+    "date": "May 09, 2026",
+    "tag": "AI Agents",
+    "tagIcon": "fas fa-bullseye",
+    "tagColor": "#f59e0b",
+    "readTime": "5 phút đọc",
+    "featured": true,
+    "image": "/images/goalcraft-codex-goal-thumb.png"
+  },
+  {
     "url": "/blog/codex-0-130-0-release/",
     "title": "Codex 0.130.0: Remote Control, Plugin Hooks Và Bedrock Auth",
     "excerpt": "Codex 0.130.0 vừa ra mắt với codex remote-control, plugin hooks, Bedrock AWS auth và nhiều cải tiến app-server.",

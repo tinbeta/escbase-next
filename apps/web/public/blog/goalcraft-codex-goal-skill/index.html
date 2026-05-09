@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goalcraft: Codex Skill Giúp Viết /goal Không Thể Lươn | Escbase</title>
+  <meta name="description" content="Goalcraft là Codex skill giúp biến ý tưởng mơ hồ thành /goal rõ scope, có evidence, verification và stop rules để agent không fake done.">
+  <meta property="og:title" content="Goalcraft: Codex Skill Giúp Viết /goal Không Thể Lươn">
+  <meta property="og:description" content="Goalcraft biến ý tưởng mơ hồ thành /goal rõ scope, có evidence, verification và stop rules để agent không fake done.">
+  <meta property="og:image" content="https://news.escbase.xyz/images/goalcraft-codex-goal-thumb.png">
+  <meta property="og:url" content="https://news.escbase.xyz/blog/goalcraft-codex-goal-skill/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://news.escbase.xyz/images/goalcraft-codex-goal-thumb.png">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/shared-article.css">
+  <link rel="stylesheet" href="/shared-article-footer.css">
+</head>
+<body>
+  <div class="container">
+    <article>
+      <header class="article-header">
+        <span class="category-badge"><i class="fas fa-bullseye"></i> AI Agents</span>
+        <h1>Goalcraft: Codex Skill Giúp Viết /goal Không Thể Lươn</h1>
+        <div class="meta">
+          <span><i class="far fa-calendar"></i> 09/05/2026</span>
+          <span><i class="far fa-clock"></i> 5 phút đọc</span>
+          <span><i class="far fa-folder"></i> Codex, Goal, AI Agents</span>
+        </div>
+        <img src="/images/goalcraft-codex-goal-thumb.png" alt="Goalcraft Codex goal skill" class="inline-image" style="margin-top:1rem;">
+      </header>
+
+      <div class="article-content">
+        <div class="highlight-box">
+          <h4>TL;DR</h4>
+          <p style="margin-bottom:0"><strong>Goalcraft</strong> là Codex skill giúp biến ý tưởng mơ hồ thành <code>/goal</code> rõ scope, có tiêu chí hoàn thành, verification và stop rules. Ý tưởng chính: Codex không cố tình nói dối bạn, nhưng nếu goal viết lỏng, nó sẽ claim "done" theo đúng cái goal lỏng đó.</p>
+        </div>
+
+        <h2>🎯 Vấn đề không nằm ở agent, mà ở goal</h2>
+        <p>George Pickett nói thẳng: <strong>Codex will lie to you about being done. But not on purpose.</strong> "Done" chỉ là thứ bạn đã mô tả trong goal. Nếu goal mơ hồ, agent có quá nhiều chỗ để lách.</p>
+        <p>Đó là lý do anh tạo <strong>Goalcraft</strong>: một Codex skill chuyên biến rough ideas thành <code>/goal</code> objectives mà "done" thật sự nghĩa là done.</p>
+
+        <h2>🧠 /goal là abstraction mới — nhưng viết goal là kỹ năng riêng</h2>
+        <p>George cho rằng <code>/goal</code> là một step change. Nó buộc người dùng nghĩ lại về skills, planning, review và cách kiểm soát agents.</p>
+        <p>Nhưng nếu bạn viết goal sai, Codex vẫn có thể đánh dấu complete và claim success. Không phải vì nó ác, mà vì goal không bắt nó chứng minh đủ.</p>
+
+        <h2>✅ Goalcraft ép goal phải có bằng chứng</h2>
+        <p>Theo README, Goalcraft tạo goal với các phần quan trọng:</p>
+        <ul>
+          <li><strong>Where things stand:</strong> bối cảnh hiện tại và đích đến rõ ràng</li>
+          <li><strong>Scope:</strong> làm gì, không làm gì, non-negotiables</li>
+          <li><strong>Verification:</strong> tests, commands, checks cụ thể để chứng minh đã ship</li>
+          <li><strong>Autonomy rules:</strong> khi nào tiếp tục, khi nào phải dừng và hỏi</li>
+          <li><strong>Success criteria:</strong> tiêu chí đo được, không phải "looks good to me"</li>
+        </ul>
+
+        <h2>⚙️ Cách dùng</h2>
+        <p>Bật goals trong Codex:</p>
+        <pre><code>codex features enable goals</code></pre>
+        <p>Sau đó invoke Goalcraft trên một ý tưởng mơ hồ:</p>
+        <pre><code>$goalcraft make me $1m dollars</code></pre>
+        <p>Goalcraft mặc định chỉ draft goal, không activate trừ khi bạn yêu cầu. Nó cũng target khoảng 3.400 ký tự vì Codex caps <code>/goal</code> ở 4.000 ký tự.</p>
+
+        <h2>💬 Cộng đồng phản ứng</h2>
+        <p>@ChristianInProd nhắc rằng goal text có cap 4K, nhưng bạn có thể <code>@ file</code> để đọc thêm context dài hơn. George trả lời: Goalcraft được tạo bằng cách đọc implementation của <code>/goal</code> và lọc high-signal tweets về cái gì work / không work.</p>
+        <p>@EthanAggor khen: "I've seen my fair share of skill slop. I cannot emphasize how well-written this is."</p>
+
+        <h2>Chốt một câu</h2>
+        <p>Goalcraft không phải magic. Nó là một reminder rất thực tế: khi agents mạnh hơn, kỹ năng quan trọng không chỉ là prompt, mà là viết mục tiêu có scope, evidence và verification. Nếu không, "done" chỉ là một cái bẫy được viết bằng chính tay bạn.</p>
+
+        <div class="source-links">
+          <h4>Nguồn & tham khảo</h4>
+          <ul>
+            <li><a href="https://x.com/georgepickett/status/2052880190427316436" target="_blank">Post gốc từ @georgepickett trên X</a></li>
+            <li><a href="https://github.com/grp06/goalcraft" target="_blank">Goalcraft GitHub repo</a></li>
+          </ul>
+        </div>
+
+        <div class="back-to-blog-footer"><a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a></div>
+        <div class="article-cta-stack"><div class="article-cta-actions"><a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a></div></div>
+        <div class="tags"><span class="tag">Codex</span><span class="tag">Goalcraft</span><span class="tag">AI Agents</span><span class="tag">Prompting</span></div>
+      </div>
+    </article>
+  </div>
+</body>
+</html>

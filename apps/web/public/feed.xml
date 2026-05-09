@@ -8,6 +8,15 @@
     <lastBuildDate>Fri, 08 May 2026 17:00:00 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Goalcraft: Codex Skill Giúp Viết /goal Không Thể Lươn</title>
+      <link>https://escbase.xyz/blog/goalcraft-codex-goal-skill/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/goalcraft-codex-goal-skill/</guid>
+      <pubDate>Fri, 08 May 2026 17:00:00 GMT</pubDate>
+      <description>Goalcraft là Codex skill giúp biến ý tưởng mơ hồ thành /goal rõ scope, có evidence, verification và stop rules để agent không fake done.</description>
+      <category>AI Agents</category>
+      <enclosure url="https://escbase.xyz/images/goalcraft-codex-goal-thumb.png" type="image/png" length="0" />
+    </item>
+    <item>
       <title>Codex 0.130.0: Remote Control, Plugin Hooks Và Bedrock Auth</title>
       <link>https://escbase.xyz/blog/codex-0-130-0-release/</link>
       <guid isPermaLink="true">https://escbase.xyz/blog/codex-0-130-0-release/</guid>
@@ -447,15 +456,6 @@
       <description>Một thread đang được share khá mạnh trên X vừa gom 12 prompt NotebookLM để biến một cuốn sách thành action plan, permanent notes, recall test và insight dùng được. Điểm hay là nó không chỉ dừng ở chuyện tóm tắt sách, mà cố kéo người đọc từ tiêu thụ thụ động sang ghi nhớ, phản biện và hành động.</description>
       <category>AI Learning</category>
       <enclosure url="https://escbase.xyz/images/notebooklm-book-prompts-thumb.svg" type="image/svg+xml" length="0" />
-    </item>
-    <item>
-      <title>Sam Altman Nêu 5 Nguyên Tắc Của OpenAI: Democratization, Empowerment, Prosperity, Resilience, Adaptability</title>
-      <link>https://escbase.xyz/blog/openai-our-principles</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/openai-our-principles</guid>
-      <pubDate>Sun, 26 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Sam Altman vừa đăng một post rất ngắn trên X, nhưng link đính kèm lại là một tuyên ngôn khá rõ của OpenAI về 5 nguyên tắc định hướng: democratization, empowerment, universal prosperity, resilience và adaptability. Điểm đáng chú ý không chỉ là những từ nghe đẹp, mà là việc OpenAI đang công khai tự mô tả các trade-off giữa mở rộng truy cập, an toàn, hạ tầng compute, chi phí và quyền lực.</description>
-      <category>AI Policy</category>
-      <enclosure url="https://escbase.xyz/images/openai-our-principles-thumb.svg" type="image/svg+xml" length="0" />
     </item>
   </channel>
 </rss>
