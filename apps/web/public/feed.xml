@@ -8,6 +8,15 @@
     <lastBuildDate>Sat, 09 May 2026 17:00:00 GMT</lastBuildDate>
     <atom:link href="https://news.escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>🏛️ Con Hào Lớn Nhất Tiếp Theo Trong AI Không Phải Model</title>
+      <link>https://news.escbase.xyz/blog/jay-gupta-ai-moat-organization/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/jay-gupta-ai-moat-organization/</guid>
+      <pubDate>Sat, 09 May 2026 17:00:00 GMT</pubDate>
+      <description>Jaya Gupta phân tích tại sao con hào lớn nhất trong AI không phải model hay product, mà là hình dáng tổ chức — cách công ty thu hút người xuất sắc và biến công việc thành hệ thống compound.</description>
+      <category>AI &amp; Business</category>
+      <enclosure url="https://news.escbase.xyz/images/jay-gupta-ai-moat-thumb.png" type="image/png" length="0" />
+    </item>
+    <item>
       <title>🛠️ Agent Harness: Tại Sao Model Tốt Vẫn Chưa Đủ</title>
       <link>https://news.escbase.xyz/blog/addy-osmani-harness-engineering/</link>
       <guid isPermaLink="true">https://news.escbase.xyz/blog/addy-osmani-harness-engineering/</guid>
@@ -447,15 +456,6 @@
       <description>Một tweet ngắn của Sam Altman vừa chạm đúng nghịch lý lớn nhất của AI thời điểm này: người ta vừa lo post-AGI sẽ khiến không ai phải làm việc nữa, vừa hưng phấn đến mức muốn cắt bớt giấc ngủ vì GPT-5.5 trong Codex quá tốt. Điểm đáng bàn là AI có thể không xóa lao động theo cách nhiều người tưởng, mà nén thời gian, tăng tốc độ ship và đẩy những người nhiều agency vào vòng làm việc dữ hơn.</description>
       <category>AI Work</category>
       <enclosure url="https://news.escbase.xyz/images/sam-altman-post-agi-work-codex-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>Matthew Berman: DeepSeek V4 Là Mối Đe Doạ Thật Sự Với Labs Mỹ</title>
-      <link>https://news.escbase.xyz/blog/deepseek-v4-serious-threat/</link>
-      <guid isPermaLink="true">https://news.escbase.xyz/blog/deepseek-v4-serious-threat/</guid>
-      <pubDate>Sun, 26 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Matthew Berman vừa đăng một thread khá thẳng về DeepSeek V4: đây không chỉ là một model open-weight mạnh và rẻ, mà là mối đe doạ thật sự với economics của OpenAI, Anthropic và cả chiến lược AI của Mỹ. Điểm đáng bàn không chỉ là benchmark, mà là khi model &apos;đủ tốt&apos; ở mức giá quá thấp, enterprise math sẽ bắt đầu đổi chiều.</description>
-      <category>Market Structure</category>
-      <enclosure url="https://news.escbase.xyz/images/deepseek-v4-serious-threat-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>

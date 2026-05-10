@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/jay-gupta-ai-moat-organization/",
+    "title": "🏛️ Con Hào Lớn Nhất Tiếp Theo Trong AI Không Phải Model",
+    "excerpt": "Jaya Gupta phân tích tại sao con hào lớn nhất trong AI không phải model hay product, mà là hình dáng tổ chức — cách công ty thu hút người xuất sắc và biến công việc thành hệ thống compound.",
+    "date": "May 10, 2026",
+    "tag": "AI & Business",
+    "tagIcon": "fas fa-building",
+    "tagColor": "#3b82f6",
+    "readTime": "8 phút",
+    "featured": true,
+    "image": "/images/jay-gupta-ai-moat-thumb.png"
+  },
+  {
     "url": "/blog/addy-osmani-harness-engineering/",
     "title": "🛠️ Agent Harness: Tại Sao Model Tốt Vẫn Chưa Đủ",
     "excerpt": "Addy Osmani phân tích harness engineering: tại sao decent model + great harness luôn thắng great model + bad harness. Mỗi lỗi agent mắc phải đều phải trở thành 1 rule vĩnh viễn.",
