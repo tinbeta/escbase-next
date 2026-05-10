@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/solaretherpunk-ethereum-coordination-layer/",
+    "title": "⛓️ Ethereum: Lớp Phối Hợp Kinh Tế Hậu AGI",
+    "excerpt": "SolarEtherPunk phân tích tại sao Ethereum là lớp phối hợp duy nhất đủ trung lập, lập trình được, cho nền kinh tế hậu AGI. 5 lực cấu trúc đang hội tụ.",
+    "date": "May 10, 2026",
+    "tag": "Blockchain & AI",
+    "tagIcon": "fas fa-link",
+    "tagColor": "#6366f1",
+    "readTime": "9 phút",
+    "featured": true,
+    "image": "/images/solaretherpunk-ethereum-thumb.png"
+  },
+  {
     "url": "/blog/ring-2-6-1t-ant-group-trillion-model/",
     "title": "🔥 Ring-2.6-1T: Model 1 Nghìn Tỷ Tham Số Mở Nguồn Từ Ant Group",
     "excerpt": "Ant Group ra mắt Ring-2.6-1T — model 1 nghìn tỷ tham số mở nguồn với 3 chế độ suy nghĩ điều chỉnh, tối ưu cho agent, và benchmark vượt GPT-5.4. Nhưng có thực sự là đầu tiên?",
