@@ -8,6 +8,15 @@
     <lastBuildDate>Sat, 09 May 2026 17:00:00 GMT</lastBuildDate>
     <atom:link href="https://news.escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>🔥 Ring-2.6-1T: Model 1 Nghìn Tỷ Tham Số Mở Nguồn Từ Ant Group</title>
+      <link>https://news.escbase.xyz/blog/ring-2-6-1t-ant-group-trillion-model/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/ring-2-6-1t-ant-group-trillion-model/</guid>
+      <pubDate>Sat, 09 May 2026 17:00:00 GMT</pubDate>
+      <description>Ant Group ra mắt Ring-2.6-1T — model 1 nghìn tỷ tham số mở nguồn với 3 chế độ suy nghĩ điều chỉnh, tối ưu cho agent, và benchmark vượt GPT-5.4. Nhưng có thực sự là đầu tiên?</description>
+      <category>AI Model</category>
+      <enclosure url="https://news.escbase.xyz/images/ring-2-6-1t-thumb.png" type="image/png" length="0" />
+    </item>
+    <item>
       <title>👁️ AI Suy Luận Giống Người Hơn Khi Biết &quot;Tưởng Tượng&quot; Bằng Hình Ảnh</title>
       <link>https://news.escbase.xyz/blog/tsinghua-visual-reasoning-world-models/</link>
       <guid isPermaLink="true">https://news.escbase.xyz/blog/tsinghua-visual-reasoning-world-models/</guid>
@@ -447,15 +456,6 @@
       <description>Vụ Elon Musk kiện OpenAI không chỉ là màn đấu khẩu giữa hai ông lớn AI. Gốc rễ của nó là một câu hỏi khó hơn nhiều: một tổ chức sinh ra với danh nghĩa vì lợi ích chung có thể biến phần lớn giá trị tạo ra thành lợi ích tư nhân đến mức nào, nhất là khi cuộc đua AI đòi hỏi lượng vốn khổng lồ?</description>
       <category>AI &amp; Pháp lý</category>
       <enclosure url="https://news.escbase.xyz/images/elon-openai-vu-kien-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>Workshop 30 Phút Của Anthropic Chỉ Ra Cách Dùng Claude Code Cho Đúng</title>
-      <link>https://news.escbase.xyz/blog/claude-code-live-best-practices/</link>
-      <guid isPermaLink="true">https://news.escbase.xyz/blog/claude-code-live-best-practices/</guid>
-      <pubDate>Mon, 27 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Jouhatsu vừa chia sẻ một workshop 30 phút của Anthropic về Claude Code và gọi nó là thứ đáng bookmark hơn cả mấy khóa học AI 500 đô. Sau khi bóc kỹ nội dung video, điểm đáng giá nhất là workshop này rất cụ thể: bắt đầu từ codebase Q&amp;A, luôn plan trước khi sửa lớn, dùng CLAUDE.md để nhồi context, dùng Puppeteer và test làm vòng phản hồi, và biến Claude Code thành một phần của workflow ship code thật.</description>
-      <category>Dev Tools</category>
-      <enclosure url="https://news.escbase.xyz/images/claude-code-live-best-practices-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>
