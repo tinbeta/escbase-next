@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/tsinghua-visual-reasoning-world-models/",
+    "title": "👁️ AI Suy Luận Giống Người Hơn Khi Biết \"Tưởng Tượng\" Bằng Hình Ảnh",
+    "excerpt": "Nghiên cứu Đại học Thanh Hoa: AI đa phương thức suy luận giống người hơn khi tự tạo hình ảnh nội bộ. Từ dự đoán từ → mô phỏng thực tại.",
+    "date": "May 10, 2026",
+    "tag": "AI Research",
+    "tagIcon": "fas fa-brain",
+    "tagColor": "#a855f7",
+    "readTime": "6 phút",
+    "featured": true,
+    "image": "/images/tsinghua-visual-reasoning-thumb.png"
+  },
+  {
     "url": "/blog/jay-gupta-ai-moat-organization/",
     "title": "🏛️ Con Hào Lớn Nhất Tiếp Theo Trong AI Không Phải Model",
     "excerpt": "Jaya Gupta phân tích tại sao con hào lớn nhất trong AI không phải model hay product, mà là hình dáng tổ chức — cách công ty thu hút người xuất sắc và biến công việc thành hệ thống compound.",
