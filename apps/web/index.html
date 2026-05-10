@@ -340,13 +340,13 @@
                 const grid = document.getElementById('postsGrid');
                 const shown = posts.slice(0, 3);
 
-                shown.forEach((p, i) => {
+                shown.forEach((p) => {
                     const tagBg = p.tag === 'AI' ? `background:${p.tagColor}; color:#fff;` :
                         `color: ${p.tagColor}; border-color: ${p.tagColor}33; background: ${p.tagColor}1a;`;
-                    const colClass = i === 0 ? 'col-8 featured-home-card' : 'col-4';
 
                     grid.innerHTML += `
-                        <a href="${p.url}" class="bento-item ${colClass} fade-in">
+                        <a href="${p.url}" class="bento-item col-4 fade-in">
+                            <div class="card-thumb">${p.image ? `<img src="${p.image}" alt="${p.title}" loading="lazy">` : `<div class="card-thumb-placeholder"><i class="fas fa-newspaper"></i></div>`}</div>
                             <div class="card-meta">
                                 <span class="card-tag" style="${tagBg}"><i class="${p.tagIcon}"></i> ${p.tag}</span>
                                 <span class="card-date">${p.date}</span>
