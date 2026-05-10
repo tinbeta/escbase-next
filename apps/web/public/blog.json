@@ -165,7 +165,7 @@
     "tagColor": "#4285f4",
     "readTime": "6 phút đọc",
     "featured": true,
-    "image": "/images/gemma4-react-native-thumb.svg"
+    "image": "/images/gemma4-react-native-thumb.png"
   },
   {
     "url": "/blog/claude-finance-agents/",
@@ -189,7 +189,7 @@
     "tagColor": "#f59e0b",
     "readTime": "8 phút đọc",
     "featured": true,
-    "image": "/images/coinbase-layoffs-ai-native-thumb.svg"
+    "image": "/images/coinbase-layoffs-ai-native-thumb.png"
   },
   {
     "url": "/blog/codex-goal-meta-prompting/",
@@ -201,7 +201,7 @@
     "tagColor": "#22c55e",
     "readTime": "7 phút đọc",
     "featured": true,
-    "image": "/images/codex-goal-meta-prompting-thumb.svg"
+    "image": "/images/codex-goal-meta-prompting-thumb.png"
   },
   {
     "url": "/blog/codex-hyperframe-video-editing/",
@@ -213,7 +213,7 @@
     "tagColor": "#f43f5e",
     "readTime": "7 phút đọc",
     "featured": true,
-    "image": "/images/codex-hyperframe-video-editing-thumb.svg"
+    "image": "/images/codex-hyperframe-video-editing-thumb.png"
   },
   {
     "url": "/blog/anthropic-claude-code-company-blueprint/",
@@ -225,7 +225,7 @@
     "tagColor": "#ef4444",
     "readTime": "10 phút đọc",
     "featured": true,
-    "image": "/images/anthropic-claude-code-blueprint-thumb.svg"
+    "image": "/images/anthropic-claude-code-blueprint-thumb.png"
   },
   {
     "url": "/blog/open-slide-agent-framework/",
@@ -237,7 +237,7 @@
     "tagColor": "#6366f1",
     "readTime": "8 phút đọc",
     "featured": true,
-    "image": "/images/open-slide-agent-framework-thumb.svg"
+    "image": "/images/open-slide-agent-framework-thumb.png"
   },
   {
     "url": "/blog/elevenlabs-agents-5-startup-ideas/",
@@ -261,7 +261,7 @@
     "tagColor": "#f43f5e",
     "readTime": "8 phút đọc",
     "featured": true,
-    "image": "/images/gpt-image2-seedance2-video-workflow-thumb.svg"
+    "image": "/images/gpt-image2-seedance2-video-workflow-thumb.png"
   },
   {
     "url": "/blog/codex-gpt55-app-development-workflow/",
@@ -273,7 +273,7 @@
     "tagColor": "#3b82f6",
     "readTime": "9 phút đọc",
     "featured": true,
-    "image": "/images/codex-gpt55-app-development-workflow-thumb.svg"
+    "image": "/images/codex-gpt55-app-development-workflow-thumb.png"
   },
   {
     "url": "/blog/codex-hyperframes-video-generation/",
@@ -285,7 +285,7 @@
     "tagColor": "#6366f1",
     "readTime": "7 phút đọc",
     "featured": true,
-    "image": "/images/codex-hyperframes-video-generation-thumb.svg"
+    "image": "/images/codex-hyperframes-video-generation-thumb.png"
   },
   {
     "url": "/blog/nvidia-nim-free-frontier-models/",
@@ -297,7 +297,7 @@
     "tagColor": "#6366f1",
     "readTime": "8 phút đọc",
     "featured": true,
-    "image": "/images/nvidia-nim-free-frontier-models-thumb.svg"
+    "image": "/images/nvidia-nim-free-frontier-models-thumb.png"
   },
   {
     "url": "/blog/openclaw-2026-5-2-stable-grok4-3/",
@@ -344,7 +344,7 @@
     "tagColor": "#ef4444",
     "readTime": "6 min read",
     "featured": true,
-    "image": "/images/openclaw-chatgpt-login-pivot-thumb.svg"
+    "image": "/images/openclaw-chatgpt-login-pivot-thumb.png"
   },
   {
     "url": "/blog/image-to-code-frontend-workflow/",
@@ -356,7 +356,7 @@
     "tagColor": "#a78bfa",
     "readTime": "8 min read",
     "featured": true,
-    "image": "/images/image-to-code-frontend-workflow-thumb.svg"
+    "image": "/images/image-to-code-frontend-workflow-thumb.png"
   },
   {
     "url": "/blog/claude-security-public-beta/",
@@ -368,7 +368,7 @@
     "tagColor": "#38bdf8",
     "readTime": "7 min read",
     "featured": true,
-    "image": "/images/claude-security-public-beta-thumb.svg"
+    "image": "/images/claude-security-public-beta-thumb.png"
   },
   {
     "url": "/blog/openai-codex-everyday-work/",
@@ -380,7 +380,7 @@
     "tagColor": "#10a37f",
     "readTime": "8 min read",
     "featured": true,
-    "image": "/images/openai-codex-everyday-work-thumb.svg"
+    "image": "/images/openai-codex-everyday-work-thumb.png"
   },
   {
     "url": "/blog/openclaw-2026-4-29-release/",
@@ -392,7 +392,7 @@
     "tagColor": "#a78bfa",
     "readTime": "9 min read",
     "featured": true,
-    "image": "/images/openclaw-2026-4-29-release-thumb.svg"
+    "image": "/images/openclaw-2026-4-29-release-thumb.png"
   },
   {
     "url": "/blog/cursor-sdk-ai-agents/",
@@ -404,7 +404,7 @@
     "tagColor": "#f59e0b",
     "readTime": "7 min read",
     "featured": true,
-    "image": "/images/cursor-sdk-ai-agents-thumb.svg"
+    "image": "/images/cursor-sdk-ai-agents-thumb.png"
   },
   {
     "url": "/blog/stripe-console-ai-agent/",
@@ -416,7 +416,7 @@
     "tagColor": "#6366f1",
     "readTime": "7 min read",
     "featured": true,
-    "image": "/images/stripe-console-ai-agent-thumb.svg"
+    "image": "/images/stripe-console-ai-agent-thumb.png"
   },
   {
     "url": "/blog/stripe-meta-tempo-stablecoin-payouts/",
@@ -428,7 +428,7 @@
     "tagColor": "#f7931a",
     "readTime": "6 min read",
     "featured": true,
-    "image": "/images/stripe-meta-tempo-stablecoin-payouts-thumb.svg"
+    "image": "/images/stripe-meta-tempo-stablecoin-payouts-thumb.png"
   },
   {
     "url": "/blog/stripe-treasury-launch/",
@@ -440,7 +440,7 @@
     "tagColor": "#f7931a",
     "readTime": "7 min read",
     "featured": true,
-    "image": "/images/stripe-treasury-launch-thumb.svg"
+    "image": "/images/stripe-treasury-launch-thumb.png"
   },
   {
     "url": "/blog/adobe-claude-creative-cloud/",
@@ -452,7 +452,7 @@
     "tagColor": "#6366f1",
     "readTime": "7 min read",
     "featured": true,
-    "image": "/images/adobe-claude-creative-cloud-thumb.svg"
+    "image": "/images/adobe-claude-creative-cloud-thumb.png"
   },
   {
     "url": "/blog/openclaw-2026-4-27-release/",
@@ -464,7 +464,7 @@
     "tagColor": "#a78bfa",
     "readTime": "7 min read",
     "featured": true,
-    "image": "/images/openclaw-2026-4-27-release-thumb.svg"
+    "image": "/images/openclaw-2026-4-27-release-thumb.png"
   },
   {
     "url": "/blog/stripe-link-wallet-official-launch/",
@@ -476,7 +476,7 @@
     "tagColor": "#ef4444",
     "readTime": "5 min read",
     "featured": true,
-    "image": "/images/stripe-link-wallet-official-launch-thumb.svg"
+    "image": "/images/stripe-link-wallet-official-launch-thumb.png"
   },
   {
     "url": "/blog/stripe-link-wallet-for-agents/",
@@ -488,7 +488,7 @@
     "tagColor": "#ef4444",
     "readTime": "6 min read",
     "featured": true,
-    "image": "/images/stripe-link-wallet-for-agents-thumb.svg"
+    "image": "/images/stripe-link-wallet-for-agents-thumb.png"
   },
   {
     "url": "/blog/the-new-stack-for-global-finance-stablecoins-edition/",
@@ -512,7 +512,7 @@
     "tagColor": "#a78bfa",
     "readTime": "8 min read",
     "featured": true,
-    "image": "/images/openclaw-2026-4-26-release-thumb.svg"
+    "image": "/images/openclaw-2026-4-26-release-thumb.png"
   },
   {
     "url": "/blog/arkham-api-claude/",
@@ -524,7 +524,7 @@
     "tagColor": "#f59e0b",
     "readTime": "8 min read",
     "featured": true,
-    "image": "/images/arkham-api-claude-thumb.svg"
+    "image": "/images/arkham-api-claude-thumb.png"
   },
   {
     "url": "/blog/openclaw-2026-4-25/",
@@ -536,7 +536,7 @@
     "tagColor": "#14b8a6",
     "readTime": "9 min read",
     "featured": true,
-    "image": "/images/openclaw-2026-4-25-thumb.svg"
+    "image": "/images/openclaw-2026-4-25-thumb.png"
   },
   {
     "url": "/blog/vu-kien-elon-openai/",
@@ -548,7 +548,7 @@
     "tagColor": "#ef4444",
     "readTime": "10 min read",
     "featured": true,
-    "image": "/images/elon-openai-vu-kien-thumb.svg"
+    "image": "/images/elon-openai-vu-kien-thumb.png"
   },
   {
     "url": "/blog/claude-code-live-best-practices/",
@@ -560,7 +560,7 @@
     "tagColor": "#f59e0b",
     "readTime": "10 min read",
     "featured": true,
-    "image": "/images/claude-code-live-best-practices-thumb.svg"
+    "image": "/images/claude-code-live-best-practices-thumb.png"
   },
   {
     "url": "/blog/sam-altman-post-agi-work-codex/",
@@ -572,7 +572,7 @@
     "tagColor": "#06b6d4",
     "readTime": "8 min read",
     "featured": true,
-    "image": "/images/sam-altman-post-agi-work-codex-thumb.svg"
+    "image": "/images/sam-altman-post-agi-work-codex-thumb.png"
   },
   {
     "url": "/blog/deepseek-v4-serious-threat/",
@@ -584,7 +584,7 @@
     "tagColor": "#10b981",
     "readTime": "9 min read",
     "featured": true,
-    "image": "/images/deepseek-v4-serious-threat-thumb.svg"
+    "image": "/images/deepseek-v4-serious-threat-thumb.png"
   },
   {
     "url": "/blog/top-ai-papers-week-apr-26/",
@@ -596,7 +596,7 @@
     "tagColor": "#ec4899",
     "readTime": "10 min read",
     "featured": true,
-    "image": "/images/top-ai-papers-week-apr-26-thumb.svg"
+    "image": "/images/top-ai-papers-week-apr-26-thumb.png"
   },
   {
     "url": "/blog/notebooklm-book-prompts/",
@@ -608,7 +608,7 @@
     "tagColor": "#3b82f6",
     "readTime": "9 min read",
     "featured": true,
-    "image": "/images/notebooklm-book-prompts-thumb.svg"
+    "image": "/images/notebooklm-book-prompts-thumb.png"
   },
   {
     "url": "/blog/openai-our-principles/",
@@ -620,7 +620,7 @@
     "tagColor": "#8b5cf6",
     "readTime": "9 min read",
     "featured": true,
-    "image": "/images/openai-our-principles-thumb.svg"
+    "image": "/images/openai-our-principles-thumb.png"
   },
   {
     "url": "/blog/ai-chip-architectures-cpu-gpu-tpu-npu-lpu/",
@@ -632,7 +632,7 @@
     "tagColor": "#14b8a6",
     "readTime": "9 min read",
     "featured": true,
-    "image": "/images/ai-chip-architectures-cpu-gpu-tpu-npu-lpu-thumb.svg"
+    "image": "/images/ai-chip-architectures-cpu-gpu-tpu-npu-lpu-thumb.png"
   },
   {
     "url": "/blog/cursor-multitask-async-subagents-worktrees/",
@@ -644,7 +644,7 @@
     "tagColor": "#f59e0b",
     "readTime": "8 min read",
     "featured": true,
-    "image": "/images/cursor-multitask-async-subagents-worktrees-thumb.svg"
+    "image": "/images/cursor-multitask-async-subagents-worktrees-thumb.png"
   },
   {
     "url": "/blog/deepseek-v4-pro-75-percent-off-api/",
@@ -656,7 +656,7 @@
     "tagColor": "#f59e0b",
     "readTime": "8 min read",
     "featured": true,
-    "image": "/images/deepseek-v4-pro-75-percent-off-api-thumb.svg"
+    "image": "/images/deepseek-v4-pro-75-percent-off-api-thumb.png"
   },
   {
     "url": "/blog/meta-cuts-10-percent-workforce-ai-push/",
@@ -668,7 +668,7 @@
     "tagColor": "#10b981",
     "readTime": "8 min read",
     "featured": true,
-    "image": "/images/meta-cuts-10-percent-workforce-ai-push-thumb.svg"
+    "image": "/images/meta-cuts-10-percent-workforce-ai-push-thumb.png"
   },
   {
     "url": "/blog/openclaw-2026-4-24-release/",
@@ -680,7 +680,7 @@
     "tagColor": "#ef4444",
     "readTime": "9 min read",
     "featured": true,
-    "image": "/images/openclaw-2026-4-24-thumb.svg"
+    "image": "/images/openclaw-2026-4-24-thumb.png"
   },
   {
     "url": "/blog/devin-ai-engineer-guide/",
@@ -692,7 +692,7 @@
     "tagColor": "#6366f1",
     "readTime": "10 min read",
     "featured": true,
-    "image": "/images/devin-ai-guide-thumb.svg"
+    "image": "/images/devin-ai-guide-thumb.png"
   },
   {
     "url": "/blog/google-maps-imagery-insights-cloud-next-2026/",
@@ -704,7 +704,7 @@
     "tagColor": "#4285f4",
     "readTime": "8 min read",
     "featured": true,
-    "image": "/images/google-maps-imagery-insights-thumb.svg"
+    "image": "/images/google-maps-imagery-insights-thumb.png"
   },
   {
     "url": "/blog/google-maps-population-dynamics-insights/",
@@ -716,7 +716,7 @@
     "tagColor": "#4285f4",
     "readTime": "7 min read",
     "featured": true,
-    "image": "/images/google-maps-pdi-thumb.svg"
+    "image": "/images/google-maps-pdi-thumb.png"
   },
   {
     "url": "/blog/solo-founder-stack-2026-agents-distribution/",
@@ -1244,7 +1244,7 @@
     "tagColor": "#8b5cf6",
     "readTime": "8 min read",
     "featured": true,
-    "image": "/images/garry-tan-gbrain-thumb.svg"
+    "image": "/images/garry-tan-gbrain-thumb.png"
   },
   {
     "url": "/blog/openclaw-2026-4-10-changelog-chi-tiet/",
@@ -1400,7 +1400,7 @@
     "tagColor": "#3b82f6",
     "readTime": "7 min read",
     "featured": true,
-    "image": "/images/fdic-genius-act-stablecoin-thumb.svg"
+    "image": "/images/fdic-genius-act-stablecoin-thumb.png"
   },
   {
     "url": "/blog/codex-3-trieu-user-reset-limit/",
@@ -1448,7 +1448,7 @@
     "tagColor": "#ef4444",
     "readTime": "6 min read",
     "featured": true,
-    "image": "/images/thue-crypto-viet-nam-thong-tu-41-thumb.svg"
+    "image": "/images/thue-crypto-viet-nam-thong-tu-41-thumb.png"
   },
   {
     "url": "/blog/viet-nam-crypto-exchange-joint-venture/",
@@ -1460,7 +1460,7 @@
     "tagColor": "#ef4444",
     "readTime": "8 min read",
     "featured": false,
-    "image": "/images/viet-nam-crypto-exchange-joint-venture-thumb.svg"
+    "image": "/images/viet-nam-crypto-exchange-joint-venture-thumb.png"
   },
   {
     "url": "/blog/openclaw-2026-4-7-3-diem-dang-chu-y/",
@@ -1528,7 +1528,7 @@
     "tagColor": "#f7931a",
     "readTime": "7 min read",
     "featured": false,
-    "image": "/images/bitcoin-effective-supply-17m-thumb.svg"
+    "image": "/images/bitcoin-effective-supply-17m-thumb.png"
   },
   {
     "url": "/blog/erc-8211-onchain-agents/",
