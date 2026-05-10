@@ -6,7 +6,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const publicDir = resolve(__dirname, '../public');
 
 const posts = JSON.parse(readFileSync(resolve(publicDir, 'blog.json'), 'utf-8'));
-const SITE = 'https://escbase.xyz';
+const SITE = 'https://news.escbase.xyz';
 const FEED_TITLE = 'Escbase — Phân Tích Crypto & Blockchain Hằng Ngày';
 const FEED_DESC = 'Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.';
 

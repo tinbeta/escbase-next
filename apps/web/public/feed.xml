@@ -2,460 +2,460 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Escbase — Phân Tích Crypto &amp; Blockchain Hằng Ngày</title>
-    <link>https://escbase.xyz</link>
+    <link>https://news.escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
     <lastBuildDate>Sat, 09 May 2026 17:00:00 GMT</lastBuildDate>
-    <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://news.escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Peekaboo 3.0: Mac Automation Đã Biết Nhìn Màn Hình Và Tự Bấm</title>
-      <link>https://escbase.xyz/blog/peekaboo-3-macos-computer-use/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/peekaboo-3-macos-computer-use/</guid>
+      <link>https://news.escbase.xyz/blog/peekaboo-3-macos-computer-use/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/peekaboo-3-macos-computer-use/</guid>
       <pubDate>Sat, 09 May 2026 17:00:00 GMT</pubDate>
       <description>Peekaboo 3.0 mang action-first computer use lên macOS: chụp màn hình, nhận diện UI, click/type/scroll qua CLI hoặc MCP cho Codex, Claude Code và Cursor.</description>
       <category>AI Agents</category>
-      <enclosure url="https://escbase.xyz/images/peekaboo-3-macos-computer-use-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/peekaboo-3-macos-computer-use-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>Goalcraft: Codex Skill Giúp Viết /goal Không Thể Lươn</title>
-      <link>https://escbase.xyz/blog/goalcraft-codex-goal-skill/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/goalcraft-codex-goal-skill/</guid>
+      <link>https://news.escbase.xyz/blog/goalcraft-codex-goal-skill/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/goalcraft-codex-goal-skill/</guid>
       <pubDate>Fri, 08 May 2026 17:00:00 GMT</pubDate>
       <description>Goalcraft là Codex skill giúp biến ý tưởng mơ hồ thành /goal rõ scope, có evidence, verification và stop rules để agent không fake done.</description>
       <category>AI Agents</category>
-      <enclosure url="https://escbase.xyz/images/goalcraft-codex-goal-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/goalcraft-codex-goal-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>Codex 0.130.0: Remote Control, Plugin Hooks Và Bedrock Auth</title>
-      <link>https://escbase.xyz/blog/codex-0-130-0-release/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/codex-0-130-0-release/</guid>
+      <link>https://news.escbase.xyz/blog/codex-0-130-0-release/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/codex-0-130-0-release/</guid>
       <pubDate>Fri, 08 May 2026 17:00:00 GMT</pubDate>
       <description>Codex 0.130.0 vừa ra mắt với codex remote-control, plugin hooks, Bedrock AWS auth và nhiều cải tiến app-server.</description>
       <category>Dev</category>
-      <enclosure url="https://escbase.xyz/images/codex-0-130-0-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/codex-0-130-0-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>Chrome Skills: Lưu Và Tùy Chỉnh Prompt Yêu Thích Trong Trình Duyệt</title>
-      <link>https://escbase.xyz/blog/chrome-skills-available/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/chrome-skills-available/</guid>
+      <link>https://news.escbase.xyz/blog/chrome-skills-available/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/chrome-skills-available/</guid>
       <pubDate>Fri, 08 May 2026 17:00:00 GMT</pubDate>
       <description>Chrome vừa ra mắt Skills — tính năng cho phép lưu và tùy chỉnh prompt yêu thích ngay trong trình duyệt, biến Chrome thành agent runtime.</description>
       <category>Browser</category>
-      <enclosure url="https://escbase.xyz/images/chrome-skills-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/chrome-skills-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>Claude Code: Tại Sao HTML Hiệu Quả Hơn Markdown</title>
-      <link>https://escbase.xyz/blog/claude-code-html-over-markdown/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/claude-code-html-over-markdown/</guid>
+      <link>https://news.escbase.xyz/blog/claude-code-html-over-markdown/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/claude-code-html-over-markdown/</guid>
       <pubDate>Fri, 08 May 2026 17:00:00 GMT</pubDate>
       <description>Thariq từ Anthropic chia sẻ lý do tại sao HTML là output format tốt hơn Markdown cho Claude Code — rich visualization, interactive, và dễ chia sẻ.</description>
       <category>Dev</category>
-      <enclosure url="https://escbase.xyz/images/claude-code-html-markdown-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/claude-code-html-markdown-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>Supabase Server Public Beta: Auth Và Client Tự Động Cho Edge Functions</title>
-      <link>https://escbase.xyz/blog/supabase-server-public-beta/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/supabase-server-public-beta/</guid>
+      <link>https://news.escbase.xyz/blog/supabase-server-public-beta/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/supabase-server-public-beta/</guid>
       <pubDate>Thu, 07 May 2026 17:00:00 GMT</pubDate>
       <description>Supabase vừa phát hành @supabase/server public beta — gói xử lý auth verification, client setup, request context và boilerplate server-side cho Edge Functions, Workers, Hono, Bun.</description>
       <category>Dev</category>
-      <enclosure url="https://escbase.xyz/images/supabase-server-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/supabase-server-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>Anthropic NLAs: Dịch Suy Nghĩ Của Claude Sang Tiếng Người</title>
-      <link>https://escbase.xyz/blog/anthropic-natural-language-autoencoders/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/anthropic-natural-language-autoencoders/</guid>
+      <link>https://news.escbase.xyz/blog/anthropic-natural-language-autoencoders/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/anthropic-natural-language-autoencoders/</guid>
       <pubDate>Thu, 07 May 2026 17:00:00 GMT</pubDate>
       <description>Anthropic vừa công bố Natural Language Autoencoders — công nghệ giúp dịch activations của Claude thành văn bản người đọc được, mở ra khả năng hiểu AI đang nghĩ gì.</description>
       <category>AI Research</category>
-      <enclosure url="https://escbase.xyz/images/anthropic-nla-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/anthropic-nla-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>Next.js 16.2.6 Và 15.5.18: Bản Vá Bảo Mật Khẩn Cấp</title>
-      <link>https://escbase.xyz/blog/nextjs-16-2-6-15-5-18-security-fixes/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/nextjs-16-2-6-15-5-18-security-fixes/</guid>
+      <link>https://news.escbase.xyz/blog/nextjs-16-2-6-15-5-18-security-fixes/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/nextjs-16-2-6-15-5-18-security-fixes/</guid>
       <pubDate>Thu, 07 May 2026 17:00:00 GMT</pubDate>
       <description>Next.js vừa phát hành 16.2.6 và 15.5.18 với các bản vá bảo mật quan trọng, bao gồm lỗ hổng upstream từ React. Nâng cấp ngay.</description>
       <category>Dev</category>
-      <enclosure url="https://escbase.xyz/images/nextjs-16-2-6-security-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/nextjs-16-2-6-security-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>OpenClaw 2026.5.7: Bảo Mật Thắt Chặt, Telegram Và Plugin Được Củng Cố</title>
-      <link>https://escbase.xyz/blog/openclaw-2026-5-7-security-hardening/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/openclaw-2026-5-7-security-hardening/</guid>
+      <link>https://news.escbase.xyz/blog/openclaw-2026-5-7-security-hardening/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/openclaw-2026-5-7-security-hardening/</guid>
       <pubDate>Thu, 07 May 2026 17:00:00 GMT</pubDate>
       <description>OpenClaw 2026.5.7 tập trung vào các bản vá bảo mật: native command auth, Telegram access groups, cron JSON cleanup và plugin install/update hardening.</description>
       <category>AI Tools</category>
-      <enclosure url="https://escbase.xyz/images/openclaw-2026-5-7-security-hardening-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/openclaw-2026-5-7-security-hardening-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>ChatGPT Vào Excel Và Google Sheets: GPT-5.5 Bắt Đầu Sống Ngay Trong Bảng Tính</title>
-      <link>https://escbase.xyz/blog/chatgpt-excel-google-sheets-addon-gpt55/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/chatgpt-excel-google-sheets-addon-gpt55/</guid>
+      <link>https://news.escbase.xyz/blog/chatgpt-excel-google-sheets-addon-gpt55/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/chatgpt-excel-google-sheets-addon-gpt55/</guid>
       <pubDate>Tue, 05 May 2026 17:00:00 GMT</pubDate>
       <description>ChatGPT hiện có add-on cho Excel và Google Sheets, giúp phân tích dữ liệu lộn xộn, viết công thức, cập nhật spreadsheet và giải thích từng bước ngay trong bảng tính.</description>
       <category>AI Tools</category>
-      <enclosure url="https://escbase.xyz/images/chatgpt-excel-google-sheets-addon-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/chatgpt-excel-google-sheets-addon-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>GPT-5.5 Instant Bắt Đầu Rollout Trong ChatGPT: Thông Minh Hơn, Ngắn Gọn Hơn, Cá Nhân Hóa Mạnh Hơn</title>
-      <link>https://escbase.xyz/blog/gpt55-instant-chatgpt-memory-personalization/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/gpt55-instant-chatgpt-memory-personalization/</guid>
+      <link>https://news.escbase.xyz/blog/gpt55-instant-chatgpt-memory-personalization/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/gpt55-instant-chatgpt-memory-personalization/</guid>
       <pubDate>Tue, 05 May 2026 17:00:00 GMT</pubDate>
       <description>OpenAI bắt đầu rollout GPT-5.5 Instant trong ChatGPT: câu trả lời thông minh, rõ ràng, tự nhiên và ngắn gọn hơn; cải thiện factuality, memory, personalization, image/STEM/web-search awareness.</description>
       <category>OpenAI</category>
-      <enclosure url="https://escbase.xyz/images/gpt55-instant-chatgpt-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/gpt55-instant-chatgpt-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>OpenClaw 2026.5.4: Gateway Nhanh Hơn, Plugin Bớt Lằng Nhằng, Doctor Sửa Lỗi Khôn Hơn</title>
-      <link>https://escbase.xyz/blog/openclaw-2026-5-4-performance-reliability/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/openclaw-2026-5-4-performance-reliability/</guid>
+      <link>https://news.escbase.xyz/blog/openclaw-2026-5-4-performance-reliability/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/openclaw-2026-5-4-performance-reliability/</guid>
       <pubDate>Tue, 05 May 2026 17:00:00 GMT</pubDate>
       <description>OpenClaw 2026.5.4 tập trung vào những thứ ít hào nhoáng nhưng cực đáng giá: plugin install/update sạch hơn, Gateway startup nhanh hơn, doctor/repair hints tốt hơn, Windows và Discord ổn định hơn.</description>
       <category>AI Tools</category>
-      <enclosure url="https://escbase.xyz/images/openclaw-2026-5-4-performance-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/openclaw-2026-5-4-performance-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>Gemini API Ra Mắt Webhooks: Thay Polling Bằng Push Notification Cho Long-Running Jobs</title>
-      <link>https://escbase.xyz/blog/gemini-api-webhooks/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/gemini-api-webhooks/</guid>
+      <link>https://news.escbase.xyz/blog/gemini-api-webhooks/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/gemini-api-webhooks/</guid>
       <pubDate>Tue, 05 May 2026 17:00:00 GMT</pubDate>
       <description>Google ra mắt event-driven Webhooks trong Gemini API — push notification thay thế polling cho long-running jobs. Hỗ trợ Deep Research, video generation, Batch API. Signed requests + at-least-once delivery.</description>
       <category>Gemini API</category>
-      <enclosure url="https://escbase.xyz/images/gemini-api-webhooks-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/gemini-api-webhooks-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>Gemma 4 Chạy Hoàn Toàn On-Device Trong React Native — Mobile Developers Sắp Có Công Cụ Mới</title>
-      <link>https://escbase.xyz/blog/gemma4-react-native-ondevice/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/gemma4-react-native-ondevice/</guid>
+      <link>https://news.escbase.xyz/blog/gemma4-react-native-ondevice/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/gemma4-react-native-ondevice/</guid>
       <pubDate>Tue, 05 May 2026 17:00:00 GMT</pubDate>
       <description>Google Gemma hợp tác với SWMansion tích hợp Gemma 4 on-device trong React Native. Sắp có trong thư viện react-native-executorch. Không cần server, model chạy hoàn toàn trên thiết bị di động.</description>
       <category>Mobile AI</category>
-      <enclosure url="https://escbase.xyz/images/gemma4-react-native-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/gemma4-react-native-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>Anthropic Ra Mắt Claude Agent Templates Cho Financial Services: Build Pitches, Valuation Reviews, Closing Books</title>
-      <link>https://escbase.xyz/blog/claude-finance-agents/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/claude-finance-agents/</guid>
+      <link>https://news.escbase.xyz/blog/claude-finance-agents/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/claude-finance-agents/</guid>
       <pubDate>Tue, 05 May 2026 17:00:00 GMT</pubDate>
       <description>Anthropic ra mắt Claude agent templates cho financial services. Templates có sẵn connectors, skills, subagents cần thiết. Dùng trong Cowrite và Claude Code như plugins, hoặc chạy production với Managed Agents.</description>
       <category>AI Agents</category>
-      <enclosure url="https://escbase.xyz/images/claude-finance-agents-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/claude-finance-agents-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>Brian Armstrong Lay Off ~14% Coinbase, Tái Cấu Trúc Thành AI-Native: Non-Technical Teams Đang Ship Production Code</title>
-      <link>https://escbase.xyz/blog/coinbase-layoffs-ai-native/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/coinbase-layoffs-ai-native/</guid>
+      <link>https://news.escbase.xyz/blog/coinbase-layoffs-ai-native/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/coinbase-layoffs-ai-native/</guid>
       <pubDate>Mon, 04 May 2026 17:00:00 GMT</pubDate>
       <description>Brian Armstrong gửi email toàn công ty: cắt ~14% nhân sự. Lý do: thị trường crypto down + AI thay đổi cách làm việc. Non-technical teams giờ tự ship production code.</description>
       <category>Crypto</category>
-      <enclosure url="https://escbase.xyz/images/coinbase-layoffs-ai-native-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/coinbase-layoffs-ai-native-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>Codex /goal: Advancement Lớn Nhất Năm về AI Coding — Secret Weapon Là Meta Prompting</title>
-      <link>https://escbase.xyz/blog/codex-goal-meta-prompting/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/codex-goal-meta-prompting/</guid>
+      <link>https://news.escbase.xyz/blog/codex-goal-meta-prompting/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/codex-goal-meta-prompting/</guid>
       <pubDate>Mon, 04 May 2026 17:00:00 GMT</pubDate>
       <description>Alex Finn gọi /goal của Codex là advancement lớn nhất năm về AI coding: agent làm việc liên tục nhiều ngày. Secret là meta prompting - dùng AI viết prompt cho AI.</description>
       <category>AI Coding</category>
-      <enclosure url="https://escbase.xyz/images/codex-goal-meta-prompting-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/codex-goal-meta-prompting-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>Codex + HyperFrame/Remotion: Dùng Code Thay Thế Phần Mềm Dựng Video</title>
-      <link>https://escbase.xyz/blog/codex-hyperframe-video-editing/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/codex-hyperframe-video-editing/</guid>
+      <link>https://news.escbase.xyz/blog/codex-hyperframe-video-editing/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/codex-hyperframe-video-editing/</guid>
       <pubDate>Sun, 03 May 2026 17:00:00 GMT</pubDate>
       <description>Creator Trung Quốc dùng Codex + HyperFrame/Remotion tạo video hoàn toàn bằng code. Claude official get 10M+ views. Video editor mới làm clip trong &lt;1h.</description>
       <category>AI Video</category>
-      <enclosure url="https://escbase.xyz/images/codex-hyperframe-video-editing-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/codex-hyperframe-video-editing-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>Anthropic Blueprint: Dùng Claude Code Xây Công Ty Với Nhân Viên Là AI, CEO Ngủ</title>
-      <link>https://escbase.xyz/blog/anthropic-claude-code-company-blueprint/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/anthropic-claude-code-company-blueprint/</guid>
+      <link>https://news.escbase.xyz/blog/anthropic-claude-code-company-blueprint/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/anthropic-claude-code-company-blueprint/</guid>
       <pubDate>Sun, 03 May 2026 17:00:00 GMT</pubDate>
       <description>Anthropic công bố blueprint xây công ty với Claude Code: 1 người điều hành + nhiều AI agent làm việc tự động. Agent Stack (ADK + Vertex AI + MCP + A2A) giải quyết 3 vấn đề lớn khi deploy AI vào production.</description>
       <category>AI Agents</category>
-      <enclosure url="https://escbase.xyz/images/anthropic-claude-code-blueprint-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/anthropic-claude-code-blueprint-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>open-slide: Framework Làm Slide Dành Riêng Cho AI Agents (Claude, Cursor, Codex)</title>
-      <link>https://escbase.xyz/blog/open-slide-agent-framework/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/open-slide-agent-framework/</guid>
+      <link>https://news.escbase.xyz/blog/open-slide-agent-framework/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/open-slide-agent-framework/</guid>
       <pubDate>Sat, 02 May 2026 17:00:00 GMT</pubDate>
       <description>open-slide là slide framework cho agents: prompt → polished deck. Mỗi slide là React component 1920×1080. Có /create-slide, /apply-comments (in-browser feedback), presenter mode, export PDF/HTML, deploy Vercel. Hoạt động với Claude Code, Cursor, Codex.</description>
       <category>AI Tools</category>
-      <enclosure url="https://escbase.xyz/images/open-slide-agent-framework-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/open-slide-agent-framework-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>5 Startup Ideas Dùng ElevenLabs Agents Thay Thế Nhân Sự, Chi Phí Chỉ $0.08/phút</title>
-      <link>https://escbase.xyz/blog/elevenlabs-agents-5-startup-ideas/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/elevenlabs-agents-5-startup-ideas/</guid>
+      <link>https://news.escbase.xyz/blog/elevenlabs-agents-5-startup-ideas/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/elevenlabs-agents-5-startup-ideas/</guid>
       <pubDate>Sat, 02 May 2026 17:00:00 GMT</pubDate>
       <description>5 ý tưởng startup có thể build và resell chỉ với ElevenLabs Agents: AI Receptionist, Multilingual Support, AI SDR, Restaurant Order Agent, Real Estate Scheduler. Chi phí $0.08/phút, thay thế $2-5k/tháng nhân sự.</description>
       <category>AI Agents</category>
-      <enclosure url="https://escbase.xyz/images/elevenlabs-agents-startup-ideas-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/elevenlabs-agents-startup-ideas-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>GPT-Image 2 + Seedance 2.0: Tạo Video Từ Storyboard Chỉ Bằng 1 Câu Lệnh</title>
-      <link>https://escbase.xyz/blog/gpt-image2-seedance2-video-workflow/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/gpt-image2-seedance2-video-workflow/</guid>
+      <link>https://news.escbase.xyz/blog/gpt-image2-seedance2-video-workflow/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/gpt-image2-seedance2-video-workflow/</guid>
       <pubDate>Sat, 02 May 2026 17:00:00 GMT</pubDate>
       <description>GPT-Image 2 sinh storyboard chi tiết (vận镜, hành động, thoại, âm thanh) → Seedance 2.0 render video ngay. Workflow đang thay đổi cách creator Trung Quốc sản xuất short video hàng loạt.</description>
       <category>AI Video</category>
-      <enclosure url="https://escbase.xyz/images/gpt-image2-seedance2-video-workflow-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/gpt-image2-seedance2-video-workflow-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>Codex + GPT-5.5: Workflow Xây App iOS/macOS Thực Tế Từ Paul Solt</title>
-      <link>https://escbase.xyz/blog/codex-gpt55-app-development-workflow/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/codex-gpt55-app-development-workflow/</guid>
+      <link>https://news.escbase.xyz/blog/codex-gpt55-app-development-workflow/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/codex-gpt55-app-development-workflow/</guid>
       <pubDate>Sat, 02 May 2026 17:00:00 GMT</pubDate>
       <description>Paul Solt chia sẻ workflow thực tế với Codex app + GPT-5.5: &apos;Just talk to it&apos;, agents tạo Xcode project, DocSetQuery giảm hallucination, và cách anh hồi sinh app 9 năm tuổi từ 0.5% lên 7.1% conversion.</description>
       <category>AI Coding</category>
-      <enclosure url="https://escbase.xyz/images/codex-gpt55-app-development-workflow-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/codex-gpt55-app-development-workflow-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>Codex + HyperFrames: Viết Code Tạo Video MP4 Chuyên Nghiệp, Nhanh Gấp 10 Lần</title>
-      <link>https://escbase.xyz/blog/codex-hyperframes-video-generation/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/codex-hyperframes-video-generation/</guid>
+      <link>https://news.escbase.xyz/blog/codex-hyperframes-video-generation/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/codex-hyperframes-video-generation/</guid>
       <pubDate>Sat, 02 May 2026 17:00:00 GMT</pubDate>
       <description>Thay vì cắt ghép thủ công trong CapCut, dùng Codex + HyperFrames plugin để viết code HTML sinh ra video MP4 chuyên nghiệp. Batch 10x nhanh, một người vận hành MCN.</description>
       <category>AI Tools</category>
-      <enclosure url="https://escbase.xyz/images/codex-hyperframes-video-generation-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/codex-hyperframes-video-generation-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>NVIDIA Đang Cho Bạn Dùng Miễn Phí Hàng Loạt Model Frontier: MiniMax, DeepSeek, GLM</title>
-      <link>https://escbase.xyz/blog/nvidia-nim-free-frontier-models/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/nvidia-nim-free-frontier-models/</guid>
+      <link>https://news.escbase.xyz/blog/nvidia-nim-free-frontier-models/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/nvidia-nim-free-frontier-models/</guid>
       <pubDate>Sat, 02 May 2026 17:00:00 GMT</pubDate>
       <description>NVIDIA NIM cho developer truy cập miễn phí MiniMax M2.7 (230B), DeepSeek V3.2, GLM-5.1 và 100+ model khác qua API OpenAI-compatible. 1000 credits miễn phí, không cần thẻ tín dụng.</description>
       <category>AI Tools</category>
-      <enclosure url="https://escbase.xyz/images/nvidia-nim-free-frontier-models-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/nvidia-nim-free-frontier-models-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>OpenClaw 2026.5.2: Bớt Drama, Chạy Ổn Hơn</title>
-      <link>https://escbase.xyz/blog/openclaw-2026-5-2-stable-grok4-3/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/openclaw-2026-5-2-stable-grok4-3/</guid>
+      <link>https://news.escbase.xyz/blog/openclaw-2026-5-2-stable-grok4-3/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/openclaw-2026-5-2-stable-grok4-3/</guid>
       <pubDate>Sun, 03 May 2026 00:00:00 GMT</pubDate>
       <description>OpenClaw 2026.5.2 tập trung vào Grok 4.3 mặc định, plugin ổn định hơn, gateway nhanh hơn, và nhiều fix thật cho Discord, Slack, Telegram, WhatsApp, web search, TTS và voice calls.</description>
       <category>AI Agents</category>
-      <enclosure url="https://escbase.xyz/images/openclaw-2026-5-2-stable-grok4-3-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/openclaw-2026-5-2-stable-grok4-3-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>Blockchain Không Chỉ Là Bitcoin: Binance Academy Nhắc Lại Điều Cũ Nhưng Vẫn Đau</title>
-      <link>https://escbase.xyz/blog/blockchain-khong-chi-la-bitcoin-binance-academy/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/blockchain-khong-chi-la-bitcoin-binance-academy/</guid>
+      <link>https://news.escbase.xyz/blog/blockchain-khong-chi-la-bitcoin-binance-academy/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/blockchain-khong-chi-la-bitcoin-binance-academy/</guid>
       <pubDate>Sun, 03 May 2026 00:00:00 GMT</pubDate>
       <description>Binance Academy nhắc lại blockchain không chỉ là Bitcoin. Nhưng phản biện từ cộng đồng cũng rất thật: sau 15 năm, use case có traction lớn nhất vẫn quanh tài chính.</description>
       <category>Blockchain</category>
-      <enclosure url="https://escbase.xyz/images/blockchain-khong-chi-la-bitcoin-binance-academy-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/blockchain-khong-chi-la-bitcoin-binance-academy-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>Grok 4.3: Giảm Chi Phí 40-60%, Cải Thiện Điểm Số và Pareto Frontier Mới</title>
-      <link>https://escbase.xyz/blog/grok-4-3-cost-efficiency-pareto-frontier/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/grok-4-3-cost-efficiency-pareto-frontier/</guid>
+      <link>https://news.escbase.xyz/blog/grok-4-3-cost-efficiency-pareto-frontier/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/grok-4-3-cost-efficiency-pareto-frontier/</guid>
       <pubDate>Sun, 03 May 2026 00:00:00 GMT</pubDate>
       <description>xAI ra mắt Grok 4.3 với AI Index 53, chi phí giảm 40% input / 60% output, ngồi trên Pareto frontier. Model vượt Claude Sonnet 4.6, Gemini 3.1 Pro nhưng kém GPT-5.5. Cộng đồng phản ứng trái chiều về tính thực tế của benchmark.</description>
       <category>AI Models &amp; Agents</category>
-      <enclosure url="https://escbase.xyz/images/grok-4-3-cost-efficiency-pareto-frontier-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/grok-4-3-cost-efficiency-pareto-frontier-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>OpenClaw Pivot: Dùng ChatGPT Plus Login Thay Thế Claude API Sau Khi Bị Anthropic Cấm</title>
-      <link>https://escbase.xyz/blog/openclaw-chatgpt-login-pivot/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/openclaw-chatgpt-login-pivot/</guid>
+      <link>https://news.escbase.xyz/blog/openclaw-chatgpt-login-pivot/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/openclaw-chatgpt-login-pivot/</guid>
       <pubDate>Fri, 01 May 2026 17:00:00 GMT</pubDate>
       <description>Anthropic cấm OpenClaw dùng Claude Pro/Max subscriptions từ 4/4/2026. OpenClaw pivot sang ChatGPT Plus login để truy cập Codex với near-unlimited, không cần API key. OpenAI ủng hộ openness, Anthropic lock-down.</description>
       <category>AI Agent</category>
-      <enclosure url="https://escbase.xyz/images/openclaw-chatgpt-login-pivot-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/openclaw-chatgpt-login-pivot-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>Image-to-Code: Cách Làm Frontend AI Bớt Củ Chuối</title>
-      <link>https://escbase.xyz/blog/image-to-code-frontend-workflow/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/image-to-code-frontend-workflow/</guid>
+      <link>https://news.escbase.xyz/blog/image-to-code-frontend-workflow/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/image-to-code-frontend-workflow/</guid>
       <pubDate>Thu, 30 Apr 2026 17:00:00 GMT</pubDate>
       <description>Leon Lin đề xuất workflow image-to-code: tạo ảnh thiết kế trước, chọn hướng visual, tách asset, rồi đưa cho coding agent build từng section và refine bằng screenshot.</description>
       <category>AI Design</category>
-      <enclosure url="https://escbase.xyz/images/image-to-code-frontend-workflow-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/image-to-code-frontend-workflow-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>Claude Security Public Beta: Anthropic Đưa AI Săn Lỗ Hổng Vào Enterprise</title>
-      <link>https://escbase.xyz/blog/claude-security-public-beta/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/claude-security-public-beta/</guid>
+      <link>https://news.escbase.xyz/blog/claude-security-public-beta/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/claude-security-public-beta/</guid>
       <pubDate>Thu, 30 Apr 2026 17:00:00 GMT</pubDate>
       <description>Anthropic mở public beta Claude Security cho Enterprise: AI quét codebase, xác thực finding để giảm false positive, gắn severity/confidence và đề xuất patch để team review.</description>
       <category>AI Security</category>
-      <enclosure url="https://escbase.xyz/images/claude-security-public-beta-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/claude-security-public-beta-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>OpenAI Biến Codex Thành Trợ Lý Văn Phòng, Không Chỉ Coding</title>
-      <link>https://escbase.xyz/blog/openai-codex-everyday-work/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/openai-codex-everyday-work/</guid>
+      <link>https://news.escbase.xyz/blog/openai-codex-everyday-work/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/openai-codex-everyday-work/</guid>
       <pubDate>Thu, 30 Apr 2026 17:00:00 GMT</pubDate>
       <description>OpenAI mở rộng Codex cho công việc hằng ngày: chọn vai trò, kết nối Slack, Google Workspace, Microsoft 365, rồi tạo docs, slides, spreadsheets và theo dõi tiến độ trong cùng một thread.</description>
       <category>AI Tools</category>
-      <enclosure url="https://escbase.xyz/images/openai-codex-everyday-work-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/openai-codex-everyday-work-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>OpenClaw 2026.4.29 — Group Chat Bớt Giả, Agent Bớt Khờ</title>
-      <link>https://escbase.xyz/blog/openclaw-2026-4-29-release/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/openclaw-2026-4-29-release/</guid>
+      <link>https://news.escbase.xyz/blog/openclaw-2026-4-29-release/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/openclaw-2026-4-29-release/</guid>
       <pubDate>Thu, 30 Apr 2026 17:00:00 GMT</pubDate>
       <description>OpenClaw 2026.4.29 nâng group chat, follow-up commitments, memory wiki và NVIDIA provider. Full thread cho thấy cộng đồng hào hứng nhưng vẫn còn bug report gateway, Discord và local models.</description>
       <category>AI Agents</category>
-      <enclosure url="https://escbase.xyz/images/openclaw-2026-4-29-release-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/openclaw-2026-4-29-release-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>Cursor Ra Mắt SDK — Xây Dựng AI Agents Với Cùng Runtime và Models Như Cursor</title>
-      <link>https://escbase.xyz/blog/cursor-sdk-ai-agents/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/cursor-sdk-ai-agents/</guid>
+      <link>https://news.escbase.xyz/blog/cursor-sdk-ai-agents/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/cursor-sdk-ai-agents/</guid>
       <pubDate>Wed, 29 Apr 2026 17:00:00 GMT</pubDate>
       <description>Cursor giới thiệu SDK cho phép xây dựng AI agents với cùng runtime, harness và models. Rippling, Notion, C3 AI và Faire đã đang tích hợp. Phân tích ý nghĩa và lo ngại từ cộng đồng.</description>
       <category>AI Coding</category>
-      <enclosure url="https://escbase.xyz/images/cursor-sdk-ai-agents-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/cursor-sdk-ai-agents-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>Stripe Console — AI Agent Hiểu Sâu Dữ Liệu Kinh Doanh Của Bạn</title>
-      <link>https://escbase.xyz/blog/stripe-console-ai-agent/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/stripe-console-ai-agent/</guid>
+      <link>https://news.escbase.xyz/blog/stripe-console-ai-agent/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/stripe-console-ai-agent/</guid>
       <pubDate>Wed, 29 Apr 2026 17:00:00 GMT</pubDate>
       <description>Stripe sắp ra mắt Console, một AI agent tổng quát có ngữ cảnh sâu về dữ liệu riêng, insight từ mạng lưới Stripe và kiến thức sản phẩm để hỗ trợ vận hành doanh nghiệp.</description>
       <category>AI Tools</category>
-      <enclosure url="https://escbase.xyz/images/stripe-console-ai-agent-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/stripe-console-ai-agent-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>Stripe Hợp Tác Meta và Tempo — Creator Nhận Stablecoin Qua Link Wallet</title>
-      <link>https://escbase.xyz/blog/stripe-meta-tempo-stablecoin-payouts/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/stripe-meta-tempo-stablecoin-payouts/</guid>
+      <link>https://news.escbase.xyz/blog/stripe-meta-tempo-stablecoin-payouts/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/stripe-meta-tempo-stablecoin-payouts/</guid>
       <pubDate>Wed, 29 Apr 2026 17:00:00 GMT</pubDate>
       <description>Stripe, Meta và Tempo hợp tác cho phép creator nhận stablecoin trực tiếp vào Link wallet. Giải pháp rút ngắn quy trình thanh toán xuyên biên giới cho người sáng tạo nội dung toàn cầu.</description>
       <category>Stablecoins</category>
-      <enclosure url="https://escbase.xyz/images/stripe-meta-tempo-stablecoin-payouts-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/stripe-meta-tempo-stablecoin-payouts-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>Stripe Ra Mắt Treasury — Ngân Hàng Tích Hợp AI Cho Doanh Nghiệp</title>
-      <link>https://escbase.xyz/blog/stripe-treasury-launch/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/stripe-treasury-launch/</guid>
+      <link>https://news.escbase.xyz/blog/stripe-treasury-launch/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/stripe-treasury-launch/</guid>
       <pubDate>Wed, 29 Apr 2026 17:00:00 GMT</pubDate>
       <description>Stripe Treasury cho phép doanh nghiệp giữ tiền đa loại tiền tệ và stablecoin, chuyển khoản miễn phí, chi tiêu bằng thẻ 2% cashback, và điều khiển bằng AI qua Stripe MCP.</description>
       <category>Fintech</category>
-      <enclosure url="https://escbase.xyz/images/stripe-treasury-launch-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/stripe-treasury-launch-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>Adobe Hợp Tác Claude — 50 Công Cụ Sáng Tạo Trong Một Câu Lệnh</title>
-      <link>https://escbase.xyz/blog/adobe-claude-creative-cloud/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/adobe-claude-creative-cloud/</guid>
+      <link>https://news.escbase.xyz/blog/adobe-claude-creative-cloud/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/adobe-claude-creative-cloud/</guid>
       <pubDate>Wed, 29 Apr 2026 17:00:00 GMT</pubDate>
       <description>Adobe tích hợp 50+ Creative Cloud tools vào Claude. Người dùng chỉ cần mô tả kết quả muốn có, AI tự động điều phối workflow và trả về sản phẩm hoàn chỉnh.</description>
       <category>AI Tools</category>
-      <enclosure url="https://escbase.xyz/images/adobe-claude-creative-cloud-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/adobe-claude-creative-cloud-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>OpenClaw 2026.4.27 — 6 Nâng Cấp Đáng Chú Ý</title>
-      <link>https://escbase.xyz/blog/openclaw-2026-4-27-release/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/openclaw-2026-4-27-release/</guid>
+      <link>https://news.escbase.xyz/blog/openclaw-2026-4-27-release/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/openclaw-2026-4-27-release/</guid>
       <pubDate>Wed, 29 Apr 2026 17:00:00 GMT</pubDate>
       <description>OpenClaw vừa ra mắt bản 2026.4.27 với DeepInfra provider mới, cải thiện xử lý file, proxy routing cho operator, Matrix approvals nâng cấp, model selection chặt chẽ hơn và reliability được cải thiện đáng kể.</description>
       <category>AI Agents</category>
-      <enclosure url="https://escbase.xyz/images/openclaw-2026-4-27-release-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/openclaw-2026-4-27-release-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>Stripe Chính Thức Ra Mắt Link Wallet for Agents — AI Giờ Đã Có Thể Tự Chi Tiêu An Toàn</title>
-      <link>https://escbase.xyz/blog/stripe-link-wallet-official-launch/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/stripe-link-wallet-official-launch/</guid>
+      <link>https://news.escbase.xyz/blog/stripe-link-wallet-official-launch/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/stripe-link-wallet-official-launch/</guid>
       <pubDate>Wed, 29 Apr 2026 17:00:00 GMT</pubDate>
       <description>Stripe vừa công bố chính thức Link Wallet for Agents trên X với video demo. Giải pháp cho phép AI agents thanh toán thay mặt người dùng nhưng không bao giờ tiếp cận payment credentials — mỗi giao dịch đều cần approval.</description>
       <category>AI Agent</category>
-      <enclosure url="https://escbase.xyz/images/stripe-link-wallet-official-launch-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/stripe-link-wallet-official-launch-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>Stripe Link Wallet for Agents cho phép AI tự chi tiêu an toàn</title>
-      <link>https://escbase.xyz/blog/stripe-link-wallet-for-agents/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/stripe-link-wallet-for-agents/</guid>
+      <link>https://news.escbase.xyz/blog/stripe-link-wallet-for-agents/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/stripe-link-wallet-for-agents/</guid>
       <pubDate>Wed, 29 Apr 2026 17:00:00 GMT</pubDate>
       <description>Stripe ra mắt Link Wallet for Agents — ví điện tử cho AI agents, cho phép AI tự động thanh toán thay mặt người dùng mà không lộ thông tin thanh toán. Mỗi giao dịch cần sự approve của user.</description>
       <category>AI Agent</category>
-      <enclosure url="https://escbase.xyz/images/stripe-link-wallet-for-agents-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/stripe-link-wallet-for-agents-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>Hạ Tầng Tài Chính Toàn Cầu Mới — Bản Đồ Stablecoin Stack Theo a16z</title>
-      <link>https://escbase.xyz/blog/the-new-stack-for-global-finance-stablecoins-edition/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/the-new-stack-for-global-finance-stablecoins-edition/</guid>
+      <link>https://news.escbase.xyz/blog/the-new-stack-for-global-finance-stablecoins-edition/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/the-new-stack-for-global-finance-stablecoins-edition/</guid>
       <pubDate>Tue, 28 Apr 2026 17:00:00 GMT</pubDate>
       <description>Stablecoins không còn là công cụ giao dịch crypto — chúng đang trở thành nền tảng hạ tầng tài chính mới. a16z phân tích 5 lớp của global finance stack và dự báo credit là cuộc chơi lớn tiếp theo.</description>
       <category>Stablecoins</category>
-      <enclosure url="https://escbase.xyz/images/the-new-stack-for-global-finance-stablecoins-edition.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/the-new-stack-for-global-finance-stablecoins-edition.png" type="image/png" length="0" />
     </item>
     <item>
       <title>OpenClaw 2026.4.26: Browser Talk, Cerebras, UI Diff Panel và Hơn Nữa</title>
-      <link>https://escbase.xyz/blog/openclaw-2026-4-26-release/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/openclaw-2026-4-26-release/</guid>
+      <link>https://news.escbase.xyz/blog/openclaw-2026-4-26-release/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/openclaw-2026-4-26-release/</guid>
       <pubDate>Sat, 25 Apr 2026 17:00:00 GMT</pubDate>
       <description>Bản nâng cấp mới nhất của OpenClaw mang lại tính năng browser realtime talk, provider Cerebras, memory enhancements, UI polish và nhiều cải tiến quan trọng cho AI agent workflows.</description>
       <category>AI Agents</category>
-      <enclosure url="https://escbase.xyz/images/openclaw-2026-4-26-release-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/openclaw-2026-4-26-release-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>Arkham đang muốn biến Claude thành cửa vào dữ liệu on-chain</title>
-      <link>https://escbase.xyz/blog/arkham-api-claude/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/arkham-api-claude/</guid>
+      <link>https://news.escbase.xyz/blog/arkham-api-claude/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/arkham-api-claude/</guid>
       <pubDate>Mon, 27 Apr 2026 17:00:00 GMT</pubDate>
       <description>Arkham vừa đăng một thread khá rõ ràng về cách nối Claude với Arkham API chỉ trong 6 bước. Điểm đáng chú ý không nằm ở vài lệnh cài đặt, mà ở chỗ Arkham đang cố biến dữ liệu on-chain thành thứ có thể hỏi bằng ngôn ngữ tự nhiên, để agent gọi API, đọc kết quả và trả lại ngay trong chat.</description>
       <category>On-chain Tools</category>
-      <enclosure url="https://escbase.xyz/images/arkham-api-claude-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/arkham-api-claude-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>OpenClaw 2026.4.25 có gì đáng chú ý?</title>
-      <link>https://escbase.xyz/blog/openclaw-2026-4-25/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/openclaw-2026-4-25/</guid>
+      <link>https://news.escbase.xyz/blog/openclaw-2026-4-25/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/openclaw-2026-4-25/</guid>
       <pubDate>Mon, 27 Apr 2026 17:00:00 GMT</pubDate>
       <description>OpenClaw 2026.4.25 không phải kiểu bản cập nhật chỉ thêm vài tính năng cho đẹp bảng tin. Lõi của nó nằm ở chỗ khác: giọng nói được nâng cấp mạnh hơn, plugin khởi động nhanh hơn, hệ thống theo dõi lỗi và luồng chạy sâu hơn, và phần cài đặt - cập nhật - trình duyệt được vá để bớt chết vặt.</description>
       <category>Agent Tools</category>
-      <enclosure url="https://escbase.xyz/images/openclaw-2026-4-25-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/openclaw-2026-4-25-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>Vụ kiện Elon - OpenAI thực chất là gì?</title>
-      <link>https://escbase.xyz/blog/vu-kien-elon-openai/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/vu-kien-elon-openai/</guid>
+      <link>https://news.escbase.xyz/blog/vu-kien-elon-openai/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/vu-kien-elon-openai/</guid>
       <pubDate>Mon, 27 Apr 2026 17:00:00 GMT</pubDate>
       <description>Vụ Elon Musk kiện OpenAI không chỉ là màn đấu khẩu giữa hai ông lớn AI. Gốc rễ của nó là một câu hỏi khó hơn nhiều: một tổ chức sinh ra với danh nghĩa vì lợi ích chung có thể biến phần lớn giá trị tạo ra thành lợi ích tư nhân đến mức nào, nhất là khi cuộc đua AI đòi hỏi lượng vốn khổng lồ?</description>
       <category>AI &amp; Pháp lý</category>
-      <enclosure url="https://escbase.xyz/images/elon-openai-vu-kien-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/elon-openai-vu-kien-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>Workshop 30 Phút Của Anthropic Chỉ Ra Cách Dùng Claude Code Cho Đúng</title>
-      <link>https://escbase.xyz/blog/claude-code-live-best-practices/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/claude-code-live-best-practices/</guid>
+      <link>https://news.escbase.xyz/blog/claude-code-live-best-practices/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/claude-code-live-best-practices/</guid>
       <pubDate>Mon, 27 Apr 2026 17:00:00 GMT</pubDate>
       <description>Jouhatsu vừa chia sẻ một workshop 30 phút của Anthropic về Claude Code và gọi nó là thứ đáng bookmark hơn cả mấy khóa học AI 500 đô. Sau khi bóc kỹ nội dung video, điểm đáng giá nhất là workshop này rất cụ thể: bắt đầu từ codebase Q&amp;A, luôn plan trước khi sửa lớn, dùng CLAUDE.md để nhồi context, dùng Puppeteer và test làm vòng phản hồi, và biến Claude Code thành một phần của workflow ship code thật.</description>
       <category>Dev Tools</category>
-      <enclosure url="https://escbase.xyz/images/claude-code-live-best-practices-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/claude-code-live-best-practices-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>Sam Altman Nói Gì Về Post-AGI Và GPT-5.5 Codex: AI Có Thể Không Giết Việc, Mà Tăng Cường Cơn Nghiện Làm</title>
-      <link>https://escbase.xyz/blog/sam-altman-post-agi-work-codex/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/sam-altman-post-agi-work-codex/</guid>
+      <link>https://news.escbase.xyz/blog/sam-altman-post-agi-work-codex/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/sam-altman-post-agi-work-codex/</guid>
       <pubDate>Sun, 26 Apr 2026 17:00:00 GMT</pubDate>
       <description>Một tweet ngắn của Sam Altman vừa chạm đúng nghịch lý lớn nhất của AI thời điểm này: người ta vừa lo post-AGI sẽ khiến không ai phải làm việc nữa, vừa hưng phấn đến mức muốn cắt bớt giấc ngủ vì GPT-5.5 trong Codex quá tốt. Điểm đáng bàn là AI có thể không xóa lao động theo cách nhiều người tưởng, mà nén thời gian, tăng tốc độ ship và đẩy những người nhiều agency vào vòng làm việc dữ hơn.</description>
       <category>AI Work</category>
-      <enclosure url="https://escbase.xyz/images/sam-altman-post-agi-work-codex-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/sam-altman-post-agi-work-codex-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>Matthew Berman: DeepSeek V4 Là Mối Đe Doạ Thật Sự Với Labs Mỹ</title>
-      <link>https://escbase.xyz/blog/deepseek-v4-serious-threat/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/deepseek-v4-serious-threat/</guid>
+      <link>https://news.escbase.xyz/blog/deepseek-v4-serious-threat/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/deepseek-v4-serious-threat/</guid>
       <pubDate>Sun, 26 Apr 2026 17:00:00 GMT</pubDate>
       <description>Matthew Berman vừa đăng một thread khá thẳng về DeepSeek V4: đây không chỉ là một model open-weight mạnh và rẻ, mà là mối đe doạ thật sự với economics của OpenAI, Anthropic và cả chiến lược AI của Mỹ. Điểm đáng bàn không chỉ là benchmark, mà là khi model &apos;đủ tốt&apos; ở mức giá quá thấp, enterprise math sẽ bắt đầu đổi chiều.</description>
       <category>Market Structure</category>
-      <enclosure url="https://escbase.xyz/images/deepseek-v4-serious-threat-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/deepseek-v4-serious-threat-thumb.png" type="image/png" length="0" />
     </item>
     <item>
       <title>Top AI Papers Của Tuần (19-26/4): DeepSeek V4, Autogenesis, Skill-RAG, Stateless Memory</title>
-      <link>https://escbase.xyz/blog/top-ai-papers-week-apr-26/</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/top-ai-papers-week-apr-26/</guid>
+      <link>https://news.escbase.xyz/blog/top-ai-papers-week-apr-26/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/top-ai-papers-week-apr-26/</guid>
       <pubDate>Sun, 26 Apr 2026 17:00:00 GMT</pubDate>
       <description>DAIR.AI vừa đăng round-up Top AI Papers of the Week với 10 paper nổi bật, từ DeepSeek V4, Autogenesis, Skill-RAG cho tới Stateless Decision Memory và Diversity Collapse. Điểm đáng chú ý không chỉ là từng paper riêng lẻ, mà là cả list này đang vẽ ra 3 hướng lớn của AI hiện tại: long-context open models, agent self-improvement, và hạ tầng để agent thực sự scale trong thế giới thật.</description>
       <category>AI Research</category>
-      <enclosure url="https://escbase.xyz/images/top-ai-papers-week-apr-26-thumb.png" type="image/png" length="0" />
+      <enclosure url="https://news.escbase.xyz/images/top-ai-papers-week-apr-26-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>

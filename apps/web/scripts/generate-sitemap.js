@@ -6,7 +6,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const publicDir = resolve(__dirname, '../public');
 
 const posts = JSON.parse(readFileSync(resolve(publicDir, 'blog.json'), 'utf-8'));
-const SITE = 'https://escbase.xyz';
+const SITE = 'https://news.escbase.xyz';
 
 const staticPages = [
   { loc: '/', priority: '1.0', changefreq: 'daily' },
