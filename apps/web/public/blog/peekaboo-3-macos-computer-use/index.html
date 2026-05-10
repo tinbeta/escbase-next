@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peekaboo 3.0: Mac Automation Đã Biết Nhìn Màn Hình Và Tự Bấm | Escbase</title>
+  <meta name="description" content="Peekaboo 3.0 mang action-first computer use lên macOS: chụp màn hình, nhận diện UI, click/type/scroll qua CLI hoặc MCP cho Codex, Claude Code và Cursor.">
+  <meta property="og:title" content="Peekaboo 3.0: Mac Automation Đã Biết Nhìn Màn Hình Và Tự Bấm">
+  <meta property="og:description" content="Peekaboo 3.0 mang action-first computer use lên macOS: chụp màn hình, nhận diện UI, click/type/scroll qua CLI hoặc MCP cho Codex, Claude Code và Cursor.">
+  <meta property="og:image" content="https://news.escbase.xyz/images/peekaboo-3-macos-computer-use-thumb.png">
+  <meta property="og:url" content="https://news.escbase.xyz/blog/peekaboo-3-macos-computer-use/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://news.escbase.xyz/images/peekaboo-3-macos-computer-use-thumb.png">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/shared-article.css">
+  <link rel="stylesheet" href="/shared-article-footer.css">
+</head>
+<body>
+  <div class="container">
+    <article>
+      <header class="article-header">
+        <span class="category-badge"><i class="fas fa-robot"></i> AI Agents</span>
+        <h1>Peekaboo 3.0: Mac Automation Đã Biết Nhìn Màn Hình Và Tự Bấm</h1>
+        <div class="meta">
+          <span><i class="far fa-calendar"></i> 10/05/2026</span>
+          <span><i class="far fa-clock"></i> 5 phút đọc</span>
+          <span><i class="far fa-folder"></i> macOS, AI Agent, MCP, Automation</span>
+        </div>
+        <img src="/images/peekaboo-3-macos-computer-use-thumb.png" alt="Peekaboo 3.0 macOS computer use" class="inline-image" style="margin-top:1rem;">
+      </header>
+
+      <div class="article-content">
+        <div class="highlight-box">
+          <h4>TL;DR</h4>
+          <p style="margin-bottom:0">Peekaboo 3.0 là bản nâng cấp lớn cho macOS computer use: không chỉ chụp màn hình, mà còn nhận diện UI, trả về element ID, rồi cho agent click, type, scroll, gọi menu, điều khiển cửa sổ và chạy workflow qua CLI hoặc MCP.</p>
+        </div>
+
+        <p>Peter Steinberger vừa công bố <strong>Peekaboo 3.0</strong> và gọi đây là bản release lớn nhất kể từ 2.0. Câu chốt đáng chú ý nhất: ông bắt đầu làm thứ này từ năm ngoái, nhưng lúc đó model chưa đủ tốt. Bây giờ thì đủ.</p>
+
+        <p>Nói đời thường: Peekaboo là lớp “mắt và tay” cho AI agent trên Mac. Agent có thể nhìn màn hình, hiểu UI đang có gì, rồi thao tác bằng click, gõ phím, scroll, menu, dock, window, dialog… thay vì chỉ ngồi trả lời trong khung chat.</p>
+
+        <h2>👁️ Từ screenshot sang computer use thật</h2>
+        <p>Điểm mới của 3.0 là hướng <strong>action-first macOS computer use</strong>. Tức là automation không còn bắt đầu bằng “chụp ảnh rồi đoán bấm tọa độ” một cách mong manh. Peekaboo cố gắng dùng UI/accessibility element trước, còn synthetic input chỉ là fallback khi app cần.</p>
+
+        <p>Luồng mới gọn hơn: <code>see</code> để quan sát màn hình hoặc app, nhận snapshot kèm UI element ID; sau đó <code>click</code>, <code>type</code>, <code>set-value</code>, <code>perform-action</code>, <code>scroll</code>, <code>hotkey</code>… nhắm thẳng vào element thay vì bấm mò.</p>
+
+        <h2>🧩 CLI và MCP dùng chung một ngôn ngữ</h2>
+        <p>Peekaboo 3.0 dọn lại JSON output giữa CLI và MCP. Đây là chi tiết nghe khô, nhưng cực quan trọng nếu muốn agent chạy ổn trong workflow thật. Output càng nhất quán, agent càng ít hallucinate trạng thái UI.</p>
+
+        <p>README hiện mô tả Peekaboo như một macOS CLI kèm MCP server cho <strong>Codex, Claude Code và Cursor</strong>. Nghĩa là cùng một bộ tool có thể dùng trực tiếp trong terminal, hoặc gắn vào coding agent để nó tự thao tác app trên máy.</p>
+
+        <h2>🛠️ Bộ lệnh giờ không chỉ có “nhìn”</h2>
+        <p>Danh sách command đã khá đầy đủ cho một vòng automation desktop:</p>
+        <ul>
+          <li><strong>see / image:</strong> chụp và annotate UI, OCR, snapshot, element IDs.</li>
+          <li><strong>click / type / press / hotkey:</strong> thao tác cơ bản với UI.</li>
+          <li><strong>set-value / perform-action:</strong> gọi trực tiếp accessibility value hoặc action khi có thể.</li>
+          <li><strong>window / app / space:</strong> focus, launch, resize, move window, đổi macOS Space.</li>
+          <li><strong>menu / menubar / dock / dialog:</strong> xử lý phần khó chịu nhất của automation desktop: menu, status bar, Dock và system dialog.</li>
+          <li><strong>agent:</strong> chạy multi-step automation bằng ngôn ngữ tự nhiên.</li>
+        </ul>
+
+        <h2>⚡ Vì sao bản này đáng chú ý?</h2>
+        <p>Computer use thường chết ở ba điểm: nhìn không đủ đúng, bấm không đủ ổn, và state trả về quá lộn xộn để agent tiếp tục. Peekaboo 3.0 đánh thẳng vào cả ba: unified screenshot + UI detection, action-first interaction, và JSON sạch hơn.</p>
+
+        <p>Changelog 3.0 cũng nhấn mạnh snapshot tốt hơn, target-point diagnostics, tự refresh stale snapshots một lần, structured timings, OCR, annotation output và shared desktop observation pipeline. Đây là mớ plumbing nhàm chán nhưng quyết định agent có chạy được ngoài demo hay không.</p>
+
+        <h2>💬 Reply đáng để ý</h2>
+        <p>Khi có người hỏi “khác gì Codex App Computer Use?”, Peter trả lời ngắn: <strong>“This works everywhere in the world.”</strong> Một người khác hỏi có phải tech này sẽ vào Codex không, ông đáp: <strong>“Already is.”</strong></p>
+
+        <p>Có người hỏi Windows thì sao; câu trả lời là <strong>“not planned”</strong>, dù README có nhắc cộng đồng đã có một rewrite Windows-first tên PeekabooWin. Còn câu so với Playwright thì khá chuẩn: giống kiểu tự động hóa, nhưng <strong>cho Mac của bạn, không phải browser của bạn</strong>.</p>
+
+        <h2>🧠 Chốt một câu</h2>
+        <p>Peekaboo 3.0 không chỉ là tool chụp màn hình. Nó là một lớp hạ tầng để agent thao tác desktop macOS có kiểm soát hơn: nhìn UI, gắn ID cho element, hành động qua accessibility khi được, fallback khi cần, và xuất trạng thái đủ sạch để bước tiếp theo không mù.</p>
+
+        <p>Nếu coding agent là “não”, thì Peekaboo là mắt và tay trên Mac. Khi model đã đủ tốt, phần còn thiếu không phải thêm một chatbot nữa, mà là một runtime đủ chắc để nó đụng vào phần mềm thật mà không phá tung mọi thứ.</p>
+
+        <div class="source-links">
+          <h4>Nguồn & tham khảo</h4>
+          <ul>
+            <li><a href="https://x.com/steipete/status/2053114837698249190" target="_blank">Post gốc từ Peter Steinberger trên X</a></li>
+            <li><a href="https://github.com/openclaw/Peekaboo" target="_blank">Peekaboo trên GitHub</a></li>
+            <li><a href="https://raw.githubusercontent.com/openclaw/Peekaboo/main/CHANGELOG.md" target="_blank">Peekaboo 3.0 changelog</a></li>
+          </ul>
+        </div>
+
+        <div class="back-to-blog-footer"><a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a></div>
+        <div class="article-cta-stack"><a href="/blog/goalcraft-codex-goal-skill" class="article-suggestion-card">
+                        <span class="article-suggestion-label"><i class="fas fa-book-open"></i> Đọc tiếp</span>
+                        <span class="article-suggestion-title">Goalcraft: Codex Skill Giúp Viết /goal Không Thể Lươn</span>
+                    </a>
+                    <div class="article-cta-actions"><a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a></div></div>
+        <div class="tags"><span class="tag">Peekaboo</span><span class="tag">macOS</span><span class="tag">AI Agent</span><span class="tag">MCP</span><span class="tag">Automation</span></div>
+      </div>
+    </article>
+  </div>
+</body>
+</html>

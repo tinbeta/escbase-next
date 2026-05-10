@@ -5,8 +5,17 @@
     <link>https://escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Fri, 08 May 2026 17:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 09 May 2026 17:00:00 GMT</lastBuildDate>
     <atom:link href="https://escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Peekaboo 3.0: Mac Automation Đã Biết Nhìn Màn Hình Và Tự Bấm</title>
+      <link>https://escbase.xyz/blog/peekaboo-3-macos-computer-use/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/peekaboo-3-macos-computer-use/</guid>
+      <pubDate>Sat, 09 May 2026 17:00:00 GMT</pubDate>
+      <description>Peekaboo 3.0 mang action-first computer use lên macOS: chụp màn hình, nhận diện UI, click/type/scroll qua CLI hoặc MCP cho Codex, Claude Code và Cursor.</description>
+      <category>AI Agents</category>
+      <enclosure url="https://escbase.xyz/images/peekaboo-3-macos-computer-use-thumb.png" type="image/png" length="0" />
+    </item>
     <item>
       <title>Goalcraft: Codex Skill Giúp Viết /goal Không Thể Lươn</title>
       <link>https://escbase.xyz/blog/goalcraft-codex-goal-skill/</link>
@@ -447,15 +456,6 @@
       <description>DAIR.AI vừa đăng round-up Top AI Papers of the Week với 10 paper nổi bật, từ DeepSeek V4, Autogenesis, Skill-RAG cho tới Stateless Decision Memory và Diversity Collapse. Điểm đáng chú ý không chỉ là từng paper riêng lẻ, mà là cả list này đang vẽ ra 3 hướng lớn của AI hiện tại: long-context open models, agent self-improvement, và hạ tầng để agent thực sự scale trong thế giới thật.</description>
       <category>AI Research</category>
       <enclosure url="https://escbase.xyz/images/top-ai-papers-week-apr-26-thumb.svg" type="image/svg+xml" length="0" />
-    </item>
-    <item>
-      <title>12 Prompt NotebookLM Để Đọc Sách Xong Không Quên Sạch: Từ Tóm Ý Tới Action Plan</title>
-      <link>https://escbase.xyz/blog/notebooklm-book-prompts</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/notebooklm-book-prompts</guid>
-      <pubDate>Sun, 26 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Một thread đang được share khá mạnh trên X vừa gom 12 prompt NotebookLM để biến một cuốn sách thành action plan, permanent notes, recall test và insight dùng được. Điểm hay là nó không chỉ dừng ở chuyện tóm tắt sách, mà cố kéo người đọc từ tiêu thụ thụ động sang ghi nhớ, phản biện và hành động.</description>
-      <category>AI Learning</category>
-      <enclosure url="https://escbase.xyz/images/notebooklm-book-prompts-thumb.svg" type="image/svg+xml" length="0" />
     </item>
   </channel>
 </rss>

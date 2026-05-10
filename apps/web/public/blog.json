@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/peekaboo-3-macos-computer-use/",
+    "title": "Peekaboo 3.0: Mac Automation Đã Biết Nhìn Màn Hình Và Tự Bấm",
+    "excerpt": "Peekaboo 3.0 mang action-first computer use lên macOS: chụp màn hình, nhận diện UI, click/type/scroll qua CLI hoặc MCP cho Codex, Claude Code và Cursor.",
+    "date": "May 10, 2026",
+    "tag": "AI Agents",
+    "tagIcon": "fas fa-robot",
+    "tagColor": "#22d3ee",
+    "readTime": "5 phút đọc",
+    "featured": true,
+    "image": "/images/peekaboo-3-macos-computer-use-thumb.png"
+  },
+  {
     "url": "/blog/goalcraft-codex-goal-skill/",
     "title": "Goalcraft: Codex Skill Giúp Viết /goal Không Thể Lươn",
     "excerpt": "Goalcraft là Codex skill giúp biến ý tưởng mơ hồ thành /goal rõ scope, có evidence, verification và stop rules để agent không fake done.",
