@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🛠️ Agent Harness: Tại Sao Model Tốt Vẫn Chưa Đủ | Escbase</title>
+  <meta name="description" content="Addy Osmani phân tích harness engineering: tại sao decent model + great harness luôn thắng great model + bad harness. Mỗi lỗi agent mắc phải đều phải trở thành 1 rule vĩnh viễn.">
+  <meta property="og:title" content="🛠️ Agent Harness: Tại Sao Model Tốt Vẫn Chưa Đủ">
+  <meta property="og:description" content="Addy Osmani phân tích harness engineering: tại sao decent model + great harness luôn thắng great model + bad harness.">
+  <meta property="og:url" content="https://news.escbase.xyz/blog/addy-osmani-harness-engineering/">
+  <meta property="og:image" content="https://news.escbase.xyz/images/addy-osmani-harness-thumb.png">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Escbase">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="🛠️ Agent Harness: Tại Sao Model Tốt Vẫn Chưa Đủ">
+  <meta name="twitter:description" content="Addy Osmani phân tích harness engineering: decent model + great harness luôn thắng.">
+  <meta name="twitter:image" content="https://news.escbase.xyz/images/addy-osmani-harness-thumb.png">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/shared-article.css">
+  <link rel="stylesheet" href="/shared-article-footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    .article-hero-thumb { width:100%; aspect-ratio:16/9; overflow:hidden; border-radius:var(--radius-md); margin-bottom:2rem; border:1px solid var(--border); }
+    .article-hero-thumb img { width:100%; height:100%; object-fit:cover; display:block; }
+  </style>
+</head>
+<body>
+
+  <div class="article-wrap">
+    <div class="article-container">
+
+      <div class="article-hero-thumb">
+        <img src="/images/addy-osmani-harness-thumb.png" alt="Agent Harness Engineering thumbnail">
+      </div>
+
+      <div class="article-meta-header">
+        <span class="tag" style="color:#f7931a;"><i class="fas fa-robot"></i> AI Agents</span>
+        <span class="date">May 10, 2026</span>
+        <span class="read-time"><i class="far fa-clock"></i> 7 phút đọc</span>
+      </div>
+
+      <h1>🛠️ Agent Harness: Tại Sao Model Tốt Vẫn Chưa Đủ</h1>
+
+      <p class="lead">Hai năm qua, cả ngành chỉ tranh cãi model nào "thông minh" nhất. Addy Osmani chỉ ra điều mọi người bỏ qua: <strong>model chỉ là 1 input</strong>. Phần còn lại — prompts, tools, hooks, sandboxes, subagents, feedback loops — mới thực sự quyết định agent làm được gì.</p>
+
+      <h2>📰 "Agent Harness Engineering" là gì?</h2>
+
+      <p>Concept này do <strong>@Vtrivedy10</strong> đặt tên. Định nghĩa cốt lõi:</p>
+
+      <blockquote>
+        Agent = Model + Harness. Nếu bạn không phải model, bạn là harness.
+      </blockquote>
+
+      <p>Harness = toàn bộ code, config, và execution logic <strong>không phải model</strong>. Bao gồm:</p>
+
+      <ul>
+        <li>System prompts, CLAUDE.md, AGENTS.md, skill files, subagent instructions</li>
+        <li>Tools, MCP servers, và technical descriptions của chúng</li>
+        <li>Filesystem, sandboxes, headless browsers</li>
+        <li>Orchestration logic: spawn subagents, handoffs, routing models</li>
+        <li>Hooks &amp; middleware: lint checks, context compaction, deterministic execution</li>
+        <li>Observability: logs, traces, cost &amp; latency metering</li>
+      </ul>
+
+      <p>Raw model không phải agent. Nó chỉ thành agent khi harness cung cấp state, tool execution, feedback loops, và enforceable constraints.</p>
+
+      <h2>⚖️ Decent Model + Great Harness > Great Model + Bad Harness</h2>
+
+      <p>Claude Code, Cursor, Codex, Aider, Cline — tất cả đều là harness. Model bên dưới có thể giống nhau, nhưng behavior bạn trải nghiệm phụ thuộc 90% vào harness.</p>
+
+      <p>Benchmark thực tế chứng minh: <strong>model leading chạy trong framework off-the-shelf thường score thấp hơn</strong> cùng model đó chạy trong custom harness highly-tuned. Di chuyển model sang environment có codebase tools tốt hơn, prompts chặt hơn, back-pressure sharper — capabilities bị bỏ lỡ trước đó sẽ xuất hiện.</p>
+
+      <p>Khoảng cách giữa "model theoretically có thể làm gì" và "bạn thực sự thấy nó làm gì" — phần lớn là <strong>harness gap</strong>.</p>
+
+      <h2>🔧 Reframe "Skill Issue"</h2>
+
+      <p>Khi agent làm điều vô lý, engineer mặc định đổ lỗi model: "Đợi version tiếp theo." Harness engineering từ chối mindset này.</p>
+
+      <ul>
+        <li>Agent ignore convention? → Thêm vào AGENTS.md.</li>
+        <li>Chạy destructive command? → Viết hook block nó.</li>
+        <li>Lost trong task 40 bước? → Tách thành planner + executor.</li>
+        <li>Code broken khi finish? → Wire type-checking back-pressure vào loop.</li>
+      </ul>
+
+      <p>HumanLayer nói thẳng: <strong>"It's not a model problem. It's a configuration problem."</strong></p>
+
+      <h2>⛓️ The Ratchet: Mỗi Lỗi = 1 Rule Vĩnh Viễn</h2>
+
+      <p>Thói quen quan trọng nhất: treat agent mistakes như <strong>permanent signals</strong>, không phải one-off flukes để retry rồi quên.</p>
+
+      <p>Agent ship PR với test bị comment-out rồi bị merge? Đó là input. Lần sau:</p>
+
+      <ul>
+        <li>AGENTS.md phải ghi: "Never comment out tests; delete or fix them."</li>
+        <li>Pre-commit hook auto flag <code>.skip(</code> trong diff.</li>
+        <li>Reviewer subagent updated để block commented-out tests.</li>
+      </ul>
+
+      <p>Constraints chỉ thêm khi observe real failure. Chỉ remove khi capable model render chúng redundant. <strong>Mỗi dòng system prompt phải trace về 1 historical failure cụ thể.</strong></p>
+
+      <h2>🏗️ Working Backwards From Behavior</h2>
+
+      <p>Cách hiệu quả nhất thiết kế harness: bắt đầu từ behavior muốn có → thiết kế component để deliver nó. Mỗi phần harness phải có distinct job. Nếu không đặt tên được behavior cụ thể component đó tồn tại để deliver → remove nó.</p>
+
+      <h3>🗂️ Filesystem &amp; Git — Durable State</h3>
+      <p>Models chỉ operate trên gì fit trong context window. Filesystem cung cấp workspace đọc data, offload intermediate work, và surface cho multiple agents coordinate. Git cho free versioning: track progress, branch experiments, rollback errors.</p>
+
+      <h3>💻 Bash &amp; Code Execution</h3>
+      <p>ReAct loop: reason → act via tool call → observe → repeat. Bash access cho phép agent build what it needs on the fly thay vì pre-build tool cho mọi scenario.</p>
+
+      <h3>🔒 Sandboxes &amp; Default Tooling</h3>
+      <p>Bash chỉ useful khi chạy an toàn. Sandboxes cung cấp isolated environment: pre-installed runtimes, test CLIs, headless browsers — agent observe its own work và close self-verification loop.</p>
+
+      <h3>🧠 Memory &amp; Search — Continual Learning</h3>
+      <p>Models không có knowledge ngoài training weights và current context. Harness bridge gap bằng memory files (AGENTS.md) inject knowledge vào mỗi session. Web search và MCP tools cho real-time info.</p>
+
+      <h3>📉 Battling Context Rot</h3>
+      <p>Models degrade khi context windows fill up. Ba technique chính:</p>
+      <ul>
+        <li><strong>Compaction:</strong> Summarize và offload older context.</li>
+        <li><strong>Tool-call offloading:</strong> Store massive outputs (2000-line logs) trong filesystem, chỉ giữ headers/footers trong context.</li>
+        <li><strong>Progressive disclosure:</strong> Reveal instructions/tools chỉ khi task explicitly requires, không load everything at startup.</li>
+      </ul>
+
+      <h3>🎯 Long-Horizon Execution</h3>
+      <p>Autonomous work suffer từ early stopping và poor problem decomposition:</p>
+      <ul>
+        <li><strong>Loops:</strong> Intercept attempt to exit, force continue against completion goal trong fresh context window.</li>
+        <li><strong>Planning:</strong> Force decompose goals into step-by-step plan file, self-verify sau mỗi step.</li>
+        <li><strong>Splits:</strong> Tách generation và evaluation thành distinct agents, tránh positive bias khi model grade own work.</li>
+      </ul>
+
+      <h3>🪝 Hooks = Enforcement Layer</h3>
+      <p>Hooks bridge gap giữa request action và enforce nó. Chạy at specific lifecycles: before tool call, after file edit, before commit. Block destructive commands, enforce auto-formatting tiết kiệm tokens, run test suites.</p>
+      <p>Ideally: <strong>success silent, failures verbose</strong>. Typecheck pass → agent nghe không gì; fail → error inject trực tiếp vào loop cho self-correction.</p>
+
+      <h2>🏭 What This Looks Like in Production</h2>
+
+      <p>Hình ảnh rõ nhất của mature harness: <strong>Fareed Khan's breakdown of Claude Code's architecture</strong>. Hầu như mọi concept ở trên đều xuất hiện như named component:</p>
+
+      <ul>
+        <li>Context injection = knowledge layer</li>
+        <li>Loop state trong memory store + worktree isolator</li>
+        <li>Destructive-action hooks sau permission gate</li>
+        <li>Subagent context firewalls = multi-agent layer</li>
+        <li>Tool dispatch registry nơi MCP servers và bash plug in</li>
+      </ul>
+
+      <p>Claude Code's trajectory không chỉ về model — <strong>ít nhất ngang bằng về harness</strong>.</p>
+
+      <h2>📈 Harnesses Don't Shrink, They Move</h2>
+
+      <p>Khi models improve, need for harness không biến mất — <strong>nó dịch chuyển</strong>. Model upgrade giảm need cho "context-anxiety" mitigations, nhưng floor raises thì ceiling cũng raises. Tasks trước đó unreachable giờ in play, mang theo <strong>entirely new failure modes</strong>.</p>
+
+      <p>Mỗi component trong harness encode assumption về model không thể tự làm gì. Khi model improve, outdated scaffolding nên removed, và new scaffolding built để reach next horizon.</p>
+
+      <h2>🔁 Training Loop Feedback</h2>
+
+      <p>Có active feedback loop giữa harness design và model training. Today's models thường post-trained với specific harnesses in the loop — tạo degree of overfitting. Model trở nên cực kỳ giỏi tại actions harness designers prioritize (filesystem ops, bash, subagent dispatch).</p>
+
+      <p>Điều này biến harness thành <strong>living system</strong>, không phải static config file. "Best" harness là harness optimized specifically cho distinct tasks và workflows của bạn.</p>
+
+      <h2>☁️ Harness-as-a-Service (HaaS)</h2>
+
+      <p>Ngành đang shift từ building on LLM APIs (completions) sang building on <strong>Harness APIs (runtime)</strong>. SDKs giờ offer loop, tools, context management, hooks, sandboxes out of the box.</p>
+
+      <p>Thay vì build orchestration từ scratch, modern default là: select harness framework → configure core pillars → focus purely on domain-specific prompt và tool design.</p>
+
+      <p>Đây là lý do troubleshooting scalable: bạn tuning well-factored configuration surface thay vì reinvent entire agent architecture.</p>
+
+      <h2>💬 Community Reaction: Không Phải Ai Cũng Đồng Ý</h2>
+
+      <p>Thread của Addy nhận được rất nhiều engagement, nhưng cũng có phản biện đáng chú ý:</p>
+
+      <p><strong>@web3nomad</strong> tranh luận: <em>"This assumes mistakes are deterministic bugs you can patch out. But a lot of agent failures aren't bugs — they're judgment calls. 'Should I refactor this now or ship it' isn't something you engineer a permanent solution for. It's taste."</em></p>
+
+      <p>Điểm này valid. Harness engineering giải quyết được lỗi <strong>repeatable</strong>, nhưng judgment calls và taste vẫn là gray area mà model — dù có harness tốt — chưa chắc xử lý được.</p>
+
+      <p><strong>@jkntji</strong> bổ sung: <em>"One thing it misses covering is Evals. Evals, harnesses and models go hand in hand. When a model changes, the evals help tune the harness for the new model."</em></p>
+
+      <p>Đúng. Harness không phải set-and-forget. Cần eval pipeline liên tục để validate harness vẫn optimal khi underlying model evolve.</p>
+
+      <p><strong>@jsyqrt</strong> nhấn mạnh inter-agent layer: <em>"The harness doesn't stop at single agent boundary. How agent A packages output for agent B, what context it preserves, what it strips — that IS harness. And in practice, the inter-agent harness matters more than any single agent's scaffolding."</em></p>
+
+      <h2>🎯 Kết Luận</h2>
+
+      <p>Addy Osmani đặt tên và tổng hợp một trend đã happening: <strong>harness engineering convergence</strong>. Top coding agents hôm nay trông giống nhau hơn so với underlying models của chúng. Patterns đang converge về loop structure, tool design, context management, và enforcement layers.</p>
+
+      <p>Điều này có nghĩa: <strong>interesting engineering work không còn nằm ở selecting model</strong>, mà ở designing scaffolding around it. Mỗi lỗi agent mắc phải phải trở thành permanent solution. Mỗi component harness phải trace về behavior cụ thể.</p>
+
+      <p>Nếu bạn đang xây agent — đừng chỉ hỏi "model nào tốt nhất?" Hãy hỏi: <strong>"Harness của tôi có đủ chặt để biến model thành reliable worker không?"</strong></p>
+
+      <p>Và nhớ: harness tốt nhất không phải framework generic. Nó là harness <strong>optimized cho distinct tasks và workflows của bạn</strong> — và nó sẽ liên tục evolve cùng model.</p>
+
+      <div class="tags">
+        <span class="tag">#AIAgents</span>
+        <span class="tag">#AgentHarness</span>
+        <span class="tag">#ClaudeCode</span>
+        <span class="tag">#Cursor</span>
+        <span class="tag">#Codex</span>
+        <span class="tag">#AddyOsmani</span>
+        <span class="tag">#Engineering</span>
+      </div>
+
+    </div>
+
+    <div class="article-cta-stack">
+      <a href="/blog/peekaboo-3-macos-computer-use/" class="article-suggestion-card">
+        <span class="article-suggestion-label"><i class="fas fa-book-open"></i> Đọc tiếp</span>
+        <span class="article-suggestion-title">Peekaboo 3.0: Mac Automation Đã Biết Nhìn Màn Hình Và Tự Bấm</span>
+      </a>
+      <div class="article-cta-actions">
+        <a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a>
+      </div>
+    </div>
+
+    <div class="back-to-blog-footer">
+      <a href="/blog" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại Blog</a>
+    </div>
+
+  </div>
+
+  <script src="/shared-article.js"></script>
+
+</body>
+</html>

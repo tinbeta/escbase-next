@@ -8,6 +8,15 @@
     <lastBuildDate>Sat, 09 May 2026 17:00:00 GMT</lastBuildDate>
     <atom:link href="https://news.escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>🛠️ Agent Harness: Tại Sao Model Tốt Vẫn Chưa Đủ</title>
+      <link>https://news.escbase.xyz/blog/addy-osmani-harness-engineering/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/addy-osmani-harness-engineering/</guid>
+      <pubDate>Sat, 09 May 2026 17:00:00 GMT</pubDate>
+      <description>Addy Osmani phân tích harness engineering: tại sao decent model + great harness luôn thắng great model + bad harness. Mỗi lỗi agent mắc phải đều phải trở thành 1 rule vĩnh viễn.</description>
+      <category>AI Agents</category>
+      <enclosure url="https://news.escbase.xyz/images/addy-osmani-harness-thumb.png" type="image/png" length="0" />
+    </item>
+    <item>
       <title>Peekaboo 3.0: Mac Automation Đã Biết Nhìn Màn Hình Và Tự Bấm</title>
       <link>https://news.escbase.xyz/blog/peekaboo-3-macos-computer-use/</link>
       <guid isPermaLink="true">https://news.escbase.xyz/blog/peekaboo-3-macos-computer-use/</guid>
@@ -447,15 +456,6 @@
       <description>Matthew Berman vừa đăng một thread khá thẳng về DeepSeek V4: đây không chỉ là một model open-weight mạnh và rẻ, mà là mối đe doạ thật sự với economics của OpenAI, Anthropic và cả chiến lược AI của Mỹ. Điểm đáng bàn không chỉ là benchmark, mà là khi model &apos;đủ tốt&apos; ở mức giá quá thấp, enterprise math sẽ bắt đầu đổi chiều.</description>
       <category>Market Structure</category>
       <enclosure url="https://news.escbase.xyz/images/deepseek-v4-serious-threat-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>Top AI Papers Của Tuần (19-26/4): DeepSeek V4, Autogenesis, Skill-RAG, Stateless Memory</title>
-      <link>https://news.escbase.xyz/blog/top-ai-papers-week-apr-26/</link>
-      <guid isPermaLink="true">https://news.escbase.xyz/blog/top-ai-papers-week-apr-26/</guid>
-      <pubDate>Sun, 26 Apr 2026 17:00:00 GMT</pubDate>
-      <description>DAIR.AI vừa đăng round-up Top AI Papers of the Week với 10 paper nổi bật, từ DeepSeek V4, Autogenesis, Skill-RAG cho tới Stateless Decision Memory và Diversity Collapse. Điểm đáng chú ý không chỉ là từng paper riêng lẻ, mà là cả list này đang vẽ ra 3 hướng lớn của AI hiện tại: long-context open models, agent self-improvement, và hạ tầng để agent thực sự scale trong thế giới thật.</description>
-      <category>AI Research</category>
-      <enclosure url="https://news.escbase.xyz/images/top-ai-papers-week-apr-26-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>

@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/addy-osmani-harness-engineering/",
+    "title": "🛠️ Agent Harness: Tại Sao Model Tốt Vẫn Chưa Đủ",
+    "excerpt": "Addy Osmani phân tích harness engineering: tại sao decent model + great harness luôn thắng great model + bad harness. Mỗi lỗi agent mắc phải đều phải trở thành 1 rule vĩnh viễn.",
+    "date": "May 10, 2026",
+    "tag": "AI Agents",
+    "tagIcon": "fas fa-robot",
+    "tagColor": "#f7931a",
+    "readTime": "7 phút",
+    "featured": true,
+    "image": "/images/addy-osmani-harness-thumb.png"
+  },
+  {
     "url": "/blog/peekaboo-3-macos-computer-use/",
     "title": "Peekaboo 3.0: Mac Automation Đã Biết Nhìn Màn Hình Và Tự Bấm",
     "excerpt": "Peekaboo 3.0 mang action-first computer use lên macOS: chụp màn hình, nhận diện UI, click/type/scroll qua CLI hoặc MCP cho Codex, Claude Code và Cursor.",
