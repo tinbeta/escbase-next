@@ -261,8 +261,8 @@
     </item>
     <item>
       <title>OpenClaw Pivot: Dùng ChatGPT Plus Login Thay Thế Claude API Sau Khi Bị Anthropic Cấm</title>
-      <link>https://escbase.xyz/blog/openclaw-chatgpt-login-pivot</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/openclaw-chatgpt-login-pivot</guid>
+      <link>https://escbase.xyz/blog/openclaw-chatgpt-login-pivot/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/openclaw-chatgpt-login-pivot/</guid>
       <pubDate>Fri, 01 May 2026 17:00:00 GMT</pubDate>
       <description>Anthropic cấm OpenClaw dùng Claude Pro/Max subscriptions từ 4/4/2026. OpenClaw pivot sang ChatGPT Plus login để truy cập Codex với near-unlimited, không cần API key. OpenAI ủng hộ openness, Anthropic lock-down.</description>
       <category>AI Agent</category>
@@ -396,8 +396,8 @@
     </item>
     <item>
       <title>Arkham đang muốn biến Claude thành cửa vào dữ liệu on-chain</title>
-      <link>https://escbase.xyz/blog/arkham-api-claude</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/arkham-api-claude</guid>
+      <link>https://escbase.xyz/blog/arkham-api-claude/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/arkham-api-claude/</guid>
       <pubDate>Mon, 27 Apr 2026 17:00:00 GMT</pubDate>
       <description>Arkham vừa đăng một thread khá rõ ràng về cách nối Claude với Arkham API chỉ trong 6 bước. Điểm đáng chú ý không nằm ở vài lệnh cài đặt, mà ở chỗ Arkham đang cố biến dữ liệu on-chain thành thứ có thể hỏi bằng ngôn ngữ tự nhiên, để agent gọi API, đọc kết quả và trả lại ngay trong chat.</description>
       <category>On-chain Tools</category>
@@ -405,8 +405,8 @@
     </item>
     <item>
       <title>OpenClaw 2026.4.25 có gì đáng chú ý?</title>
-      <link>https://escbase.xyz/blog/openclaw-2026-4-25</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/openclaw-2026-4-25</guid>
+      <link>https://escbase.xyz/blog/openclaw-2026-4-25/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/openclaw-2026-4-25/</guid>
       <pubDate>Mon, 27 Apr 2026 17:00:00 GMT</pubDate>
       <description>OpenClaw 2026.4.25 không phải kiểu bản cập nhật chỉ thêm vài tính năng cho đẹp bảng tin. Lõi của nó nằm ở chỗ khác: giọng nói được nâng cấp mạnh hơn, plugin khởi động nhanh hơn, hệ thống theo dõi lỗi và luồng chạy sâu hơn, và phần cài đặt - cập nhật - trình duyệt được vá để bớt chết vặt.</description>
       <category>Agent Tools</category>
@@ -414,8 +414,8 @@
     </item>
     <item>
       <title>Vụ kiện Elon - OpenAI thực chất là gì?</title>
-      <link>https://escbase.xyz/blog/vu-kien-elon-openai</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/vu-kien-elon-openai</guid>
+      <link>https://escbase.xyz/blog/vu-kien-elon-openai/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/vu-kien-elon-openai/</guid>
       <pubDate>Mon, 27 Apr 2026 17:00:00 GMT</pubDate>
       <description>Vụ Elon Musk kiện OpenAI không chỉ là màn đấu khẩu giữa hai ông lớn AI. Gốc rễ của nó là một câu hỏi khó hơn nhiều: một tổ chức sinh ra với danh nghĩa vì lợi ích chung có thể biến phần lớn giá trị tạo ra thành lợi ích tư nhân đến mức nào, nhất là khi cuộc đua AI đòi hỏi lượng vốn khổng lồ?</description>
       <category>AI &amp; Pháp lý</category>
@@ -423,8 +423,8 @@
     </item>
     <item>
       <title>Workshop 30 Phút Của Anthropic Chỉ Ra Cách Dùng Claude Code Cho Đúng</title>
-      <link>https://escbase.xyz/blog/claude-code-live-best-practices</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/claude-code-live-best-practices</guid>
+      <link>https://escbase.xyz/blog/claude-code-live-best-practices/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/claude-code-live-best-practices/</guid>
       <pubDate>Mon, 27 Apr 2026 17:00:00 GMT</pubDate>
       <description>Jouhatsu vừa chia sẻ một workshop 30 phút của Anthropic về Claude Code và gọi nó là thứ đáng bookmark hơn cả mấy khóa học AI 500 đô. Sau khi bóc kỹ nội dung video, điểm đáng giá nhất là workshop này rất cụ thể: bắt đầu từ codebase Q&amp;A, luôn plan trước khi sửa lớn, dùng CLAUDE.md để nhồi context, dùng Puppeteer và test làm vòng phản hồi, và biến Claude Code thành một phần của workflow ship code thật.</description>
       <category>Dev Tools</category>
@@ -432,8 +432,8 @@
     </item>
     <item>
       <title>Sam Altman Nói Gì Về Post-AGI Và GPT-5.5 Codex: AI Có Thể Không Giết Việc, Mà Tăng Cường Cơn Nghiện Làm</title>
-      <link>https://escbase.xyz/blog/sam-altman-post-agi-work-codex</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/sam-altman-post-agi-work-codex</guid>
+      <link>https://escbase.xyz/blog/sam-altman-post-agi-work-codex/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/sam-altman-post-agi-work-codex/</guid>
       <pubDate>Sun, 26 Apr 2026 17:00:00 GMT</pubDate>
       <description>Một tweet ngắn của Sam Altman vừa chạm đúng nghịch lý lớn nhất của AI thời điểm này: người ta vừa lo post-AGI sẽ khiến không ai phải làm việc nữa, vừa hưng phấn đến mức muốn cắt bớt giấc ngủ vì GPT-5.5 trong Codex quá tốt. Điểm đáng bàn là AI có thể không xóa lao động theo cách nhiều người tưởng, mà nén thời gian, tăng tốc độ ship và đẩy những người nhiều agency vào vòng làm việc dữ hơn.</description>
       <category>AI Work</category>
@@ -441,8 +441,8 @@
     </item>
     <item>
       <title>Matthew Berman: DeepSeek V4 Là Mối Đe Doạ Thật Sự Với Labs Mỹ</title>
-      <link>https://escbase.xyz/blog/deepseek-v4-serious-threat</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/deepseek-v4-serious-threat</guid>
+      <link>https://escbase.xyz/blog/deepseek-v4-serious-threat/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/deepseek-v4-serious-threat/</guid>
       <pubDate>Sun, 26 Apr 2026 17:00:00 GMT</pubDate>
       <description>Matthew Berman vừa đăng một thread khá thẳng về DeepSeek V4: đây không chỉ là một model open-weight mạnh và rẻ, mà là mối đe doạ thật sự với economics của OpenAI, Anthropic và cả chiến lược AI của Mỹ. Điểm đáng bàn không chỉ là benchmark, mà là khi model &apos;đủ tốt&apos; ở mức giá quá thấp, enterprise math sẽ bắt đầu đổi chiều.</description>
       <category>Market Structure</category>
@@ -450,8 +450,8 @@
     </item>
     <item>
       <title>Top AI Papers Của Tuần (19-26/4): DeepSeek V4, Autogenesis, Skill-RAG, Stateless Memory</title>
-      <link>https://escbase.xyz/blog/top-ai-papers-week-apr-26</link>
-      <guid isPermaLink="true">https://escbase.xyz/blog/top-ai-papers-week-apr-26</guid>
+      <link>https://escbase.xyz/blog/top-ai-papers-week-apr-26/</link>
+      <guid isPermaLink="true">https://escbase.xyz/blog/top-ai-papers-week-apr-26/</guid>
       <pubDate>Sun, 26 Apr 2026 17:00:00 GMT</pubDate>
       <description>DAIR.AI vừa đăng round-up Top AI Papers of the Week với 10 paper nổi bật, từ DeepSeek V4, Autogenesis, Skill-RAG cho tới Stateless Decision Memory và Diversity Collapse. Điểm đáng chú ý không chỉ là từng paper riêng lẻ, mà là cả list này đang vẽ ra 3 hướng lớn của AI hiện tại: long-context open models, agent self-improvement, và hạ tầng để agent thực sự scale trong thế giới thật.</description>
       <category>AI Research</category>

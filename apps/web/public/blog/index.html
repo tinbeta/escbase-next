@@ -79,6 +79,7 @@
                 const grid = document.getElementById('postsGrid');
                 grid.innerHTML = posts.map(post => `
                     <a href="${post.url}" class="bento-item col-4">
+                        <div class="card-thumb">${post.image ? `<img src="${post.image}" alt="${post.title}" loading="lazy">` : `<div class="card-thumb-placeholder"><i class="fas fa-newspaper"></i></div>`}</div>
                         <div class="card-meta">
                             <span class="card-tag" style="color:${post.tagColor};border-color:${post.tagColor}33;background:${post.tagColor}1a;">
                                 <i class="${post.tagIcon || 'fas fa-newspaper'}"></i> ${post.tag}

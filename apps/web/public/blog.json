@@ -335,7 +335,7 @@
     "image": "/images/grok-4-3-cost-efficiency-pareto-frontier-thumb.png"
   },
   {
-    "url": "/blog/openclaw-chatgpt-login-pivot",
+    "url": "/blog/openclaw-chatgpt-login-pivot/",
     "title": "OpenClaw Pivot: Dùng ChatGPT Plus Login Thay Thế Claude API Sau Khi Bị Anthropic Cấm",
     "excerpt": "Anthropic cấm OpenClaw dùng Claude Pro/Max subscriptions từ 4/4/2026. OpenClaw pivot sang ChatGPT Plus login để truy cập Codex với near-unlimited, không cần API key. OpenAI ủng hộ openness, Anthropic lock-down.",
     "date": "May 02, 2026",
@@ -515,7 +515,7 @@
     "image": "/images/openclaw-2026-4-26-release-thumb.svg"
   },
   {
-    "url": "/blog/arkham-api-claude",
+    "url": "/blog/arkham-api-claude/",
     "title": "Arkham đang muốn biến Claude thành cửa vào dữ liệu on-chain",
     "excerpt": "Arkham vừa đăng một thread khá rõ ràng về cách nối Claude với Arkham API chỉ trong 6 bước. Điểm đáng chú ý không nằm ở vài lệnh cài đặt, mà ở chỗ Arkham đang cố biến dữ liệu on-chain thành thứ có thể hỏi bằng ngôn ngữ tự nhiên, để agent gọi API, đọc kết quả và trả lại ngay trong chat.",
     "date": "Apr 28, 2026",
@@ -527,7 +527,7 @@
     "image": "/images/arkham-api-claude-thumb.svg"
   },
   {
-    "url": "/blog/openclaw-2026-4-25",
+    "url": "/blog/openclaw-2026-4-25/",
     "title": "OpenClaw 2026.4.25 có gì đáng chú ý?",
     "excerpt": "OpenClaw 2026.4.25 không phải kiểu bản cập nhật chỉ thêm vài tính năng cho đẹp bảng tin. Lõi của nó nằm ở chỗ khác: giọng nói được nâng cấp mạnh hơn, plugin khởi động nhanh hơn, hệ thống theo dõi lỗi và luồng chạy sâu hơn, và phần cài đặt - cập nhật - trình duyệt được vá để bớt chết vặt.",
     "date": "Apr 28, 2026",
@@ -539,7 +539,7 @@
     "image": "/images/openclaw-2026-4-25-thumb.svg"
   },
   {
-    "url": "/blog/vu-kien-elon-openai",
+    "url": "/blog/vu-kien-elon-openai/",
     "title": "Vụ kiện Elon - OpenAI thực chất là gì?",
     "excerpt": "Vụ Elon Musk kiện OpenAI không chỉ là màn đấu khẩu giữa hai ông lớn AI. Gốc rễ của nó là một câu hỏi khó hơn nhiều: một tổ chức sinh ra với danh nghĩa vì lợi ích chung có thể biến phần lớn giá trị tạo ra thành lợi ích tư nhân đến mức nào, nhất là khi cuộc đua AI đòi hỏi lượng vốn khổng lồ?",
     "date": "Apr 28, 2026",
@@ -551,7 +551,7 @@
     "image": "/images/elon-openai-vu-kien-thumb.svg"
   },
   {
-    "url": "/blog/claude-code-live-best-practices",
+    "url": "/blog/claude-code-live-best-practices/",
     "title": "Workshop 30 Phút Của Anthropic Chỉ Ra Cách Dùng Claude Code Cho Đúng",
     "excerpt": "Jouhatsu vừa chia sẻ một workshop 30 phút của Anthropic về Claude Code và gọi nó là thứ đáng bookmark hơn cả mấy khóa học AI 500 đô. Sau khi bóc kỹ nội dung video, điểm đáng giá nhất là workshop này rất cụ thể: bắt đầu từ codebase Q&A, luôn plan trước khi sửa lớn, dùng CLAUDE.md để nhồi context, dùng Puppeteer và test làm vòng phản hồi, và biến Claude Code thành một phần của workflow ship code thật.",
     "date": "Apr 28, 2026",
@@ -563,7 +563,7 @@
     "image": "/images/claude-code-live-best-practices-thumb.svg"
   },
   {
-    "url": "/blog/sam-altman-post-agi-work-codex",
+    "url": "/blog/sam-altman-post-agi-work-codex/",
     "title": "Sam Altman Nói Gì Về Post-AGI Và GPT-5.5 Codex: AI Có Thể Không Giết Việc, Mà Tăng Cường Cơn Nghiện Làm",
     "excerpt": "Một tweet ngắn của Sam Altman vừa chạm đúng nghịch lý lớn nhất của AI thời điểm này: người ta vừa lo post-AGI sẽ khiến không ai phải làm việc nữa, vừa hưng phấn đến mức muốn cắt bớt giấc ngủ vì GPT-5.5 trong Codex quá tốt. Điểm đáng bàn là AI có thể không xóa lao động theo cách nhiều người tưởng, mà nén thời gian, tăng tốc độ ship và đẩy những người nhiều agency vào vòng làm việc dữ hơn.",
     "date": "Apr 27, 2026",
@@ -575,7 +575,7 @@
     "image": "/images/sam-altman-post-agi-work-codex-thumb.svg"
   },
   {
-    "url": "/blog/deepseek-v4-serious-threat",
+    "url": "/blog/deepseek-v4-serious-threat/",
     "title": "Matthew Berman: DeepSeek V4 Là Mối Đe Doạ Thật Sự Với Labs Mỹ",
     "excerpt": "Matthew Berman vừa đăng một thread khá thẳng về DeepSeek V4: đây không chỉ là một model open-weight mạnh và rẻ, mà là mối đe doạ thật sự với economics của OpenAI, Anthropic và cả chiến lược AI của Mỹ. Điểm đáng bàn không chỉ là benchmark, mà là khi model 'đủ tốt' ở mức giá quá thấp, enterprise math sẽ bắt đầu đổi chiều.",
     "date": "Apr 27, 2026",
@@ -587,7 +587,7 @@
     "image": "/images/deepseek-v4-serious-threat-thumb.svg"
   },
   {
-    "url": "/blog/top-ai-papers-week-apr-26",
+    "url": "/blog/top-ai-papers-week-apr-26/",
     "title": "Top AI Papers Của Tuần (19-26/4): DeepSeek V4, Autogenesis, Skill-RAG, Stateless Memory",
     "excerpt": "DAIR.AI vừa đăng round-up Top AI Papers of the Week với 10 paper nổi bật, từ DeepSeek V4, Autogenesis, Skill-RAG cho tới Stateless Decision Memory và Diversity Collapse. Điểm đáng chú ý không chỉ là từng paper riêng lẻ, mà là cả list này đang vẽ ra 3 hướng lớn của AI hiện tại: long-context open models, agent self-improvement, và hạ tầng để agent thực sự scale trong thế giới thật.",
     "date": "Apr 27, 2026",
@@ -599,7 +599,7 @@
     "image": "/images/top-ai-papers-week-apr-26-thumb.svg"
   },
   {
-    "url": "/blog/notebooklm-book-prompts",
+    "url": "/blog/notebooklm-book-prompts/",
     "title": "12 Prompt NotebookLM Để Đọc Sách Xong Không Quên Sạch: Từ Tóm Ý Tới Action Plan",
     "excerpt": "Một thread đang được share khá mạnh trên X vừa gom 12 prompt NotebookLM để biến một cuốn sách thành action plan, permanent notes, recall test và insight dùng được. Điểm hay là nó không chỉ dừng ở chuyện tóm tắt sách, mà cố kéo người đọc từ tiêu thụ thụ động sang ghi nhớ, phản biện và hành động.",
     "date": "Apr 27, 2026",
@@ -611,7 +611,7 @@
     "image": "/images/notebooklm-book-prompts-thumb.svg"
   },
   {
-    "url": "/blog/openai-our-principles",
+    "url": "/blog/openai-our-principles/",
     "title": "Sam Altman Nêu 5 Nguyên Tắc Của OpenAI: Democratization, Empowerment, Prosperity, Resilience, Adaptability",
     "excerpt": "Sam Altman vừa đăng một post rất ngắn trên X, nhưng link đính kèm lại là một tuyên ngôn khá rõ của OpenAI về 5 nguyên tắc định hướng: democratization, empowerment, universal prosperity, resilience và adaptability. Điểm đáng chú ý không chỉ là những từ nghe đẹp, mà là việc OpenAI đang công khai tự mô tả các trade-off giữa mở rộng truy cập, an toàn, hạ tầng compute, chi phí và quyền lực.",
     "date": "Apr 27, 2026",
@@ -623,7 +623,7 @@
     "image": "/images/openai-our-principles-thumb.svg"
   },
   {
-    "url": "/blog/ai-chip-architectures-cpu-gpu-tpu-npu-lpu",
+    "url": "/blog/ai-chip-architectures-cpu-gpu-tpu-npu-lpu/",
     "title": "CPU, GPU, TPU, NPU, LPU Khác Nhau Ở Đâu: 5 Kiến Trúc Chip Đang Gánh AI Hiện Tại",
     "excerpt": "Một thread đang được share khá mạnh trên X vừa tóm gọn 5 kiến trúc phần cứng gánh AI hiện tại: CPU, GPU, TPU, NPU và LPU. Điểm quan trọng không nằm ở chuyện nhớ tên chip, mà ở việc mỗi loại đánh đổi rất khác nhau giữa tính linh hoạt, mức độ song song và cách truy cập bộ nhớ.",
     "date": "Apr 27, 2026",
@@ -635,7 +635,7 @@
     "image": "/images/ai-chip-architectures-cpu-gpu-tpu-npu-lpu-thumb.svg"
   },
   {
-    "url": "/blog/cursor-multitask-async-subagents-worktrees",
+    "url": "/blog/cursor-multitask-async-subagents-worktrees/",
     "title": "Cursor Ra /multitask: Async Subagents, Worktrees Mới Và Multi-Root Workspace Đẩy IDE Thành Hạ Tầng Workflow",
     "excerpt": "Cursor vừa giới thiệu /multitask trong giao diện Cursor 3 mới: async subagents chạy song song thay vì xếp hàng, worktrees tốt hơn cho task nền theo branch riêng, và multi-root workspace để một agent session chạm nhiều repo cùng lúc. Đây là một bước đẩy rõ rệt từ coding assistant sang workflow infrastructure.",
     "date": "Apr 26, 2026",
@@ -647,7 +647,7 @@
     "image": "/images/cursor-multitask-async-subagents-worktrees-thumb.svg"
   },
   {
-    "url": "/blog/deepseek-v4-pro-75-percent-off-api",
+    "url": "/blog/deepseek-v4-pro-75-percent-off-api/",
     "title": "DeepSeek Giảm 75% Giá V4-Pro API Tới 5/5: 1M Context, Cache Hit Chỉ $0.003625",
     "excerpt": "DeepSeek giảm 75% giá V4-Pro API tới 5/5/2026, kéo giá cache hit xuống $0.003625, cache miss còn $0.435 và output còn $0.87 mỗi 1 triệu token. Điểm đáng chú ý không chỉ là rẻ, mà là DeepSeek đang đóng gói V4-Pro như một model dành thẳng cho Claude Code, OpenCode và OpenClaw workflows.",
     "date": "Apr 26, 2026",
@@ -659,7 +659,7 @@
     "image": "/images/deepseek-v4-pro-75-percent-off-api-thumb.svg"
   },
   {
-    "url": "/blog/meta-cuts-10-percent-workforce-ai-push",
+    "url": "/blog/meta-cuts-10-percent-workforce-ai-push/",
     "title": "Meta Cắt 10% Nhân Sự Để Dồn Lực Cho AI: 8.000 Người Ra Đi, 6.000 Vị Trí Mở Bị Huỷ",
     "excerpt": "Meta sẽ cắt khoảng 10% lực lượng lao động, tương đương 8.000 người, đồng thời huỷ kế hoạch tuyển 6.000 vị trí mở để dồn nguồn lực cho AI. Động thái này cho thấy cuộc đua AI đang buộc Big Tech phải tái cấu trúc mạnh tay hơn cả một đợt tiết kiệm chi phí thông thường.",
     "date": "Apr 26, 2026",
@@ -671,7 +671,7 @@
     "image": "/images/meta-cuts-10-percent-workforce-ai-push-thumb.svg"
   },
   {
-    "url": "/blog/openclaw-2026-4-24-release",
+    "url": "/blog/openclaw-2026-4-24-release/",
     "title": "OpenClaw 2026.4.24: Voice Calls, DeepSeek V4, Browser Automation, Và Google Meet",
     "excerpt": "OpenClaw 2026.4.24 ra mắt với hơn 80 thay đổi: voice calls kết nối full agent, DeepSeek V4 Flash trở thành model mặc định, browser automation thêm coordinate clicks, và Google Meet lần đầu tích hợp. Cộng đồng hào hứng nhưng nhiều user gặp lỗi gateway và plugin sau update.",
     "date": "Apr 25, 2026",
@@ -683,7 +683,7 @@
     "image": "/images/openclaw-2026-4-24-thumb.svg"
   },
   {
-    "url": "/blog/devin-ai-engineer-guide",
+    "url": "/blog/devin-ai-engineer-guide/",
     "title": "Devin AI Là Gì? Hướng Dẫn Toàn Diện Cho Người Mới: Use Cases, Pricing, Và Cách Dùng Hiệu Quả",
     "excerpt": "Devin là AI software engineer đầu tiên, xây dựng bởi Cognition AI. Có máy ảo riêng, tự viết code, chạy test, tạo PR. Bài viết giải thích Devin là gì, so sánh với Copilot/Cursor/Claude Code, bảng giá 2026 (Free → $200/tháng), use cases thực tế, và tips dùng hiệu quả.",
     "date": "Apr 25, 2026",
@@ -695,7 +695,7 @@
     "image": "/images/devin-ai-guide-thumb.svg"
   },
   {
-    "url": "/blog/google-maps-imagery-insights-cloud-next-2026",
+    "url": "/blog/google-maps-imagery-insights-cloud-next-2026/",
     "title": "Google Maps Nâng Cấp Imagery Insights: Aerial, Satellite, Solar Và Street View LiDAR Tại Cloud Next 2026",
     "excerpt": "Google Maps Platform công bố 4 nâng cấp lớn cho Imagery Insights tại Cloud Next 2026: Aerial & Satellite Insights phân tích ảnh vệ tinh qua BigQuery, Solar Insights phủ 90% toà nhà Mỹ và EU, Street View LiDAR 280 tỷ ảnh, và Maps Imagery Grounding cho generative AI. Cộng đồng hào hứng nhưng lo ngại privacy và vendor lock-in.",
     "date": "Apr 25, 2026",
@@ -707,7 +707,7 @@
     "image": "/images/google-maps-imagery-insights-thumb.svg"
   },
   {
-    "url": "/blog/google-maps-population-dynamics-insights",
+    "url": "/blog/google-maps-population-dynamics-insights/",
     "title": "Google Maps Ra Population Dynamics Insights: Biến Hành Vi Con Người Thành Embeddings Cho ML",
     "excerpt": "Google Maps Platform vừa công bố PDI — bộ geospatial embeddings đầu tiên chưng cất tín hiệu từ Google Search, Maps, thời tiết và chất lượng không khí thành vector 330 chiều, giao thẳng vào BigQuery. Không cần feature engineering, hiện có ở 17 quốc gia, cập nhật hàng tháng.",
     "date": "Apr 25, 2026",
@@ -719,7 +719,7 @@
     "image": "/images/google-maps-pdi-thumb.svg"
   },
   {
-    "url": "/blog/solo-founder-stack-2026-agents-distribution",
+    "url": "/blog/solo-founder-stack-2026-agents-distribution/",
     "title": "Solo Founder Stack 2026: 5 Việc, 1 Người, Nhưng Moat Thật Vẫn Là Phân Phối",
     "excerpt": "Rohit vừa đẩy mạnh luận điểm one-person company với một stack gồm Claude Code, agent pipelines, Hermes/OpenClaw và Higgsfield. Điểm đáng chú ý không chỉ là chuyện một người làm 5 việc, mà là tranh cãi cộng đồng xoay quanh burnout, chi phí token, phân phối, oncall và việc AI có thật sự thay thế được một team hoàn chỉnh hay không.",
     "date": "Apr 25, 2026",
@@ -731,7 +731,7 @@
     "image": "/images/solo-founder-stack-2026-thumb.png"
   },
   {
-    "url": "/blog/hermes-agent-creative-hackathon-26k-prize-pool",
+    "url": "/blog/hermes-agent-creative-hackathon-26k-prize-pool/",
     "title": "Hermes Agent Creative Hackathon: $26K",
     "excerpt": "Nous Research và Kimi tổ chức Hermes Agent Creative Hackathon với $26,000 tiền thưởng. 16 ngày, 2 hạng mục, tập trung vào video, hình ảnh, âm thanh, 3D và phần mềm sáng tạo. Nhưng cộng đồng đang tranh luận: 1000 ý tưởng từ agent có thực sự mới mẻ không?",
     "date": "Apr 25, 2026",
@@ -743,7 +743,7 @@
     "image": "/images/hermes-agent-creative-hackathon-26k-thumb.png"
   },
   {
-    "url": "/blog/valsai-deepseek-v4-vibe-code-benchmark",
+    "url": "/blog/valsai-deepseek-v4-vibe-code-benchmark/",
     "title": "Vals AI: DeepSeek V4 Là Open-Weight Model Số 1 Trên Vibe Code Bench, Hơn Kimi K2.6 Tới 12 Điểm",
     "excerpt": "Vals AI vừa đưa DeepSeek V4 lên vị trí #1 open-weight model trên Vibe Code Bench v1.1 với 49.93%, bỏ xa Kimi K2.6 ở vị trí #2 với khoảng cách 12.04 điểm. Điều đáng nói không chỉ là top 1 open model, mà là benchmark này đo khả năng xây web app từ đầu với pipeline đánh giá tự động khá nặng tay.",
     "date": "Apr 24, 2026",
@@ -755,7 +755,7 @@
     "image": "/images/valsai-deepseek-v4-vibe-code-thumb.png"
   },
   {
-    "url": "/blog/xai-grok-voice-think-fast-enterprise-voice-agent",
+    "url": "/blog/xai-grok-voice-think-fast-enterprise-voice-agent/",
     "title": "xAI Ra Grok Voice Think Fast 1.0: Đang Bán Voice Agent Cho Workflow Doanh Nghiệp Chứ Không Chỉ Bán Giọng Nói",
     "excerpt": "xAI vừa ra Grok Voice Think Fast 1.0 và điểm đáng chú ý không chỉ là voice model mới. Họ đang bán một voice agent cho customer support, sales, booking và enterprise workflows với tool calling, read-back dữ liệu, 25+ ngôn ngữ, benchmark τ-voice dẫn đầu và case study Starlink khá nặng ký.",
     "date": "Apr 24, 2026",
@@ -767,7 +767,7 @@
     "image": "/images/xai-grok-voice-think-fast-thumb.png"
   },
   {
-    "url": "/blog/openclaw-2026-4-22-release",
+    "url": "/blog/openclaw-2026-4-22-release/",
     "title": "OpenClaw 2026.4.22: Grok Image, Tencent Hy3, Local TUI Và Một Bản Mở Rộng Biên Dùng Thật",
     "excerpt": "OpenClaw 2026.4.22 thêm Grok image/voice tools, Tencent Hy3, local embedded TUI, /models add, auto-install plugin và diagnostics export, kèm một khối fix dày cho sessions, Codex, security, channels và runtime. Đây là bản update mở rộng biên dùng thật chứ không chỉ thêm headline mới.",
     "date": "Apr 24, 2026",
@@ -779,7 +779,7 @@
     "image": "/images/openclaw-2026-4-22-release-thumb.png"
   },
   {
-    "url": "/blog/deepseek-v4-preview-open-vs-closed",
+    "url": "/blog/deepseek-v4-preview-open-vs-closed/",
     "title": "DeepSeek V4 Preview Mở Màn Bằng Cú So Với Gemini 3.1 Pro Và Closed Models",
     "excerpt": "DeepSeek vừa ra DeepSeek-V4 Preview theo đúng kiểu không lòng vòng: tự đặt mình cạnh Gemini 3.1 Pro, tuyên bố vượt mọi open model hiện tại ở nhiều mảng và rival top closed-source models. Điểm đáng chú ý không chỉ là benchmark, mà là cách DeepSeek gói open-source, 1M context, agentic coding và API rollout thành một cú launch có thể kéo người dùng vào thử ngay.",
     "date": "Apr 24, 2026",
@@ -791,7 +791,7 @@
     "image": "/images/deepseek-v4-preview-thumb.png"
   },
   {
-    "url": "/blog/nous-hermes-interface-release-agent-ui",
+    "url": "/blog/nous-hermes-interface-release-agent-ui/",
     "title": "Nous Ra Hermes Agent “The Interface Release”: Cuộc Chiến Agent Đang Chuyển Từ Model Sang Giao Diện",
     "excerpt": "Nous Research vừa ra Hermes Agent v0.11.0 với tên gọi The Interface Release. Điểm đáng chú ý không phải chỉ là thêm model hay provider mới, mà là một tín hiệu sản phẩm rất rõ: khi model dần bị commoditize, lớp interface, orchestration và execution layer mới là nơi agent tạo ra khác biệt thật.",
     "date": "Apr 24, 2026",
@@ -803,7 +803,7 @@
     "image": "/images/nous-hermes-interface-release-thumb.png"
   },
   {
-    "url": "/blog/openai-gpt-5-5-real-work-agents",
+    "url": "/blog/openai-gpt-5-5-real-work-agents/",
     "title": "OpenAI Ra GPT-5.5: Đang Biến “Làm Việc Trên Máy Tính” Thành Một Primitive Mới Của Model",
     "excerpt": "OpenAI vừa ra GPT-5.5 với thông điệp rất rõ: model này không chỉ thông minh hơn, mà được tối ưu cho real work và agent workflows. Nó giỏi hơn ở coding, research, computer use, knowledge work và early scientific research, nhưng vẫn giữ latency ngang GPT-5.4. Đây có thể là lúc OpenAI đang biến 'computer work' thành một primitive sản phẩm mới.",
     "date": "Apr 24, 2026",
@@ -815,7 +815,7 @@
     "image": "/images/openai-gpt-5-5-thumb.png"
   },
   {
-    "url": "/blog/google-deep-research-max-gemini-api",
+    "url": "/blog/google-deep-research-max-gemini-api/",
     "title": "Google Đưa Deep Research Và Deep Research Max Lên Gemini API: Khi “Nghiên Cứu” Bắt Đầu Trông Giống Một Job Nền Hơn Là Một Prompt",
     "excerpt": "Google vừa đưa Deep Research và Deep Research Max lên Gemini API với Gemini 3.1 Pro, hỗ trợ MCP, chart/infographic native, collaborative planning, streaming và grounding từ cả web lẫn file riêng. Điểm đáng chú ý không chỉ là nghiên cứu sâu hơn, mà là Google đang biến research agent thành một hạ tầng workflow thực thụ.",
     "date": "Apr 23, 2026",
@@ -827,7 +827,7 @@
     "image": "/images/google-deep-research-max-thumb.png"
   },
   {
-    "url": "/blog/bud-ai-human-emulator-worker-computer",
+    "url": "/blog/bud-ai-human-emulator-worker-computer/",
     "title": "Bud Tự Gọi Mình Là “AI Human Emulator”: Đây Là Agent Có Máy Tính Thật Hay Chỉ Là Một Cách Đặt Tên Khôn?",
     "excerpt": "Bud vừa launch với claim rất kêu: 'the first AI Human Emulator'. Sản phẩm này cho agent một máy tính, browser, memory, số điện thoại, Telegram và khả năng dùng tool như một người thật. Điều đáng bàn không phải chỉ là nó làm được gì, mà là cách Bud đang reframe AI agent thành 'AI worker' có hạ tầng làm việc riêng.",
     "date": "Apr 23, 2026",
@@ -839,7 +839,7 @@
     "image": "/images/bud-ai-human-emulator-thumb.png"
   },
   {
-    "url": "/blog/justin-sun-wlfi-lawsuit-governance-risk",
+    "url": "/blog/justin-sun-wlfi-lawsuit-governance-risk/",
     "title": "Justin Sun Kiện WLFI: Drama Cá Nhân Hay Cảnh Báo Rủi Ro Governance Của Crypto Chính Trị?",
     "excerpt": "Justin Sun nói đã kiện World Liberty Financial vì token WLFI bị freeze, mất quyền vote và có nguy cơ bị burn. Đằng sau drama cá nhân là một câu hỏi lớn hơn: khi quyền token có thể bị khóa và sửa bằng proposal, governance trong crypto thực ra đang phi tập trung tới đâu?",
     "date": "Apr 23, 2026",
@@ -851,7 +851,7 @@
     "image": "/images/justin-sun-wlfi-lawsuit-thumb.png"
   },
   {
-    "url": "/blog/chatgpt-for-clinicians-healthbench",
+    "url": "/blog/chatgpt-for-clinicians-healthbench/",
     "title": "OpenAI Ra ChatGPT for Clinicians Và HealthBench Professional: Đang Đánh Thẳng Vào Workflow Thật Của Bác Sĩ",
     "excerpt": "OpenAI vừa ra ChatGPT for Clinicians miễn phí cho clinician đã xác minh tại Mỹ, đi kèm HealthBench Professional — benchmark mới cho các cuộc chat y khoa thực tế. Đây không chỉ là thêm một vertical AI, mà là cú đánh thẳng vào workflow, độ tin cậy và phân phối trong healthcare.",
     "date": "Apr 23, 2026",
@@ -863,7 +863,7 @@
     "image": "/images/chatgpt-for-clinicians-healthbench-thumb.png"
   },
   {
-    "url": "/blog/kimi-k26-agent-swarm-real-files",
+    "url": "/blog/kimi-k26-agent-swarm-real-files/",
     "title": "Kimi K2.6 Agent Swarm: Khi Agent Không Còn Trả Lời Trong Chat Mà Bắt Đầu Xuất Ra Cả Đống File Thật",
     "excerpt": "Kimi vừa giới thiệu K2.6 Agent Swarm với 300 parallel sub-agents, 4.000 steps mỗi run và một angle rất rõ: agent không còn chỉ trả lời trong chat, mà phải tạo ra artifact thật như file, report, dataset, chart và slide. Đây là cách Kimi đẩy AI từ giao diện chat sang giao diện sản xuất kết quả.",
     "date": "Apr 23, 2026",
@@ -875,7 +875,7 @@
     "image": "/images/kimi-k26-agent-swarm-thumb.png"
   },
   {
-    "url": "/blog/openai-workspace-agents",
+    "url": "/blog/openai-workspace-agents/",
     "title": "OpenAI Ra Mắt Workspace Agents: ChatGPT Đang Bỏ Vai Trợ Lý Cá Nhân Để Thành Hạ Tầng Workflow Cho Cả Team",
     "excerpt": "OpenAI vừa giới thiệu workspace agents trong ChatGPT, cho phép tạo agent dùng chung cho cả team, chạy workflow dài hơi qua docs, email, chat, code và các hệ thống nội bộ. Điểm đáng chú ý là ChatGPT đang được kéo từ một trợ lý cá nhân sang hạ tầng workflow có memory, approvals, analytics và admin controls.",
     "date": "Apr 23, 2026",
@@ -887,7 +887,7 @@
     "image": "/images/openai-workspace-agents-thumb.png"
   },
   {
-    "url": "/blog/claude-code-ultrareview",
+    "url": "/blog/claude-code-ultrareview/",
     "title": "Claude Code /ultrareview: Anthropic Đang Biến Code Review Thành Một Đội Săn Bug Chạy Trên Cloud",
     "excerpt": "Anthropic vừa đưa /ultrareview vào Claude Code ở dạng research preview. Điểm đáng chú ý không chỉ là thêm một lệnh review mới, mà là việc code review đang bị đẩy từ một lượt đọc thủ công sang một fleet bug-hunting agents chạy trên cloud, tự verify findings trước khi trả về CLI.",
     "date": "Apr 23, 2026",
@@ -899,7 +899,7 @@
     "image": "/images/claude-code-ultrareview-thumb.png"
   },
   {
-    "url": "/blog/xiaomi-mimo-v25-open-source-agents",
+    "url": "/blog/xiaomi-mimo-v25-open-source-agents/",
     "title": "Xiaomi MiMo-V2.5: Open-Source Agent Áp Sát Claude Opus, GPT-5.4 Nhưng Ăn Ít Token Hơn",
     "excerpt": "Xiaomi vừa tung MiMo-V2.5 và MiMo-V2.5-Pro với một thesis rất rõ: open-source agent muốn đáng dùng thì không chỉ cần benchmark đẹp, mà còn phải chạy dài hơi, dùng ít token và đủ rẻ để triển khai thật. Điểm đáng chú ý là Xiaomi đang đặt MiMo vào cùng khung với Claude Opus 4.6, GPT-5.4 và Gemini 3.1 Pro, rồi cố thắng ở performance-per-token.",
     "date": "Apr 23, 2026",
@@ -911,7 +911,7 @@
     "image": "/images/xiaomi-mimo-v25-open-source-agents-thumb.png"
   },
   {
-    "url": "/blog/qclaw-agent-ux-for-everyone",
+    "url": "/blog/qclaw-agent-ux-for-everyone/",
     "title": "QClaw Ra Mắt: Không Bán Model Mới, Mà Bán Cách Dùng AI Agent Kiểu Người Thường",
     "excerpt": "QClaw vừa ra mắt với một thesis rất rõ: nút thắt của AI agents không còn chỉ là model, mà là trải nghiệm sử dụng. Không terminal, không setup, chỉ cần nhắn WhatsApp hay Telegram là máy tự làm việc. Đây là cách QClaw cố biến agent từ đồ chơi của power users thành sản phẩm cho người thường.",
     "date": "Apr 21, 2026",
@@ -923,7 +923,7 @@
     "image": "/images/qclaw-agent-ux-for-everyone-thumb.png"
   },
   {
-    "url": "/blog/alex-finn-local-ai-hardware-bottleneck",
+    "url": "/blog/alex-finn-local-ai-hardware-bottleneck/",
     "title": "Alex Finn: Open-Weight AI Đã Chạm Tới Mốc Khiến Người Ta Đổ Xô Mua Mac Studio",
     "excerpt": "Alex Finn đang đẩy một luận điểm rất rõ sau màn ra mắt Kimi K2.6: open-weight models đã mạnh tới mức bài toán không còn chỉ là model nào tốt hơn, mà là ai sở hữu đủ phần cứng để chạy local, riêng tư và 24/7. Nhưng cùng lúc đó, cộng đồng cũng phản pháo mạnh bằng những câu hỏi rất thực tế về benchmark, RAM 700GB, capex phần cứng và ROI so với cloud.",
     "date": "Apr 21, 2026",
@@ -935,7 +935,7 @@
     "image": "/images/alex-finn-local-ai-hardware-bottleneck-thumb.png"
   },
   {
-    "url": "/blog/a16z-agent-blockchain-infrastructure",
+    "url": "/blog/a16z-agent-blockchain-infrastructure/",
     "title": "a16z: Blockchains Là Hạ Tầng Còn Thiếu Cho AI Agents, Không Chỉ Là Chỗ Thanh Toán",
     "excerpt": "a16z crypto vừa đưa ra thesis khá rõ: AI agents đang tiến từ copilots sang economic actors, nhưng hạ tầng xung quanh vẫn thiếu identity, governance, payments, verification và user control. Theo họ, blockchain có thể lấp đúng 5 lỗ hổng này. Điểm đáng chú ý là đây không chỉ là bài nói về stablecoin, mà là một cách định vị crypto như trust layer cho agent economy.",
     "date": "Apr 21, 2026",
@@ -947,7 +947,7 @@
     "image": "/images/a16z-agent-blockchain-infrastructure-thumb.png"
   },
   {
-    "url": "/blog/arbitrum-freezes-kelpdao-funds",
+    "url": "/blog/arbitrum-freezes-kelpdao-funds/",
     "title": "Arbitrum Đóng Băng 30,766 ETH Từ Vụ KelpDAO, Cứu Tiền Xong Thì Drama “Phi Tập Trung” Bùng Lên",
     "excerpt": "Arbitrum Security Council đã dùng quyền khẩn cấp để đóng băng 30,766 ETH liên quan vụ hack KelpDAO và chuyển số tiền này vào ví frozen trung gian. Về mặt cứu tài sản, đây là tin tốt. Nhưng về mặt hình ảnh, Arbitrum vừa tự đẩy mình vào đúng câu hỏi khó nhất của crypto: nếu một hội đồng có thể can thiệp và đóng băng tiền khi cần, thì phi tập trung còn được hiểu tới đâu?",
     "date": "Apr 21, 2026",
@@ -959,7 +959,7 @@
     "image": "/images/arbitrum-freezes-kelpdao-funds-thumb.png"
   },
   {
-    "url": "/blog/kimi-k2-6-open-source-coding",
+    "url": "/blog/kimi-k2-6-open-source-coding/",
     "title": "Kimi K2.6 Ra Mắt: Đánh Thẳng Vào Coding Agent, Long-Run Tasks Và Swarm",
     "excerpt": "Moonshot vừa open-source Kimi K2.6, model mới nhắm thẳng vào coding agent, long-horizon execution và agent swarm. Điểm đáng chú ý không chỉ là benchmark, mà là các demo 12 đến 13 giờ liên tục, 4.000+ tool calls và việc Kimi gọi thẳng tên OpenClaw, Hermes Agent trong use case proactive agents.",
     "date": "Apr 21, 2026",
@@ -971,7 +971,7 @@
     "image": "/images/kimi-k2-6-open-source-coding-thumb.png"
   },
   {
-    "url": "/blog/hermes-agent-see-it-in-action",
+    "url": "/blog/hermes-agent-see-it-in-action/",
     "title": "Hermes Agent: Nhìn Tận Mắt Nó Làm Việc Thì Mới Thấy Agent Tốt Không Chỉ Là Chatbot Biết Gọi Tool",
     "excerpt": "Nhìn các screenshot Hermes Agent đang xử lý PR, sửa lỗi, chạy test và truy lại kiến thức cũ cho thấy một điều khá rõ: agent hữu ích không phải vì nó trả lời thông minh, mà vì nó bắt đầu làm việc như một cộng sự kỹ thuật có trí nhớ và có quy trình.",
     "date": "Apr 20, 2026",
@@ -983,7 +983,7 @@
     "image": "/images/hermes-agent-see-it-in-action-thumb.png"
   },
   {
-    "url": "/blog/0xjeff-hermes-skills",
+    "url": "/blog/0xjeff-hermes-skills/",
     "title": "3 Skill Hermes Mà 0xJeff Thấy Đáng Dùng Nhất — Và Đống Bài Học Đắt Tiền Đi Kèm",
     "excerpt": "0xJeff vừa chia sẻ 3 skill Hermes anh thấy hữu ích nhất: đọc insight từ X, bóc tách bookmarks và reflection từ memory dài hạn. Nhưng phần đáng tiền hơn lại là các lỗi anh đã đụng: Bird CLI có quyền post, Browser Harness quá nhạy, Hindsight nối sai model có thể đốt hàng chục USD token chỉ trong một ngày.",
     "date": "Apr 20, 2026",
@@ -995,7 +995,7 @@
     "image": "/images/0xjeff-hermes-skills-thumb.png"
   },
   {
-    "url": "/blog/justin-sun-kelpdao-hacker-talk",
+    "url": "/blog/justin-sun-kelpdao-hacker-talk/",
     "title": "Justin Sun Muốn “Nói Chuyện” Với Hacker Vụ KelpDAO",
     "excerpt": "Justin Sun vừa công khai kêu gọi hacker vụ KelpDAO ngồi xuống nói chuyện, với lập luận rằng không đáng để kéo cả Aave lẫn KelpDAO đi xuống vì cú hack gần $300M. Nghe hơi kịch tính, nhưng phản ứng cộng đồng cho thấy thị trường đang thật sự lo về rủi ro lan sang Aave.",
     "date": "Apr 20, 2026",
@@ -1007,7 +1007,7 @@
     "image": "/images/justin-sun-kelpdao-hacker-talk-thumb.png"
   },
   {
-    "url": "/blog/claude-md-trending-github",
+    "url": "/blog/claude-md-trending-github/",
     "title": "Vì Sao Một File CLAUDE.md Lại Leo Top GitHub Trending?",
     "excerpt": "Một repo chỉ xoay quanh file CLAUDE.md đang leo top GitHub trending với hơn 44.000 star trong tuần. Điều đáng chú ý không phải file markdown đó thần thánh cỡ nào, mà là việc nút thắt mới của AI coding giờ nằm ở behavior, context và execution discipline — không chỉ ở model.",
     "date": "Apr 20, 2026",
@@ -1019,7 +1019,7 @@
     "image": "/images/claude-md-trending-github-thumb.png"
   },
   {
-    "url": "/blog/arkham-kelpdao-funds-flow",
+    "url": "/blog/arkham-kelpdao-funds-flow/",
     "title": "Arkham Theo Dấu Dòng Tiền Sau Vụ KelpDAO: Từ rsETH Sang ETH",
     "excerpt": "Arkham vừa theo dấu dòng tiền sau vụ KelpDAO bị exploit gần $294M. Điều đáng chú ý không chỉ là số tiền bị rút, mà là cách attacker dùng Aave, Compound, KyberSwap, Euler Finance và Wintermute để dần biến rsETH thành ETH.",
     "date": "Apr 20, 2026",
@@ -1031,7 +1031,7 @@
     "image": "/images/arkham-kelpdao-funds-flow-thumb.png"
   },
   {
-    "url": "/blog/layerzero-kelpdao-rpc-poisoning",
+    "url": "/blog/layerzero-kelpdao-rpc-poisoning/",
     "title": "Vụ KelpDAO Mất $290M Đang Buộc Cả Đám Cross-Chain Nhìn Lại Một Sự Thật Khó Chịu: Audit Contract Là Chưa Đủ",
     "excerpt": "LayerZero nói vụ KelpDAO mất khoảng $290M không phải lỗi protocol mà là hậu quả của cấu hình 1-of-1 DVN, kết hợp một đòn RPC poisoning rất tinh vi nhắm vào hạ tầng downstream. Nhưng bài học lớn hơn là: từ giờ, threat model của bridge và cross-chain app không thể chỉ dừng ở smart contract nữa.",
     "date": "Apr 20, 2026",
@@ -1043,7 +1043,7 @@
     "image": "/images/layerzero-kelpdao-rpc-poisoning-thumb.png"
   },
   {
-    "url": "/blog/autogenesis-self-evolving-agent-protocol",
+    "url": "/blog/autogenesis-self-evolving-agent-protocol/",
     "title": "Autogenesis: Giao Thức Mới Cho Agent Tự Tiến Hóa",
     "excerpt": "Paper Autogenesis: A Self-Evolving Agent Protocol không chỉ nói về agent tự tiến hóa. Nó muốn chuẩn hóa chuyện đó thành một protocol có versioning, lifecycle, rollback và vòng lặp tự cải thiện an toàn — tức một bước chuyển từ prompt engineering sang protocol engineering cho AI agents.",
     "date": "Apr 19, 2026",
@@ -1055,7 +1055,7 @@
     "image": "/images/autogenesis-self-evolving-agent-protocol-thumb.png"
   },
   {
-    "url": "/blog/hermes-agent-vs-openclaw",
+    "url": "/blog/hermes-agent-vs-openclaw/",
     "title": "Hermes Agent Là Gì? Vì Sao Nó Đang Được So Thẳng Với OpenClaw",
     "excerpt": "Hermes Agent của Nous Research đang nổi lên rất nhanh nhờ ý tưởng self-improving AI agent: memory, skills, learning loop, chạy đa nền tảng và remote-first. Nhưng nếu so với OpenClaw, đâu là điểm mạnh thật, điểm yếu thật và nó có đáng để chuyển sang không?",
     "date": "Apr 18, 2026",
@@ -1067,7 +1067,7 @@
     "image": "/images/hermes-agent-vs-openclaw-thumb.png"
   },
   {
-    "url": "/blog/tradingview-mcp-safety-review",
+    "url": "/blog/tradingview-mcp-safety-review/",
     "title": "TradingView Giờ Có Thể Nối Thẳng Với Claude: Nghe Như Trò Hack Điên Rồ, Nhưng Có Thể Là Món Mọi Trader Đều Muốn Save",
     "excerpt": "TradingView MCP cho phép nối TradingView Desktop với Claude hoặc nền tảng AI khác để đọc chart, sửa Pine, tạo alert và tự động hóa workflow. Nghe rất cuốn, nhưng dùng nó ở đâu cho đáng và rủi ro thật nằm ở đâu mới là câu hỏi quan trọng.",
     "date": "Apr 18, 2026",
@@ -1079,7 +1079,7 @@
     "image": "/images/tradingview-mcp-safety-review-thumb.png"
   },
   {
-    "url": "/blog/nvidia-lyra-2",
+    "url": "/blog/nvidia-lyra-2/",
     "title": "NVIDIA Lyra 2.0: Biến Một Tấm Ảnh Thành Thế Giới 3D Có Thể Đi Dạo, Chứ Không Chỉ Là Một Đoạn Video Đẹp",
     "excerpt": "Lyra 2.0 của NVIDIA không chỉ sinh video đẹp từ một ảnh. Nó cố tạo ra thế giới 3D có thể khám phá, giữ nhất quán khi camera đi xa, quay lại cảnh cũ và xuất tiếp sang 3DGS, mesh hay mô phỏng robot.",
     "date": "Apr 18, 2026",
@@ -1091,7 +1091,7 @@
     "image": "/images/nvidia-lyra-2-thumb.png"
   },
   {
-    "url": "/blog/claude-design",
+    "url": "/blog/claude-design/",
     "title": "Claude Design: Anthropic Đang Kéo Claude Từ Chỗ Viết Ý Tưởng Sang Chỗ Làm Thẳng Prototype, Slide Và One-Pager",
     "excerpt": "Anthropic Labs vừa giới thiệu Claude Design ở dạng research preview, cho phép tạo prototype, slide và one-pager bằng hội thoại, rồi chỉnh tiếp qua comment trực tiếp, slider tùy biến và design system của cả team.",
     "date": "Apr 18, 2026",
@@ -1103,7 +1103,7 @@
     "image": "/images/claude-design/claude-design-hero.jpg"
   },
   {
-    "url": "/blog/openclaw-2026-4-15-release",
+    "url": "/blog/openclaw-2026-4-15-release/",
     "title": "OpenClaw 2026.4.15: Opus 4.7, Gemini TTS Bundled Và Một Bản “Boring Release” Đúng Nghĩa Production",
     "excerpt": "OpenClaw 2026.4.15 thêm support Claude Opus 4.7, Gemini TTS bundled, bounded memory reads, context gọn hơn, Codex transport tự self-heal và một loạt bản vá production cho tool/media, auth, memory, dashboard và channels.",
     "date": "Apr 17, 2026",
@@ -1115,7 +1115,7 @@
     "image": "/images/openclaw-2026-4-15-release-thumb.png"
   },
   {
-    "url": "/blog/claude-opus-4-7",
+    "url": "/blog/claude-opus-4-7/",
     "title": "Claude Opus 4.7: Anthropic Đang Đẩy Claude Thành Một Con AI Làm Việc Dài Hơi, Tự Check Lại Và Đỡ Phải Trông Hơn",
     "excerpt": "Anthropic vừa giới thiệu Claude Opus 4.7 với trọng tâm không chỉ là mạnh hơn, mà là xử lý long-running tasks kỹ hơn, vision tốt hơn, reasoning control chi tiết hơn và đủ lì để nhận việc khó với ít supervision hơn.",
     "date": "Apr 17, 2026",
@@ -1127,7 +1127,7 @@
     "image": "/images/claude-opus-4-7-thumb.png"
   },
   {
-    "url": "/blog/qwen-3-6-35b-a3b-open-source",
+    "url": "/blog/qwen-3-6-35b-a3b-open-source/",
     "title": "Qwen3.6-35B-A3B Open Source: Một Model 3B Active Nhưng Dám Đấu Qwen3.5-27B, Gemma 4 31B Và Cả Claude Sonnet 4.5",
     "excerpt": "Alibaba Qwen vừa open source Qwen3.6-35B-A3B dưới giấy phép Apache 2.0. Điểm đáng chú ý không chỉ là 35B total, 3B active, mà là benchmark blog gốc cho thấy nó vượt xa Qwen3.5-35B-A3B, cạnh tranh với Qwen3.5-27B và Gemma 4 31B ở coding, đồng thời bám rất sát Claude Sonnet 4.5 ở mảng vision-language.",
     "date": "Apr 16, 2026",
@@ -1139,7 +1139,7 @@
     "image": "/images/qwen-3-6-35b-a3b-open-source-thumb.png"
   },
   {
-    "url": "/blog/gemini-3-1-flash-tts",
+    "url": "/blog/gemini-3-1-flash-tts/",
     "title": "Gemini 3.1 Flash TTS: Google Đang Biến Text-to-Speech Thành Một Công Cụ Có Cảm Xúc Và Có Điều Khiển",
     "excerpt": "Google vừa đưa Gemini 3.1 Flash TTS vào preview với thứ đáng chú ý không chỉ là giọng tự nhiên hơn, mà là khả năng điều khiển cách nói bằng audio tags, multi-speaker dialogue và workflow kiểu đạo diễn ngay trong AI Studio.",
     "date": "Apr 16, 2026",
@@ -1151,7 +1151,7 @@
     "image": "/images/gemini-3-1-flash-tts-thumb.png"
   },
   {
-    "url": "/blog/google-chrome-skills",
+    "url": "/blog/google-chrome-skills/",
     "title": "Google Đưa “Skills” Vào Chrome: Khi Prompt Không Còn Chỉ Là Một Ô Chat Dùng Rồi Quên",
     "excerpt": "Google vừa thêm Skills vào Gemini in Chrome, cho phép lưu prompt hay dùng thành workflow một chạm chạy trực tiếp trên tab web đang mở. Đây không chỉ là tiện hơn — mà là bước kéo AI từ chỗ hỏi-đáp sang chỗ hành động lặp lại hằng ngày.",
     "date": "Apr 15, 2026",
@@ -1163,7 +1163,7 @@
     "image": "/images/google-chrome-skills-thumb.png"
   },
   {
-    "url": "/blog/openclaw-2026-4-14-release",
+    "url": "/blog/openclaw-2026-4-14-release/",
     "title": "OpenClaw 2026.4.14: GPT-5.4 Rõ Ràng Hơn, Telegram Đỡ Mù Tên Topic, Và Một Bản Vá Cực Dày Cho Runtime",
     "excerpt": "OpenClaw 2026.4.14 không có headline hào nhoáng, nhưng lại là một bản nâng chất lượng rất thực dụng: GPT-5.4 support rõ hơn, Telegram topic names tử tế hơn, Ollama/local model đỡ vướng timeout và hàng loạt bản vá production cho browser, memory, cron, queue, SSRF và channel integrations.",
     "date": "Apr 15, 2026",
@@ -1175,7 +1175,7 @@
     "image": "/images/openclaw-2026-4-14-release-thumb.png"
   },
   {
-    "url": "/blog/openclaw-2026-4-12-release",
+    "url": "/blog/openclaw-2026-4-12-release/",
     "title": "OpenClaw 2026.4.12: Active Memory, LM Studio Và Một Cú Nâng Nền Rất Rộng Cho Production",
     "excerpt": "OpenClaw 2026.4.12 thêm Active Memory, LM Studio provider, bundled Codex path, exec-policy tiện hơn, plugin loading chặt hơn và một đợt vá production rất dày cho gateway, memory, dreaming và chat integrations.",
     "date": "Apr 13, 2026",
@@ -1187,7 +1187,7 @@
     "image": "/images/openclaw-2026-4-12-release-thumb.png"
   },
   {
-    "url": "/blog/polkadot-dot-hack",
+    "url": "/blog/polkadot-dot-hack/",
     "title": "1 Tỷ DOT Bị Mint Trái Phép Trên Ethereum: Hyperbridge Bị Exploit, Nhưng Polkadot Mainnet Không Sập",
     "excerpt": "Một exploit trên Hyperbridge gateway cho phép hacker mint 1 tỷ DOT trên Ethereum và bán ra lấy khoảng 237.000 USD. Điểm quan trọng: đây là bridged DOT trên Ethereum, không phải native DOT trên Polkadot bị hack trực tiếp.",
     "date": "Apr 13, 2026",
@@ -1199,7 +1199,7 @@
     "image": "/images/polkadot-dot-hack-thumb.png"
   },
   {
-    "url": "/blog/justin-sun-wlfi-blacklist",
+    "url": "/blog/justin-sun-wlfi-blacklist/",
     "title": "Justin Sun Tố WLFI Cài Blacklist Backdoor: Một Dự Án Tự Xưng DeFi Có Thể Đóng Băng Holder?",
     "excerpt": "Justin Sun công khai cáo buộc World Liberty Financial cài blacklist backdoor trong token WLFI, cho phép đóng băng hoặc tước quyền tài sản của holder. Đây không chỉ là drama cá nhân, mà là cú đánh thẳng vào narrative DeFi của dự án.",
     "date": "Apr 12, 2026",
@@ -1211,7 +1211,7 @@
     "image": "/images/justin-sun-tron-ipo-thumb.png"
   },
   {
-    "url": "/blog/openclaw-2026-4-11-release",
+    "url": "/blog/openclaw-2026-4-11-release/",
     "title": "OpenClaw 2026.4.11: Không Còn Test Agent Bằng Cảm Giác, Giờ Có Parity Gate GPT-5.4 vs Opus 4.6",
     "excerpt": "OpenClaw 2026.4.11 là một bản polish release thiên về stability, nhưng điểm đáng chú ý nhất là parity gate GPT-5.4 vs Opus 4.6 cùng hàng loạt bản vá routing, subagents, OAuth và chat integrations.",
     "date": "Apr 12, 2026",
@@ -1223,7 +1223,7 @@
     "image": "/images/openclaw-2026-4-11-release-thumb.png"
   },
   {
-    "url": "/blog/minimax-m27-open-source",
+    "url": "/blog/minimax-m27-open-source/",
     "title": "MiniMax M2.7 Open Source: Khi Cuộc Chơi Agent Không Còn Chỉ Là Sân Của Model Đóng",
     "excerpt": "MiniMax vừa open source M2.7 với benchmark mạnh ở SWE-Pro, Terminal Bench 2 và office tasks. Điểm đáng nói không chỉ là benchmark, mà là cách họ định vị M2.7 như một model dành cho agent tự tiến hóa.",
     "date": "Apr 12, 2026",
@@ -1235,7 +1235,7 @@
     "image": "/images/minimax-m27-open-source-thumb.jpg"
   },
   {
-    "url": "/blog/garry-tan-gbrain",
+    "url": "/blog/garry-tan-gbrain/",
     "title": "GBrain Củа Garry Tan: Khi AI Agent Cần Một Bộ Não Riêng",
     "excerpt": "GBrain là dự án mã nguồn mở của Garry Tan để xây dựng personal knowledge base cho AI agent. Agent đọc trước mỗi câu trả lởi và viết lại sau mỗi cuộc trò chuyện — biến trí nhớ từ thụ động thành chủ động.",
     "date": "Apr 12, 2026",
@@ -1247,7 +1247,7 @@
     "image": "/images/garry-tan-gbrain-thumb.svg"
   },
   {
-    "url": "/blog/openclaw-2026-4-10-changelog-chi-tiet",
+    "url": "/blog/openclaw-2026-4-10-changelog-chi-tiet/",
     "title": "OpenClaw 2026.4.10 Changelog Chi Tiết: Toàn Cảnh Những Thay Đổi Quan Trọng Nhất",
     "excerpt": "Phân tích chi tiết changelog OpenClaw 2026.4.10 từ GitHub: Active Memory, Codex harness, MLX Talk, hàng loạt bản vá bảo mật và những cải tiến đa kênh đáng chú ý.",
     "date": "Apr 11, 2026",
@@ -1259,7 +1259,7 @@
     "image": "/images/openclaw-2026-4-10-release-thumb.png"
   },
   {
-    "url": "/blog/openclaw-2026-4-10-release",
+    "url": "/blog/openclaw-2026-4-10-release/",
     "title": "OpenClaw 2026.4.10: Active Memory, MLX Talk Và Tốc Độ Ship Không Ngừng Nghỉ",
     "excerpt": "OpenClaw 2026.4.10 ra mắt Active Memory plugin, local MLX Talk mode trên macOS, Codex app-server harness và hàng loạt bản vá bảo mật. Bản release cho thấy họ đang chuyển từ thử nghiệm sang nền tảng agent nghiêm túc.",
     "date": "Apr 11, 2026",
@@ -1271,7 +1271,7 @@
     "image": "/images/openclaw-2026-4-10-release-thumb.png"
   },
   {
-    "url": "/blog/okx-ventures-caex-viet-nam",
+    "url": "/blog/okx-ventures-caex-viet-nam/",
     "title": "OKX Ventures Rót Vào CAEX: Việt Nam Đang Ép Crypto Đi Vào Sân Chơi Có Giấy Phép",
     "excerpt": "OKX Ventures đầu tư chiến lược vào CAEX để hỗ trợ sàn này tham gia chương trình thí điểm giao dịch crypto có quản lý tại Việt Nam. Đây không chỉ là một deal vốn, mà là tín hiệu dòng tiền đang nghiêng về các nền tảng compliant.",
     "date": "Apr 11, 2026",
@@ -1283,7 +1283,7 @@
     "image": "/images/okx-ventures-caex-thumb.jpg"
   },
   {
-    "url": "/blog/minimax-mmx-cli",
+    "url": "/blog/minimax-mmx-cli/",
     "title": "MiniMax MMX-CLI: Khi AI Agent Không Còn Chỉ Biết Gõ Chữ",
     "excerpt": "MiniMax vừa ra mắt MMX-CLI để cho AI agent thêm 7 giác quan: image, video, speech, music, vision, search và conversation. Đây không chỉ là thêm tool, mà là cách biến agent thành giao diện đa phương thức thật sự.",
     "date": "Apr 11, 2026",
@@ -1295,7 +1295,7 @@
     "image": "/images/minimax-mmx-cli-thumb.jpg"
   },
   {
-    "url": "/blog/shopify-ai-toolkit",
+    "url": "/blog/shopify-ai-toolkit/",
     "title": "Shopify AI Toolkit: Shopify Muốn Biến Claude Code, Codex Và Cursor Thành Bảng Điều Khiển Cửa Hàng",
     "excerpt": "Shopify vừa tung AI Toolkit để kết nối các AI coding agents như Claude Code, Codex, Cursor, Gemini CLI và VS Code trực tiếp với nền tảng Shopify. Đây là nước đi nghiêm túc để biến agent thành lớp điều khiển mới cho vận hành e-commerce.",
     "date": "Apr 10, 2026",
@@ -1307,7 +1307,7 @@
     "image": "/images/shopify-ai-toolkit-thumb.png"
   },
   {
-    "url": "/blog/arc-open-source-bug-bounty",
+    "url": "/blog/arc-open-source-bug-bounty/",
     "title": "Arc Mở Mã Nguồn Testnet, Cho Chạy Node Và Treo Bug Bounty Trước Mainnet",
     "excerpt": "Arc vừa công bố 3 bước quan trọng trước mainnet: open source testnet code, mở bug bounty trên HackerOne và cho developer tự chạy Arc node. Đây là cách mở rộng kiểm thử trước khi vốn thật vào mạng lưới.",
     "date": "Apr 09, 2026",
@@ -1319,7 +1319,7 @@
     "image": "/images/arc-open-source-bug-bounty-thumb.webp"
   },
   {
-    "url": "/blog/etherscan-contract-tab-revamp",
+    "url": "/blog/etherscan-contract-tab-revamp/",
     "title": "Etherscan Làm Mới Tab Contract: Từ Chỗ Chỉ Đọc Code Sang Trải Nghiệm Gần Giống IDE",
     "excerpt": "Etherscan vừa nâng cấp tab Contract với code browser kiểu IDE, multi-file tabs, outline hàm và giao diện read/write rõ ràng hơn. Một thay đổi nhỏ về UI nhưng rất đáng tiền với dev, auditor và người dùng DeFi thích tự kiểm chứng.",
     "date": "Apr 09, 2026",
@@ -1331,7 +1331,7 @@
     "image": "/images/etherscan-contract-tab-revamp-hero.png"
   },
   {
-    "url": "/blog/anthropic-managed-agents-brain-hands",
+    "url": "/blog/anthropic-managed-agents-brain-hands/",
     "title": "Managed Agents Của Anthropic: Vì Sao Họ Tách “Bộ Não” Khỏi “Đôi Tay” Của Agent?",
     "excerpt": "Anthropic đang giải quyết bài toán rất thực tế của agent: làm sao để phần suy nghĩ và phần thao tác không dính chặt vào nhau. Kết quả là hệ thống có thể nhanh hơn, ổn hơn và an toàn hơn.",
     "date": "Apr 09, 2026",
@@ -1343,7 +1343,7 @@
     "image": "/images/anthropic-managed-agents-brain-hands-thumb.png"
   },
   {
-    "url": "/blog/openclaw-rem-backfill-dreaming",
+    "url": "/blog/openclaw-rem-backfill-dreaming/",
     "title": "OpenClaw 2026.4.9 Có REM Backfill: Agent Giờ Có Thể “Mơ Lại” Những Ký Ức Cũ Bị Bỏ Lỡ",
     "excerpt": "REM backfill là một trong những điểm đáng tiền nhất của OpenClaw 2026.4.9. Nó cho phép daily notes cũ replay vào dreaming pipeline mà không cần dựng thêm một memory stack mới.",
     "date": "Apr 09, 2026",
@@ -1355,7 +1355,7 @@
     "image": "/images/openclaw-rem-backfill-dreaming-thumb.png"
   },
   {
-    "url": "/blog/claude-managed-agents-public-beta",
+    "url": "/blog/claude-managed-agents-public-beta/",
     "title": "Claude Managed Agents Public Beta: Anthropic Không Còn Chỉ Bán Model, Họ Đang Bán Cả Hạ Tầng Agent",
     "excerpt": "Claude Managed Agents cho thấy Anthropic đang muốn bán trọn gói từ model đến agent runtime: sandboxing, long-running sessions, tracing, CLI, Claude Code và hạ tầng production. Đây là cú dịch chuyển từ AI model sang AI platform rõ rệt hơn nhiều người nghĩ.",
     "date": "Apr 09, 2026",
@@ -1367,7 +1367,7 @@
     "image": "/images/claude-managed-agents-public-beta-thumb.png"
   },
   {
-    "url": "/blog/openclaw-2026-4-9-release",
+    "url": "/blog/openclaw-2026-4-9-release/",
     "title": "OpenClaw 2026.4.9: Không Còn Chỉ Đua Tính Năng, Bản Này Quay Sang Vá Nền Móng Hệ Thống",
     "excerpt": "OpenClaw 2026.4.9 tập trung vào memory/dreaming, browser security, auth, routing và hàng loạt bản vá stability. Ít hào nhoáng hơn 2026.4.7, nhưng thực dụng hơn hẳn vì nó cho thấy dự án đang quay lại siết phần móng.",
     "date": "Apr 09, 2026",
@@ -1379,7 +1379,7 @@
     "image": "/images/openclaw-2026-4-9-release-thumb.png"
   },
   {
-    "url": "/blog/gemini-notebooks-notebooklm",
+    "url": "/blog/gemini-notebooks-notebooklm/",
     "title": "Gemini Có Notebooks Đồng Bộ Với NotebookLM: Google Đang Muốn Biến Chatbot Thành Bàn Làm Việc Thật",
     "excerpt": "Google vừa đưa notebooks vào Gemini và cho sync thẳng với NotebookLM. Đây không chỉ là thêm một chỗ gom chat, mà là bước đi cho thấy các hãng AI đang cố biến chatbot thành không gian làm việc có trí nhớ, có tài liệu và có workflow dài hơi.",
     "date": "Apr 09, 2026",
@@ -1391,7 +1391,7 @@
     "image": "/images/gemini-notebooks-notebooklm-thumb.png"
   },
   {
-    "url": "/blog/fdic-genius-act-stablecoin",
+    "url": "/blog/fdic-genius-act-stablecoin/",
     "title": "FDIC Bắt Đầu Viết Luật Cho Stablecoin: Crypto Không Còn Đứng Ngoài Cửa Ngân Hàng",
     "excerpt": "FDIC vừa duyệt đề xuất quy định cho stablecoin issuer theo GENIUS Act. Đây không chỉ là tin pháp lý, mà là dấu hiệu stablecoin đang được kéo sát hơn vào lõi hệ thống tài chính Mỹ.",
     "date": "Apr 08, 2026",
@@ -1403,7 +1403,7 @@
     "image": "/images/fdic-genius-act-stablecoin-thumb.svg"
   },
   {
-    "url": "/blog/codex-3-trieu-user-reset-limit",
+    "url": "/blog/codex-3-trieu-user-reset-limit/",
     "title": "Codex Chạm 3 Triệu User Mỗi Tuần Và Reset Giới Hạn Dùng: AI Coding Đang Hết Cửa Làm Đồ Chơi",
     "excerpt": "Codex vừa đạt 3 triệu weekly users và OpenAI reset usage limits để ăn mừng. Đây không chỉ là một con số đẹp, mà là dấu hiệu AI coding đã bắt đầu thành thói quen làm việc thật chứ không còn là màn demo cho vui.",
     "date": "Apr 08, 2026",
@@ -1415,7 +1415,7 @@
     "image": "/images/codex-3-trieu-user-reset-limit-thumb.png"
   },
   {
-    "url": "/blog/aztec-alpha-ethereum-privacy",
+    "url": "/blog/aztec-alpha-ethereum-privacy/",
     "title": "Aztec Alpha Live: Ethereum Có Native Privacy Thật Sự, Nhưng Đừng Vội Tưởng Đây Là Kèo Dễ Ăn",
     "excerpt": "Aztec vừa bật Alpha với thông điệp native privacy, built on Ethereum. Đây là tín hiệu đáng chú ý cho hạ tầng riêng tư trên Ethereum, nhưng để thành sân chơi thật thì Aztec còn phải thắng ở builder, sản phẩm và tokenomics.",
     "date": "Apr 08, 2026",
@@ -1427,7 +1427,7 @@
     "image": "/images/aztec-alpha-ethereum-privacy-thumb.png"
   },
   {
-    "url": "/blog/adam-back-satoshi-mystery",
+    "url": "/blog/adam-back-satoshi-mystery/",
     "title": "Adam Back Có Phải Satoshi? NYT Đào Lại Bí Ẩn Bitcoin, Nhưng Cộng Đồng Không Nuốt Câu Chuyện Này Dễ Thế",
     "excerpt": "New York Times vừa gợi lại giả thuyết Adam Back là Satoshi Nakamoto sau một năm điều tra. Nhưng cộng đồng Bitcoin phản ứng rất gắt: chưa có private key proof thì tất cả vẫn chỉ là suy đoán đẹp mồm.",
     "date": "Apr 08, 2026",
@@ -1439,7 +1439,7 @@
     "image": "/images/adam-back-satoshi-mystery-thumb.png"
   },
   {
-    "url": "/blog/thue-crypto-viet-nam-thong-tu-41",
+    "url": "/blog/thue-crypto-viet-nam-thong-tu-41/",
     "title": "Thuế Crypto Việt Nam Đã Rõ Hơn: Thông Tư 41 Chốt Cơ Chế Sàn Khấu Trừ 0,1% Nhưng Chưa Thu Ngay",
     "excerpt": "Thông tư 41/2026/TT-BTC làm rõ cách thu thuế với giao dịch tài sản mã hóa tại Việt Nam: sàn được cấp phép sẽ khấu trừ và nộp thay. Khung thu đã rõ hơn, nhưng thị trường chưa bước vào giai đoạn thu thực tế ngay lập tức.",
     "date": "Apr 08, 2026",
@@ -1451,7 +1451,7 @@
     "image": "/images/thue-crypto-viet-nam-thong-tu-41-thumb.svg"
   },
   {
-    "url": "/blog/viet-nam-crypto-exchange-joint-venture",
+    "url": "/blog/viet-nam-crypto-exchange-joint-venture/",
     "title": "Sàn Crypto Ngoại Muốn Vào Việt Nam: Phải Liên Doanh, Chịu Trần 49% Và Bỏ Mơ Mộng “Đánh Độc Lập”",
     "excerpt": "Nếu các điều kiện đang lan truyền là sát thực tế, sàn crypto nước ngoài muốn hoạt động hợp pháp tại Việt Nam sẽ phải lập pháp nhân nội địa, liên doanh với đối tác Việt và chấp nhận giới hạn sở hữu. Cửa có mở, nhưng mở kiểu đầy khóa.",
     "date": "Apr 08, 2026",
@@ -1463,7 +1463,7 @@
     "image": "/images/viet-nam-crypto-exchange-joint-venture-thumb.svg"
   },
   {
-    "url": "/blog/openclaw-2026-4-7-3-diem-dang-chu-y",
+    "url": "/blog/openclaw-2026-4-7-3-diem-dang-chu-y/",
     "title": "3 Thứ Đáng Chú Ý Nhất Trong OpenClaw 2026.4.7",
     "excerpt": "Nếu không muốn đọc cả changelog dài, đây là 3 điểm đáng chú ý nhất trong OpenClaw 2026.4.7: infer hub, memory-wiki và webhook TaskFlows.",
     "date": "Apr 08, 2026",
@@ -1474,7 +1474,7 @@
     "featured": true
   },
   {
-    "url": "/blog/openclaw-2026-4-7-release-chi-tiet",
+    "url": "/blog/openclaw-2026-4-7-release-chi-tiet/",
     "title": "OpenClaw 2026.4.7 Có Gì Mới? Toàn Cảnh Chi Tiết Về Infer Hub, Memory-Wiki, TaskFlows Và Hàng Loạt Bản Vá",
     "excerpt": "Một bài nhìn toàn cảnh release OpenClaw 2026.4.7: infer hub, media generation, memory-wiki, webhook TaskFlows, session branch/restore, Gemma 4, dreaming, cùng hàng loạt bản vá về security, auth, gateway và plugin.",
     "date": "Apr 08, 2026",
@@ -1485,7 +1485,7 @@
     "featured": true
   },
   {
-    "url": "/blog/openclaw-2026-4-7-release",
+    "url": "/blog/openclaw-2026-4-7-release/",
     "title": "OpenClaw 2026.4.7: Infer Hub, Memory-Wiki Và Mặt Trái Của Một Bản Update Quá Nhanh",
     "excerpt": "OpenClaw 2026.4.7 tung ra infer hub, music + video editing, webhook TaskFlows và memory-wiki. Nhưng phản ứng cộng đồng cho thấy một câu chuyện quen thuộc: tốc độ ra tính năng quá nhanh thường kéo theo chi phí ổn định hệ thống.",
     "date": "Apr 08, 2026",
@@ -1496,7 +1496,7 @@
     "featured": true
   },
   {
-    "url": "/blog/claude-code-2-1-94-defaults-memory-tooling",
+    "url": "/blog/claude-code-2-1-94-defaults-memory-tooling/",
     "title": "Claude Code 2.1.94: Đổi Defaults, Sửa Memory, Ép Agent Dùng Tool Khôn Hơn",
     "excerpt": "Claude Code 2.1.94 không phải bản update kiểu màu mè cho vui. Nó chỉnh đúng ba thứ ảnh hưởng trải nghiệm thật: effort mặc định lên high, memory bớt cư xử ngu khi bị ignore, và agent được đẩy sang dùng tool sớm hơn, thực dụng hơn.",
     "date": "Apr 08, 2026",
@@ -1508,7 +1508,7 @@
     "image": "/images/claude-code-2-1-94-defaults-memory-tooling-thumb.png"
   },
   {
-    "url": "/blog/ray-dalio-big-cycle-world-war",
+    "url": "/blog/ray-dalio-big-cycle-world-war/",
     "title": "Ray Dalio Cảnh Báo “World War Kiểu Mới”: Crypto Có Thể Chưa Sập Vì Tin Xấu, Mà Vì Cả Hệ Thống Đang Đổi Pha",
     "excerpt": "Ray Dalio cho rằng thế giới đã bước vào giai đoạn đầu của một cuộc chiến đa mặt trận kiểu mới. Với crypto, thứ đáng sợ không chỉ là headline chiến sự, mà là việc thanh khoản, năng lượng và trật tự quyền lực toàn cầu đang đổi pha.",
     "date": "Apr 08, 2026",
@@ -1519,7 +1519,7 @@
     "featured": false
   },
   {
-    "url": "/blog/bitcoin-effective-supply-17m",
+    "url": "/blog/bitcoin-effective-supply-17m/",
     "title": "Nguồn Cung Thật Của Bitcoin Chỉ Còn Quanh 17 Triệu? Nghe Bullish Đấy, Nhưng Đừng Nuốt Nguyên Narrative",
     "excerpt": "Một luận điểm đang được đẩy mạnh: hard cap của Bitcoin là 21 triệu, nhưng nguồn cung thực sự có thể chỉ quanh 17 triệu vì lượng coin ngủ đông hoặc thất lạc quá lớn. Ý này khá bén, nhưng không phải cứ khan hiếm hơn là giá tự động bay mãi.",
     "date": "Apr 08, 2026",
@@ -1531,7 +1531,7 @@
     "image": "/images/bitcoin-effective-supply-17m-thumb.svg"
   },
   {
-    "url": "/blog/erc-8211-onchain-agents",
+    "url": "/blog/erc-8211-onchain-agents/",
     "title": "ERC-8211: Ethereum Đang Dọn Đường Cho Onchain Agents, Nhưng Đừng Vội Tưởng Mọi Bot Đều Hóa Thiên Tài",
     "excerpt": "ERC-8211 xuất hiện như một chuẩn để user và AI agents mô tả các flow on-chain nhiều bước bằng script off-chain có lớp an toàn đi kèm. Ý tưởng này khá bén: agent không chỉ nói hay, mà bắt đầu có cách hành động bài bản hơn trên chain.",
     "date": "Apr 07, 2026",
@@ -1542,7 +1542,7 @@
     "featured": false
   },
   {
-    "url": "/blog/gemma4-openclaw-local-sizing",
+    "url": "/blog/gemma4-openclaw-local-sizing/",
     "title": "Chạy Gemma 4 Với OpenClaw: Chọn Sai Model Là GPU Bốc Khói Trước Khi Agent Kịp Làm Việc",
     "excerpt": "Gemma 4 có tới 8 biến thể, nhưng không phải bản nào cũng hợp để chạy agent local. Với OpenClaw, bài toán không chỉ là load được model, mà là sống sót qua prompt dài, context to và workflow thật.",
     "date": "Apr 07, 2026",
@@ -1553,7 +1553,7 @@
     "featured": false
   },
   {
-    "url": "/blog/minimax-pocket-mobile-agent",
+    "url": "/blog/minimax-pocket-mobile-agent/",
     "title": "MiniMax Pocket: AI Agent Bắt Đầu Rời Bàn Làm Việc, Nhưng Chưa Hẳn Đã Rời Rắc Rối",
     "excerpt": "MiniMax ra mắt Pocket, kết nối chat với agent desktop để duyệt web, gửi file, xử lý việc từ điện thoại. Ý tưởng rất đúng đau điểm của AI agents hiện tại: mạnh đấy, nhưng cứ bắt người dùng ngồi canh laptop thì khác gì thêm một cái việc.",
     "date": "Apr 07, 2026",
@@ -1564,7 +1564,7 @@
     "featured": false
   },
   {
-    "url": "/blog/near-confidential-private-trading",
+    "url": "/blog/near-confidential-private-trading/",
     "title": "NEAR Confidential Mode: Private Trading Nghe Rất Đã, Nhưng Liệu Có Giải Được Bài Toán Thanh Khoản?",
     "excerpt": "NEAR vừa đẩy Confidential Mode cho private trading: che thông tin lệnh để giảm lộ chiến lược và bớt đất diễn cho đám soi orderflow. Ý tưởng khá bén, nhưng privacy trong trading chưa bao giờ là bữa ăn miễn phí.",
     "date": "Apr 07, 2026",
@@ -1575,7 +1575,7 @@
     "featured": false
   },
   {
-    "url": "/blog/polkadot-acurast-edge-compute",
+    "url": "/blog/polkadot-acurast-edge-compute/",
     "title": "Acurast Trên Polkadot: Khi Điện Thoại Rảnh Bắt Đầu Đòi Cướp Miếng Bánh Cloud",
     "excerpt": "Polkadot đang đẩy Acurast như một lựa chọn compute phi tập trung: biến điện thoại nhàn rỗi thành hạ tầng có thể xác minh. Ý tưởng nghe rất ngầu, nhưng liệu đây là mầm compute mới hay chỉ là narrative đẹp để chọc vào nỗi sợ hyperscaler?",
     "date": "Apr 07, 2026",
@@ -1586,7 +1586,7 @@
     "featured": false
   },
   {
-    "url": "/blog/openclaw-dreaming-la-gi",
+    "url": "/blog/openclaw-dreaming-la-gi/",
     "title": "Dreaming Trong OpenClaw Là Gì? Cách AI Tự Nghĩ Lại Công Việc Khi Bạn Không Nhắn",
     "excerpt": "Dreaming là chế độ thử nghiệm của OpenClaw cho phép assistant tự chạy một lượt suy nghĩ nền khi hệ thống rảnh, nhằm rà việc đang dang dở và chuẩn bị bước tiếp theo. Đây không phải AI tự do hành động, mà là một lớp ngẫm lại có kiểm soát hơn.",
     "date": "Apr 07, 2026",
@@ -1597,7 +1597,7 @@
     "featured": true
   },
   {
-    "url": "/blog/gemma4-ondevice-iphone",
+    "url": "/blog/gemma4-ondevice-iphone/",
     "title": "Gemma 4 Chạy Trực Tiếp Trên iPhone: Khi On-Device AI Bắt Đầu Ăn Vào Lãnh Địa Cloud",
     "excerpt": "Gemma 4 E2B đang chạy trực tiếp trên iPhone với tốc độ khoảng 40 token/giây nhờ MLX. Đây không chỉ là một demo đẹp mắt, mà là tín hiệu cho thấy on-device AI đang tiến dần từ vùng thử nghiệm sang lớp hạ tầng sản phẩm thật.",
     "date": "Apr 06, 2026",
@@ -1608,7 +1608,7 @@
     "featured": true
   },
   {
-    "url": "/blog/ai-memecoin-bnb-real-value",
+    "url": "/blog/ai-memecoin-bnb-real-value/",
     "title": "AI + Memecoin + Cộng Đồng: Thí Nghiệm Trên BNB Chain Có Tạo Ra Giá Trị Thật Không?",
     "excerpt": "Một token trên BNB Chain đang tự kể mình như thí nghiệm AI + community + charity economics. Narrative rất hút mắt, nhưng câu hỏi thật là giá trị thật nằm ở đâu ngoài vòng lặp đầu cơ.",
     "date": "Apr 06, 2026",
@@ -1619,7 +1619,7 @@
     "featured": false
   },
   {
-    "url": "/blog/qwen-3-6-plus-zetachain-ai",
+    "url": "/blog/qwen-3-6-plus-zetachain-ai/",
     "title": "Qwen 3.6-Plus Lên ZetaChain: Khi AI Model Bắt Đầu Trở Thành Hạ Tầng Của Web3",
     "excerpt": "ZetaChain đưa Qwen 3.6-Plus vào hệ AI qua AnumaAI với claim 1M context và không cần local install. Câu chuyện lớn hơn không chỉ là model mới, mà là Web3 đang cố trở thành lớp hạ tầng cho AI-native applications.",
     "date": "Apr 06, 2026",
@@ -1630,7 +1630,7 @@
     "featured": false
   },
   {
-    "url": "/blog/viet-nam-crypto-admin-trach-nhiem",
+    "url": "/blog/viet-nam-crypto-admin-trach-nhiem/",
     "title": "Admin Group Crypto Tại Việt Nam Sắp Hết “Vùng Xám”: Rủi Ro Pháp Lý Đã Thành Hiện Thực",
     "excerpt": "Khung pháp lý crypto tại Việt Nam đang siết lại. Admin group, mod cộng đồng và KOL không còn đứng ngoài trách nhiệm nếu nội dung gây thiệt hại cho nhà đầu tư.",
     "date": "Apr 06, 2026",
@@ -1641,7 +1641,7 @@
     "featured": true
   },
   {
-    "url": "/blog/binance-ai-trading-copilot",
+    "url": "/blog/binance-ai-trading-copilot/",
     "title": "Binance Đẩy AI Trading Copilot: Tiện Ích Thật Hay Mở Đầu Cho Kỷ Nguyên “Trade Hộ Bằng Mô Hình”?",
     "excerpt": "Binance bắt đầu đẩy mạnh narrative AI trading copilot: phân tích thị trường, theo dõi portfolio, hỗ trợ thực thi lệnh. Khi sàn lớn nhất thị trường AI hóa trading UX, retail có thể đang bước vào một kỷ nguyên mới.",
     "date": "Apr 06, 2026",
@@ -1652,7 +1652,7 @@
     "featured": false
   },
   {
-    "url": "/blog/gemma-4-launch",
+    "url": "/blog/gemma-4-launch/",
     "title": "Gemma 4 Chính Thức Ra Mắt: 256K Context, Multimodal, Apache 2.0",
     "excerpt": "Google phát hành Gemma 4 với context window 256K, native function calling, multimodal text/image/video. 2 phiên bản 26B và 31B, license Apache 2.0 miễn phí.",
     "date": "Apr 04, 2026",
@@ -1663,7 +1663,7 @@
     "featured": false
   },
   {
-    "url": "/blog/crypto-daily-10",
+    "url": "/blog/crypto-daily-10/",
     "title": "BTC Phục Hồi $70.9K — Volume Bùng Nổ +66%, SOL Dẫn Đầu +6%",
     "excerpt": "BTC vượt $70K, volume tăng 66%. SOL dẫn đầu top 10 (+6.13%) nhờ privacy framework. BlackRock all-in tokenization. Đàm phán Mỹ-Iran là biến số lớn nhất.",
     "date": "Mar 24, 2026",
@@ -1674,7 +1674,7 @@
     "featured": true
   },
   {
-    "url": "/blog/swift-ethereum-banks",
+    "url": "/blog/swift-ethereum-banks/",
     "title": "SWIFT & 25+ Ngân Hàng Thanh Toán Trên Ethereum: Bước Ngoặt Hay Chỉ Là PR?",
     "excerpt": "SWIFT xác nhận 25+ ngân hàng go live trước tháng 6, thanh toán xuyên biên giới trên Ethereum L2 (Consensys Linea). Permissioned chain hay cách mạng TradFi?",
     "date": "Mar 24, 2026",
@@ -1684,7 +1684,7 @@
     "readTime": "11 min read"
   },
   {
-    "url": "/blog/campunance-money-laundering",
+    "url": "/blog/campunance-money-laundering/",
     "title": "Sàn Campunance Bị Bắt: Nhân Viên Mở Backdoor Rửa Tiền — Tiền Bạn Có Sạch Không?",
     "excerpt": "Cảnh sát Campuchia bắt nhân viên sàn Campunance mở backdoor cho rửa tiền. Insider money laundering — rủi ro mới cho mọi user.",
     "date": "Mar 24, 2026",
@@ -1694,7 +1694,7 @@
     "readTime": "9 min read"
   },
   {
-    "url": "/blog/moonpay-ows-ai-wallet",
+    "url": "/blog/moonpay-ows-ai-wallet/",
     "title": "Open Wallet Standard: MoonPay + PayPal + Solana Định Nghĩa Chuẩn Ví Cho AI Agents",
     "excerpt": "OWS — giao thức local-first cho AI agents: một seed phrase, mọi chain, private key không bao giờ lộ. 21 tổ chức sáng lập bao gồm PayPal, Solana, Circle.",
     "date": "Mar 24, 2026",
@@ -1704,7 +1704,7 @@
     "readTime": "10 min read"
   },
   {
-    "url": "/blog/dylan-mat-5tr5-usd-trading",
+    "url": "/blog/dylan-mat-5tr5-usd-trading/",
     "title": "Từ $6 Triệu Xuống $662K: Câu Chuyện Trading Crypto Cay Đắng Nhất Đầu 2026",
     "excerpt": "Dylan, trader Trung Quốc, mất 90% tài sản — $5.5 triệu bốc hơi trong hơn 1 năm. Phân tích bài học tâm lý trading hủy diệt.",
     "date": "Mar 24, 2026",
@@ -1714,7 +1714,7 @@
     "readTime": "9 min read"
   },
   {
-    "url": "/blog/trump-iran-insider-trading",
+    "url": "/blog/trump-iran-insider-trading/",
     "title": "Trump Hoãn Tấn Công Iran 5 Ngày — Ví Bí Ẩn Long $200M Trước Tin",
     "excerpt": "Lệnh hoãn tấn công Iran + ví Hyperliquid mở long $200M+ trước tin chính thức. Nghi vấn insider trading lớn nhất 2026.",
     "date": "Mar 24, 2026",
@@ -1724,7 +1724,7 @@
     "readTime": "12 min read"
   },
   {
-    "url": "/blog/crypto-daily-9",
+    "url": "/blog/crypto-daily-9/",
     "title": "BTC $67.8K Điều Chỉnh — $400M Thanh Lý, Volume +46%, HYPE +26%",
     "excerpt": "Smart money tích lũy khi volume tăng 46% dù giá giảm. SEC-CFTC làm rõ khung pháp lý. Scaramucci dự báo đỉnh Q4/2026.",
     "date": "Mar 23, 2026",
@@ -1735,7 +1735,7 @@
     "featured": false
   },
   {
-    "url": "/blog/xhunt-frontrun-security",
+    "url": "/blog/xhunt-frontrun-security/",
     "title": "xHunt & Frontrun: Open Source Nhưng Track Mọi Thứ Bạn Làm",
     "excerpt": "xHunt gửi IP, fingerprint, mọi URL về server. Wallet injection sẵn sàng kích hoạt.",
     "date": "Mar 23, 2026",
@@ -1745,7 +1745,7 @@
     "readTime": "12 min read"
   },
   {
-    "url": "/blog/zachxbt-scam-network",
+    "url": "/blog/zachxbt-scam-network/",
     "title": "ZachXBT: 10+ Account Giả Tung Tin Chiến Tranh, Pump & Dump",
     "excerpt": "Mạng lưới phối hợp, AI personas, millions views/ngày, $ORAMAMA profit 6 figures.",
     "date": "Mar 23, 2026",
@@ -1755,7 +1755,7 @@
     "readTime": "10 min read"
   },
   {
-    "url": "/blog/binance-mod-vn-phap-ly",
+    "url": "/blog/binance-mod-vn-phap-ly/",
     "title": "Mod Binance Rời Nhóm VN: Cuộc Siết Pháp Lý Crypto",
     "excerpt": "Mod rời nhóm, Bộ TC siết sàn ngoài, sàn nội địa sắp ra mắt.",
     "date": "Mar 23, 2026",
@@ -1765,7 +1765,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/a16z-agentic-commerce",
+    "url": "/blog/a16z-agentic-commerce/",
     "title": "Agentic Commerce: AI Agents Định Hình Lại Thương Mại Số",
     "excerpt": "AOL vs HTTP tái hiện. Marketplace đóng hay protocol mở sẽ thắng?",
     "date": "Mar 23, 2026",
@@ -1775,7 +1775,7 @@
     "readTime": "10 min read"
   },
   {
-    "url": "/blog/siren-1-2b-binance",
+    "url": "/blog/siren-1-2b-binance/",
     "title": "$SIREN Tăng Gấp Đôi Lên $1.2B: Binance Effect",
     "excerpt": "Triple listing Binance Futures + Alpha + Hashkey. Market cap x2 trong 1 ngày.",
     "date": "Mar 23, 2026",
@@ -1785,7 +1785,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/trump-iran-48h",
+    "url": "/blog/trump-iran-48h/",
     "title": "Trump Ra Tối Hậu Thư 48h Cho Iran: \"Mở Hormuz Hoặc Bị Tấn Công\"",
     "excerpt": "Nhà Trắng công bố: Iran có 48 giờ để mở eo biển Hormuz. Phân tích 3 kịch bản và tác động đến crypto.",
     "date": "Mar 22, 2026",
@@ -1796,7 +1796,7 @@
     "featured": false
   },
   {
-    "url": "/blog/crypto-daily-8",
+    "url": "/blog/crypto-daily-8/",
     "title": "BTC Rơi Về $69K — Extreme Fear, $232M Liquidations",
     "excerpt": "Fear Index chạm 10. Whales vẫn tích lũy 270,000 BTC.",
     "date": "Mar 22, 2026",
@@ -1806,7 +1806,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/ai-crypto-narrative",
+    "url": "/blog/ai-crypto-narrative/",
     "title": "AI Coins Bùng Nổ +40.9% — Narrative Lớn Nhất 2026?",
     "excerpt": "$AKT, $PIPPIN, $ARC dẫn đầu. DePIN + AI agents on-chain.",
     "date": "Mar 22, 2026",
@@ -1816,7 +1816,7 @@
     "readTime": "12 min read"
   },
   {
-    "url": "/blog/hormuz-geopolitics",
+    "url": "/blog/hormuz-geopolitics/",
     "title": "Eo Biển Hormuz: 34km Quyết Định Toàn Bộ Thị Trường Tài Chính",
     "excerpt": "Tại sao eo biển 34km ảnh hưởng trực tiếp đến BTC, AI, năng lượng toàn cầu.",
     "date": "Mar 22, 2026",
@@ -1826,7 +1826,7 @@
     "readTime": "10 min read"
   },
   {
-    "url": "/blog/crypto-events-march-2026",
+    "url": "/blog/crypto-events-march-2026/",
     "title": "Sự Kiện Crypto Cuối Tháng 3: TGEs & Launches",
     "excerpt": "Backpack, BASED, EdgeX, MEZO, EthCC Paris.",
     "date": "Mar 22, 2026",
@@ -1836,7 +1836,7 @@
     "readTime": "9 min read"
   },
   {
-    "url": "/blog/ai-research-lab-autoresearch",
+    "url": "/blog/ai-research-lab-autoresearch/",
     "title": "AI Research Lab 24/7: Một Người Bằng Cả Phòng R&D",
     "excerpt": "Autoresearch framework + local models. Solo founders cạnh tranh cả lab.",
     "date": "Mar 22, 2026",
@@ -1846,7 +1846,7 @@
     "readTime": "11 min read"
   },
   {
-    "url": "/blog/resolv-usr-exploit",
+    "url": "/blog/resolv-usr-exploit/",
     "title": "Resolv USR Exploit: $23M Bốc Hơi Vì Một Private Key",
     "excerpt": "Attacker biến $200K thành $23M. USR depeg từ $1 → $0.14.",
     "date": "Mar 22, 2026",
@@ -1856,7 +1856,7 @@
     "readTime": "9 min read"
   },
   {
-    "url": "/blog/crypto-daily-7",
+    "url": "/blog/crypto-daily-7/",
     "title": "BTC $70K, Ledger Chuẩn Bị IPO, Kalshi $22 Tỷ Đô",
     "excerpt": "Bitcoin giữ $70K. Ledger chuẩn bị IPO. Kalshi đạt volume $22B.",
     "date": "Mar 21, 2026",
@@ -1866,7 +1866,7 @@
     "readTime": "7 min read"
   },
   {
-    "url": "/blog/crypto-daily-6",
+    "url": "/blog/crypto-daily-6/",
     "title": "SEC Công Nhận 16 Coin, BTC Giữ $70K, AI Agents",
     "excerpt": "SEC công nhận 16 loại coin. Kỷ nguyên AI Agents bùng nổ.",
     "date": "Mar 20, 2026",
@@ -1876,7 +1876,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/0g",
+    "url": "/blog/0g/",
     "title": "Phân Tích Sâu Dự Án 0g (ZeroGravity)",
     "excerpt": "Phân Tích Sâu Dự Án 0g (ZeroGravity)",
     "date": "2025",
@@ -1886,7 +1886,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/ada",
+    "url": "/blog/ada/",
     "title": "Cardano: Phân Tích Chuyên Sâu & Tiềm Năng Tăng Trưởng",
     "excerpt": "Cardano: Phân Tích Chuyên Sâu & Tiềm Năng Tăng Trưởng",
     "date": "2025",
@@ -1896,7 +1896,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/alloyx",
+    "url": "/blog/alloyx/",
     "title": "AlloyX: Kiến tạo một loại tài sản mới",
     "excerpt": "AlloyX: Kiến tạo một loại tài sản mới",
     "date": "2025",
@@ -1906,7 +1906,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/amazon-openai-partnership",
+    "url": "/blog/amazon-openai-partnership/",
     "title": "Amazon Đầu Tư $50B Vào OpenAI - Thỏa Thuận Đối Tác Chiến Lược",
     "excerpt": "Amazon Đầu Tư $50B Vào OpenAI - Thỏa Thuận Đối Tác Chiến Lược",
     "date": "2025",
@@ -1916,7 +1916,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/anoma",
+    "url": "/blog/anoma/",
     "title": "Anoma: Infographic Kiến Trúc Lấy Ý Định Làm Trung Tâm",
     "excerpt": "Anoma: Infographic Kiến Trúc Lấy Ý Định Làm Trung Tâm",
     "date": "2025",
@@ -1926,7 +1926,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/arc-network",
+    "url": "/blog/arc-network/",
     "title": "Infographic: Arc - Blockchain Doanh Nghiệp của Circle",
     "excerpt": "Infographic: Arc - Blockchain Doanh Nghiệp của Circle",
     "date": "2025",
@@ -1936,7 +1936,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/aztec",
+    "url": "/blog/aztec/",
     "title": "Phân tích Chuyên sâu Aztec Network",
     "excerpt": "Phân tích Chuyên sâu Aztec Network",
     "date": "2025",
@@ -1946,7 +1946,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/aztec-bao-cao",
+    "url": "/blog/aztec-bao-cao/",
     "title": "Báo cáo Tương tác: Aztec Network",
     "excerpt": "Báo cáo Tương tác: Aztec Network",
     "date": "2025",
@@ -1956,7 +1956,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/aztec-infographic",
+    "url": "/blog/aztec-infographic/",
     "title": "Infographic: Aztec Network - Quyền riêng tư Lập trình được",
     "excerpt": "Infographic: Aztec Network - Quyền riêng tư Lập trình được",
     "date": "2025",
@@ -1966,7 +1966,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/aztec-phan-tich",
+    "url": "/blog/aztec-phan-tich/",
     "title": "Aztec Network: Phân Tích Chuyên Sâu",
     "excerpt": "Aztec Network: Phân Tích Chuyên Sâu",
     "date": "2025",
@@ -1976,7 +1976,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/base-rollup-ethereum",
+    "url": "/blog/base-rollup-ethereum/",
     "title": "Đồ hoạ thông tin: Cuộn lên Cơ sở & Tương lai Ethereum",
     "excerpt": "Đồ hoạ thông tin: Cuộn lên Cơ sở & Tương lai Ethereum",
     "date": "2025",
@@ -1986,7 +1986,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/base-rollup-summit-2025",
+    "url": "/blog/base-rollup-summit-2025/",
     "title": "Tóm tắt 10 điểm chính từ Hội nghị thượng đỉnh Based Rollup Cannes 2025",
     "excerpt": "Tóm tắt 10 điểm chính từ Hội nghị thượng đỉnh Based Rollup Cannes 2025",
     "date": "2025",
@@ -1996,7 +1996,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/bch",
+    "url": "/blog/bch/",
     "title": "Bitcoin Cash (BCH): Phân Tích Chuyên Sâu",
     "excerpt": "Bitcoin Cash (BCH): Phân Tích Chuyên Sâu",
     "date": "2025",
@@ -2006,7 +2006,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/binance-ai-skills",
+    "url": "/blog/binance-ai-skills/",
     "title": "Binance AI Agent Skills — 7 Kỹ Năng Cho AI Agents",
     "excerpt": "Binance AI Agent Skills — 7 Kỹ Năng Cho AI Agents",
     "date": "Mar 5, 2026",
@@ -2016,7 +2016,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/bio-protocol",
+    "url": "/blog/bio-protocol/",
     "title": "BIO Protocol: Infographic về Tương Lai của Khoa Học Phi Tập Trung",
     "excerpt": "BIO Protocol: Infographic về Tương Lai của Khoa Học Phi Tập Trung",
     "date": "2025",
@@ -2026,7 +2026,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/bitlayer",
+    "url": "/blog/bitlayer/",
     "title": "Bitlayer: Phân Tích Chuyên Sâu Infographic",
     "excerpt": "Bitlayer: Phân Tích Chuyên Sâu Infographic",
     "date": "2025",
@@ -2036,7 +2036,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/blob",
+    "url": "/blog/blob/",
     "title": "Tóm Tắt: Chia Sẻ Blob và Tương Lai của Rollup Cơ Sở",
     "excerpt": "Tóm Tắt: Chia Sẻ Blob và Tương Lai của Rollup Cơ Sở",
     "date": "2025",
@@ -2046,7 +2046,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/blockchain",
+    "url": "/blog/blockchain/",
     "title": "Toàn Cảnh Hệ Sinh Thái Blockchain: So Sánh Chuyên Sâu",
     "excerpt": "Toàn Cảnh Hệ Sinh Thái Blockchain: So Sánh Chuyên Sâu",
     "date": "2025",
@@ -2056,7 +2056,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/bnb-hardfork-maxwell",
+    "url": "/blog/bnb-hardfork-maxwell/",
     "title": "Infographic: Phân tích Hardfork Maxwell của BNB Chain",
     "excerpt": "Infographic: Phân tích Hardfork Maxwell của BNB Chain",
     "date": "2025",
@@ -2066,7 +2066,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/bnb-upgrade-july2025",
+    "url": "/blog/bnb-upgrade-july2025/",
     "title": "Đồ hoạ thông tin: Nâng cấp & Tầm nhìn Chuỗi BNB",
     "excerpt": "Đồ hoạ thông tin: Nâng cấp & Tầm nhìn Chuỗi BNB",
     "date": "2025",
@@ -2076,7 +2076,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/bnbchain-update-2025-2026",
+    "url": "/blog/bnbchain-update-2025-2026/",
     "title": "Infographic: Tương lai của BNB Chain",
     "excerpt": "Infographic: Tương lai của BNB Chain",
     "date": "2025",
@@ -2086,7 +2086,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/boundless",
+    "url": "/blog/boundless/",
     "title": "Infographic: Phân tích Giao thức Boundless",
     "excerpt": "Infographic: Phân tích Giao thức Boundless",
     "date": "2025",
@@ -2096,7 +2096,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/btc",
+    "url": "/blog/btc/",
     "title": "Bitcoin: Phân Tích Chuyên Sâu",
     "excerpt": "Bitcoin: Phân Tích Chuyên Sâu",
     "date": "2025",
@@ -2106,7 +2106,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/canton-network",
+    "url": "/blog/canton-network/",
     "title": "Đồ Họa Thông Tin: Mạng Lưới Canton - Tương Lai Của Tài Chính Kết Nối",
     "excerpt": "Đồ Họa Thông Tin: Mạng Lưới Canton - Tương Lai Của Tài Chính Kết Nối",
     "date": "2025",
@@ -2116,7 +2116,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/celestia",
+    "url": "/blog/celestia/",
     "title": "Celestia: Phân Tích Chuyên Sâu & Tiềm Năng Tăng Trưởng",
     "excerpt": "Celestia: Phân Tích Chuyên Sâu & Tiềm Năng Tăng Trưởng",
     "date": "2025",
@@ -2126,7 +2126,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/chainlink-reserve",
+    "url": "/blog/chainlink-reserve/",
     "title": "Chainlink Reserve: Củng Cố Tương Lai Bền Vững",
     "excerpt": "Chainlink Reserve: Củng Cố Tương Lai Bền Vững",
     "date": "2025",
@@ -2136,7 +2136,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/citrea",
+    "url": "/blog/citrea/",
     "title": "Citrea: Tương lai của việc mở rộng Bitcoin",
     "excerpt": "Citrea: Tương lai của việc mở rộng Bitcoin",
     "date": "2025",
@@ -2146,7 +2146,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/clementin",
+    "url": "/blog/clementin/",
     "title": "Clementine: Cầu nối Bitcoin Hiệu quả về Tài sản thế chấp, Giảm thiểu Tin cậy và Có thể Mở rộng",
     "excerpt": "Clementine: Cầu nối Bitcoin Hiệu quả về Tài sản thế chấp, Giảm thiểu Tin cậy và ",
     "date": "2025",
@@ -2156,7 +2156,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/crypto-update-2026-2-6",
+    "url": "/blog/crypto-update-2026-2-6/",
     "title": "Phân Tích Thị Trường Crypto 24 Giờ Qua: Báo Cáo Tổng Quan",
     "excerpt": "Phân Tích Thị Trường Crypto 24 Giờ Qua: Báo Cáo Tổng Quan",
     "date": "06/02/2026",
@@ -2166,7 +2166,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/crypto-daily",
+    "url": "/blog/crypto-daily/",
     "title": "BTC Phá $72K - Rally Mạnh Khi Lo Ngại Chiến Tranh Giảm",
     "excerpt": "BTC Phá $72K - Rally Mạnh Khi Lo Ngại Chiến Tranh Giảm",
     "date": "Mar 5, 2026",
@@ -2176,7 +2176,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/crypto-daily-2",
+    "url": "/blog/crypto-daily-2/",
     "title": "Báo Cáo Crypto 07/03: BTC Mất 110 Tỷ Đô - Thị Trường Đỏ Lửa",
     "excerpt": "Báo Cáo Crypto 07/03: BTC Mất 110 Tỷ Đô - Thị Trường Đỏ Lửa",
     "date": "Mar 7, 2026",
@@ -2186,7 +2186,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/crypto-daily-3",
+    "url": "/blog/crypto-daily-3/",
     "title": "Bitcoin Vượt $71K, BlackRock Tung Staked Ether ETF",
     "excerpt": "Bitcoin vượt $71K. BlackRock ra mắt Staked Ether ETF (ETHB). Pi Network tăng 30%.",
     "date": "Mar 13, 2026",
@@ -2196,7 +2196,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/crypto-daily-4",
+    "url": "/blog/crypto-daily-4/",
     "title": "Bitcoin Quay Xe Sau Khi Chạm $74K, Ethereum Bước Ngoặt Lịch Sử",
     "excerpt": "BTC quay đầu giảm sau khi test $74K. Ethereum công bố bước ngoặt lịch sử.",
     "date": "Mar 14, 2026",
@@ -2206,7 +2206,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/crypto-daily-5",
+    "url": "/blog/crypto-daily-5/",
     "title": "Crypto Ngày 16/03: BTC Phá $72K, SEC & CFTC Bắt Tay",
     "excerpt": "Bitcoin phá $72,000. SEC và CFTC hợp tác quản lý crypto — bước ngoặt pháp lý lớn.",
     "date": "Mar 16, 2026",
@@ -2216,7 +2216,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/dappbay5",
+    "url": "/blog/dappbay5/",
     "title": "Sự Kiện BNB Day - Chia Sẻ Giải Thưởng $480,000",
     "excerpt": "Sự Kiện BNB Day - Chia Sẻ Giải Thưởng $480,000",
     "date": "2025",
@@ -2226,7 +2226,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/data-availability",
+    "url": "/blog/data-availability/",
     "title": "Infographic: Hướng dẫn cần thiết về tính khả dụng dữ liệu Blockchain",
     "excerpt": "Infographic: Hướng dẫn cần thiết về tính khả dụng dữ liệu Blockchain",
     "date": "2025",
@@ -2236,7 +2236,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/dot",
+    "url": "/blog/dot/",
     "title": "Phân Tích Sâu Về Polkadot (DOT): Thách Thức & Tiềm Năng Tương Lai",
     "excerpt": "Phân Tích Sâu Về Polkadot (DOT): Thách Thức & Tiềm Năng Tương Lai",
     "date": "2025",
@@ -2246,7 +2246,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/enso-finance",
+    "url": "/blog/enso-finance/",
     "title": "Infographic: Tổng quan Dự án Enso.build",
     "excerpt": "Infographic: Tổng quan Dự án Enso.build",
     "date": "2025",
@@ -2256,7 +2256,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/etc",
+    "url": "/blog/etc/",
     "title": "Đào sâu Ethereum Classic (ETC): Một Infographic",
     "excerpt": "Đào sâu Ethereum Classic (ETC): Một Infographic",
     "date": "2025",
@@ -2266,7 +2266,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/eth",
+    "url": "/blog/eth/",
     "title": "Sự Tiến Hóa của Ethereum: Phân Tích Sâu về Tiềm Năng Tương Lai",
     "excerpt": "Sự Tiến Hóa của Ethereum: Phân Tích Sâu về Tiềm Năng Tương Lai",
     "date": "2025",
@@ -2276,7 +2276,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/eth-pectra",
+    "url": "/blog/eth-pectra/",
     "title": "Infographic: Phân tích Nâng cấp Ethereum Pectra",
     "excerpt": "Infographic: Phân tích Nâng cấp Ethereum Pectra",
     "date": "2025",
@@ -2286,7 +2286,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/gpt5-prompt-guide",
+    "url": "/blog/gpt5-prompt-guide/",
     "title": "GPT-5.4 Prompt Guide: Cách Viết Prompt Hiệu Quả Cho Model Mới CủA OpenAI",
     "excerpt": "GPT-5.4 Prompt Guide: Cách Viết Prompt Hiệu Quả Cho Model Mới CủA OpenAI",
     "date": "Mar 7, 2026",
@@ -2296,7 +2296,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/helios-network",
+    "url": "/blog/helios-network/",
     "title": "Infographic Phân Tích Chuyên Sâu: Helios Chain",
     "excerpt": "Infographic Phân Tích Chuyên Sâu: Helios Chain",
     "date": "2025",
@@ -2306,7 +2306,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/hyperliquid",
+    "url": "/blog/hyperliquid/",
     "title": "Cuộc Cách Mạng Hypercert: Tài Trợ Cho Tác Động, Không Phải Lời Hứa",
     "excerpt": "Cuộc Cách Mạng Hypercert: Tài Trợ Cho Tác Động, Không Phải Lời Hứa",
     "date": "2025",
@@ -2316,7 +2316,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/hypernative",
+    "url": "/blog/hypernative/",
     "title": "Infographic: Hypernative - Lá Chắn Chủ Động cho Web3",
     "excerpt": "Infographic: Hypernative - Lá Chắn Chủ Động cho Web3",
     "date": "2025",
@@ -2326,7 +2326,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/hypernative-report",
+    "url": "/blog/hypernative-report/",
     "title": "Báo cáo Tương tác: Phân tích Chuyên sâu về Hypernative",
     "excerpt": "Báo cáo Tương tác: Phân tích Chuyên sâu về Hypernative",
     "date": "2025",
@@ -2336,7 +2336,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/intuiition-system",
+    "url": "/blog/intuiition-system/",
     "title": "Intuition Systems: Chuyển Đổi Ngành Bán Lẻ & F&B Bằng Sức Mạnh AI",
     "excerpt": "Intuition Systems: Chuyển Đổi Ngành Bán Lẻ & F&B Bằng Sức Mạnh AI",
     "date": "2025",
@@ -2346,7 +2346,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/kaitoai",
+    "url": "/blog/kaitoai/",
     "title": "Kaito.ai: An AI-Powered InfoFi Ecosystem",
     "excerpt": "Kaito.ai: An AI-Powered InfoFi Ecosystem",
     "date": "2025",
@@ -2356,7 +2356,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/lineavstaiko",
+    "url": "/blog/lineavstaiko/",
     "title": "Phân Tích Sâu Layer 2: Linea vs. Taiko",
     "excerpt": "Phân Tích Sâu Layer 2: Linea vs. Taiko",
     "date": "2025",
@@ -2366,7 +2366,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/link-oracle",
+    "url": "/blog/link-oracle/",
     "title": "Infographic: Nền Tảng Oracle của Chainlink",
     "excerpt": "Infographic: Nền Tảng Oracle của Chainlink",
     "date": "2025",
@@ -2376,7 +2376,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/ltc",
+    "url": "/blog/ltc/",
     "title": "Litecoin: Infographic về Tiềm năng Tăng trưởng",
     "excerpt": "Litecoin: Infographic về Tiềm năng Tăng trưởng",
     "date": "2025",
@@ -2386,7 +2386,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/med-house",
+    "url": "/blog/med-house/",
     "title": "Tủ Thuốc Gia Đình Thông Minh",
     "excerpt": "Tủ Thuốc Gia Đình Thông Minh",
     "date": "2025",
@@ -2396,7 +2396,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/mitosis",
+    "url": "/blog/mitosis/",
     "title": "Mitosis: Giao thức Thanh khoản Tương tác",
     "excerpt": "Mitosis: Giao thức Thanh khoản Tương tác",
     "date": "2025",
@@ -2406,7 +2406,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/morph",
+    "url": "/blog/morph/",
     "title": "Infographic Phân tích Chuyên sâu Morph L2",
     "excerpt": "Infographic Phân tích Chuyên sâu Morph L2",
     "date": "2025",
@@ -2416,7 +2416,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/pharos-network",
+    "url": "/blog/pharos-network/",
     "title": "Infographic: Phân tích Chuyên sâu Mạng lưới Pharos",
     "excerpt": "Infographic: Phân tích Chuyên sâu Mạng lưới Pharos",
     "date": "2025",
@@ -2426,7 +2426,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/poisedonai",
+    "url": "/blog/poisedonai/",
     "title": "PSDN.ai: Nền tảng Ứng dụng AI-Native",
     "excerpt": "PSDN.ai: Nền tảng Ứng dụng AI-Native",
     "date": "2025",
@@ -2436,7 +2436,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/post-tx",
+    "url": "/blog/post-tx/",
     "title": "Infographic: Chuyển Đổi Hậu Giao Dịch với Token Hóa & DLT",
     "excerpt": "Infographic: Chuyển Đổi Hậu Giao Dịch với Token Hóa & DLT",
     "date": "2025",
@@ -2446,7 +2446,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/ppa",
+    "url": "/blog/ppa/",
     "title": "Infographic: Các Khẳng Định Tiên Quyết Có Thể Chứng Minh (PPA)",
     "excerpt": "Infographic: Các Khẳng Định Tiên Quyết Có Thể Chứng Minh (PPA)",
     "date": "2025",
@@ -2456,7 +2456,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/quantumroot",
+    "url": "/blog/quantumroot/",
     "title": "Infographic: QuantumRoot - Lá Chắn Lượng Tử cho Bitcoin",
     "excerpt": "Infographic: QuantumRoot - Lá Chắn Lượng Tử cho Bitcoin",
     "date": "2025",
@@ -2466,7 +2466,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/quantumroot-2",
+    "url": "/blog/quantumroot-2/",
     "title": "Ứng Dụng Tương Tác: Khám Phá QuantumRoot",
     "excerpt": "Ứng Dụng Tương Tác: Khám Phá QuantumRoot",
     "date": "2025",
@@ -2476,7 +2476,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/recall-network",
+    "url": "/blog/recall-network/",
     "title": "Phân tích sâu về Recall Network",
     "excerpt": "Phân tích sâu về Recall Network",
     "date": "2025",
@@ -2486,7 +2486,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/rgb",
+    "url": "/blog/rgb/",
     "title": "Giao thức RGB: Phân tích sâu về Hợp đồng thông minh trên Bitcoin",
     "excerpt": "Giao thức RGB: Phân tích sâu về Hợp đồng thông minh trên Bitcoin",
     "date": "2025",
@@ -2496,7 +2496,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/risechain",
+    "url": "/blog/risechain/",
     "title": "Infographic Phân Tích Dự Án Risechain",
     "excerpt": "Infographic Phân Tích Dự Án Risechain",
     "date": "2025",
@@ -2506,7 +2506,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/sei",
+    "url": "/blog/sei/",
     "title": "So sánh Sei vs. Sui & Aptos: Phân tích Blockchain Lớp 1",
     "excerpt": "So sánh Sei vs. Sui & Aptos: Phân tích Blockchain Lớp 1",
     "date": "2025",
@@ -2516,7 +2516,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/sei-ai-agent",
+    "url": "/blog/sei-ai-agent/",
     "title": "Đồ hoạ thông tin: Xây dựng nền tảng cho Nền kinh tế Agent AI",
     "excerpt": "Đồ hoạ thông tin: Xây dựng nền tảng cho Nền kinh tế Agent AI",
     "date": "2025",
@@ -2526,7 +2526,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/smart-account",
+    "url": "/blog/smart-account/",
     "title": "Infographic: Cuộc Cách Mạng Tài Khoản Thông Minh",
     "excerpt": "Infographic: Cuộc Cách Mạng Tài Khoản Thông Minh",
     "date": "2025",
@@ -2536,7 +2536,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/sonic",
+    "url": "/blog/sonic/",
     "title": "Infographic Phân Tích Sâu: Sonic Blockchain",
     "excerpt": "Infographic Phân Tích Sâu: Sonic Blockchain",
     "date": "2025",
@@ -2546,7 +2546,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/stablexyz",
+    "url": "/blog/stablexyz/",
     "title": "Infographic Phân tích Chuyên sâu: Dự án Stable.xyz",
     "excerpt": "Infographic Phân tích Chuyên sâu: Dự án Stable.xyz",
     "date": "2025",
@@ -2556,7 +2556,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/story-protocol",
+    "url": "/blog/story-protocol/",
     "title": "Infographic: Phân Tích Chuyên Sâu Story Protocol",
     "excerpt": "Infographic: Phân Tích Chuyên Sâu Story Protocol",
     "date": "2025",
@@ -2566,7 +2566,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/symbioticfi",
+    "url": "/blog/symbioticfi/",
     "title": "Infographic Phân Tích Sâu Symbiotic.fi",
     "excerpt": "Infographic Phân Tích Sâu Symbiotic.fi",
     "date": "2025",
@@ -2576,7 +2576,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/tbzs6",
+    "url": "/blog/tbzs6/",
     "title": "Trailblazers Phát Triển: The Arena và The Undercity",
     "excerpt": "Trailblazers Phát Triển: The Arena và The Undercity",
     "date": "2025",
@@ -2586,7 +2586,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/trailblazer",
+    "url": "/blog/trailblazer/",
     "title": "Cập Nhật Chương Trình Taiko Trailblazers",
     "excerpt": "Cập Nhật Chương Trình Taiko Trailblazers",
     "date": "2025",
@@ -2596,7 +2596,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/usdai",
+    "url": "/blog/usdai/",
     "title": "Phân Tích Chuyên Sâu Dự Án USD.AI",
     "excerpt": "Phân Tích Chuyên Sâu Dự Án USD.AI",
     "date": "2025",
@@ -2606,7 +2606,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/vitalik2025",
+    "url": "/blog/vitalik2025/",
     "title": "Đồ hoạ thông tin: Vitalik Buterin & Tầm nhìn Ethereum 2025",
     "excerpt": "Đồ hoạ thông tin: Vitalik Buterin & Tầm nhìn Ethereum 2025",
     "date": "2025",
@@ -2616,7 +2616,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/vitalik-ethereum-scaling",
+    "url": "/blog/vitalik-ethereum-scaling/",
     "title": "Vitalik Buterin - Lộ Trình Scale Ethereum 2026-2027",
     "excerpt": "Vitalik Buterin - Lộ Trình Scale Ethereum 2026-2027",
     "date": "2025",
@@ -2626,7 +2626,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/vitalik-sanctuary-tech",
+    "url": "/blog/vitalik-sanctuary-tech/",
     "title": "Vitalik Buterin - Sanctuary Technologies: Tương Lai Của Ethereum",
     "excerpt": "Vitalik Buterin - Sanctuary Technologies: Tương Lai Của Ethereum",
     "date": "2025",
@@ -2636,7 +2636,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/zachxbt-axiom-insider",
+    "url": "/blog/zachxbt-axiom-insider/",
     "title": "ZachXBT Vạch Trần Nội Gián Sàn Axiom - Lạm Dụng Dữ Liệu Người Dùng",
     "excerpt": "ZachXBT Vạch Trần Nội Gián Sàn Axiom - Lạm Dụng Dữ Liệu Người Dùng",
     "date": "2025",
@@ -2646,7 +2646,7 @@
     "readTime": "8 min read"
   },
   {
-    "url": "/blog/zama",
+    "url": "/blog/zama/",
     "title": "Zama.ai: Tương lai của Internet Bảo mật",
     "excerpt": "Zama.ai: Tương lai của Internet Bảo mật",
     "date": "01/07/2025",
