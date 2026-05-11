@@ -5,8 +5,17 @@
     <link>https://news.escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Sat, 09 May 2026 17:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 10 May 2026 17:00:00 GMT</lastBuildDate>
     <atom:link href="https://news.escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>💰 Codex Tự Kiếm Tiền: $16.88 Sau 22 Giờ Làm Việc</title>
+      <link>https://news.escbase.xyz/blog/codex-making-money-autonomously/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/codex-making-money-autonomously/</guid>
+      <pubDate>Sun, 10 May 2026 17:00:00 GMT</pubDate>
+      <description>Chris để Codex tự đi kiếm tiền từ bounty bảo mật: 22 triệu token, 22 giờ, thu về $16.88. Tầm nhìn Sam Altman về AI kiếm tiền đang thành hiện thực?</description>
+      <category>AI Agents</category>
+      <enclosure url="https://news.escbase.xyz/images/codex-making-money-thumb.png" type="image/png" length="0" />
+    </item>
     <item>
       <title>⛓️ Ethereum: Lớp Phối Hợp Kinh Tế Hậu AGI</title>
       <link>https://news.escbase.xyz/blog/solaretherpunk-ethereum-coordination-layer/</link>
@@ -447,15 +456,6 @@
       <description>Arkham vừa đăng một thread khá rõ ràng về cách nối Claude với Arkham API chỉ trong 6 bước. Điểm đáng chú ý không nằm ở vài lệnh cài đặt, mà ở chỗ Arkham đang cố biến dữ liệu on-chain thành thứ có thể hỏi bằng ngôn ngữ tự nhiên, để agent gọi API, đọc kết quả và trả lại ngay trong chat.</description>
       <category>On-chain Tools</category>
       <enclosure url="https://news.escbase.xyz/images/arkham-api-claude-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>OpenClaw 2026.4.25 có gì đáng chú ý?</title>
-      <link>https://news.escbase.xyz/blog/openclaw-2026-4-25/</link>
-      <guid isPermaLink="true">https://news.escbase.xyz/blog/openclaw-2026-4-25/</guid>
-      <pubDate>Mon, 27 Apr 2026 17:00:00 GMT</pubDate>
-      <description>OpenClaw 2026.4.25 không phải kiểu bản cập nhật chỉ thêm vài tính năng cho đẹp bảng tin. Lõi của nó nằm ở chỗ khác: giọng nói được nâng cấp mạnh hơn, plugin khởi động nhanh hơn, hệ thống theo dõi lỗi và luồng chạy sâu hơn, và phần cài đặt - cập nhật - trình duyệt được vá để bớt chết vặt.</description>
-      <category>Agent Tools</category>
-      <enclosure url="https://news.escbase.xyz/images/openclaw-2026-4-25-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>
