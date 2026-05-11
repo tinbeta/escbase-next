@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/kimi-k2-6-complete-guide/",
+    "title": "🚀 Kimi K2.6: Model Mã Hóa Trung Quốc Rẻ Hơn 7 Lần, Mạnh Ngang Claude",
+    "excerpt": "Kirill phân tích Kimi K2.6: model mã hóa mở nguồn từ Trung Quốc, rẻ hơn Claude Opus 4.7 gấp 7 lần, benchmark ngang bằng, và 5 lệnh ẩn giúp tiết kiệm giờ làm việc.",
+    "date": "May 11, 2026",
+    "tag": "AI Model",
+    "tagIcon": "fas fa-code",
+    "tagColor": "#ec4899",
+    "readTime": "10 phút",
+    "featured": true,
+    "image": "/images/kimi-k2-6-guide-thumb.png"
+  },
+  {
     "url": "/blog/codex-remote-control-overnight/",
     "title": "🌱 Codex Remote Control: Viết Qua Đêm, Dùng Trên Điện Thoại",
     "excerpt": "Matthew Lam để Codex tự viết /remote-control qua đêm bằng /goal: server laptop, QR code, đồng bộ điện thoại — điều khiển Codex từ xa để 'touch grass'.",

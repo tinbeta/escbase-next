@@ -8,6 +8,15 @@
     <lastBuildDate>Sun, 10 May 2026 17:00:00 GMT</lastBuildDate>
     <atom:link href="https://news.escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>🚀 Kimi K2.6: Model Mã Hóa Trung Quốc Rẻ Hơn 7 Lần, Mạnh Ngang Claude</title>
+      <link>https://news.escbase.xyz/blog/kimi-k2-6-complete-guide/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/kimi-k2-6-complete-guide/</guid>
+      <pubDate>Sun, 10 May 2026 17:00:00 GMT</pubDate>
+      <description>Kirill phân tích Kimi K2.6: model mã hóa mở nguồn từ Trung Quốc, rẻ hơn Claude Opus 4.7 gấp 7 lần, benchmark ngang bằng, và 5 lệnh ẩn giúp tiết kiệm giờ làm việc.</description>
+      <category>AI Model</category>
+      <enclosure url="https://news.escbase.xyz/images/kimi-k2-6-guide-thumb.png" type="image/png" length="0" />
+    </item>
+    <item>
       <title>🌱 Codex Remote Control: Viết Qua Đêm, Dùng Trên Điện Thoại</title>
       <link>https://news.escbase.xyz/blog/codex-remote-control-overnight/</link>
       <guid isPermaLink="true">https://news.escbase.xyz/blog/codex-remote-control-overnight/</guid>
@@ -447,15 +456,6 @@
       <description>Stablecoins không còn là công cụ giao dịch crypto — chúng đang trở thành nền tảng hạ tầng tài chính mới. a16z phân tích 5 lớp của global finance stack và dự báo credit là cuộc chơi lớn tiếp theo.</description>
       <category>Stablecoins</category>
       <enclosure url="https://news.escbase.xyz/images/the-new-stack-for-global-finance-stablecoins-edition.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>OpenClaw 2026.4.26: Browser Talk, Cerebras, UI Diff Panel và Hơn Nữa</title>
-      <link>https://news.escbase.xyz/blog/openclaw-2026-4-26-release/</link>
-      <guid isPermaLink="true">https://news.escbase.xyz/blog/openclaw-2026-4-26-release/</guid>
-      <pubDate>Sat, 25 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Bản nâng cấp mới nhất của OpenClaw mang lại tính năng browser realtime talk, provider Cerebras, memory enhancements, UI polish và nhiều cải tiến quan trọng cho AI agent workflows.</description>
-      <category>AI Agents</category>
-      <enclosure url="https://news.escbase.xyz/images/openclaw-2026-4-26-release-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>
