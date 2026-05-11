@@ -8,6 +8,15 @@
     <lastBuildDate>Sun, 10 May 2026 17:00:00 GMT</lastBuildDate>
     <atom:link href="https://news.escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>⏳ Codex Chạy 3 Ngày: $4.300 Token, 78.000 Dòng Code, 1 Tháng Làm Thủ Công</title>
+      <link>https://news.escbase.xyz/blog/steipete-codex-marathon-refactor/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/steipete-codex-marathon-refactor/</guid>
+      <pubDate>Sun, 10 May 2026 17:00:00 GMT</pubDate>
+      <description>Peter Steinberger để Codex tự refactor codebase quy mô lớn trong 3 ngày. Chi phí ước tính $4.300 token, PR tăng từ 1.000 lên 78.000 dòng — việc làm thủ công mất cả tháng.</description>
+      <category>Dev Tool</category>
+      <enclosure url="https://news.escbase.xyz/images/steipete-codex-marathon-thumb.png" type="image/png" length="0" />
+    </item>
+    <item>
       <title>🚀 Kimi K2.6: Model Mã Hóa Trung Quốc Rẻ Hơn 7 Lần, Mạnh Ngang Claude</title>
       <link>https://news.escbase.xyz/blog/kimi-k2-6-complete-guide/</link>
       <guid isPermaLink="true">https://news.escbase.xyz/blog/kimi-k2-6-complete-guide/</guid>
@@ -447,15 +456,6 @@
       <description>Stripe ra mắt Link Wallet for Agents — ví điện tử cho AI agents, cho phép AI tự động thanh toán thay mặt người dùng mà không lộ thông tin thanh toán. Mỗi giao dịch cần sự approve của user.</description>
       <category>AI Agent</category>
       <enclosure url="https://news.escbase.xyz/images/stripe-link-wallet-for-agents-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>Hạ Tầng Tài Chính Toàn Cầu Mới — Bản Đồ Stablecoin Stack Theo a16z</title>
-      <link>https://news.escbase.xyz/blog/the-new-stack-for-global-finance-stablecoins-edition/</link>
-      <guid isPermaLink="true">https://news.escbase.xyz/blog/the-new-stack-for-global-finance-stablecoins-edition/</guid>
-      <pubDate>Tue, 28 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Stablecoins không còn là công cụ giao dịch crypto — chúng đang trở thành nền tảng hạ tầng tài chính mới. a16z phân tích 5 lớp của global finance stack và dự báo credit là cuộc chơi lớn tiếp theo.</description>
-      <category>Stablecoins</category>
-      <enclosure url="https://news.escbase.xyz/images/the-new-stack-for-global-finance-stablecoins-edition.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>
