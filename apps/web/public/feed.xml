@@ -8,6 +8,15 @@
     <lastBuildDate>Sun, 10 May 2026 17:00:00 GMT</lastBuildDate>
     <atom:link href="https://news.escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>🌱 Codex Remote Control: Viết Qua Đêm, Dùng Trên Điện Thoại</title>
+      <link>https://news.escbase.xyz/blog/codex-remote-control-overnight/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/codex-remote-control-overnight/</guid>
+      <pubDate>Sun, 10 May 2026 17:00:00 GMT</pubDate>
+      <description>Matthew Lam để Codex tự viết /remote-control qua đêm bằng /goal: server laptop, QR code, đồng bộ điện thoại — điều khiển Codex từ xa để &apos;touch grass&apos;.</description>
+      <category>Dev Tool</category>
+      <enclosure url="https://news.escbase.xyz/images/codex-remote-control-thumb.png" type="image/png" length="0" />
+    </item>
+    <item>
       <title>💰 Codex Tự Kiếm Tiền: $16.88 Sau 22 Giờ Làm Việc</title>
       <link>https://news.escbase.xyz/blog/codex-making-money-autonomously/</link>
       <guid isPermaLink="true">https://news.escbase.xyz/blog/codex-making-money-autonomously/</guid>
@@ -447,15 +456,6 @@
       <description>Bản nâng cấp mới nhất của OpenClaw mang lại tính năng browser realtime talk, provider Cerebras, memory enhancements, UI polish và nhiều cải tiến quan trọng cho AI agent workflows.</description>
       <category>AI Agents</category>
       <enclosure url="https://news.escbase.xyz/images/openclaw-2026-4-26-release-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>Arkham đang muốn biến Claude thành cửa vào dữ liệu on-chain</title>
-      <link>https://news.escbase.xyz/blog/arkham-api-claude/</link>
-      <guid isPermaLink="true">https://news.escbase.xyz/blog/arkham-api-claude/</guid>
-      <pubDate>Mon, 27 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Arkham vừa đăng một thread khá rõ ràng về cách nối Claude với Arkham API chỉ trong 6 bước. Điểm đáng chú ý không nằm ở vài lệnh cài đặt, mà ở chỗ Arkham đang cố biến dữ liệu on-chain thành thứ có thể hỏi bằng ngôn ngữ tự nhiên, để agent gọi API, đọc kết quả và trả lại ngay trong chat.</description>
-      <category>On-chain Tools</category>
-      <enclosure url="https://news.escbase.xyz/images/arkham-api-claude-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>

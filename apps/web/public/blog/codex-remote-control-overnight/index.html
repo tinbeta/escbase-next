@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌱 Codex Remote Control: Viết Qua Đêm, Dùng Trên Điện Thoại | Escbase</title>
+  <meta name="description" content="Matthew Lam để Codex tự viết /remote-control qua đêm: server laptop, QR code, đồng bộ điện thoại — điều khiển Codex từ xa để 'touch grass'.">
+  <meta property="og:title" content="🌱 Codex Remote Control: Viết Qua Đêm, Dùng Trên Điện Thoại">
+  <meta property="og:description" content="Matthew Lam để Codex tự viết /remote-control qua đêm: server laptop, QR code, đồng bộ điện thoại.">
+  <meta property="og:url" content="https://news.escbase.xyz/blog/codex-remote-control-overnight/">
+  <meta property="og:image" content="https://news.escbase.xyz/images/codex-remote-control-thumb.png">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Escbase">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="🌱 Codex Remote Control: Viết Qua Đêm, Dùng Trên Điện Thoại">
+  <meta name="twitter:description" content="Matthew Lam để Codex tự viết /remote-control qua đêm: server laptop, QR code, đồng bộ điện thoại.">
+  <meta name="twitter:image" content="https://news.escbase.xyz/images/codex-remote-control-thumb.png">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/shared-article.css">
+  <link rel="stylesheet" href="/shared-article-footer.css">
+</head>
+<body>
+  <div class="container">
+    <article>
+      <header class="article-header">
+        <span class="category-badge"><i class="fas fa-terminal"></i> Dev Tool</span>
+        <h1>🌱 Codex Remote Control: Viết Qua Đêm, Dùng Trên Điện Thoại</h1>
+        <div class="meta">
+          <span><i class="far fa-calendar"></i> 11/05/2026</span>
+          <span><i class="far fa-clock"></i> 5 phút đọc</span>
+          <span><i class="far fa-folder"></i> Codex, OpenAI, Remote, Agent</span>
+        </div>
+        <img src="/images/codex-remote-control-thumb.png" alt="Codex remote control thumbnail" class="inline-image" style="margin-top:1rem;">
+      </header>
+
+      <div class="article-content">
+        <div class="highlight-box">
+          <h4>TL;DR</h4>
+          <p style="margin-bottom:0">Matthew Lam để Codex tự viết /remote-control qua đêm bằng /goal: server laptop, QR code xác thực, đồng bộ đầy đủ với điện thoại. Minh chứng cho thấy /goal trong Codex đủ mạnh để prototype tính năng phức tạp mà không cần can thiệp liên tục.</p>
+        </div>
+
+        <p><strong>Matthew Lam</strong> vừa thử một thí nghiệm thú vị: để <strong>Codex tự viết tính năng /remote-control</strong> trong lúc anh ngủ. Sáng ra, anh có một công cụ cho phép điều khiển Codex từ điện thoại — mà không cần mở laptop.</p>
+
+        <h2>🛠️ Tính Năng Hoạt Động Như Thế Nào?</h2>
+
+        <p>Luồng đơn giản nhưng đủ chặt:</p>
+
+        <ul>
+          <li><strong>/remote-control</strong> khởi động server nhỏ trên laptop.</li>
+          <li>Tự tạo token mới và mã QR.</li>
+          <li>Điện thoại quét QR để kết nối qua webapp.</li>
+          <li><strong>Đồng bộ đầy đủ</strong> giữa điện thoại và Codex trên laptop.</li>
+          <li>"Touch grass" — kiểm soát agent từ xa.</li>
+        </ul>
+
+        <p>Điểm quan trọng không phải công nghệ phức tạp. Đó là <strong>Codex tự xây dựng toàn bộ trong một đêm</strong> — server, xác thực, giao diện điện thoại, đồng bộ — chỉ từ một yêu cầu /goal.</p>
+
+        <h2>💬 Phản Ứng Cộng Đồng</h2>
+
+        <div class="quote-block">
+          @aiseomastery: "Xây cầu điều khiển từ xa đầy đủ qua đêm trong lúc ngủ và gọi đó là dự án yolo, thanh cứ dâng cao."
+        </div>
+
+        <div class="quote-block">
+          @getjarvis_ai: "Đồng bộ đầy đủ là phần khó. Điều khiển từ xa chỉ cảm thấy tự nhiên khi điện thoại và laptop chia sẻ trạng thái phiên, không phải khi điện thoại trở thành buồng lái thứ hai."
+        </div>
+
+        <div class="quote-block">
+          @realmihai_matei: "Điều khiển từ xa chỉ hữu ích nếu giữ nguyên trạng thái cục bộ đầy đủ, không chỉ giao diện điện thoại. Lợi thế là phê duyệt và điều hướng công việc mà không cần mở lại laptop."
+        </div>
+
+        <div class="quote-block">
+          @bygregorr: "Tôi thử việc này và vấn đề luôn là logic đồng bộ làm hao pin trên di động. Bạn xử lý phía điện thoại bằng websockets hay polling?"
+        </div>
+
+        <div class="quote-block">
+          @BuzzardCapital: "Thử sau khi thấy bài đăng. Bảo nó mô phỏng theo Claude Dispatch. Thiết lập qua Tailscale. Cảm ơn, đang vật lộn với cách truy cập trên điện thoại khi ra ngoài và giám sát."
+        </div>
+
+        <div class="quote-block">
+          @RHaney47085: "Điều khiển từ xa là nơi agent bắt đầu cảm giác như đồng nghiệp, nhưng mặt phẳng điều khiển quan trọng. Tôi giữ ngữ cảnh phiên Codex đồng bộ, sau đó định tuyến thay đổi lược đồ, script, và ghi qua hàng đợi phê duyệt, bằng chứng thử nghiệm, và nhật ký trước khi cơ sở dữ liệu thay đổi."
+        </div>
+
+        <h2>⚠️ Chỗ Cần Tỉnh Táo</h2>
+
+        <p>Mặc dù ý tưởng hấp dẫn, có vài điểm cần lưu ý:</p>
+
+        <ul>
+          <li><strong>Pin điện thoại:</strong> Đồng bộ liên tục qua websockets/polling có thể hao pin nhanh — cần tối ưu.</li>
+          <li><strong>Bảo mật:</strong> QR code + token là khởi đầu, nhưng cần xác thực mạnh hơn cho môi trường sản xuất.</li>
+          <li><strong>Trạng thái cục bộ:</strong> Remote control chỉ thực sự hữu ích khi giữ nguyên toàn bộ ngữ cảnh laptop, không chỉ chuyển giao diện.</li>
+        </ul>
+
+        <h2>🎯 Chốt Một Câu</h2>
+
+        <p>Codex remote control không phải là feature production sẵn sàng — đó là <strong>minh chứng cho sức mạnh của /goal</strong>: đưa ra ý tưởng, đi ngủ, sáng ra có công cụ hoạt động. Matthew Lam không viết một dòng code. Anh chỉ đặt mục tiêu. Đó là cách prototype sẽ hoạt động từ giờ trở đi.</p>
+
+        <div class="source-links">
+          <h4><i class="fas fa-link"></i> Nguồn</h4>
+          <ul>
+            <li><a href="https://x.com/mattlam_/status/2053508782584475864" target="_blank" rel="noopener noreferrer">@mattlam_ — Codex remote control /goal prototype</a></li>
+          </ul>
+        </div>
+
+        <div class="tags">
+          <span class="tag">#Codex</span>
+          <span class="tag">#OpenAI</span>
+          <span class="tag">#RemoteControl</span>
+          <span class="tag">#Goal</span>
+          <span class="tag">#Agent</span>
+          <span class="tag">#Prototype</span>
+        </div>
+
+      </div>
+
+      <div class="article-cta-stack">
+        <a href="/blog/codex-making-money-autonomously/" class="article-suggestion-card">
+          <span class="article-suggestion-label"><i class="fas fa-book-open"></i> Đọc tiếp</span>
+          <span class="article-suggestion-title">💰 Codex Tự Kiếm Tiền: $16.88 Sau 22 Giờ Làm Việc</span>
+        </a>
+        <div class="article-cta-actions">
+          <a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a>
+        </div>
+      </div>
+
+      <div class="back-to-blog-footer">
+        <a href="/blog" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại Blog</a>
+      </div>
+
+    </article>
+  </div>
+
+  <script src="/shared-article.js"></script>
+</body>
+</html>
