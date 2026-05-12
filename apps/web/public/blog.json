@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/opencode-deepseek-v4-free/",
+    "title": "⚡ OpenCode + DeepSeek V4 Flash: Model 'Miễn Phí' Mà Chất Lượng Nhất",
+    "excerpt": "OpenCode tích hợp DeepSeek V4 Flash miễn phí cho ngườì dùng. Model nhanh, chính xác ngay cả với prompt mơ hồ, context window lớn — cộng đồng gọi là 'stealing inference for basically nothing'.",
+    "date": "May 12, 2026",
+    "tag": "Dev Tool",
+    "tagIcon": "fas fa-terminal",
+    "tagColor": "#4f46e5",
+    "readTime": "5 phút",
+    "featured": true,
+    "image": "/images/opencode-deepseek-v4-thumb.png"
+  },
+  {
     "url": "/blog/goalbuddy-kanban-codex-goal/",
     "title": "🎯 Goal Buddy: Kanban Board Cho Codex /goal, Không Còn \"Black Box\"",
     "excerpt": "@tolibear_ ra mắt Goal Buddy — tool tạo Kanban board cho Codex /goal. Mỗi task thành card di chuyển qua các cột khi agent hoàn thành. Hỗ trợ sync Notion/Slack/Linear, GitHub.",

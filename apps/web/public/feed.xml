@@ -8,6 +8,15 @@
     <lastBuildDate>Mon, 11 May 2026 17:00:00 GMT</lastBuildDate>
     <atom:link href="https://news.escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>⚡ OpenCode + DeepSeek V4 Flash: Model &apos;Miễn Phí&apos; Mà Chất Lượng Nhất</title>
+      <link>https://news.escbase.xyz/blog/opencode-deepseek-v4-free/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/opencode-deepseek-v4-free/</guid>
+      <pubDate>Mon, 11 May 2026 17:00:00 GMT</pubDate>
+      <description>OpenCode tích hợp DeepSeek V4 Flash miễn phí cho ngườì dùng. Model nhanh, chính xác ngay cả với prompt mơ hồ, context window lớn — cộng đồng gọi là &apos;stealing inference for basically nothing&apos;.</description>
+      <category>Dev Tool</category>
+      <enclosure url="https://news.escbase.xyz/images/opencode-deepseek-v4-thumb.png" type="image/png" length="0" />
+    </item>
+    <item>
       <title>🎯 Goal Buddy: Kanban Board Cho Codex /goal, Không Còn &quot;Black Box&quot;</title>
       <link>https://news.escbase.xyz/blog/goalbuddy-kanban-codex-goal/</link>
       <guid isPermaLink="true">https://news.escbase.xyz/blog/goalbuddy-kanban-codex-goal/</guid>
@@ -447,15 +456,6 @@
       <description>Stripe, Meta và Tempo hợp tác cho phép creator nhận stablecoin trực tiếp vào Link wallet. Giải pháp rút ngắn quy trình thanh toán xuyên biên giới cho người sáng tạo nội dung toàn cầu.</description>
       <category>Stablecoins</category>
       <enclosure url="https://news.escbase.xyz/images/stripe-meta-tempo-stablecoin-payouts-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>Stripe Ra Mắt Treasury — Ngân Hàng Tích Hợp AI Cho Doanh Nghiệp</title>
-      <link>https://news.escbase.xyz/blog/stripe-treasury-launch/</link>
-      <guid isPermaLink="true">https://news.escbase.xyz/blog/stripe-treasury-launch/</guid>
-      <pubDate>Wed, 29 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Stripe Treasury cho phép doanh nghiệp giữ tiền đa loại tiền tệ và stablecoin, chuyển khoản miễn phí, chi tiêu bằng thẻ 2% cashback, và điều khiển bằng AI qua Stripe MCP.</description>
-      <category>Fintech</category>
-      <enclosure url="https://news.escbase.xyz/images/stripe-treasury-launch-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>
