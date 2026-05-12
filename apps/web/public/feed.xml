@@ -8,6 +8,15 @@
     <lastBuildDate>Mon, 11 May 2026 17:00:00 GMT</lastBuildDate>
     <atom:link href="https://news.escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>🚀 Claude Code 2.1.139: /goal Chính Thức Ra Mắt, Agent View Và 50+ Cập Nhật</title>
+      <link>https://news.escbase.xyz/blog/claude-code-2-1-139-goal-agent-view/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/claude-code-2-1-139-goal-agent-view/</guid>
+      <pubDate>Mon, 11 May 2026 17:00:00 GMT</pubDate>
+      <description>Claude Code 2.1.139 ra mắt với 50+ thay đổi CLI và 1 cập nhật system prompt. Điểm nhấn: /goal command, agent view, system prompt compaction silent.</description>
+      <category>AI Tools</category>
+      <enclosure url="https://news.escbase.xyz/images/claudecodelog-thumb.png" type="image/png" length="0" />
+    </item>
+    <item>
       <title>📊 Circle Q1 2026: Doanh Thu $694M, Onchain Volume Bùng Nổ +263%</title>
       <link>https://news.escbase.xyz/blog/circle-q1-2026-record-growth/</link>
       <guid isPermaLink="true">https://news.escbase.xyz/blog/circle-q1-2026-record-growth/</guid>
@@ -447,15 +456,6 @@
       <description>Leon Lin đề xuất workflow image-to-code: tạo ảnh thiết kế trước, chọn hướng visual, tách asset, rồi đưa cho coding agent build từng section và refine bằng screenshot.</description>
       <category>AI Design</category>
       <enclosure url="https://news.escbase.xyz/images/image-to-code-frontend-workflow-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>Claude Security Public Beta: Anthropic Đưa AI Săn Lỗ Hổng Vào Enterprise</title>
-      <link>https://news.escbase.xyz/blog/claude-security-public-beta/</link>
-      <guid isPermaLink="true">https://news.escbase.xyz/blog/claude-security-public-beta/</guid>
-      <pubDate>Thu, 30 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Anthropic mở public beta Claude Security cho Enterprise: AI quét codebase, xác thực finding để giảm false positive, gắn severity/confidence và đề xuất patch để team review.</description>
-      <category>AI Security</category>
-      <enclosure url="https://news.escbase.xyz/images/claude-security-public-beta-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>

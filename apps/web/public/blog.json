@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/claude-code-2-1-139-goal-agent-view/",
+    "title": "🚀 Claude Code 2.1.139: /goal Chính Thức Ra Mắt, Agent View Và 50+ Cập Nhật",
+    "excerpt": "Claude Code 2.1.139 ra mắt với 50+ thay đổi CLI và 1 cập nhật system prompt. Điểm nhấn: /goal command, agent view, system prompt compaction silent.",
+    "date": "May 12, 2026",
+    "tag": "AI Tools",
+    "tagIcon": "fas fa-terminal",
+    "tagColor": "#f59e0b",
+    "readTime": "4 phút",
+    "featured": true,
+    "image": "/images/claudecodelog-thumb.png"
+  },
+  {
     "url": "/blog/circle-q1-2026-record-growth/",
     "title": "📊 Circle Q1 2026: Doanh Thu $694M, Onchain Volume Bùng Nổ +263%",
     "excerpt": "Circle công bố Q1 2026 với $694M doanh thu (+20% YoY), $77B USDC lưu thông (+28% YoY), và $21.5 nghìn tỷ onchain transaction volume — tăng 263% so với cùng kỳ.",

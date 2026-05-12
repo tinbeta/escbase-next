@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🚀 Claude Code 2.1.139: /goal Chính Thức Ra Mắt, Agent View Và 50+ Cập Nhật | Escbase</title>
+  <meta name="description" content="Claude Code 2.1.139 ra mắt với /goal command, agent view, và 50+ thay đổi CLI. System prompt compaction giờ silent, và nhiều fix quan trọng.">
+  <meta property="og:title" content="🚀 Claude Code 2.1.139: /goal Chính Thức Ra Mắt, Agent View Và 50+ Cập Nhật">
+  <meta property="og:description" content="Claude Code 2.1.139 với /goal command, agent view, 50+ CLI changes, và system prompt compaction silent.">
+  <meta property="og:url" content="https://news.escbase.xyz/blog/claude-code-2-1-139-goal-agent-view/">
+  <meta property="og:image" content="https://news.escbase.xyz/images/claudecodelog-thumb.png">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Escbase">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="🚀 Claude Code 2.1.139: /goal Chính Thức Ra Mắt, Agent View Và 50+ Cập Nhật">
+  <meta name="twitter:description" content="Claude Code 2.1.139 với /goal command, agent view, 50+ CLI changes.">
+  <meta name="twitter:image" content="https://news.escbase.xyz/images/claudecodelog-thumb.png">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/shared-article.css">
+  <link rel="stylesheet" href="/shared-article-footer.css">
+</head>
+<body>
+  <div class="container">
+    <article>
+      <header class="article-header">
+        <span class="category-badge"><i class="fas fa-terminal"></i> AI Tools</span>
+        <h1>🚀 Claude Code 2.1.139: /goal Chính Thức Ra Mắt, Agent View Và 50+ Cập Nhật</h1>
+        <div class="meta">
+          <span><i class="far fa-calendar"></i> 12/05/2026</span>
+          <span><i class="far fa-clock"></i> 4 phút đọc</span>
+          <span><i class="far fa-folder"></i> Claude Code, AI, Agent, Coding</span>
+        </div>
+        <img src="/images/claudecodelog-thumb.png" alt="Claude Code 2.1.139 thumbnail" class="inline-image" style="margin-top:1rem;">
+      </header>
+
+      <div class="article-content">
+        <div class="highlight-box">
+          <h4>TL;DR</h4>
+          <p style="margin-bottom:0">Claude Code 2.1.139 ra mắt với 50+ thay đổi CLI và 1 cập nhật system prompt. Điểm nhấn: /goal command để chạy task xuyên nhiều turn, agent view để quản lý tất cả session, system prompt compaction giờ silent, và nhiều fix bảo mật/quan trọng.</p>
+        </div>
+
+        <p><strong>Claude Code Changelog</strong> vừa công bố phiên bản <strong>2.1.139</strong> với 50+ thay đổi CLI và 1 cập nhật system prompt. Đây là bản cập nhật lớn nhất trong thờì gian gần đây, mang đến những tính năng mà cộng đồng developer đang mong chờ.</p>
+
+        <h2>🎬 Video Demo /goal Từ Chủ Thread</h2>
+
+        <video controls class="inline-image" style="max-width:100%;border-radius:12px;" preload="metadata">
+          <source src="/images/claude-goal-demo.mp4" type="video/mp4">
+        </video>
+
+        <h2>🎯 /goal Command: Game Changer</h2>
+
+        <p>Tính năng đáng chú ý nhất: <strong>/goal command</strong> — cho phép đặt một completion condition và Claude tự động làm việc xuyên nhiều turn cho đến khi đạt được mục tiêu.</p>
+
+        <ul>
+          <li>Hoạt động trong interactive mode, <code>-p</code> mode, và Remote Control.</li>
+          <li>Hiển thị <strong>live elapsed/turns/tokens</strong> như một overlay panel.</li>
+          <li>Agent tự động phân rã task và thực thi tuần tự.</li>
+        </ul>
+
+        <h2>👁️ Agent View (Research Preview)</h2>
+
+        <p>Một danh sách duy nhất hiển thị <strong>mọi Claude Code session</strong> — đang chạy, đang chờ bạn, hoặc đã hoàn thành. Chạy <code>claude agents</code> để bắt đầu.</p>
+
+        <h2>🔧 Các Cập Nhật Quan Trọng Khác</h2>
+
+        <ul>
+          <li><strong>/scroll-speed</strong> — điều chỉnh tốc độ scroll chuột với live preview.</li>
+          <li><strong>claude plugin details</strong> — hiển thị component inventory và chi phí token per-session.</li>
+          <li><strong>Transcript view navigation</strong> — phím tắt <code>?</code>, <code>{/}</code> để jump giữa các prompt, <code>v</code> để toggle shortcut panel.</li>
+          <li><strong>Hook args: string[]</strong> — spawn command trực tiếp không qua shell.</li>
+          <li><strong>Hook continueOnBlock</strong> — cho phép hook rejection reason được feedback lại Claude và continue turn.</li>
+        </ul>
+
+        <h2>🔒 Thay Đổi Bảo Mật Quan Trọng</h2>
+
+        <p><strong>Remote Control, /schedule, MCP connectors, và notification preferences</strong> giờ bị vô hiệu hóa khi <code>ANTHROPIC_API_KEY</code> / <code>apiKeyHelper</code> / <code>ANTHROPIC_AUTH_TOKEN</code> được set — ngay cả khi có https login. Để dùng các tính năng này, cần unset API key.</p>
+
+        <h2>📝 System Prompt Cập Nhật</h2>
+
+        <img src="/images/claude-system-prompt.jpg" alt="Claude Code System Prompt Changes" class="inline-image" style="margin:1.5rem 0;">
+
+        <p>Thay đổi đáng chú ý trong system prompt: <strong>Claude không còn được explicitly thông báo rằng long chats trigger automatic context compaction.</strong> Điều này giảm việc model proactively preserve key details, vì harness-level reminder đã biến mất.</p>
+
+        <p>Compaction prompt giờ yêu cầu model <strong>preserve sensitive user instructions</strong>, giảm mất ý định của ngườì dùng trong quá trình trimming.</p>
+
+        <h2>🐛 Các Fix Đáng Chú Ý</h2>
+
+        <ul>
+          <li><strong>Deadlock fix:</strong> Expired credentials và forceRemoteSettingsRefresh không còn block <code>claude auth login/logout/status</code>.</li>
+          <li><strong>autoAllowBashIfSandboxed</strong> giờ auto-approve cả commands có shell expansions như <code>$VAR</code> và <code>$(cmd)</code>.</li>
+          <li><strong>Unbounded memory growth fix</strong> khi HTTP/SSE MCP server stream non-protocol data — response bodies giờ capped ở 16 MB per SSE frame.</li>
+          <li><strong>Skill(name *)</strong> wildcard form giờ hoạt động đúng như prefix match.</li>
+          <li><strong>Hyperlinks</strong> giờ adapt theo active theme thay vì dùng dark navy trên dark themes.</li>
+          <li><strong>Mouse wheel scrolling</strong> fixed trong Cursor và VS Code 1.92–1.104.</li>
+        </ul>
+
+        <h2>🎯 Chốt Một Câu</h2>
+
+        <p>Claude Code 2.1.139 không chỉ là một bản cập nhật thông thường — <strong>nó là bước chuyển mình từ "chat với AI" sang "giao việc cho AI và để nó tự hoàn thành."</strong> Với /goal, agent view, và hàng loạt cải tiến về UX và bảo mật, Claude Code đang trở thành một agent IDE thực thụ. Câu hỏi không còn là "Claude có thể viết code không?" mà là <strong>"Claude có thể tự quản lý project của bạn trong nhiều ngày mà không cần bạn phải ngồi chờ từng bước không?"</strong></p>
+
+        <div class="source-links">
+          <h4><i class="fas fa-link"></i> Nguồn</h4>
+          <ul>
+            <li><a href="https://x.com/ClaudeCodeLog/status/2053913625983692979" target="_blank" rel="noopener noreferrer">@ClaudeCodeLog — Claude Code 2.1.139 Release</a></li>
+          </ul>
+        </div>
+
+        <div class="tags">
+          <span class="tag">#ClaudeCode</span>
+          <span class="tag">#Goal</span>
+          <span class="tag">#AI</span>
+          <span class="tag">#Agent</span>
+          <span class="tag">#Coding</span>
+          <span class="tag">#Changelog</span>
+        </div>
+
+      </div>
+
+      <div class="article-cta-stack">
+        <a href="/blog/circle-q1-2026-record-growth/" class="article-suggestion-card">
+          <span class="article-suggestion-label"><i class="fas fa-book-open"></i> Đọc tiếp</span>
+          <span class="article-suggestion-title">📊 Circle Q1 2026: Doanh Thu $694M, Onchain Volume Bùng Nổ +263%</span>
+        </a>
+        <div class="article-cta-actions">
+          <a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a>
+        </div>
+      </div>
+
+      <div class="back-to-blog-footer">
+        <a href="/blog" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại Blog</a>
+      </div>
+
+    </article>
+  </div>
+
+  <script src="/shared-article.js"></script>
+</body>
+</html>
