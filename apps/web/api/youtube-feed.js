@@ -25,7 +25,8 @@ function extractInitialData(html) {
   return JSON.parse(match[1]);
 }
 
-function extractVideos(data) {
+// Legacy structure (pre-2025)
+function extractVideosLegacy(data) {
   const renderers = findObjectsByKey(data, 'videoRenderer');
   const seen = new Set();
   const videos = [];
@@ -53,6 +54,57 @@ function extractVideos(data) {
   }
 
   return videos;
+}
+
+// New structure (2025+): lockupViewModel inside richItemRenderer
+function extractVideosNew(data) {
+  const richItems = findObjectsByKey(data, 'richItemRenderer');
+  const seen = new Set();
+  const videos = [];
+
+  for (const item of richItems) {
+    const vm = item?.content?.lockupViewModel;
+    if (!vm?.contentId) continue;
+
+    const id = vm.contentId;
+    if (seen.has(id)) continue;
+    seen.add(id);
+
+    const title = vm?.metadata?.lockupMetadataViewModel?.title?.content || '';
+    if (!title) continue;
+
+    const sources = vm?.contentImage?.thumbnailViewModel?.image?.sources || [];
+    const thumb = sources[sources.length - 1]?.url || `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+
+    const metaRows = vm?.metadata?.lockupMetadataViewModel?.metadata?.contentMetadataViewModel?.metadataRows || [];
+    let published = '';
+    for (const row of metaRows) {
+      for (const part of row.metadataParts || []) {
+        const text = part?.text?.content || '';
+        if (text.includes('trước') || text.includes('ago') || /\b(\d+\s+(ngày|giờ|phút|tuần|tháng|năm|day|hour|minute|week|month|year))\b/i.test(text)) {
+          published = text;
+          break;
+        }
+      }
+      if (published) break;
+    }
+
+    videos.push({
+      id,
+      title,
+      url: `https://www.youtube.com/watch?v=${id}`,
+      published,
+      thumb,
+    });
+  }
+
+  return videos;
+}
+
+function extractVideos(data) {
+  const legacy = extractVideosLegacy(data);
+  if (legacy.length > 0) return legacy;
+  return extractVideosNew(data);
 }
 
 function publicError(error) {

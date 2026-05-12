@@ -1,107 +1,86 @@
 [
   {
+    "id": "W55k6loYuM0",
+    "title": "OpenAI vừa biến Codex từ một coder trong editor thành một trợ lý có thể tự làm việc trong Chrome.",
+    "url": "https://www.youtube.com/watch?v=W55k6loYuM0",
+    "published": "4 ngày trước",
+    "thumb": "https://i.ytimg.com/vi/W55k6loYuM0/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgBzgWAAoAKigIMCAAQARhGIFEoZTAP&rs=AOn4CLDTHoqcXVgNBxEq3P1q_qs9T9RdZw"
+  },
+  {
+    "id": "pQ3aJU0-rNM",
+    "title": "Template V3 của Escbase",
+    "url": "https://www.youtube.com/watch?v=pQ3aJU0-rNM",
+    "published": "7 ngày trước",
+    "thumb": "https://i.ytimg.com/vi/pQ3aJU0-rNM/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB0AmAAtAFigIMCAAQARg9IGUoXDAP&rs=AOn4CLAiA8iAN3wuf6AGFlWA8j9XPlQo4w"
+  },
+  {
+    "id": "OiMkbd2WzVY",
+    "title": "Tạo Video Viral 9:16 Miễn Phí",
+    "url": "https://www.youtube.com/watch?v=OiMkbd2WzVY",
+    "published": "7 ngày trước",
+    "thumb": "https://i.ytimg.com/vi/OiMkbd2WzVY/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB0AmAAtAFigIMCAAQARg9IGUoXTAP&rs=AOn4CLDFeeRFf0N026EH02t86fvWOaxx6Q"
+  },
+  {
+    "id": "kD5577eTgTc",
+    "title": "Openclaw 2026.4.10 có gì?",
+    "url": "https://www.youtube.com/watch?v=kD5577eTgTc",
+    "published": "1 tháng trước",
+    "thumb": "https://i.ytimg.com/vi/kD5577eTgTc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA6hQjFAI3NB9xBVXC7hxFKvDMJZQ"
+  },
+  {
+    "id": "T_Ouxe1j-2o",
+    "title": "Crypto Ngày 11-04: BTC Tiệm Cận 73K - Cảnh Báo AI \"Mythos\" & Hướng Dẫn Thuế Crypto VN 🚀 - Full",
+    "url": "https://www.youtube.com/watch?v=T_Ouxe1j-2o",
+    "published": "1 tháng trước",
+    "thumb": "https://i.ytimg.com/vi/T_Ouxe1j-2o/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB68sJQxvk_kIjvq8vzitzV7qNvCg"
+  },
+  {
+    "id": "9kKJK-AbjIQ",
+    "title": "Crypto Ngày 11-04: BTC Tiệm Cận 73K - Cảnh Báo AI \"Mythos\" & Hướng Dẫn Thuế Crypto VN 🚀",
+    "url": "https://www.youtube.com/watch?v=9kKJK-AbjIQ",
+    "published": "1 tháng trước",
+    "thumb": "https://i.ytimg.com/vi/9kKJK-AbjIQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBSm7XjILA9MuzZtfBa5hL98MglSA"
+  },
+  {
+    "id": "gjuqYsVcT6Q",
+    "title": "Crypto 10-4: BTC Vượt 72K, CZ Cược 1 Tỷ Đô OKX, Cảnh Báo AI Mythos - Full",
+    "url": "https://www.youtube.com/watch?v=gjuqYsVcT6Q",
+    "published": "1 tháng trước",
+    "thumb": "https://i.ytimg.com/vi/gjuqYsVcT6Q/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCzvg4YwPoCKY6MfbD4l254_YSGbA"
+  },
+  {
+    "id": "ZkoGUh411y8",
+    "title": "Crypto 10-4: BTC Vượt 72K, CZ Cược 1 Tỷ Đô OKX, Cảnh Báo AI Mythos",
+    "url": "https://www.youtube.com/watch?v=ZkoGUh411y8",
+    "published": "1 tháng trước",
+    "thumb": "https://i.ytimg.com/vi/ZkoGUh411y8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAl8W8txuwb-tmxrOvwkL_5fE_6pQ"
+  },
+  {
     "id": "kQFURmWQDLU",
     "title": "Crypto Ngày 8-4: BTC phá vỡ 72K sau thỏa thuận ngừng bắn Mỹ-Iran",
-    "published": "3 giờ trước",
     "url": "https://www.youtube.com/watch?v=kQFURmWQDLU",
-    "thumb": "https://i.ytimg.com/vi/kQFURmWQDLU/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDeuISi2ALJ_4ir2LPW_M55pt9HtA"
+    "published": "1 tháng trước",
+    "thumb": "https://i.ytimg.com/vi/kQFURmWQDLU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCrGzGvXx_FK2qHXawIywLQbCL7Zg"
   },
   {
     "id": "NXvs4dpXPns",
     "title": "Crypto Ngày 8-4: BTC phá vỡ 72K sau thỏa thuận ngừng bắn Mỹ-Iran - Full",
-    "published": "3 giờ trước",
     "url": "https://www.youtube.com/watch?v=NXvs4dpXPns",
-    "thumb": "https://i.ytimg.com/vi/NXvs4dpXPns/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBKqExNkeDBa-lNRXqwvXi4nAYOjg"
+    "published": "1 tháng trước",
+    "thumb": "https://i.ytimg.com/vi/NXvs4dpXPns/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDfTyzqR8rhCcyvY2pW1rlXToM0EQ"
   },
   {
     "id": "YRkg8d-0wuk",
     "title": "Crypto Ngày 7-4: BTC Sideway Chờ Bứt Phá, Saylor Kỳ Vọng 110K",
-    "published": "1 ngày trước",
     "url": "https://www.youtube.com/watch?v=YRkg8d-0wuk",
-    "thumb": "https://i.ytimg.com/vi/YRkg8d-0wuk/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCYYmf8ehtkqFPY_sehb_MwIGqd3w"
+    "published": "1 tháng trước",
+    "thumb": "https://i.ytimg.com/vi/YRkg8d-0wuk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAXemNVFUQVJ92UZK5p3IChmjEBmg"
   },
   {
     "id": "7z1k9341Kic",
     "title": "Crypto Ngày 7-4: BTC Sideway Chờ Bứt Phá, Saylor Kỳ Vọng 110K - Full",
-    "published": "1 ngày trước",
     "url": "https://www.youtube.com/watch?v=7z1k9341Kic",
-    "thumb": "https://i.ytimg.com/vi/7z1k9341Kic/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBdXW4Txz6tf8XWL6JA9fBHoKfhqA"
-  },
-  {
-    "id": "DeBEmos6peo",
-    "title": "Crypto Ngày 6-4: Bitcoin vượt 69K, ETH bùng nổ mạnh mẽ - Full",
-    "published": "2 ngày trước",
-    "url": "https://www.youtube.com/watch?v=DeBEmos6peo",
-    "thumb": "https://i.ytimg.com/vi/DeBEmos6peo/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAQ8uJ9BED8NnP5uwDpht-A7F0F5A"
-  },
-  {
-    "id": "mUXu5JMtuh8",
-    "title": "Crypto Ngày 6-4: Bitcoin vượt 69K, ETH bùng nổ mạnh mẽ",
-    "published": "2 ngày trước",
-    "url": "https://www.youtube.com/watch?v=mUXu5JMtuh8",
-    "thumb": "https://i.ytimg.com/vi/mUXu5JMtuh8/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLC73b8PDs2l8tfuOAc2YL5p5GVmbw"
-  },
-  {
-    "id": "ckctC-C8z8M",
-    "title": "Crypto Ngày 5-4: BTC vượt 67K, hiệu suất đánh bại Vàng sau cú sốc - Full",
-    "published": "3 ngày trước",
-    "url": "https://www.youtube.com/watch?v=ckctC-C8z8M",
-    "thumb": "https://i.ytimg.com/vi/ckctC-C8z8M/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCFgVuGV6Yxx8Xvg89ia87yunMnfw"
-  },
-  {
-    "id": "J8AZ2HU1m6s",
-    "title": "Crypto Ngày 5-4: BTC vượt 67K, hiệu suất đánh bại Vàng sau cú sốc",
-    "published": "3 ngày trước",
-    "url": "https://www.youtube.com/watch?v=J8AZ2HU1m6s",
-    "thumb": "https://i.ytimg.com/vi/J8AZ2HU1m6s/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBVvexROI3cKrlkjTMs7x5TEzmcgQ"
-  },
-  {
-    "id": "4ujwTwX-1Xk",
-    "title": "Crypto Ngày 4-4: Schwab mở trading, ZachXBT tố Circle, ETH stake, BTC 66K",
-    "published": "4 ngày trước",
-    "url": "https://www.youtube.com/watch?v=4ujwTwX-1Xk",
-    "thumb": "https://i.ytimg.com/vi/4ujwTwX-1Xk/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCimCdf9nwAoJFEwHJjkiLFVkSlHQ"
-  },
-  {
-    "id": "T8_2zu4ta5o",
-    "title": "Crypto Ngày 4-4: Schwab mở trading, ZachXBT tố Circle, ETH stake, BTC 66K - Full",
-    "published": "4 ngày trước",
-    "url": "https://www.youtube.com/watch?v=T8_2zu4ta5o",
-    "thumb": "https://i.ytimg.com/vi/T8_2zu4ta5o/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCOLwIqlQs2C8oTYsalyRj_q_hqgQ"
-  },
-  {
-    "id": "bOgEXJvCk5Y",
-    "title": "Coinbase nhận giấy phép Bank, BTC 66K, Lộ diện hacker Triều Tiên & X diệt Scam! - Full",
-    "published": "4 ngày trước",
-    "url": "https://www.youtube.com/watch?v=bOgEXJvCk5Y",
-    "thumb": "https://i.ytimg.com/vi/bOgEXJvCk5Y/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLD_1NJyBNI0JEaZ3E1389P4J20Ynw"
-  },
-  {
-    "id": "Z_XsL484-Yg",
-    "title": "Coinbase nhận giấy phép Bank, BTC 66K, Lộ diện hacker Triều Tiên & X diệt Scam!",
-    "published": "4 ngày trước",
-    "url": "https://www.youtube.com/watch?v=Z_XsL484-Yg",
-    "thumb": "https://i.ytimg.com/vi/Z_XsL484-Yg/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBRuCoFLPxcx06IPc45NLcLJUlymA"
-  },
-  {
-    "id": "SpiltFkbd84",
-    "title": "Crypto Ngày 2-4: Drift Bị Hack 285M, EDX Xin Giấy Phép Ngân Hàng, BTC Giữ 68K - Full",
-    "published": "6 ngày trước",
-    "url": "https://www.youtube.com/watch?v=SpiltFkbd84",
-    "thumb": "https://i.ytimg.com/vi/SpiltFkbd84/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDeJ48UW1SvNqPdsM6kiI0uY2Dnlg"
-  },
-  {
-    "id": "ugXFXtzLTRE",
-    "title": "Crypto Ngày 2-4: Drift Bị Hack 285M, EDX Xin Giấy Phép Ngân Hàng, BTC Giữ 68K",
-    "published": "6 ngày trước",
-    "url": "https://www.youtube.com/watch?v=ugXFXtzLTRE",
-    "thumb": "https://i.ytimg.com/vi/ugXFXtzLTRE/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBK1q8kRIcTTrm2rQvJNBdc-lhVSA"
-  },
-  {
-    "id": "S7gDvlrQ1Xc",
-    "title": "Bí Mật Triệu View Của MrBeast: 30.000 Giờ Nghiên Cứu YouTube - Full",
-    "published": "6 ngày trước",
-    "url": "https://www.youtube.com/watch?v=S7gDvlrQ1Xc",
-    "thumb": "https://i.ytimg.com/vi/S7gDvlrQ1Xc/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCOsl8BTvZTxmrbxgZjmZdqqcNVvg"
+    "published": "1 tháng trước",
+    "thumb": "https://i.ytimg.com/vi/7z1k9341Kic/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBW_cfv70hgCRl7yr0rdVQKo9xatQ"
   }
 ]
