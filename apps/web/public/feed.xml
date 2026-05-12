@@ -8,6 +8,15 @@
     <lastBuildDate>Mon, 11 May 2026 17:00:00 GMT</lastBuildDate>
     <atom:link href="https://news.escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>🏦 a16z Đầu Tư $75M Vào ARC: Circle Xây Blockchain Cho Tài Chính Institution</title>
+      <link>https://news.escbase.xyz/blog/a16z-75m-invest-circle-arc-blockchain/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/a16z-75m-invest-circle-arc-blockchain/</guid>
+      <pubDate>Mon, 11 May 2026 17:00:00 GMT</pubDate>
+      <description>a16z crypto đầu tư $75M vào ARC token của Circle. Arc là blockchain EVM-compatible được thiết kế làm &apos;economic operating system&apos; cho các tổ chức tài chính lớn.</description>
+      <category>DeFi</category>
+      <enclosure url="https://news.escbase.xyz/images/alive-eth-arc-thumb.png" type="image/png" length="0" />
+    </item>
+    <item>
       <title>🎯 Claude Code Ra Mắt /goal: Agent Tự Chạy Nhiệm Vụ Dài Hạn Theo Ngày</title>
       <link>https://news.escbase.xyz/blog/claude-code-goal-long-running-tasks/</link>
       <guid isPermaLink="true">https://news.escbase.xyz/blog/claude-code-goal-long-running-tasks/</guid>
@@ -447,15 +456,6 @@
       <description>OpenAI mở rộng Codex cho công việc hằng ngày: chọn vai trò, kết nối Slack, Google Workspace, Microsoft 365, rồi tạo docs, slides, spreadsheets và theo dõi tiến độ trong cùng một thread.</description>
       <category>AI Tools</category>
       <enclosure url="https://news.escbase.xyz/images/openai-codex-everyday-work-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>OpenClaw 2026.4.29 — Group Chat Bớt Giả, Agent Bớt Khờ</title>
-      <link>https://news.escbase.xyz/blog/openclaw-2026-4-29-release/</link>
-      <guid isPermaLink="true">https://news.escbase.xyz/blog/openclaw-2026-4-29-release/</guid>
-      <pubDate>Thu, 30 Apr 2026 17:00:00 GMT</pubDate>
-      <description>OpenClaw 2026.4.29 nâng group chat, follow-up commitments, memory wiki và NVIDIA provider. Full thread cho thấy cộng đồng hào hứng nhưng vẫn còn bug report gateway, Discord và local models.</description>
-      <category>AI Agents</category>
-      <enclosure url="https://news.escbase.xyz/images/openclaw-2026-4-29-release-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>

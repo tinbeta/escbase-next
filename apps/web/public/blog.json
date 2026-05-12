@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/a16z-75m-invest-circle-arc-blockchain/",
+    "title": "🏦 a16z Đầu Tư $75M Vào ARC: Circle Xây Blockchain Cho Tài Chính Institution",
+    "excerpt": "a16z crypto đầu tư $75M vào ARC token của Circle. Arc là blockchain EVM-compatible được thiết kế làm 'economic operating system' cho các tổ chức tài chính lớn.",
+    "date": "May 12, 2026",
+    "tag": "DeFi",
+    "tagIcon": "fas fa-university",
+    "tagColor": "#3b82f6",
+    "readTime": "5 phút",
+    "featured": true,
+    "image": "/images/alive-eth-arc-thumb.png"
+  },
+  {
     "url": "/blog/claude-code-goal-long-running-tasks/",
     "title": "🎯 Claude Code Ra Mắt /goal: Agent Tự Chạy Nhiệm Vụ Dài Hạn Theo Ngày",
     "excerpt": "Claude Code vừa ra mắt /goal — tính năng cho phép agent tự hoàn thành nhiệm vụ dài hạn, đôi khi kéo dài nhiều ngày. Giờ đây cả Claude Code, Codex, và Hermes đều có khả năng này.",
