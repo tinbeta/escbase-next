@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎯 Goal Buddy: Kanban Board Cho Codex /goal, Không Còn "Black Box" | Escbase</title>
+  <meta name="description" content="@tolibear_ ra mắt Goal Buddy — tool tạo Kanban board cho Codex /goal. Visualize tiến độ agent, sync Notion/Slack/Linear, biến /goal thành project management thực thụ.">
+  <meta property="og:title" content="🎯 Goal Buddy: Kanban Board Cho Codex /goal, Không Còn 'Black Box'">
+  <meta property="og:description" content="Goal Buddy tạo Kanban board cho Codex /goal: visualize tiến độ, sync Notion/Slack/Linear.">
+  <meta property="og:url" content="https://news.escbase.xyz/blog/goalbuddy-kanban-codex-goal/">
+  <meta property="og:image" content="https://news.escbase.xyz/images/goalbuddy-kanban-thumb.png">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Escbase">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="🎯 Goal Buddy: Kanban Board Cho Codex /goal, Không Còn 'Black Box'">
+  <meta name="twitter:description" content="Goal Buddy tạo Kanban board cho Codex /goal: visualize tiến độ, sync Notion/Slack/Linear.">
+  <meta name="twitter:image" content="https://news.escbase.xyz/images/goalbuddy-kanban-thumb.png">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/shared-article.css">
+  <link rel="stylesheet" href="/shared-article-footer.css">
+</head>
+<body>
+  <div class="container">
+    <article>
+      <header class="article-header">
+        <span class="category-badge"><i class="fas fa-terminal"></i> Dev Tool</span>
+        <h1>🎯 Goal Buddy: Kanban Board Cho Codex /goal, Không Còn "Black Box"</h1>
+        <div class="meta">
+          <span><i class="far fa-calendar"></i> 12/05/2026</span>
+          <span><i class="far fa-clock"></i> 5 phút đọc</span>
+          <span><i class="far fa-folder"></i> Codex, OpenAI, Kanban, Agent</span>
+        </div>
+        <img src="/images/goalbuddy-kanban-thumb.png" alt="Goal Buddy Kanban thumbnail" class="inline-image" style="margin-top:1rem;">
+      </header>
+
+      <div class="article-content">
+        <div class="highlight-box">
+          <h4>TL;DR</h4>
+          <p style="margin-bottom:0">@tolibear_ ra mắt Goal Buddy — tool tạo Kanban board cho Codex /goal. Mỗi task thành card di chuyển qua các cột khi agent hoàn thành. Hỗ trợ sync Notion, Slack, Linear, GitHub. Biến /goal từ "black box" thành project management có thể nhìn thấy.</p>
+        </div>
+
+        <p><strong>@tolibear_</strong> vừa ra mắt <strong>Goal Buddy</strong> — một tool đơn giản nhưng giải quyết vấn đề lớn của Codex /goal: <strong>không nhìn thấy tiến độ.</strong> Thay vì ngồi chờ terminal chạy mù mờ, Goal Buddy tạo một <strong>Kanban board nhẹ</strong> với các card có thể click, tự động di chuyển khi Codex hoàn thành từng task.</p>
+
+        <h2>🎬 Video Demo Từ @tolibear_</h2>
+
+        <video controls class="inline-image" style="max-width:100%;border-radius:12px;" preload="metadata">
+          <source src="/images/goalbuddy-kanban.mp4" type="video/mp4">
+        </video>
+
+        <h2>🛠️ Goal Buddy Hoạt Động Như Thế Nào?</h2>
+
+        <p>Goal Buddy không chỉ là visualization — nó là <strong>infrastructure cho /goal:</strong></p>
+
+        <ul>
+          <li><strong>goal.md:</strong> Tạo plan chi tiết cho /goal command.</li>
+          <li><strong>state.yaml:</strong> Mỗi phase/task được document và có thể extend.</li>
+          <li><strong>Kanban board:</strong> Card di chuyển tự động qua các cột (To Do → In Progress → Done).</li>
+          <li><strong>Multi-agent:</strong> Có thể assign task cho 3 agent riêng biệt.</li>
+        </ul>
+
+        <p>Cách dùng đơn giản:</p>
+
+        <div class="terminal-card">
+          <div class="terminal-header"><span class="terminal-dot"></span> terminal</div>
+          <div class="terminal-body">npx goalbuddy<br>npx goalbuddy update</div>
+        </div>
+
+        <h2>🔗 Tích Hợp Với Công Cụ Khác</h2>
+
+        <p>Goal Buddy không giữ bạn trong silo. Nó có thể sync với:</p>
+
+        <ul>
+          <li><strong>Notion</strong> — để team tracking.</li>
+          <li><strong>Slack</strong> — thông báo tiến độ.</li>
+          <li><strong>Linear</strong> — quản lý ticket.</li>
+          <li><strong>GitHub</strong> — mỗi slice là một commit.</li>
+        </ul>
+
+        <img src="/images/goalbuddy-linear.png" alt="Goal Buddy Linear integration" class="inline-image" loading="lazy">
+
+        <p>Để cài extension cho Linear:</p>
+
+        <div class="terminal-card">
+          <div class="terminal-header"><span class="terminal-dot"></span> terminal</div>
+          <div class="terminal-body">npx goalbuddy extend install linear-ticket-handoff</div>
+        </div>
+
+        <h2>💬 Phản Ứng Cộng Đồng</h2>
+
+        <div class="quote-block">
+          @Criticality47: "This makes /goal feel much less like waiting for a terminal to finish and more like steering work that is already moving."
+        </div>
+
+        <div class="quote-block">
+          @justic_hot: "The value isn't visualization for me, it's the ctrl-c brake. When I can't see what codex is doing I interrupt at minute 4 of a 7-minute task. Kanban means I stop second-guessing the agent mid-run."
+        </div>
+
+        <div class="quote-block">
+          @realmihai_matei: "Kanban is useful because it turns agent progress into interrupt points. Without visible cards, /goal becomes another long-running black box you only debug at the end."
+        </div>
+
+        <div class="quote-block">
+          @Utkarsh51557661: "Cool feature. A Kanban board feels like a natural way to visualize tasks in progress."
+        </div>
+
+        <div class="quote-block">
+          @michaeldorokhov: "What if the goal is not a goal but a completion of all tasks in the kanban? I normally make it write specs and in an md file and the /goal it to complete the md file. Yours is an advanced version of that."
+        </div>
+
+        <h2>⚠️ Chỗ Cần Tỉnh Táo</h2>
+
+        <ul>
+          <li><strong>@OSFORAGENTS:</strong> "This isn't codex feature? This is ur own feature… pls change or delete bc it's not native" — tranh cãi về việc đây là tool của cộng đồng hay feature native.</li>
+          <li><strong>@presto311:</strong> "I can't even get /goal to work in the codex app yet…" — vẫn có ngườì gặp vấn đề với /goal cơ bản.</li>
+          <li><strong>@FabioAngela79:</strong> "Is it because I'm in the EU?" — lo ngại về region lock.</li>
+          <li><strong>@Chosen_Apes:</strong> "This mac only ain't it lol" — cần cross-platform support.</li>
+        </ul>
+
+        <h2>🆕 Update: Hỗ Trợ Claude Code</h2>
+
+        <p>Chỉ vài giờ sau khi ra mắt, @tolibear_ đã cập nhật Goal Buddy <strong>hỗ trợ /goal trong Claude Code</strong>:</p>
+
+        <img src="/images/goalbuddy-claude.jpg" alt="Goal Buddy now supports Claude Code" class="inline-image" loading="lazy">
+
+        <h2>🎯 Chốt Một Câu</h2>
+
+        <p>/goal trong Codex là một ý tưởng mạnh — nhưng nó có một vấn đề lớn: <strong>bạn không biết gì đang xảy ra cho đến khi nó xong.</strong> Goal Buddy giải quyết điều đó bằng cách biến mỗi task thành card trên Kanban board. Không còn "black box" — bạn thấy tiến độ, có thể interrupt đúng lúc, và sync với team qua Notion/Slack/Linear. Đó là cách agent coding trở nên <strong>legible</strong> — và đó là điều cần thiết để agent thực sự hoạt động trong team.</p>
+
+        <div class="source-links">
+          <h4><i class="fas fa-link"></i> Nguồn</h4>
+          <ul>
+            <li><a href="https://x.com/tolibear_/status/2053859040556360116" target="_blank" rel="noopener noreferrer">@tolibear_ — Goal Buddy: Kanban board for Codex /goal</a></li>
+          </ul>
+        </div>
+
+        <div class="tags">
+          <span class="tag">#Codex</span>
+          <span class="tag">#OpenAI</span>
+          <span class="tag">#GoalBuddy</span>
+          <span class="tag">#Kanban</span>
+          <span class="tag">#Agent</span>
+          <span class="tag">#ProjectManagement</span>
+        </div>
+
+      </div>
+
+      <div class="article-cta-stack">
+        <a href="/blog/openai-daybreak-cyber-defense/" class="article-suggestion-card">
+          <span class="article-suggestion-label"><i class="fas fa-book-open"></i> Đọc tiếp</span>
+          <span class="article-suggestion-title">🛡️ OpenAI Daybreak: AI Frontier Cho Cyber Defense</span>
+        </a>
+        <div class="article-cta-actions">
+          <a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a>
+        </div>
+      </div>
+
+      <div class="back-to-blog-footer">
+        <a href="/blog" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại Blog</a>
+      </div>
+
+    </article>
+  </div>
+
+  <script src="/shared-article.js"></script>
+</body>
+</html>

@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/goalbuddy-kanban-codex-goal/",
+    "title": "🎯 Goal Buddy: Kanban Board Cho Codex /goal, Không Còn \"Black Box\"",
+    "excerpt": "@tolibear_ ra mắt Goal Buddy — tool tạo Kanban board cho Codex /goal. Mỗi task thành card di chuyển qua các cột khi agent hoàn thành. Hỗ trợ sync Notion/Slack/Linear, GitHub.",
+    "date": "May 12, 2026",
+    "tag": "Dev Tool",
+    "tagIcon": "fas fa-terminal",
+    "tagColor": "#a855f7",
+    "readTime": "5 phút",
+    "featured": true,
+    "image": "/images/goalbuddy-kanban-thumb.png"
+  },
+  {
     "url": "/blog/openai-daybreak-cyber-defense/",
     "title": "🛡️ OpenAI Daybreak: AI Frontier Cho Cyber Defense, Không Chỉ Là \"Mythos CỦa OpenAI\"",
     "excerpt": "OpenAI ra mắt Daybreak: frontier AI kết hợp Codex và security partners để tăng tốc cyber defense. Tìm và sửa lỗ hổng sớm hơn, cắt giảm backlog bảo mật, tự động hóa detection và response.",
