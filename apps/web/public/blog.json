@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/circle-q1-2026-record-growth/",
+    "title": "📊 Circle Q1 2026: Doanh Thu $694M, Onchain Volume Bùng Nổ +263%",
+    "excerpt": "Circle công bố Q1 2026 với $694M doanh thu (+20% YoY), $77B USDC lưu thông (+28% YoY), và $21.5 nghìn tỷ onchain transaction volume — tăng 263% so với cùng kỳ.",
+    "date": "May 12, 2026",
+    "tag": "Crypto",
+    "tagIcon": "fas fa-chart-line",
+    "tagColor": "#3b82f6",
+    "readTime": "4 phút",
+    "featured": true,
+    "image": "/images/circle-q1-thumb.png"
+  },
+  {
     "url": "/blog/a16z-75m-invest-circle-arc-blockchain/",
     "title": "🏦 a16z Đầu Tư $75M Vào ARC: Circle Xây Blockchain Cho Tài Chính Institution",
     "excerpt": "a16z crypto đầu tư $75M vào ARC token của Circle. Arc là blockchain EVM-compatible được thiết kế làm 'economic operating system' cho các tổ chức tài chính lớn.",

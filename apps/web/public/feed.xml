@@ -8,6 +8,15 @@
     <lastBuildDate>Mon, 11 May 2026 17:00:00 GMT</lastBuildDate>
     <atom:link href="https://news.escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>📊 Circle Q1 2026: Doanh Thu $694M, Onchain Volume Bùng Nổ +263%</title>
+      <link>https://news.escbase.xyz/blog/circle-q1-2026-record-growth/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/circle-q1-2026-record-growth/</guid>
+      <pubDate>Mon, 11 May 2026 17:00:00 GMT</pubDate>
+      <description>Circle công bố Q1 2026 với $694M doanh thu (+20% YoY), $77B USDC lưu thông (+28% YoY), và $21.5 nghìn tỷ onchain transaction volume — tăng 263% so với cùng kỳ.</description>
+      <category>Crypto</category>
+      <enclosure url="https://news.escbase.xyz/images/circle-q1-thumb.png" type="image/png" length="0" />
+    </item>
+    <item>
       <title>🏦 a16z Đầu Tư $75M Vào ARC: Circle Xây Blockchain Cho Tài Chính Institution</title>
       <link>https://news.escbase.xyz/blog/a16z-75m-invest-circle-arc-blockchain/</link>
       <guid isPermaLink="true">https://news.escbase.xyz/blog/a16z-75m-invest-circle-arc-blockchain/</guid>
@@ -447,15 +456,6 @@
       <description>Anthropic mở public beta Claude Security cho Enterprise: AI quét codebase, xác thực finding để giảm false positive, gắn severity/confidence và đề xuất patch để team review.</description>
       <category>AI Security</category>
       <enclosure url="https://news.escbase.xyz/images/claude-security-public-beta-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>OpenAI Biến Codex Thành Trợ Lý Văn Phòng, Không Chỉ Coding</title>
-      <link>https://news.escbase.xyz/blog/openai-codex-everyday-work/</link>
-      <guid isPermaLink="true">https://news.escbase.xyz/blog/openai-codex-everyday-work/</guid>
-      <pubDate>Thu, 30 Apr 2026 17:00:00 GMT</pubDate>
-      <description>OpenAI mở rộng Codex cho công việc hằng ngày: chọn vai trò, kết nối Slack, Google Workspace, Microsoft 365, rồi tạo docs, slides, spreadsheets và theo dõi tiến độ trong cùng một thread.</description>
-      <category>AI Tools</category>
-      <enclosure url="https://news.escbase.xyz/images/openai-codex-everyday-work-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>
