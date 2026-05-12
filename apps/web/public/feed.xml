@@ -8,6 +8,15 @@
     <lastBuildDate>Mon, 11 May 2026 17:00:00 GMT</lastBuildDate>
     <atom:link href="https://news.escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>🧭 Claude Code Agent View: Mission Control Cho Multi-Agent Session</title>
+      <link>https://news.escbase.xyz/blog/claude-code-agent-view/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/claude-code-agent-view/</guid>
+      <pubDate>Mon, 11 May 2026 17:00:00 GMT</pubDate>
+      <description>Claude Code ra mắt Agent View: dashboard quản lý tất cả session song song. Xem trạng thái, reply inline, nhảy vào/ra mà không mất vị trí.</description>
+      <category>Dev Tool</category>
+      <enclosure url="https://news.escbase.xyz/images/claude-agent-view-thumb.png" type="image/png" length="0" />
+    </item>
+    <item>
       <title>🔌 Codex + OpenAI Plugin: Từ Code Generator Thành AI App Builder</title>
       <link>https://news.escbase.xyz/blog/openai-codex-developers-plugin/</link>
       <guid isPermaLink="true">https://news.escbase.xyz/blog/openai-codex-developers-plugin/</guid>
@@ -447,15 +456,6 @@
       <description>OpenClaw vừa ra mắt bản 2026.4.27 với DeepInfra provider mới, cải thiện xử lý file, proxy routing cho operator, Matrix approvals nâng cấp, model selection chặt chẽ hơn và reliability được cải thiện đáng kể.</description>
       <category>AI Agents</category>
       <enclosure url="https://news.escbase.xyz/images/openclaw-2026-4-27-release-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>Stripe Chính Thức Ra Mắt Link Wallet for Agents — AI Giờ Đã Có Thể Tự Chi Tiêu An Toàn</title>
-      <link>https://news.escbase.xyz/blog/stripe-link-wallet-official-launch/</link>
-      <guid isPermaLink="true">https://news.escbase.xyz/blog/stripe-link-wallet-official-launch/</guid>
-      <pubDate>Wed, 29 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Stripe vừa công bố chính thức Link Wallet for Agents trên X với video demo. Giải pháp cho phép AI agents thanh toán thay mặt người dùng nhưng không bao giờ tiếp cận payment credentials — mỗi giao dịch đều cần approval.</description>
-      <category>AI Agent</category>
-      <enclosure url="https://news.escbase.xyz/images/stripe-link-wallet-official-launch-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>

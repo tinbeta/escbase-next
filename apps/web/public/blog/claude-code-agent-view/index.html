@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🧭 Claude Code Agent View: Mission Control Cho Multi-Agent Session | Escbase</title>
+  <meta name="description" content="Claude Code ra mắt Agent View: dashboard quản lý tất cả session song song. Xem trạng thái, reply inline, nhảy vào/ra mà không mất vị trí.">
+  <meta property="og:title" content="🧭 Claude Code Agent View: Mission Control Cho Multi-Agent Session">
+  <meta property="og:description" content="Claude Code Agent View: dashboard quản lý session song song, reply inline, không mất vị trí.">
+  <meta property="og:url" content="https://news.escbase.xyz/blog/claude-code-agent-view/">
+  <meta property="og:image" content="https://news.escbase.xyz/images/claude-agent-view-thumb.png">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Escbase">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="🧭 Claude Code Agent View: Mission Control Cho Multi-Agent Session">
+  <meta name="twitter:description" content="Claude Code Agent View: dashboard quản lý session song song.">
+  <meta name="twitter:image" content="https://news.escbase.xyz/images/claude-agent-view-thumb.png">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/shared-article.css">
+  <link rel="stylesheet" href="/shared-article-footer.css">
+</head>
+<body>
+  <div class="container">
+    <article>
+      <header class="article-header">
+        <span class="category-badge"><i class="fas fa-terminal"></i> Dev Tool</span>
+        <h1>🧭 Claude Code Agent View: Mission Control Cho Multi-Agent Session</h1>
+        <div class="meta">
+          <span><i class="far fa-calendar"></i> 12/05/2026</span>
+          <span><i class="far fa-clock"></i> 5 phút đọc</span>
+          <span><i class="far fa-folder"></i> Claude, Anthropic, Agent, CLI</span>
+        </div>
+        <img src="/images/claude-agent-view-thumb.png" alt="Claude Agent View thumbnail" class="inline-image" style="margin-top:1rem;">
+      </header>
+
+      <div class="article-content">
+        <div class="highlight-box">
+          <h4>TL;DR</h4>
+          <p style="margin-bottom:0">Claude Code ra mắt Agent View: một danh sách duy nhất quản lý tất cả session. Chạy nhiều agent song song, xem trạng thái running/waiting/done, reply inline để unblock, nhảy vào/ra bất kỳ session mà không mất vị trí.</p>
+        </div>
+
+        <p><strong>@claudeai</strong> vừa thông báo một feature mới cho Claude Code: <strong>Agent View</strong> — một dashboard xem tất cả session trong một danh sách duy nhất. Đây là research preview, available ngay trên tất cả paid plans.</p>
+
+        <h2>🖼️ Screenshot Gốc Từ @claudeai</h2>
+
+        <img src="/images/claude-agent-view-og.jpg" alt="Claude Code Agent View screenshot" class="inline-image" loading="lazy">
+
+        <h2>🎯 Agent View Là Gì?</h2>
+
+        <p>Claude Code giờ cho phép bạn:</p>
+
+        <ul>
+          <li><strong>Chạy nhiều session song song:</strong> <code>claude agents</code> để dispatch nhiều session cùng lúc. Mỗi session chạy riêng không chiếm terminal tab.</li>
+          <li><strong>Xem trạng thái tổng quan:</strong> Cái nào đang chạy, cái nào đang chờ bạn, cái nào đã xong — nhìn một cái là biết.</li>
+          <li><strong>Reply inline:</strong> Trả lờì trực tiếp để unblock agent mà không cần switch tab.</li>
+          <li><strong>Nhảy vào/ra:</strong> Vào bất kỳ session nào để xem chi tiết, rồi nhảy ra không mất vị trí.</li>
+        </ul>
+
+        <h2>💬 Phản Ứng Cộng Đồng</h2>
+
+        <div class="quote-block">
+          @ShawverTech: "Once you start using AI agents for coding, keeping track of every session matters a lot. Agent view makes Claude Code feel more like a real workspace instead of just a terminal tool."
+        </div>
+
+        <div class="quote-block">
+          @DarkPoolTech: "Finally! managing parallel Claude sessions felt like juggling tabs blindfolded."
+        </div>
+
+        <div class="quote-block">
+          @realmihai_matei: "Agent view is useful because parallel sessions only work when the chaos is visible. The bottleneck is not launching more agents, it's knowing which one is drifting."
+        </div>
+
+        <div class="quote-block">
+          @CodeCoinCogni: "The unlock is parallel sessions becoming legible. Most agent loops stall because you forget which one is mid-task on what. A session list with status flips that from a memory problem to a UI problem."
+        </div>
+
+        <div class="quote-block">
+          @damoosmann: "Running four parallel sessions in my head is the hard part. The chat windows look the same. I lose track of which one was the bug fix and which was the refactor."
+        </div>
+
+        <div class="quote-block">
+          @AppLauncher_App: "One list of all agent sessions is the feature devs do not realize they need until they have it."
+        </div>
+
+        <div class="quote-block">
+          @LukaMagic1236: "This is what Codex had from day one. Good to see Claude Code catching up."
+        </div>
+
+        <h2>⚠️ Câu Hỏi Còn Để Ngỏ</h2>
+
+        <ul>
+          <li><strong>Token usage:</strong> @RoyAmal và @Gen90s_Rants đều hỏi: chạy 5+ session cùng lúc thì token tiêu thụ thế nào?</li>
+          <li><strong>Sub-agent tracking:</strong> @ryushipsjp hỏi liệu nó có track sub-agent spawns không, hay chỉ là một session = một row?</li>
+          <li><strong>Multi-terminal sync:</strong> @emilheap hỏi có đồng bộ qua nhiều terminal không.</li>
+          <li><strong>Context window:</strong> @analystuttam đặt câu hỏi: "Context windows sẽ đầy nhanh đến mức nào khi 5 agent bắt đầu chat với nhau?"</li>
+          <li><strong>Worktrees:</strong> @gigglefartninja hỏi các session có chạy trong worktrees không.</li>
+        </ul>
+
+        <h2>🎯 Chốt Một Câu</h2>
+
+        <p>Claude Code Agent View không chỉ là một UI improvement — đó là <strong>nhận thức rằng coding trong kỷ nguyên agent không phải một session mà là nhiều session chạy song song.</strong> Và khi bạn có nhiều agent cùng lúc, cái bạn cần không phải thêm agent nữa, mà là cách nhìn thấy tất cả chúng cùng một lúc. Đó là lý do một danh sách session đơn giản lại là feature devs không nhận ra mình cần — cho đến khi họ có nó.</p>
+
+        <div class="source-links">
+          <h4><i class="fas fa-link"></i> Nguồn</h4>
+          <ul>
+            <li><a href="https://x.com/claudeai/status/2053940934736228454" target="_blank" rel="noopener noreferrer">@claudeai — New in Claude Code: agent view</a></li>
+          </ul>
+        </div>
+
+        <div class="tags">
+          <span class="tag">#Claude</span>
+          <span class="tag">#Anthropic</span>
+          <span class="tag">#AgentView</span>
+          <span class="tag">#MultiAgent</span>
+          <span class="tag">#CLI</span>
+          <span class="tag">#DevTool</span>
+        </div>
+
+      </div>
+
+      <div class="article-cta-stack">
+        <a href="/blog/openai-codex-developers-plugin/" class="article-suggestion-card">
+          <span class="article-suggestion-label"><i class="fas fa-book-open"></i> Đọc tiếp</span>
+          <span class="article-suggestion-title">🔌 Codex + OpenAI Plugin: Từ Code Generator Thành AI App Builder</span>
+        </a>
+        <div class="article-cta-actions">
+          <a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a>
+        </div>
+      </div>
+
+      <div class="back-to-blog-footer">
+        <a href="/blog" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại Blog</a>
+      </div>
+
+    </article>
+  </div>
+
+  <script src="/shared-article.js"></script>
+</body>
+</html>

@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/claude-code-agent-view/",
+    "title": "🧭 Claude Code Agent View: Mission Control Cho Multi-Agent Session",
+    "excerpt": "Claude Code ra mắt Agent View: dashboard quản lý tất cả session song song. Xem trạng thái, reply inline, nhảy vào/ra mà không mất vị trí.",
+    "date": "May 12, 2026",
+    "tag": "Dev Tool",
+    "tagIcon": "fas fa-terminal",
+    "tagColor": "#d97757",
+    "readTime": "5 phút",
+    "featured": true,
+    "image": "/images/claude-agent-view-thumb.png"
+  },
+  {
     "url": "/blog/openai-codex-developers-plugin/",
     "title": "🔌 Codex + OpenAI Plugin: Từ Code Generator Thành AI App Builder",
     "excerpt": "OpenAI ra plugin cho Codex: giúp build AI apps và agents nhanh hơn với OpenAI APIs. Codex không còn chỉ viết code — nó trở thành API-aware builder.",
