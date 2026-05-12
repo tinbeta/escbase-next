@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/claude-code-goal-long-running-tasks/",
+    "title": "🎯 Claude Code Ra Mắt /goal: Agent Tự Chạy Nhiệm Vụ Dài Hạn Theo Ngày",
+    "excerpt": "Claude Code vừa ra mắt /goal — tính năng cho phép agent tự hoàn thành nhiệm vụ dài hạn, đôi khi kéo dài nhiều ngày. Giờ đây cả Claude Code, Codex, và Hermes đều có khả năng này.",
+    "date": "May 12, 2026",
+    "tag": "AI Tools",
+    "tagIcon": "fas fa-terminal",
+    "tagColor": "#f59e0b",
+    "readTime": "4 phút",
+    "featured": true,
+    "image": "/images/alexfinn-goal-thumb.png"
+  },
+  {
     "url": "/blog/minimax-10x-team-domain-experts/",
     "title": "🚀 MiniMax 10x Team: Tuyển Chuyên Gia Ngành Để Đẩy Model Lên Tầm Cao Mới",
     "excerpt": "MiniMax tuyển '10x Team' — chuyên gia sâu trong từng ngành để cải thiện model. Đã thử nghiệm với industrial software, game engines, chip design, finance, accounting.",
