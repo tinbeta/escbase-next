@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/vitalik-ethereum-economic-layer-ai/",
+    "title": "🔗 Vitalik: Ethereum Là Lớp Kinh Tế Cho AI Phi Tập Trung",
+    "excerpt": "Vitalik Buterin cho rằng blockchain là cách tự nhiên nhất để các ứng dụng và AI agents hợp tác mà không cần tin tưởng lẫn nhau. Ethereum sẽ đóng vai trò lớp kinh tế cho AI phi tập trung.",
+    "date": "May 12, 2026",
+    "tag": "Ethereum",
+    "tagIcon": "fas fa-link",
+    "tagColor": "#627eea",
+    "readTime": "5 phút",
+    "featured": true,
+    "image": "/images/etherealize-ethereum-ai-thumb.png"
+  },
+  {
     "url": "/blog/opencode-deepseek-v4-free/",
     "title": "⚡ OpenCode + DeepSeek V4 Flash: Model 'Miễn Phí' Mà Chất Lượng Nhất",
     "excerpt": "OpenCode tích hợp DeepSeek V4 Flash miễn phí cho ngườì dùng. Model nhanh, chính xác ngay cả với prompt mơ hồ, context window lớn — cộng đồng gọi là 'stealing inference for basically nothing'.",
