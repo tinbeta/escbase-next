@@ -5,8 +5,17 @@
     <link>https://news.escbase.xyz</link>
     <description>Báo cáo thị trường Crypto hàng ngày, phân tích Blockchain, AI và những chuyển động đáng chú ý.</description>
     <language>vi</language>
-    <lastBuildDate>Sun, 10 May 2026 17:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 11 May 2026 17:00:00 GMT</lastBuildDate>
     <atom:link href="https://news.escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>🔌 Codex + OpenAI Plugin: Từ Code Generator Thành AI App Builder</title>
+      <link>https://news.escbase.xyz/blog/openai-codex-developers-plugin/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/openai-codex-developers-plugin/</guid>
+      <pubDate>Mon, 11 May 2026 17:00:00 GMT</pubDate>
+      <description>OpenAI ra plugin cho Codex: giúp build AI apps và agents nhanh hơn với OpenAI APIs. Codex không còn chỉ viết code — nó trở thành API-aware builder.</description>
+      <category>Dev Tool</category>
+      <enclosure url="https://news.escbase.xyz/images/openai-codex-plugin-thumb.png" type="image/png" length="0" />
+    </item>
     <item>
       <title>⏳ Codex Chạy 3 Ngày: $4.300 Token, 78.000 Dòng Code, 1 Tháng Làm Thủ Công</title>
       <link>https://news.escbase.xyz/blog/steipete-codex-marathon-refactor/</link>
@@ -447,15 +456,6 @@
       <description>Stripe vừa công bố chính thức Link Wallet for Agents trên X với video demo. Giải pháp cho phép AI agents thanh toán thay mặt người dùng nhưng không bao giờ tiếp cận payment credentials — mỗi giao dịch đều cần approval.</description>
       <category>AI Agent</category>
       <enclosure url="https://news.escbase.xyz/images/stripe-link-wallet-official-launch-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>Stripe Link Wallet for Agents cho phép AI tự chi tiêu an toàn</title>
-      <link>https://news.escbase.xyz/blog/stripe-link-wallet-for-agents/</link>
-      <guid isPermaLink="true">https://news.escbase.xyz/blog/stripe-link-wallet-for-agents/</guid>
-      <pubDate>Wed, 29 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Stripe ra mắt Link Wallet for Agents — ví điện tử cho AI agents, cho phép AI tự động thanh toán thay mặt người dùng mà không lộ thông tin thanh toán. Mỗi giao dịch cần sự approve của user.</description>
-      <category>AI Agent</category>
-      <enclosure url="https://news.escbase.xyz/images/stripe-link-wallet-for-agents-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>

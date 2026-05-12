@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/openai-codex-developers-plugin/",
+    "title": "🔌 Codex + OpenAI Plugin: Từ Code Generator Thành AI App Builder",
+    "excerpt": "OpenAI ra plugin cho Codex: giúp build AI apps và agents nhanh hơn với OpenAI APIs. Codex không còn chỉ viết code — nó trở thành API-aware builder.",
+    "date": "May 12, 2026",
+    "tag": "Dev Tool",
+    "tagIcon": "fas fa-terminal",
+    "tagColor": "#10a37f",
+    "readTime": "5 phút",
+    "featured": true,
+    "image": "/images/openai-codex-plugin-thumb.png"
+  },
+  {
     "url": "/blog/steipete-codex-marathon-refactor/",
     "title": "⏳ Codex Chạy 3 Ngày: $4.300 Token, 78.000 Dòng Code, 1 Tháng Làm Thủ Công",
     "excerpt": "Peter Steinberger để Codex tự refactor codebase quy mô lớn trong 3 ngày. Chi phí ước tính $4.300 token, PR tăng từ 1.000 lên 78.000 dòng — việc làm thủ công mất cả tháng.",
