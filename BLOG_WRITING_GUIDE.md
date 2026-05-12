@@ -10,10 +10,11 @@
 - **Repo:** `tinbeta/escbase-next` (monorepo, npm workspaces)
 - **Blog posts:** Static HTML files tại `apps/web/public/blog/{slug}/index.html`
 - **Metadata:** `apps/web/public/blog.json` (mảng JSON, bài mới nhất ở đầu)
-- **Thumbnails:** SVG tại `apps/web/public/images/{slug}-thumb.svg`, PNG cùng tên cho og:image
+- **Preview images:** Ưu tiên PNG/JPG/WebP tại `apps/web/public/images/{slug}-thumb.{ext}`. SVG có thể dùng làm source, nhưng `og:image` nên trỏ tới PNG/JPG/WebP.
 - **Shared CSS:** `apps/web/public/shared-article.css` + `apps/web/public/shared-article-footer.css`
 - **Sitemap/RSS:** Auto-generate khi build (`npm run build`)
-- **Domain:** `https://escbase.xyz`
+- **Domain:** `https://news.escbase.xyz`
+- **Canonical URL:** Blog URLs dùng trailing slash: `https://news.escbase.xyz/blog/{slug}/`
 - **Ngôn ngữ:** Tiếng Việt (có dấu đầy đủ), có thể mix thuật ngữ tiếng Anh khi cần
 
 ---
@@ -28,14 +29,15 @@
 - Đường dẫn: `apps/web/public/blog/{slug}/index.html`
 - Xem template bên dưới
 
-### 3. Tạo thumbnail SVG
-- Đường dẫn: `apps/web/public/images/{slug}-thumb.svg`
-- Kích thước: `800x420` (width x height)
-- Xem hướng dẫn thumbnail bên dưới
+### 3. Tạo thumbnail / preview image
+- Đường dẫn ưu tiên: `apps/web/public/images/{slug}-thumb.png`
+- Kích thước khuyến nghị: `800x420` (width x height)
+- Có thể tạo SVG source tại `apps/web/public/images/{slug}-thumb.svg`, nhưng cần export PNG/JPG/WebP cho social preview.
 
-### 4. Tạo thumbnail PNG (cho og:image)
+### 4. Nếu tạo SVG, export PNG cho og:image
 - Chạy: `rsvg-convert -w 800 -h 420 apps/web/public/images/{slug}-thumb.svg -o apps/web/public/images/{slug}-thumb.png`
-- Cần cài `librsvg2-bin` nếu chưa có: `sudo apt-get install -y librsvg2-bin`
+- macOS: `brew install librsvg`
+- Linux: `sudo apt-get install -y librsvg2-bin`
 
 ### 5. Thêm metadata vào blog.json
 - Thêm object mới vào **ĐẦU** mảng JSON (bài mới nhất luôn ở vị trí đầu)
@@ -50,9 +52,52 @@
 - Commit message: `feat: Thêm bài viết {tên bài}`
 - Files cần commit:
   - `apps/web/public/blog/{slug}/index.html`
-  - `apps/web/public/images/{slug}-thumb.svg`
   - `apps/web/public/images/{slug}-thumb.png`
+  - `apps/web/public/images/{slug}-thumb.svg` (nếu có source SVG)
   - `apps/web/public/blog.json`
+
+---
+
+## Quy trình source từ X/Twitter thread
+
+Khi bài viết xuất phát từ một thread trên X/Twitter, không viết từ một tweet đơn lẻ hoặc bản tóm tắt thiếu nguồn. Mặc định dùng `bird thread <url>` để đọc toàn bộ thread trước.
+
+### 1. Tạo thư mục source cục bộ
+
+Tạo thư mục theo mẫu:
+
+`~/Downloads/escbase/content/<dd-mm-yyyy>/<title>/`
+
+Ví dụ:
+
+`~/Downloads/escbase/content/09-04-2026/claude-managed-agents-public-beta/`
+
+### 2. Lưu source bắt buộc
+
+Trong thư mục đó, lưu ít nhất:
+
+- `full_thread.txt`: toàn bộ nội dung thread gốc lấy từ `bird thread`.
+- `links.txt`: các link xuất hiện trong thread, chỉ lấy link của chủ thread/source chính.
+- Ảnh từ thread: bắt buộc tải và lưu tất cả ảnh của chủ thread/source chính.
+- Video từ thread: bắt buộc tải tất cả video của chủ thread/source chính.
+- `notebooklm.txt`: bắt buộc nếu có video dài cần tóm tắt thay vì nhúng nguyên bản.
+
+### 3. Rule lọc source
+
+- Chỉ lưu ảnh của chủ thread.
+- Chỉ lưu link của chủ thread.
+- Không gom ảnh/link từ user khác reply/comment vào source chính.
+- Chỉ đọc phản ứng cộng đồng khi nó thật sự giúp bài tốt hơn.
+- Nếu phân tích phản ứng cộng đồng, coi đó là lớp source phụ và không trộn vào source chính.
+
+### 4. Cách dùng source trong bài
+
+- Đọc lần lượt `full_thread.txt`, `links.txt`, `notebooklm.txt` nếu có.
+- Mở và đọc các link quan trọng nhất trong thread.
+- Phân tích ảnh trong thread để lấy thông tin, không chỉ chèn cho đẹp.
+- Chèn tất cả ảnh/video phù hợp từ chủ thread vào bài.
+- Video dưới 5 phút có thể chèn trực tiếp bằng thẻ `<video>`.
+- Video dài hơn nên tóm tắt bằng NotebookLM và không nhúng nguyên bản nếu làm bài quá nặng.
 
 ---
 
@@ -68,8 +113,8 @@
     <meta name="description" content="{Mô tả ngắn ~150-160 ký tự}">
     <meta property="og:title" content="{Tiêu đề ngắn cho social sharing}">
     <meta property="og:description" content="{Mô tả ngắn cho social sharing}">
-    <meta property="og:image" content="https://escbase.xyz/images/{slug}-thumb.png">
-    <meta property="og:url" content="https://escbase.xyz/blog/{slug}/">
+    <meta property="og:image" content="https://news.escbase.xyz/images/{slug}-thumb.png">
+    <meta property="og:url" content="https://news.escbase.xyz/blog/{slug}/">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -152,7 +197,7 @@
 
 ```json
 {
-    "url": "/blog/{slug}",
+    "url": "/blog/{slug}/",
     "title": "{Tiêu đề đầy đủ - tối đa ~80 ký tự}",
     "excerpt": "{Tóm tắt 1-2 câu cho card preview - tối đa ~250 ký tự}",
     "date": "Apr 25, 2026",
@@ -161,7 +206,7 @@
     "tagColor": "#ef4444",
     "readTime": "9 min read",
     "featured": true,
-    "image": "/images/{slug}-thumb.svg"
+    "image": "/images/{slug}-thumb.png"
 }
 ```
 
@@ -170,7 +215,8 @@
 - **date format:** `"MMM DD, YYYY"` — ví dụ: `"Apr 25, 2026"`
 - **readTime:** Ước tính: ~200 từ/phút → chia tổng số từ cho 200, làm tròn
 - **featured:** `true` cho bài mới, có thể chuyển bài cũ thành `false` nếu cần
-- **image:** Trỏ tới SVG (không phải PNG)
+- **url:** Luôn có trailing slash: `"/blog/{slug}/"`
+- **image:** Trỏ tới file preview có thật trong `apps/web/public/images`. Ưu tiên PNG/JPG/WebP; SVG chỉ nên dùng khi đã chắc ảnh render ổn ở nơi hiển thị.
 
 ### Tag colors đã dùng:
 
@@ -436,7 +482,7 @@ Font: `Inter, system-ui, sans-serif`
   <!-- Feature pills, stats, icons tùy nội dung -->
   <!-- Escbase branding -->
   <text x="80" y="390" font-family="Inter,system-ui,sans-serif" font-size="13" font-weight="700" fill="#64748b">
-    escbase.xyz
+    news.escbase.xyz
   </text>
 </svg>
 ```
@@ -501,11 +547,11 @@ Mọi CSS custom trong `<style>` đều **PHẢI** có `@media (max-width: 768px
 - Luôn có TL;DR highlight-box ở đầu bài
 - Luôn có source-links ở cuối
 - Luôn có back-to-blog-footer + article-cta-stack + tags
-- Luôn tạo cả SVG và PNG thumbnail
+- Luôn tạo preview image dùng được cho social sharing; nếu tạo SVG thì export thêm PNG
 - Luôn thêm entry vào blog.json ở đầu mảng
 - Luôn có mobile responsive cho CSS custom
-- og:image phải trỏ tới PNG (social media không hỗ trợ SVG)
-- og:url phải có trailing slash: `https://escbase.xyz/blog/{slug}/`
+- og:image phải trỏ tới PNG/JPG/WebP, không trỏ tới SVG
+- og:url phải có trailing slash: `https://news.escbase.xyz/blog/{slug}/`
 
 ### KHÔNG được làm:
 - KHÔNG duplicate CSS từ shared-article.css vào inline styles
@@ -513,7 +559,7 @@ Mọi CSS custom trong `<style>` đều **PHẢI** có `@media (max-width: 768px
 - KHÔNG dùng ảnh base64 inline — upload lên hoặc link URL
 - KHÔNG hardcode secrets/API keys trong bài viết
 - KHÔNG thêm blog.json entry vào cuối mảng (phải ở đầu)
-- KHÔNG dùng thumbnail PNG cho trường `image` trong blog.json (dùng SVG)
+- KHÔNG trỏ `image` trong blog.json tới file không tồn tại
 - KHÔNG quên `target="_blank"` cho external links trong source-links
 
 ---
