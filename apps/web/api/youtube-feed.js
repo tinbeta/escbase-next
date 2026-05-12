@@ -1,95 +1,107 @@
-const CHANNEL_VIDEOS_URL = 'https://www.youtube.com/@ESCBase/videos';
+const CHANNEL_ID = process.env.YOUTUBE_CHANNEL_ID || 'UCj79nJeT8U_bWVC92LUR5lA';
+const CHANNEL_HANDLE = process.env.YOUTUBE_CHANNEL_HANDLE || '@ESCBase';
+const DEBUG_API_ERRORS = process.env.DEBUG_API_ERRORS === '1';
 
-function pickRunsText(node) {
-  if (!node) return '';
-  if (typeof node?.simpleText === 'string') return node.simpleText;
-  if (Array.isArray(node?.runs)) return node.runs.map((r) => r.text || '').join('').trim();
-  return '';
+function decodeXml(value) {
+  return String(value || '')
+    .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&apos;/g, "'");
 }
 
-function findObjectsByKey(value, key, acc = []) {
-  if (!value || typeof value !== 'object') return acc;
-  if (Array.isArray(value)) {
-    for (const item of value) findObjectsByKey(item, key, acc);
-    return acc;
+function textBetween(xml, tagName) {
+  const match = xml.match(new RegExp(`<${tagName}[^>]*>([\\s\\S]*?)<\\/${tagName}>`, 'i'));
+  return decodeXml(match?.[1] || '').trim();
+}
+
+function getEntries(xml) {
+  return [...xml.matchAll(/<entry[\s\S]*?<\/entry>/gi)].map((match) => match[0]);
+}
+
+function extractVideoId(entry) {
+  const ytId = textBetween(entry, 'yt:videoId');
+  if (ytId) return ytId;
+
+  const link = entry.match(/<link[^>]+href=["']([^"']+)["']/i)?.[1] || '';
+  try {
+    const url = new URL(decodeXml(link));
+    return url.searchParams.get('v') || '';
+  } catch (_) {
+    return '';
   }
-  if (key in value) acc.push(value[key]);
-  for (const item of Object.values(value)) findObjectsByKey(item, key, acc);
-  return acc;
 }
 
-function extractInitialData(html) {
-  const match = html.match(/var ytInitialData = (\{[\s\S]*?\});<\/script>/);
-  if (!match) throw new Error('ytInitialData not found');
-  return JSON.parse(match[1]);
+function extractVideosFromRss(xml) {
+  return getEntries(xml)
+    .map((entry) => {
+      const id = extractVideoId(entry);
+      if (!id) return null;
+
+      const title = textBetween(entry, 'title') || 'Video Escbase';
+      const published = textBetween(entry, 'published') || textBetween(entry, 'updated');
+      const mediaThumb = entry.match(/<media:thumbnail[^>]+url=["']([^"']+)["']/i)?.[1];
+
+      return {
+        id,
+        title,
+        url: `https://www.youtube.com/watch?v=${id}`,
+        published: published ? new Date(published).toLocaleDateString('vi-VN') : '',
+        thumb: decodeXml(mediaThumb || `https://i.ytimg.com/vi/${id}/hqdefault.jpg`),
+      };
+    })
+    .filter(Boolean);
 }
 
-function extractVideos(data) {
-  const renderers = findObjectsByKey(data, 'videoRenderer');
-  const seen = new Set();
-  const videos = [];
+function publicError(error) {
+  const payload = {
+    source: 'fallback',
+    updatedAt: new Date().toISOString(),
+    videos: [],
+    error: 'Không thể tải feed YouTube lúc này.',
+  };
 
-  for (const video of renderers) {
-    const id = video?.videoId;
-    const title = pickRunsText(video?.title);
-    if (!id || !title || seen.has(id)) continue;
-    seen.add(id);
-
-    const published =
-      pickRunsText(video?.publishedTimeText) ||
-      pickRunsText(video?.videoInfo?.runs?.[0]) ||
-      '';
-
-    const thumb = video?.thumbnail?.thumbnails?.slice(-1)?.[0]?.url || `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
-
-    videos.push({
-      id,
-      title,
-      url: `https://www.youtube.com/watch?v=${id}`,
-      published,
-      thumb,
-    });
+  if (DEBUG_API_ERRORS) {
+    payload.detail = error instanceof Error ? error.message : 'unknown_error';
   }
 
-  return videos;
+  return payload;
+}
+
+function feedUrl() {
+  return `https://www.youtube.com/feeds/videos.xml?channel_id=${encodeURIComponent(CHANNEL_ID)}`;
 }
 
 export default async function handler(req, res) {
   res.setHeader('Cache-Control', 's-maxage=900, stale-while-revalidate=300');
 
   try {
-    const response = await fetch(CHANNEL_VIDEOS_URL, {
+    const response = await fetch(feedUrl(), {
       headers: {
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36',
-        Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-        'Accept-Language': 'vi-VN,vi;q=0.9,en-US;q=0.8,en;q=0.7',
+        Accept: 'application/atom+xml, application/xml, text/xml;q=0.9, */*;q=0.8',
       },
     });
 
     if (!response.ok) {
-      throw new Error(`YouTube page request failed: ${response.status}`);
+      throw new Error(`YouTube RSS request failed: ${response.status}`);
     }
 
-    const html = await response.text();
-    const data = extractInitialData(html);
-    const videos = extractVideos(data).slice(0, 12);
+    const xml = await response.text();
+    const videos = extractVideosFromRss(xml).slice(0, 12);
 
     if (!videos.length) {
-      throw new Error('No videos found in ytInitialData');
+      throw new Error(`No videos found for ${CHANNEL_HANDLE}`);
     }
 
     return res.status(200).json({
-      source: 'youtube-channel-page',
+      source: 'youtube-rss',
       updatedAt: new Date().toISOString(),
       videos,
     });
   } catch (error) {
-    return res.status(200).json({
-      source: 'fallback',
-      updatedAt: new Date().toISOString(),
-      videos: [],
-      error: 'Không thể tải feed YouTube lúc này.',
-      detail: error instanceof Error ? error.message : 'unknown_error',
-    });
+    return res.status(200).json(publicError(error));
   }
 }
