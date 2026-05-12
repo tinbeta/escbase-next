@@ -165,6 +165,7 @@
     const img = document.createElement('img');
     img.src = safeUrl(video?.thumb, '/og-default.png');
     img.alt = video?.title || '';
+    img.loading = 'lazy';
     img.style.width = '100%';
     img.style.height = '100%';
     img.style.objectFit = 'cover';
@@ -202,6 +203,7 @@
     const img = document.createElement('img');
     img.src = safeUrl(video?.thumb, '/og-default.png');
     img.alt = video?.title || '';
+    img.loading = 'lazy';
     thumb.appendChild(img);
     card.appendChild(thumb);
 

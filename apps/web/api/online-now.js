@@ -1,4 +1,4 @@
-const WINDOW_SECONDS = 45;
+const WINDOW_SECONDS = 120;
 const HEARTBEAT_PREFIX = 'escbase:presence:';
 const DEBUG_API_ERRORS = process.env.DEBUG_API_ERRORS === '1';
 
