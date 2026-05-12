@@ -8,6 +8,15 @@
     <lastBuildDate>Mon, 11 May 2026 17:00:00 GMT</lastBuildDate>
     <atom:link href="https://news.escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>🚀 MiniMax 10x Team: Tuyển Chuyên Gia Ngành Để Đẩy Model Lên Tầm Cao Mới</title>
+      <link>https://news.escbase.xyz/blog/minimax-10x-team-domain-experts/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/minimax-10x-team-domain-experts/</guid>
+      <pubDate>Mon, 11 May 2026 17:00:00 GMT</pubDate>
+      <description>MiniMax tuyển &apos;10x Team&apos; — chuyên gia sâu trong từng ngành để cải thiện model. Đã thử nghiệm với industrial software, game engines, chip design, finance, accounting.</description>
+      <category>AI Model</category>
+      <enclosure url="https://news.escbase.xyz/images/minimax-10x-team-thumb.png" type="image/png" length="0" />
+    </item>
+    <item>
       <title>🔗 Vitalik: Ethereum Là Lớp Kinh Tế Cho AI Phi Tập Trung</title>
       <link>https://news.escbase.xyz/blog/vitalik-ethereum-economic-layer-ai/</link>
       <guid isPermaLink="true">https://news.escbase.xyz/blog/vitalik-ethereum-economic-layer-ai/</guid>
@@ -447,15 +456,6 @@
       <description>Cursor giới thiệu SDK cho phép xây dựng AI agents với cùng runtime, harness và models. Rippling, Notion, C3 AI và Faire đã đang tích hợp. Phân tích ý nghĩa và lo ngại từ cộng đồng.</description>
       <category>AI Coding</category>
       <enclosure url="https://news.escbase.xyz/images/cursor-sdk-ai-agents-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>Stripe Console — AI Agent Hiểu Sâu Dữ Liệu Kinh Doanh Của Bạn</title>
-      <link>https://news.escbase.xyz/blog/stripe-console-ai-agent/</link>
-      <guid isPermaLink="true">https://news.escbase.xyz/blog/stripe-console-ai-agent/</guid>
-      <pubDate>Wed, 29 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Stripe sắp ra mắt Console, một AI agent tổng quát có ngữ cảnh sâu về dữ liệu riêng, insight từ mạng lưới Stripe và kiến thức sản phẩm để hỗ trợ vận hành doanh nghiệp.</description>
-      <category>AI Tools</category>
-      <enclosure url="https://news.escbase.xyz/images/stripe-console-ai-agent-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>

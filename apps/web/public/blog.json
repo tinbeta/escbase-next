@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/minimax-10x-team-domain-experts/",
+    "title": "🚀 MiniMax 10x Team: Tuyển Chuyên Gia Ngành Để Đẩy Model Lên Tầm Cao Mới",
+    "excerpt": "MiniMax tuyển '10x Team' — chuyên gia sâu trong từng ngành để cải thiện model. Đã thử nghiệm với industrial software, game engines, chip design, finance, accounting.",
+    "date": "May 12, 2026",
+    "tag": "AI Model",
+    "tagIcon": "fas fa-robot",
+    "tagColor": "#ff6b6b",
+    "readTime": "4 phút",
+    "featured": true,
+    "image": "/images/minimax-10x-team-thumb.png"
+  },
+  {
     "url": "/blog/vitalik-ethereum-economic-layer-ai/",
     "title": "🔗 Vitalik: Ethereum Là Lớp Kinh Tế Cho AI Phi Tập Trung",
     "excerpt": "Vitalik Buterin cho rằng blockchain là cách tự nhiên nhất để các ứng dụng và AI agents hợp tác mà không cần tin tưởng lẫn nhau. Ethereum sẽ đóng vai trò lớp kinh tế cho AI phi tập trung.",
