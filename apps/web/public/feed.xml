@@ -8,6 +8,15 @@
     <lastBuildDate>Mon, 11 May 2026 17:00:00 GMT</lastBuildDate>
     <atom:link href="https://news.escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>💰 $600 Trong 20 Phút: Claude Code Kiếm Tiền Từ Local Businesses</title>
+      <link>https://news.escbase.xyz/blog/claude-code-600-dollars-20-minutes-local-business/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/claude-code-600-dollars-20-minutes-local-business/</guid>
+      <pubDate>Mon, 11 May 2026 17:00:00 GMT</pubDate>
+      <description>Dùng Claude Code để kiếm $600 trong 20 phút bằng cách tạo landing page cho local businesses. Tìm kiếm, research, và xây dựng demo tự động.</description>
+      <category>Side Hustle</category>
+      <enclosure url="https://news.escbase.xyz/images/llmjunky-thumb.png" type="image/png" length="0" />
+    </item>
+    <item>
       <title>🚀 Claude Code 2.1.139: /goal Chính Thức Ra Mắt, Agent View Và 50+ Cập Nhật</title>
       <link>https://news.escbase.xyz/blog/claude-code-2-1-139-goal-agent-view/</link>
       <guid isPermaLink="true">https://news.escbase.xyz/blog/claude-code-2-1-139-goal-agent-view/</guid>
@@ -447,15 +456,6 @@
       <description>Anthropic cấm OpenClaw dùng Claude Pro/Max subscriptions từ 4/4/2026. OpenClaw pivot sang ChatGPT Plus login để truy cập Codex với near-unlimited, không cần API key. OpenAI ủng hộ openness, Anthropic lock-down.</description>
       <category>AI Agent</category>
       <enclosure url="https://news.escbase.xyz/images/openclaw-chatgpt-login-pivot-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>Image-to-Code: Cách Làm Frontend AI Bớt Củ Chuối</title>
-      <link>https://news.escbase.xyz/blog/image-to-code-frontend-workflow/</link>
-      <guid isPermaLink="true">https://news.escbase.xyz/blog/image-to-code-frontend-workflow/</guid>
-      <pubDate>Thu, 30 Apr 2026 17:00:00 GMT</pubDate>
-      <description>Leon Lin đề xuất workflow image-to-code: tạo ảnh thiết kế trước, chọn hướng visual, tách asset, rồi đưa cho coding agent build từng section và refine bằng screenshot.</description>
-      <category>AI Design</category>
-      <enclosure url="https://news.escbase.xyz/images/image-to-code-frontend-workflow-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>

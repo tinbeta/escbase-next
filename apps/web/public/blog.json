@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/claude-code-600-dollars-20-minutes-local-business/",
+    "title": "💰 $600 Trong 20 Phút: Claude Code Kiếm Tiền Từ Local Businesses",
+    "excerpt": "Dùng Claude Code để kiếm $600 trong 20 phút bằng cách tạo landing page cho local businesses. Tìm kiếm, research, và xây dựng demo tự động.",
+    "date": "May 12, 2026",
+    "tag": "Side Hustle",
+    "tagIcon": "fas fa-dollar-sign",
+    "tagColor": "#10b981",
+    "readTime": "5 phút",
+    "featured": true,
+    "image": "/images/llmjunky-thumb.png"
+  },
+  {
     "url": "/blog/claude-code-2-1-139-goal-agent-view/",
     "title": "🚀 Claude Code 2.1.139: /goal Chính Thức Ra Mắt, Agent View Và 50+ Cập Nhật",
     "excerpt": "Claude Code 2.1.139 ra mắt với 50+ thay đổi CLI và 1 cập nhật system prompt. Điểm nhấn: /goal command, agent view, system prompt compaction silent.",
