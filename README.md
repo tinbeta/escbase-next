@@ -23,6 +23,19 @@ npm run dev
 Mở tại:
 - http://localhost:5173
 
+## Kiểm tra trước khi xuất bản
+
+```bash
+npm run validate
+npm run build
+```
+
+`validate` kiểm tra `blog.json`, ảnh bài viết, canonical domain, sitemap/metadata và các file không nên publish. Khi cần chặn cả dữ liệu legacy như bài chỉ có năm xuất bản, chạy:
+
+```bash
+STRICT_CONTENT=1 npm run validate
+```
+
 ## Hướng nâng cấp tiếp theo
 
 - tối ưu mobile

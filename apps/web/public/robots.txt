@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://escbase.xyz/sitemap.xml
+Sitemap: https://news.escbase.xyz/sitemap.xml

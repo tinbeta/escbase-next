@@ -1,4 +1,5 @@
 const CMC_API_KEY = process.env.CMC_API_KEY || '';
+const DEBUG_API_ERRORS = process.env.DEBUG_API_ERRORS === '1';
 const DEFAULT_SYMBOLS = ['BTC', 'ETH', 'SOL', 'BNB', 'XRP'];
 const COIN_META = {
   BTC: { icon: '₿', color: '#f7931a' },
@@ -29,10 +30,28 @@ function formatPercent(value) {
   return `${sign}${value.toFixed(2)}%`;
 }
 
+function publicError(message, error) {
+  const payload = {
+    updatedAt: new Date().toISOString(),
+    coins: [],
+    error: message,
+  };
+
+  if (DEBUG_API_ERRORS) {
+    payload.detail = error instanceof Error ? error.message : 'unknown_error';
+  }
+
+  return payload;
+}
+
 export default async function handler(req, res) {
   res.setHeader('Cache-Control', 's-maxage=300, stale-while-revalidate=59');
 
   try {
+    if (!CMC_API_KEY) {
+      throw new Error('CMC_API_KEY is not configured');
+    }
+
     const response = await fetch(buildCmcUrl(), {
       headers: {
         'X-CMC_PRO_API_KEY': CMC_API_KEY,
@@ -70,11 +89,6 @@ export default async function handler(req, res) {
       coins,
     });
   } catch (error) {
-    return res.status(200).json({
-      updatedAt: new Date().toISOString(),
-      coins: [],
-      error: 'Không thể tải giá coin lúc này.',
-      detail: error instanceof Error ? error.message : 'unknown_error',
-    });
+    return res.status(200).json(publicError('Không thể tải giá coin lúc này.', error));
   }
 }

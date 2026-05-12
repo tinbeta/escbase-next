@@ -1,4 +1,5 @@
 const CHANNEL_VIDEOS_URL = 'https://www.youtube.com/@ESCBase/videos';
+const DEBUG_API_ERRORS = process.env.DEBUG_API_ERRORS === '1';
 
 function pickRunsText(node) {
   if (!node) return '';
@@ -54,6 +55,21 @@ function extractVideos(data) {
   return videos;
 }
 
+function publicError(error) {
+  const payload = {
+    source: 'fallback',
+    updatedAt: new Date().toISOString(),
+    videos: [],
+    error: 'Không thể tải feed YouTube lúc này.',
+  };
+
+  if (DEBUG_API_ERRORS) {
+    payload.detail = error instanceof Error ? error.message : 'unknown_error';
+  }
+
+  return payload;
+}
+
 export default async function handler(req, res) {
   res.setHeader('Cache-Control', 's-maxage=900, stale-while-revalidate=300');
 
@@ -84,12 +100,6 @@ export default async function handler(req, res) {
       videos,
     });
   } catch (error) {
-    return res.status(200).json({
-      source: 'fallback',
-      updatedAt: new Date().toISOString(),
-      videos: [],
-      error: 'Không thể tải feed YouTube lúc này.',
-      detail: error instanceof Error ? error.message : 'unknown_error',
-    });
+    return res.status(200).json(publicError(error));
   }
 }

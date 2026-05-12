@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/generate-sitemap.js && node scripts/generate-feed.js && vite build"
+    "validate": "node scripts/validate-content.js",
+    "build": "node scripts/validate-content.js && node scripts/generate-sitemap.js && node scripts/generate-feed.js && vite build"
   },
   "devDependencies": {
     "vite": "^5.4.10"

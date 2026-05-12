@@ -1,5 +1,6 @@
 const WINDOW_SECONDS = 45;
 const HEARTBEAT_PREFIX = 'escbase:presence:';
+const DEBUG_API_ERRORS = process.env.DEBUG_API_ERRORS === '1';
 
 function json(res, status, payload) {
   res.status(status).json(payload);
@@ -120,12 +121,17 @@ export default async function handler(req, res) {
       updatedAt: new Date(nowMs).toISOString(),
     });
   } catch (error) {
-    return json(res, 200, {
+    const payload = {
       onlineNow: null,
       error: 'presence_unavailable',
-      detail: error instanceof Error ? error.message : 'unknown_error',
       windowSeconds: WINDOW_SECONDS,
       updatedAt: new Date().toISOString(),
-    });
+    };
+
+    if (DEBUG_API_ERRORS) {
+      payload.detail = error instanceof Error ? error.message : 'unknown_error';
+    }
+
+    return json(res, 200, payload);
   }
 }

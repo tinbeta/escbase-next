@@ -36,7 +36,30 @@
   }
 
   function socialLink(item) {
-    return `<a href="${item.href}" target="_blank" class="social-btn" title="${item.label}" aria-label="${item.label}"><i class="${item.icon}"></i></a>`;
+    return `<a href="${item.href}" target="_blank" rel="noopener noreferrer" class="social-btn" title="${item.label}" aria-label="${item.label}"><i class="${item.icon}"></i></a>`;
+  }
+
+  function secureBlankTargets(root = document) {
+    root.querySelectorAll('a[target="_blank"]').forEach((anchor) => {
+      const rel = new Set((anchor.getAttribute('rel') || '').split(/\s+/).filter(Boolean));
+      rel.add('noopener');
+      rel.add('noreferrer');
+      anchor.setAttribute('rel', [...rel].join(' '));
+    });
+  }
+
+  function watchBlankTargets() {
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        mutation.addedNodes.forEach((node) => {
+          if (node.nodeType !== Node.ELEMENT_NODE) return;
+          if (node.matches?.('a[target="_blank"]')) secureBlankTargets(node.parentElement || document);
+          secureBlankTargets(node);
+        });
+      });
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
   }
 
   function renderMobileHeader() {
@@ -125,5 +148,7 @@
     renderMobileNav();
     renderSidebar();
     renderFooter();
+    secureBlankTargets();
+    watchBlankTargets();
   });
 })();
