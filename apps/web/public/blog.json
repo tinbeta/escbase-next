@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/openai-daybreak-cyber-defense/",
+    "title": "🛡️ OpenAI Daybreak: AI Frontier Cho Cyber Defense, Không Chỉ Là \"Mythos CỦa OpenAI\"",
+    "excerpt": "OpenAI ra mắt Daybreak: frontier AI kết hợp Codex và security partners để tăng tốc cyber defense. Tìm và sửa lỗ hổng sớm hơn, cắt giảm backlog bảo mật, tự động hóa detection và response.",
+    "date": "May 12, 2026",
+    "tag": "Cybersecurity",
+    "tagIcon": "fas fa-shield-halved",
+    "tagColor": "#f97316",
+    "readTime": "6 phút",
+    "featured": true,
+    "image": "/images/daybreak-thumb.png"
+  },
+  {
     "url": "/blog/claude-code-agent-view/",
     "title": "🧭 Claude Code Agent View: Mission Control Cho Multi-Agent Session",
     "excerpt": "Claude Code ra mắt Agent View: dashboard quản lý tất cả session song song. Xem trạng thái, reply inline, nhảy vào/ra mà không mất vị trí.",

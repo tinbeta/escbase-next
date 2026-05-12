@@ -8,6 +8,15 @@
     <lastBuildDate>Mon, 11 May 2026 17:00:00 GMT</lastBuildDate>
     <atom:link href="https://news.escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>🛡️ OpenAI Daybreak: AI Frontier Cho Cyber Defense, Không Chỉ Là &quot;Mythos CỦa OpenAI&quot;</title>
+      <link>https://news.escbase.xyz/blog/openai-daybreak-cyber-defense/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/openai-daybreak-cyber-defense/</guid>
+      <pubDate>Mon, 11 May 2026 17:00:00 GMT</pubDate>
+      <description>OpenAI ra mắt Daybreak: frontier AI kết hợp Codex và security partners để tăng tốc cyber defense. Tìm và sửa lỗ hổng sớm hơn, cắt giảm backlog bảo mật, tự động hóa detection và response.</description>
+      <category>Cybersecurity</category>
+      <enclosure url="https://news.escbase.xyz/images/daybreak-thumb.png" type="image/png" length="0" />
+    </item>
+    <item>
       <title>🧭 Claude Code Agent View: Mission Control Cho Multi-Agent Session</title>
       <link>https://news.escbase.xyz/blog/claude-code-agent-view/</link>
       <guid isPermaLink="true">https://news.escbase.xyz/blog/claude-code-agent-view/</guid>
@@ -447,15 +456,6 @@
       <description>Adobe tích hợp 50+ Creative Cloud tools vào Claude. Người dùng chỉ cần mô tả kết quả muốn có, AI tự động điều phối workflow và trả về sản phẩm hoàn chỉnh.</description>
       <category>AI Tools</category>
       <enclosure url="https://news.escbase.xyz/images/adobe-claude-creative-cloud-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>OpenClaw 2026.4.27 — 6 Nâng Cấp Đáng Chú Ý</title>
-      <link>https://news.escbase.xyz/blog/openclaw-2026-4-27-release/</link>
-      <guid isPermaLink="true">https://news.escbase.xyz/blog/openclaw-2026-4-27-release/</guid>
-      <pubDate>Wed, 29 Apr 2026 17:00:00 GMT</pubDate>
-      <description>OpenClaw vừa ra mắt bản 2026.4.27 với DeepInfra provider mới, cải thiện xử lý file, proxy routing cho operator, Matrix approvals nâng cấp, model selection chặt chẽ hơn và reliability được cải thiện đáng kể.</description>
-      <category>AI Agents</category>
-      <enclosure url="https://news.escbase.xyz/images/openclaw-2026-4-27-release-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>
