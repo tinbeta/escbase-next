@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔐 Clear Signing Chính Thức Ra Mắt: Ethereum Kết Thúc Blind Signing Với ERC-7730 - Escbase</title>
+    <meta name="description" content="Ethereum Foundation ra mắt Clear Signing — open standard chấm dứt blind signing. ERC-7730 biến giao dịch hex thành ngôn ngữ con ngườì đọc được.">
+    <meta property="og:title" content="Clear Signing Chính Thức Ra Mắt: Ethereum Kết Thúc Blind Signing">
+    <meta property="og:description" content="ERC-7730 và mạng lưới Ledger, Trezor, MetaMask đang biến giao dịch Ethereum thành human-readable.">
+    <meta property="og:image" content="https://news.escbase.xyz/images/ethereum-clear-signing-erc-7730-thumb.png">
+    <meta property="og:url" content="https://news.escbase.xyz/blog/ethereum-clear-signing-erc-7730-live/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/shared-article.css">
+    <link rel="stylesheet" href="/shared-article-footer.css">
+    <style>
+        .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+        .feature-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.25rem; }
+        .feature-card h4 { color: var(--text); margin-bottom: .5rem; font-size: 1rem; }
+        .feature-card .icon { font-size: 1.5rem; margin-bottom: .75rem; }
+        .feature-card p { font-size: .9rem; margin-bottom: 0; }
+        .stats-row { display: flex; gap: 1.5rem; flex-wrap: wrap; margin: 1.5rem 0; }
+        .stat-item { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1rem 1.25rem; text-align: center; flex: 1; min-width: 120px; }
+        .stat-item .number { font-size: 1.5rem; font-weight: 800; color: var(--accent); }
+        .stat-item .label { font-size: .8rem; color: var(--text-secondary); margin-top: .25rem; }
+        .community-quote { border-left: 3px solid var(--accent); padding: .75rem 1rem; margin: 1rem 0; background: rgba(99,102,241,.05); border-radius: 0 var(--radius-md) var(--radius-md) 0; }
+        .community-quote .author { color: var(--accent); font-weight: 600; font-size: .85rem; }
+        .community-quote p { margin-bottom: .25rem; font-size: .95rem; }
+        .community-quote.positive { border-left-color: var(--accent-green); background: rgba(34,197,94,.05); }
+        .community-quote.positive .author { color: var(--accent-green); }
+        .wallet-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: .75rem; margin: 1rem 0; }
+        .wallet-badge { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: .75rem; text-align: center; font-size: .85rem; font-weight: 600; color: var(--text-secondary); }
+        @media (max-width: 768px) {
+            .feature-grid { grid-template-columns: 1fr; }
+            .feature-card { padding: 1rem; }
+            .stats-row { gap: .75rem; }
+            .stat-item { padding: .75rem; min-width: 0; }
+            .stat-item .number { font-size: 1.25rem; }
+            .wallet-grid { grid-template-columns: repeat(2, 1fr); }
+            .community-quote { padding: .6rem .85rem; margin: .75rem 0; }
+            .community-quote p { font-size: .9rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <span class="category-badge"><i class="fab fa-bitcoin"></i> Crypto</span>
+                <h1>🔐 Clear Signing Chính Thức Ra Mắt: Ethereum Kết Thúc Blind Signing Với ERC-7730</h1>
+                <div class="meta">
+                    <span><i class="far fa-calendar"></i> May 12, 2026</span>
+                    <span><i class="far fa-clock"></i> 4 phút đọc</span>
+                    <span><i class="far fa-folder"></i> Crypto, Ethereum, Security</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <div class="highlight-box">
+                    <h4>TL;DR</h4>
+                    <p style="margin-bottom:0"><strong>Ethereum Foundation vừa ra mắt Clear Signing</strong> — một open standard nhằm chấm dứt blind signing, biến chuỗi hex không đọc được thành giao dịch human-readable. <strong>ERC-7730</strong> là lõi của nỗ lực này, được hỗ trợ bởi Ledger, Trezor, MetaMask, WalletConnect và nhiều tên tuổi lớn trong hệ sinh thái.</p>
+                </div>
+
+                <h2>Blind Signing Đã Gây Ra Thiệt Hại Hàng Tỷ USD</h2>
+                <p>Khi ký một giao dịch trên Ethereum hôm nay, đa số ngườì dùng vẫn đang click "Approve" trên một chuỗi hex không thể đọc được. Đây chính là <strong>blind signing</strong> — thói quen phê duyệt giao dịch mà không hiểu nội dung thực sự.</p>
+                <p>Theo Ethereum Foundation, blind signing đã góp phần gây ra <strong>hàng tỷ USD thiệt hại</strong> trong hệ sinh thái. Các vụ hack, scam và rug pull thường khai thác chính lỗ hổng này: user ký giao dịch vì tin tưởng UI, nhưng thực tế smart contract đang thực hiện hành động hoàn toàn khác.</p>
+
+                <div class="highlight-box-red">
+                    <h4>🚨 Vấn đề cốt lõi</h4>
+                    <p style="margin-bottom:0">Ngườì dùng không thể xác minh điều gì đang xảy ra khi họ ký. Họ phải tin tưởng hoàn toàn vào frontend hoặc wallet — và đó là điểm yếu bị tội phạm mạng khai thác triệt để.</p>
+                </div>
+
+                <h2>Clear Signing Là Gì?</h2>
+                <p>Clear signing là phương pháp hiển thị giao dịch bằng <strong>ngôn ngữ con ngườì đọc được</strong> thay vì dữ liệu kỹ thuật mờ ảo. Thay vì nhìn thấy một chuỗi hex dài ngoằn, user sẽ thấy thông tin rõ ràng như:</p>
+                <ul>
+                    <li>Bạn đang gửi <strong>0.5 ETH</strong> đến địa chỉ <code>0x1234...abcd</code></li>
+                    <li>Bạn đang phê duyệt <strong>Uniswap V3 Router</strong> chi tiêu tối đa <strong>1,000 USDC</strong></li>
+                    <li>Bạn đang stake <strong>32 ETH</strong> vào validator #89234</li>
+                </ul>
+
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <div class="number">ERC-7730</div>
+                        <div class="label">Human-readable tx standard</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">ERC-8176</div>
+                        <div class="label">Attestation framework</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">10+</div>
+                        <div class="label">Core contributors</div>
+                    </div>
+                </div>
+
+                <h2>Các Thành Phần Chính Của Clear Signing</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="icon" style="color:#627eea">📋</div>
+                        <h4>ERC-7730</h4>
+                        <p>Open standard cho transaction descriptions dạng human-readable. Định nghĩa cách mô tả giao dịch để mọi wallet đều hiểu.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon" style="color:#22c55e">🪞</div>
+                        <h4>Descriptor Registry</h4>
+                        <p>Một neutral registry có thể mirror, lưu trữ các mô tả giao dịch cho smart contracts. Không phụ thuộc vào một bên duy nhất.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon" style="color:#f59e0b">✅</div>
+                        <h4>ERC-8176 Attestation</h4>
+                        <p>Framework cho auditors xác minh tính toàn vẹn của descriptors — đảm bảo mô tả giao dịch khớp với hành vi thực tế của contract.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon" style="color:#ef4444">🛠️</div>
+                        <h4>Dev Tooling</h4>
+                        <p>Công cụ mở cho wallets, protocols và auditors tích hợp clear signing vào sản phẩm của họ.</p>
+                    </div>
+                </div>
+
+                <h2>Những Tên Tuổi Đứng Sau Clear Signing</h2>
+                <p>Đây không phải là dự án của một công ty đơn lẻ. Ethereum Foundation đóng vai trò <strong>neutral steward</strong>, còn thực hiện được nhờ sự tham gia của:</p>
+
+                <div class="wallet-grid">
+                    <div class="wallet-badge">Ledger</div>
+                    <div class="wallet-badge">Trezor</div>
+                    <div class="wallet-badge">zkKnox</div>
+                    <div class="wallet-badge">MetaMask</div>
+                    <div class="wallet-badge">WalletConnect</div>
+                    <div class="wallet-badge">Cyfrin</div>
+                    <div class="wallet-badge">Fireblocks</div>
+                    <div class="wallet-badge">Zama</div>
+                    <div class="wallet-badge">Sourcify</div>
+                    <div class="wallet-badge">Argo</div>
+                </div>
+
+                <p style="margin-top:1rem">Đáng chú ý, Ledger được ghi nhận là <strong>pioneer</strong> của clear signing trong hệ sinh thái. Các nỗ lực trước đây của Ledger đã tạo nền tảng cho standard này.</p>
+
+                <h2>Cộng Đồng Phản Hồi</h2>
+
+                <div class="community-quote positive">
+                    <p>"Billions lost to blind signing. Users clicking hex they couldn't read. ERC-7730 makes 'see what you sign' the default. Ethereum fixing UX at the protocol level, not waiting for wallets to figure it out. This is how infrastructure matures."</p>
+                    <span class="author">— @Bookof_Eth trên X</span>
+                </div>
+
+                <div class="community-quote positive">
+                    <p>"Hugely important upgrade for usability and transaction security, congrats on the milestone."</p>
+                    <span class="author">— @TheMindofMar (Martin) trên X</span>
+                </div>
+
+                <div class="community-quote positive">
+                    <p>"One small step for human-readable transactions being the default, one giant leap for mankind."</p>
+                    <span class="author">— @Ledger trên X</span>
+                </div>
+
+                <div class="community-quote positive">
+                    <p>"Let's make clear signing the default."</p>
+                    <span class="author">— @SourcifyEth trên X</span>
+                </div>
+
+                <h2>Đánh Giá Của Escbase</h2>
+                <p>Clear signing là một <strong>upgrade mang tính cơ sở hạ tầng</strong> mà Ethereum cần từ lâu. Không giống như nhiều dự án crypto chỉ tập trung vào speculation, đây là một thay đổi thực sự giải quyết vấn đề đau đầu nhất của user: <strong>không biết mình đang ký cái gì</strong>.</p>
+                <p>Việc Ethereum Foundation đứng ra làm neutral steward thay vì để một công_ty hardware wallet chi phối là động thái đúng đắn. Tuy nhiên, <strong>thách thức lớn nhất vẫn là adoption</strong> — cần tất cả major wallets và dApps cập nhật để standard này thực sự có ý nghĩa.</p>
+
+                <div class="highlight-box-blue">
+                    <h4>💡 Điểm cần theo dõi</h4>
+                    <p style="margin-bottom:0">Registry có thể mirror là yếu tố quan trọng — đảm bảo không có single point of failure. Nếu descriptor registry bị tấn công hoặc kiểm duyệt, mirror giúp hệ sinh thái duy trì hoạt động.</p>
+                </div>
+
+                <h2>Kết Luận</h2>
+                <p>ERC-7730 và clear signing đánh dấu bước tiến quan trọng trong việc bảo vệ ngườì dùng Ethereum. Bằng cách biến giao dịch từ "mù" thành human-readable, hệ sinh thái đang giảm thiểu một vector tấn công chính đã gây thiệt hại hàng tỷ USD.</p>
+                <p>Với sự tham gia của hầu hết các tên tuổi lớn trong ngành — từ hardware wallets đến infrastructure providers — khả năng cao clear signing sẽ trở thành default trong vòng 12-18 tháng tới.</p>
+
+                <div class="source-links">
+                    <h4>Nguồn & tham khảo</h4>
+                    <ul>
+                        <li><a href="https://x.com/ethereumfndn/status/2054232916763263148" target="_blank">Ethereum Foundation — Clear Signing Announcement (X/Twitter)</a></li>
+                        <li><a href="https://x.com/ethereumfndn/status/2054232923612602571" target="_blank">ERC-7730 & ERC-8176 Standard Details (X/Twitter)</a></li>
+                        <li><a href="https://ethereum.org/" target="_blank">Ethereum Foundation — Trang chủ</a></li>
+                    </ul>
+                </div>
+
+                <div class="back-to-blog-footer">
+                    <a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+                </div>
+
+                <div class="article-cta-stack">
+                    <a href="/blog/circle-q1-2026-record-growth/" class="article-suggestion-card">
+                        <span class="article-suggestion-label"><i class="fas fa-book-open"></i> Đọc tiếp</span>
+                        <span class="article-suggestion-title">📊 Circle Q1 2026: Doanh Thu $694M, Onchain Volume Bùng Nổ +263%</span>
+                    </a>
+                    <div class="article-cta-actions">
+                        <a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a>
+                    </div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">Ethereum</span>
+                    <span class="tag">ERC-7730</span>
+                    <span class="tag">Clear Signing</span>
+                    <span class="tag">Crypto Security</span>
+                    <span class="tag">Blind Signing</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

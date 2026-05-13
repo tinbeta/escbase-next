@@ -8,6 +8,15 @@
     <lastBuildDate>Mon, 11 May 2026 17:00:00 GMT</lastBuildDate>
     <atom:link href="https://news.escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>🔐 Clear Signing Chính Thức Ra Mắt: Ethereum Kết Thúc Blind Signing Với ERC-7730</title>
+      <link>https://news.escbase.xyz/blog/ethereum-clear-signing-erc-7730-live/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/ethereum-clear-signing-erc-7730-live/</guid>
+      <pubDate>Mon, 11 May 2026 17:00:00 GMT</pubDate>
+      <description>Ethereum Foundation ra mắt Clear Signing — open standard chấm dứt blind signing. ERC-7730 biến giao dịch hex thành ngôn ngữ con ngườì đọc được, với sự tham gia của Ledger, Trezor, MetaMask và nhiều tên tuổi lớn.</description>
+      <category>Crypto</category>
+      <enclosure url="https://news.escbase.xyz/images/ethereum-clear-signing-erc-7730-thumb.png" type="image/png" length="0" />
+    </item>
+    <item>
       <title>💰 $600 Trong 20 Phút: Claude Code Kiếm Tiền Từ Local Businesses</title>
       <link>https://news.escbase.xyz/blog/claude-code-600-dollars-20-minutes-local-business/</link>
       <guid isPermaLink="true">https://news.escbase.xyz/blog/claude-code-600-dollars-20-minutes-local-business/</guid>
@@ -447,15 +456,6 @@
       <description>xAI ra mắt Grok 4.3 với AI Index 53, chi phí giảm 40% input / 60% output, ngồi trên Pareto frontier. Model vượt Claude Sonnet 4.6, Gemini 3.1 Pro nhưng kém GPT-5.5. Cộng đồng phản ứng trái chiều về tính thực tế của benchmark.</description>
       <category>AI Models &amp; Agents</category>
       <enclosure url="https://news.escbase.xyz/images/grok-4-3-cost-efficiency-pareto-frontier-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>OpenClaw Pivot: Dùng ChatGPT Plus Login Thay Thế Claude API Sau Khi Bị Anthropic Cấm</title>
-      <link>https://news.escbase.xyz/blog/openclaw-chatgpt-login-pivot/</link>
-      <guid isPermaLink="true">https://news.escbase.xyz/blog/openclaw-chatgpt-login-pivot/</guid>
-      <pubDate>Fri, 01 May 2026 17:00:00 GMT</pubDate>
-      <description>Anthropic cấm OpenClaw dùng Claude Pro/Max subscriptions từ 4/4/2026. OpenClaw pivot sang ChatGPT Plus login để truy cập Codex với near-unlimited, không cần API key. OpenAI ủng hộ openness, Anthropic lock-down.</description>
-      <category>AI Agent</category>
-      <enclosure url="https://news.escbase.xyz/images/openclaw-chatgpt-login-pivot-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>

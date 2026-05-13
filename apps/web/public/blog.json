@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/ethereum-clear-signing-erc-7730-live/",
+    "title": "🔐 Clear Signing Chính Thức Ra Mắt: Ethereum Kết Thúc Blind Signing Với ERC-7730",
+    "excerpt": "Ethereum Foundation ra mắt Clear Signing — open standard chấm dứt blind signing. ERC-7730 biến giao dịch hex thành ngôn ngữ con ngườì đọc được, với sự tham gia của Ledger, Trezor, MetaMask và nhiều tên tuổi lớn.",
+    "date": "May 12, 2026",
+    "tag": "Crypto",
+    "tagIcon": "fab fa-bitcoin",
+    "tagColor": "#f7931a",
+    "readTime": "4 phút",
+    "featured": true,
+    "image": "/images/ethereum-clear-signing-erc-7730-thumb.png"
+  },
+  {
     "url": "/blog/claude-code-600-dollars-20-minutes-local-business/",
     "title": "💰 $600 Trong 20 Phút: Claude Code Kiếm Tiền Từ Local Businesses",
     "excerpt": "Dùng Claude Code để kiếm $600 trong 20 phút bằng cách tạo landing page cho local businesses. Tìm kiếm, research, và xây dựng demo tự động.",
