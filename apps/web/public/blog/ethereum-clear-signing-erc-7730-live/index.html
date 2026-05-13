@@ -32,6 +32,9 @@
         .community-quote p { margin-bottom: .25rem; font-size: .95rem; }
         .community-quote.positive { border-left-color: var(--accent-green); background: rgba(34,197,94,.05); }
         .community-quote.positive .author { color: var(--accent-green); }
+        .article-img { width: 100%; border-radius: var(--radius-md); margin: 1.5rem 0; border: 1px solid var(--border); }
+        .article-figure { margin: 1.5rem 0; }
+        .article-figure figcaption { text-align: center; font-size: .85rem; color: var(--text-secondary); margin-top: .5rem; }
         .wallet-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: .75rem; margin: 1rem 0; }
         .wallet-badge { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: .75rem; text-align: center; font-size: .85rem; font-weight: 600; color: var(--text-secondary); }
         @media (max-width: 768px) {
@@ -65,6 +68,11 @@
                     <p style="margin-bottom:0"><strong>Ethereum Foundation vừa ra mắt Clear Signing</strong> — một open standard nhằm chấm dứt blind signing, biến chuỗi hex không đọc được thành giao dịch human-readable. <strong>ERC-7730</strong> là lõi của nỗ lực này, được hỗ trợ bởi Ledger, Trezor, MetaMask, WalletConnect và nhiều tên tuổi lớn trong hệ sinh thái.</p>
                 </div>
 
+                <figure class="article-figure">
+                    <img src="clear-signing-banner.png" alt="Clear Signing banner — NOW LIVE" class="article-img" loading="lazy">
+                    <figcaption>Banner ra mắt chính thức từ Ethereum Foundation</figcaption>
+                </figure>
+
                 <h2>Blind Signing Đã Gây Ra Thiệt Hại Hàng Tỷ USD</h2>
                 <p>Khi ký một giao dịch trên Ethereum hôm nay, đa số ngườì dùng vẫn đang click "Approve" trên một chuỗi hex không thể đọc được. Đây chính là <strong>blind signing</strong> — thói quen phê duyệt giao dịch mà không hiểu nội dung thực sự.</p>
                 <p>Theo Ethereum Foundation, blind signing đã góp phần gây ra <strong>hàng tỷ USD thiệt hại</strong> trong hệ sinh thái. Các vụ hack, scam và rug pull thường khai thác chính lỗ hổng này: user ký giao dịch vì tin tưởng UI, nhưng thực tế smart contract đang thực hiện hành động hoàn toàn khác.</p>
@@ -81,6 +89,11 @@
                     <li>Bạn đang phê duyệt <strong>Uniswap V3 Router</strong> chi tiêu tối đa <strong>1,000 USDC</strong></li>
                     <li>Bạn đang stake <strong>32 ETH</strong> vào validator #89234</li>
                 </ul>
+
+                <figure class="article-figure">
+                    <img src="see-what-you-sign.png" alt="See what you sign — từ chuỗi hex sang giao dịch human-readable" class="article-img" loading="lazy">
+                    <figcaption>Minh họa: Từ chuỗi hex không đọc được sang giao dịch human-readable</figcaption>
+                </figure>
 
                 <div class="stats-row">
                     <div class="stat-item">
