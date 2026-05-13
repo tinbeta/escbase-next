@@ -90,8 +90,8 @@ function validateBlogJson() {
       if (!post.url.startsWith('/blog/')) {
         error('post_url_prefix', `${post.url} must start with /blog/`);
       }
-      if (!post.url.endsWith('/')) {
-        error('post_url_trailing_slash', `${post.url} must end with /`);
+      if (post.url.endsWith('/')) {
+        error('post_url_trailing_slash', `${post.url} must not end with /`);
       }
 
       const pagePath = join(publicDir, post.url.replace(/^\/+/, ''), 'index.html');
@@ -169,8 +169,8 @@ function validateBlogMeta(posts) {
 function validateGeneratedConfig() {
   const vercelPath = resolve(__dirname, '../vercel.json');
   const vercel = readJson(vercelPath);
-  if (vercel?.trailingSlash === false) {
-    warn('vercel_trailing_slash', 'apps/web/vercel.json sets trailingSlash:false while blog canonical URLs use trailing slash');
+  if (vercel?.trailingSlash === true) {
+    warn('vercel_trailing_slash', 'apps/web/vercel.json sets trailingSlash:true while blog canonical URLs do not use trailing slash');
   }
 
   walkFiles(publicDir, (path) => path.endsWith('.DS_Store')).forEach((path) => {
