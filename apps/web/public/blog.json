@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/holaos-beta-ai-teammates-workspace",
+    "title": "🐧 holaOS Beta 0.1 Ra Mắt: AI Teammates Cho Công Việc Kéo Dài Theo Thờì Gian",
+    "excerpt": "holaOS Beta 0.1 — từ open-source agent computer thành sản phẩm thực tế. Multi workspaces, sub agents song song, và dashboard track tiến độ cho công việc không chỉ trong một session.",
+    "date": "May 12, 2026",
+    "tag": "AI",
+    "tagIcon": "fas fa-robot",
+    "tagColor": "#10a37f",
+    "readTime": "3 phút",
+    "featured": true,
+    "image": "/images/holaos-beta-ai-teammates-workspace-thumb.png"
+  },
+  {
     "url": "/blog/openai-codex-computer-use-mac",
     "title": "🤖 OpenAI Codex Computer Use: AI Agent Chạy Ngầm Trên Mac, Không Chiếm Màn Hình",
     "excerpt": "Codex mở rộng từ coding assistant thành full agent điều khiển máy tính. Computer use cho phép AI click, type và chạy song song nhiều agent ở background mà không chiếm quyền điều khiển Mac.",

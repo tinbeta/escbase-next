@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐧 holaOS Beta 0.1 Ra Mắt: AI Teammates Cho Công Việc Kéo Dài Theo Thờì Gian - Escbase</title>
+    <meta name="description" content="holaOS Beta 0.1 — từ open-source agent computer thành sản phẩm thực tế. Multi workspaces, sub agents song song, và dashboard track tiến độ cho công việc không chỉ trong một session.">
+    <meta property="og:title" content="holaOS Beta 0.1: AI Teammates Cho Công Việc Kéo Dài Theo Thờì Gian">
+    <meta property="og:description" content="Jeffrey Li ra mắt holaOS — agent computer với multi workspaces, sub agents, và dashboard cho long-running work.">
+    <meta property="og:image" content="https://news.escbase.xyz/images/holaos-beta-ai-teammates-workspace-thumb.png">
+    <meta property="og:url" content="https://news.escbase.xyz/blog/holaos-beta-ai-teammates-workspace">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/shared-article.css">
+    <link rel="stylesheet" href="/shared-article-footer.css">
+    <style>
+        .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+        .feature-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.25rem; }
+        .feature-card h4 { color: var(--text); margin-bottom: .5rem; font-size: 1rem; }
+        .feature-card .icon { font-size: 1.5rem; margin-bottom: .75rem; }
+        .feature-card p { font-size: .9rem; margin-bottom: 0; }
+        .stats-row { display: flex; gap: 1.5rem; flex-wrap: wrap; margin: 1.5rem 0; }
+        .stat-item { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1rem 1.25rem; text-align: center; flex: 1; min-width: 120px; }
+        .stat-item .number { font-size: 1.5rem; font-weight: 800; color: var(--accent); }
+        .stat-item .label { font-size: .8rem; color: var(--text-secondary); margin-top: .25rem; }
+        .community-quote { border-left: 3px solid var(--accent); padding: .75rem 1rem; margin: 1rem 0; background: rgba(99,102,241,.05); border-radius: 0 var(--radius-md) var(--radius-md) 0; }
+        .community-quote .author { color: var(--accent); font-weight: 600; font-size: .85rem; }
+        .community-quote p { margin-bottom: .25rem; font-size: .95rem; }
+        @media (max-width: 768px) {
+            .feature-grid { grid-template-columns: 1fr; }
+            .feature-card { padding: 1rem; }
+            .stats-row { gap: .75rem; }
+            .stat-item { padding: .75rem; min-width: 0; }
+            .stat-item .number { font-size: 1.25rem; }
+            .community-quote { padding: .6rem .85rem; margin: .75rem 0; }
+            .community-quote p { font-size: .9rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <span class="category-badge"><i class="fas fa-robot"></i> AI</span>
+                <h1>🐧 holaOS Beta 0.1 Ra Mắt: AI Teammates Cho Công Việc Kéo Dài Theo Thờì Gian</h1>
+                <div class="meta">
+                    <span><i class="far fa-calendar"></i> May 12, 2026</span>
+                    <span><i class="far fa-clock"></i> 3 phút đọc</span>
+                    <span><i class="far fa-folder"></i> AI, Agent, Open Source</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <div class="highlight-box">
+                    <h4>TL;DR</h4>
+                    <p style="margin-bottom:0"><strong>Jeffrey Li vừa ra mắt holaOS Beta 0.1</strong> — phiên bản sản phẩm đầu tiên của open-source agent computer. Thay vì agent dùng một lần rồi quên, holaOS xây dựng <strong>AI teammates</strong> có thể theo dõi công việc qua nhiều tuần với multi workspaces, sub agents song song, và dashboard track tiến độ.</p>
+                </div>
+
+                <h2>Vấn Đề Cốt Lõi: Agent Chỉ Sống Trong Một Session</h2>
+                <p>Hầu hết agent AI hiện nay — dù ấn tượng đến đâu — vẫn bị giới hạn trong <strong>một session chat</strong>. Bạn đưa prompt, agent trả lờì, và khi tab đóng đi, mọi thứ gần như reset.</p>
+                <p>Nhưng công việc thực tế không diễn ra như vậy:</p>
+                <ul>
+                    <li>Nghiên cứu thay đổi theo tuần, cần cập nhật liên tục</li>
+                    <li>Nội dung cần giữ cùng một giọng văn và quy tắc xuyên suốt</li>
+                    <li>Phản hồi khách hàng có follow-ups, không dừng lại ở một lần trả lờì</li>
+                    <li>Launch sản phẩm có blockers, review points, và nhiều vòng lặp</li>
+                </ul>
+                <p>Jeffrey Li chỉ ra điểm yếu chí mạng: <em>"Các agent hiện tại quên context, mất rules, và bắt bạn restart lại cùng một công việc."</em></p>
+
+                <div class="highlight-box-red">
+                    <h4>🚨 Session-based AI</h4>
+                    <p style="margin-bottom:0">Agent impressive trong một chat, nhưng không thể theo dõi công việc kéo dài. Mỗi lần bắt đầu là một lần re-explain lại toàn bộ context — lãng phí thờì gian và mất kiểm soát.</p>
+                </div>
+
+                <h2>holaOS: Living Workspace Thay Vì Session Dùng Một Lần</h2>
+                <p>holaOS được xây dựng trên nền tảng <strong>Open Agent Computer</strong> — một dự án open-source về agent điều khiển máy tính. Nhưng đơn vị user-facing không còn là agent builder trống trơn hay session dùng một lần, mà là một <strong>living workspace</strong> cho công việc diễn ra theo thờì gian.</p>
+
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <div class="number">Multi</div>
+                        <div class="label">Workspaces riêng biệt</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">Sub</div>
+                        <div class="label">Agents song song</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">Track</div>
+                        <div class="label">Dashboard tiến độ</div>
+                    </div>
+                </div>
+
+                <h2>3 Tính Năng Chính Của Beta 0.1</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="icon" style="color:#6366f1">🗂️</div>
+                        <h4>Multi Workspaces</h4>
+                        <p>Mỗi work-stream dài hạn có context, rules, tools, và history riêng. Tổ chức và focus tốt hơn khi agent không bị lẫn lộn giữa các dự án.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon" style="color:#22c55e">🤖</div>
+                        <h4>Sub Agents</h4>
+                        <p>Xử lý task phức tạp song song. User chỉ tương tác với một coordinator agent duy nhất — trải nghiệm liền mạch, không bị overwhelm.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon" style="color:#f59e0b">📊</div>
+                        <h4>Dashboard</h4>
+                        <p>Theo dõi những gì đang chạy, xác định cần review, và xem bước tiếp theo. Hoàn toàn customizable theo workflow của bạn.</p>
+                    </div>
+                </div>
+
+                <h2>Điểm Khác Biệt So Với Các Agent Khác</h2>
+                <p>Trong khi Claude Code, Cursor, hay Codex tập trung vào <strong>coding assistant</strong> trong một session, holaOS hướng đến <strong>long-running work management</strong>:</p>
+                <ul>
+                    <li><strong>Context persistence:</strong> Không chỉ nhớ trong chat, mà duy trì context qua nhiều tuần</li>
+                    <li><strong>Rule enforcement:</strong> Giữ nguyên brand voice, coding standards, review criteria xuyên suốt</li>
+                    <li><strong>Parallel execution:</strong> Nhiều sub agents làm việc đồng thờì dưới sự điều phối của coordinator</li>
+                    <li><strong>Progress tracking:</strong> Dashboard cho visibility vào trạng thái công việc — không phải đoán mò</li>
+                </ul>
+
+                <h2>Đánh Giá Của Escbase</h2>
+                <p>holaOS đánh vào một <strong>điểm đau thực sự</strong> của AI agent hiện tại: session-based limitation. Ý tưởng "living workspace" thay vì "disposable session" là hướng đi đúng đắn cho agentic AI thực sự hữu ích trong công việc.</p>
+                <p>Tuy nhiên, <strong>thách thức lớn nhất là context management ở scale</strong>. Khi workspaces tích lŹy dữ liệu theo tháng, làm sao agent biết giữ gìn và loại bỏ gì? Và việc sub agents chạy song song có thể dẫn đến conflict nếu coordinator không đủ thông minh.</p>
+                <p>Việc holaOS xuất phát từ open-source (Open Agent Computer) cũng là điểm cộng — community có thể đóng góp skills và integrations, giảm phụ thuộc vào một vendor duy nhất.</p>
+
+                <div class="highlight-box-blue">
+                    <h4>💡 Điểm cần theo dõi</h4>
+                    <p style="margin-bottom:0">Khả năng tích hợp với các công cụ hiện có (GitHub, Slack, Notion, v.v.) sẽ quyết định holaOS có thành công hay không. Một workspace sống động nhưng cô lập khỏi toolchain hiện tại sẽ khó được adopt.</p>
+                </div>
+
+                <h2>Kết Luận</h2>
+                <p>holaOS Beta 0.1 đại diện cho <strong>bước tiến từ demo sang sản phẩm</strong> trong lĩnh vực agentic AI. Bằng cách tập trung vào công việc kéo dài theo thờì gian thay vì session one-off, Jeffrey Li và team đang định nghĩa lại cách chúng ta tương tác với AI.</p>
+                <p>Với multi workspaces, sub agents song song, và dashboard track tiến độ, holaOS có tiềm năng trở thành <strong>living workspace</strong> cho knowledge workers — nơi AI không chỉ trả lờì câu hỏi, mà thực sự làm teammate trong dự án dài hạn.</p>
+
+                <div class="source-links">
+                    <h4>Nguồn & tham khảo</h4>
+                    <ul>
+                        <li><a href="https://x.com/jelipenguin/status/2054233097030566390" target="_blank">Jeffrey Li — holaOS Beta 0.1 Launch (X/Twitter)</a></li>
+                    </ul>
+                </div>
+
+                <div class="back-to-blog-footer">
+                    <a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+                </div>
+
+                <div class="article-cta-stack">
+                    <a href="/blog/openai-codex-computer-use-mac" class="article-suggestion-card">
+                        <span class="article-suggestion-label"><i class="fas fa-book-open"></i> Đọc tiếp</span>
+                        <span class="article-suggestion-title">🤖 OpenAI Codex Computer Use: AI Agent Chạy Ngầm Trên Mac, Không Chiếm Màn Hình</span>
+                    </a>
+                    <div class="article-cta-actions">
+                        <a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a>
+                    </div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">AI</span>
+                    <span class="tag">Agent</span>
+                    <span class="tag">holaOS</span>
+                    <span class="tag">Open Source</span>
+                    <span class="tag">Multi Agent</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>
