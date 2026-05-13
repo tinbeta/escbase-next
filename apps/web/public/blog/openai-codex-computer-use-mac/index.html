@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🤖 OpenAI Codex Computer Use: AI Agent Chạy Ngầm Trên Mac, Không Chiếm Màn Hình - Escbase</title>
+    <meta name="description" content="Codex mở rộng từ coding assistant thành full agent điều khiển máy tính. Computer use cho phép AI click, type và chạy song song nhiều agent ở background mà không chiếm quyền điều khiển Mac.">
+    <meta property="og:title" content="OpenAI Codex Computer Use: AI Agent Chạy Ngầm Trên Mac">
+    <meta property="og:description" content="Codex giờ có thể điều khiển app Mac bằng cursor riêng, chạy song song nhiều agent ở background.">
+    <meta property="og:image" content="https://news.escbase.xyz/images/openai-codex-computer-use-mac-thumb.png">
+    <meta property="og:url" content="https://news.escbase.xyz/blog/openai-codex-computer-use-mac/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/shared-article.css">
+    <link rel="stylesheet" href="/shared-article-footer.css">
+    <style>
+        .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+        .feature-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.25rem; }
+        .feature-card h4 { color: var(--text); margin-bottom: .5rem; font-size: 1rem; }
+        .feature-card .icon { font-size: 1.5rem; margin-bottom: .75rem; }
+        .feature-card p { font-size: .9rem; margin-bottom: 0; }
+        .stats-row { display: flex; gap: 1.5rem; flex-wrap: wrap; margin: 1.5rem 0; }
+        .stat-item { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1rem 1.25rem; text-align: center; flex: 1; min-width: 120px; }
+        .stat-item .number { font-size: 1.5rem; font-weight: 800; color: var(--accent); }
+        .stat-item .label { font-size: .8rem; color: var(--text-secondary); margin-top: .25rem; }
+        .pricing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: .9rem; }
+        .pricing-table th, .pricing-table td { padding: .75rem; text-align: left; border-bottom: 1px solid var(--border); }
+        .pricing-table th { font-weight: 600; color: var(--text-secondary); background: var(--card-bg); }
+        .pricing-table tr:hover td { background: var(--card-bg); }
+        .community-quote { border-left: 3px solid var(--accent); padding: .75rem 1rem; margin: 1rem 0; background: rgba(99,102,241,.05); border-radius: 0 var(--radius-md) var(--radius-md) 0; }
+        .community-quote .author { color: var(--accent); font-weight: 600; font-size: .85rem; }
+        .community-quote p { margin-bottom: .25rem; font-size: .95rem; }
+        @media (max-width: 768px) {
+            .feature-grid { grid-template-columns: 1fr; }
+            .feature-card { padding: 1rem; }
+            .stats-row { gap: .75rem; }
+            .stat-item { padding: .75rem; min-width: 0; }
+            .stat-item .number { font-size: 1.25rem; }
+            .pricing-table { font-size: .85rem; }
+            .pricing-table th, .pricing-table td { padding: .5rem; }
+            .community-quote { padding: .6rem .85rem; margin: .75rem 0; }
+            .community-quote p { font-size: .9rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <span class="category-badge"><i class="fas fa-robot"></i> AI</span>
+                <h1>🤖 OpenAI Codex Computer Use: AI Agent Chạy Ngầm Trên Mac, Không Chiếm Màn Hình</h1>
+                <div class="meta">
+                    <span><i class="far fa-calendar"></i> May 12, 2026</span>
+                    <span><i class="far fa-clock"></i> 3 phút đọc</span>
+                    <span><i class="far fa-folder"></i> AI, OpenAI, Developer Tools</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <div class="highlight-box">
+                    <h4>TL;DR</h4>
+                    <p style="margin-bottom:0"><strong>OpenAI vừa demo tính năng Computer Use cho Codex trên Mac</strong> — AI agent giờ có thể nhìn thấy màn hình, click, gõ bàn phím bằng cursor riêng, và <strong>chạy song song nhiều agent ở background</strong> mà không chiếm quyền điều khiển máy tính của bạn. Đây là bước chuyển từ coding assistant sang full computer agent.</p>
+                </div>
+
+                <h2>Từ Coding Assistant Đến Computer Agent</h2>
+                <p>Codex không còn chỉ là công cụ viết code nữa. Với bản cập nhật tháng 4/2026, OpenAI biến Codex thành một <strong>agent điều khiển máy tính đầy đủ</strong> trên macOS. Điểm đột phá không nằm ở việc AI có thể click hay type — mà ở chỗ nó làm được điều đó <strong>ở background, song song với ngườì dùng</strong>, mà không cướp màn hình.</p>
+                <p>Ari Weinstein (đồng sáng lập Workflow, nay thuộc OpenAI) và Romain Huet (Dev Relations tại OpenAI) vừa có cuộc trò chuyện chi tiết về điều này. Weinstein nhấn mạnh: <em>"Cảm giác thật kỳ diệu khi agent sử dụng app của bạn ở background, trong khi bạn vẫn dùng máy tính bình thường."</em></p>
+
+                <h2>Computer Use Hoạt Động Như Thế Nào?</h2>
+                <p>Codex sử dụng <strong>screenshot + Accessibility API</strong> trên macOS để "nhìn" màn hình và tương tác với các ứng dụng:</p>
+                <ul>
+                    <li><strong>Nhìn:</strong> Chụp màn hình và phân tích giao diện ứng dụng</li>
+                    <li><strong>Click:</strong> Di chuyển cursor riêng và click vào bất kỳ element nào</li>
+                    <li><strong>Type:</strong> Gõ văn bản, điền form, thao tác phím tắt</li>
+                    <li><strong>Background:</strong> Chạy song song với user, không block input</li>
+                </ul>
+
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <div class="number">Parallel</div>
+                        <div class="label">Nhiều agent chạy đồng thờì</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">macOS</div>
+                        <div class="label">Hiện chỉ hỗ trợ Mac</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">90+</div>
+                        <div class="label">Plugins tích hợp</div>
+                    </div>
+                </div>
+
+                <h2>4 Tính Năng Mới Đáng Chú Ý</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="icon" style="color:#10a37f">🖱️</div>
+                        <h4>Background Computer Use</h4>
+                        <p>Agent chạy ngầm với cursor riêng. Bạn vẫn code, browse, design bình thường trong khi Codex xử lý task ở app khác.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon" style="color:#3b82f6">🌐</div>
+                        <h4>In-App Browser</h4>
+                        <p>Browser built-in dựa trên Atlas cho phép preview web, comment trực tiếp lên element để hướng dẫn agent chính xác hơn.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon" style="color:#a855f7">🎨</div>
+                        <h4>Image Generation</h4>
+                        <p>Tích hợp gpt-image-1.5 ngay trong Codex. Tạo mockup, asset visual, chart mà không cần chuyển app.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon" style="color:#f59e0b">🧠</div>
+                        <h4>Memory & Scheduling</h4>
+                        <p>Codex nhớ preference, context dự án qua các session. Có thể lên lịch task chạy sau giờ, ngày hoặc tuần.</p>
+                    </div>
+                </div>
+
+                <h2>Nhiều Agent Chạy Song Song</h2>
+                <p>Điểm khác biệt lớn nhất so với các computer use trước đây là khả năng <strong>chạy parallel</strong>. Bạn có thể giao nhiệm vụ:</p>
+                <ul>
+                    <li>Agent 1: Fix bug SwiftUI trên Xcode</li>
+                    <li>Agent 2: Test responsive trên browser</li>
+                    <li>Agent 3: Generate asset hình ảnh cho landing page</li>
+                </ul>
+                <p>Tất cả chạy đồng thờì mà không interfere lẫn nhau hay với bạn. Điều này biến Codex từ tool thành <strong>đội ngũ virtual assistant</strong> trên một máy tính.</p>
+
+                <h2>Giá & Hạ Tầng</h2>
+                <p>Codex được tích hợp vào các gói ChatGPT trả phí. OpenAI cũng vừa giới thiệu <strong>ChatGPT Pro $100/tháng</strong> dành riêng cho power user cần nhiều quota Codex hơn:</p>
+
+                <table class="pricing-table">
+                    <thead>
+                        <tr><th>Gói</th><th>Giá</th><th>Codex Access</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>ChatGPT Plus</td><td>$20/tháng</td><td>Full access, giới hạn standard</td></tr>
+                        <tr><td>ChatGPT Pro</td><td>$100/tháng</td><td>5x quota so với Plus</td></tr>
+                        <tr><td>ChatGPT Pro ($200)</td><td>$200/tháng</td><td>20x quota (25x đến 31/05)</td></tr>
+                        <tr><td>Business / Enterprise</td><td>$20/seat + usage</td><td>Pay-as-you-go, SOC 2, SSO</td></tr>
+                    </tbody>
+                </table>
+
+                <h2>Rủi Ro & Quan Ngại</h2>
+                <p>Không phải ai cũng hào hứng. Computer use đòi hỏi <strong>quyền screenshot và Accessibility</strong> — tức là mọi thứ hiển thị trên màn hình đều có thể được gửi lên server OpenAI:</p>
+                <ul>
+                    <li><strong>Privacy:</strong> Code proprietary, dữ liệu khách hàng, thông tin NDA có thể bị capture</li>
+                    <li><strong>macOS only:</strong> Windows và Linux chưa có roadmap. EU/UK bị delay vì regulation</li>
+                    <li><strong>Security surface:</strong> Mở rộng attack vector khi AI có quyền điều khiển hệ thống</li>
+                </ul>
+
+                <div class="highlight-box-red">
+                    <h4>⚠️ Lưu ý quan trọng</h4>
+                    <p style="margin-bottom:0">Developers làm việc với thông tin confidential nên đọc kỹ data usage policy của OpenAI trước khi bật computer use. Tính nă này capture toàn bộ màn hình và gửi về server để model phân tích.</p>
+                </div>
+
+                <h2>Đánh Giá Của Escbase</h2>
+                <p>Computer use là <strong>bước nhảy vọt chiến lược</strong> của OpenAI trong cuộc đua agentic AI. Trong khi Claude Code và Cursor vẫn tập trung vào terminal/editor-native workflow, Codex đang mở rộng ra toàn bộ hệ sinh thái desktop.</p>
+                <p>Tuy nhiên, <strong>hạn chế macOS-only</strong> là rào cản lớn với đa số developers dùng Windows/Linux. Việc EU/UK bị loại khỏi rollout đầu cũng cho thấy regulatory friction sẽ là vấn đề lâu dài.</p>
+                <p>Điểm mạnh nhất là <strong>parallel background execution</strong> — đây là thứ chưa tool nào làm tốt. Nếu OpenAI giải quyết được privacy concern và mở rộng platform, Codex sẽ trở thành standard cho AI workstation.</p>
+
+                <h2>Kết Luận</h2>
+                <p>Codex Computer Use đánh dấu sự chuyển mình từ <em>coding assistant</em> sang <em>computer operator</em>. Khả năng chạy ngầm, song song nhiều agent mà không chiếm màn hình là điểm khác biệt thực sự so với các công cụ hiện tại.</p>
+                <p>Với 90+ plugins, in-app browser, image generation và memory — Codex đang trở thành <strong>super app cho knowledge work</strong>. Câu hỏi còn lại là liệu OpenAI có giải quyết được privacy và platform expansion để standard này thực sự bùng nổ.</p>
+
+                <div class="source-links">
+                    <h4>Nguồn & tham khảo</h4>
+                    <ul>
+                        <li><a href="https://x.com/OpenAIDevs/status/2054298427245441141" target="_blank">OpenAI Developers — Computer Use Demo (X/Twitter)</a></li>
+                        <li><a href="https://9to5mac.com/2026/04/16/openais-codex-app-adds-three-key-features-for-expanding-beyond-agentic-coding/" target="_blank">9to5Mac — Codex adds Computer Use, Browser, Image Generation</a></li>
+                        <li><a href="https://arstechnica.com/ai/2026/04/new-codex-features-include-the-ability-to-use-your-computer-in-the-background/" target="_blank">Ars Technica — Background Computer Use on Mac</a></li>
+                        <li><a href="https://openai.com/codex" target="_blank">OpenAI Codex — Trang chủ</a></li>
+                    </ul>
+                </div>
+
+                <div class="back-to-blog-footer">
+                    <a href="/" class="back-to-blog-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+                </div>
+
+                <div class="article-cta-stack">
+                    <a href="/blog/ethereum-clear-signing-erc-7730-live/" class="article-suggestion-card">
+                        <span class="article-suggestion-label"><i class="fas fa-book-open"></i> Đọc tiếp</span>
+                        <span class="article-suggestion-title">🔐 Clear Signing Chính Thức Ra Mắt: Ethereum Kết Thúc Blind Signing Với ERC-7730</span>
+                    </a>
+                    <div class="article-cta-actions">
+                        <a href="/blog" class="article-cta-btn article-cta-btn-secondary"><i class="fas fa-newspaper"></i> Xem tất cả bài viết</a>
+                    </div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">OpenAI</span>
+                    <span class="tag">Codex</span>
+                    <span class="tag">Computer Use</span>
+                    <span class="tag">AI Agent</span>
+                    <span class="tag">macOS</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

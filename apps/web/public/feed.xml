@@ -8,6 +8,15 @@
     <lastBuildDate>Mon, 11 May 2026 17:00:00 GMT</lastBuildDate>
     <atom:link href="https://news.escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>🤖 OpenAI Codex Computer Use: AI Agent Chạy Ngầm Trên Mac, Không Chiếm Màn Hình</title>
+      <link>https://news.escbase.xyz/blog/openai-codex-computer-use-mac/</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/openai-codex-computer-use-mac/</guid>
+      <pubDate>Mon, 11 May 2026 17:00:00 GMT</pubDate>
+      <description>Codex mở rộng từ coding assistant thành full agent điều khiển máy tính. Computer use cho phép AI click, type và chạy song song nhiều agent ở background mà không chiếm quyền điều khiển Mac.</description>
+      <category>AI</category>
+      <enclosure url="https://news.escbase.xyz/images/openai-codex-computer-use-mac-thumb.png" type="image/png" length="0" />
+    </item>
+    <item>
       <title>🔐 Clear Signing Chính Thức Ra Mắt: Ethereum Kết Thúc Blind Signing Với ERC-7730</title>
       <link>https://news.escbase.xyz/blog/ethereum-clear-signing-erc-7730-live/</link>
       <guid isPermaLink="true">https://news.escbase.xyz/blog/ethereum-clear-signing-erc-7730-live/</guid>
@@ -447,15 +456,6 @@
       <description>Binance Academy nhắc lại blockchain không chỉ là Bitcoin. Nhưng phản biện từ cộng đồng cũng rất thật: sau 15 năm, use case có traction lớn nhất vẫn quanh tài chính.</description>
       <category>Blockchain</category>
       <enclosure url="https://news.escbase.xyz/images/blockchain-khong-chi-la-bitcoin-binance-academy-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>Grok 4.3: Giảm Chi Phí 40-60%, Cải Thiện Điểm Số và Pareto Frontier Mới</title>
-      <link>https://news.escbase.xyz/blog/grok-4-3-cost-efficiency-pareto-frontier/</link>
-      <guid isPermaLink="true">https://news.escbase.xyz/blog/grok-4-3-cost-efficiency-pareto-frontier/</guid>
-      <pubDate>Sun, 03 May 2026 00:00:00 GMT</pubDate>
-      <description>xAI ra mắt Grok 4.3 với AI Index 53, chi phí giảm 40% input / 60% output, ngồi trên Pareto frontier. Model vượt Claude Sonnet 4.6, Gemini 3.1 Pro nhưng kém GPT-5.5. Cộng đồng phản ứng trái chiều về tính thực tế của benchmark.</description>
-      <category>AI Models &amp; Agents</category>
-      <enclosure url="https://news.escbase.xyz/images/grok-4-3-cost-efficiency-pareto-frontier-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>

@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/openai-codex-computer-use-mac/",
+    "title": "🤖 OpenAI Codex Computer Use: AI Agent Chạy Ngầm Trên Mac, Không Chiếm Màn Hình",
+    "excerpt": "Codex mở rộng từ coding assistant thành full agent điều khiển máy tính. Computer use cho phép AI click, type và chạy song song nhiều agent ở background mà không chiếm quyền điều khiển Mac.",
+    "date": "May 12, 2026",
+    "tag": "AI",
+    "tagIcon": "fas fa-robot",
+    "tagColor": "#10a37f",
+    "readTime": "3 phút",
+    "featured": true,
+    "image": "/images/openai-codex-computer-use-mac-thumb.png"
+  },
+  {
     "url": "/blog/ethereum-clear-signing-erc-7730-live/",
     "title": "🔐 Clear Signing Chính Thức Ra Mắt: Ethereum Kết Thúc Blind Signing Với ERC-7730",
     "excerpt": "Ethereum Foundation ra mắt Clear Signing — open standard chấm dứt blind signing. ERC-7730 biến giao dịch hex thành ngôn ngữ con ngườì đọc được, với sự tham gia của Ledger, Trezor, MetaMask và nhiều tên tuổi lớn.",
