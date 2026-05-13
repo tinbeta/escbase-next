@@ -8,6 +8,15 @@
     <lastBuildDate>Mon, 11 May 2026 17:00:00 GMT</lastBuildDate>
     <atom:link href="https://news.escbase.xyz/feed.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>🎙️ AI Voice Agent Thực Tế: Ngay Cả Model Mạnh Nhất Chỉ Giải Quyết Được 52% Tình Huống</title>
+      <link>https://news.escbase.xyz/blog/artificial-analysis-s2s-benchmark</link>
+      <guid isPermaLink="true">https://news.escbase.xyz/blog/artificial-analysis-s2s-benchmark</guid>
+      <pubDate>Mon, 11 May 2026 17:00:00 GMT</pubDate>
+      <description>Artificial Analysis công bố benchmark agentic performance cho Speech to Speech models. Grok Voice dẫn đầu với 52.1%, nhưng khoảng cách so với text-based agents vẫn rất lớn.</description>
+      <category>AI</category>
+      <enclosure url="https://news.escbase.xyz/images/artificial-analysis-s2s-benchmark-thumb.png" type="image/png" length="0" />
+    </item>
+    <item>
       <title>🐧 holaOS Beta 0.1 Ra Mắt: AI Teammates Cho Công Việc Kéo Dài Theo Thờì Gian</title>
       <link>https://news.escbase.xyz/blog/holaos-beta-ai-teammates-workspace</link>
       <guid isPermaLink="true">https://news.escbase.xyz/blog/holaos-beta-ai-teammates-workspace</guid>
@@ -447,15 +456,6 @@
       <description>NVIDIA NIM cho developer truy cập miễn phí MiniMax M2.7 (230B), DeepSeek V3.2, GLM-5.1 và 100+ model khác qua API OpenAI-compatible. 1000 credits miễn phí, không cần thẻ tín dụng.</description>
       <category>AI Tools</category>
       <enclosure url="https://news.escbase.xyz/images/nvidia-nim-free-frontier-models-thumb.png" type="image/png" length="0" />
-    </item>
-    <item>
-      <title>OpenClaw 2026.5.2: Bớt Drama, Chạy Ổn Hơn</title>
-      <link>https://news.escbase.xyz/blog/openclaw-2026-5-2-stable-grok4-3</link>
-      <guid isPermaLink="true">https://news.escbase.xyz/blog/openclaw-2026-5-2-stable-grok4-3</guid>
-      <pubDate>Sun, 03 May 2026 00:00:00 GMT</pubDate>
-      <description>OpenClaw 2026.5.2 tập trung vào Grok 4.3 mặc định, plugin ổn định hơn, gateway nhanh hơn, và nhiều fix thật cho Discord, Slack, Telegram, WhatsApp, web search, TTS và voice calls.</description>
-      <category>AI Agents</category>
-      <enclosure url="https://news.escbase.xyz/images/openclaw-2026-5-2-stable-grok4-3-thumb.png" type="image/png" length="0" />
     </item>
   </channel>
 </rss>

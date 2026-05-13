@@ -29,6 +29,7 @@
         .stat-item .label { font-size: .8rem; color: var(--text-secondary); margin-top: .25rem; }
         .community-quote { border-left: 3px solid var(--accent); padding: .75rem 1rem; margin: 1rem 0; background: rgba(99,102,241,.05); border-radius: 0 var(--radius-md) var(--radius-md) 0; }
         .community-quote .author { color: var(--accent); font-weight: 600; font-size: .85rem; }
+        .article-video { width: 100%; border-radius: var(--radius-md); margin: 1.5rem 0; border: 1px solid var(--border); background: #000; }
         .community-quote p { margin-bottom: .25rem; font-size: .95rem; }
         @media (max-width: 768px) {
             .feature-grid { grid-template-columns: 1fr; }
@@ -59,6 +60,11 @@
                     <h4>TL;DR</h4>
                     <p style="margin-bottom:0"><strong>Jeffrey Li vừa ra mắt holaOS Beta 0.1</strong> — phiên bản sản phẩm đầu tiên của open-source agent computer. Thay vì agent dùng một lần rồi quên, holaOS xây dựng <strong>AI teammates</strong> có thể theo dõi công việc qua nhiều tuần với multi workspaces, sub agents song song, và dashboard track tiến độ.</p>
                 </div>
+
+                <video class="article-video" controls poster="/images/holaos-beta-ai-teammates-workspace-thumb.png" preload="metadata">
+                    <source src="/blog/holaos-beta-ai-teammates-workspace/launch-video.mp4" type="video/mp4">
+                    Trình duyệt của bạn không hỗ trợ video.
+                </video>
 
                 <h2>Vấn Đề Cốt Lõi: Agent Chỉ Sống Trong Một Session</h2>
                 <p>Hầu hết agent AI hiện nay — dù ấn tượng đến đâu — vẫn bị giới hạn trong <strong>một session chat</strong>. Bạn đưa prompt, agent trả lờì, và khi tab đóng đi, mọi thứ gần như reset.</p>

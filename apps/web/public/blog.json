@@ -1,5 +1,17 @@
 [
   {
+    "url": "/blog/artificial-analysis-s2s-benchmark",
+    "title": "🎙️ AI Voice Agent Thực Tế: Ngay Cả Model Mạnh Nhất Chỉ Giải Quyết Được 52% Tình Huống",
+    "excerpt": "Artificial Analysis công bố benchmark agentic performance cho Speech to Speech models. Grok Voice dẫn đầu với 52.1%, nhưng khoảng cách so với text-based agents vẫn rất lớn.",
+    "date": "May 12, 2026",
+    "tag": "AI",
+    "tagIcon": "fas fa-robot",
+    "tagColor": "#10a37f",
+    "readTime": "4 phút",
+    "featured": true,
+    "image": "/images/artificial-analysis-s2s-benchmark-thumb.png"
+  },
+  {
     "url": "/blog/holaos-beta-ai-teammates-workspace",
     "title": "🐧 holaOS Beta 0.1 Ra Mắt: AI Teammates Cho Công Việc Kéo Dài Theo Thờì Gian",
     "excerpt": "holaOS Beta 0.1 — từ open-source agent computer thành sản phẩm thực tế. Multi workspaces, sub agents song song, và dashboard track tiến độ cho công việc không chỉ trong một session.",
